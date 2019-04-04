@@ -1,2 +1,5 @@
 # Leipzig-Seminar
-Materialien des Leipziger Seminars
+
+Materialien des Leipziger Forschungsseminar zu Innovationsmethodiken
+
+
