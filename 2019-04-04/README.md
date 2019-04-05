@@ -55,3 +55,6 @@ systemtheoretischen Begriffe und Konzepte.
 Dies wird im nächsten Seminar zum Thema "Innovationsmethodiken" aus einer
 allgemeinen Perspektive noch zu vertiefen sein, ehe es dann in medias res
 geht.
+
+Die Literaturliste zum Seminar ist (und wird weiter) unter
+http://leipzig-netz.de/index.php5/WUMM.Seminar zusammengetragen.  
