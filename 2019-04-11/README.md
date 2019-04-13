@@ -77,37 +77,37 @@ dass die bürgerliche Gesellschaft als *aufklärende Gesellschaft* von Anfang an
 mit diesem Widerspruch zwischen Geniekult und kritischem Denken schwanger
 geht, den Eben Moglen in seinem [dot Communist
 Manifesto](http://moglen.law.columbia.edu/publications/dcm.html) als
-Widerspruch zwischen *Creators and Owners* beschreibt. Kant Betonung der
+Widerspruch zwischen *Creators and Owners* beschreibt. Kants Betonung der
 Bedeutung kritischer Vernunft sowie die Entfaltung dieses Begriffs im
 dialektischen Denken Hegels sowie einer kritischen Gesellschafts*analyse* von
 Marx wendet sich zum Ende des 19. Jahrhunderts vor allem mit der Entwicklung
-des deutschen Irrationalismus (Schelling, Schopenhauer, Kierkegaard, Nietzsche
-- siehe dazu auch (Lukacs 1955)) hin zu einer Hypertrophierung des Geniekults,
-des "Übermenschen" als "starkes Individuum", welches der "Masse der Schwachen"
-überlegen sei. Dieser im Kern menschenfeindliche und antiaufklärerische Ansatz
-prägt bis heute viele Denkmuster und hat sich im Konzept *geistiges Eigentum*
-seit den Theorien von Daniel Bell und anderen als "Ende der Ideologie" seit
-den 1950er Jahren weiter verfestigt.
+des deutschen Irrationalismus (Schelling, Schopenhauer, Kierkegaard,
+Nietzsche; siehe dazu auch (Lukács 1955)) hin zu einer Hypertrophierung des
+Geniekults, des "Übermenschen" als "starkes Individuum", welches der "Masse
+der Schwachen" überlegen sei. Dieser im Kern menschenfeindliche und
+antiaufklärerische Ansatz prägt bis heute viele Denkmuster und hat sich im
+Konzept *geistiges Eigentum* mit den Theorien von Daniel Bell und anderen als
+"Ende der Ideologie" seit den 1950er Jahren weiter verfestigt.
 
 Wenn wir die bürgerliche Gesellschaft als *aufklärende Gesellschaft* in einem
 Entwicklungs*prozess* befindlich fassen, so müssen wir uns unter diesen
 Umständen immer fragen, ob wir exakte Wissenschaft *betreiben* oder nur
 *simulieren*. Ersteres bedeutet nicht nur, der grundsätzlichen Falle eines
-Geniekults auszuweichen, sondern auch - so Herr Kleemann -
+Geniekults zu entgehen, sondern auch - so Herr Kleemann -
 * ein verkürztes lineares Denken von Dialektik als These - Antithese -
-  Synthese in Schleiermachers Tradition zu vereiden,
+  Synthese in Schleiermachers Tradition zu vermeiden,
 * den bzgl. Technikwissen eingeschränkten Bildungsanspruch des "humanistischen
   Gymnasiums" zu überwinden (wie dies bereits vor 100 Jahren mit der
   Einrichtung von Realgymnasien versucht wurde) und
 * Problem Solving nicht als Vereinfachung misszuverstehen. 
 
 Im widerspruchsorientierten Problem Solving komme es
-* nicht auf Abstand an, sondern au Perspektivwechsel,
+* nicht auf Abstand an, sondern auf Perspektivwechsel,
 * gehe es nicht um Vereinzelung, sondern um Neugruppierung,
 * gehe es nicht um Talentweckung und Genialität, sondern um das Schaffen von
   Umgebungsbedingungen für schöpferisches Arbeiten.
 
-Literatur:
+## Literatur:
 * Gerovitch S. Perestroika of the History of Technology and Science in the
   USSR: Changes in the Discourse. Technology and Culture, Vol. 37, Nr. 1
   (1996), S. 102-134.
