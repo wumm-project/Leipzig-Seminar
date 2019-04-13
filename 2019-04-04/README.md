@@ -1,3 +1,5 @@
+# Anmerkungen zum Seminar am 04.04.2019
+
 Im Seminar wurde zunächst die Zielstellung genauer erläutert.
 
 Das Seminar ist ein Forschungsseminar, es geht also nicht um die Vermittlung
@@ -57,4 +59,6 @@ allgemeinen Perspektive noch zu vertiefen sein, ehe es dann in medias res
 geht.
 
 Die Literaturliste zum Seminar ist (und wird weiter) unter
-http://leipzig-netz.de/index.php5/WUMM.Seminar zusammengetragen.  
+http://leipzig-netz.de/index.php5/WUMM.Seminar zusammengetragen.
+
+Hans-Gert Gräbe, 05.05.2019
