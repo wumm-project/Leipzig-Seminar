@@ -36,21 +36,22 @@ die Vorstellungen über mögliche Transformationswege deutlich differieren.
 
 Für den Sozialismusversuch habe ich in meinen [Chemnitzer
 Thesen](https://hg-graebe.de/EigeneTexte/cc-thesen.pdf) 2005 festgestellt,
-dessen "Scheitern auch ein Scheitern des Versuchs war, den Geist zu beschwören
-und zugleich den kritischen Geist zu bannen".  Die Widersprüchlichkeit beider
-Aspekte tritt dabei stärker hervor als in bürgerlichen Gesellschaften
-westeuropäischer Prägung - die massiven Anstrengungen, insbesondere
-"bildungsferne" Schichten an Bildung heranzuführen, stehen einem massiven
-Überwachungs- und Misstrauenssystem der Herrschenden gegenüber -, ist aber in
-jenen Gesellschaften in der Dichotomie der Begriffe von kreativ-kritischen
-''Produzenten'' und in ihrem Verhalten massiv beeinflussbaren ''Konsumenten''
-ebenfalls präsent.  Herr Kleemann ging auf die Unterschiede nicht ein.  Eine
-fundamentale Auseinandersetzung mit dem Einfluss der historischen Etappen der
+dass dessen "Scheitern auch ein Scheitern des Versuchs war, den Geist zu
+beschwören und zugleich den kritischen Geist zu bannen".  Die
+Widersprüchlichkeit beider Aspekte tritt dabei stärker hervor als in
+bürgerlichen Gesellschaften westeuropäischer Prägung - die massiven
+Anstrengungen, insbesondere "bildungsferne" Schichten an Bildung
+heranzuführen, stehen einem massiven Überwachungs- und Misstrauenssystem der
+Herrschenden gegenüber -, ist aber in jenen westeuropäischen Gesellschaften in
+der Dichotomie der Begriffe von kreativ-kritischen *Produzenten* und in ihrem
+Verhalten massiv beeinflussbaren *Konsumenten* ebenfalls präsent.  Herr
+Kleemann ging auf die Unterschiede nicht ein.  Eine fundamentale
+Auseinandersetzung mit dem Einfluss der historischen Etappen der
 Entwicklungsbedingungen insbesondere des sowjetischen Gesellschaftsmodells auf
 die Entfaltung eines Technikbegriffs im Allgemeinen und die TRIZ-Geschichte im
 Besonderen ist in (Gerovich 1996) zu finden.
 
-In der Problematisierung des Begriffs ''Kreativität'' in unserem
+In der Problematisierung des Begriffs *Kreativität* in unserem
 [Interdisziplinären
 Kurs](http://bis.informatik.uni-leipzig.de/de/Lehre/Graebe/Inter) im
 interaktiven Gespräch mit den Studierenden (siehe Folien) wird deutlich, dass
@@ -72,28 +73,27 @@ dieses Methodenwissens in konkreten Anwendungsfällen entbehrlich sei. Auch
 Dietmar Zobel weist in (Zobel 2009) auf diese Denkfalle hin.
 
 Der Kern der Ausführungen von Herrn Kleemann bestand für mich darin zu zeigen,
-dass die bürgerliche Gesellschaft als ''aufklärende Gesellschaft'' von Anfang
-an mit diesem Widerspruch zwischen Geniekult und kritischem Denken schwanger
+dass die bürgerliche Gesellschaft als *aufklärende Gesellschaft* von Anfang an
+mit diesem Widerspruch zwischen Geniekult und kritischem Denken schwanger
 geht, den Eben Moglen in seinem [dot Communist
 Manifesto](http://moglen.law.columbia.edu/publications/dcm.html) als
-Widerspruch zwischen ''Creators and Owners'' beschreibt. Kant Betonung der
+Widerspruch zwischen *Creators and Owners* beschreibt. Kant Betonung der
 Bedeutung kritischer Vernunft sowie die Entfaltung dieses Begriffs im
-dialektischen Denken Hegels sowie einer kritischen Gesellschafts''analyse''
-von Marx wendet sich zum Ende des 19. Jahrhunderts vor allem mit der
-Entwicklung des deutschen Irrationalismus (Schelling, Schopenhauer,
-Kierkegaard, Nietzsche - siehe dazu auch (Lukacs 1955)) hin zu einer
-Hypertrophierung des Geniekults, des "Übermenschen" als "starkes Individuum",
-welches der "Masse der Schwachen" überlegen sei. Dieser im Kern
-menschenfeindliche und antiaufklärerische Ansatz prägt bis heute viele
-Denkmuster und hat sich im Konzept ''geistiges Eigentum'' seit den Theorien
-von Daniel Bell und anderen als "Ende der Ideologie" seit den 1950er Jahren
-weiter verfestigt.
+dialektischen Denken Hegels sowie einer kritischen Gesellschafts*analyse* von
+Marx wendet sich zum Ende des 19. Jahrhunderts vor allem mit der Entwicklung
+des deutschen Irrationalismus (Schelling, Schopenhauer, Kierkegaard, Nietzsche
+- siehe dazu auch (Lukacs 1955)) hin zu einer Hypertrophierung des Geniekults,
+des "Übermenschen" als "starkes Individuum", welches der "Masse der Schwachen"
+überlegen sei. Dieser im Kern menschenfeindliche und antiaufklärerische Ansatz
+prägt bis heute viele Denkmuster und hat sich im Konzept *geistiges Eigentum*
+seit den Theorien von Daniel Bell und anderen als "Ende der Ideologie" seit
+den 1950er Jahren weiter verfestigt.
 
-Wenn wir die bürgerliche Gesellschaft als ''aufklärende Gesellschaft'' in
-einem Entwicklungs''prozess'' befindlich fassen, so müssen wir uns unter
-diesen Umständen immer fragen, ob wir exakte Wissenschaft ''betreiben'' oder
-nur ''simulieren''. Ersteres bedeutet nicht nur, der grundsätzlichen Falle
-eines Geniekults auszuweichen, sondern auch - so Herr Kleemann -
+Wenn wir die bürgerliche Gesellschaft als *aufklärende Gesellschaft* in einem
+Entwicklungs*prozess* befindlich fassen, so müssen wir uns unter diesen
+Umständen immer fragen, ob wir exakte Wissenschaft *betreiben* oder nur
+*simulieren*. Ersteres bedeutet nicht nur, der grundsätzlichen Falle eines
+Geniekults auszuweichen, sondern auch - so Herr Kleemann -
 * ein verkürztes lineares Denken von Dialektik als These - Antithese -
   Synthese in Schleiermachers Tradition zu vereiden,
 * den bzgl. Technikwissen eingeschränkten Bildungsanspruch des "humanistischen
