@@ -101,8 +101,8 @@ Geniekults zu entgehen, sondern auch - so Herr Kleemann -
   Einrichtung von Realgymnasien versucht wurde) und
 * Problem Solving nicht als Vereinfachung misszuverstehen. 
 
-Im widerspruchsorientierten Problem Solving komme es
-* nicht auf Abstand an, sondern auf Perspektivwechsel,
+Im widerspruchsorientierten Problem Solving
+* komme es nicht auf Abstand an, sondern auf Perspektivwechsel,
 * gehe es nicht um Vereinzelung, sondern um Neugruppierung,
 * gehe es nicht um Talentweckung und Genialität, sondern um das Schaffen von
   Umgebungsbedingungen für schöpferisches Arbeiten.
