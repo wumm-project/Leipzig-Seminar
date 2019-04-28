@@ -61,4 +61,4 @@ geht.
 Die Literaturliste zum Seminar ist (und wird weiter) unter
 http://leipzig-netz.de/index.php5/WUMM.Seminar zusammengetragen.
 
-Hans-Gert Gräbe, 05.05.2019
+Hans-Gert Gräbe, 05.04.2019
