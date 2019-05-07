@@ -50,15 +50,53 @@ Understand - Observe - Point of View
 ersetzt.
 
 Zunächst fällt eine grundlegende Differenz zu TRIZ auf: Während es bei TRIZ
-heißt "Wir lösen *ein* Problem", ist die zentrale Botschaft von DT "Wir
-lösen *euer* Problem".  Diese Wir-Ihr-Dichotomie bildet den Kern wenigstens
-des ersten Teils der DT-Methodik, wenn es um die Identifizierung des Problems
+heißt "Wir lösen *ein* Problem", ist die zentrale Botschaft von DT "Wir lösen
+*euer* Problem".  Diese Wir-Ihr-Dichotomie bildet den Kern wenigstens des
+ersten Teils der DT-Methodik, wenn es um die Identifizierung des Problems
 ("The right situation" als Ergebnis der Konvergenzphase der Problemdefinition
 in (Mann 2018)) geht.  Dieser Teil ist in der ARIZ-Methodik als "Part 1" des
-ARIZ-Modells methodisch eher unterspezifiziert. 
+ARIZ-Modells methodisch eher unterspezifiziert.
 
+Dieser auch für andere Bereiche der Anforderungsanalyse relevante Ansatz einer
+genaueren Spezifikation und Modellierung von *Handlungsbedingungen* als
+Kontextualisierung vor der eigentlichen Problemspezifikation durch genauere
+Analyse *gelebter Praxen* geht allerdings mit einem weiteren Phänomen der
+Moderne schwanger, dem *Kümmererphänomen*.  Darunter verstehe ich theoretische
+Positionen, welche die Stakeholder entmündigen und als unfähig ansehen, die
+Lösung der eigenen Probleme selbst zu organisieren.  Dieser virulenten
+Denktradition steht das Kantsche "saprere aude" entgegen.  Ich betone
+zugleich, dass hier eine klare Kluft zwischen theoretischen Positionen und
+gelebten Praxen besteht, in denen im Kontext von Prosumeransätzen und agilen
+Methoden enge Verflechtungen zwischen "Auftraggebern" und "Auftragnehmern"
+eine durchaus wichtige Rolle spielen. Derartige Aspekte habe ich in den
+Ausführungen zu DT nicht gefunden, wenn auch in (Hentschel, Czarni 2013) für
+die Phase *Observing* als "major challenge" das Finden der "'true' experts in
+the real world" formuliert wird, aber wohl eher "to an extent that allows for
+a broader perspective and therefore a deeper understanding of the problems of
+the stakeholders" und weniger, um die konkreten Erfahrungsträger selbst in
+einen kooperativen Prozess einzubinden.
 
+DT scheint in der Phase der Identifizierung des "Mini-Problems" gegenüber TRIZ
+strukturierter vorzugehen. Parallelen gibt es in der Ideate-Phase, in der wie
+beim IER versucht wird, unwesentliche Bedingungen zu eliminieren.  In der
+Prototyping-Phase werden Ideen nicht so sehr nach logischen Gesichtspunkten
+evaluiert, sondern die Stakeholder als Praxis-Substitut (zur Bewertung von
+nicht unbedingt bereits funktionsfähigen Prototypen) herangezogen.  Hier
+unterscheiden sich TRIZ und DT deutlich in ihren epistemischen Grundlagen.  DT
+versucht, Widersprüchen bereits in Formulierungen aus dem Weg zu gehen, indem
+diese in parallele Entwickungslinien umgeformt werden.  DT ist damit nahe am
+klassischen [Open Source Prinzip "rough consensus and runnig
+code"](https://en.wikipedia.org/wiki/Rough_consensus), welches die Auflösung
+von Widersprüchen im Modell möglichst weit in den Praxen hinausschiebt in der
+(sich oft erfüllenden) Hoffnung, dass sich die Widersprüche "von selbst"
+lösen.  Eine solche Hoffnung ist natürlich nur für Widersprüche einer
+speziellen Bauart zu rechtfertigen.
 
+Herr Kleemann wies noch darauf hin, dass die hohe Interdependenzrate zwischen
+Modell und Wirklichkeit, die für die theoretische Begründung der
+Leistungsfähigkeit der iterativen Ansätze von DT konstitutiv ist, mit einem
+Wirklichkeitsbegriff operiert, der sich in allen Fallstricken des Begriffs
+*Wirklichkeitswahrnahme* verheddert. 
 
 Literatur:
 * Claudia Hentschel, Alexander Czinski: Design Thinking as a door-opener for
