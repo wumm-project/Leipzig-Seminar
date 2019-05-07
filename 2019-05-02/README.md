@@ -50,8 +50,8 @@ Understand - Observe - Point of View
 ersetzt.
 
 Zunächst fällt eine grundlegende Differenz zu TRIZ auf: Während es bei TRIZ
-heißt "Wir lösen //ein// Problem", ist die zentrale Botschaft von DT "Wir
-lösen //euer// Problem".  Diese Wir-Ihr-Dichotomie bildet den Kern wenigstens
+heißt "Wir lösen *ein* Problem", ist die zentrale Botschaft von DT "Wir
+lösen *euer* Problem".  Diese Wir-Ihr-Dichotomie bildet den Kern wenigstens
 des ersten Teils der DT-Methodik, wenn es um die Identifizierung des Problems
 ("The right situation" als Ergebnis der Konvergenzphase der Problemdefinition
 in (Mann 2018)) geht.  Dieser Teil ist in der ARIZ-Methodik als "Part 1" des
