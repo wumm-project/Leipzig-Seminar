@@ -1,0 +1,133 @@
+# Beispielanfragen an die Datenbank des USPTO 
+
+SPARQL Endpunkt: http://us.patents.aksw.org/sparql
+
+Es ist stets dieser PREFIX vorausgesetzt
+
+PREFIX patent: <http://us.patents.aksw.org/> 
+PREFIX patents: <http://us.patents.aksw.org/ontology/> 
+PREFIX patentp: <http://us.patents.aksw.org/property/> 
+PREFIX dc: <http://purl.org/dc/terms/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+
+# RDF-Graph grundsätzlich erforschen
+
+select ?s ?p ?o from
+<http://us.patents.aksw.org/>
+where { ?s ?p ?o .}
+
+## Zählen der Einträge pro Typ
+
+### Ergebnis für den RDF-Graph <http://uspatents.aksw.org>
+
+select count(?s) ?t from
+<http://us.patents.aksw.org/>
+where { ?s a ?t .}
+
+3215769 http://us.patents.aksw.org/ontology/Patent
+313587  http://xmlns.com/foaf/0.1/Assignee
+313587  http://xmlns.com/foaf/0.1/Organization
+36247   http://us.patents.aksw.org/ontology/Examiner
+821118  http://xmlns.com/foaf/0.1/Person
+784871  http://us.patents.aksw.org/ontology/Inventor
+2662702 http://xmlns.com/foaf/0.1/Agent
+5906634 http://us.patents.aksw.org/ontology/Applicant
+
+### Ergebnis für den RDF-Graph <http://links.uspatents.aksw.org>
+
+Hat keine RDF-Klassen, enthält nur relationale Informationen. 
+
+# Prädikate zu patents:Patent
+
+## funzt so nicht, Timeout
+select distinct ?p from
+<http://us.patents.aksw.org/>
+where { ?s a patents:Patent; ?p ?o .}
+
+# Datensatz zu einem bestimmten Subjekt
+
+select ?p ?o from
+<http://us.patents.aksw.org/>
+where { patent:06906845 ?p ?o .}
+
+select ?p ?o from
+<http://us.patents.aksw.org/>
+where { patent:applicant-06906845-001 ?p ?o .}
+
+select ?p ?o from
+<http://us.patents.aksw.org/>
+where {
+<http://us.patents.aksw.org/assignee-Samsung%20Electronics%20Co.%2C%20Ltd.>
+?p ?o .} 
+
+select ?p ?o from
+<http://us.patents.aksw.org/>
+where {
+<http://us.patents.aksw.org/B2>
+?p ?o .} 
+
+select ?p ?o from
+<http://us.patents.aksw.org/>
+where {
+<http://us.patents.aksw.org/agent-06906845-01>
+?p ?o .} 
+
+select ?p ?o from
+<http://us.patents.aksw.org/>
+where {
+<http://us.patents.aksw.org/359290>
+?p ?o .} 
+
+select ?p ?o from
+<http://us.patents.aksw.org/>
+where {
+<http://us.patents.aksw.org/examiner-Hung%20Xuan-Dang>
+?p ?o .} 
+
+## liefert einen groben Überblick über die Modellierung
+
+patents:Patent
+patentp:year  xsd:gYear
+patentp:applicant  patents:Applicant
+patentp:citedBy    patents:Patent
+dc:date 	   2005-06-14
+patentp:assignee  foaf:Assignee
+dc:abstract 	  Literal
+patentp:country   ?? rdfs:label, code
+patentp:kind 	  ?? rdfs:label
+patentp:docNo 	  xsd:int
+patentp:agent 	  foaf:Agent
+patentp:national-classification ?? 
+    patentp:mainSubclassLabel Literal
+    patentp:mainClassLabel 	Literal 
+    patentp:mainClassCode 	Zahl
+patentp:primaryExaminer foaf:Person, patents:Examiner
+patentp:inventionTitle 	Literal
+patentp:secondaryExaminer foaf:Person, patents:Examiner
+
+patents:Applicant a foaf:Person
+patentp:residence 	??
+patentp:country 	?? 
+patentp:city 		?? 
+patentp:nationality 	?? 
+
+patents:Assignee
+patentp:role		?? 
+patentp:orgname 	??
+## bei den folgenden beiden Prädikaten ist eine hohe Dunkelziffer von
+verschiedenen Schreibweisen von Objekten zu verzeichnen.
+patentp:pplicantcity 	?? 
+patentp:country 	??
+patentp:city 		?? 
+
+# Datensatz 
+
+select ?s ?o from
+<http://us.patents.aksw.org/>
+where { ?s owl:sameAs ?o .
+filter regex(?o,"http://epo.publicdata.eu")
+}
+
+LIMIT 100

@@ -18,20 +18,21 @@ years) from XML to RDF to conform to the Linked Data principles.
 
 SPARQL Endpunkt: http://us.patents.aksw.org/sparql
 
+Im RDF-Graphen <http://uspatents.aksw.org> sind die Informationen zu den
+einzelnen Patenten enthalten, im RDF-Graphen <http://links.uspatents.aksw.org>
+werden Verweise auf die entsprechenden Patente im EPO (European Patent Office)
+angegeben.
 
+Beispiel-Anfragen dazu in der Datei Queries.txt
 
-PREFIX patent: <http://us.patents.aksw.org/> 
-PREFIX patents: <http://us.patents.aksw.org/ontology/> 
-PREFIX patentp: <http://us.patents.aksw.org/property/> 
-PREFIX dc: <http://purl.org/dc/terms/> 
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#> 
-PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+Dazu gibt es auch ein Paper:
 
-select ?p ?o from
-<http://us.patents.aksw.org/>
-where { patent:06906845 ?p ?o .}
+Mofeed M. Hassan, Amrapali Zaveri, Jens Lehmann: A linked open data
+representation of patents registered in the US from 2005–2017.
+Sci. Data. 5:180279 doi: 10.1038/sdata.2018.279 (2018).
 
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6278688/
 
+Dort ist in einem Diagramm auch die genaue Modellierung zu finden. 
 
-Hans-Gert Gräbe, 07.05.2019
+Hans-Gert Gräbe, 09.05.2019
