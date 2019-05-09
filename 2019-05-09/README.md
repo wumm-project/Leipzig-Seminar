@@ -35,4 +35,17 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6278688/
 
 Dort ist in einem Diagramm auch die genaue Modellierung zu finden. 
 
+# Patentrecherche in den Daten des USPTO
+
+USPTO stellt vierteljährlich Datensätze im XML-Format zur Verfügung:
+
+https://www.uspto.gov/learning-and-resources/xml-resources
+
+
+## Suche in Patentbeständen
+
+DPMA hat eine Idexsuche über Schlüsselwörter
+
+
+
 Hans-Gert Gräbe, 09.05.2019
