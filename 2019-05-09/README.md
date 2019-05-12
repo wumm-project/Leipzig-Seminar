@@ -1,5 +1,7 @@
 # Anmerkungen zum Seminar am 09.05.2019
 
+## Der AKSW RDF-Store zu US Patenten
+
 Mofeed Hassan und Amrapali Zaveri aus dem [AKSW Team](http://aksw.org) haben
 mehrere Millionen Datensätze aus der Datenbank des USPTO analysiert und als
 RDF in einem Store bereitgestellt.  Details dazu siehe 
@@ -35,17 +37,27 @@ https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6278688/
 
 Dort ist in einem Diagramm auch die genaue Modellierung zu finden. 
 
-# Patentrecherche in den Daten des USPTO
+## Patentrecherchen
 
-USPTO stellt vierteljährlich Datensätze im XML-Format zur Verfügung:
+**Frage:** Warum so kompliziert? Kann man nicht einfach die Sucheseite eines
+der Patentämter hernehmen und dort die Indexsuche verwenden?
 
-https://www.uspto.gov/learning-and-resources/xml-resources
+**Antwort:** Im Prinzip ja, und das sollte die er
+
+### Patentrecherche in den Daten des USPTO
+
+* [Einstiegsseite im Web](https://www.uspto.gov/)
+* [Indexsuche](https://www.uspto.gov/)
+* USPTO stellt vierteljährlich Datensätze im XML-Format zur Verfügung:
+  * https://www.uspto.gov/learning-and-resources/xml-resources
+
+### Europäisches Patentamt (EPO)
+
+Zu ergänzen
+
+### Deutsches Patent- und Markenamt (DPMA)
+
+Hat ebenfalls eine Indexsuche über Schlüsselwörter (zu ergänzen)
 
 
-## Suche in Patentbeständen
-
-DPMA hat eine Idexsuche über Schlüsselwörter
-
-
-
-Hans-Gert Gräbe, 09.05.2019
+Hans-Gert Gräbe, 12.05.2019

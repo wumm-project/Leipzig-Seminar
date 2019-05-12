@@ -107,4 +107,10 @@ Literatur:
 * Hasso Plattner, Christoph Meinel, Ulrich Weinberg: Design Thinking.
   Innovation lernen – Ideenwelten öffnen. München: mi-Verlag, 2009.
 
+## Weitere Links zum Thema Design Thinking
+
+* [Webseite der School of Design Thinking](https://hpi.de/school-of-design-thinking.html) am HPI  
+* [Webseite der Stanford d.School](https://dschool.stanford.edu/)   
+* Die [Global Design Thinking Alliance](https://hpi.de/school-of-design-thinking/kooperationen/global-design-thinking-alliance.html)
+
 Hans-Gert Gräbe, 07.05.2019
