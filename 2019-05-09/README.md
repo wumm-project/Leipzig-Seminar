@@ -40,24 +40,93 @@ Dort ist in einem Diagramm auch die genaue Modellierung zu finden.
 ## Patentrecherchen
 
 **Frage:** Warum so kompliziert? Kann man nicht einfach die Sucheseite eines
-der Patentämter hernehmen und dort die Indexsuche verwenden?
+der Patentämter hernehmen und dort die Indexsuche oder die Suche nach
+Schlagworten verwenden?
 
-**Antwort:** Im Prinzip ja, und das sollte die er
+**Antwort:** Im Prinzip ja, und das sollte als erstes untersucht werden.
+Allerdings sind diese Suchschnittstellen meist statisch in dem Sinne, dass nur
+solche Suchanfragen gestellt werden können, die von den Anbietern
+vorausgesehen wurden.  Oft werden auch Datensätze zu Patentmetadaten
+regelmäßig veröffentlicht, die man sich herunterladen kann und darauf seine
+eigene Suche organisieren.  Im Rahmen der oben besprochenen Arbeit wurde dies
+mit Daten des US-Patentamts (USPTO) ausgeführt, die vom USPTO
+veröffentlichten Daten auf ein RDF Datenmodell gemappt und dieses für eine
+semantische Suche in einen RDF-Store hochgeladen.  Die Ausdrucksmöglichkeiten
+einer solchen semantischen Suche sind mit denen einer klassischen
+Datenbank-Anfragesprache vergleichbar und damit um Größenordnung flexibler als
+eine einfache Indexsuche.  Man kann hier oft auf der Ebene einer "einfachen"
+*Anfrage* das herausbekommen, was man einem lokalen Index selbst
+*programmieren* müsste. 
 
 ### Patentrecherche in den Daten des USPTO
 
 * [Einstiegsseite im Web](https://www.uspto.gov/)
 * [Indexsuche](https://www.uspto.gov/)
-* USPTO stellt vierteljährlich Datensätze im XML-Format zur Verfügung:
+* Das USPTO stellt vierteljährlich Datensätze im XML-Format zur Verfügung:
   * https://www.uspto.gov/learning-and-resources/xml-resources
 
 ### Europäisches Patentamt (EPO)
 
-Zu ergänzen
+* [Einstiegsseite im Web](https://www.epo.org)
+* [Indexsuche](https://www.epo.org/searching-for-patents_de.html)
+* [Linked Open EP Data](https://www.epo.org/searching-for-patents/data/linked-open-data_de.html)
+  * Der Dienst Linked Open EP Data verknüpft Patentinformationen des EPA und
+    anderer Anbieter zu einem offenen Netz aus Daten, die mit
+    Standard-Webtechnologien wie HTTP, URI, RDF und SPARQL durchsucht,
+    abgefragt und angezeigt werden können.
+  * Dort auch Nutzerleitfaden und Beispiele für SPARQL Queries
+* [SPARQL Endpunkt des Linked Open EP Data Service](https://data.epo.org/linked-data/sparql.html)
+* [Patent Ontology Overview](https://data.epo.org/linked-data/documentation/patent-ontology-overview.html)
+
 
 ### Deutsches Patent- und Markenamt (DPMA)
 
-Hat ebenfalls eine Indexsuche über Schlüsselwörter (zu ergänzen)
+* [Einstiegsseite im Web](https://www.dpma.de)
+* [Indexsuche](https://www.uspto.gov/)
+* Das USPTO stellt vierteljährlich Datensätze im XML-Format zur Verfügung:
+  * https://www.uspto.gov/learning-and-resources/xml-resources
 
+### Die [Internationale Patentklassifikation (IPC)](http://depatisnet.dpma.de/ipc/)
 
-Hans-Gert Gräbe, 12.05.2019
+(Quelle: https://www.dpma.de/patente/recherche/index.html) 
+
+In der Internationalen Patentklassifikation (IPC) sind technische Sachverhalte
+klassifiziert. Die IPC dient der Ordnung der Patent- und
+Gebrauchsmusterschriften und ermöglicht mit Hilfe von Klassifikationssymbolen
+die sprachunabhängige Recherche dieser Dokumente. Die IPC bildet das gesamte
+Gebiet der Technik ab und enthält über 70.000 Unterteilungen, denen die
+Dokumente zugeordnet werden.
+
+In [DEPATISnet](https://depatisnet.dpma.de/) finden Sie die aktuelle und alle
+früheren Ausgaben/Versionen der Internationalen Patentklassifikation: in
+deutscher, englischer und französischer Sprache. Die Recherchefunktion
+ermöglicht das Auffinden von IPC-Stellen mit Hilfe von Stich- und
+Schlagworten. Hier finden Sie auch die IPC-Konkordanz, mit der Sie Änderungen
+zwischen aufeinander folgenden Versionen der IPC nachvollziehen können. Die
+Hilfsfunktion enthält neben einer Anleitung zur Nutzung des IPC-Verzeichnisses
+auch Informationen zum Aufbau der IPC.
+
+(Quelle: https://data.epo.org/linked-data/documentation/patent-ontology-overview.html) 
+
+To aid finding patent applications, they are classified using the Cooperative
+Patent Classification (CPC) classification scheme or the older International
+Patent Classification (IPC) scheme which CPC extends.
+
+* https://www.cooperativepatentclassification.org/about.html
+* http://www.wipo.int/classifications/ipc/en/
+
+(Quelle: https://www.cooperativepatentclassification.org/about.html)
+
+The EPO and USPTO both had highly developed patent classification systems, the
+European CLAssification (ECLA) and the United States Patent Classification
+(USPC) respectively. CPC is the outcome of an ambitious harmonization effort
+to bring the best practices from each Office together. In fact, most
+U.S. patent documents are already classified in ECLA. The conversion from ECLA
+to CPC at the EPO will ensure IPC compliance and eliminate the need for the
+EPO to classify U.S. patent documents. At the USPTO, the conversion will
+provide an up-to date classification system that is internationally
+compatible.
+
+* [The linked data representation of the CPC taxonomy](https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/CPCopenLinkedData.html)
+
+Hans-Gert Gräbe, 12.05.2019, ergänzt am 16.05.
