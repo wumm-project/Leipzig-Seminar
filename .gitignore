@@ -1,5 +1,8 @@
 *~
 *.aux
-*.loc
+*.log
 *.dvi
 *.toc
+*.nav
+*.snm
+*.out
