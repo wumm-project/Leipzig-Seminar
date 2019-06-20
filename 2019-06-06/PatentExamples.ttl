@@ -1,0 +1,76 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+
+<http://opendiscovery.org/rdf/PatentExamples/>
+    a owl:Ontology ;
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    rdfs:label "Patent Examples from the Leipzig Seminar Course in the Summer Term 2019" .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/US20170117754A1> a od:PatentExample; 
+rdfs:label "Kabelloses Laden mit Patchantennen"; 
+od:theProblem "Zum Laden muss das Gerät auf die Dockingstation gelegt werden, da nur ein kleines elektromagnetisches Feld erzeugt wird.";
+od:positive "Elektromagnetisches Feld vergrößern/verstärken für größere Reichweite und Ladegeschwindigkeit";
+od:negative "Elektromagnetisches Feld klein halten für Effizienz und Einhaltung von Gesetzen";
+od:theSolution "Laden über bestehende elektromagnetische Felder, die auch zur Datenübertragung genutzt werden";
+od:appliedPrinciple <http://opendiscovery.org/Data/Principle/P02> ; 
+od:year "2015"; 
+od:hasGooglePatentID <https://patents.google.com/patent/US20170117754A1> .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/DE19546786A1> a od:PatentExample; 
+rdfs:label "E-Book Reader"; 
+od:theProblem "Daten sind nicht unterwegs abrufbar.";
+od:positive "Computer soll möglichst leicht und klein sein";
+od:negative "Computer brauchen Elektronik und Kühlung";
+od:theSolution "Außerhalb von Lesen/Darstellen benötigte Elektronik entfernen.";
+od:appliedPrinciple <http://opendiscovery.org/Data/Principle/P02> ; 
+od:year "1995"; 
+od:hasGooglePatentID <https://patents.google.com/patent/DE19546786A1> .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/DE10045181C1> a od:PatentExample; 
+rdfs:label "Frontlader-Waschmaschine"; 
+od:theProblem "Möglichst wenig Gewicht/Material verwenden, aber zusätzliche Unwucht-Ausgleichsgewichte werden benötigt" ;
+od:positive "Möglichst niedriges Gewicht";
+od:negative "Unwucht-Ausgleichsgewichte benötigt";
+od:theSolution "Lagernabe übernimmt Funktion des Ausgleichsgewicht.";
+od:appliedPrinciple <http://opendiscovery.org/Data/Principle/P02> ; 
+od:year "2000"; 
+od:hasGooglePatentID <https://patents.google.com/patent/DE10045181C1> .
+
+
+<https://opendiscovery.org/PatentExample/2019-06-06/EP1964690A1> a od:PatentExample;
+rdfs:label "Gussrad"; 
+od:theProblem "Automobilindustrie stellt erhöhte Anforderungen an eine Schlagbeanspruchung eines Gussrads.";
+od:positive "Weniger Masse für weniger Gewicht";
+od:negative "Mehr Masse durch eine erhöhte Wandstärke";
+od:theSolution "Gezielte Materialeinsparungen (z.B. Materialeinsparung hinterer Hornbereich)";
+od:appliedPrinciple <http://opendiscovery.org/Data/Principle/P02> ; 
+od:hasGooglePatentID <https://patents.google.com/patent/EP1964690A1> .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/US2510438A> a od:PatentExample; 
+rdfs:label "Kontaktlinse"; 
+od:theProblem "Sehhilfe (Brille) benötigt Gestell, damit sie tragbar ist, das Gestell trägt nichts direkt zur Sehverbesserung bei.";
+od:positive "Gestell soll möglichst klein sein, damit es nicht bemerkt wird bzw. stört";
+od:negative "Gestell soll groß sein für Stabilität";
+od:theSolution "Linse klein genug zu machen, dass sie kein Gestell benötigt (Kontaktlinse)";
+od:appliedPrinciple <http://opendiscovery.org/Data/Principle/P02> ; 
+od:year "1948"; 
+od:hasGooglePatentID <https://patents.google.com/patent/US2510438A> .
+
+
+
+<https://opendiscovery.org/PatentExample/EP0204933A1> a od:PatentExample; 
+rdfs:label "Klappdeckelschachtel"; 
+od:theProblem "Klappschachteln für Zigaretten sind im Materialverbrauch sehr aufwendig.";
+od:positive "Materialeinsparung";
+od:negative "Aufrechterhaltung des Aufbaus und der Funktionalität";
+od:theSolution "Gezielte Materialeinsparungen (z.B. abgeschrägte Längskanten)";
+od:appliedPrinciple <http://opendiscovery.org/Data/Principle/P02> ; 
+od:year "1986"; 
+od:hasGooglePatentID <https://patents.google.com/patent/EP0204933A1> . 
