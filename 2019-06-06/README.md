@@ -10,4 +10,10 @@ Wikipediaseite](https://en.wikipedia.org/wiki/Google_Patents) zu finden.
 Es gibt bei Google auch eine [Strukturierte
 Suche](https://books.google.com/advanced_patent_search). 
 
-Hans-Gert Gräbe, 20.06.2019
+Aktuell wurden die Patentbeispiele vor allem auf einen *konkreten* Widerspruch
+hin untersucht.  TRIZ ordnet das aber abstrakteren Widerspruchsklassen zu.
+Für die weitere Aufbereitung wäre es deshalb interessant zu sehen, wie sich
+die Beispiele in die Logik der "Matrix" einordnen. Siehe dazu die im Aufbau
+befindliche Übersicht TheMatrix.ttl im Projekt WUMM/RDFData. 
+
+Hans-Gert Gräbe, 24.06.2019
