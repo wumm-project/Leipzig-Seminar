@@ -4,9 +4,11 @@ https://matriz.org/wp-content/uploads/2012/09/TRIZ-Development-High-Priority-Dir
 Dort ist insbesondere eine Übersicht "High-Priority Directions (HPD) for TRIZ
 Development" zu finden.
 
-
 http://triz.by/articles/open-letter-about-the-development-triz-3.html
 http://www.metodolog.ru/node/1791
 
 Januar 2014: Aufsatz von Kuryan. Geht auf eine Begriffsdiskussion ein.  Ins
 Deutsche übersetzen und daraus einen LaTeX-Beitrag machen.
+
+TRIZ Glossar von Valeri Souchkov
+http://www.xtriz.com/publications/TRIZGlossaryVersion1_2.pdf
