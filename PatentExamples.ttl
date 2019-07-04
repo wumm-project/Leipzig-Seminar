@@ -1,0 +1,182 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix odp: <http://opendiscovery.org/rdf/Principle/> .
+@prefix odm: <http://opendiscovery.org/rdf/Parameter/> .
+
+<http://opendiscovery.org/rdf/PatentExamples/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    a owl:Ontology ;
+    rdfs:label "Patent Examples from the Leipzig Seminar Course in the Summer Term 2019" .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/DE10045181C1>
+    od:appliedPrinciple odp:P02 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE10045181C1> ;
+    od:negative "Unwucht-Ausgleichsgewichte benötigt" ;
+    od:positive "Möglichst niedriges Gewicht" ;
+    od:theProblem "Möglichst wenig Gewicht/Material verwenden, aber zusätzliche Unwucht-Ausgleichsgewichte werden benötigt" ;
+    od:theSolution "Lagernabe übernimmt Funktion des Ausgleichsgewicht." ;
+    od:year "2000" ;
+    a od:PatentExample ;
+    rdfs:label "Frontlader-Waschmaschine" .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/DE19546786A1>
+    od:appliedPrinciple odp:P02 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE19546786A1> ;
+    od:negative "Computer brauchen Elektronik und Kühlung" ;
+    od:positive "Computer soll möglichst leicht und klein sein" ;
+    od:theProblem "Daten sind nicht unterwegs abrufbar." ;
+    od:theSolution "Außerhalb von Lesen/Darstellen benötigte Elektronik entfernen." ;
+    od:year "1995" ;
+    a od:PatentExample ;
+    rdfs:label "E-Book Reader" .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/EP1964690A1>
+    od:appliedPrinciple odp:P02 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/EP1964690A1> ;
+    od:negative "Mehr Masse durch eine erhöhte Wandstärke" ;
+    od:positive "Weniger Masse für weniger Gewicht" ;
+    od:theProblem "Automobilindustrie stellt erhöhte Anforderungen an eine Schlagbeanspruchung eines Gussrads." ;
+    od:theSolution "Gezielte Materialeinsparungen (z.B. Materialeinsparung hinterer Hornbereich)" ;
+    a od:PatentExample ;
+    rdfs:label "Gussrad" .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/US20170117754A1>
+    od:appliedPrinciple odp:P02 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US20170117754A1> ;
+    od:negative "Elektromagnetisches Feld klein halten für Effizienz und Einhaltung von Gesetzen" ;
+    od:positive "Elektromagnetisches Feld vergrößern/verstärken für größere Reichweite und Ladegeschwindigkeit" ;
+    od:theProblem "Zum Laden muss das Gerät auf die Dockingstation gelegt werden, da nur ein kleines elektromagnetisches Feld erzeugt wird." ;
+    od:theSolution "Laden über bestehende elektromagnetische Felder, die auch zur Datenübertragung genutzt werden" ;
+    od:year "2015" ;
+    a od:PatentExample ;
+    rdfs:label "Kabelloses Laden mit Patchantennen" .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/US2510438A>
+    od:appliedPrinciple odp:P02 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US2510438A> ;
+    od:negative "Gestell soll groß sein für Stabilität" ;
+    od:positive "Gestell soll möglichst klein sein, damit es nicht bemerkt wird bzw. stört" ;
+    od:theProblem "Sehhilfe (Brille) benötigt Gestell, damit sie tragbar ist, das Gestell trägt nichts direkt zur Sehverbesserung bei." ;
+    od:theSolution "Linse klein genug zu machen, dass sie kein Gestell benötigt (Kontaktlinse)" ;
+    od:year "1948" ;
+    a od:PatentExample ;
+    rdfs:label "Kontaktlinse" .
+
+<https://opendiscovery.org/PatentExample/2019-06-06/EP0204933A1>
+    od:appliedPrinciple odp:P02 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/EP0204933A1> ;
+    od:negative "Aufrechterhaltung des Aufbaus und der Funktionalität" ;
+    od:positive "Materialeinsparung" ;
+    od:theProblem "Klappschachteln für Zigaretten sind im Materialverbrauch sehr aufwendig." ;
+    od:theSolution "Gezielte Materialeinsparungen (z.B. abgeschrägte Längskanten)" ;
+    od:year "1986" ;
+    a od:PatentExample ;
+    rdfs:label "Klappdeckelschachtel" .
+
+<https://opendiscovery.org/PatentExample/2019-06-20/CH245246A>
+    od:appliedPrinciple odp:P27 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/CH245246A> ;
+    od:theProblem "Schwere und teure Mehrweg-Milchflaschen" ;
+    od:theSolution "Ersetzung von Glas durch Karton-Kunststoff-Verbundstoff" ;
+    od:year "1945" ;
+    a od:PatentExample ;
+    rdfs:label "Tetrapack" .
+    
+<https://opendiscovery.org/PatentExample/2019-06-20/US3447882A>
+    od:appliedPrinciple odp:P27 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US3447882A> ;
+    od:theProblem "Systeme zur Wiederbefüllung teuer, hoher Schaden bei Verlust des Feuerzeugs" ;
+    od:theSolution "Verzicht auf Nachfüllbehälter, Ersetzen von Metall durch Plastik" ;
+    od:year "1967" ;
+    a od:PatentExample ;
+    rdfs:label "Wegwerf-Zigarettenanzünder" .
+
+<https://opendiscovery.org/PatentExample/2019-06-20/CH279136A>
+    od:appliedPrinciple odp:P27 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/CH279136A> ;
+    od:theProblem "Schwere Verpackung aus Metall für Teeproben, Anschaffung eines Teesiebes" ;
+    od:theSolution "Ersetzung von Metall durch anfangs kleine Seidensäckchen, heute Zellulose-Gemisch" ;
+    od:year "1949" ;
+    a od:PatentExample ;
+    rdfs:label "Teebeutel" .
+
+<https://opendiscovery.org/PatentExample/2019-06-20/>
+    od:appliedPrinciple odp:P27 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/> ;
+    od:theProblem "" ;
+    od:theSolution "" ;
+    od:year "1967" ;
+    a od:PatentExample ;
+    rdfs:label "" .
+
+<https://opendiscovery.org/PatentExample/2019-06-20/DE1140162B>
+    od:appliedPrinciple odp:P27 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE1140162B> ;
+    od:theProblem "Auskochen von Stoffwindeln" ;
+    od:theSolution "Ersetzung von Stoff durch Zellstoff mit Superabsorbern" ;
+    od:year "1960" ;
+    a od:PatentExample ;
+    rdfs:label "Wegwerf-Windel" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/DE896312B>
+    od:appliedPrinciple odp:P11 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE896312B> ;
+    od:theProblem "Autounfälle mit Verletzten" ;
+    od:theSolution "Bei einem Zusammenstoß werden die Insassen von Airbags geschützt" ;
+    od:year "1951" ;
+    a od:PatentExample ;
+    rdfs:label "Airbag" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/DE102016200455A1>
+    od:appliedPrinciple odp:P11 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE102016200455A1> ;
+    od:theProblem "Hohe Verletzungsgefahr" ;
+    od:theSolution "Sofortige Stillsetzung und Auslösen von Airbags bei Nichteinhaltung von Sicherheitsabstand" ;
+    od:year "2016" ;
+    a od:PatentExample ;
+    rdfs:label "Roboter-Sicherheitsvorrichtung" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/DE2519799C3>
+    od:appliedPrinciple odp:P11 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE2519799C3> ;
+    od:theProblem "Diebstahl in Warenhäusern" ;
+    od:theSolution "Waren mit Alarm-auslösenden Signalgebern, die vom Personal deaktiviert werden müssen" ;
+    od:year "1975" ;
+    a od:PatentExample ;
+    rdfs:label "Ausgangsüberwachung" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/WO2017125935A1>
+    od:appliedPrinciple odp:P11 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/WO2017125935A1> ;
+    od:theProblem "Ransomware verschlüsselt gespeicherte Daten und macht sie unabrufbar" ;
+    od:theSolution "Vor Verschlüsselung Backups anlegen. Verdächtige Schreiboperationen werden blockiert, bis eine Kopie der betroffenen Dateien erstellt ist." ;
+    od:year "2017" ;
+    a od:PatentExample ;
+    rdfs:label "Ransomware-Schutz" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/US9596264B2>
+    od:appliedPrinciple odp:P11 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US9596264B2> ;
+    od:theProblem "Über E-Mail können schädliche Links versendet werden" ;
+    od:theSolution "Analyse in abgeschlossener Testumgebung, „Sandboxing“ verdächtiger/unbekannter Links von Seiten des Systems" ;
+    od:year "2015" ;
+    a od:PatentExample ;
+    rdfs:label "Gezielter Angriffsschutz" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/US2879821A>
+    od:appliedPrinciple odp:P11 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US2879821A> ;
+    od:theProblem "Plattengefahr bei Luftreifen" ;
+    od:theSolution "„Sicherheitsrad“ innerhalb des Reifens" ;
+    od:year "1956" ;
+    a od:PatentExample ;
+    rdfs:label "Notlaufreifen" .
+
