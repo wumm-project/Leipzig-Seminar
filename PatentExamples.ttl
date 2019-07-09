@@ -180,3 +180,98 @@
     a od:PatentExample ;
     rdfs:label "Notlaufreifen" .
 
+<https://opendiscovery.org/PatentExample/2019-06-27/>
+    od:appliedPrinciple odp:P15 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/> ;
+    od:theProblem "" ;
+    od:theSolution "" ;
+    od:year "1956" ;
+    a od:PatentExample ;
+    rdfs:label "Abgas-Turbolader" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/EP2158386B1>
+    od:appliedPrinciple odp:P15 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/EP2158386B1> ;
+    od:theProblem "Bisherige Umsetzung des Turboladers ist nur teildynamisch, Kennwerte nicht immer optimal „Turboloch“" ;
+    od:theSolution "Energiezufuhr durch Elektromotor in Betriebszuständen, wo Abgasladedruck nicht ideal ist" ;
+    od:year "2000" ;
+    a od:PatentExample ;
+    rdfs:label "Turbolader" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/DE19606402C2>
+    od:appliedPrinciple odp:P15 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE19606402C2> ;
+    od:theProblem "Wenn der Motor stärker wird, dann kann das Auto schneller fahren, aber verbraucht mehr Benzin" ;
+    od:theSolution "bei geringer Motorlast, einzelne Zylinder abschalten" ;
+    od:year "1996" ;
+    a od:PatentExample ;
+    rdfs:label "Automatische Zylinderabscshaltung" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/>
+    od:appliedPrinciple odp:P15 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/> ;
+    od:theProblem "" ;
+    od:theSolution "" ;
+    od:year "1956" ;
+    a od:PatentExample ;
+    rdfs:label "" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/US2523427A>
+    od:appliedPrinciple odp:P15 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US2523427A> ;
+    od:theProblem "hohe Geschwindigkeit und gleichzeitige Beweglichkeit" ;
+    od:theSolution "Flügel die verschiedene Positionen einnehmen können, um optimalen Luftfluss unter verschiedensten Szenarien zu gewährleisten." ;
+    od:year "1946" ;
+    a od:PatentExample ;
+    rdfs:label "Schwenkflügel bei Flugzeugen" .
+
+<https://opendiscovery.org/PatentExample/2019-06-27/DE976562C>
+    od:appliedPrinciple odp:P15 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE976562C> ;
+    od:theProblem "Unbewegliches Objekt muss beweglich sein und zuverlässig" ;
+    od:theSolution "Lenksäulenvorrichtung, die Lenkwelle drehbar macht" ;
+    od:year "1956" ;
+    a od:PatentExample ;
+    rdfs:label "Verstellbare Lenksäule" .
+
+
+<https://opendiscovery.org/PatentExample/2019-07-04/DE10014458A1>
+    od:appliedPrinciple odp:P17 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE10014458A1> ;
+    od:hasGooglePatentID <https://patents.google.com/patent/CA1026013A> ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US3365620A> ;
+    od:theProblem "Das Gerät erzeugt als Beiprodukt Wärme, welche das Gerät beeinträchtigt, falls sie nicht abgeführt wird" ;
+    od:theSolution "Vergrößerung der kühlenden Oberfläche durch mehrschichtige Struktur auf ungenutzten Arealen" ;
+    od:decreasingParameter odm:P26 ;
+    od:increasingParameter odm:P17 ;
+    a od:PatentExample ;
+    rdfs:label "CPU Kühlkörper" .
+
+<https://opendiscovery.org/PatentExample/2019-07-04/US7816945B2>
+    od:appliedPrinciple odp:P17 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US7816945B2> ;
+    od:theProblem "Leistung moderner Microchips wird stark eingegrenzt durch Mindestabstände zwischen Leitern und maximal informationell zu überbrückender Distanz" ;
+    od:theSolution "Auslagerung auf mehrere Schaltkreise auf verschiedene Ebenen, die über Stege miteinander kommunizieren" ;
+    rdfs:comment "Mehrere Möglichkeiten für Parameterpaare denkbar" ; 
+    a od:PatentExample ;
+    rdfs:label "3D Chip-Stacks" .
+
+<https://opendiscovery.org/PatentExample/2019-07-04/US7441491>
+    od:appliedPrinciple odp:P17 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/US7441491> ;
+    od:theProblem "Stangenmagazine können nicht endlos verlängert werden aufgrund von Handhabung und Federspannung" ;
+    od:theSolution "Aufbewahren der Patronen auf spiralförmigen Bahnen, Antrieb durch Treib- statt Spiralfeder" ;
+    od:decreasingParameter odm:P10 ;
+    od:increasingParameter odm:P03 ;
+    od:year "2005" ;
+    a od:PatentExample ;
+    rdfs:label "Trommelmagazin" .
+
+<https://opendiscovery.org/PatentExample/2019-07-04/DE331218>
+    od:appliedPrinciple odp:P17 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE331218> ;
+    od:theProblem "Das Laden von Patronen von oben in eine Waffe hinein versperrt die Sicht" ;
+    od:theSolution "Lagerung längs entlang der Waffe - bei Einfuhr wird die Munition in die richtige Position gedreht." ;
+    od:year "1990" ;
+    a od:PatentExample ;
+    rdfs:label "Longitudinales Magazin für Handfeuerwaffen" .
