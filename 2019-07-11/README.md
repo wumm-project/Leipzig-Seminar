@@ -204,14 +204,36 @@ Erkenntnis: Wissen ist wichtiger als Logik.
 
 1997-2001: CoBrain: Wissensbasis zielgerichtet aus dem Internet aufbauen.
 
-2017+: True Machine: Generative Inventions
+2017+: True Machina: Generative Inventions
 
 Maschine wird als globales Expertensystem zum kreativen Partner des Menschen.
+
+Aus dem Paper: 
+> Das Konzept des Тrue Мachina-Projekts unterscheidet sich stark von der
+> IM-Philosophie auf der Grundlage der TRIZ. Das IM-System stützt sich auf die
+> Logik der FSA und der TRIZ-Wissensbasis, die für Menschen erstellt wurden,
+> sodass im Kopf eines menschlichen Benutzers neue Ideen auftauchen.
+
+> Das Hauptkonzept des neuen Projekts besteht darin, dass der Computer selbst
+> keine Hinweise zur Lösung von Problemen generiert, sondern neue Lösungen in
+> Form von Erfindungen mit Bildern, Beschreibungen, Titeln und der Nummer der
+> Erfindung. Der Unterschied ist grundlegend: Wenn dem Benutzer des Programms
+> vor der Idee einer Erfindung die Idee im Speicher des Computers generiert
+> wurde, sieht der Benutzer keinen Hinweis, sondern eine Reihe neuer
+> technischer Lösungen auf dem Bildschirm.
+
+> Das True Machina System generiert selbst Ideen und unterstützt nicht nur den
+> Menschen in diesem Prozess. Die künstliche Intelligenz beginnt eine
+> Partnerrolle zu spielen: Beide Teilnehmer des kreativen Prozesses entwickeln
+> Ideen für Erfindungen, aber sie tun dies auf unterschiedliche Weise. Dies
+> ist die Stärke der Partnerschaft zwischen dem Menschen und True Machina.
 
 Welche Konsequenzen hat das?
 * Ist damit nicht das Patentsystem am Ende? - Ja.
 * Wer wird der "Herr" über diese neuen Ideen sein? - VC: Interessiert mich
   nicht, ich baue ein System. 
+
+
 
 ### V. Souchkov: Zur Geschichte von TRIZ im Business
 
