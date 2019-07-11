@@ -1,0 +1,4 @@
+sklearn
+stop_words
+gensim
+nltk
