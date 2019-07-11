@@ -50,7 +50,7 @@ Eine Übersicht samt Links zu den veröffentlichten Beiträgen ist unter
 
 ### V. Petrov: Daten, Funktionen, Wissen als Erweiterung des SuField-Ansatzes
 
-Kein Aufsatz dazu verfügbar
+Kein Aufsatz dazu verfügbar. 
 
 * Klassischer Zugang: E_1 wirkt auf E_2 durch eine Aktion A
 * Weiterentwicklung zu einem Element-Aktion-Ansatz: Aktion transformiert das
@@ -92,7 +92,7 @@ verschiedene Auswirkungen, da in Chile erdbebensicher(er) gebaut wurde.
 Beispiel dezentraler Energieversorgung argumentiert.
 
 DK stellt ein genaueres Analyseschema vor, das im Aufsatz auf das konkrete
-Problem "public transport" angewendet wird, im Vortrag abere noch allgemeiner
+Problem "public transport" angewendet wird, im Vortrag aber noch allgemeiner
 dargestellt wurde.
 
 Ein gesellschaftlich wirksamer technological forecast ruht auf folgenden
@@ -204,7 +204,7 @@ Erkenntnis: Wissen ist wichtiger als Logik.
 
 1997-2001: CoBrain: Wissensbasis zielgerichtet aus dem Internet aufbauen.
 
-2017+: True Machina: Generative Inventions
+2017+: True Machine: Generative Inventions
 
 Maschine wird als globales Expertensystem zum kreativen Partner des Menschen.
 
