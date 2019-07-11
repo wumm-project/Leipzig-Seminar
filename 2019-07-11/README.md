@@ -13,20 +13,17 @@ drei RDF-Graphen jeweils deutsche, englische und russische Versionen
 eingebaut.  Dies demonstriert (noch einmal) das exzellente
 Mehrsprachigkeitskonzept von RDF.
 
-Auf der Basis wurde eine kleine prototypische Webpräsenz 
-
-http://wumm.uni-leipzig.de/
-
-aufgebaut. 
+Auf der Basis wurde eine kleine prototypische Webpräsenz
+<http://wumm.uni-leipzig.de/> aufgebaut.
 
 ## Vorstellung der Eindrücke vom TRIZ Summit 2019 in Minsk
 
 Eine Übersicht samt Links zu den veröffentlichten Beiträgen ist unter
-http://wumm.uni-leipzig.de verlinkt.
+<http://wumm.uni-leipzig.de> verlinkt.
 
 ### Bilder in diesem Verzeichnis:
 
-* 20190613_102427.jpg - V. Petrov: Daten, Funḱtionen, Wissen als Erweiterung
+* 20190613_102427.jpg - V. Petrov: Daten, Funktionen, Wissen als Erweiterung
   des SuField-Ansatzes  
 * 20190613_124033.jpg - D. Kucharavy: Evolution von technischen Systemen.  Die
   S-Kurve und ihre ersten beiden Ableitungen. Jahreszeitenmodell
@@ -51,7 +48,7 @@ http://wumm.uni-leipzig.de verlinkt.
 * 20190615_105007.jpg - A. Kozhemyako: Eine Weiterentwicklung
   systemtheoretischer Zugänge
 
-### V. Petrov: Daten, Funḱtionen, Wissen als Erweiterung des SuField-Ansatzes
+### V. Petrov: Daten, Funktionen, Wissen als Erweiterung des SuField-Ansatzes
 
 Kein Aufsatz dazu verfügbar
 
@@ -118,7 +115,7 @@ All models are wrong, but some are useful.
 
 http://triz-summit.ru/file.php/id/f304798-file-original.pdf (englisch)
 
-* "TRIZ kann man in der IT anwenden, nicht aber im Programmieren."
+"TRIZ kann man in der IT anwenden, nicht aber im Programmieren."
 
 Es gibt drei Arten von Innovationen:
 * neue technische Lösungen
@@ -143,8 +140,7 @@ neuer innovativer Lösungen.
 Weiter Vergleich von Business TRIZ und "classical TRIZ" (siehe dazu die
 Fotos).
 
-### M. Rubin: Evolutionary systems knowledge: general theory of solving
-    inventive problems
+### M. Rubin: Evolutionary systems knowledge: general theory of solving inventive problems
 
 Text liegt nicht vor, aber unter http://evos.pro/ ist eine russischsprachige
 Site (letzter Update 2014) verfügbar. Eine englische Version ist nicht
@@ -268,8 +264,7 @@ http://triz-summit.ru/file.php/id/f304808-file-original.pdf (in englisch)
 Erste Ansätze, die aber keine semantischen Technologien auf den Stand der
 Technik anwenden und eher in Richtung Modellierung gehen.
 
-### A. Kozhemyako: Features of using TRIZ tools in solving organizational and
-    management tasks
+### A. Kozhemyako: Features of using TRIZ tools in solving organizational and management tasks
 
 http://triz-summit.ru/file.php/id/f304826-file-original.pdf (in russisch)
 
