@@ -49,7 +49,7 @@ Stellt eine Reihe von Fragen:
 * Wieso spielt TRIZ in der Praxis eine so geringe Rolle?
 * Wo sind die Patente, die mit TRIZ gemacht wurden (und nicht nur durch TRIZ
   im Nachhinein erklärt werden)?
-* "The righter wo do the the wrong things, the wronger we become."
+* "The righter we do the the wrong things, the wronger we become."
 * "If you ask the wrong question, it doen't matter how good your answer will
   be."
 * "Efficiency is doing things right, effectiveness is doing right things."
@@ -101,8 +101,8 @@ Es gibt drei Arten von Innovationen:
 * neue Geschäftsmodelle (das interessiert VS besonders)
 * neue komplexe Lösungen (Geschäftsmodelle + technische Plattform)
 
-Top 20 reasons why start-ups fail:
-* 40%, weil sie kein wirkliches Problem lösen.
+Top 20 reasons why start-ups fail: 40%, weil sie kein wirkliches Problem
+lösen.
 
 Innovativ sind neue Lösungen oder alte Lösungen in neuem Kontext, so dass
 * Wert für die Zielgruppe existiert
@@ -127,12 +127,11 @@ erreichbar.
 
 Auf der Webseite heißt es:
 
-> Anhand der TRIZ werden die allgemeinen Entwicklungsgesetze der materiellen
-> und immateriellen Systeme aufgedeckt. Erfinderische Aufgaben finden sich
-> nicht nur im Ingenieurwesen, sondern auch in den Bereichen Programmierung,
-> Kunst, Recht, Biologie, Soziologie, Pädagogik, Management, Marketing,
-> Politik und Wissenschaftsentwicklung - in allen Bereichen des menschlichen
-> Handelns.
+> Anhand der TRIZ werden die allgemeinen Entwicklungsgesetze materieller und
+> immaterieller Systeme aufgedeckt. Erfinderische Aufgaben finden sich nicht
+> nur im Ingenieurwesen, sondern auch in den Bereichen Programmierung, Kunst,
+> Recht, Biologie, Soziologie, Pädagogik, Management, Marketing, Politik und
+> Wissenschaftsentwicklung - in allen Bereichen des menschlichen Handelns.
 
 > Die evolutionäre Systemwissenschaft deckt die allgemeinen Gesetze der
 > Entwicklung von Systemen auf, beschreibt die Werkzeuge zur Analyse von
@@ -141,7 +140,7 @@ Auf der Webseite heißt es:
 > eine erfinderische Lösung dieser Probleme.
 
 Es werden eine Reihe von Ansätzen diskutiert, die auch bei den klassischen
-Hyperzyklern adressiert sind, aber die Verbindungen sind weitgehend
+Hyperzyklern besprochen werden, aber die Verbindungen sind weitgehend
 unbekannt.  Insbesondere spielt ein Phänomen eine zentrale Rolle, was in jenem
 Kontext als "Versklavungseffekt" bezeichnet wird. Ein grober Einstieg in jene
 Welt ist etwa über https://en.wikipedia.org/wiki/Synergetics_(Haken) möglich.
@@ -176,8 +175,8 @@ Neuen tragen.
 
 Damit konnte TRIZ in diesen Gebieten automatisiert werden, aber das hat der
 Markt nicht honoriert, denn mit der Zeit haben die Leute TRIZ selbst
-verstanden und haben die Software nicht genutzt und damit konnte die
-Datenbasis nicht ausreichend erweitert werden.
+verstanden und haben die Software nicht genutzt. Damit konnte die Datenbasis
+nicht ausreichend erweitert werden.
 
 Erkenntnis: Wissen ist wichtiger als Logik.
 
@@ -212,8 +211,6 @@ Welche Konsequenzen hat das?
 * Wer wird der "Herr" über diese neuen Ideen sein? - VC: Interessiert mich
   nicht, ich baue ein System. 
 
-
-
 ### V. Souchkov: Zur Geschichte von TRIZ im Business
 
 Kein Text dazu.  Fortsetzung der Ausführungen aus der Masterklasse. 
@@ -243,11 +240,11 @@ Problem der Komplexität.
 Üblicherweise werden Innovationen meist so geplant, als ob sich die
 geschäftliche Umgebung nicht ändert. Wenn das aber der Fall ist, dann kann das
 nicht funktionieren.  Komplexe Ursache-Wirkungs-Zusammenhänge sind zu
-berücksichtigen. Klassische Root-Cause-Analysis funktionert dann nicht mehr.
+berücksichtigen. Klassische Root-Cause-Analysis funktioniert dann nicht mehr.
 
-Problem der Schwarmintelligenz: Lokale regeln führen zu globaer Energenz.
+Problem der Schwarmintelligenz: Lokale Regeln führen zu globaler Emergenz.
 
-Typischer Evolitionskreislauf
+Typischer Evolutionskreislauf
 
 Chaotic -(1)-> Complex -(2)-> Complicated -(3)-> Obvious -(4)-> Chaotic
 
