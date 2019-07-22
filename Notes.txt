@@ -12,3 +12,6 @@ Deutsche übersetzen und daraus einen LaTeX-Beitrag machen.
 
 TRIZ Glossar von Valeri Souchkov
 http://www.xtriz.com/publications/TRIZGlossaryVersion1_2.pdf
+
+https://www.trizland.ru/authors/90
+Beispiele und Aufgaben
