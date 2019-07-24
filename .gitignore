@@ -6,3 +6,5 @@
 *.nav
 *.snm
 *.out
+*.bbl
+*.blg
