@@ -37,7 +37,9 @@ Lautenschläger und Lydie Laforet vom IIRM der WiFa sowie Ken Kleemann
   * Konzept der *Schematisierung* in Anlehung an Theorien von [Georgi
     Shchedrowitsky](https://en.wikipedia.org/wiki/Georgy_Shchedrovitsky)
     (Moskauer Philosoph des 20. Jahrhunderts)
-* Darrel Mann über die Kompexität von Business-Systemen auf dem TRIZ Summit
+* Darrell Mann über die Kompexität von Business-Systemen auf dem TRIZ Summit
   2019
   * https://triz-summit.ru/file.php/id/f304797-file-original.pdf
   * https://triz-summit.ru/file.php/id/f304816-file-original.pdf
+* [Diskussion](https://wumm-project.github.io/2019-08-07) zum Systembegriff im
+  TRIZ-Kontext im Facebook-Kanal von Valeri Souchkov
