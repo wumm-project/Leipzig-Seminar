@@ -19,11 +19,11 @@ konkretisiert und das Ganze an einem Beispiel genauer ausgeführt.
 
 Das Seminar ist Teil des Vertiefungsmoduls "Semantic Web", zu dem weiter eine
 Vorlesung "Nachhaltigkeit und Digitale Skills" sowie ein Online-Praktikum mit
-dem TRIZ-Trainer von Nikolay Shpakovski gehören.  Im Seminar wollen wir uns
-dem für die TRIZ-Methodik zentralen Begriff des "Systems" nähern und dazu
-verschiedene Quellen auswerten.  Das Modul wird gemeinsam mit Sabine
-Lautenschläger und Lydie Laforet vom IIRM der WiFa sowie Ken Kleemann
-(Philosophie) organisiert.
+dem TRIZ-Trainer von Nikolay Shpakovski gehören.  Im Seminar wollen wir uns dem
+für die TRIZ-Methodik zentralen Begriff des "Systems" nähern und dazu
+verschiedene Quellen auswerten.  Das Modul wird gemeinsam mit Lydie Laforet und
+Sabine Lautenschläger vom IIRM der WiFa sowie Ken Kleemann (Philosophie)
+organisiert.
 
 * Teile eines früheren Seminarkonzepts (Sabine Lautenschläger, Lydie Laforet)
 
