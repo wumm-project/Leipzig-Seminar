@@ -1,0 +1,201 @@
+\documentclass{article}
+\usepackage{a4wide,url,graphicx}
+\title{Seminararbeit Patentrecherche zum 'Prinzip Der Dynamisierung'}
+
+\author{Robin Seidel}
+\date{30. September 2019} 
+
+\begin{document}
+\maketitle
+
+\section{Allgemeines}
+In dieser Seminararbeit soll dargestellt werden, wie anhand von 5 Erfindungen, Altschullers Gedanken zum schöpferischen Prozess in der Ingenieurskunst angewendet werden können. Um eine Herangehensweise zu entwickeln um aus allgemeinen Problemen, eine Lösungsstrategie für spezielle Probleme abzuleiten. 
+Speziell soll hier gezeigt werden wie anhand des Prinzips der Dynamisierung  Probleme gelöst werden können. Allgemein ist dieses Innovative Prinzip aus der Widerspruchsmatrix, auf folgende Sachverhalte anzuwenden:
+\begin{itemize}
+\item
+Die Kennwerte des Objektes(oder des umgebenden Mediums) müssen sich so verändern, dass sie in jeder Arbeitsetappe optimal sind.
+\item
+Das Objekt ist in Teile zu zerlegen, die sich zueinander verstellen oder verschieben lassen.
+\item 
+Falls das Objekt insgesamt unbeweglich ist, ist es beweglich(verstellbar) zu gestalten.
+\end{itemize}
+
+\section{Beispiel 1: Der Abgasturbolader}
+
+\subsection{Metadaten}
+\begin{itemize}\itemsep0pt
+\item Titel: Turbolader
+\item Patentnummer: EP2158386B1
+\item Quelle: \url{https://patents.google.com/patent/EP2158386B1}
+\item Patentinhaber: LINDENMAIER GMBH, SYCOTEC GmbH and Co KG
+\item Patentdaten: Veröffentlichung 2017-07-12
+\end{itemize}
+
+\subsection{Beschreibung des Stands der Technik}
+Das Patent beruht auf dem Prinzip der Gleichdruck- oder Stauaufladung(Patent von Alfred Büchi - 1905).
+Dieses beschreibt den Turbolader, der den Stand der Technik darstellt.
+Ziel ist es die Leistung eines Motors zu erhöhen, indem man den Druck in der Brennkammer erhöht.                                                                                        
+Die Funktionsweise eines Turboladers ist folgende:
+Ein Teil der Luft des Abgasstromes wird in einer Turbine umgeleitet. Diese Turbine treibt dann einen Verdichter an. Dadurch wird der Druck im Ansaugsystem des Motors erhöht. Somit kann viel mehr Luft in die Brennkammern gelangen. 
+Die Verbrennung des Benzins kann effektiver stattfinden. Es wird mehr Energie frei.
+Erkennbar daraus ist, dass trotz gleichbleibender Motorgröße eine größere Leistung des Fahrzeuges erzielt werden kann.                                       
+Schwachstelle dieses Systems ist das sogenannte "Turboloch". Es beschreibt die Verzögerung, bevor die Leistung explosionsartig einsetzt. Durch mechanische und thermische Trägheit kommt es im niedrigen Drehzahlbereich zu Verzögerungen bis die komprimierte Luft in den Brennkammern ankommt.
+\subsection{Funktionales Modell}
+\paragraph{Obersystem:}
+Obersystem: Die Energie fließt vom Abgasstrang in eine Turbine. Das Abgas wird beschleunigt in einen Verdichter geleitet. Schließlich gelangt die Luft wieder in die Brennkammer. Dort wird sie zusammen mit Benzin zur Entzündung gebracht.
+
+\paragraph{Komponenten:}
+Komponenten:
+\begin{itemize}
+\item Elektromotor: Steuert den Energiezufuhr in die Brennkammer, indem er den Luftstrom regelt in Betriebszuständen wo der Abgasladedruck nicht ideal ist.
+\item Turbine: Mechanisches Bauteil das Luftfluss beschleunigt.
+\item Verdichter: Bauteil, dass die Luft komprimiert 
+\end{itemize}
+  
+\subsection{Formulierung des Miniproblems}
+Ein Problem bei dieser Druckerhöhung in der Brennkammer, ist eine höhere mechanische Belastung woraus eine kürzere Lebensdauer des Motors resultiert.
+Außerdem ist die Konstruktion aufwendiger, da weitere Bauteile hinzukommen.
+Das eigentliche Problem ist jedoch, das durch den Turbolader zwar zu bestimmten Zeitpunkten des Beschleunigungsvorganges mehr Druck in der Brennkammer herrscht, dies aber sehr verzögert und nicht konstant ist.                                              Die durch Alfred Büchi vorgestellte Lösung ist nur halb-dynamisch. Mithilfe des vorgestellten Patents EP2158386B1, wird dieses Problem beseitigt. Der Ladedruck des Turboladers ist in allen Betriebszuständen optimal.
+
+
+\subsection{Beschreibung der Lösung des Problems in der Patentschrift}
+
+Mithilfe eines Elektromotors kann exakt gesteuert werden zu welchem Zeitpunkt wie viel Luft in die Brennkammer gegeben wird. Dadurch wird das Turboloch soweit verringert, dass der Ladedruck immer gleichmäßig ist.
+
+\subsection{Einordnung des Problems in die TRIZ-Systematik}
+Das Problem lässt sich nur sehr schwer in die Triz Matrix einordnen. Wenn man als sich verbessernden Parameter die Leistung nimmt und als sich verschlechternden den Energieverlust, bekommt man das Prinzip der Eigenschaftsänderung(35) vorgeschlagen. 
+\subsection{Darstellung des Bezugs der speziellen Lösung zu den
+  TRIZ-Strukturen} 
+Das Prinzip der Eigenschaftsänderung ist in diesem speziellen Zusammenhang ein vergleichbares Prinzip, wie das der Dynamisierung. Da hier sich die Eigenschaft des Druckes so verändert das die Kennwerte des Objektes in jeder Phase optimal sind.(siehe Prinzip der Dynamisierung)
+
+\section{Beispiel 2: Automatische Zylinderabschaltung}
+\subsection{Metadaten}
+\begin{itemize}\itemsep0pt
+\item Titel: Zylinderabschaltung bei Otto-Motoren
+\item Patentnummer: DE19606402C2
+\item Quelle: \url{https://patents.google.com/patent/DE19606402C2/ko}
+\item Patentinhaber:  Rainer Born 
+\item Patentdaten: Veröffentlichung 1998-08-13
+
+\end{itemize}
+\subsection{Beschreibung des Stands der Technik}
+Alle Zylinder des Motors arbeiten zu allen Betriebszuständen gleichzeitig und produzieren die gleiche Energie. Die Zylinder bekommen alle die gleiche Treibstoffmenge zugeführt. 
+\subsection{Funktionales Modell}
+
+\subsection{Formulierung des Miniproblems}
+Um ein Fahrzeug schneller zu beschleunigen beziehungsweise damit es schneller fahren kann, muss die Anzahl der Zylinder oder der Brennraum vergrößert werden. Dies hat zur Folge, dass das Kraftfahrzeug mehr Motorleistung generiert, aber dadurch auch mehr Benzinverbrauch verursacht. 
+Durch die erhöhte Anzahl an Zylindern hat das Fahrzeug auch in Zuständen geringer Motorlast einen verhältnismäßig erhöhten Kraftstoffverbrauch.
+\subsection{Beschreibung der Lösung des Problems in der Patentschrift}
+Durch eine Zylinder Ab- oder Zuschaltung, kann jeder Zylinder mit der optimalen oder gar keiner Treibstoffmenge versorgt werden.
+Somit ist eine optimale Leistungsbeanspruchung zu jedem Zeitpunkt gewährleistet.
+Es sind hohe Geschwindigkeiten und eine Benzineinsparung gleichzeitig möglich. 
+
+\subsection{Einordnung des Problems in die TRIZ-Systematik}
+Die Lösung lässt sich in die Widerspruchsmatrix  einordnen, da der verbesserte Faktor die Geschwindigkeit oder die Leistung ist(9) und der sich verschlechternde Faktor die Energiekonsumption eines beweglichen Objektes ist(19) ist. Die Matrix schlägt neben dem Prinzip des Gegengewichts(8), dem Prinzip der Eigenschaftsänderung (35) auch das Prinzip der Dynamisierung vor. 
+\subsection{Darstellung der speziellen Lösung zu allg. TRIZ-Strukturen}
+ 
+Die Lösung erfolgt hier durch Dynamisierung, da die Kennwerte des Objektes sich so verändern, dass sie in jeder Arbeitsetappe optimal sind. Es arbeiten nur eine bestimmte Anzahl an Zylindern zur gleichen Zeit. Somit ist die in einer Zeitspanne umgesetzte Energie im System optimal im Bezug auf die Leistung, die das System oder das Fahrzeug zu einem bestimmten Zeitpunkt gerade benötigt. Es geht wenig Energie verloren. Dies bedeutet im Speziellen einen geringeren Kraftstoffverbrauch.
+
+\section{Beispiel 3: Schwenkflügel bei Flugzeugen}
+\subsection{Metadaten}
+\begin{itemize}\itemsep0pt
+\item Titel: Schwenkflügel bei Flugzeugen
+\item Patentnummer: US2523427A
+\item Quelle: \url{https://patents.google.com/patent/US2523427A/en?oq=US2523427A}
+\item Patentinhaber:  William J. Hampshire
+\item Patentdaten: Veröffentlichung 1950-09-26
+\end{itemize}
+
+\subsection{Beschreibung des Stands der Technik}
+Flugzeuge waren bis dato so konzipiert, dass sie möglichst unter einem Flugverhaltenstyp optimal funktionieren. Manche Flugzeuge waren so konzipiert das sie möglichst schnell fliegen können andere so gebaut, das sie viel transportieren oder Langsamflugfahrten möglich waren. Es war bisher nicht möglich die Flugzeug Flügel so zu entwerfen das sie, viele Flugeigenschaften in einer Flugzeugzelle vereinen konnten.
+\subsection{Formulierung des Miniproblems}
+Im Militärbereich ist es nötig, das Flugzeuge möglichst schnell fliegen und trotzdem in der Lage sein sollten ihre Flugrichtung schnell zu wechseln oder die Geschwindigkeit plötzlich reduzieren zu müssen. Mit starren nicht verstellbaren Flügeln ist dies nur sehr bedingt möglich. 
+\subsection{Beschreibung der Lösung des Problems in der Patentschrift}
+Gelöst wurde das Problem erstmals durch eine Erfindung im 2.Weltkrieg für militärische Zwecke. Das Erste Flugzeug mit schwenkbaren Flügeln war die Messerschmitt P1101 im Jahr 1944.                                                             Es wurde allerdings dazu kein Patent erstellt, da das Patentwesen in Deutschland Ende des Krieges nicht mehr vorhanden war, beziehungsweise Erfindungen aus Geheimhaltungsgründen nicht veröffentlicht wurden. Nach Kriegsende wurden die Schwenkflügel durch William j.Hampshire weiterentwickelt. Mithilfe einer Lenksäulenvorrichtung, wurde es ermöglicht die Lenkwelle drehbar zumachen. Somit können die Flügel des Flugzeuges mehrere Positionen einnehmen.  
+\subsection{Einordnung des Problems in die TRIZ-Systematik}
+Die Lösung ist nur schwer in die Widerspruchsmatrix einzuordnen, da hier eine hohe Geschwindigkeit und die Beweglichkeit eines Objektes im Widerspruch zueinander stehen.
+\subsection{Darstellung der speziellen Lösung zu allg. TRIZ-Strukturen}
+Allgemein kann man sagen, dass das Prinzip der Dynamisierung hier Anwendung findet. Die Kennwerte des Fahrzeuges(Leistung im Bezug auf Energieeinsparung) werden hier so optimiert, das sie in jedem Zeitpunkt optimal sind.
+\section{Beispiel 4: Verstellbare Lenksäule}
+\subsection{Metadatyen}
+\begin{itemize}\itemsep0pt
+\item Titel: Verstellbare Lenksäule
+\item Patentnummer: DE976562C
+\item Quelle: \url{https://patents.google.com/patent/DE976562C/de?oq=DE976562C}
+\item Patentinhaber: BMW AG 
+\item Erfinder: Fritz Fiedler 
+\item Patentdaten: Veröffentlichung 1963-11-14
+\end{itemize}
+
+\subsection{Beschreibung des Stands der Technik}
+Lenksäulen die mit dem Lenkrad eines beliebigen Fahrzeuges verbunden sind, sind in einer festen Position angebracht. Sie können verstellt werden indem die Postion des Sitzes verstellt wird. 
+\subsection{Formulierung des Miniproblems}
+Das Problem besteht darin die Lenksäule so zu gestalten, das sie in jeder Situation stufenlos verstellbar ist und trotzdem ohne Abzüge voll funktionsfähig sein muss.
+\subsection{Beschreibung der Lösung des Problems in der Patentschrift}
+Das Patent beschreibt ein System das sich unter allen Betriebszuständen auf
+optimale Performance einstellt
+Es ist eine Lenksäulenvorrichtung, die die Lenkwelle drehbar und
+stufenlos verstellbar macht.
+Die gesamte Konstruktion besteht aus Lenkrad, Lenksäule und einer drehbaren Lagervorrichtung. 
+Somit wird eine vertikale und axiale Verstellbarkeit des Lenkrades gewährleistet.
+Das Objekt hat somit optimale Kennwerte in jeder Position seiner Anwendung.
+\subsection{Einordnung des Problems in die TRIZ-Systematik}
+Lässt sich nur schwer in die Widerspruchsmatrix einordnen.
+\subsection{Darstellung der speziellen Lösung zu allg. TRIZ-Strukturen}
+Das Prinzip der Dynamisierung findet Anwendung. Aus einem unbeweglichem Objekt, wird ein verstellbares Objekt gemacht. Eine Lenksäule, die vielen Sicherheitsansprüchen genügen muss, wurde so verändert das die einzelne untereinander verstellbar sind. Sodass sie in jeder Lage optimal sind.
+
+\section{Ergänzung: Kanban}
+Im folgenden Abschnitt möchte ich noch vorstellen, das die TRIZ Prinzipien auch auf nicht technische Prozesse anwendbar sind. Ein Beispiel für die Anwendung des Prinzips der Dynamisierung ist das sogenannte Kanban System.
+Es gibt genau wie bei den bereits beschriebenen Patenten, einen Widerspruch der mithilfe dieses Prinzips aufgelöst werden kann. 
+
+\subsection{Metadaten}
+\begin{itemize}\itemsep0pt
+\item Titel: Die Kanban Methode
+\item Patentnummer: kein Patent vorhanden
+\item Erfinder:  Taiichi Ohno 1947 Toyota Motor Cooperation
+
+\end{itemize}
+\subsection{Beschreibung des Systems}
+- Kanban bedeutet Karte, Tafel, Beleg und wurde von dem Japaner Taiichi Ohno entwickelt. Diesen frustrierte die sehr unflexible Ressourcenplanung in der Autoindustrie. Er entwickelte ein System indem die Mitarbeiter bestimmter Abschnitte im Unternehmen, mithilfe von Karten anzeigen konnten, wann neue Ressourcen benötigt wurden. Er dynamisierte das Produktionswesen.
+\subsection{Stand der Technik}
+In traditionellen, zentralen Planungssystemen der Produktionssteuerung wird der gesamte Materialbedarf bis ins Detail weit voraus geplant. Bei Schwankungen in der Nachfrage ist der Zufluss von neuem Material schwer zu beeinflussen. Die Lagerbestände sind nicht zu jedem Zeitpunkt optimal.
+
+\subsection{Formulierung des Miniproblems}
+Es herrscht ein Konflikt in der Produktionsgeschwindigkeit und der Lieferbereitschaft von Waren.
+Materialstoffe können nicht sofort nachbestellt werden, wenn sie aufgrund von Schwankungen im Durchsatz, auf einmal mehr benötigt werden, da der Bedarf von zentraler Stelle geplant wurde. Einzelne Produktionsstellen haben kaum die Möglichkeit auf Engstellen zu reagieren.
+\subsection{Beschreibung der Lösung}
+
+Kanban ist eine Methode der Produktionsprozesssteuerung. Es wird sich hier nur am tatsächlichen Verbrauch von Materialien orientiert. Ziel der Kanban-Methodik ist es, die Wertschöpfungskette auf jeder Stufe der Produktion einer mehrstufigen Kette kosten-optimal zu steuern. Durch kurzlebige Pufferlager wurde mithilfe ohne modernere Informationssysteme und mit kurzen Wegen des Transports eine einfache Lösung erreicht.
+Folglich können kürzere Durchlaufzeiten durch schnelle Reaktionszeiten erlangt werden. 
+\subsection{Einordnung des Problems in die TRIZ-Systematik}
+Trotz das die Kanban Methode kein technisches Problem beschreibt, ist der Widerspruch trotzdem in die Widerspruchsmatrix einzuordnen.
+Wenn die Liefergeschwindigkeit zunimmt, und damit der sich verbessernde Parameter  9: Die Geschwindigkeit ist, und der sich verschlechternde Parameter  35: Die Anpassungsfähigkeit, ist das Problem mit Hilfe der Dynamisierung lösbar.
+Mit Anpassungsfähigkeit ist hier die Lieferbereitschaft gemeint.
+
+\subsection{Nachwort}
+Die vorgestellte Methode Kanban in der Produktionssteuerung, ist heute auch eine Methodik in der Softwareentwicklung. 
+
+\section{Fazit}
+In bin in meiner Suche hauptsächlich vorgegangen, indem ich mir Erfindungen überlegt habe in denen das Prinzip der Dynamisierung eine rolle gespielt haben könnte. Ich habe die Beispiele für die Patente beziehungsweise für die Erfindungen so ausgewählt das sie möglichst breitgefächerte Bereiche abdeckt. Neben technischen Problemen habe ich mich auch mit gesellschaftlichen Problemen auseinandergesetzt. 
+Durch die Patentanalyse konnte ich nachvollziehen, wie man vorgefertigte allgemeine Problemlösungsstrategien auf spezielle Probleme anwenden kann.
+Auch erkannt habe ich das man auch in alltäglichen Problemlagen, die Triz Prinzipien anwenden kann und das sie sich nicht nur für konkrete technische Probleme anwenden lassen.
+
+\section{Quellen}
+
+\begin{itemize}
+\item {Widerspruchsmatrix}
+  \url{http://www.triz40.com/aff_Tabelle_TRIZ.php}
+\item {Patent zur automatischen Zylinderabschaltung}
+  \url{https://patents.google.com/patent/DE19606402C2/ko}
+\item {Patent zum elektrischen gesteuerten Abgasturbolader}
+	\url{https://patents.google.com/patent/EP2158386B1}
+\item {Patent zum stufenlos verstellbares Lenkrad fuer Kraftfahrzeuge}
+	\url{https://patents.google.com/patent/DE976562C/de?oq=DE976562C}
+\item 
+	\url{https://www.michael-patra.de/triz/loesungsverfahren}
+\item {Kanban}
+	\url{https://de.wikipedia.org/wiki/Kanban}
+\end{itemize}
+
+
+\end{document}
