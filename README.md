@@ -25,9 +25,14 @@ verschiedene Quellen auswerten.  Das Modul wird gemeinsam mit Lydie Laforet und
 Sabine Lautenschläger vom IIRM der WiFa sowie Ken Kleemann (Philosophie)
 organisiert.
 
+### Mögliche Ansätze, die verfolgt werden könnten
+
 * Teile eines früheren Seminarkonzepts (Sabine Lautenschläger, Lydie Laforet)
+  * Sabine und Lydie wollen daraus noch was für das aktuelle Seminar
+    extrahieren als Schwerpunkt für den zweiten Teil des Seminars aufbereiten. 
 
 * OTSM-TRIZ - https://otsm-triz.org/en
+
 * https://triz-journal.com/forecast-ballpoint-pen-evolution/ - ein komplexes
   TRIZ-Beispiel
 
@@ -43,3 +48,56 @@ organisiert.
   * https://triz-summit.ru/file.php/id/f304816-file-original.pdf
 * [Diskussion](https://wumm-project.github.io/2019-08-07) zum Systembegriff im
   TRIZ-Kontext im Facebook-Kanal von Valeri Souchkov
+
+### Besprechung am 30.09.2019
+
+Auf der Besprechung haben wir uns grob darauf verständigt, das Seminar auch
+zur Selbstverständigung über verschiedene Zugänge zum Systembegriff zu nutzen
+und hierfür den erforderlichen Vorlauf während der ersten vier Seminare für
+Vorträge und Diskussion zur Einführung sowie zu drei Eckthemen zum
+Systembegriff zu verwenden.
+
+Das weitere Seminarkonzept soll sich **methodisch** an das halten, was sich in
+früheren Seminaren am IIRM bereits bewährt hat:
+
+The course will meet weekly, October through January, in a presentation and
+discussion format.  Each week students are required to complete the assigned
+reading and come to class ready to discuss. After short inputs by the
+instructor, student(s) designated as discussion leader will be responsible for
+facilitating the classroom discussion. In preparation of the classes,
+discussants are to write a short response paper. Thus, each week, students
+will be expected either to lead or actively participate in the discussion.
+
+**Thematisch** soll - nach einer genaueren Standortbestimmung im ersten Teil
+des Seminars - im zweiten Teil des Seminars der Systembegriff am IIRM mit
+seinen Anwendungen im Vordergrund stehen. Dies geschieht auch mit Blick auf
+die künftige Schärfung einer Seminarveranstaltung im Umfang von 1 SWS, in der
+gewisse Kenntnisse von Systembegriffen bereits vorausgesetzt werden.
+
+Das ist am 8.10. 11 Uhr auf einer weiteren Besprechung noch zu vertiefen.
+
+Für das parallel zu belegende TRIZ-Praktikum habe ich inzwischen di 17-19 Uhr
+noch einen Raum gebucht, wohin (nicht wöchentlich) stärker TRIZ-zentrierte
+Themen ggf. ausgelagert werden könnten.
+
+02.10.2019, Hans-Gert
+
+### Vorschlag für die genaue thematische Aufteilung auf die einzelnen Termine
+
+Vorschlag von Ken, modifiziert von HGG
+
+* 15.10.19 Einführung (Begriff/Kontext) 
+* 22.10.19 Systembegriff in der TRIZ-Theorie (Gräbe, Lautenschläger)
+* 29.10.19 Systembegriff als Komplexitätsreduktion (Laforet)
+* 05.11.19 Systembegriff als Makro-Mikrowechselwirkung in einer Umwelt (Gräbe)
+* 12.11.19 Systembegriff soziologisch/linguistisch (Kleemann)
+* 19.11.19 Systembegriff in der TRIZ-Debatte (stud. Seminarführung)
+* 26.11.19 Anwendungsbeispiel 
+* 03.12.19 OTSM
+* 10.12.19 Stimuli und Reaktion
+* 17.12.19 Nachhaltigkeit
+* 07.01.20 Allemende und Bewirtschaftung
+* 14.01.20 Businessrelations
+* 21.01.20 Komplexität
+* 28.01.20
+* 04.02.20 Auswertung/ Klausurvorbereitung
