@@ -29,7 +29,8 @@ organisiert.
 
 * Teile eines früheren Seminarkonzepts (Sabine Lautenschläger, Lydie Laforet)
   * Sabine und Lydie wollen daraus noch was für das aktuelle Seminar
-    extrahieren als Schwerpunkt für den zweiten Teil des Seminars aufbereiten. 
+    extrahieren und als Schwerpunkt für den zweiten Teil des Seminars
+    aufbereiten.
 
 * OTSM-TRIZ - https://otsm-triz.org/en
 
