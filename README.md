@@ -25,6 +25,9 @@ verschiedene Quellen auswerten.  Das Modul wird gemeinsam mit Lydie Laforet und
 Sabine Lautenschläger vom IIRM der WiFa sowie Ken Kleemann (Philosophie)
 organisiert.
 
+Zitat aus OTSM-TRIZ: "Die Gesetze der Entwicklung technischer Systeme ergeben
+sich aus den Gesetzen der Dialektik, die allen Systemen gemein sind."
+
 ### Mögliche Ansätze, die verfolgt werden könnten
 
 * Teile eines früheren Seminarkonzepts (Sabine Lautenschläger, Lydie Laforet)
