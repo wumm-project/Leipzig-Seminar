@@ -97,11 +97,17 @@ Vorschlag von Ken, modifiziert von HGG
 * 12.11.19 Systembegriff soziologisch/linguistisch (Kleemann)
 * 19.11.19 Systembegriff in der TRIZ-Debatte (stud. Seminarführung)
 * 26.11.19 Anwendungsbeispiel 
-* 03.12.19 OTSM
+* 03.12.19 
 * 10.12.19 Stimuli und Reaktion
 * 17.12.19 Nachhaltigkeit
-* 07.01.20 Allemende und Bewirtschaftung
-* 14.01.20 Businessrelations
+* 07.01.20 Allmende und Bewirtschaftung
+* 14.01.20 Systeme und Business Relations
 * 21.01.20 Komplexität
 * 28.01.20
 * 04.02.20 Auswertung/ Klausurvorbereitung
+
+Ab 17 Uhr - einzelne Termine als Begleitung zum TRIZ-Praktikum sowie zur
+Vertiefung einzelner Aspekte des Themas "Semantic Web"
+* 29.10.19 Einführung in das TRIZ-Praktikum
+* 05.11.19 TRIZ und OTSM
+* 04.02.20 Klausurvorbereitung
