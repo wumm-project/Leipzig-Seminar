@@ -143,27 +143,43 @@ Nächstes Treffen am 14.10. 11:30 Uhr.
 
 ### Genauere thematische Aufteilung auf die einzelnen Termine
 
-Stand vom 08.10. Der Termin am 12.11. ist das erste Seminar, das von Studenten
+Stand vom 12.10. Der Termin am 12.11. ist das erste Seminar, das von Studenten
 zu leiten ist. 
 
 * 15.10.19 Einführung (Begriff/Kontext)
   - Anliegen, Zuschnitt, Ablauf, Anforderungen des Moduls (Gräbe)
   - Systembegriff in der Informatik (Gräbe, siehe Handreichung)
-* 22.10.19 Systembegriff und Nachhaltigkeit aus sozio-technico-ökologischer
-  Perspektive (Laforet/Lautenschläger)
-  - Definition Nachhaltigkeit, Beitrag SS, SES/SET/SES, GST Bertalanffy
+* 22.10.19 Einführung in Systemwissenschaft und Nachhaltigkeit, Allgemeine
+  Systemtheorie (IIRM)
+  - Literatur: (Bertalanffy 1950), (Mele u.a. 2010), (Binder u.a. 2013)
 * 29.10.19 Systembegriff in der Theorie dynamischer Systeme (Gräbe)
-  - (Jantsch 1992), (Prigogine/Stengers 1993), (Thiel 1975)
+  - immersiver und submersiver Systembegriff
+  - Pendel, Doppelpendel, deterministisches Chaos
+  - Systeme und Attraktoren, Grenzzyklen
+  - Lorenzattraktor, seltsame Attraktoren und das Ende des Trajektorienbegriffs
+  - Nichtlineare Systeme und Phasenübergänge. Hysterese. Räuber-Beute-Zyklen.  
+  - Selbstorganisation in dissipativen Strukturen: Bénard-Zellen
+  - Temperatur als emergentes Phänomen
+  - Literatur: (Prigogine/Stengers 1993), Zusatzliteratur: (Jantsch 1992),
+    (Jooß 2017)
 * 05.11.19 Systembegriff aus soziologisch-linguistischer Perspektive
   (Kleemann) 
 * 12.11.19 Systembegriffe.  Systematisierung der Argumente aus einer Debatte
   unter Praktikern. (Gräbe)  
-  - https://wumm-project.github.io/2019-08-07
-* 19.11.19 Autopoiesis und Autokatalyse nach Maturana (Laforet/Lautenschläger)
-* 26.11.19 Resilienz nach Holling u.a. (Laforet/Lautenschläger)
-* 03.12.19 Komplexität nach Ashby u.a. (Laforet/Lautenschläger)
-* 10.12.19 SES Analyse nach Ostrom (Laforet/Lautenschläger)
-* 17.12.19 STS Transformation nach Geels (Laforet/Lautenschläger)
+  - Literatur: https://wumm-project.github.io/2019-08-07
+* 19.11.19 Organisation in lebenden Systemen
+  - Literatur: (Mingers 1989), (Ulanowicz 2009)
+* 26.11.19 Resilienz (IIRM)
+  - Literatur: (Holling 2000), (Walker u.a. 2004), Zusatzliteratur (Brand/Jax
+    2007) 
+* 03.12.19 Organisation in komplexen adaptiven Systemen (IIRM)
+  - Literatur: (Ashby 1958), (Boisot/McKelvey 2011), Zusatzliteratur (Holland
+    2006) 
+* 10.12.19 Institutionelle Analyse von Sozio-ökologischen Systemen (SES) (IIRM)
+  - Literatur: (Ostrom 2007), (Anderies u.a. 2004)
+* 17.12.19 Sozio-technische Systeme (STS) und Transformationsprozesse (IIRM)
+  - Literatur: (Geels/Schot 2007), (Foxon u.a. 2009), Zusatzliteratur (Ropohl
+    2009) 
 * 07.01.20 Systembegriff in der TRIZ-Theorie (Gräbe)
   - https://otsm-triz.org/en/content/nkhomenko-fundamentals-classical-triz
 * 14.01.20 tba
