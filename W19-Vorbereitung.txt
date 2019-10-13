@@ -11,10 +11,6 @@ organisiert.
 Zitat aus OTSM-TRIZ: "Die Gesetze der Entwicklung technischer Systeme ergeben
 sich aus den Gesetzen der Dialektik, die allen Systemen gemein sind."
 
-Literatur zu OTSM-TRIZ in englischer Sprache:
-* https://otsm-triz.org/en
-* https://otsm-triz.org/en/content/nkhomenko-fundamentals-classical-triz
-
 ## Mögliche Ansätze, die verfolgt werden könnten
 
 * Teile eines früheren Seminarkonzepts (Sabine Lautenschläger, Lydie Laforet)
@@ -22,15 +18,13 @@ Literatur zu OTSM-TRIZ in englischer Sprache:
     extrahieren und als Schwerpunkt für den zweiten Teil des Seminars
     aufbereiten.
 * OTSM-TRIZ - https://otsm-triz.org/en
-* https://triz-journal.com/forecast-ballpoint-pen-evolution/ - ein komplexes
-  TRIZ-Beispiel
 * [Anton Kozhemyakos Arbeit](https://matriz.org/kozhemyako/) über Business
   Systeme.  Die Arbeit selbst liegt aktuell nur in Russisch vor, soll aber
   zügig ins Englische übersetzt werden.
   * Konzept der *Schematisierung* in Anlehung an Theorien von [Georgi
     Shchedrowitsky](https://en.wikipedia.org/wiki/Georgy_Shchedrovitsky)
     (Moskauer Philosoph des 20. Jahrhunderts)
-* Darrell Mann über die Kompexität von Business-Systemen auf dem TRIZ Summit
+* Darrell Mann über die Komplexität von Business-Systemen auf dem TRIZ Summit
   2019
   * https://triz-summit.ru/file.php/id/f304797-file-original.pdf
   * https://triz-summit.ru/file.php/id/f304816-file-original.pdf
@@ -159,6 +153,7 @@ zu leiten ist.
   - Lorenzattraktor, seltsame Attraktoren und das Ende des Trajektorienbegriffs
   - Nichtlineare Systeme und Phasenübergänge. Hysterese. Räuber-Beute-Zyklen.  
   - Selbstorganisation in dissipativen Strukturen: Bénard-Zellen
+  - Mikro- und Makroevolution in dissipativen Systeme. Der Versklavungseffekt.
   - Temperatur als emergentes Phänomen
   - Literatur: (Prigogine/Stengers 1993), Zusatzliteratur: (Jantsch 1992),
     (Jooß 2017)
@@ -170,21 +165,32 @@ zu leiten ist.
 * 19.11.19 Organisation in lebenden Systemen
   - Literatur: (Mingers 1989), (Ulanowicz 2009)
 * 26.11.19 Resilienz (IIRM)
-  - Literatur: (Holling 2000), (Walker u.a. 2004), Zusatzliteratur (Brand/Jax
+  - Literatur: (Holling 2000), (Walker u.a. 2004), Zusatzliteratur: (Brand/Jax
     2007) 
 * 03.12.19 Organisation in komplexen adaptiven Systemen (IIRM)
-  - Literatur: (Ashby 1958), (Boisot/McKelvey 2011), Zusatzliteratur (Holland
+  - Literatur: (Ashby 1958), (Boisot/McKelvey 2011), Zusatzliteratur: (Holland
     2006) 
 * 10.12.19 Institutionelle Analyse von Sozio-ökologischen Systemen (SES) (IIRM)
   - Literatur: (Ostrom 2007), (Anderies u.a. 2004)
 * 17.12.19 Sozio-technische Systeme (STS) und Transformationsprozesse (IIRM)
-  - Literatur: (Geels/Schot 2007), (Foxon u.a. 2009), Zusatzliteratur (Ropohl
+  - Literatur: (Geels/Schot 2007), (Foxon u.a. 2009), Zusatzliteratur: (Ropohl
     2009) 
-* 07.01.20 Systembegriff in der TRIZ-Theorie (Gräbe)
-  - https://otsm-triz.org/en/content/nkhomenko-fundamentals-classical-triz
-* 14.01.20 tba
-* 21.01.20 tba
-* 28.01.20 tba
+* 07.01.20 Systembegriff in der TRIZ-Methodik (Gräbe)
+  - TRIZ als systematische Methodik
+  - System, Modell, Funktionale Analyse
+  - TRIZ zur Evolution technischer Systeme
+  - Dynamisierung des Systembegriffs im 9-Felder-Denken
+  - Literatur: (Koltze/Souchkov 2017)
+* 14.01.20 Konkrete Beispiele systematischer Problemanalyse mit der
+  TRIZ-Methodik (Gräbe)
+  - https://triz-journal.com/forecast-ballpoint-pen-evolution/ 
+  - Beispiele aus dem TRIZ-Trainer
+* 21.01.20 Herausforderungen an eine Theorie der systematischen Problemanalyse
+  (Gräbe)
+  - Literatur: (Khomenko 2008), (Khomenko 2005)
+* 28.01.20 Systematische Service-Innovationen in komplexen Business-Systemen
+  (Gräbe) 
+  - Literatur: (Mann 2019a), (Mann 2019b), Zusatzliteratur: (Kozhemyako 2019)
 * 04.02.20 Auswertung und Lessons learned
 
 Ab 17 Uhr - einzelne Termine als Begleitung zum TRIZ-Praktikum sowie zur
