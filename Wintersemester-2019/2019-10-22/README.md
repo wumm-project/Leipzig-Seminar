@@ -1,10 +1,21 @@
 # Anmerkungen zum Seminar am 22.10.2019
 
-Einführung in Systemwissenschaft und Nachhaltigkeit, Allgemeine Systemtheorie
-(IIRM)
+Systembegriff in der Theorie dynamischer Systeme (Gräbe)
 
-Literatur: (Bertalanffy 1950), (Mele u.a. 2010), (Binder u.a. 2013)
+Literatur: (Prigogine/Stengers 1993),
+Zusatzliteratur: (Jantsch 1992), (Jooß 2017)
 
-Ziel dieses Termins ist es u.a., eine Liste von Begrifflichkeiten
-aufzustellen, die in Systemtheorien immer wieder auftreten und für das
-Verständnis der Seminarinhalte zentral sind. 
+Inhaltliche Punkte:
+
+- immersiver und submersiver Systembegriff
+- Projektionsphänomene - Entstehung von Singularitäten bei Reduktion.
+- Pendel, Doppelpendel, deterministisches Chaos
+- Das Zeitparadoxon: Die Gleichungen sind invariant bzgl. Zeitumkehr, die
+  Natur ist es nicht 
+- Systeme und Attraktoren, Grenzzyklen
+- Lorenzattraktor, seltsame Attraktoren und das Ende des Trajektorienbegriffs
+- Nichtlineare Systeme und Phasenübergänge. Hysterese. Räuber-Beute-Zyklen.  
+- Selbstorganisation in dissipativen Strukturen: Bénard-Zellen
+- Mikro- und Makroevolution in dissipativen Systemen. Der Versklavungseffekt.
+- Temperatur als emergentes Phänomen. Entropie und Enthalpie.
+- Leben auf der Erde als dissipatives System
