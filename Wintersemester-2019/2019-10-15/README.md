@@ -126,8 +126,9 @@ ist ein 10-LP-Modul mit einem Workload von 300 Stunden, die vorwiegend während
 der 15 Wochen Vorlesungszeit anfallen.  Das ergibt eine durchschnittliche
 wöchentliche Belastung von 20 Stunden.
 
-Das Modul schließt mit einer Klausur im Februar 2020 ab. Details dazu werden
-noch mitgeteilt.
+Das Modul schließt mit einer Klausur im Februar 2020 ab.  Als
+Prüfungsvorleistungen sind das Seminar sowie das Online-Praktikum erfolgreich
+zu absolvieren.  Details zur Klausur werden noch mitgeteilt.
 
 ## Zur Organisation des Seminars
 
