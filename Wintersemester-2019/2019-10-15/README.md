@@ -70,7 +70,7 @@ Kontexten**.
 
 ### Das Kurskonzept
 
-In diesem Kurs steht die Voraussetzungen und Bedingtheiten im Vordergrund, die
+In diesem Kurs stehen die Voraussetzungen und Bedingtheiten im Vordergrund, die
 mit der Schärfung der Bedeutung von Begriffen in konkreten Kontexten verbunden
 sind. Wir werden dies auf dem Kontext der Nachhaltigkeitsdebatte genauer
 studieren.  Mit
@@ -80,7 +80,7 @@ werden wir uns allenfalls am Rande beschäftigen.
 Der Kurs ist als **interdisziplinäres akademisches Lehrangebot** konzipiert,
 an dem Kolleginnen und Kollegen aus drei Bereichen beteiligt sind - Lydie
 Laforet und Sabine Lautenschläger vom IIRM, Ken Pierre Kleemann (Philosohpie)
-und Hans-gert Gräbe (Informatik).
+und Hans-Gert Gräbe (Informatik).
 
 **Akademisch** bedeutet, dass wir miteinander und mit Ihnen - besonders im
 Seminar - auf Augenhöhe verhandeln wollen und werden. Es geht um rationale
@@ -105,8 +105,8 @@ Der Kurs besteht aus drei Teilen:
   Vordergrund stehen, geht es dem Informatiker stärker um die
   *sozio-technischen Bedingtheiten* von Begriffsbildungsprozessen als Kern von
   Semantic Web Technologien und dem Philosophen um die *Dynamik von
-  Begriffsbildungsprozessen* als solchen auf der Basis praktisch performativer
-  Erfahrungen, wie sie die Kolleginnen vom IIRM mitbringen.
+  Begriffsbildungsprozessen* als solchen auf der Basis praktisch-performativer
+  Erfahrungen, wie sie die Kolleginnen vom IIRM und auch Sie mitbringen.
 
 * Dabei werden wir immer wieder auf widersprüchliche Situationen stoßen, die
   genauer sprachlich zu analysieren sind, um sinnvolle Lösungen zu finden.
@@ -114,7 +114,7 @@ Der Kurs besteht aus drei Teilen:
   Instrumentarium an.  Im **Praktikum** steht die Vermittlung grundlegender
   Fertigkeiten im Umgang mit dieser Methodik im Mittelpunkt, wobei der
   [TRIZ-Trainer](https://triztrainer.ru/) von Nikolai Shpakovski als
-  Onlie-Kurs zum Einsatz kommt.  Aktuell sind wir dabei, den Trainer auch in
+  Online-Kurs zum Einsatz kommt.  Aktuell sind wir dabei, den Trainer auch in
   Deutsch zur Verfügung zu stellen.  Darüber hinaus werden wir einige
   Präsenztermine des Praktikums (di 17-19 Uhr) nutzen, um sowohl
   TRIZ-Grundlagen als auch technischere Semantic Web Aspekte in dem Umfang zu
