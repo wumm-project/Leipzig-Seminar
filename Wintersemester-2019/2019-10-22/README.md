@@ -79,6 +79,8 @@ Welche Probleme treten beim Zusammensetzen von (verstandenen) Mikroevolutionen
 von Teilsystemen zu einem Verständnis der Dynamik auf der Makroebene auf?
 
 - immersiver und submersiver Systembegriff
+  - https://de.wikipedia.org/wiki/Submersion
+  - https://de.wikipedia.org/wiki/Immersion_(Mathematik)
 - Projektionsphänomene - Entstehung von Singularitäten bei Reduktion.
 
 ## Emergente Phänomene
@@ -98,5 +100,8 @@ submersiven Systembegriff zu.
   - https://de.wikipedia.org/wiki/Rayleigh-B%C3%A9nard-Konvektion
   - https://de.wikipedia.org/wiki/Belousov-Zhabotinsky-Reaktion
 - [Dissipative Strukturen](https://de.wikipedia.org/wiki/Dissipative_Struktur)
-- Temperatur als emergentes Phänomen. Entropie und Enthalpie.
+- [Temperatur](https://de.wikipedia.org/wiki/Temperatur) als emergentes
+  Phänomen.
+- [Entropie](https://de.wikipedia.org/wiki/Entropie) und
+  [Enthalpie](https://de.wikipedia.org/wiki/Enthalpie).
 - Leben auf der Erde als dissipatives System
