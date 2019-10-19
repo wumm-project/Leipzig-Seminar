@@ -13,4 +13,16 @@ organisiert.
 Zitat aus OTSM-TRIZ: "Die Gesetze der Entwicklung technischer Systeme ergeben
 sich aus den Gesetzen der Dialektik, die allen Systemen gemein sind."
 
+## TRIZ als systematische Innovationsmethodik und Nachhaltigkeit
+
+Eine Reihe von Videos zur Bedeutung von TRIZ als systematischer
+Innovationsmethodik im Kontext von Fragen von Nachhaltigkeit und biologischer
+Systeme ([BioTRIZ](http://biotriz.be/)), insbesondere zur Anwendung von
+Biomimikry.
+
+* https://www.youtube.com/watch?v=KLbRom-g8QE
+* https://www.youtube.com/watch?v=jaKK8TMzOVU
+* https://www.youtube.com/watch?v=4mp0JjAr6SM
+
+
 Mehr zur Vorbereitung siehe W19-Vorbereitung.txt
