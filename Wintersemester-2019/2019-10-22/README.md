@@ -17,6 +17,7 @@ Beispiele im homogenen Gravitationsfeld
 - [Gekoppelte Pendel](https://de.wikipedia.org/wiki/Gekoppelte_Pendel)
 - [Doppelpendel](https://de.wikipedia.org/wiki/Doppelpendel) und chaotische
   Trajektorien, deterministisches Chaos
+- [Magnetisches Pendel](https://de.wikipedia.org/wiki/Magnetisches_Pendel)
 
 Beispiele mit gravitativer Wechselwirkung
 - [Zweikörperproblem](https://de.wikipedia.org/wiki/Zweik%C3%B6rperproblem)
@@ -30,16 +31,29 @@ Zusammenhänge der Welt.  Hätte Galileo Galilei diese Denkmethodik nicht
 angewendet, wäre ihm niemals aufgefallen, dass Eisen und Feder gleich schnell
 fallen.
 
+- Nicht alles, was wie Chaos aussieht, muss auch Chaos sein:
+  https://i.redd.it/zr7tet9mdfl01.gif
+
 ## Grenzzyklen und Attraktoren
 
 - [Grenzzyklen](https://de.wikipedia.org/wiki/Grenzzyklus)
 - Attraktor = stabile Lösung des entsprechenden DGl.-Systems
-- Wir sind in der Lage, solche sich *näherungsweise* wiederholenden Muster
-  in natürlichen Prozessen wahrzunehmen, also auch unabhängig von der
-  Mathematik eine solche Reduktionsleistung zu vollbringen.
 
-**Das Zeitparadoxon:** Die Gleichungen (und damit deren stabile Lösungen) sind
-invariant bzgl. Zeitumkehr, die Natur ist es nicht. 
+Beispiel: Attraktoren des Magnetpendels waren die drei stabilen Endlagen, also
+drei Punkte im Phasenraum.
+
+- Hysterese
+  - Beispiel: Temperaturregelung einer Heizungsanlage
+  - https://de.wikipedia.org/wiki/Hysterese
+- Räuber-Beute-Zyklen
+  - https://de.wikipedia.org/wiki/R%C3%A4uber-Beute-Beziehung
+  - https://de.wikipedia.org/wiki/Lotka-Volterra-Regeln
+
+Zur Bedeutung "stabiler" zyklischer Prozesse in der Natur. 
+
+Wir sind in der Lage, solche sich *näherungsweise* wiederholenden Muster in
+natürlichen Prozessen (d.h. Attraktoren) wahrzunehmen, also auch unabhängig
+von der Mathematik eine solche Reduktionsleistung zu vollbringen.
 
 - Frage: Wie kompliziert können solche Attraktoren werden?
 - Der [Lorenzattraktor](https://de.wikipedia.org/wiki/Lorenz-Attraktor).
@@ -53,7 +67,7 @@ invariant bzgl. Zeitumkehr, die Natur ist es nicht.
   geometrisch beschrieben werden kann". (Wikipedia)
   
 **Damit ist der Trajektorienbegriff der klassischen Physik für derartige
-Phänomene nicht mehr anwendbar.**
+Phänomene nicht mehr anwendbar.** ("Schmetterlingseffekt")
 
 ## Systeme auf multiplen Zeitskalen
 
@@ -68,8 +82,8 @@ Makroevolution* bezeichnet wird. Hier wird es in der Wikipedia bereits dünn.
 - Beispiel: Pendel, aber der Pendelkörper hat selbst noch eine innere Dynamik.
   Handexperiment.  Das Obersystem prägt dem Untersystem durch Energieeintrag
   eine gemeinsame Dynamik auf.  Obwohl Doppelpendel, ist das System damit
-  *nicht* chaotisch, sondern verhält sich wie ein einfaches Pendel mit Masse
-  im Schwerpunkt.
+  (final) *nicht* chaotisch, sondern verhält sich wie ein einfaches Pendel mit
+  Masse im Schwerpunkt.
 - In der Literatur als "Versklavungseffekt" bekannt und besonders in
   methodisch schlecht fundierten soziologischen Betrachtungen als
   Verbalargument verbreitet.
@@ -78,10 +92,12 @@ Makroevolution* bezeichnet wird. Hier wird es in der Wikipedia bereits dünn.
 Welche Probleme treten beim Zusammensetzen von (verstandenen) Mikroevolutionen
 von Teilsystemen zu einem Verständnis der Dynamik auf der Makroebene auf?
 
-- immersiver und submersiver Systembegriff
+- immersiver und submersiver Systembegriff (Kategoriales.pdf)
+- Die Begriffe Immersion und Submersion in der Kategorie der Vektorbündel
   - https://de.wikipedia.org/wiki/Submersion
   - https://de.wikipedia.org/wiki/Immersion_(Mathematik)
-- Projektionsphänomene - Entstehung von Singularitäten bei Reduktion.
+- Projektionsphänomene - Entstehung von Singularitäten bei Reduktion
+  - Das Beispiel (x,y)=(t^2,t^3)
 
 ## Emergente Phänomene
 
@@ -90,12 +106,6 @@ submersiven Systembegriff zu.
 
 - Nichtlineare Systeme und
   [Phasenübergänge](https://de.wikipedia.org/wiki/Phasen%C3%BCbergang).
-- Hysterese
-  - Beispiel: Temperaturregelung einer Heizungsanlage
-  - https://de.wikipedia.org/wiki/Hysterese
-- Räuber-Beute-Zyklen
-  - https://de.wikipedia.org/wiki/R%C3%A4uber-Beute-Beziehung
-  - https://de.wikipedia.org/wiki/Lotka-Volterra-Regeln
 - Selbstorganisation in dissipativen Strukturen
   - https://de.wikipedia.org/wiki/Rayleigh-B%C3%A9nard-Konvektion
   - https://de.wikipedia.org/wiki/Belousov-Zhabotinsky-Reaktion
@@ -105,3 +115,4 @@ submersiven Systembegriff zu.
 - [Entropie](https://de.wikipedia.org/wiki/Entropie) und
   [Enthalpie](https://de.wikipedia.org/wiki/Enthalpie).
 - Leben auf der Erde als dissipatives System
+
