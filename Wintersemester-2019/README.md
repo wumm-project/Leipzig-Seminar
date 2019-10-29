@@ -23,6 +23,3 @@ Biomimikry.
 * https://www.youtube.com/watch?v=KLbRom-g8QE
 * https://www.youtube.com/watch?v=jaKK8TMzOVU
 * https://www.youtube.com/watch?v=4mp0JjAr6SM
-
-
-Mehr zur Vorbereitung siehe W19-Vorbereitung.txt
