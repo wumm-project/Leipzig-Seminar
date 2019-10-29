@@ -10,6 +10,7 @@
 * TRIZ in Beispielen
   - Das Beispiel "Blitzschutz einer Radarstation" aus ariz85c.pdf
   - Beispiele aus dem TRIZ-Trainer
+* TRIZ, Patentrecherchen und der "Stand der Technik"
 
 ## Material zu TRIZ
 
