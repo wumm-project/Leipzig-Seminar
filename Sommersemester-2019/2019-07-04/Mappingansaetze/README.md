@@ -1,8 +1,11 @@
-# patenttextmatch
+# Patent Text Match
 
-Applying text similarity algorythms on patenttexts and the 40 triz priziples to classify potential innovation methods.
+Applying text similarity algorithms on patent texts and the 40 TRIZ principles
+to classify potential innovation methods.
 
 ## Getting Started
+
+Requires python3 and python-pip to be installed
 
 ```sh
 make install
@@ -10,11 +13,17 @@ make install
 
 ## Load models
 
+Loads the 1.5G GoogleNews-vectors-negative300.bin.gz, i.e. the word2vec
+pre-trained Google News corpus (3 billion running words) word vector model (3
+million 300-dimension English word vectors).
+
 ```sh
 make load
 ```
 
 ## tfidf
+
+Term Frequenz - Inverse Dokumenten Frequenz
 
 [0., 0.01124889 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.01118105 0., 0., 0., 0.00913807 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.00997566 0., 0., 0., 0., 0., 0.]
 

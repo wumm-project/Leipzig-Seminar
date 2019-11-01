@@ -10,8 +10,11 @@ http://www.metodolog.ru/node/1791
 Januar 2014: Aufsatz von Kuryan. Geht auf eine Begriffsdiskussion ein.  Ins
 Deutsche übersetzen und daraus einen LaTeX-Beitrag machen.
 
-TRIZ Glossar von Valeri Souchkov
+TRIZ Glossary von Valeri Souchkov
 http://www.xtriz.com/publications/TRIZGlossaryVersion1_2.pdf
 
 https://www.trizland.ru/authors/90
 Beispiele und Aufgaben
+
+https://link.springer.com/chapter/10.1007/978-3-319-56593-4_10
+https://doi.org/10.1016/j.procir.2016.01.170

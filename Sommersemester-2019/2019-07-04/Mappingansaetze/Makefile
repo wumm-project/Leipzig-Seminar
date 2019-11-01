@@ -1,7 +1,5 @@
 #
 
-PYTHON = python3.7
-
 help:
 	@echo "    install"
 	@echo "			Install python requirements."
@@ -17,21 +15,21 @@ help:
 	@echo "			compate texts using W2V"
 
 install:
-	python3.7 -m pip install -r requirements.txt
+	python3 -m pip install -r requirements.txt
 
 load:
-	cd model
+	cd models
 	wget https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz
 
 train:
 	@echo "not implemented yet"
-	python3.7 word2vec.py
+	python3 word2vec.py
 
 tfidf:
-	python3.7 tfidf.py
+	python3 tfidf.py
 
 wordnet:
 	@echo "not implemented yet"
 
 word2vec:
-	python3.7 word2vec.py
+	python3 word2vec.py
