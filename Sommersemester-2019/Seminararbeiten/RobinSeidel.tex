@@ -6,25 +6,31 @@
 \parindent0pt
 \parskip3pt
 
+\newcommand{\HGG}[1]{\begin{quote} \emph{Anmerkung Gräbe:} #1  \end{quote}}
+
 \title{Seminararbeit Patentrecherche zum\\ „Prinzip der Dynamisierung“}
 
-\author{Robin Seidel}
+\author{Robin Seidel, mit Anmerkungen von Hans-Gert Gräbe}
 \date{30. September 2019} 
 
 \begin{document}
 \maketitle
 
+\HGG{Die Arbeit wurde im Rahmen der Begutachtung orthografisch und
+stilistisch überarbeitet.}
+
 \section{Allgemeines}
-In dieser Seminararbeit soll dargestellt werden, wie anhand von 5 Erfindungen,
-Altschullers Gedanken zum schöpferischen Prozess in der Ingenieurskunst
-angewendet werden können. Um eine Herangehensweise zu entwickeln um aus
-allgemeinen Problemen, eine Lösungsstrategie für spezielle Probleme
-abzuleiten.  Speziell soll hier gezeigt werden wie anhand des Prinzips der
-Dynamisierung Probleme gelöst werden können. Allgemein ist dieses Innovative
-Prinzip aus der Widerspruchsmatrix, auf folgende Sachverhalte anzuwenden:
+In dieser Seminararbeit soll anhand von fünf Erfindungen dargestellt werden,
+wie Altschullers Gedanken zum schöpferischen Prozess in der Ingenieurskunst
+angewendet werden können, um eine Herangehensweise zu entwickeln, wie aus
+allgemeinen Problemen eine Lösungsstrategie für spezielle Probleme abgeleitet
+werden kann.  Speziell soll hier gezeigt werden, wie auf der Basis des
+\emph{Prinzips der Dynamisierung} Probleme gelöst werden können. Allgemein ist
+dieses Innovative Prinzip aus der Widerspruchsmatrix in folgenden
+Charakteristika der spezielle Lösung zu finden:
 \begin{itemize}
 \item
-Die Kennwerte des Objektes(oder des umgebenden Mediums) müssen sich so
+Die Kennwerte des Objektes (oder des umgebenden Mediums) müssen sich so
 verändern, dass sie in jeder Arbeitsetappe optimal sind.
 \item
 Das Objekt ist in Teile zu zerlegen, die sich zueinander verstellen oder
@@ -46,101 +52,173 @@ gestalten.
 \end{itemize}
 
 \subsection{Beschreibung des Stands der Technik}
-Das Patent beruht auf dem Prinzip der Gleichdruck- oder Stauaufladung(Patent
-von Alfred Büchi -- 1905).  Dieses beschreibt den Turbolader, der den Stand der
-Technik darstellt.  Ziel ist es die Leistung eines Motors zu erhöhen, indem
-man den Druck in der Brennkammer erhöht.  Die Funktionsweise eines Turboladers
-ist folgende: Ein Teil der Luft des Abgasstromes wird in einer Turbine
-umgeleitet. Diese Turbine treibt dann einen Verdichter an. Dadurch wird der
-Druck im Ansaugsystem des Motors erhöht. Somit kann viel mehr Luft in die
-Brennkammern gelangen.  Die Verbrennung des Benzins kann effektiver
-stattfinden. Es wird mehr Energie frei.  Erkennbar daraus ist, dass trotz
-gleichbleibender Motorgröße eine größere Leistung des Fahrzeuges erzielt
-werden kann.  Schwachstelle dieses Systems ist das sogenannte "Turboloch". Es
-beschreibt die Verzögerung, bevor die Leistung explosionsartig einsetzt. Durch
-mechanische und thermische Trägheit kommt es im niedrigen Drehzahlbereich zu
-Verzögerungen bis die komprimierte Luft in den Brennkammern ankommt.
+Das Patent beruht auf dem Prinzip der Gleichdruck- oder Stauaufladung (Patent
+von Alfred Büchi -- 1905).  Dieses beschreibt den Turbolader, der den Stand
+der Technik darstellt.  Ziel ist es die Leistung eines Motors zu erhöhen,
+indem man den Druck in der Brennkammer erhöht.  Die Funktionsweise eines
+Turboladers ist folgende: Ein Teil der Luft des Abgasstromes wird in eine
+Turbine umgeleitet. Diese Turbine treibt dann einen Verdichter an. Dadurch
+wird der Druck im Ansaugsystem des Motors erhöht. Somit kann viel mehr Luft in
+die Brennkammern gelangen.  Die Verbrennung des Benzins kann effektiver
+stattfinden. Es wird mehr Energie frei.  Dies führt dazu, dass trotz
+gleichbleibender Motorgröße eine größere Leistung erzielt werden kann.
+Schwachstelle dieses Systems ist das sogenannte „Turboloch“. Es beschreibt die
+Verzögerung, bevor die Leistung explosionsartig einsetzt. Durch mechanische
+und thermische Trägheit kommt es im niedrigen Drehzahlbereich zu
+Verzögerungen, bis die komprimierte Luft in den Brennkammern ankommt.
+
+\HGG{Stand der Technik ist die Verwendung von Abgasenergie, um durch
+  Übertragung mechanischer Energie (von der Turbine im Abgasstrom auf den
+  Verdichter im Ansaugstrom) der angesaugten Luft Energie durch Kompression
+  zuzuführen.  Mit der Druckerhöhung erhöht sich zugleich die Temperatur der
+  angesaugten Luft. Damit wird der Verbrennungsprozess optimaler und die
+  Abgasenergie steigt. Der Prozess hat also einen speziellen optimalen
+  Betriebsbereich (Operative Zone), der erst erreicht werden muss. }
+
 \subsection{Funktionales Modell}
 \paragraph{Obersystem:}
-Obersystem: Die Energie fließt vom Abgasstrang in eine Turbine. Das Abgas wird
+Die Energie fließt vom Abgasstrang in eine Turbine. Das Abgas wird
 beschleunigt in einen Verdichter geleitet. Schließlich gelangt die Luft wieder
 in die Brennkammer. Dort wird sie zusammen mit Benzin zur Entzündung gebracht.
 
+\HGG{Das ist falsch dargestellt. Turbine und Verdichter sind über ein
+  mechanisches System gekoppelt. Abgas und Ansaugluft werden nicht
+  vermischt. }
+
 \paragraph{Komponenten:}
-Komponenten:
 \begin{itemize}
-\item Elektromotor: Steuert den Energiezufuhr in die Brennkammer, indem er den
-  Luftstrom regelt in Betriebszuständen wo der Abgasladedruck nicht ideal ist.
-\item Turbine: Mechanisches Bauteil das Luftfluss beschleunigt.
-\item Verdichter: Bauteil, dass die Luft komprimiert 
+\item Elektromotor: Steuert die Energiezufuhr in die Brennkammer, indem er den
+  Luftstrom regelt in Betriebszuständen, wo der Abgasladedruck nicht ideal
+  ist.
+\item Turbine: Mechanisches Bauteil, das Luftfluss beschleunigt.
+\item Verdichter: Bauteil, das die Luft komprimiert. 
 \end{itemize}
+
+\HGG{Das ist falsch dargestellt. Die Turbine koppelt mechanische Energie aus
+  dem Abgasstrom aus. Diese wird auf den Verdichter übertragen, der diese
+  Energie zum Komprimieren der Ansaugluft verwendet.  Der Elektromotor stellt
+  diese mechanische Energie bereit, wenn die Turbine noch nicht „liefert“. }
   
 \subsection{Formulierung des Miniproblems}
-Ein Problem bei dieser Druckerhöhung in der Brennkammer, ist eine höhere
-mechanische Belastung woraus eine kürzere Lebensdauer des Motors resultiert.
+Ein Problem bei dieser Druckerhöhung in der Brennkammer ist eine höhere
+mechanische Belastung, woraus eine kürzere Lebensdauer des Motors resultiert.
 Außerdem ist die Konstruktion aufwendiger, da weitere Bauteile hinzukommen.
-Das eigentliche Problem ist jedoch, das durch den Turbolader zwar zu
+Das eigentliche Problem ist jedoch, dass durch den Turbolader zwar zu
 bestimmten Zeitpunkten des Beschleunigungsvorganges mehr Druck in der
 Brennkammer herrscht, dies aber sehr verzögert und nicht konstant ist.
 
 Die durch Alfred Büchi vorgestellte Lösung ist nur halb-dynamisch. Mithilfe
-des vorgestellten Patents EP2158386B1, wird dieses Problem beseitigt. Der
+des vorgestellten Patents EP2158386B1 wird dieses Problem beseitigt. Der
 Ladedruck des Turboladers ist in allen Betriebszuständen optimal.
+
+\HGG{Das Miniproblem ist das schnelle Erreichen der Operativen Zone des
+  basalen Prozesses.}
 
 \subsection{Beschreibung der Lösung des Problems in der Patentschrift}
 
-Mithilfe eines Elektromotors kann exakt gesteuert werden zu welchem Zeitpunkt
-wie viel Luft in die Brennkammer gegeben wird. Dadurch wird das Turboloch
-soweit verringert, dass der Ladedruck immer gleichmäßig ist.
+Mithilfe eines Elektromotors kann exakt gesteuert werden, zu welchem Zeitpunkt
+wie viel Luft in die Brennkammer gegeben wird. Dadurch wird das Turboloch so
+weit verringert, dass der Ladedruck immer gleichmäßig ist.
 
 \subsection{Einordnung des Problems in die TRIZ-Systematik}
-Das Problem lässt sich nur sehr schwer in die Triz Matrix einordnen. Wenn man
+Das Problem lässt sich nur sehr schwer in die TRIZ Matrix einordnen. Wenn man
 als sich verbessernden Parameter die Leistung nimmt und als sich
 verschlechternden den Energieverlust, bekommt man das Prinzip der
 Eigenschaftsänderung (35) vorgeschlagen.
+
+\HGG{Es kommt ganz klar das \emph{Prinzip 10 der vorgezonenen Wirkung} zur
+  Anwendung.  Die Verdichterwirkung wird durch den Elektromotor bereits
+  \emph{vor} Einsetzen der Hauptwirkung durch den Antrieb mittels Turbine
+  erreicht.} 
+
 \subsection{Darstellung des Bezugs der speziellen Lösung zu den
   TRIZ-Strukturen}
 
 Das Prinzip der Eigenschaftsänderung ist in diesem speziellen Zusammenhang ein
-vergleichbares Prinzip, wie das der Dynamisierung. Da hier sich die
-Eigenschaft des Druckes so verändert das die Kennwerte des Objektes in jeder
-Phase optimal sind. (siehe Prinzip der Dynamisierung)
+vergleichbares Prinzip wie das der Dynamisierung. Die Eigenschaft des Druckes
+verändert sich so, dass die Kennwerte des Objektes in jeder Phase optimal
+sind (siehe Prinzip der Dynamisierung).
+
+\HGG{Relevant sind das \emph{Prinzip 12 der Äquipotenzialität} (die anfangs
+  fehlende Energie wird durch eine zusätzliche Komponente zugeführt, die
+  später auch überschüssige Eneregie abführen kann).  Relevant für das
+  Grundprinzip des Turboladers ist das \emph{Prinzip 23 der Rückkopplung}.}
 
 \section{Beispiel: Automatische Zylinderabschaltung}
 \subsection{Metadaten}
 \begin{itemize}\itemsep0pt
 \item Titel: Zylinderabschaltung bei Otto-Motoren
 \item Patentnummer: DE19606402C2
-\item Quelle: \url{https://patents.google.com/patent/DE19606402C2/ko}
+\item Quelle: \url{https://patents.google.com/patent/DE19606402C2}
 \item Patentinhaber:  Rainer Born 
 \item Patentdaten: Veröffentlichung 1998-08-13
-
 \end{itemize}
+
 \subsection{Beschreibung des Stands der Technik}
 Alle Zylinder des Motors arbeiten zu allen Betriebszuständen gleichzeitig und
 produzieren die gleiche Energie. Die Zylinder bekommen alle die gleiche
 Treibstoffmenge zugeführt.
+
+\HGG{In der Patentschrift wird der Stand der Technik anders beschrieben. Es
+  werden mehrere Verfahren referenziert, in denen bereits
+  Zylinderabschaltungen eingesetzt werden, die aber alle ihre Nachteile
+  besonders in den im Patent genannten Bereichen haben.  Gegenüber dem Stand
+  der Technik wird eine optimale Kombination von Ansätzen behauptet, die zu
+  einer deutlichen Verbesserung des Betriebs nachgelagerter Komponenten
+  (Abgaswerte und Katalysator) führen.
+
+  Stattdessen wird im Weiteren das Grundverfahren analysiert, überhaupt
+  Zylinder im Betrieb abzuschalten, das aber Stand der Technik ist und nicht
+  Gegenstand der im aktuellen Patent erteilten Schutzrechte. }
+
 \subsection{Funktionales Modell}
 
+\HGG{Dieser Abschnitt fehlt. Obersystem ist die gesamte Antriebseinheit, also
+  die über die Kurbelwelle gegebene Kopplung der Zylinder, das Abgassystem,
+  der Katalysator sowie die zugehörigen Steuereinheiten.  Relevante
+  Komponenten (laut Patentschrift) sind wenigstens: die Zylinder,
+  Drosselklappen, Kraftstoffzufuhr, Ansaugrohre, Ventilsteuerung, Abgas
+  (relevant, da hier Emissionsnormen einzuhalten sind), Katalysator. }
+
 \subsection{Formulierung des Miniproblems}
-Um ein Fahrzeug schneller zu beschleunigen beziehungsweise damit es schneller
+Um ein Fahrzeug schneller zu beschleunigen, beziehungsweise damit es schneller
 fahren kann, muss die Anzahl der Zylinder oder der Brennraum vergrößert
 werden. Dies hat zur Folge, dass das Kraftfahrzeug mehr Motorleistung
 generiert, aber dadurch auch mehr Benzinverbrauch verursacht.  Durch die
 erhöhte Anzahl an Zylindern hat das Fahrzeug auch in Zuständen geringer
 Motorlast einen verhältnismäßig erhöhten Kraftstoffverbrauch.
+
+\HGG{In der Patentschrift ist das anders formuliert: „Aufgabe der Erfindung
+  ist es, eine Zylinderabschaltung zum Zwecke der Kraftstoffeinsparung
+  anzugeben, mit der die Abgasnormen eingehalten werden können, ein besserer
+  Rundlauf erreicht wird und eine längere Aufrechterhaltung der
+  Betriebstemperatur des Katalysators gewährleistet ist.“}
+
 \subsection{Beschreibung der Lösung des Problems in der Patentschrift}
 Durch eine Zylinder Ab- oder Zuschaltung, kann jeder Zylinder mit der
 optimalen oder gar keiner Treibstoffmenge versorgt werden.  Somit ist eine
 optimale Leistungsbeanspruchung zu jedem Zeitpunkt gewährleistet.  Es sind
 hohe Geschwindigkeiten und eine Benzineinsparung gleichzeitig möglich.
 
+\HGG{Es geht nicht um die  Ab- oder Zuschaltung von Zylindern an sich, sondern
+um die Modi, in denen dies geschieht und den Auswirkungen auf den Betrieb des
+Gesamtsystems. }
+
 \subsection{Einordnung des Problems in die TRIZ-Systematik}
 Die Lösung lässt sich in die Widerspruchsmatrix einordnen, da der verbesserte
-Faktor die Geschwindigkeit oder die Leistung ist(9) und der sich
+Faktor die Geschwindigkeit oder die Leistung ist (9) und der sich
 verschlechternde Faktor die Energiekonsumption eines beweglichen Objektes
-ist(19) ist. Die Matrix schlägt neben dem Prinzip des Gegengewichts(8), dem
-Prinzip der Eigenschaftsänderung (35) auch das Prinzip der Dynamisierung vor.
+(19). Die Matrix schlägt neben dem Prinzip des Gegengewichts (8), dem Prinzip
+der Eigenschaftsänderung (35) auch das Prinzip der Dynamisierung vor.
+
+\HGG{In der Patentschrift wird ausgeführt: „Das Leerlaufabschaltmuster ... ist
+  der optimale Kompromiß für Vierzylinder-Ottomotoren zwischen den Kriterien
+  hoher thermischer Wirkungsgrad durch hohe Kompression bei geringen
+  Arbeitstakten einerseits, und geringe Stickoxidemission, der Standzeit des
+  Katalysators oberhalb der Anspringtemperatur und Rundlaufeigenschaften
+  andererseits.“ Es handelt sich also um eine klassische Kompromisslösung und
+  nicht um eine Widerspruchslösung nach TRIZ.}
+
 \subsection{Darstellung der speziellen Lösung zu allg. TRIZ-Strukturen}
  
 Die Lösung erfolgt hier durch Dynamisierung, da die Kennwerte des Objektes
@@ -151,12 +229,26 @@ Leistung, die das System oder das Fahrzeug zu einem bestimmten Zeitpunkt
 gerade benötigt. Es geht wenig Energie verloren. Dies bedeutet im Speziellen
 einen geringeren Kraftstoffverbrauch.
 
+\HGG{Das trifft auf den Stand der Technik zu, überhaupt über
+  Zylinderabschaltungen nachzudenken.  Die Kompromisslösung hier hat eine
+  vollkommen andere Ausrichtung: Durch spezifische Betriebsbedingungen im
+  System sollen spezifische Effekte (Abgaswerte, Lebensdauer des Katalysators)
+  in anderen Systemteilen erreicht werden. Es wird hier also die
+  \emph{Lösungsstrategie 3 Übergang ins Super- und Subsystem (Makro- und
+    Mikrolevel)} angewendet. 
+
+  Als weiteres kommt das \emph{Prinzip 28 des Austauschs mechanischer
+    Wirkschemata} zur Anwendung, da die neuen Betriebsstrategien nicht mehr
+  auf Drosselklappen und ähnlichen mechanischen Steuerelementen aufsetzen,
+  sondern unmittelbar auf der (digitalen) Einspritzsteuerung selbst. }
+
 \section{Beispiel: Schwenkflügel bei Flugzeugen}
 \subsection{Metadaten}
 \begin{itemize}\itemsep0pt
 \item Titel: Schwenkflügel bei Flugzeugen
 \item Patentnummer: US2523427A
-\item Quelle: \url{https://patents.google.com/patent/US2523427A/en?oq=US2523427A}
+\item Quelle:
+  \url{https://patents.google.com/patent/US2523427A/en?oq=US2523427A} 
 \item Patentinhaber:  William J. Hampshire
 \item Patentdaten: Veröffentlichung 1950-09-26
 \end{itemize}
