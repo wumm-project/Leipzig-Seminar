@@ -6,7 +6,6 @@ from nltk.corpus import wordnet as wn
 from nltk.corpus import wordnet_ic
 from data.trizprinciples import methods
 
-
 def download():
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')

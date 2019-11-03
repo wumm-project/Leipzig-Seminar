@@ -23,12 +23,6 @@ github Organisationsaccount https://github.com/wumm-project eingerichtet und
 dort verschiedene Repos angelegt. Die dort zusammenzutragenden Daten und
 Materialien sollen unter einer offenen Lizenz verfügbar gemacht werden.
 
-
-
-
-
-
-
 ## Seminararbeit als Prüfungsleistung
 
 Als Prüfungsvorleistung ist ein Vortrag im Seminar zu halten, in den meisten

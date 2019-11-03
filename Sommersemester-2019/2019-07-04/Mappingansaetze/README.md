@@ -7,17 +7,18 @@ to classify potential innovation methods.
 
 Requires python3 and python-pip to be installed
 
-```sh
+```
 make install
 ```
 
 ## Load models
 
-Loads the 1.5G GoogleNews-vectors-negative300.bin.gz, i.e. the word2vec
-pre-trained Google News corpus (3 billion running words) word vector model (3
-million 300-dimension English word vectors).
+Es wird der 1.5G GoogleNews-vectors-negative300.bin.gz Datensatz geladen, also
+der Google News corpus (3 billion running words), der aber nur an einer Stelle
+für word2vec auf englischen Daten benötigt wird. Diese Stelle ist aktuell
+auskommentiert.
 
-```sh
+```
 make load
 ```
 
@@ -25,18 +26,47 @@ make load
 
 Term Frequenz - Inverse Dokumenten Frequenz
 
-[0., 0.01124889 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.01118105 0., 0., 0., 0.00913807 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0., 0.00997566 0., 0., 0., 0., 0., 0.]
+Mit diesem Ansatz wird die Ähnlichkeit von Texten untersucht, indem mit dem
+*sklearn* Feature Extraktor jedem Text ein Punkt in einem hochdimensionalen
+Vektorraum zugeordnet wird (der sich aus den normierten Termen des jeweiligen
+Dokuments berechnet) und dann der Kosinus des Winkels zwischen zwei solchen
+Vektoren als Ähnlichkeitsmaß genommen wird.
 
-## w2v
+Als Vergleichstexte werden die Beschreibungen der 40 TRIZ-Prinzipien genommen,
+gegen die einzelne Patenttexte als Probetexte untersucht werden.  Die
+beobachteten Ähnlichkeiten bleiben weitgehend unter 0.1, die
+Crossvalidierungen der 40 Referenztexte gegeneinander bewegen sich in
+ähnlichen Größenordnungen.
 
-[0.58766514, 0.66835225, 0.71240354, 0.6649222, 0.64329594, 0.66402805, 0.78082335, 0.693567, 0.77501005, 0.7846895, 0.62681985, 0.65579087, 0.64211774, 0.58612865, 0.7568965, 0.74246585, 0.710278, 0.5357624, 0.69967353, 0.6756405, 0.55700743, 0.7103742, 0.60688776, 0.65232396, 0.6610202, 0.6873301, 0.6839913, 0.6221209, 0.69601005, 0.6572794, 0.7112712, 0.55912167, 0.6386556, 0.75620085, 0.539741, 0.51225054, 0.65765435, 0.51215994, 0.607432, 0.41427097]
+Beim Vergleich englischer Texte wird eine Warung "Your stop_words may be
+inconsistent with your preprocessing" ausgegeben.
 
-### Notes
+## wordnet
+
+Es werden die Daten des Wordnet-Modells von *nltk* nach $HOME/nltk_data
+geladen (das muss nur einmal geschehen, danach kann die entsprechende
+Codezeile auskommentiert werden), auf dieser Basis werden wieder
+Ähnlichkeitsmaße zwischen dem Probetext und den Vergleichstexten der 40
+TRIZ-Methoden berechnet.
+
+## word2vec
+
+Mit *gensim* wird eine Bibliothek verwendet, die zunächst ein eigenes
+neuronales Netz auf den Vergleichsdaten trainiert.  Im Fall deutscher Texte
+wird dieses Modell unter models/model.bin abgespeichert (dazu muss der
+aktuelle Code aber weiter modifiziert werden).  Auf dieser Basis werden wieder
+Ähnlichkeitsmaße zwischen dem Probetext und den Vergleichstexten der 40
+TRIZ-Methoden berechnet.
+
+In der englischen Version (auskommentiert) wird der Google News Vector als
+Vergleich verwendet.  Dieser Zugang bleibt unverständlich.
+
+## Notes
 
 2: zigarettenpackung
 27: teebeutel windel etc tetrapack, wegwerf zigaretten anzünder (feuer), 
 
-### Linksammlung
+## Linksammlung
 
 tutorials:
 https://medium.com/@adriensieg/text-similarities-da019229c894
