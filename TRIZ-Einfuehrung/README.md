@@ -82,7 +82,10 @@ TRIZ Future Conference 2018.
 
 ## Begriffe (noch weiter zu ergänzen)
 
-Siehe auch das [TRIZ Glossar](http://wumm.uni-leipzig.de/glossary.php)
+Siehe auch das [TRIZ Glossar](http://wumm.uni-leipzig.de/glossary.php) auf
+Basis der VDI-Norm sowie das
+[umfangreichere Glossar](http://www.xtriz.com/publications/TRIZGlossaryVersion1_0.pdf)
+von Valeri Souchkov
 
 * TRIZ heuristics of the Eight Fields of MATCEMIB (Mechanical, Acoustic,
   Thermal, Chemical, Electric, Magnetic, Intermolecular and Biological)
