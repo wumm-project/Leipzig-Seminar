@@ -38,3 +38,8 @@ liefern.  Für eine realistische Anwendung müssten
 (2) ein werkzeuggestütztes Evaluationsverfahren für die Ergebnisse aufgesetzt
 werden, was den Rahmen einer Seminararbeit allerdings deutlich übersteigt.
 
+## Binqing Hu
+
+In dem Text wird die Situation von TRIZ in China beschrieben und mit der
+Situation in der DDR in den 1980er Jahren verglichen.  Die Arbeit muss noch
+deutlich editorisch überarbeitet werden.
