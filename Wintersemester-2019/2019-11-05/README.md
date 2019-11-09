@@ -12,8 +12,8 @@ abgleichen können. Siehe dazu auch die
 [Anmerkungen](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/SeminarWissen/2019-10-24)
 zu einem anderen Seminar im Dorfwiki. In diesem Sinne gilt "Welt als
 Wirklichkeit *für uns* ist Wirklichkeit im Prozess begrifflicher Erfassung"
-(Vorlesung). Und in diesem Sinne ist der Begriff im weiteren Text zu
-verstehen. 
+(Vorlesung). Und in diesem Sinne ist die Begriffe *Welt* und *Wirklichkeit* im
+weiteren Text zu verstehen.
 
 Mit dem Systembegriff wird versucht, diese Nahtstelle von Sichten und
 Wirklichkeit selbst in eine Sprachform zu bringen und damit den Begriff
@@ -24,7 +24,9 @@ motivierenden Vorbereitung, auf die ich aus systematischen Gründen erst später
 eingehe, hat er fünf Entwicklungsschritte indentifiziert, in denen sich der
 Ganzheitlichkeitsbegriff im betrachteten Zeitraum entwickelt hat.
 
-1. Am Übergang des 17. zum 18. Jahrhundert herrschte folgende Sichtweise (etwa
+## 1.
+
+Am Übergang des 17. zum 18. Jahrhundert herrschte folgende Sichtweise (etwa
 Leibniz) vor: Die Ganzheit der Welt (hier als *Wirklichkeit*, diese
 Unterscheidung wurde damals so noch nicht getroffen) kann überhaupt nur aus
 einer Innenperspektive erfasst werden, denn die Welt bewegt sich aus sich
@@ -37,7 +39,9 @@ Ansatz findet sich übrigens bereits in der Archimedes zugeschriebenen
 Position, dass er nur einen festen Punkt außerhalb der Welt bräuchte, um jene
 aus den Angeln zu heben.
 
-2. Ab Ende des 18. Jahrhunderts: Die Ganzheit der Welt wird als Einheit der
+## 2.
+
+Ab Ende des 18. Jahrhunderts: Die Ganzheit der Welt wird als Einheit der
 Wirklichkeit postuliert, die aber nur durch Beschreibungsformen
 praktisch-planerisch zugänglich ist. Deshalb geht es um die Ganzheit und
 Geschlossenheit der Beschreibungsformen. Um den nicht hintergehbaren
@@ -49,28 +53,35 @@ Beschreibungsform von Teilen der Wirklichkeit) geschieden. Einem
 nicht die organismische.  Es werden jedoch Erfahrungen aus jener
 mechanistisch-technischen Welt auf die Beschreibungsformen jener "Organismen"
 übertragen mit entsprechenden Folgen auch für ein Menschenbild, siehe etwa
-(als frühes Werk der Periode)
-[Der Mensch als Maschine](http://www.lsr-projekt.de/lm1.html) von
-[La Mettrie](https://de.wikipedia.org/wiki/Julien_Offray_de_La_Mettrie).
+(als frühes Werk der Periode) [Der Mensch als
+Maschine](http://www.lsr-projekt.de/lm1.html) von [La
+Mettrie](https://de.wikipedia.org/wiki/Julien_Offray_de_La_Mettrie).
 
-3. Ab Ende des 19. Jahrhunderts können etwa energetische Experimente mit
-"Organismen" durchgeführt, die Beschreibungsformen von Organismen selbst einer
+## 3.
+
+Ab Ende des 19. Jahrhunderts können etwa energetische Experimente mit
+*Organismen* durchgeführt, die Beschreibungsformen von Organismen selbst einer
 rational-kritischen Würdigung unterzogen und damit mit Mitteln der
-mechanistisch-technischen Welt der "Systeme" analysiert werden. Neben der
+mechanistisch-technischen *Welt der Systeme* analysiert werden. Neben der
 spekulativ-induktiven Methode der Verallgemeinerung von Beobachtungen
 entwickelt sich eine symbolisch-deduktive Methode, in der Logik und Mathematik
 als Komplettierungsinstrumente für Theoriegebäude mit Ganzheitsanspruch in
-Stellung gebracht werden. Diese "geschlossenen Theorien" begründen (a) eine
-neue argumentative Tradition des Verhältnisses von Induktion und Deduktion
-(einen Begriff von "Science" in der im angelsächsischen Sprachraum
-verbreiteten Bedeutung) und (b) eine Aufspaltung in Einzelwissenschaften,
-deren Vertreter den intern stehenden (deduktiven) Ganzheitsanspruch an das
-jeweilige Theoriegebäude gern mit dem alten (induktiven) Ganzheitsanspruch
-einer "Welterklärung" verwechseln (Naturphilosophie, Empiriokritizismus).
+Stellung gebracht werden. Diese *geschlossenen Theorien* begründen
 
-4. In der ersten Hälfte des 20. Jahrhunderts führen diese zwei Linien zum
-Schisma in "Science" und "Humanities".  Herr Kleemann verfolgte vor allem die
-Linie "Science", in der sich die interessanteren Entwicklungen bzgl. der
+(a) eine neue argumentative Tradition des Verhältnisses von Induktion und
+Deduktion (einen Begriff von "Science" in der im angelsächsischen Sprachraum
+verbreiteten Bedeutung) und
+
+(b) eine Aufspaltung in Einzelwissenschaften, deren Vertreter den intern
+stehenden (deduktiven) Ganzheitsanspruch an das jeweilige Theoriegebäude gern
+mit dem alten (induktiven) Ganzheitsanspruch einer "Welterklärung" verwechseln
+(Naturphilosophie, Empiriokritizismus).
+
+## 4.
+
+In der ersten Hälfte des 20. Jahrhunderts führen diese zwei Linien zum Schisma
+in *Science* und *Humanities*.  Herr Kleemann verfolgte vor allem die Linie
+*Science*, in der sich die interessanteren Entwicklungen bzgl. der
 Sprachformen vollzogen, in denen sich der Widerspruch zwischen dem
 Geschlossenheitsanspruch von Theorie und der Ganzheit und Einheit der
 Wirklichkeit entwickelt.
@@ -105,7 +116,9 @@ im zunächst theoretischen Konzept der Turingmaschine (1936) auf, das in der
 Entschlüsselung der Chiffrierung der deutschen Enigma bereits im
 Vorcomputerzeitalter einen ersten Höhepunkt praktischer Anwendung hat.
 
-5. Seit den 1960er Jahren setzt sich jene instrumentelle Untersetzung
+## 5.
+
+Seit den 1960er Jahren setzt sich jene instrumentelle Untersetzung
 mathematisch-deduktiver Ansätze in Kybernetik, Regelungssystemen, KI,
 Automatisierungstechniken usw. fort. Die instrumentelle Untersetzung von
 Automatisierungstechniken ist allerdings deutlich älteren Datums - mechanische
