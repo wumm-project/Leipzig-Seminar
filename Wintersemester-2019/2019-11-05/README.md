@@ -190,12 +190,12 @@ Diese Handlungsmacht wollen wir für eine Transformation der Gesellschaft in
 Richtung einer nachhaltigen Produktionsweise einsetzen. Die Vielfalt der
 Welten, die beim Wechselverhältnis von Ebene 1 und 2 noch kein Problem ist,
 wird nun aber zum Problem, denn mit dem Nachhaltigkeitsanspruch tritt das
-dialektische Wchselverhältnis von Vielfalt der (sprachlich konstituierten)
+dialektische Wechselverhältnis von Vielfalt der (sprachlich konstituierten)
 Welten und die Ganzheit der Wirklichkeit unmittelbar auf die Tagesordnung.  Es
 gibt keinen externen Standpunkt, von dem aus sich ein nachhaltiger Umgang mit
 der Wirklichkeit instrumentell erzwingen ließe. In diesem Sinne müssen wir
 offen sein dafür, dass Nachhaltigkeitsfragen auch zu einer wesentlichen
-Änderung dessen führen, mit welchen Begriffen und Systemen an jenes
+Änderung dessen führen, mit welchen Begriffen und Systemen wir an jenes
 dialektische Verhältnis herangehen.  Wir müssen nicht nur lernen, das Denken
 in Kreisläufen in unser instrumentelles Vorgehen einzubauen, sondern das
 instrumentelle Vorgehen selbst zu einem Vorgehen in  Kreisläufen
