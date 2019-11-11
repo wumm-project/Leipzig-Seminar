@@ -12,8 +12,8 @@ abgleichen können. Siehe dazu auch die
 [Anmerkungen](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/SeminarWissen/2019-10-24)
 zu einem anderen Seminar im Dorfwiki. In diesem Sinne gilt "Welt als
 Wirklichkeit *für uns* ist Wirklichkeit im Prozess begrifflicher Erfassung"
-(Vorlesung). Und in diesem Sinne ist die Begriffe *Welt* und *Wirklichkeit* im
-weiteren Text zu verstehen.
+(Vorlesung). Und in diesem Sinne sind die Begriffe *Welt* und *Wirklichkeit*
+im weiteren Text zu verstehen.
 
 Mit dem Systembegriff wird versucht, diese Nahtstelle von Sichten und
 Wirklichkeit selbst in eine Sprachform zu bringen und damit den Begriff
@@ -21,7 +21,7 @@ Wirklichkeit selbst in eine Sprachform zu bringen und damit den Begriff
 diese Versuche über die letzten 300 Jahre, also im Wesentlichen im Kontext
 bürgerlicher Gesellschaftsverhältnisse, nachgezeichnet. Nach einer
 motivierenden Vorbereitung, auf die ich aus systematischen Gründen erst später
-eingehe, hat er fünf Entwicklungsschritte indentifiziert, in denen sich der
+eingehe, hat er fünf Entwicklungsschritte identifiziert, in denen sich der
 Ganzheitlichkeitsbegriff im betrachteten Zeitraum entwickelt hat.
 
 ## 1.
@@ -30,12 +30,12 @@ Am Übergang des 17. zum 18. Jahrhundert herrschte folgende Sichtweise (etwa
 Leibniz) vor: Die Ganzheit der Welt (hier als *Wirklichkeit*, diese
 Unterscheidung wurde damals so noch nicht getroffen) kann überhaupt nur aus
 einer Innenperspektive erfasst werden, denn die Welt bewegt sich aus sich
-heraus und in sich selbst; es gibt kein *Außen*.  Damit wird der Gedanke eines
-externen Schöpfers verworfen, da dieser Gedanke einer weiteren Entwicklung der
-technischen Möglichkeiten der Menschheit im Wege steht. Dazu auch
-[Aqualung](https://de.wikipedia.org/wiki/Aqualung_(Album)) von Jethro Tull,
-besonders der [Covertext](http://www.tullpress.com/aquatext71.htm).  Dieser
-Ansatz findet sich übrigens bereits in der Archimedes zugeschriebenen
+heraus und in sich selbst; es gibt kein *Außen*.  Damit wird der Beweis
+göttlicher Schöpfung als Anspruch verworfen, da dieser Gedanke einer weiteren
+Entwicklung der technischen Möglichkeiten der Menschheit im Wege steht. Dazu
+auch [Aqualung](https://de.wikipedia.org/wiki/Aqualung_(Album)) von Jethro
+Tull, besonders der [Covertext](http://www.tullpress.com/aquatext71.htm).
+Dieser Ansatz findet sich übrigens bereits in der Archimedes zugeschriebenen
 Position, dass er nur einen festen Punkt außerhalb der Welt bräuchte, um jene
 aus den Angeln zu heben.
 
@@ -60,8 +60,8 @@ Mettrie](https://de.wikipedia.org/wiki/Julien_Offray_de_La_Mettrie).
 ## 3.
 
 Ab Ende des 19. Jahrhunderts können etwa energetische Experimente mit
-*Organismen* durchgeführt, die Beschreibungsformen von Organismen selbst einer
-rational-kritischen Würdigung unterzogen und damit mit Mitteln der
+*Organismen* durchgeführt, damit die Beschreibungsformen von Organismen selbst
+einer rational-kritischen Würdigung unterzogen und mit Mitteln der
 mechanistisch-technischen *Welt der Systeme* analysiert werden. Neben der
 spekulativ-induktiven Methode der Verallgemeinerung von Beobachtungen
 entwickelt sich eine symbolisch-deduktive Methode, in der Logik und Mathematik
@@ -109,12 +109,18 @@ Als dritte Entwicklungslinie jener Zeit verwies Herr Kleemann auf die
 beginnende *Technisierung* von Science im Sinne einer technischen
 Werkzeugunterstützung von Versuchsaufbaustrukturen bis hin zu repetitiven
 Vorgängen innerhalb jener Sprachformen einer mathematisch-deduktiven
-Argumentation.  Turing etwa greift ältere derartige Ansätze (Rechenmaschinen
-von Leibniz und Pascal, die "Analytical Engine" von Babbage und Lady Lovelace)
-im zunächst theoretischen Konzept der Turingmaschine (1936) auf, das in der
+Argumentation.  Turing greift ältere derartige Ansätze (Rechenmaschinen von
+Leibniz und Pascal, die "Analytical Engine" von Babbage und Lady Lovelace) im
+zunächst theoretischen Konzept der Turingmaschine (1936) auf, das in der
 [Turing-Bombe](https://de.wikipedia.org/wiki/Turing-Bombe), der
 Entschlüsselung der Chiffrierung der deutschen Enigma bereits im
 Vorcomputerzeitalter einen ersten Höhepunkt praktischer Anwendung hat.
+
+Die Turingmaschine ist zugleich eine "Gödelmaschine", denn sie setzt den
+Gödelschen Unvollständigkeitsansatz maschinell um: Das unendliche Eingabeband
+führt zu einer unendlichen Abfolge innerer Zustände, repetitive
+Zustandsstrukturen sind - im Gegensatz zur engeren Klasse der Kellerautomaten
+- an repetitive Inputs gebunden. 
 
 ## 5.
 
@@ -140,7 +146,7 @@ Mit der fortschreitenden Durchdringung unserer Produktionsweise mit
 wissenschaftssprachlich fundierten Praxen und fortschreitender
 Technologisierung reproduziert sich damit der dialektische Widerspruch
 zwischen der Vielfalt der (nun instrumentell hochgradig aufgeladenen) Welten
-und der Einheit der Wirklichkeit auf neuem Niveau.
+(der Einzelwissenschaften) und der Einheit der Wirklichkeit auf neuem Niveau.
 
 Die Frage ist keineswegs nur von akademischem Interesse, denn in einer hoch
 technisierten Gesellschaft, in der zweckgerichtetes instrumentelles Handeln
@@ -191,7 +197,7 @@ Richtung einer nachhaltigen Produktionsweise einsetzen. Die Vielfalt der
 Welten, die beim Wechselverhältnis von Ebene 1 und 2 noch kein Problem ist,
 wird nun aber zum Problem, denn mit dem Nachhaltigkeitsanspruch tritt das
 dialektische Wechselverhältnis von Vielfalt der (sprachlich konstituierten)
-Welten und die Ganzheit der Wirklichkeit unmittelbar auf die Tagesordnung.  Es
+Welten und der Einheit der Wirklichkeit unmittelbar auf die Tagesordnung.  Es
 gibt keinen externen Standpunkt, von dem aus sich ein nachhaltiger Umgang mit
 der Wirklichkeit instrumentell erzwingen ließe. In diesem Sinne müssen wir
 offen sein dafür, dass Nachhaltigkeitsfragen auch zu einer wesentlichen
@@ -205,4 +211,4 @@ In diesem Sinne stehen auch Begriffe/Systeme einerseits und Nachhaltigkeit
 andererseits in einem synergetischen Verhältnis.  Billiger ist das Semantic
 Web nicht zu haben.
 
-Hans-Gert Gräbe, 09.11.2019
+Hans-Gert Gräbe, 09.11.2019, update am 11.11.2019
