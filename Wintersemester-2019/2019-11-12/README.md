@@ -11,8 +11,8 @@ In den bisherigen Seminaren wurde eine Vielfalt von Kontexten betrachtet, in
 denen ein Systembegriff verwendet wird.
 
 In der *Theorie Dynamischer Systeme* ging Gräbe vor allem auf mathematische
-Beschreibungsformen von Modellen ein, die sich wesentlich auf zwei Zeitebenen
-- einer Mikro- und einer Makroevolution - entfalten.
+Beschreibungsformen von Modellen ein, die sich wesentlich auf zwei
+Zeitebenen - einer Mikro- und einer Makroevolution - entfalten.
 
 In den von Laforet und Lautenschläger vorgestellten Theorieansätzen ging es um
 die Verbindung zwischen komplexen Beschreibungsformen und Handlungsvollzügen,
@@ -55,26 +55,27 @@ vorgefundene technische Mittel (Komponenten in der TRIZ-Terminologie) in
 Erscheinung.  Ob eine solche Trennung auf dem Hintergrund des in der Vorlesung
 entwickelten Technikbegriffs sinnvoll ist, sei dahingestellt.
 
-Eine derartige *begriffliche* Weiterentwicklung (in der Vorlesung heißt es
-dazu "Welt als Wirklichkeit für uns ist Wirklichkeit im Prozess begrifflicher
-Erfassung") vorgefundener Bedingungen kann sich prozessual am Konzertbeispiel
-aus der Vorlesung orientieren, besser aber noch am Konzept einer "Software aus
-Komponenten", nach dem heute moderne IT-Systeme entworfen und realisiert
-werden.  Derartige aus Komponenten zusammengesetzte Systeme sind generell der
-zentrale Ansatz modernen ingenieur-technischen Handelns und die Informatik
-musste sich lange fragen lassen, warum ein solcher Ansatz dort keine Rolle
-spielte.  Hier sind in den letzten 10 Jahren klare Weiterentwicklungen zu
-verzeichnen.
+Das Begreifen einer derartigen *begriffliche Weiterentwicklung* (in der
+Vorlesung heißt es dazu "Welt als Wirklichkeit für uns ist Wirklichkeit im
+Prozess begrifflicher Erfassung") vorgefundener Bedingungen kann sich
+prozessual am Konzertbeispiel aus der Vorlesung orientieren, besser aber noch
+am Konzept einer *Software aus Komponenten*, nach dem heute moderne IT-Systeme
+entworfen und realisiert werden.  Derartige aus Komponenten zusammengesetzte
+Systeme sind generell der zentrale Ansatz modernen ingenieur-technischen
+Handelns, und die Informatik musste sich lange fragen lassen, warum ein
+solcher Ansatz dort keine Rolle spielte.  Hier sind in den letzten 10 Jahren
+klare Weiterentwicklungen zu verzeichnen.
 
 _Komponenten_ gehen in solche Systeme vor allem mit der von ihnen
 bereitgestellten Funktionalität ein. Gleiches gilt für den dissipativen
 Durchsatz, der die Strukturbildungsprozesse innerhalb des Systems antreibt,
 wenn so etwas zu berücksichtigen ist. Komponenten sind selbst wieder Systeme,
-wenn es darum geht, die Bereitstellung solcher Funktionen genauer zu
+wenn es darum geht, die *Bereitstellung* solcher Funktionen genauer zu
 beschreiben.  Systembildung ist damit auf der einen Seite submersive Reduktion
 von Komplexität.  Diese Perspektive berücksichtigt allerdings zunächst nur die
 *Aufbauorganisation* des Systems. In der *Ablauforganisation* müssen sich die
-Abläufe in den Komponenten mit den Abläufen im System koordinieren.
+Abläufe in den Komponenten mit den Abläufen im System koordinieren, was Quelle
+mannigfacher Restriktionen ist.
 
 Der wesentliche eigene Beitrag auf Systemebene ist die Organisation des
 Zusammenspiels der Komponenten auf eine solche Weise, dass die verfolgten
