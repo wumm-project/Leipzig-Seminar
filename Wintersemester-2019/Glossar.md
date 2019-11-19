@@ -2,7 +2,45 @@
 
 ## Äquipotenzialität
 
+## Autokatalyse
 
+(Ulanowicz 2009) Ein autokatalytischer Zyklus ist ein Zyklus von durch
+Prozesse verbundenen Komponenten, die durch positiven Feedback gekoppelt sind
+und sich damit gegenseitig verstärken.
+
+
+## Autopoiesis
+
+Nach Maturana: Siehe (Mingers 1989, S. 164)
+
+Netzwerk von produktiven Komponenten, die
+
+a) durch ihre Interaktionen das Netzwerk der Produktion, welches sie selbst
+   produziert, rekursiv regenerieren, und
+
+b) dieses Netzwerk als Einheit im Raum realisieren, in welchem sie selbst
+   existieren, indem sie die Oberfläche (surface) dieses Raum als Abgrenzung
+   vom Hintergrund durch ihre präferenziellen Interaktionen konstituieren und
+   spezifizieren. 
+
+Autopoiesis ist definiert als eine Organisation eines Ganzen.
+
+Ein biologisches System ist damit in keiner Weise allein durch die
+Eigenschaften seiner _Komponenten_ definiert, sondern durch die Abfolge von
+_Prozessen_, "in relations subordinated to the autopoiesis".
+
+Autopoietische Systeme sind organisationell abgeschlossen. 
+
+"Their explanation must be nonfunctionalist and nonteleological". (Mingers
+1989, S. 174)
+
+"Successful autopoiesis entails the continuous structural coupling to its
+medium, with the medium effectively selecting the states of the organism.
+(Mingers 1989, S. 177)
+
+"A consequence of this is that the idea that organisms operationally code or
+transmit information or think by manipulating objective representations of
+their environment is fundamentally wrong".  (Mingers 1989, S. 178)
 
 ## Begriff und Bedeutung (Kleemann/Gräbe)
 
@@ -25,7 +63,9 @@ respects. The more parts are specialised in a certain direction, the more they
 are irreplaceable, and loss of parts leads to the breakdown of the whole
 system.”
 
-## System (Lautenschläger)
+## System 
+
+### Lautenschläger
 
 Ein System besteht aus
 * Struktur (Aufbau, Anordnungs- und Beziehungsschema seiner Elemente und
@@ -41,6 +81,11 @@ Weitere Begriffe:
 * (Deduktiv versus induktiv)
 * (Perspektive)
 * „ober“, „unter“, „makro“, „mikro“, „vertikal“, „horizontal“, Hierarchie
+
+### VDI-4521-3
+
+Von ihrer Umwelt abgegrenzte Menge von Elementen, die miteinander in Beziehung
+stehen [VDI 3633 in Anlehnung an DIN IEC 60050-351-42-08]
 
 ### Offene und geschlossene Systeme
 
@@ -61,7 +106,23 @@ must eventually reach a state of equilibrium, according to the second law of
 thermodynamics. Open systems may, provided certain conditions are given,
 attain a stationary state....”
 
-steady state
+## Organisation und Struktur
+
+### Maturana (Mingers 1989)
+
+_Organisation_ ist die innere Aufbaustruktur (Klasse), die die (erwarteten)
+Eigenschaften hervorbringt, _Struktur_ dagegen Aufbau und Relationen eines
+konkreten realen Exemplars dieser Klasse.
+
+Eine _Einheit_ (System?) hat stets beides, Organsation und Struktur.
+
+## Prozess
+
+VDI-4521-3: Gesamtheit von aufeinander einwirkenden Vorgängen in einem System,
+durch die Materie, Energie oder Informationen umgeformt, transportiert oder
+auch gespeichert werden [in Anlehnung an DIN IEC 60050-351-42-33]
+
+## steady state
 
 ## Welt und Wirklichkeit (Kleemann/Gräbe)
 
