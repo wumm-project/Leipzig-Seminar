@@ -1,0 +1,298 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{a4wide,amsmath,url}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage{minted}
+%\usepackage{tabularx}
+%\usepackage{adjustbox}
+
+\parindent0pt
+\parskip4pt
+
+\newcommand{\abs}[1]{\left|#1\right|}
+
+\author{René Brückner}
+\title{Patent -- Triz40 Mappingans\"atze}
+\date{30. September 2019}
+
+\begin{document}
+\maketitle
+
+\bigskip
+
+\begin{abstract}
+Im Laufe des Seminars \textit{Widersprüche und Management-Methodiken} an der
+Uni Leipzig im Sommersemester 2019 wurden die Studierenden immer wieder vor
+die Problematik der Zuordnung von Patenttexten zu Innovationsmethoden der 40
+TRIZ Prinzipien gestellt.  Als Beitrag des Forschungsseminars hat sich der
+Autor das Ziel gestellt, mittels Textprocessing und Information Retrieval
+Methoden zu Patenttexten eine Auswahl möglicher der 40 TRIZ Methoden
+automatisiert zu ermitteln.  Zu Beginn werden Grundlagen abgesteckt, welche
+für das weitere Verständnis erforderlich sind.  Anschließend wird eine
+Zielstellung formuliert und auf die Ausgangssituation eingegangen.  Auf
+Grundlage dieser beiden Kapitel werden drei Ansätze und deren entsprechenden
+Einschränkungen sowie Probleme vorgestellt.  Aufgrund des Umfangs des Moduls
+ist eine Evaluierung der Ansätze nicht durchführbar.  Zum Schluss wird ein
+Ausblick für eine mögliche weitere Bearbeitung des Themas gegeben.
+\end{abstract}
+
+\vfill
+
+\noindent 
+Universität Leipzig \hfill Fakultät für Mathematik und Informatik \\
+Sommersemester 2019 \hfill Seminar Widersprüche und Management-Methodiken \\
+\newpage
+
+%%%----------------------------------------------------------
+\tableofcontents
+%%%----------------------------------------------------------
+\newpage
+
+\section{Einleitung}
+Mithilfe von Ansätzen, die Altshuller in seinem Buch \cite{altshuller200240}
+beschreibt, lassen sich Konflikte im Innovationsprozess überwinden.  Seine 40
+Methoden fanden Anwendung in vielen modernen Technologien und Erfindungen.
+Spuren dieses Einflusses lassen sich erkennen, indem man Patenttexte auf
+Parallelen zu seinen Prinzipien hin untersucht.  Dies war Hauptbestantteil des
+Seminars \textit{Widersprüche und Management-Methodiken} der Uni Leipzig im
+Sommersemester 2019.  Die Recherche entsprechender Patente stellte dabei eine
+nicht triviale Aufgabe für die Teilnehmer wie den Autor.  Eine automatisierte
+Zuordnung erleichtert die Forschung und die Analyse bestehender
+Konfliktmanagementmethoden.  Moderne Text Mining und Information Retrieval
+Methoden haben eine Vielzahl von Algorithmen zum Textvergleich als Grundlage.
+Der Autor hat sich das Ziel gestellt, solche Algorithmen anzuwenden, um zu
+erproben, wie eine automatische Zuordnung der 40 TRIZ Prinzipien zu
+Patenttexten umgesetzt werden könnte.  Dazu stellt der Autor zunächst kurz
+verwendete Grundlagen vor, um im folgenden drei Ansätze zu erläutern.
+
+\section{Grundlagen}
+
+Zum Verständnis der Ansätze sind Grundlagen im Bereich des Text Minings,
+Information Retrieval sowie mathematische Ähnlichkeitsmaße notwendig.  Im
+Folgenden werden diese kurz benannt und definiert jedoch nicht im Detail
+erläutert.  Für genaue Ausführungen verweist der Autor auf die an der
+Leipziger Universität gehaltenen Vorlesungen \textit{Text Mining} und
+\textit{Information Retrieval} sowie die Bücher \cite{mihalcea2006corpus} und
+\cite{baeza1999modern}.
+
+\subsection{Text Mining / Information Retrieval Begriffserklärung}
+
+\begin{itemize}
+\item \textbf{Tokenizing:} Extrahieren einzelner Wörter (tokens) eines Satzes
+\item \textbf{Stopwort-Entfernung:} Entfernen semantisch unwichtiger Wörter
+  (z.B. \textit{und, der, die, das, als,} etc.) via Listen.
+\item \textbf{Stemming:} Meist regelbasierte Reduzierung des Worts auf den
+  Wortstamm (\textit{Häuser} \textit{Haus}, \textit{gesprungen}
+  \textit{springen …}).
+\item \textbf{POS Tagging:} \textit{Part Of Speech Tagging} ist die Bestimmung
+  der Wortart im Satz.
+\end{itemize}
+
+\subsection{Mathematische Grundlagen}
+
+Eine naive Form der Ähnlichkeitdefinition ist der \textit{Jaccard-Index}
+\cite{jaccard}
+\begin{gather*}
+J_\delta(A,B) = 1-J(A,B) = \frac{\abs{A\cup B}-\abs{A\cap B}}{\abs{A\cup B}}.
+\end{gather*}
+Dieser liegt zwischen 0 und 1 und ist ein Maß für die Ähnlichkeit der beiden
+(endlichen) Mengen $A$ und $B$.
+	
+Die Kosinusähnlichkeit \cite{sidorov2014soft} ist ein besseres Maß zur
+Ähnlichkeitsbestimmung und fundiert auf der linearen Algebra.  Dabei wird der
+Kosinus des Winkels zwischen zwei Vektoren bestimmt, die das Dokument
+repräsentieren.  Mathematisch ausgedrückt entspricht die Kosinusähnlichkeit
+der folgenden Formel.
+
+\begin{gather*}
+  \text{similarity}=\cos(\theta)=\frac{A\cdot B}{||A||\cdot ||B||} =
+  \frac{\sum_i{A_iB_i}}{\sqrt{\sum_i{A_i^2}}\sqrt{\sum_i{B_i^2}}}.
+\end{gather*}
+
+\section{Zielstellung}
+Grundlegend ist das Ziel, semantische Ähnlichkeiten zwischen einem Patenttext
+und allen 40 TRIZ Methoden zu quantifizieren.  Im Fokus stand für den Autor
+eher die Erprobung verschiedener Verfahren als eine genaue Einordnung.  Die
+Zuordnung zu möglichen Kandidaten ist dabei wichtiger als eine exakte
+Bestimmung aller angewandten Methoden.  Zunächst wurde die Beschaffenheit der
+verschiedenen Texte betrachtet, um eine Abschätzung der Umsetzbarkeit zu
+ermöglichen.  Patenttexte sind in einem sehr speziellen Vokabular verfasst.
+Beschreibende technische Bezeichnungen und Erläuterungen ihrer Interaktionen
+untereinander sowie mit einem potenziellen Nutzer stehen im Mittelpunkt.
+Aufgrund dieser Besonderheiten hat jeder Text markante Eigenschaften, welche
+einen Vergleich ermöglichen.
+
+Die 40 TRIZ Methoden hingegen haben eine allgemein gehaltene Beschreibung ohne
+Konkretisierung von entsprechenden Bauteilen.  Verwendet wurde eine
+detaillierte Übersetzung von Altschullers Prinzipien von
+\textit{www.triz40.com} \cite{triz40.com} ins Englische sowie ins Deutsche.
+Aufgrund dieser allgemein gültigen Formulierungen besteht die Möglichkeit,
+Parallelen zwischen der entsprechenden Methode und einem Patenttext zu ziehen.
+
+Ziel ist nun, ein Verfahren zu finden, welches möglichst viele treffende
+Kandidaten der 40 TRIZ Methoden einem Patent zuordnen kann.  Aufgrund von
+fehlenden Daten zum Vergleich und mangelnder Bearbeitungszeit ist es dem Autor
+nicht möglich, eine genaue Evaluierung der Ergebnisse vorzunehmen.  Vielmehr
+sollen die Ansätze einen Einstieg für eine weitere Bearbeitung dieses Themas
+bieten. 
+
+\section{Ansätze}
+
+Für die Präsentation während des Seminars sowie zur Erprobung wurden
+beispielhaft drei Ansätze in Python implementiert.  Zur Erleichterung wurde
+ein Modul erstellt, welches die 40 TRIZ Methoden in Englisch sowie Deutsch
+enthält.  Diese wurden Patenttexten gegenüber"|gestellt.  Inspiration der
+Verwendung dieser Textvergleiche und zugleich Grundlage bildeten die Artikel
+\cite{Maali2016} und \cite{siegmeduim}.  Die erstellten Skripte sind bei
+Github\footnote{Im Verzeichnis
+  \texttt{Sommersemester-2019/2019-07-04/Mappingansaetze/} des github Repos
+  \url{https://github.com/wumm-project/Leipzig-Seminar}.} zu finden.  In den
+folgenden Kapiteln werden sie genauer erläutert.
+
+\subsection{TF-IDF}
+
+Bei der Termfrequenz -- Inverse Dokumenten Frequenz (TF-IDF) wird das
+Auftreten einzelner Terme eines Dokuments in einer Matrix abgebildet.  Genauer
+wird das Vorgehen in \cite{baeza1999modern} erläutert.  Es handelt sich um
+eine Methode des Text Mining und des Information Retrieval, welche
+ursprünglich für Suchmachinen entwickelt wurde.
+
+Zur Umsetzung wurde die Python Implementierung von \textit{sklearn} verwendet.
+Diese unterstützt das Entfernen von Stopwörtern, welche das Ergebnis
+verfälschen.  Beispielsweise würden Texte, welche viele Stopwörter verwenden,
+sonst automatisch als ähnlicher eingeschätzt.  Die Implementierung erfolgte
+wie in folgendem Ausschnitt.
+
+\inputminted[frame=lines, framesep=2mm, linenos, breaklines]{python}{./listings/tfidf.py}
+
+Die Funktion gibt ein Array mit 40 Zahlenwerten zwischen 0 und 1 zurück, wobei
+Eins die größte und Null die kleinste Ähnlichkeit ausdrückt.  In Zeile 2 wird
+das minimale Vorkommen der zu berücksichtigenden Wörter festgelegt und zu
+entfernende Stopwörter übergeben.  In Zeile 3 wird der Vergleich ausgeführt
+und in einer Matrix abgebildet, wovon schließlich in Zeile 4 die erste Reihe
+ausgegeben wird.
+
+Mehrdeutigkeiten oder andere Formulierungen können das Ergebnis stark
+verfälschen, da diese nicht berücksichtigt werden.
+
+\subsection{Wordnet}
+
+Ein etwas komplexerer Ansatz ist die Realisierung eines Vergleichs beider
+Texte unter der Berücksichtigung von möglicher Mehrdeutigkeit und semantischer
+Ähnlichkeit der Wörter.  Wordnet ist ein lexikalisch semantisches Netzwerk,
+welches 1998 von George Miller in \cite{miller1998wordnet} vorgestellt wurde.
+Es ermöglicht, die Bedeutungsähnlichkeit zwischen Wörtern zu quantifizieren.
+Da unsere Zielstellung jedoch Textvergleiche und nicht Wortvergleiche
+voraussetzt, bedient sich der Autor einer in \cite{mihalcea2006corpus}
+vorgestellten Formel für Textvergleiche:
+\begin{gather*}
+  \text{Sim}(T_1,T_2)=\frac12\,\left(\frac{\sum_{w\in T_1}{
+      \text{maxSim}(w,T_2)\cdot idf(w)}}{\sum_{w\in T_1}{idf(w)}} +
+  \frac{\sum_{w\in T_2}{\text{maxSim}(w,T_1)\cdot idf(w)}}{
+    \sum_{w\in T_2}{idf(w)}}\right).
+\end{gather*}
+
+Dies ermöglicht Texte über ihre eigentliche Formulierung hinaus semantisch
+gegenüberzu"|stellen.  Dieses Vorgehen wurde mithilfe der Python Bibliothek
+\textit{nltk} umgesetzt, welche Wordnet beinhaltet wie im folgenden
+Quelltextabschnitt beschrieben.
+
+\inputminted[frame=lines, framesep=2mm, linenos, breaklines]{python}{./listings/wordnet.py}
+
+In Zeile 4 bis 12 werden die Wörter der Dokumente extrahiert, mit ihrem
+POS-Tag versehen und entsprechende Synonymmengen erstellt.  In der Schleife ab
+Zeile 14 wird die Berechnung des einen Summanden der Formel umgesetzt.
+Schließlich nutzt die Funktion in Zeile 32 die Summanden, um die Berechnung
+durchzuführen.
+
+Problematisch bei diesem Ansatz ist, dass der Vergleich der Synonyme abhängig
+von dem von Wordnet bereitgestellten semantischen Netz ist.  Eine technische
+Beschreibung von Patenten hat ein sehr spezielles Vokabular, dessen Synonyme
+nicht im Netz enthalten sein könnten.
+
+\section{Word2Vec}
+
+Als letzter Ansatz wurde ein auf Machine Learning basierender Ansatz verfolgt.
+Dazu wird zunächst ein Beispielmodell trainiert.  Als Trainingsdaten wurden in
+diesem Fall ausschließlich die Texte der 40 TRIZ Methoden verwendet.
+Empfehlenswert wäre ein Datensatz angemessener Größe, um die komplexen
+Zusammenhänge der technischen Beschreibungen und Methoden zu erfassen.
+
+Die Funktionalitäten der Modellerstellung sowie der eigentliche Vergleich,
+mittels Kosinusähn"|lich"|keit wurden mit der Python Bibliothek
+\textit{gensim} realisiert.
+
+\inputminted[frame=lines, framesep=2mm, linenos, breaklines]{python}{./listings/word2vec.py}
+
+Die Funktion \textit{trainModel()} benuzt die Stringoperation Split, um die
+Texte in Token umzuwandeln.  Diese werden genutzt, um ein Modell zu trainieren
+und selbiges zu speichern.  Die Funktion \textit{w2vCompare} bekommt als
+Parameter zwei zu vergleichende Texte und ein Modell, um eine Schnittmenge aus
+den Vokabularen als Vektorraum aufzuspannen und mittels Kosinusähnlichkeit zu
+vergleichen.
+
+Der Vorteil dieses Ansatzes ist, dass er die Schwächen der beiden letzten
+Vorgehen berücksich"|tigt.  Jedoch geschieht dies aufgrund der Abhängigkeit
+von einem zu trainierenden Modell.  Wie bereits zuvor erwähnt sollte die
+Modellerstellung wesentlich mehr Texte beinhalten.
+
+\section{Ausblick}
+Die vorgestellten Ansätze sind nicht in der Lage, ein komplexes Mapping gut zu
+realisieren.  Jedoch bieten sie einen Einblick in die Möglichkeiten einer
+Umsetzung.  Im Grunde ist die vorgestellte Problemstellung der Klassifizierung
+sehr gut geeignet für ein neuronales Netz.  Neuronale Netze sind
+state-of-the-art Methoden zum Lösen von Klassifizierungsproblemen.  Dazu
+könnte auf dem in 4.3 vorgestellten Ansatz aufgebaut werden.  Für das Seminar
+war dies jedoch nicht umsetzbar, da die Qualität der Klassifizierung mittels
+eines neuronalen Netzes immer von der Menge der Trainingsdaten abhängt.  Um
+einen großen Trainingsdatensatz zu erstellen, müsste eine händische
+Klassifizierung vorgenommen werden.  Alternativ könnte man einen der anderen
+Ansätze verwenden, um eine Vorauswahl zu treffen, welche dann evaluiert in den
+Trainingsdatensatz mit einbezogen wird.
+
+Anwendungsmöglichkeiten für diese Verfahren wäre die Patentrecherche sowie
+weitere Forschung bezüglich angewandter Innovationsmethoden.  Auch eine
+Untersuchung, ob ein Patentkandidat notwendige Innovation aufweist, wäre
+vorstellbar.  Zuletzt könnte ein bestehendes neuronales Netz um Konfliktarten
+erweitert werden, um entsprechende Innovationsmethoden zur Konfliktlösung
+vorzuschlagen.
+
+Insgesamt ist hervorzuheben, dass dieser Bereich der Innovationsforschung im
+Bezug auf Methoden der modernen Informatik, speziell bezüglich Big Data und
+Machine Learning, noch sehr viel Potenzial hat.
+
+\begin{thebibliography}{xx}
+
+\bibitem[1]{siegmeduim} Sieg Adrien.  \newblock Text similarities : Estimate
+  the degree of similarity between two texts, 2018.
+\bibitem[2]{altshuller200240} Genrich Altshuller.  \emph{40 principles: TRIZ
+  keys to innovation}, volume~1.  Technical Innovation Center, Inc., 2002.
+
+\bibitem[3]{baeza1999modern} Ricardo Baeza-Yates, Berthier Ribeiro-Neto
+  et~al. {\em Modern information retrieval}, volume 463.  ACM press New York,
+  1999.
+
+\bibitem[4]{triz40.com} Olivier Goguel.  \newblock triz40.com, 2014.
+
+\bibitem[5]{jaccard} Paul Jaccard.  \newblock {\em Lois de distribution
+  florale dans la zone alpine}.  \newblock 1902.
+
+\bibitem[6]{mihalcea2006corpus} Rada Mihalcea, Courtney Corley, Carlo
+  Strapparava et~al.  \newblock Corpus-based and knowledge-based measures of
+  text semantic similarity.  \newblock In {\em Aaai}, volume~6, pages
+  775--780, 2006.
+
+\bibitem[7]{miller1998wordnet} George~A Miller.  \newblock {\em WordNet: An
+  electronic lexical database}.  \newblock MIT press, 1998.
+
+\bibitem[8]{Maali2016} Maali Mnasri.  \newblock Quick review on text
+  clustering and text similarity approaches, 2016.
+
+\bibitem[9]{sidorov2014soft} Grigori Sidorov, Alexander Gelbukh, Helena
+  G{\'o}mez-Adorno, David Pinto.  \newblock Soft similarity and soft
+  cosine measure: Similarity of features in vector space model.  \newblock
+  {\em Computaci{\'o}n y Sistemas}, 18(3):491--504, 2014.
+
+\end{thebibliography}
+
+\end{document}
