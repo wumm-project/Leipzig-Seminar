@@ -63,20 +63,20 @@ erkennen, im Gegenteil.
 _Patentschrift:_ Kontaktlinse als solche ist Stand der Technik, es geht um die
 genaue Einfassung einer solchen Linse in das Linse-Auge-System, wobei vor
 allem auf Größe und Form geschaut wird - größer als die Iris, aber kleiner als
-die Pupille, um Interaktionen mit dem nervensystem und Blutbahnen zu
-minimieren, und die Form (angepasste Konkavität) so verbessert wird, dass
+die Pupille, um Interaktionen mit dem Nervensystem und Blutbahnen zu
+minimieren und die Form (angepasste Konkavität) so zu verbessern, dass
 physiologische Prozesse im Auge nur gering-invasiv gestört werden.  Durch eine
 leichte Ovalität werden die Achseneigenschaften der Linse weiter verstärkt und
-damit die "von selbst" Positionierungseigenschaft weiter verstärkt.
+damit die "von selbst" Positionierungseigenschaft weiter verbessert.
 
 _TRIZ-Relevanz:_ Typischer TRIZ-Ansatz der genauen Analyse der Bedingungen in
 der Operativen Zone.  Folgende TRIZ-Prinzipien sind zu erkennen:
-* Prinzip 03 der örtlichen Qualität
+* Prinzip 03 der örtlichen Qualität,
 * Prinzip 25 der Selbstbedienung (wenn die Kontaktlinse so geformt wird, dass
   sie durch Lidbewegungen "von selbst" wieder in ihre optimale Lage gebracht
-  wird)
+  wird),
 * Prinzip 27 der billigen Kurzlebigkeit anstelle teurer Langlebigkeit (wenn
-  zum Reinigen Wasser statt Kontaktlinsenflüssigkeit verwendet werden kann)
+  zum Reinigen Wasser statt Kontaktlinsenflüssigkeit verwendet werden kann).
 * In gewissem Sinne spielt auch das Prinzip 14 der Kugelähnlichkeit eine
   Rolle, wenn man auf _Ähnlichkeit_ schaut und die gezielte _Abweichung_ von
   der Sphärenform, die in verschiedenen Teilen des Patents eine Rolle spielt,
@@ -111,8 +111,8 @@ _TRIZ-Relevanz:_ Eher gering, weil genau das, was TRIZ bietet - die
 Konzentration auf die Lösung genau eines Problems - nicht vorgenommen wird.
 Man hätte im Prinzip bereits damals den "Kindle" erfinden können, wenn eine
 technische Abspeckung (Prinzip 27 der billigen Kurzlebigkeit anstelle teurer
-Langlebigkeit) mit einer klaren Geschäftsstrategie (Standardlösung S.3
-"Übergang ins Super- und Subsystem") verbunden worden wäre.
+Langlebigkeit) mit einer klaren Geschäftsstrategie (Standardlösung S_3
+"Übergang ins Supersystem" der Geschäftsstrategien) verbunden worden wäre.
 
 _Anmerkungen zur Darstellung in der Arbeit:_ Die Analyse berücksichtigt nicht,
 dass der Stand der Technik von 1997 zu Grunde zu legen ist.
@@ -127,20 +127,26 @@ Idee des Patents besteht darin, die Lagernabe selbst für die Unwuchtfunktion
 zu nutzen. 
 
 _TRIZ-Relevanz:_ Typischer TRIZ-Ansatz, ob eine Funktion durch eine andere
-Komponente übernommen werden kann.  Dazu wird das technisch-technologische
-Problem zunächst auf seinen physikalischen Kern reduziert - die Unwucht muss
-erreichen, dass die Schwerpunktachse des Systems mit der Rotationsachse
-übereinstimmt.  Hierfür wird regelmäßig ein mechanisch basiertes "von selbst"
-Prinzip (Prinzip 25) angewendet, so dass die Denkrichtung schon mal klar ist;
-sie muss nur konsequent zu Ende geführt werden. In bisherigen Lösungen wird
-die Funktion von einer separaten Komponente übernommen - kann man sie auf eine
-bereits vorhandene Komponente (Standardlösung S.3.1.4 "Vereinfache Bi- und
-Poly-Systeme durch Elimination überflüssiger, redundanter oder ähnlicher
-Komponenten") übertragen? Dies beantwortet die Patentschrift positiv, in die
-Lagernabe wird einerseits die Unwucht fest eingebaut, andererseits die
-Rotationsachse durch zwei ineinander greifende Wälzlager _innerhalb_ der
-Radnabe "freigesetzt", so dass sie sich wieder nach dem "von selbst" Prinzip
-adjustieren kann.  
+Komponente übernommen werden kann (Prinzip 06 der Universalität - "Das Objekt
+erfüllt mehrere unterschiedliche Funktionen, wodurch weitere gesonderte
+Objekte überflüssig werden").  Dazu wird das technisch-technologische Problem
+zunächst auf seinen physikalischen Kern reduziert - die Unwucht muss
+erreichen, dass die (je nach Beladungszustand variable) Schwerpunktachse des
+Systems mit der Rotationsachse übereinstimmt.  Hierfür wird regelmäßig ein
+mechanisch basiertes "von selbst" Prinzip (Prinzip 25) angewendet, so dass die
+Denkrichtung schon mal klar ist; sie muss nur konsequent zu Ende geführt
+werden.  In bisherigen Lösungen wird die Funktion von einer separaten
+Komponente übernommen; die variable Schwerpunktachse wird durch das
+Unwuchtsystem auf eine starre Rotationsachse verschoben.  Geht es anders?  Die
+wirkliche Aufgabe ist ja "nur", beide Achsen aufeinander zu legen.  Das kann
+auch durch moderate Verschiebung der Rotationsachse innerhalb der Lagernabe
+erreicht werden (genaue Spezifikation des physikalischen Problems aus dem
+TTW).  Damit kann man aber eine bereits vorhandene Komponente (Standardlösung
+S_3.1.4 "Vereinfache Bi- und Poly-Systeme durch Elimination überflüssiger,
+redundanter oder ähnlicher Komponenten") einsparen.  In die Lagernabe wird
+einerseits die Unwucht fest eingebaut, andererseits die Rotationsachse durch
+zwei ineinander greifende Wälzlager _innerhalb_ der Radnabe "freigesetzt", so
+dass sie sich wieder nach dem "von selbst" Prinzip adjustieren kann.
 
 _Anmerkungen zur Darstellung in der Arbeit:_ Das Miniproblem ist bereits
 falsch extrahiert; in der Patentschrift geht es nicht um Haltbarkeit
