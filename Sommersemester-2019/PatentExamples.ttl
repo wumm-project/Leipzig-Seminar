@@ -16,29 +16,33 @@
     a owl:Ontology ;
     rdfs:label "Patent Examples from the Leipzig Seminar Course in the Summer Term 2019" .
 
-<https://opendiscovery.org/PatentExample/2019-06-06/DE10045181C1>
+<https://opendiscovery.org/PatentExample/S19/P01>
     od:appliedPrinciple odp:P02 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE10045181C1> ;
     od:negative "Unwucht-Ausgleichsgewichte benötigt" ;
     od:positive "Möglichst niedriges Gewicht" ;
     od:theProblem "Möglichst wenig Gewicht/Material verwenden, aber zusätzliche Unwucht-Ausgleichsgewichte werden benötigt" ;
     od:theSolution "Lagernabe übernimmt Funktion des Ausgleichsgewicht." ;
-    od:year "2000" ;
+    od:year "2001" ;
     a od:PatentExample ;
+    od:inIPCPatentClass "D06F 37/00";
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/DanHaessler.pdf" ; 
     rdfs:label "Frontlader-Waschmaschine" .
 
-<https://opendiscovery.org/PatentExample/2019-06-06/DE19546786A1>
+<https://opendiscovery.org/PatentExample/S19/P02>
     od:appliedPrinciple odp:P02 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE19546786A1> ;
     od:negative "Computer brauchen Elektronik und Kühlung" ;
     od:positive "Computer soll möglichst leicht und klein sein" ;
     od:theProblem "Daten sind nicht unterwegs abrufbar." ;
     od:theSolution "Außerhalb von Lesen/Darstellen benötigte Elektronik entfernen." ;
-    od:year "1995" ;
+    od:year "1997" ;
     a od:PatentExample ;
+    od:inIPCPatentClass "G06F 1/1616";
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/DanHaessler.pdf" ; 
     rdfs:label "E-Book Reader" .
 
-<https://opendiscovery.org/PatentExample/2019-06-06/EP1964690A1>
+<https://opendiscovery.org/PatentExample/S19/P03>
     od:appliedPrinciple odp:P02 ;
     od:hasGooglePatentID <https://patents.google.com/patent/EP1964690A1> ;
     od:negative "Mehr Masse durch eine erhöhte Wandstärke" ;
@@ -46,31 +50,37 @@
     od:theProblem "Automobilindustrie stellt erhöhte Anforderungen an eine Schlagbeanspruchung eines Gussrads." ;
     od:theSolution "Gezielte Materialeinsparungen (z.B. Materialeinsparung hinterer Hornbereich)" ;
     a od:PatentExample ;
+    od:inIPCPatentClass "B60B 21/104";
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/DanHaessler.pdf" ; 
     rdfs:label "Gussrad" .
 
-<https://opendiscovery.org/PatentExample/2019-06-06/US20170117754A1>
+<https://opendiscovery.org/PatentExample/S19/P04>
     od:appliedPrinciple odp:P02 ;
     od:hasGooglePatentID <https://patents.google.com/patent/US20170117754A1> ;
     od:negative "Elektromagnetisches Feld klein halten für Effizienz und Einhaltung von Gesetzen" ;
     od:positive "Elektromagnetisches Feld vergrößern/verstärken für größere Reichweite und Ladegeschwindigkeit" ;
     od:theProblem "Zum Laden muss das Gerät auf die Dockingstation gelegt werden, da nur ein kleines elektromagnetisches Feld erzeugt wird." ;
     od:theSolution "Laden über bestehende elektromagnetische Felder, die auch zur Datenübertragung genutzt werden" ;
-    od:year "2015" ;
+    od:year "2017" ;
     a od:PatentExample ;
+    od:inIPCPatentClass "H02J 50/23";
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/DanHaessler.pdf" ; 
     rdfs:label "Kabelloses Laden mit Patchantennen" .
 
-<https://opendiscovery.org/PatentExample/2019-06-06/US2510438A>
+<https://opendiscovery.org/PatentExample/S19/P05>
     od:appliedPrinciple odp:P02 ;
     od:hasGooglePatentID <https://patents.google.com/patent/US2510438A> ;
     od:negative "Gestell soll groß sein für Stabilität" ;
     od:positive "Gestell soll möglichst klein sein, damit es nicht bemerkt wird bzw. stört" ;
     od:theProblem "Sehhilfe (Brille) benötigt Gestell, damit sie tragbar ist, das Gestell trägt nichts direkt zur Sehverbesserung bei." ;
     od:theSolution "Linse klein genug zu machen, dass sie kein Gestell benötigt (Kontaktlinse)" ;
-    od:year "1948" ;
+    od:year "1950" ;
     a od:PatentExample ;
+    od:inIPCPatentClass "G02C 7/04";
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/DanHaessler.pdf" ; 
     rdfs:label "Kontaktlinse" .
 
-<https://opendiscovery.org/PatentExample/2019-06-06/EP0204933A1>
+<https://opendiscovery.org/PatentExample/S19/P06>
     od:appliedPrinciple odp:P02 ;
     od:hasGooglePatentID <https://patents.google.com/patent/EP0204933A1> ;
     od:negative "Aufrechterhaltung des Aufbaus und der Funktionalität" ;
@@ -81,7 +91,7 @@
     a od:PatentExample ;
     rdfs:label "Klappdeckelschachtel" .
 
-<https://opendiscovery.org/PatentExample/2019-06-20/CH245246A>
+<https://opendiscovery.org/PatentExample/S19/P07>
     od:appliedPrinciple odp:P27 ;
     od:hasGooglePatentID <https://patents.google.com/patent/CH245246A> ;
     od:theProblem "Schwere und teure Mehrweg-Milchflaschen" ;
@@ -90,7 +100,7 @@
     a od:PatentExample ;
     rdfs:label "Tetrapack" .
     
-<https://opendiscovery.org/PatentExample/2019-06-20/US3447882A>
+<https://opendiscovery.org/PatentExample/S19/P08>
     od:appliedPrinciple odp:P27 ;
     od:hasGooglePatentID <https://patents.google.com/patent/US3447882A> ;
     od:theProblem "Systeme zur Wiederbefüllung teuer, hoher Schaden bei Verlust des Feuerzeugs" ;
@@ -99,7 +109,7 @@
     a od:PatentExample ;
     rdfs:label "Wegwerf-Zigarettenanzünder" .
 
-<https://opendiscovery.org/PatentExample/2019-06-20/CH279136A>
+<https://opendiscovery.org/PatentExample/S19/P09>
     od:appliedPrinciple odp:P27 ;
     od:hasGooglePatentID <https://patents.google.com/patent/CH279136A> ;
     od:theProblem "Schwere Verpackung aus Metall für Teeproben, Anschaffung eines Teesiebes" ;
@@ -108,16 +118,7 @@
     a od:PatentExample ;
     rdfs:label "Teebeutel" .
 
-<https://opendiscovery.org/PatentExample/2019-06-20/>
-    od:appliedPrinciple odp:P27 ;
-    od:hasGooglePatentID <https://patents.google.com/patent/> ;
-    od:theProblem "" ;
-    od:theSolution "" ;
-    od:year "1967" ;
-    a od:PatentExample ;
-    rdfs:label "" .
-
-<https://opendiscovery.org/PatentExample/2019-06-20/DE1140162B>
+<https://opendiscovery.org/PatentExample/S19/P10>
     od:appliedPrinciple odp:P27 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE1140162B> ;
     od:theProblem "Auskochen von Stoffwindeln" ;
@@ -126,7 +127,7 @@
     a od:PatentExample ;
     rdfs:label "Wegwerf-Windel" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/DE896312B>
+<https://opendiscovery.org/PatentExample/S19/P11>
     od:appliedPrinciple odp:P11 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE896312B> ;
     od:theProblem "Autounfälle mit Verletzten" ;
@@ -135,7 +136,7 @@
     a od:PatentExample ;
     rdfs:label "Airbag" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/DE102016200455A1>
+<https://opendiscovery.org/PatentExample/S19/P12>
     od:appliedPrinciple odp:P11 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE102016200455A1> ;
     od:theProblem "Hohe Verletzungsgefahr" ;
@@ -144,7 +145,7 @@
     a od:PatentExample ;
     rdfs:label "Roboter-Sicherheitsvorrichtung" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/DE2519799C3>
+<https://opendiscovery.org/PatentExample/S19/P13>
     od:appliedPrinciple odp:P11 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE2519799C3> ;
     od:theProblem "Diebstahl in Warenhäusern" ;
@@ -153,7 +154,7 @@
     a od:PatentExample ;
     rdfs:label "Ausgangsüberwachung" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/WO2017125935A1>
+<https://opendiscovery.org/PatentExample/S19/P14>
     od:appliedPrinciple odp:P11 ;
     od:hasGooglePatentID <https://patents.google.com/patent/WO2017125935A1> ;
     od:theProblem "Ransomware verschlüsselt gespeicherte Daten und macht sie unabrufbar" ;
@@ -162,7 +163,7 @@
     a od:PatentExample ;
     rdfs:label "Ransomware-Schutz" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/US9596264B2>
+<https://opendiscovery.org/PatentExample/S19/P15>
     od:appliedPrinciple odp:P11 ;
     od:hasGooglePatentID <https://patents.google.com/patent/US9596264B2> ;
     od:theProblem "Über E-Mail können schädliche Links versendet werden" ;
@@ -171,7 +172,7 @@
     a od:PatentExample ;
     rdfs:label "Gezielter Angriffsschutz" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/US2879821A>
+<https://opendiscovery.org/PatentExample/S19/P16>
     od:appliedPrinciple odp:P11 ;
     od:hasGooglePatentID <https://patents.google.com/patent/US2879821A> ;
     od:theProblem "Plattengefahr bei Luftreifen" ;
@@ -180,62 +181,54 @@
     a od:PatentExample ;
     rdfs:label "Notlaufreifen" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/>
-    od:appliedPrinciple odp:P15 ;
-    od:hasGooglePatentID <https://patents.google.com/patent/> ;
-    od:theProblem "" ;
-    od:theSolution "" ;
-    od:year "1956" ;
-    a od:PatentExample ;
-    rdfs:label "Abgas-Turbolader" .
-
-<https://opendiscovery.org/PatentExample/2019-06-27/EP2158386B1>
-    od:appliedPrinciple odp:P15 ;
+<https://opendiscovery.org/PatentExample/S19/P17>
+    od:appliedPrinciple odp:P12, odp:P15, odp:P23 ;
     od:hasGooglePatentID <https://patents.google.com/patent/EP2158386B1> ;
+    od:inIPCPatentClass "F01D 25/16";
     od:theProblem "Bisherige Umsetzung des Turboladers ist nur teildynamisch, Kennwerte nicht immer optimal „Turboloch“" ;
     od:theSolution "Energiezufuhr durch Elektromotor in Betriebszuständen, wo Abgasladedruck nicht ideal ist" ;
-    od:year "2000" ;
+    od:year "2017" ;
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/RobinSeidel.pdf" ; 
     a od:PatentExample ;
     rdfs:label "Turbolader" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/DE19606402C2>
-    od:appliedPrinciple odp:P15 ;
+<https://opendiscovery.org/PatentExample/S19/P18>
+    od:appliedPrinciple odp:P15, odp:P28 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE19606402C2> ;
+    od:inIPCPatentClass "F02D 41/0087";
     od:theProblem "Wenn der Motor stärker wird, dann kann das Auto schneller fahren, aber verbraucht mehr Benzin" ;
-    od:theSolution "bei geringer Motorlast, einzelne Zylinder abschalten" ;
-    od:year "1996" ;
+    od:theSolution "Bei geringer Motorlast einzelne Zylinder abschalten" ;
+    od:year "1998" ;
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/RobinSeidel.pdf" ; 
     a od:PatentExample ;
-    rdfs:label "Automatische Zylinderabscshaltung" .
+    rdfs:label "Automatische Zylinderabschaltung" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/>
-    od:appliedPrinciple odp:P15 ;
-    od:hasGooglePatentID <https://patents.google.com/patent/> ;
-    od:theProblem "" ;
-    od:theSolution "" ;
-    od:year "1956" ;
-    a od:PatentExample ;
-    rdfs:label "" .
-
-<https://opendiscovery.org/PatentExample/2019-06-27/US2523427A>
-    od:appliedPrinciple odp:P15 ;
+<https://opendiscovery.org/PatentExample/S19/P19>
+    od:appliedPrinciple odp:P06, odp:P07, odp:P15 ;
     od:hasGooglePatentID <https://patents.google.com/patent/US2523427A> ;
+    od:inIPCPatentClass "B64C 3/50";
     od:theProblem "hohe Geschwindigkeit und gleichzeitige Beweglichkeit" ;
     od:theSolution "Flügel die verschiedene Positionen einnehmen können, um optimalen Luftfluss unter verschiedensten Szenarien zu gewährleisten." ;
-    od:year "1946" ;
+    od:year "1950" ;
     a od:PatentExample ;
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/RobinSeidel.pdf" ; 
     rdfs:label "Schwenkflügel bei Flugzeugen" .
 
-<https://opendiscovery.org/PatentExample/2019-06-27/DE976562C>
+<https://opendiscovery.org/PatentExample/S19/P20>
     od:appliedPrinciple odp:P15 ;
-    od:hasGooglePatentID <https://patents.google.com/patent/DE976562C> ;
+    od:hasGooglePatentID <https://patents.google.com/patent/DE976562C>,
+    <https://depatisnet.dpma.de,docid=DE000000976562B> ; 
+    od:inIPCPatentClass "B62D 1/19";
     od:theProblem "Unbewegliches Objekt muss beweglich sein und zuverlässig" ;
     od:theSolution "Lenksäulenvorrichtung, die Lenkwelle drehbar macht" ;
     od:year "1956" ;
+    rdfs:comment "Die Patentschrift ist als Scan beim DPMA hinterlegt" ; 
+    od:discussedIn "Sommersemester-2019/Seminararbeiten/RobinSeidel.pdf" ; 
     a od:PatentExample ;
     rdfs:label "Verstellbare Lenksäule" .
 
 
-<https://opendiscovery.org/PatentExample/2019-07-04/DE10014458A1>
+<https://opendiscovery.org/PatentExample/S19/P21>
     od:appliedPrinciple odp:P17 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE10014458A1> ;
     od:hasGooglePatentID <https://patents.google.com/patent/CA1026013A> ;
@@ -247,7 +240,7 @@
     a od:PatentExample ;
     rdfs:label "CPU Kühlkörper" .
 
-<https://opendiscovery.org/PatentExample/2019-07-04/US7816945B2>
+<https://opendiscovery.org/PatentExample/S19/P22>
     od:appliedPrinciple odp:P17 ;
     od:hasGooglePatentID <https://patents.google.com/patent/US7816945B2> ;
     od:theProblem "Leistung moderner Microchips wird stark eingegrenzt durch Mindestabstände zwischen Leitern und maximal informationell zu überbrückender Distanz" ;
@@ -256,7 +249,7 @@
     a od:PatentExample ;
     rdfs:label "3D Chip-Stacks" .
 
-<https://opendiscovery.org/PatentExample/2019-07-04/US7441491>
+<https://opendiscovery.org/PatentExample/S19/P22>
     od:appliedPrinciple odp:P17 ;
     od:hasGooglePatentID <https://patents.google.com/patent/US7441491> ;
     od:theProblem "Stangenmagazine können nicht endlos verlängert werden aufgrund von Handhabung und Federspannung" ;
@@ -267,7 +260,7 @@
     a od:PatentExample ;
     rdfs:label "Trommelmagazin" .
 
-<https://opendiscovery.org/PatentExample/2019-07-04/DE331218>
+<https://opendiscovery.org/PatentExample/S19/P23>
     od:appliedPrinciple odp:P17 ;
     od:hasGooglePatentID <https://patents.google.com/patent/DE331218> ;
     od:theProblem "Das Laden von Patronen von oben in eine Waffe hinein versperrt die Sicht" ;
@@ -275,3 +268,14 @@
     od:year "1990" ;
     a od:PatentExample ;
     rdfs:label "Longitudinales Magazin für Handfeuerwaffen" .
+
+<https://opendiscovery.org/PatentExample/S19/P24>
+    od:appliedPrinciple odp:P01, odp:P15, odp:P19 ;
+    od:hasGooglePatentID <https://patents.google.com/patent/EP0066122B1> ;
+    od:inIPCPatentClass "F16H 48/147";
+    od:theProblem "Optimierung des Andruckverhaltens auf den Nockenbahnen" ;
+    od:theSolution "Zerteilung der Nocken in verschiedene, gegeneinander bewegliche Teile, Nockenbahnen auf dem Ring mit wechselnden Tiefen." ;
+    od:year "1982" ;
+    od:discussedIn "Sommersemester-2019/Handreichung-Patentrecherche.pdf" ; 
+    a od:PatentExample ;
+    rdfs:label "Differentialgetriebe" .
