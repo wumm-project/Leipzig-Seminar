@@ -34,12 +34,12 @@ aufsetzen.  Die mit einer Systembeschreibung verbundene Reduktion setzt in
 diesem Sinne bestehende Beschreibungsformen auf drei Ebenen voraus, die mit
 der Weiterentwicklung der Beschreibung des Systems selbst (explizit oder
 implizit) weiterentwickelt werden sollen:
-# Eine wenigstens vage Vorstellung über die Input/Output-Leistungen der
-  Umgebung.
-# Eine deutliche Vorstellung über das innere Funktionieren der Komponenten.
-# Eine wenigstens vage Vorstellung übeer Kausalitäten im System selbst, also
-  eine der detaillierten Modellierung vorgängige, bereits vorgefundene
-  Vorstellung von Kausalität im gegebenen Kontext.
+1. Eine wenigstens vage Vorstellung über die Input/Output-Leistungen der
+   Umgebung.
+2. Eine deutliche Vorstellung über das innere Funktionieren der Komponenten.
+3. Eine wenigstens vage Vorstellung übeer Kausalitäten im System selbst, also
+   eine der detaillierten Modellierung vorgängige, bereits vorgefundene
+   Vorstellung von Kausalität im gegebenen Kontext.
 
 Die Punkte 1 und 2 können ihrerseits in systemtheoretischen Ansätzen für die
 Beschreibung der "Umwelt" (hierfür ist allerdings die Abgrenzung eines
@@ -163,16 +163,16 @@ Feedback-Kreisläufe wie in (Ulanowicz 2009) ist dies zu bejahen. Allerdings
 bleiben dort wesentliche Charakteristika autokatalytischer Prozesse
 ausgeblendet die in der Theorie Dynamischer Systeme eine wesentliche Rolle
 spielen:
-# Autokatalytische Prozesse haben eine Eigenzeit und sind damit sowohl Quelle
-  eigener Taktraten als auch Phänomenen der Resonanz und Dissonanz gegenüber
-  getakteten Input/Output-Beziehungen unterworfen.
-# Positive Feedback-Kreisläufe führen - für sich genommen - in der Regel zu
-  exponentiellem Wachstum. Stabilität autokatalytischer Prozesse ist also nur
-  dann zu erklären, wenn auch der begrenzende Faktor identifiziert wird, der
-  sich meist aus den Input/Output-Beziehungen ergibt, in welche das
-  autokatalytische System eingebunden ist.
-# Diese externen Dynamiken, welche das Wachstum autokatalytischer Systeme
-  begrenzen, sind oft selbst Teil eines autokatalytischen Systems.
+1. Autokatalytische Prozesse haben eine Eigenzeit und sind damit sowohl Quelle
+   eigener Taktraten als auch Phänomenen der Resonanz und Dissonanz gegenüber
+   getakteten Input/Output-Beziehungen unterworfen.
+2. Positive Feedback-Kreisläufe führen - für sich genommen - in der Regel zu
+   exponentiellem Wachstum. Stabilität autokatalytischer Prozesse ist also nur
+   dann zu erklären, wenn auch der begrenzende Faktor identifiziert wird, der
+   sich meist aus den Input/Output-Beziehungen ergibt, in welche das
+   autokatalytische System eingebunden ist.
+3. Diese externen Dynamiken, welche das Wachstum autokatalytischer Systeme
+   begrenzen, sind oft selbst Teil eines autokatalytischen Systems.
 
 Zu Punkt 2 ist zu bemerken, dass exponentielles Wachstum insbesondere aus
 linearen Differentialgleichungen resultiert, in denen der Zuwachs proportional
