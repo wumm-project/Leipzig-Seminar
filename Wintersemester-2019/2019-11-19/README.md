@@ -164,9 +164,9 @@ Feedback-Kreisläufe wie in (Ulanowicz 2009) ist dies zu bejahen. Allerdings
 bleiben dort wesentliche Charakteristika autokatalytischer Prozesse
 ausgeblendet, die in der Theorie Dynamischer Systeme eine wesentliche Rolle
 spielen:
-1. Autokatalytische Prozesse haben eine Eigenzeit und sind damit sowohl Quelle
-   eigener Taktraten als auch Phänomenen der Resonanz und Dissonanz gegenüber
-   getakteten Input/Output-Beziehungen unterworfen.
+1. Autokatalytische Prozesse haben eine __Eigenzeit__ und sind damit sowohl
+   Quelle eigener Taktraten als auch Phänomenen der Resonanz und Dissonanz
+   gegenüber getakteten Input/Output-Beziehungen unterworfen.   
 2. Positive Feedback-Kreisläufe führen - für sich genommen - in der Regel zu
    exponentiellem Wachstum. Stabilität autokatalytischer Prozesse ist also nur
    dann zu erklären, wenn auch der begrenzende Faktor identifiziert wird, der
