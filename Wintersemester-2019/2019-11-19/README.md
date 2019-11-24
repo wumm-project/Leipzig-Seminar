@@ -37,7 +37,7 @@ implizit) weiterentwickelt werden sollen:
 1. Eine wenigstens vage Vorstellung über die Input/Output-Leistungen der
    Umgebung.
 2. Eine deutliche Vorstellung über das innere Funktionieren der Komponenten.
-3. Eine wenigstens vage Vorstellung übeer Kausalitäten im System selbst, also
+3. Eine wenigstens vage Vorstellung über Kausalitäten im System selbst, also
    eine der detaillierten Modellierung vorgängige, bereits vorgefundene
    Vorstellung von Kausalität im gegebenen Kontext.
 
@@ -102,7 +102,7 @@ werden daran jedoch durch die "äußere Konkurrenz" anderer Bénardzellen
 gehindert, so dass sich "auf magische Weise" eine "optimale" Zellengröße
 einstellt - ist eine einfache physikalische Beschreibung möglich: Die
 "Optimalität" hängt mit den räumlichen Charakteristika des Gefäßes auf
-ähnlcihe Weise zusammen wie die Pedelfrequenz eines Pendels mit dessen
+ähnliche Weise zusammen wie die Pedelfrequenz eines Pendels mit dessen
 Pendellänge. Das "innere Agens" wird zur Beschreibung also nicht benötigt.
 
 Gleiches gilt für das Phänomen "Wetter". Die Herausbildung von Hoch- und
@@ -151,17 +151,18 @@ des
 [Energiestoffwechsels](https://de.wikipedia.org/wiki/Energiebereitstellung)
 einer Zelle über hormonelle Austauschprozesse zwischen verschieden
 spezialisierten Zellen in mehrzelligen Organismen bis hin zu autokatalytischen
-prozessen zwischen Zellgruppen (Organen), an deren Vermittlung selbst Zellen
-beteiligt sind.  Wir erkennen an den wenigen  Beispielen bereits eine
-Verschränkung autokatalytischer Vorgänge auf verschiedenen Zeitskalen, womit
-sich die argumentative Einführung in Maturana/Varela am Beispiel von Prozessen
-_innerhalb_ einer Zelle in (Mingers 1989) als sehr speziell erweist.
+Prozessen zwischen Zellgruppen (Organen), an deren Vermittlung selbst Zellen
+(Blutzellen, T-Zellen, Lymphzellen) beteiligt sind.  Wir erkennen an den
+wenigen Beispielen bereits eine Verschränkung autokatalytischer Vorgänge auf
+verschiedenen Zeitskalen, womit sich die argumentative Einführung in
+Maturana/Varela am Beispiel von Prozessen _innerhalb_ einer Zelle in (Mingers
+1989) als sehr speziell erweist.
 
 Natürlich steht die Frage, ob die genannten Prozesse auf jeder dieser Ebenen
 als "autokatalytisch" durchgehen. Zumindest im Sinne positiver
 Feedback-Kreisläufe wie in (Ulanowicz 2009) ist dies zu bejahen. Allerdings
 bleiben dort wesentliche Charakteristika autokatalytischer Prozesse
-ausgeblendet die in der Theorie Dynamischer Systeme eine wesentliche Rolle
+ausgeblendet, die in der Theorie Dynamischer Systeme eine wesentliche Rolle
 spielen:
 1. Autokatalytische Prozesse haben eine Eigenzeit und sind damit sowohl Quelle
    eigener Taktraten als auch Phänomenen der Resonanz und Dissonanz gegenüber
