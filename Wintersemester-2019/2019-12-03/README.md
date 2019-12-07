@@ -4,6 +4,12 @@ Thema: Organisation in komplexen adaptiven Systemen (IIRM)
 * Literatur: (Ashby 1958), (Boisot 2011), Zusatzliteratur: (Holland 2006)
 * Diskussionsleitung: Philip Fritzsche, Opponenten: Lange, Thoke
 
+Ein weiterer interessanter Beitrag:
+* Gisela Jacobasch: Bienensterben – Ursachen und Folgen.
+  [Leibniz Online, Nr. 37 (2019)](https://leibnizsozietaet.de/internetzeitschrift-leibniz-online-nr-37-2019/)
+
+## Anmerkungen
+
 In der VDI-Richtlinie 3780 wird der Technikbegriff unter folgenden drei
 Dimensionen gefasst:
 * die Menge der nutzenorientierten, künstlichen, gegenständlichen Gebilde
@@ -81,3 +87,5 @@ den Kontext moderner TRIZ-Entwicklungen gestellt.
   Environments. Proceedings of the TRIZ Developers Summit 2019.June 13-15,
   Minsk, Belarus.
   https://triz-summit.ru/file.php/id/f304797-file-original.pdf
+
+Hans-Gert Gräbe, 7.12.2019
