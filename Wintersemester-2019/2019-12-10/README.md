@@ -77,12 +77,58 @@ institutionalisierten Strukturen ausreichend leistungsfähig darstellen lässt
 oder hierfür nicht bereits schon zum Obersystem einer umfassenderen
 Betrachtung kultureller Entwicklungen übergegangen werden muss. 
 
-Hans-Gert Gräbe, 15.12.2019
+In der Diskussion spielte auch der Begriff _Ideologie_ eine Rolle, was hier in
+den Kontext der bisherigen Debatte gestellt und näher erläutert werden soll.
 
+Wir hatten den Systembegriff als eine beschreibungstechnische "Reduktion auf
+das Wesentliche" in vier (genauer beschriebenen) epistemischen Dimensionen
+identifiziert, der in Strukturen, die zu ausgeprägtem Zweck-Mittel-Denken
+fähig sind und damit einen Prozess des Abgleichs zwischen Planungs- und
+Handlungsstrukturen kennen, auch für praktisches Handeln leitend ist und damit
+zu einer entsprechenden Strukturierung auch der Wirklichkeit führt.  Im
+Gegensatz zu den verschiednen systemischen Beschreibungsstrukturen, die
+weitgehend unabhängig voneinander sind - die Beschreibung der Beziehungen
+_zwischen_ diesen Systemen, insbesondere zwischen einem System und seinen
+Komponenten, ist auf die Beschreibung von Input/Output-Verhalten reduziert -
+gibt es in den realweltlichen Strukturierungen massiv "versteckte" (also der
+Reduktion zum Opfer gefallene) Abhängigkeiten auch über Systemgrenzen hinweg.
+Diese Abhängigkeiten sind umso gravierender, je ungenauer und inadäquater die
+Systemmodellierung ist.
 
+Dies ist bei der Bewertung sozial-ökologischer und sozial-technischer Systeme
+zu beachten, deren Mittel- und Ausgangspunkt oft Zweck-Mittel-Verhältnisse
+sind, also (meist aus einem Obersystem inferierte) Vorstellungen und
+Beschreibungsformen, was erreicht werden _soll_. Eines der Hauptprobleme der
+ökologischen Krise besteht darin, dass in den letzten 200 Jahren im Zuge der
+industriellen Revolution ein System von sozio-technischen Systemen (vor allem
+als _Institutionen_) entstanden ist, das weitgehend dem Paradigma der
+"Ausbeutung der Natur" folgt, in dem also die Zweck-Mittel-Verhältnisse als
+Beschreibungsformen eine hohe Dominanz in der Systemmodellierung haben.  Das
+gilt insbesondere auch für die Beschreibung der Input/Output-Beziehungen
+derartiger Systeme, die einmal zur Steuerung der inneren Stabilität und zum
+anderen zur Stabilisierung des äußeren Kontexts, des eigenen "Handlungsraums"
+dienen. 
 
+Hierbei hat sich ein ganzes Netz von Systemen und Beziehungen zwischen
+Systemen aufgebaut, das stärker auf die Konservierung bestehender
+Zweck-Mittel-Vorstellungen ausgerichtet ist als auf eine angemessene
+Integration realweltlicher Entwicklungen, und auch in der eigenen
+Handlungsdimension diesen Konservatismus perpetuiert.  Dies gilt nicht nur für
+das politische System der DDR in ihrer Endphase, sondern auch für das
+Bienensterben, das im Aufsatz (Jacobasch 2019) genauer analysiert wird.
+Obwohl hier massive Gefahren für den umfassender Ökosystemstrukturen, die auf
+Bestäubung durch Insekten aufbauen, auch beschreibungstechnisch klar auf dem
+Tisch liegen, entwickelt ein System selbstbezüglicher Systembeschreibungen um
+das Thema "Glyphosat" herum, das auch wesentlich für die Legitimierung
+politischer Entscheidungsprozesse ist, als _Netzwerk von Systemen_ ein starkes
+Beharrungsvermögen, da genau _jene_ Informationen über die netzwerkinternen
+Input-/Output-Spezifikationen _nicht_ angemessen kommuniziert werden kann und
+damit für die konkrete Dynamik des Netwzerks von Systemen ohne Folgen bleibt.
 
-* A. Lyubomirskiy, S. Litvin, S. Ikovenko, C. M. Thurnes, R. Adunka (2018).
-  Trends of Engineering System Evolution (TESE)
-* V. Souchkov (2014). Breakthrough Thinking with TRIZ for Business and
-  Management: An Overview.
+Das "Netzwerk von Systemen" als eigenes System hat auch unzureichende
+Reflexionsstrukturen auf Systemebene und _kann_ diese enmergente Entwicklung
+nicht systemintern darstellen. Derartige Phänomene sind bei der Betrachtung
+der _Robustheit_ im Sinne von (Anderies 2004) zu berücksichtigen. 
+
+Hans-Gert Gräbe, 19.12.2019
+
