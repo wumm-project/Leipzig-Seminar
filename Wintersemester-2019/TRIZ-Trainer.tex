@@ -9,7 +9,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{24. Dezember 2019}
+\date{25. Dezember 2019}
 
 \begin{document}
 \maketitle
@@ -36,12 +36,8 @@ Root-Conflict-Analysis usw.), die in (Koltze/Souchkov 2017)\footnote{Karl
   Koltze, Valeri Souchkov (2017). Systematische Innovation.  2. Auf"|lage,
   Hanser, München.} ebenfalls besprochen werden, können eingesetzt werden,
 sind aber nicht Teil des im TRIZ-Trainer eingebauten strukturierten Vorgehens,
-das Ihnen auf der Hauptseite\footnote{Im nicht angemeldeten Zustand wird die
-  Hauptseite durch eine (noch nicht ins Deutsche übersetzte) Steuerseite
-  überlagert, der erste der drei Verweise zeigt auf die Eingangsseite,
-  alternativ verwenden Sie den Link
-  \url{https://triztrainer.ru/?view=default}.} angezeigt wird und in der
-Fachwelt auch als „Weihnachtsbaum“ (christmas tree) bekannt ist.
+das Ihnen auf der Hauptseite angezeigt wird und in der Fachwelt auch als
+„Weihnachtsbaum“ (christmas tree) bekannt ist.
 
 Der TRIZ-Trainer ist selbst noch in Entwicklung, insbesondere der Ausbau
 verschiedener Sprachversionen.  Im Rahmen unserer Kooperation habe ich die
@@ -127,6 +123,38 @@ zurückgeben.
 
 Es gibt also kein „richtig“ oder „falsch“, sondern die Qualität der Lösung
 wird begutachtet. 
+
+\section{Der Workflow im TRIZ-Trainer}
+
+Alles beginnt damit, dass der Bearbeiter mindestens ein Zeichen in die Vorlage
+einer Aufgabe einfügt, um das Problem zu lösen. Beim automatischen Speichern
+wechselt die Aufgabe dann in den Status \emph{wird gelöst} und wird auf der
+Seite \emph{Ergebnisse} dem zugeordneten Trainer angezeigt. Der Trainer kann
+so bereits sehen, welche Aufgaben die ihm zugeordneten Bearbeiter zu lösen
+begonnen (aber noch nicht beendet) haben und kann den Fortschritt ihrer Arbeit
+verfolgen. Der Trainer kann in diesem Stadium bereits Kommentare zu den
+einzelnen Schritten oder im Chat zur Aufgabe hinterlassen.
+
+Wenn der Bearbeiter das Problem gelöst hat (formal: alle Felder der Vorlage
+sind ausgefüllt), kann er auf die Schaltfläche \emph{Zur Überprüfung
+  einreichen} klicken und damit die Aufgabe \emph{zur Überprüfung} einreichen.
+Der Trainer analysiert die Lösung des Bearbeiters und kann Kommentare zu den
+Schritten und im Chat hinterlassen. Dabei muss er die Entscheidung treffen,
+die Lösung anzuerkennen oder zur Überarbeitung zurückzureichen. Dies erfolgt
+über die Schaltfläche \emph{Bearbeiten}. Im geöffneten Formular kann der
+Trainer den Status ändern und einen Kommentar hinterlassen (Review).  Die
+Möglichkeit einer \emph{Bewertung} ist aktuell nicht aktiviert, sondern nur
+als potenzielle Variante für eine spätere Implementierung angelegt. Dem
+Bearbeiter wird der Status der Lösung und die Kommentare des Trainers (falls
+vorhanden) über seine Benachrichtigungen und auch per E-Mail mitgeteilt.  Wenn
+die Aufgabe zur Korrektur von Fehlern zurückverwiesen wird, kann sie der
+Bearbeiter erneut bearbeiten. Wenn die Lösung akzeptiert wurde, ist die
+Bearbeitung der Aufgabe beendet.
+
+Damit kann der Trainer die Aufgabe in allen Stadien der Bearbeitung sehen,
+beginnend mit der Zuweisung des Status \emph{wird gelöst} über die Zustände
+\emph{Warten auf Bewertung}, \emph{Lösung zur Korrektur zurückgegeben} bis hin
+zum finalen Zustand \emph{Lösung akzeptiert}.
 
 \section{Was ist zum Bestehen erforderlich?}
 
