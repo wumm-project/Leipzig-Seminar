@@ -1,0 +1,569 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{a4wide,url,amsmath}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+
+\parindent0pt
+\parskip4pt
+\title{Reader zum Interdisziplinären Gespräch}
+
+\author{Hans-Gert Gr\"abe, Ken Pierre Kleemann, Lydie Laforet, Sabine
+  Lautenschläger}
+
+\date{1. Januar 2020}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\section{Ziel und Methodik des Seminars}
+
+Der Systembegriff spielt in der Informatik eine herausragende Rolle, wenn es
+um Datenbanksysteme, Softwaresysteme\footnote{So die neue Denomination der im
+  Besetzungsverfahren befindlichen W3-Professur am Institut für Informatik.},
+Hardwaresysteme, Abrechnungssysteme, Zugangssysteme usw. geht.  Überhaupt wird
+die Informatik von einer Merhheit als die „Wissenschaft von der
+\emph{systematischen} Darstellung, Speicherung, Verarbeitung und Übertragung
+von Informationen, besonders der automatischen Verarbeitung mithilfe von
+Digitalrechnern“ (Wikipedia) verstanden.  Auch gewisse einschlägige
+Professionen wie etwa der \emph{Systemarchitekt} genießen unter IT-Anwendern
+hohe Wertschätzung.
+
+Die Bedeutung des Systembegriffs reicht allerdings weit über den Bereich der
+Informatik hinaus -- er ist grundlegend für alle Ingenieurwissenschaften und
+als \emph{Systems Engineering} mit der ISO/IEC/IEEE-15288 Norm „Systems and
+Software Engineering“ auch Gegenstand internationaler Normierungs- und
+Standardisierungsprozesse.  Mehr noch spielt der Systembegriff auch bei der
+Beschreibung komplexer natürlicher und kultureller Prozesse -- etwa im Begriff
+des \emph{Ökosystems} -- eine zentrale Rolle.
+
+Mit dem \emph{Semantic Web} rückt die Bedeutungsanalyse digitaler Artefakte in
+den Mittelpunkt, die in letzter Instanz Sprachartefakte sind und damit
+ebenfalls in direktem Zusammenhang zu einem sinnvoll zu entfaltenden
+\emph{Systembegriff} stehen als Grundlage jeden Verständnisses konkreter
+Systeme.
+
+Mit dem Schlagwort \emph{Nachhaltigkeit} werden schließlich komplexe
+gesellschaftliche Abstimmungsprozesse angesprochen, mit denen vielfältige
+Informations- und Bewertungsprobleme einhergehen. Hierbei ist die Fähigkeit
+der beschreibenden Abgrenzung, Entwicklung und Steuerung von sogenannten
+Systemen auf bzw. über verschiedene Governance-, Raum- und Zeitebenen hinweg
+von großer Bedeutung.
+
+\begin{quote}
+  \textbf{Ziel des Seminars} ist es, ein besseres Verständnis für diese
+  Vielfalt von Systembegriffen zu gewinnen und dabei die Zugänge
+  \emph{verschiedener Systemtheorien} als Gegenstand einer
+  \emph{Systemwissenschaft} zu analysieren.
+\end{quote}
+Das Seminar ist ein Einführungskurs in die Systemwissenschaft auf
+Master-Ebene, ihre Entwicklung im Laufe der Zeit, Verzweigung von Ansätzen,
+Schlüsselbegriffen und Konzepten.  \emph{Systemwissenschaft} wird hier als
+übergeordneter Ausdruck für ein Feld verwendet, zu dem zahlreiche Gelehrte aus
+den verschiedensten Disziplinen wie Anthropologie, Biologie, Chemie, Ökologie,
+Ökonomie, Mathematik, Physik, Psychologie, Soziologie und andere beigetragen
+haben. Entwicklungen wie Kybernetik, Chaostheorie oder Netzwerkanalyse und
+-wissenschaft können als Teil von Systemwissenschaft oder zumindest stark
+verwandt mit ihr angesehen werden.  Einige Zweige der Systemwissenschaft
+gelten in Deutschland sogar als neue Wissenschaftsbereiche mit eigenen Rechten
+wie Synergetik oder Komplexitätswissenschaft.
+
+Diese Entwicklungen haben neue Möglichkeiten für eine verbesserte Analyse und
+Entscheidungsfindung in wissenschaftlichen, geschäftlichen und politischen
+Bereichen eröffnet. Wir stellen jedoch täglich fest, dass in komplizierten
+Situationen, insbesondere in der Politik und in der Wirtschaft, einfache und
+direkte Entscheidungsfindungsprozesse nach wie vor überwiegen, was zu einer
+Zunahme negativer Entwicklungen führt, wenn die ursprünglich beabsichtigten
+Wirkungen nicht eintreten. Jede unerwartete Nebenwirkung oder Gegenreaktion,
+die die Maßnahmen unbrauchbar machen, sind ein klares Indiz dafür, dass die
+grundlegenden mentalen Modelle der Akteure unvollständig waren und breitere
+systemische Korrelationen vernachlässigt wurden. Das Systemdenken ist daher in
+Deutschland von besonderer Bedeutung für den Übergang zu einer nachhaltigeren
+Gesellschaft.
+
+In diesem Seminar soll die historische Entwicklung der Systemwissenschaft (in
+Teilen) verfolgt sowie relevante Grundbegriffe studiert werden. Kursteilnehmer
+halten sich dabei an kein spezifisches Modell (wie z.B. \emph{Systemdynamik}),
+sondern entwickeln ein tieferes Verständnis für die Systemwissenschaft und für
+eine spezifische Art des „Systemdenkens“, mit der Nachhaltigkeitsprobleme
+erfolgreicher angegangen werden können. Dies erreichen wir durch das Lesen und
+Diskutieren von wissenschaftlichen Arbeiten und Buchkapiteln.
+
+\section{Anmerkungen zum Seminar am 22.10.2019}
+\begin{itemize}
+\item \textbf{Thema:} Systembegriff in der Theorie dynamischer Systeme (Gräbe)
+\item \textbf{Literatur:} (Prigogine 1993)
+\item \textbf{Zusatzliteratur:} (Jantsch 1992), (Jooß 2017)
+\end{itemize}
+
+\subsection{Fragestellungen der Theorie dynamischer Systeme}
+
+Siehe hierzu
+\url{https://de.wikipedia.org/wiki/Dynamisches_System_(Systemtheorie)} 
+
+\subsection{Erste Beispiele}
+
+Beispiele im homogenen Gravitationsfeld mit zunehmend „chaotischem“ Verhalten
+\begin{itemize}
+\item Das Pendel: \url{https://de.wikipedia.org/wiki/Pendel}
+\item Gekoppeltes Pendel:
+  \url{https://de.wikipedia.org/wiki/Gekoppelte_Pendel}
+\item Doppelpendel\footnote{\url{https://de.wikipedia.org/wiki/Doppelpendel}}
+  und chaotische Trajektorien, deterministisches Chaos
+\item Magnetisches Pendel:
+  \url{https://de.wikipedia.org/wiki/Magnetisches_Pendel}
+\end{itemize}
+Beispiele mit gravitativer Wechselwirkung mit zunehmend „chaotischem“
+Verhalten
+\begin{itemize}
+\item Zweikörperproblem: \url{https://de.wikipedia.org/wiki/Zweikörperproblem}
+\item Dreikörperproblem: \url{https://de.wikipedia.org/wiki/Dreikörperproblem}
+\item Das
+  Kolmogorow-Arnold-Moser-Theorem\footnote{\url{https://de.wikipedia.org/wiki/Kolmogorow-Arnold-Moser-Theorem}}
+  über stablie und instabile Bahnen
+\end{itemize}
+
+Das sind bereits -- notwendigerweise reduktionistische -- Beschreibungsformen
+der Wirklichkeit: Etwa Pendel mit und ohne Dämpfungsglied.  Aber: Sinnvolle
+Reduktionen von Beschreibungsformen \textbf{verbessern} unsere Einsicht in die
+Zusammenhänge der Welt.  Hätte Galileo Galilei diese Denkmethodik nicht
+angewendet, wäre ihm niemals aufgefallen, dass Eisen und Feder gleich schnell
+fallen.
+
+Nicht alles, was wie Chaos aussieht, muss auch Chaos sein:\\
+\url{https://i.redd.it/zr7tet9mdfl01.gif} 
+
+\subsection{Grenzzyklen und Attraktoren}
+
+\begin{itemize}
+\item Grenzzyklen: \url{https://de.wikipedia.org/wiki/Grenzzyklus}
+\item Als \textbf{Attraktor} bezeichnet man eine stabile Lösung des
+  entsprechenden Differentialglei\-chungs-Systems
+
+  Beispiel: Attraktoren des Magnetpendels waren die drei stabilen Endlagen,
+  also drei Punkte im Phasenraum.
+
+\item Hysterese
+\begin{itemize}
+  \item Beispiel: Temperaturregelung einer Heizungsanlage
+  \item \url{https://de.wikipedia.org/wiki/Hysterese}
+\end{itemize}
+\item Räuber-Beute-Zyklen
+\begin{itemize}
+  \item \url{https://de.wikipedia.org/wiki/Räuber-Beute-Beziehung}
+  \item \url{https://de.wikipedia.org/wiki/Lotka-Volterra-Regeln}
+\end{itemize}
+\end{itemize}
+
+Zur Bedeutung \emph{stabiler} zyklischer Prozesse in der Natur. 
+
+Wir sind in der Lage, solche sich \emph{näherungsweise} wiederholenden Muster
+in natürlichen Prozessen (d.h. Attraktoren) wahrzunehmen, also auch unabhängig
+von der Mathematik eine solche Reduktionsleistung zu vollbringen.
+\begin{itemize}
+\item Frage: Wie kompliziert können solche Attraktoren werden?
+\item Der Lorenzattraktor:
+  \url{https://de.wikipedia.org/wiki/Lorenz-Attraktor}.
+    
+  Achtung, bei den dort verwendeten numerischen Verfahren zur Visualisierung
+  ist schwer zu unterscheiden, ob sie eine chaotische Trajektorie berechnen
+  oder wirklich den Attraktor, der ja ein \emph{globales} Artefakt ist.
+\item Seltsame
+  Attraktoren\footnote{\url{https://de.wikipedia.org/wiki/Seltsamer_Attraktor}}
+  als „Endzustand eines dynamischen Prozesses, dessen fraktale Dimension nicht
+  ganzzahlig und dessen Kolmogorov-Entropie echt positiv ist. Es handelt sich
+  damit um ein Fraktal, das nicht in geschlossener Form geometrisch
+  beschrieben werden kann“. (Wikipedia)
+\end{itemize}
+\textbf{Damit ist der Trajektorienbegriff der klassischen Physik für derartige
+Phänomene nicht mehr anwendbar.} („Schmetterlingseffekt“)
+
+\subsection{Systeme auf multiplen Zeitskalen}
+
+Ein wichtiger Ansatz ergibt sich für Systeme, deren Dynamiken auf
+verschiedenen Zeitskalen ablaufen. Man kann dann methodisch als weiteren
+Abstraktionsschritt zunächst die Dynamiken auf den einzelnen Zeitskalen
+untersuchen und später in einem erweiterten Modell die Wechselwirkungen
+zwischen den Zeitskalen hinzunehmen.  Massiv neue Phänomene ergeben sich
+bereits bei der Betrachtung von \emph{zwei} Zeitskalen, was als \emph{Mikro-
+  und Makroevolution} bezeichnet wird. Hier wird es in der Wikipedia bereits
+dünn.
+\begin{itemize}
+\item Beispiel: Das Doppelpendel kann in gewissen Grenzen als Pendel
+  aufgefasst werden, dessen Pendelkörper selbst noch eine innere Dynamik hat.
+  Das Obersystem prägt dem Untersystem durch Energieeintrag eine gemeinsame
+  Dynamik auf.  Obwohl Doppelpendel, ist das System damit (final) \emph{nicht}
+  chaotisch, sondern verhält sich wie ein einfaches Pendel mit Masse im
+  Schwerpunkt.
+\item In der Literatur als \emph{Versklavungseffekt} bekannt und besonders in
+  methodisch schlecht fundierten soziologischen Betrachtungen als
+  Verbalargument verbreitet.\\  Siehe aber
+  \url{https://de.wikipedia.org/wiki/Netzwerkforschung}.
+\end{itemize}
+
+\subsection{Immersiver und submersiver Systembegriff}
+
+Welche Probleme treten beim Zusammensetzen von (verstandenen) Mikroevolutionen
+von Teilsystemen zu einem Verständnis der Dynamik auf der Makroebene auf?
+
+Wie lassen sich zwei Systeme $S_1$ und $S_2$ zu einem Obersystem
+zusammenfassen? 
+
+\subsubsection*{Immersiver Zugang}
+
+Mathematische Formulierung der Fragestellung: Dies geschieht durch Abbildungen
+(im einfachsten Fall Einbettungen, Immersionen) $f_1: S_1 \to S$, $f_2: S_2
+\to S$.  Wie lassen sich solche Abbildungen konstruieren?
+
+Gibt es für diese Konstellation ein \emph{universelles kategorielles Objekt},
+d.h. ein universelles $U$ und universelle Abbildungen
+\begin{gather*}
+  p_1: S_1 \to  S, p_2: S_2 \to  S,  
+\end{gather*}
+so dass sich für jedes Tripel $(f_1 , f_2 , S)$ die obige Konstellation als
+\begin{gather*}
+  f_1 = f \circ p_1: S_1 \to U \to  S, f_2 = f \circ p_2: S_2 \to U \to  S
+\end{gather*}
+für ein geeignetes $f = f_1 \oplus f_2: S \to U$ schreiben lässt? $U$ heißt in
+dem Fall \emph{direkte Summe} und man schreibt $U = S_1 \coprod S_2$.
+
+Die meisten mathematischen Modelle bewegen sich in konkreten
+\emph{Kategorien}, zum Beispiel der Kategorie der Mengen, der Vektorräume, der
+Faserbündel, der algebraischen Varietäten usw.  Jede solche Kategorie zeichnet
+sich dadurch aus, dass dort die Begriffe \emph{Objekt} und \emph{Morphismus}
+eine klare Bedeutung haben.  Morphismen zwischen Vektorräumen sind zum
+Beispiel operationstreue Abbildungen, also lineare Abbildungen, die sich für
+endlichdimensionale Vektorräume durch Matrizen beschreiben lassen.
+
+Nicht in jeder Kategorie existieren solche universellen Objekte.
+
+\emph{Anmerkung:} Die Konstruktion lässt sich leicht auf endlich viele $S_i$
+und sogar auf unendlich viele $S_i, i\in I$, verallgemeinern, und so ist es in
+der Mathematik auch gemeint.
+
+In der \emph{Kategorie der Mengen} existieren direkte Summen $U$ sowohl für
+endliche als auch unendliche Indexmengen I. Dies ist gerade die
+\emph{disjunkte Vereinigung} der Mengen $S_i$ .
+
+Die Abbildungen $p_i$ sind gerade die Einbettungen $p_i: S_i \to S$ der
+Teilmengen in deren disjunkte Vereinigung.
+
+Die Abbildung $f: U \to S$ ergibt sich wie folgt: Für jedes $a\in U$
+existieren genau ein $i$ und ein $a'\in S_i$ mit $a=p_i(a')$. Setze
+$f(a)=f_i(a')$.
+
+Ist $|S_1| = a$, $|S_2| = b$, so ist $|S_1 \coprod S_2| = a+b$.
+
+Das Ganze ist nicht mehr als die Summe seiner Teile.
+
+\subsubsection*{Submersiver Zugang}
+
+Alle Pfeile umdrehen (TRIZ Prinzip 13)
+
+Es ergeben sich Abbildungen (im einfachsten Fall Projektionen) $f_1: S_1
+\leftarrow S$, $f_2: S_2 \leftarrow S$.
+
+Gibt es auch für diese Konstellation ein \emph{universelles kategorielles
+  Objekt}, d.h. ein universelles $U$ und universelle Abbildungen
+\begin{gather*}
+  p_1: S_1 \leftarrow  S, p_2: S_2 \leftarrow  S,  
+\end{gather*}
+so dass sich für jedes Tripel $(f_1 , f_2 , S)$ die obige Konstellation als
+\begin{gather*}
+  f_1 = p_1 \circ f: S_1 \leftarrow U \leftarrow S, f_2 = p_2 \circ f: S_2
+  \leftarrow U \leftarrow S
+\end{gather*}
+für ein geeignetes $f = f_1 \otimes f_2: S \to U$ schreiben lässt? $U$ heißt
+in dem Fall \emph{direktes Produkt} und man schreibt $U = S_1 \prod S_2$.
+
+In der \emph{Kategorie der Mengen} existieren direkte Produkte $U$ sowohl für
+endliche als auch unendliche Indexmengen I. Dies ist gerade das
+\emph{Karthesische Produkt} der Mengen $S_i$ .
+
+Die Abbildungen $p_i$ sind die Projektionen $p_i: U \to S_i$ des karthesischen
+Produkts auf die einzelnen Komponenten.
+
+Die Abbildung $f: S\to U$ ergibt sich wie folgt: Für jedes $a\in S$
+ist $f(a)=(f_i(a):i\in I)$.
+
+Ist $|S_1| = a$, $|S_2| = b$, so ist $|S_1 \prod S_2| = a\cdot b$.
+
+\textbf{Das Ganze ist deutlich mehr als die Summe seiner Teile, der größte
+  Teil der „Information“ ist relationaler Natur.}
+
+\subsection{Emergente Phänomene}
+\begin{itemize}
+\item Nichtlineare Systeme und Phasenübergänge:\\
+  \url{https://de.wikipedia.org/wiki/Phasenübergang}.
+\item Selbstorganisation in dissipativen Strukturen
+\begin{itemize}
+  \item \url{https://de.wikipedia.org/wiki/Rayleigh-Bénard-Konvektion}
+  \item \url{https://de.wikipedia.org/wiki/Belousov-Zhabotinsky-Reaktion}
+\end{itemize}
+\item Dissipative Strukturen:
+  \url{https://de.wikipedia.org/wiki/Dissipative_Struktur} 
+\item Temperatur\footnote{\url{https://de.wikipedia.org/wiki/Temperatur}} als
+  emergentes Phänomen.
+\item Entropie\footnote{\url{https://de.wikipedia.org/wiki/Entropie}} und
+  Enthalpie\footnote{\url{https://de.wikipedia.org/wiki/Enthalpie}}.
+\item Leben auf der Erde als dissipatives System
+\end{itemize}
+
+\section{Anmerkungen zum Seminar am 29.10.2019}
+\begin{itemize}
+\item \textbf{Thema:} Einführung in Systemwissenschaft und Nachhaltigkeit,
+  Allgemeine System\-theorie (IIRM)
+\item \textbf{Literatur:} (Bertalanffy 1950), (Mele 2010), (Binder 2013)
+\end{itemize}
+
+Im Seminar wurde das Thema in zwei Vorträgen von Sabine Lautenschläger und
+Lydie Laforet vorgestellt.
+
+Hans-Gert Gräbe hat im Nachgang den folgenden Text verfasst, in dem die
+Verbindungen zu konzeptionellen Fragen der Theorie Dynamischer Systeme sowie
+zu den Argumentationen zum Thema Nachhaltigkeit aus der Vorlesung aufgenommen
+werden. Dabei werden einige Aspekte der Theorie dynamischer Systeme (TDS) mit
+den von Lautenschläger und Laforet vorgetragenen Systemtheorieansätzen
+abgeglichen und damit zugleich einige Punkte der TDS genauer ausgeführt.
+
+\subsection{Bertalanffys Allgemeine Systemtheorie}
+
+Bertalanffy entwickelt in seinem Text (Bertalanffy 1950) zunächst genau die
+Grundlagen der TDS im Verständnis jener Zeit.  Der Bezugstext steht damit ganz
+am Anfang einer stürmischen Entwicklung der TDS in den 1960er und 1970er
+Jahren, die zu fundamental neuen Einsichten in die Vielfalt von Formen der
+Lösungen gewöhnlicher Differentialgleichungssysteme geführt haben.  Bereits in
+diesem Gebiet\footnote{In den Gleichungen werden nur zeitabhängige Ableitungen
+  zugelassen, keine partiellen Ableitungen nach auch noch anderen Parametern,
+  das Gebiet der \emph{partiellen Differentialgleichungen} wird also noch
+  nicht betreten.} finden sich erstaunliche Phänomene wie der Lorenzattraktor,
+deterministisches Chaos, das Ende des Trajektorienbegriffs und fraktale
+Gebilde. Mit partiellen Differentialgleichungen kommen noch
+Solitonen\footnote{Auf dieses Phänomen bin ich in meinem Seminar nicht
+  eingegangen, obwohl diese Strukturen, die in vielen Systemen partieller
+  Differentialgleichungen als Lösungen auftreten, zu einem vollkommen neuen
+  Verständnis des Welle-Teilchen-Dualismus führen. Siehe dazu
+  \url{https://de.wikipedia.org/wiki/Soliton}. } hinzu. Bertalanffy hat also
+nur eine erste Ahnung möglicher Phänomene. Seine mathematischen Betrachtungen
+verwenden allein Taylorreihen und beschränken sich damit auf Phänomene nahe
+einer Gleichgewichtslage, können also mathematisch auf steady state
+Situationen (ohne wesentlich vereinfachende Annahmen) nicht einmal angewendet
+werden.
+
+Seine wissenschaftstheoretischen Überlegungen fußen auf der Analogie
+entsprechender mathematischer Beschreibungsformen in verschiedenen
+Wissenschaftsgebieten\footnote{Komplexe Systemtheorie stellt die Adäquatheit
+  derartiger Beschreibungen heute selbst in Frage.} und stellen damit nach
+meinem Verständnis auf \emph{methodologische} Ähnlichkeit von Zugängen und
+\emph{nicht} auf Isomorphie von Strukturen (so Lautenschläger) ab. Dass
+Bertalanffys Zugang \emph{deduktiv} sei, kann sich damit auch maximal auf den
+mathematisch-deduktiven Kern seiner Argumentation beziehen, nicht aber auf die
+weitergehenden wissenschaftstheoretischen Beobachtungen, bzw. dies wäre noch
+genauer zu belegen.
+
+\subsection{Der Raumbegriff der TDS}
+
+Der Raumbegriff der TDS entwickelt sich aus dem physikalischen Begriff des
+\emph{Phasenraums}. So „lebt“ ein klassisches Vier-Teilchen-System in einem
+12-dimensionalen Phasenraum, der durch die $4\times 3$ Raumkoordinaten
+aufgespannt wird. Derartige Phasenräume dienen zunächst der Koordinatisierung
+der Bewegungsgleichungen, allerdings sieht bereits die Physik in solchen
+Koordinatenabhängigkeiten einen Mangel, da die Gesetze unter
+Koordinatentransformationen invariant sein müssen, also letztlich
+koordinatenfreie Zusammenhangsbeschreibungen mehr Einsicht in bestehende
+Zusammenhänge vermitteln. Damit steht zugleich die Frage, invariante
+geometrische Strukturen in solchen höherdimensionalen Phasenräumen zu
+beschreiben.
+
+Derartige Fragen sind Gegenstand zum Beispiel der algebraischen Geometrie oder
+der Differentialgeometrie. In diesen Beschreibungen (der invarianten
+geometrischen Gebilde) treten ihrerseits Räume auf, die sich etwa im Konzept
+der \emph{Vektorbündel} „materialisieren“ als \emph{Sprache}, um geometrische
+Eigenschaften der betrachteten invarianten Strukturen zu beschreiben (wie
+Fasern, Keime, Schnitte, Obstruktionen zur Fortsetzbarkeit von Schnitten,
+Homologieklassen als Strukturen derartiger Obstruktionen usw.).
+
+Im Bereich der Analysis wird der Raumbegriff weiter verallgemeinert zu
+unendlich-dimensio"|nalen Banach- und Sobolev-Räumen, in denen sich gewisse
+mathematische Konzepte (etwa das Lebesgue-Integral) überhaupt erst entfalten
+lassen für Situationen, wo man mit „klassischen“ Lösungen nicht mehr
+weiterkommt.  Theorien (wie etwa der Banachsche Fixpunktsatz) lassen sich
+überhaupt erst auf der Basis derart verallgemeinerter Raumbegriffe konsistent
+entwickeln.
+
+\subsection{Steady State und Fließgleichgewichte}
+
+Diese Begriffe entwickeln sich später zum Begriff des \emph{Attraktors}
+weiter.  Zugleich wird erkannt, dass derartige Attraktoren extrem komplexe
+Gestalt haben können, womit eine Unterscheidung zu chaotischem Verhalten
+allein auf phänomenologischer Ebene schwierig wird.  Zugleich wird die Rolle
+auch \emph{negativer Attraktoren} erkannt.  Derartige Strukturen und
+Strukturbildungsprozesse sind typisch für dissipative Prozesse fern von
+Gleichgewichtszuständen, die durch einen gewissen Durchsatz von Materie und
+Energie getrieben werden. Der Durchsatz von Information spielt dabei keine
+Rolle\footnote{Siehe dazu etwa noch einmal
+  \url{https://de.wikipedia.org/wiki/Dissipative_Struktur}.}. Ich komme unten
+auf diese Frage zurück.
+
+\subsection{Komplexe und komplizierte Systeme}
+
+Diese Unterscheidung habe ich überhaupt nicht begriffen. Sicher kann man einen
+solchen Unterschied nicht an der Zerlegbarkeit eines technischen Artefakts
+(„ein Auto ist kompliziert, nicht aber komplex“) festmachen, da ein
+entsprechender Technikbegriff noch deutlich hinter dem des VDI (siehe meine
+1. Vorlesung) zurückbliebe, der zum System wenigstens noch „Herstellung“ und
+„Verwendung“ des Artefakts (oder -- dort bereits deutlich -- „Sachsysteme“)
+rechnet.
+
+Eine solche Unterscheidung lässt sich nach meinem Verständnis ausschließlich
+an den Beschreibungsmethodiken festmachen, die etwa im Potsdamer Manifest (VDW
+2005) als „mechanisch-materialistisch“ und „geistig-lebendig“ unterschieden
+werden.  Damit kommen wir aber sofort auf grundlegende Fragen, welche Technik-
+und Wissenschaftsverständnisse überhaupt nur Grundlage für „Nachhaltigkeit“
+sein können und welchen Anteil das Wert-Nutzen-Denken des homo oeconomicus
+oder auch nur des homo faber an der aktuellen Krise unserer fossil basierten
+Produktionsweise hat.
+
+Carlowitz hat vor 250 Jahren wenigstens noch über eine nachhaltige
+Bewirtschaftung der nachwachsenden Ressource „Holz“ raisonniert\footnote{Dass
+  Carlowitz' Probleme eng mit der aufkommenden kapitalistischen
+  Produktionsweise zusammenhängen und vergleichbare Probleme der
+  Bewirtschaftung von Infrastrukturen vorher mit den lokalen Allmendegesetzen
+  stabil prozessiert werden konnten, hat Elinor Ostrom klar gezeigt, siehe
+  etwa (Stollorz 2011). }. Unsere gesamte Technik und Wissenschaft hat sich
+seither rasant weiterentwickelt, allerdings auf der Basis \emph{fossiler}
+Rohstoffe, die sich definitiv \emph{nicht} in so kurzen Zeiten regenerieren
+wie sie verbraucht werden.  Die damit verbundenen grundlegenden Probleme habe
+ich bereits in der 2. Vorlesung („Peak Oil? Peak Everything!“) angeschaut.
+Siehe dazu auch (Davis 2008), (Gräbe 2012).
+
+\subsection{Informationsbegriff}
+
+„Komplexe Systeme sind lernfähig“ (Laforet). Lernfähigkeit setzt nach meinem
+Verständnis 1) Reflexionsfähigkeit und 2) Selbstreflexionsfähigkeit voraus.
+Ich denke nicht, dass der Begriff „komplexes System“ derart eingeengt werden
+sollte.  Insgesamt sind wir bei diesem Ansatz bei Informationstheorien auf dem
+Stand der 1970er Jahre, etwa (Steinbuch 1969)\footnote{„Geschichte ist die uns
+  überlieferte Information über frühere Versuche, die Zukunft zu gestalten.“
+  (ebenda, S. 5)}, die Klaus Fuchs-Kittowski (Fuchs-Kittowski 2002) in der
+Unterscheidung zwischen Kybernetik 1. und 2. Ordnung noch einmal resümierte.
+Dieser Ansatz wurde bereits Ende der 1990er Jahre in Debatten zwischen Janich,
+Capurro, Fleissner, Hofkirchner u.a. fundamental kritisiert. Dazu etwa (Janich
+2006), (Capurro 1996), (Capurro 1998), (Capurro 2002), (Klemm 2003).
+
+\section{Literatur}
+
+\begin{itemize}
+\item Anderies, John M., Marco A. Janssen, Elinor Ostrom (2004).  Framework to
+  Analyze the Robustness of Social-ecological Systems from an Institutional
+  Perspective. In: Ecology and Society 9 (1), 18.\\
+  \url{https://www.ecologyandsociety.org/vol9/iss1/art18/}
+\item Ashby, William Ross (1958).  Requisite variety and its implications for
+  the control of complex systems. In: Cybernetica 1:2, 83--99.\\
+  \url{http://pcp.vub.ac.be/Books/AshbyReqVar.pdf}
+\item Bertalanffy, Ludwig von (1950). An outline of General System Theory,
+  The British Journal for the Philosophy of Science, Volume I, Issue 2, 1
+  August 1950, 134–165.\\ \url{https://doi.org/10.1093/bjps/I.2.134}
+  (Verlagsintern) 
+\item Binder, C.R., J. Hinkel, P.W. Bots, C. Pahl-Wostl (2013). Comparison of
+  Frameworks for Analyzing Social-ecological Systems. Ecology and Society,
+  18 (4), 26.\\ \url{https://www.ecologyandsociety.org/vol18/iss4/art26/}
+\item Boisot, Max and Bill McKelvey (2011). Complexity and
+  Organization-Environment Relations: Revisiting Ashby’s Law of Requisite
+  Variety. In: Allen, Peter, Steve Maguire and Bill McKelvey (eds.). The Sage
+  Handbook of Complexity and Management, 279--298. (Available at
+\item Capurro, Rafael, Peter Fleissner, Wolfgang Hofkirchner (1996). Is a
+  unified theory of information feasible?
+  \url{http://www.capurro.de/trialog.htm}
+\item Capurro, Rafael (1998). Das Capurrosche Trilemma.
+  \url{http://www.capurro.de/janich.htm}.
+\item Capurro, Rafael (2002). Menschengerechte Information oder
+  informationsgerechter\linebreak Mensch?
+  \url{http://www.capurro.de/gotha.htm}.
+\item Davis, Mike (2008). Wer wird die Arche bauen?  Das Gebot zur Utopie im
+  Zeitalter der Katastrophen.  Telepolis, 11.12.2008.
+\item Dobusch, Leonhard, Volker, Sigrid Quack (2011). Auf dem Weg zu einer
+  Wissensallmende? Argumente Politik und Zeitgeschichte 28--30, S. 41--46.
+\item Foxon, T.J., M.S. Reed, L.C. Stringer (2009). Governing long‐term
+  social–ecological change: what can the adaptive management and transition
+  management approaches learn from each other? Environmental Policy and
+  Governance, 19 (1), 3--20.\\ \url{https://doi.org/10.1002/eet.496}
+  (Verlagsintern)
+\item Fuchs-Kittowski, Klaus (2002). Wissens-Ko-Produktion.  Verarbeitung,
+  Verteilung und Entstehung von Informationen in kreativ-lernenden
+  Organisationen.  Festschrift zum 65. Geburtstag von Klaus Fuchs-Kittowski.
+\item Geels, Frank W., Johan Schot (2007). Typology of Sociotechnical
+  Transition Pathways. In: Research Policy 36 (2007), 399–417.\\
+  \url{https://doi.org/10.1016/j.respol.2007.01.003} (Verlagsintern)
+\item Gräbe, Hans-Gert (2012). Wie geht Fortschritt? LIFIS ONLINE [12.11.12]. 
+\item Goldovsky, B.I. (1983). System der Gesetzmäßigkeiten des Aufbaus und der
+  Entwicklung technischer Systeme.
+  \url{https://wumm-project.github.io/Texts.html} 
+\item Gräbe, Hans-Gert (2019). Zur Entwicklung Technischer Systeme.
+  Manuskript. \\ \url{https://wumm-project.github.io/Texts.html}
+\item Holland, John H. (2006). Studying complex adaptive systems. In: Journal
+  of systems science and complexity, 19 (1),
+  1–8.\\ \url{https://link.springer.com/article/10.1007/s11424-006-0001-z}
+  (Verlagsintern)
+\item Holling, C.S. (2000). Understanding the Complexity of Economic,
+  Ecological, and Social Systems. In: Ecosystems (2001) 4, 390–405.
+  \url{https://www.esf.edu/cue/documents/Holling_Complexity-EconEcol-SocialSys_2001.pdf}
+\item Jacobasch, Gisela (2019). Bienensterben -- Ursachen und Folgen.  Leibniz
+  Online 37 (2019).
+  \url{https://leibnizsozietaet.de/bienensterben-ursachen-und-folgen/}
+\item Janich, Peter (2006). Was ist Information? Frankfurt/Main.
+\item Jantsch, E. (1992). Die Selbstorganisation des Universums. Vom Urknall
+  zum menschlichen Geist.  Hanser, München.
+\item Jooß, Christian (2017). Selbstorganisation der Materie.  Verlag Neuer
+  Weg, Essen.
+\item Klemm, Helmut (2003). Ein großes Elend. Informatik Spektrum,
+  S. 267--273. 
+\item Koltze, Karl, Valeri Souchkov (2017). Systematische Innovation.
+  2. Auf"|lage, Hanser, München.
+\item Kozhemyako, Anton (2019). Features of TRIZ applications for solving
+  organizational and management problems: schematization of an inventive
+  situation and working with models of contradictions. (In Russisch, englische
+  Übersetzung in Vorbereitung).\\ \url{https://matriz.org/kozhemyako/}
+\item Lyubomirskiy, A., S. Litvin, S. Ikovenko, C. M. Thurnes, R. Adunka
+  (2018).  Trends of Engineering System Evolution (TESE).
+\item Mann, Darrell (2019).  Systematic innovation in complex
+  environments. Proceedings of the TRIZ Summit 2019 Minsk.\\
+  \url{https://triz-summit.ru/file.php/id/f304797-file-original.pdf} 
+\item Mele, C., J. Pels, F. Polese (2010). A brief review of systems theories
+  and their managerial applications. Service Science, 2(1--2), 126--135.\\
+  \url{https://doi.org/10.1287/serv.2.1_2.126} (Open Access)
+\item Mingers, John (1989). An Introduction to Autopoiesis -- Implications and
+  Applications. In: Systems Practice, Vol. 2, No. 2, 1989.\\
+  \url{https://link.springer.com/article/10.1007/BF01059497} (Verlagsintern) 
+\item Ostrom, Elinor (2007). A diagnostic approach for going beyond panaceas.
+  Proceedings of the national Academy of sciences, 104(39), 15181--15187.\\
+  \url{https://doi.org/10.1073/pnas.0702288104} (Open Access)
+\item Prigogine, Ilya, Isabelle Stengers (1993). Das Pardox der Zeit. Piper,
+  München, Kap. 3--5.  
+\item Ropohl, Günter (2009). Allgemeine Technologie: eine Systemtheorie der
+  Technik.  KIT Scientific Publishing.
+  \url{https://books.openedition.org/ksp/3007} (Open Access) 
+\item Rubin, Michail (2019).  Zum Zusammenhang der Entwicklungsgesetze
+  allgemeiner Systeme und der Entwicklungsgesetze technischer Systeme. \\
+  \url{https://wumm-project.github.io/Texts.html} 
+\item Souchkov, Valeri (2014). Breakthrough Thinking with TRIZ for Business
+  and Management: An Overview. \url{https://www.semanticscholar.org}
+\item Steinbuch, Karl (1969). Die informierte Gesellschaft.  Stuttgart,
+  2. Auflage. 
+\item Stollorz, Volker (2011). Elinor Ostrom und die Wiederentdeckung der
+  Allmende. Argumente Politik und Zeitgeschichte 28--30, S. 3--15. 
+\item Ulanowicz, Robert E. (2009). The dual nature of ecosystem dynamics.
+  In: Ecological Modelling 220 (2009), 1886–1892.\\
+  \url{https://people.clas.ufl.edu/ulan/files/Dual.pdf} (Green Paper des
+  Autors) 
+\item VDW -- Verein Deutscher Wissenschaftler (2005). „We have to learn to
+  think in a new way“. Potsdamer Denkschrift.
+\item Vernadsky, V.I. (1997, Original 1936--38). Scientific Thought as a
+  Planetary Phenomenon. \url{https://wumm-project.github.io/Texts.html}
+\item Walker, Brian, C. S. Holling, Stephen R. Carpenter, Ann Kinzig (2004).
+  Resilience, Adaptability and Transformability in Social-ecological Systems. 
+  In: Ecology and Society 9 (2).
+  \url{https://www.ecologyandsociety.org/vol9/iss2/art5/}
+\end{itemize}
+
+\end{document}
