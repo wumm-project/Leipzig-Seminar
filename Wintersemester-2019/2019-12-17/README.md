@@ -54,31 +54,31 @@ klassische Strukturzuweisungen erfolgen, die nicht wirklich erklärt werden.
 3. Das Verhältnis von Nischeninnovation und Regime ist nicht klar. Gibt es
 auch eine gesteuerte Regime-Nischeninnovation?
 
-4. Darauf beziehend ist es nicht deutlich, was eine Nischeninnovation
-überhaupt ist; ein Prototyp, eine Verfahrensweise; eine Idee?
+4. Darauf beziehend ist nicht deutlich, was eine Nischeninnovation überhaupt
+ist; ein Prototyp, eine Verfahrensweise, eine Idee?
 
-5. Ist im 4. Fall nicht klar, warum die y-Achse fehlt und von Symbiose geredet
+5. Im 4. Fall ist nicht klar, warum die y-Achse fehlt und von Symbiose geredet
 wird.
 
-6. Ist die begriffliche Verwendung von Transition und Transformation in ihrer
-Synonymisierung nicht klar. In anderen Wissenschaftsdisziplinen wird
+6. Die begriffliche Verwendung von Transition und Transformation in ihrer
+Synonymisierung ist nicht klar. In anderen Wissenschaftsdisziplinen wird
 Transition für eine Veränderung mit Erhaltung von Systemkomponenten verwendet
 und Transformation für eine echte vollständige Änderung aller Formen des
 Systems und somit für alle Komponenten. Die Verwendung ist hier gar nicht
 klar.
 
 Positiv konnte dennoch die Zielrichtung gewertet werden, welche Handlungen und
-dementsprechende politische Verfahrensweisen und Abläufe in den Fokus nimmt.
+diesen entsprechende politische Verfahrensweisen und Abläufe in den Fokus nimmt.
 Generell ließen sich erneut auch hier die klassischen Probleme der
 Systemtheorie finden.
-* Erstens das Ebenenproblem; es ist entscheidend, auf welcher Ebene die
+* Erstens das __Ebenenproblem__; es ist entscheidend, auf welcher Ebene die
   Modellierung beginnt und was in den Fokus genommen wird, denn Fragen von
   Außen und Innen, von Input und Output und der Leistungsfähigkeit des Systems
   sind davon abhängig.
-* Zweitens ist das Durchsatzproblem erneut entscheidend. Für die Performanz
+* Zweitens ist das __Durchsatzproblem__ erneut entscheidend. Für die Performanz
   als auch für die Übertragung ist entscheidend, an was sich das System, auch
   als Multilevel Modell, orientiert.
-* Drittens steht das Strukturproblem. Immer wieder werden
+* Drittens steht das __Strukturproblem__. Immer wieder werden
   Strukturvorstellungen untergeschoben, welche sich nicht aus der induktiven
   Modellierung ergeben, wie Wirtschaft, Politik, Kultur oder ähnliche
   schwammige Begriffskonzepte.
