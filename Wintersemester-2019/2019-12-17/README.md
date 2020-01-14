@@ -12,14 +12,15 @@ wurde sich das Modell angeschaut und die Verwobenheit der einzelnen Ebenen
 diskutiert, welche in Nischeninnovation, sozio-technisches Regime und
 sozio-technische Landschaft unterteilt sind. Entscheidend für die Bestimmung
 der Falltypologie sind die Einflussverhältnisse von Ebene zu Ebene.
-Dementsprechend ergeben sich die vier Transformationsarten  
-1. Transformation,  
-2. De-Alignment und Re-Alignment,  
-3. Technische Substitution und  
-4. Rekonfiguration  
+Dementsprechend ergeben sich die vier Transformationsarten
+1. Transformation,
+2. De-Alignment und Re-Alignment,
+3. Technische Substitution und
+4. Rekonfiguration
+
 nicht als einzige Möglichkeit, sondern müssen ihnen die Sonderfälle  
-0. Produktionsprozess und  
-5. Disruptiver Wandel  
+  0. Produktionsprozess und  
+  5. Disruptiver Wandel  
 an die Seite gestellt werden.
 
 Im nächsten Schritt ging es um die kritische Verbesserung in (Foxon 2009),
