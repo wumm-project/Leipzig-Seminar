@@ -20,9 +20,9 @@ Dementsprechend ergeben sich die vier Transformationsarten
 
 nicht als einzige Möglichkeit, sondern müssen ihnen die Sonderfälle  
 
-0. Produktionsprozess und  
+0. Produktionsprozess und
 
-5. Disruptiver Wandel  
+5. Disruptiver Wandel
 
 an die Seite gestellt werden.
 
