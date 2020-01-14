@@ -13,10 +13,10 @@ diskutiert, welche in Nischeninnovation, sozio-technisches Regime und
 sozio-technische Landschaft unterteilt sind. Entscheidend für die Bestimmung
 der Falltypologie sind die Einflussverhältnisse von Ebene zu Ebene.
 Dementsprechend ergeben sich die vier Transformationsarten
-1. Transformation,
-2. De-Alignment und Re-Alignment,
-3. Technische Substitution und
-4. Rekonfiguration
+ 1. Transformation,
+ 2. De-Alignment und Re-Alignment,
+ 3. Technische Substitution und
+ 4. Rekonfiguration
 
 nicht als einzige Möglichkeit, sondern müssen ihnen die Sonderfälle  
 :0. Produktionsprozess und  
