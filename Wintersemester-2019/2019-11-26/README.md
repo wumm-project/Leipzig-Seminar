@@ -126,7 +126,7 @@ langfristig investiv gebundene Kapitale in die kurzfristigeren jährlichen
 Umschlagzeiten integriert werden, die das Finanzamt triggert.  Das Risiko von
 Störungen (zu frühe faktische Außerdienststellung der Investition) bleibt
 dabei in der Systemkomponente (dem Unternehmen) gekapselt, das dafür ein
-angemessenes positives Feedback (den Profit) erhält, um das Syst6em insgesamt
+angemessenes positives Feedback (den Profit) erhält, um das System insgesamt
 im Bereich synergetischer Kopplung zu halten.
 
 Der Ansatz ist insoweit epistemisch geschlossen, als eine solche Betrachtung
@@ -256,7 +256,7 @@ dass etwa die Bemühungen eines Kindes, eine Schaukel durch rhythmische
 Schwerpunktverlagerungen in Schwingung zu versetzen, genau einen solchen
 Einfluss demonstriert. Auch das Konzept "Abschreibungen" weist in die
 umgekehrte Richtung einer Integration langwelliger Phänomene in Systeme mit
-kürzeren Eigenzeiten.  Wir haben überhaupt _nur_ über derartige Mechnismen
+kürzeren Eigenzeiten.  Wir haben überhaupt _nur_ über derartige Mechanismen
 heute die Möglichkeit, die großräumigen Probleme, die unsere Wirtschaftsweise
 planetar verursacht, in den Griff zu bekommen.
 

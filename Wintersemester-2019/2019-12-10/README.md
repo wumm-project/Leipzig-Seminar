@@ -15,9 +15,9 @@ mindestens noch mit einer Zweck-Mittel-Perspektive aufgeladen sind.
 Derartige Systeme spielen im TRIZ-Kontext als _Technische Systeme_ (klassische
 TRIZ-Terminologie), _Engineering Systems_ oder _man-made systems_ (Souchkov
 2014) eine zentrale Rolle, wobei Menschen hier sowohl als Subjekte des
-Handelns als auch als Objekte der Systemdynamik in Erscheinung treten. Die
-drei begrifflichen Ansätze TS, ES und MMS nehmen dabe ihrerseits Reduktionen
-der Rolle menschlichen Handelns auf unterschiedliche Weise vor.
+Handelns als auch als Objekte der Systemdynamik in Erscheinung treten. Diese
+drei begrifflichen Ansätze nehmen dabei ihrerseits Reduktionen der Rolle
+menschlichen Handelns auf unterschiedliche Weise vor.
 
 Der Ansatz "Technische Systeme" - zusammen mit dem grundlegenden TRIZ-Prinzip
 der Idealität, dass eine gewünschte Funktion im Idealfall "von selbst",
@@ -50,8 +50,8 @@ Verhältnisses von System und Obersystem(en), übernimmt, in der Betrachtung
 systemübergreifender ingenieurtechnischer Praxen aber noch
 Entfaltungsmöglichkeiten hat.
 
-Der Ansatz "man-made systems" schießt begrifflich über das Ziel hinaus, da er
-- wenigstens in der unmittelbaren Bedeutung der Worte - die naturgesetzliche
+Der Ansatz "man-made systems" schießt begrifflich über das Ziel hinaus, da
+er - wenigstens in der unmittelbaren Bedeutung der Worte - die naturgesetzliche
 Kontextualisierung der Bedingtheiten menschlichen Handelns bei einer
 "Reduktion auf das Wesentliche" ausblendet.  In dieser Beschränkung steht ein
 solcher Ansatz aber in eigentümlicher Nähe sowohl zu den Bemühungen und die
@@ -60,10 +60,11 @@ Formierung eines Konzepts von _Resilienz_ als auch zu den Konzepten, die in
 quantitativer Verhältnisse von Störungsdruck und Reaktionsvermögen diskutiert
 wurden.  Auf diesem Hintergrund sind auch die beiden Aufsätze (Ostrom 2007)
 und (Anderies 2004) zu bewerten.  In beiden Aufsätzen geht es darum, recht
-einfach gehaltenen Ansätze agenten-basierter Systeme, wie etwa in (Holland
-2006) zu finden, mit der realen Komplexität institutionalisierter menschlicher
-Handlungsvollzüge zu konfrontieren. In (Ostrom 2007) wird dazu ein komplexes
-_System von Parametern_ zur Bewertung sozial-ökologischer Systeme vorgeschlagen.
+einfach gehaltenen Ansätze agenten-basierter Systeme, wie etwa in
+(Holland 2006) zu finden, mit der realen Komplexität institutionalisierter
+menschlicher Handlungsvollzüge zu konfrontieren. In (Ostrom 2007) wird dazu
+ein komplexes _System von Parametern_ zur Bewertung sozial-ökologischer
+Systeme vorgeschlagen.
 
 In (Anderies 2004) wird ein _grobes Modell_ entwickelt, auf das sich das
 Verhältnis von Ressourcen und Ressourcennutzern im Kontext einer Infrastruktur
@@ -86,7 +87,7 @@ identifiziert, der in Strukturen, die zu ausgeprägtem Zweck-Mittel-Denken
 fähig sind und damit einen Prozess des Abgleichs zwischen Planungs- und
 Handlungsstrukturen kennen, auch für praktisches Handeln leitend ist und damit
 zu einer entsprechenden Strukturierung auch der Wirklichkeit führt.  Im
-Gegensatz zu den verschiednen systemischen Beschreibungsstrukturen, die
+Gegensatz zu den verschiedenen systemischen Beschreibungsstrukturen, die
 weitgehend unabhängig voneinander sind - die Beschreibung der Beziehungen
 _zwischen_ diesen Systemen, insbesondere zwischen einem System und seinen
 Komponenten, ist auf die Beschreibung von Input/Output-Verhalten reduziert -
@@ -115,15 +116,16 @@ Zweck-Mittel-Vorstellungen ausgerichtet ist als auf eine angemessene
 Integration realweltlicher Entwicklungen, und auch in der eigenen
 Handlungsdimension diesen Konservatismus perpetuiert.  Dies gilt nicht nur für
 das politische System der DDR in ihrer Endphase, sondern auch für das
-Bienensterben, das im Aufsatz (Jacobasch 2019) genauer analysiert wird.
-Obwohl hier massive Gefahren für den umfassender Ökosystemstrukturen, die auf
-Bestäubung durch Insekten aufbauen, auch beschreibungstechnisch klar auf dem
-Tisch liegen, entwickelt ein System selbstbezüglicher Systembeschreibungen um
-das Thema "Glyphosat" herum, das auch wesentlich für die Legitimierung
-politischer Entscheidungsprozesse ist, als _Netzwerk von Systemen_ ein starkes
+Bienensterben, das in (Jacobasch 2019) genauer analysiert wird.  Obwohl hier
+massive Gefahren für umfassendere Ökosystemstrukturen, die auf Bestäubung
+durch Insekten aufbauen, auch beschreibungstechnisch klar auf dem Tisch
+liegen, entwickelt ein System selbstbezüglicher Systembeschreibungen um das
+Thema "Glyphosat" herum, das auch wesentlich für die Legitimierung politischer
+Entscheidungsprozesse ist, als _Netzwerk von Systemen_ ein starkes
 Beharrungsvermögen, da genau _jene_ Informationen über die netzwerkinternen
-Input-/Output-Spezifikationen _nicht_ angemessen kommuniziert werden kann und
-damit für die konkrete Dynamik des Netwzerks von Systemen ohne Folgen bleibt.
+Input-/Output-Spezifikationen _nicht_ angemessen kommuniziert werden können
+und damit für die konkrete Dynamik des Netwzerks von Systemen ohne Folgen
+bleibt.
 
 Das "Netzwerk von Systemen" als eigenes System hat auch unzureichende
 Reflexionsstrukturen auf Systemebene und _kann_ diese enmergente Entwicklung
