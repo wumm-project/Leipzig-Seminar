@@ -12,6 +12,8 @@ Systeme in den Fokus, deren innere Dynamik eng mit menschlichem Handeln
 verbunden ist. Wir haben dabei festgestellt, dass derartige Systeme zusätzlich
 mindestens noch mit einer Zweck-Mittel-Perspektive aufgeladen sind.
 
+## Noch einmal zum Systembegriff
+
 Derartige Systeme spielen im TRIZ-Kontext als _Technische Systeme_ (klassische
 TRIZ-Terminologie), _Engineering Systems_ oder _man-made systems_ (Souchkov
 2014) eine zentrale Rolle, wobei Menschen hier sowohl als Subjekte des
@@ -134,3 +136,104 @@ der _Robustheit_ im Sinne von (Anderies 2004) zu berücksichtigen.
 
 Hans-Gert Gräbe, 19.12.2019
 
+## Zu Dynamiken sozio-ökologischer Systeme
+
+Noch einige Anmerkungen zu den in (Anderies 2004) zusammengetragenen
+Beispielen von Entwicklungspfaden des _groben konzeptionellen Modells_
+sozio-ökologischer Systeme mit seinen vier Komponenten
+* Ressourcen
+* Ressourcennutzern
+* Öffentlicher Infrastruktur und
+* Infrastrukturbetreiber.
+
+Am Beispiel _Straßenbau_ wird zunächst argumentiert, dass ein wesentlicher
+Eingriff in die bestehende Struktur in der Regel zu wesentlichen Veränderungen
+auch bestehender sozio-kultureller Gleichgewichte führt (Vereinfachen von
+Wegzügen, regionaler wirtschaftlicher Abschwung, Umwandlung einer Region in
+einen Satelliten in unfassenderen regionalen Ausdifferenzierungsprozessen).
+
+Am Beispiel der _Bewässerungssysteme in Bali_ wird weiter gezeigt, in welchem
+Umfang austarierte und historisch gewachsene informelle vorkapitalistische
+Systeme der Infrastrukturbewirtschaftung durch eine Kapitalisierung - und sei
+es in einer "grünen Revolution" - und Bürokratisierung unter Druck geraten,
+ohne dass "wissenschaftlich fundierte" Regulierungsformen auf der Basis
+formalisierter Modelle auch nur annähernd so erfolgreich in den Vollzugsformen
+sind wie die alten soziokulturellen Ansätze. 
+
+Insgesamt hat der Wechsel in den ökonomischen Formen großen Einfluss auf die
+Leistungsfähigkeit von SES; diese Systemstrukturen müssen mit transformiert
+werden. Damit bestätigt sich auch hier die _Marxsche These vom Primat der
+Ökonomie_.
+
+Der Übergang von direkter informeller Regelung in vorkapitalistischen Zeiten
+zu indirekten Regulierungen über Geldformen führt schnell zur Intransparenz
+von Wirkzusammenhängen und hebelt komplexe Interdependenzlogiken aus.  Damit
+wird es zunehmend einfach, auch _Betreiberrenten_ zu etablieren.  Praktisch
+wird versucht, dem durch staatliche Infrastrukturüberwachung ("Netzagenturen")
+zu begegnen.  Marx: Widerspruch zwischen den Interessen des Gesamtkapitals und
+der Einzelkapitale.
+
+Probleme nach dem Übergang zu kapitalistischen Bewirtschaftungsformen von
+Infrastrukturen entstehen vor allem dann, wenn sich das
+Kosten-Nutzen-Verhältnis durch Private defizitär entwickelt.  Dieses Phänomen
+ist inzwischen auch gut bekannt aus ÖPP-Projekten und der [Frage, ob Staaten
+pleite gehen können](https://de.wikipedia.org/wiki/Staatsbankrott).  Nach
+kapitalistischer Logik ist in einem solchen Fall die ökonomische Aktivität
+abzuwickeln, was die privaten Gewährsträger dann auch tun, ggf. durch
+_Insolvenz_. Die Aktivität kann aber nicht abgewickelt werden, da die
+öffentliche Infrastruktur benötigt wird. In der Regel wird dann nach der
+"öffentlichen Hand" gerufen - die Zeche bezahlt der Steuerzahler - oder die
+Leistungen fallen an einen "Grundversorger" mit deutlich anderen
+Preisstrukturen zurück.  Typisches Begelitphänomen ist der _Verfall der
+Infrastruktur_ durch Deinvestment, bevor es zum Krach kommt.
+
+_Widersprüche_ treten auch auf zwischen der (technischen) Betriebslogik und
+der (betriebswirtschaftlichen) Betreiberlogik, da hierbei unterschiedliche
+Zeit-, Raum- und Kausalhorizonte eine Rolle spielen.  Insbesondere kann das
+wissenschaftlich-technische _Beschreibungsmodell_ als Basis der
+Handlungsvollzüge mehr den ökonomischen Wunschvorstellungen folgen als den
+realweltlichen kausalen Zusammenhängen und damit zum Zusammenbruch der
+realweltlichen Reproduktionsstrukturen führen (Omega-Phase des adaptiven
+Zyklus).  Da die Wirkung jenseits einer Triggerschranke sehr schnell an Fahrt
+gewinnt, spielt vorher oft der Aufbau einer ideologischen _Scheinwelt_ eine
+Rolle, die trotz entsprechender realweltlicher Signale eigene interne
+Stabilisierungsmechanismen in der Unterscheidung von Wesentlichem und
+Unwesentlichem entwickelt.
+
+Am Beispiel des Aral-Sees wird weiter thematisiert, dass Nutzen einer
+spezifischen Infrastrukturentwicklung für die eine Gruppe deutlich negative
+Auswirkungen für andere Gruppen haben kann. Dies ist eine andere
+Widerspruchsebene zwischen verschiedenen Interessenlagen und Zielen, die -
+wiederum durch entsprechende Hebelwirkungen - zu wesentlichen Deformationen
+(bzw. - positiv gesprochen - Transformationen) bestehender großflächiger
+ökonomischer Strukturen führen kann.  In diesem Sinne ist _jede_ spezifische
+Bewirtschaftungsform einer öffentlichen Infrastruktur zugleich eine
+spezifische Form des Prozessierens widersprüchlicher Interessenlagen und
+Ziele.
+
+In (Anderies 2004) werden nach (Ostrom 1990) acht wesentliche Strukturmerkmale
+für die langfristig stabile Bewirtschaftung von Infrastrukturressourcen
+postuliert:
+1. Klar definierte Grenzen sowohl räumlich als auch bzgl. der
+   Zugangsbedingungen. 
+2. Proportionale Äquivalenz zwischen Nutzen und Kosten. Für jeden Einzelnen
+   müssen Nutzung und Kosten in angemessenem Verhältnis stehen.
+3. Beteiligung aller Infrastrukturnutzer an der Weiterentwicklung der
+   Nutzungsregeln.
+4. Die Nutzung und Entwicklung der Ressource muss gemeinschaftlich überwacht
+   werden. 
+5. Graduelle Sanktionen.  Verstöße gegen die Regeln müssen mit wachsender
+   Schärfe sanktioniert werden.
+6. Es muss Konfliktbewältigungs-Mechanisme geben ("local" und "low cost").
+7. Das Recht der Nutzer auf Bildung eigener Organisationsformen muss gewahrt
+   sein. 
+8. Mehrebenenprinzip der Organisation von Aneignung, Bereitstellung,
+   Überwachung, Durchsetzung, Konfliktlösung, Governance. 
+
+In der Konsequenz wird argumentiert, dass sich nicht nur die SES in adaptiven
+Zyklen (mit Umbauphasen) bewegen müssen, sondern auch die
+Infrastrukturbewirtschaftungsformen.  Gerade der _Umbau_ letzterer kann ein
+wichtiges Moment der _Robustheit_ ersterer sein. Also auch hier: Evolution des
+Systems schließt die Option des revolutionären Umbau seiner Komponenten ein.  
+
+Hans-Gert Gräbe, 20.01.2020
