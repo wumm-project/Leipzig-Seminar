@@ -2,4 +2,5 @@
 
 Thema: Systembegriff in der TRIZ-Methodik (Gräbe)
 * Literatur: (Koltze 2017)
-* Diskussionsleitung: Hans-Gert Gräbe, Opponenten: Fritzsche, Heuschkel
+* Diskussionsleitung: Hans-Gert Gräbe, Opponenten: Heuschkel
+* Tafelbild in zwei PDFs im Ordner

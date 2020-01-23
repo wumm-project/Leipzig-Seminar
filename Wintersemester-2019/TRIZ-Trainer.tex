@@ -9,7 +9,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{11. Januar 2020}
+\date{23. Januar 2020}
 
 \begin{document}
 \maketitle
@@ -81,43 +81,48 @@ verfolgen, kommentieren und bewerten.
 \section{Was ist zu tun?}
 
 Nach dem Einloggen gehen Sie einfach auf die Seite \emph{Aufgaben} und
-beginnen, die Aufgaben zu lösen, die Sie mögen.  Es werden Ihnen insgesamt 8
-Aufgabenserien angeboten, was aber eine eher technische Einteilung ist.  Das
-Lösen der Aufgaben setzt eine gewisse Vertrautheit mit der TRIZ-Methodik
-voraus, die Sie aber in den Hilfeanleitungen oder -- in kurzer Form -- in den
-Tooltipps erwerben können. Beide sind ins Deutsche übertragen, inzwischen auch
-die Mehrzahl der Grafiken im Hilfesystem. Probleme können im Chat vorgetragen
-oder in den Konsultationen besprochen werden.  Schauen Sie sich auch die
-\emph{Beispielaufgaben} sowie die Anmerkungen zum \emph{Lösungsprozess} an.
+beginnen, die Aufgaben zu lösen, die Sie mögen.  Es empfiehlt sich natürlich,
+vorher die Hinweise unter \emph{Lösungsprozess} genauer zu studieren.  Dort
+sind zu jedem Schritt im Lösungsprozess ausführliche Hinweise gegeben, was im
+jeweiligen Schritt zu tun ist, und wie an die Teilaufgabe herangegangen werden
+sollte. 
 
-Die Aufgaben und das Lösungsschema orientieren sich am „Weihnachtsbaum“ auf
-der Einstiegsseite.  Die Aufgaben sind so weit heruntergebrochen, dass sie nur
-\emph{eine} widersprüchliche Grundsituation enthalten bzw. nur auf eine solche
-fokussiert wird.  Dieser Konflikt (zwischen nützlichen und schädlichen
-Wirkungen) ist in einer (genaueren) Modellierung zu lokalisieren, danach die
-\emph{Operative Zone} raum-zeitlich zu bestimmen und eine Hypothese (als
-„Mini-Aufgabe“) aufzustellen, auf dieser Basis zu entscheiden, welches der
-vier Problemmodelle angewendet werden soll, um die Ausgangssituation in eine
-Lösung zu transformieren.  Mehr dazu finden Sie im Abschnitt „Algorithmus zur
+Es werden Ihnen insgesamt 8 Aufgabenserien angeboten, was aber eine eher
+technische Einteilung ist.  Das Lösen der Aufgaben setzt eine gewisse
+Vertrautheit mit der TRIZ-Methodik voraus, die Sie aber in den
+Hilfeanleitungen oder -- in kurzer Form -- in den Tooltipps erwerben können.
+Beide sind ins Deutsche übertragen, inzwischen auch die Mehrzahl der Grafiken
+im Hilfesystem. Probleme können im Chat vorgetragen oder in den Konsultationen
+besprochen werden.  Schauen Sie sich auch die \emph{Beispielaufgaben} an.
+
+Die Aufgaben sind so weit heruntergebrochen, dass sie (meist) nur \emph{eine}
+widersprüchliche Grundsituation enthalten bzw. nur auf eine solche fokussiert
+wird.  In der \emph{ersten Phase der Lösung} ist dieser Konflikt (zwischen
+nützlichen und schädlichen Wirkungen) in einer (genaueren) Modellierung zu
+lokalisieren, danach die \emph{Operative Zone} raum-zeitlich zu bestimmen und
+eine Hypothese (als „Mini-Aufgabe“) aufzustellen, \emph{wie} das Problem
+gelöst werden könnte. Es geht an der Stelle zunächst darum, das zu
+betrachtende \emph{System} zu fixieren, dessen Komponenten und deren
+Funktionalitäten zu bestimmen und den Ort des Konflikts genauer zu
+lokalisieren.  Am Ende dieser Analyse (in der Informatik auch als
+\emph{Anforderungsanalyse} bezeichnet) steht ein genaues Modell des Systems.
+Weiter ist eine \emph{Aufgabe} formuliert, deren Umsetzung das Problem löst.
+Es kann sein, dass sich während dieser Systemmodellierung herausstellt, dass
+ein anderer Detailgrad als System angemessener ist (siehe „Ergänzendes $\to$
+Hierarchisches Prozessmodell“).  Dann muss die Modellierung auf jenem Level
+wiederholt werden. Mehr dazu finden Sie im Abschnitt „Algorithmus zur
 Korrektur von Problemsituationen (AIPS-2015)“ im Tab „Ergänzendes“.  Hilfreich
 ist es hierbei auch, die Ausführungen in (Koltze/Souchkov 2017, Kapitel 4.3)
 zum Zusammenhang zwischen technischen (TW) und physikalischen (PW)
 Widersprüchen zu beachten und zu einem (gelegentlich offensichtlichen) PW die
 TW zu rekonstruieren, um zu verstehen, wie der PW im Gesamtsystem der
 Modellierung einzubetten ist.
-\enlargethispage{-1em}
 
-Im TRIZ-Trainer wird das Konzept der \emph{Maschine} als grundlegende Struktur
-der Modellierung eingesetzt, womit die Wirkung eines \emph{Werkzeugs}
-(Instrument, Arbeitsorgan) auf ein \emph{zu bearbeitendes Objekt} erfasst
-wird, um ein \emph{nützliches Produkt} herzustellen.  Dieses
-\emph{Arbeitsorgan} ist Teil eines Produktionsprozesses, der durch einen
-\emph{Antrieb} angetrieben wird, dessen Leistung über eine \emph{Transmission}
-auf das Arbeitsorgan übertragen wird.  Das Ganze wird von einer
-\emph{Steuereinheit} gesteuert und der Antrieb von einer \emph{Energiequelle}
-gespeist.  Dieses stark an ingenieur-technischen Termini orientierte Konzept
-wird auch auf allgemeinere Situationen übertragen und ist dann sinngemäß
-anzuwenden.
+Zur spezifizierten Aufgabe werden in der \emph{zweiten Phase der Lösung} durch
+genaue Analyse der verfügbaren Ressourcen eine oder mehrere
+\emph{Lösungsideen} gefunden, von denen in der \emph{dritten Phase} eine zur
+\emph{finalen Lösung} genauer auszuarbeiten ist.  Im Gegensatz zur
+Anforderungsanalyse stehen dabei andere TRIZ-Werkzeuge im Vordergrund.
 
 Wenn die Lösungsvorlage vollständig ausgefüllt ist, können Sie die Lösung zur
 Überprüfung absenden. In diesem Fall erhält der Trainer einen Hinweis auf
@@ -146,29 +151,72 @@ Seite \emph{Ergebnisse} dem zugeordneten Trainer angezeigt. Der Trainer kann
 so bereits sehen, welche Aufgaben die ihm zugeordneten Bearbeiter zu lösen
 begonnen (aber noch nicht beendet) haben und kann den Fortschritt ihrer Arbeit
 verfolgen. Der Trainer kann in diesem Stadium bereits Kommentare zu den
-einzelnen Schritten oder im Chat\footnote{11.01.2020: Aktuell gibt es ein
-  Problem mit der Begrenzung der angezeigten Zeichen im Chat, das vom
-  Entwicklerteam noch genauer analysiert werden muss.} zur Aufgabe
-hinterlassen.
+einzelnen Schritten hinterlassen.
 
-Wenn der Bearbeiter das Problem gelöst hat (formal: alle Felder der Vorlage
-sind ausgefüllt), kann er auf die Schaltfläche \emph{Zur Überprüfung
-  einreichen} klicken und damit die Aufgabe \emph{zur Überprüfung} einreichen.
-Der Trainer analysiert die Lösung des Bearbeiters und kann Kommentare zu den
-Schritten und im Chat hinterlassen. Dabei ist die Entscheidung zu treffen, die
-Lösung anzuerkennen oder zur Überarbeitung zurückzugeben. Dies erfolgt über
-die Schaltfläche \emph{Bearbeiten}. Im geöffneten Formular kann der Trainer
-den Status ändern und einen Kommentar hinterlassen (Review).  Die Möglichkeit
-einer \emph{Bewertung} ist aktuell nicht aktiviert, sondern nur als
-potenzielle Variante für eine spätere Implementierung angelegt. Dem Bearbeiter
-wird der Status der Lösung und die Kommentare des Trainers (falls vorhanden)
-über seine Benachrichtigungen und auch per E-Mail mitgeteilt\footnote{Hier
-  allerdings wohl nur -- wie in den „Notifications“ --, \emph{dass} ein neuer
-  Kommentar abgegeben wurde, und es wird auf diesen verlinkt.}.  Wenn die
-Aufgabe zur Überarbeitung zurückverwiesen wird, ist sie vom Bearbeiter erneut
-zu bearbeiten. Wenn die Lösung akzeptiert wurde, ist die Bearbeitung der
-Aufgabe beendet.
-\enlargethispage{1em}
+Wenn der Bearbeiter das Problem gelöst hat, kann er auf die Schaltfläche
+\emph{Zur Überprüfung einreichen} klicken und damit die Aufgabe zur
+Überprüfung einreichen.  Der Trainer analysiert die Lösung des Bearbeiters und
+kann Kommentare zu den Schritten hinterlassen. Dabei ist die Entscheidung zu
+treffen, die Lösung anzuerkennen oder zur Überarbeitung zurückzugeben. Die
+Möglichkeit einer \emph{Bewertung} ist aktuell nicht aktiviert, sondern nur
+als potenzielle Variante für eine spätere Implementierung angelegt. Dem
+Bearbeiter wird der Status der Lösung und die Kommentare des Trainers (falls
+vorhanden) über seine Benachrichtigungen und auch per E-Mail mitgeteilt.  Wenn
+die Aufgabe zur Überarbeitung zurückverwiesen wird, ist sie vom Bearbeiter
+erneut zu bearbeiten. Wenn die Lösung akzeptiert wurde, ist die Bearbeitung
+der Aufgabe beendet.
+
+\section{Weitere Hinweise}
+
+Im TRIZ-Trainer wird in der Analysephase das Konzept der \emph{Maschine} als
+grundlegende Struktur der Modellierung eingesetzt, womit die Wirkung eines
+\emph{Werkzeugs} (Instrument, Arbeitsorgan) auf ein \emph{zu bearbeitendes
+  Objekt} erfasst wird, um ein \emph{nützliches Produkt} herzustellen.  Dieses
+\emph{Arbeitsorgan} ist Teil eines Produktionsprozesses, der durch einen
+\emph{Antrieb} angetrieben wird, dessen Leistung über eine \emph{Transmission}
+auf das Arbeitsorgan übertragen wird.  Das Ganze wird von einer
+\emph{Steuereinheit} gesteuert und der Antrieb von einer \emph{Energiequelle}
+gespeist.  Dieses stark an ingenieur-technischen Termini orientierte Konzept
+wird auch auf allgemeinere Situationen übertragen und ist dann sinngemäß
+anzuwenden.  Siehe auch „Lösungsprozess $\to$ Aufbau und Bedienung der
+Maschine“.
+
+Es empfiehlt sich, das zu lösende Problem erst einmal mit Bleistift und Papier
+genauer zu analysieren. Dabei sollte man für sich genau klären
+\begin{itemize}
+\item[1.] Was ist das „System“ (also jener Teil, der für die Hauptfunktion in
+  der Problemstellung in der Folge Energiequelle $\to$ Antrieb $\to$
+  Transmission $\to$ Arbeitsorgan $\to$ Objekt $\to$ nützliches Produkt +
+  Steuerung relevant ist)? Also etwa im Beispiel Schiffsmast „das Boot“.
+
+\item[2.] Was ist das nützliche Produkt? Ein Produkt ist etwas (zu einem
+  späteren Zeitpunkt) bereits Fertiges, etwa „Das Boot ist auf der anderen
+  Seite der Brücke“.
+
+\item[3.] Was ist das Nützlichkeitsprinzip? Wie entsteht das nützliche
+  Produkt? Etwa, „das Boot fährt unter der Brücke hindurch“.
+
+\item[4.] Genaue Analyse der Maschine (mit den oben angegebenen Teilen), dazu
+  den Begriff „Maschine“ im Sinne des TRIZ-Trainers verstehen, siehe
+  „Ergänzendes $\to$ nützliches technisches System“ und wie die Maschine
+  arbeitet (siehe Funktionales Modell und Prozessmodell).
+\end{itemize}
+Das System hat einen äußeren Zweck (nach dem Prinzip hergestelltes nützliches
+Produkt) -- die Spezifikation, mit der Maschine wird beschrieben, wie das
+innen implementiert ist. Ein System und damit die Maschine besteht aus
+Komponenten, die ggf. weiter analysiert werden müssen. Dazu wird dasselbe
+Analyseschema rekursiv auf die interessierende Komponenten angewendet, siehe
+„Ergänzendes $\to$ Hierarchisches Prozessmodell“.
+
+In vielen Fällen wurde diese Analyse sehr ungenau vorgenommen, aber eine
+plausible Lösung als Endergebnis vorgeschlagen, die dann aber meist vom Himmel
+fällt (in dem Sinne, dass von der ersten Zeile eigentlich klar ist, wo die
+Reise hingehen soll). In einem solchen Fall lohnt es, das Ganze von hinten her
+aufzurollen und zu überlegen, wie man mit TRIZ auf diese Lösung gekommen
+wäre. Insbesondere steht die Frage, ob eines der 40 TRIZ-Prinzipien (oder
+mehrere anwendbar wäre und ggf. welche(s). Durch den Übergang auf eine solche
+abstraktere Ebene wird oft auch klarer, wie man die Modellierung aufziehen
+sollte.
 
 \section{Anmerkungen von Anton}
 
