@@ -178,3 +178,110 @@ wesentlich interagieren:
    (die institutionalisierten Verfahrensweisen) und
 3. Die kooperativen Subjekte (mit ihrem "privaten" Verfahrenskönnen).
 
+Zwischen den Sphären 1 und 2 bestehen _kausale_ m:n-Beziehungen, durch Sphäre
+3 werden diese Beziehungen _praktisch_ vermittelt.
+
+Die drei "kinds of rules" (ebenda:3.3. - der Begrifff "Institution" wird hier
+bewusst abgewählt- S. 403, Fußnote 1), über welche eine solche Vermittlung in
+einem "model of agency" läuft, werden als Basis einer gemeinsamen
+"interpretation of the world" konkreter kooperativer Subjekte identifiziert,
+die sich im _Handeln_ jener Strukturen ("use rules", "rules are not only
+constraining but also enabling") bewähren müssen und befestigt werden.  Dies
+sind die Formen, in denen die _Pragmatik_ zwischen den Sphären 1 und 2
+vermittelt und damit _realweltliche Begriffsbildungsprozesse_ induziert bis
+hin zur "conceptualisation of sociotechnical landscape" that "... forms an
+external context that actors cannot influence in the short run".
+
+Damit werden die Argumentationen in (ebenda:Fig. 4 und Table 1) in ihrem
+absoluten Anspruch eines "environmental change" fragwürdig, das Einträge wie
+"low" und "high" (Table 1) nur gegen klare Etalongrößen Sinn ergeben, hier
+also implizit Eigenzeiten und Eigenräume eines Obersystems als Referenz dienen
+(bzw., wenn man sich wie ebenda allein an der Ablauforganisation
+interagierender Systeme orientiert, ein solches Referenzsystem erst noch
+identifiziert werden muss). Dass jenes "environmental system" seit wenigstens
+10000 Jahren als kulturell überformt betrachtet werden muss, sei nur in
+Parenthese angemerkt. Eine solche Einhegung wird dann mit den Begriffen
+_Frame_ und _Closure_ (ebenda:S. 405) auch versucht, jedoch auf einem recht
+simplen Niveau unmittelbar transformierender Wirkung differierender
+Wachstumsraten.  In anderen Beispielen wird jedoch gezeigt, dass
+Ungleichheiten in der Ressourcenverfügung von Akteuren auch oft eingesetzt
+wird, um anstehende Transformationen _zu verhindern_.  Der emergente Wffekt
+ist dann mglw. eine sinkende Performanz des Gesamtsystems. Selbst der
+beschriebene Wettbewerb auf der Basis differierender Wachstumsraten kann auf
+der Emergenzebene des Gesamtsystems gegenteilig wirken, wie etwa Marx mit
+seinem Gesetz der fallenden Profitrate argumentiert (egal, ob dieses Gesetz
+nun wirklich wirkt oder in einem dissipativen Systemkontext die Argumente
+anders zu bedenken sind).
+
+Damit lassen sich die 6 Transformationsmuster P0 bis P5 wie folgt auf Hollings
+Modell adaptiver Zyklen abbilden:
+
+__P0:__ Das System in der r-Phase kann den Veränderungsdruck aus einer seiner
+Komponenten ("no external landscape pressure") absorbieren. Dasselbe bleibt
+richtig, wenn der Druck "von außen" (also von anderen Systemen) kommt und
+nicht zu groß wird.
+
+__P1:__ Druck von "außen", kein Druck aus den Komponenten, System in der
+K-Phase.  Das System kann nur durch Reorganisation der Beziehungen reagieren.
+Die Autoren sind weitgehend ratlos, vermischen allerdings auch zwei Modi:
+
+1. Das System ist in der alpha-Phase eigener Umbauprozesse.
+2. Das System ist im Übergang in die Omega-Phase.
+
+Das Beispiel (Dänische Hygiene-Transition) ist klar eines für die Dynamik in
+der Omega-Phase, dem auf der TRIZ-Seite ein Übergang von einer S-Kurve auf
+eine andere entspricht. Wie das geht, versteht man dort allerdings auch
+nicht.  Das Beispiel folgt
+
+__Modell Omega_1:__ Das System wird reorganisiert, die Funktion im Obersystem
+bleibt erhalten bzw. wird verbessert.
+
+__P2:__ Das System wird zerlegt, seine Komponenten anders reorganisiert.  Als
+typisches Phänomen wird "Vakuum" abgeleitet, wie es auch als Machtvakuum beim
+Zerfall des Ostblocks zu beobachten war. Das Beispiel berücksichtigt nicht,
+dass die neuen Bedingungen (Automobil ersetzt Transport durch Pferde) sich
+bereits länger auch strukturell in den Subsystemen - "im Schoße der alten
+Gesellschaft" - herausgebildet haben. Im weiteren Beispiel bleibt die
+[K-Wellen-Dynamik](https://www.kondratieff.net/kondratieffzyklen) um 1890
+unberücksichtigt.
+
+__P3:__ Der Druck kommt nicht aus der Umgebung, sondern von einzelnen
+Komponenten. Das System kann sich selbst so reorganisieren, dass die neuen
+äußeren für die Komponenten Bedingungen sichergestellt werden, ohne die
+Funktionalität des Systems nach außen aufzugeben.  Das Erklärungspotenzial ist
+dünn, "avalange change" und "disruptive change" als "landscape pressure"
+existieren erstens dauernd als "disturbances" und sind zweitens hier nicht
+kausal, wenn auch möglicherweise triggernd. Im Beispiel bleibt die Wirkung der
+K-Welle um 1890 ebenfalls unberücksichtigt. Ebenso werden für solche
+Transitionen typische "Marktbereinigungen" nicht besprochen, da das produktive
+Ausrollen der neuen Technologien in größerem Umfang auch größere Mengen
+vorgeschossenes Kapital erfordert.
+
+__P4:__ Komponenten in Omega-Phase treffen auf ein System in alpha-Phase.
+Eigentlich wird die Transition aber aus einer kausal tiefer liegenden
+Technologieebene getriggert, die Auswirkungen auf _viele_ Komponenten hat und
+diese in Omega-Phase bringt, was jedoch vom Syste in alpha-Phase aufgefangen
+werden kann. So auch das Beispiel.
+
+__P5:__ Im Gegensatz zu P4 lassen sich die Änderungen _nicht_ im System
+auffangen und werden weitergeleitet. Damit werden auch die Beziehungen des
+Systems nach außen instabil.  Die Autoren sind ziemlich ratlos ("sequence of
+transition pathways") und haben auch kein Beispiel zur Hand.
+
+Generell wird angemerkt, dass derart komplexe Prozesse nicht nur nicht
+monokausal erklärt werden können, sondern auch die Variablen in mathematischen
+Beschreibungsmodellen nicht in abhängige und unabhängige unterteilt werden
+können.  Deshalb könne man nur von _Entwicklungsmustern_ sprechen.  Die weiter
+referenzierten Prozess-Theorien blenden mit einer Fokussierung auf
+Ereignisketten in zeitlicher uns kausaler Verkettung allerdings _strukturelle
+Momente_ weitgehend aus, die sich mit fortgeschrittenen mathematischen
+Methoden durchaus auch in komplexer strukturierten Phasenräumen noch gewinnen
+lassen.
+
+Giddens' Ansatz der "rules as structures, which are recursively reproduced
+(used, changed) by actors" weist in eine Richtung, in der solche strukturellen
+Erkenntnisse mit Beschreibungen von Handlungsvollzugsformen konkreter
+kooperativer Subjekte auf verschiedenen Abstraktionsebenen zu kombinieren
+sind.
+
+Hans-Gert Gräbe, 27.01.2020
