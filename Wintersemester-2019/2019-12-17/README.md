@@ -204,7 +204,7 @@ _Frame_ und _Closure_ (ebenda:S. 405) auch versucht, jedoch auf einem recht
 simplen Niveau unmittelbar transformierender Wirkung differierender
 Wachstumsraten.  In anderen Beispielen wird jedoch gezeigt, dass
 Ungleichheiten in der Ressourcenverfügung von Akteuren auch oft eingesetzt
-wird, um anstehende Transitionen _zu verhindern_.  Der emergente Wffekt ist
+werden, um anstehende Transitionen _zu verhindern_.  Der emergente Effekt ist
 dann mglw. eine sinkende Performanz des Gesamtsystems. Selbst der beschriebene
 Wettbewerb auf der Basis differierender Wachstumsraten kann auf der
 Emergenzebene des Gesamtsystems gegenteilig wirken, wie etwa Marx mit seinem
@@ -215,14 +215,15 @@ zu bedenken sind).
 Damit lassen sich die sechs Transitionsmuster P0 bis P5 wie folgt auf Hollings
 Modell adaptiver Zyklen abbilden:
 
-__P0:__ Das System in der r-Phase kann den Veränderungsdruck aus einer seiner
-Komponenten ("no external landscape pressure") absorbieren. Dasselbe bleibt
-richtig, wenn der Druck "von außen" (also von anderen Systemen) kommt und
-nicht zu groß wird.
+__P0:__ Das System ist in der r-Phase und kann den Veränderungsdruck aus einer
+seiner Komponenten ("no external landscape pressure") absorbieren. Dasselbe
+bleibt richtig, wenn der Druck "von außen" (also von anderen Systemen) kommt
+und nicht zu groß wird.
 
-__P1:__ Druck von "außen", kein Druck aus den Komponenten, System in der
-K-Phase.  Das System kann nur durch Reorganisation der Beziehungen reagieren.
-Die Autoren sind weitgehend ratlos, vermischen allerdings auch zwei Modi:
+__P1:__ Druck von "außen", kein Druck aus den Komponenten, System beim
+Verlassen oder jenseits der K-Phase.  Das System kann nur durch Reorganisation
+der Beziehungen reagieren.  Die Autoren sind weitgehend ratlos, vermischen
+allerdings auch zwei Modi:
 
 1. Das System ist in der alpha-Phase eigener Umbauprozesse.
 2. Das System ist im Übergang in die Omega-Phase.
@@ -231,7 +232,7 @@ Das Beispiel (Dänische Hygiene-Transition) ist klar eines für die Dynamik in
 der Omega-Phase, dem auf der TRIZ-Seite ein Übergang von einer S-Kurve auf
 eine andere entspricht. Wie das geht, versteht man dort allerdings auch nicht.
 Das Beispiel folgt __Modell Omega_1:__ Das System wird reorganisiert, die
-Funktion im Obersystem bleibt erhalten bzw. wird verbessert.
+Funktion nach außen bleibt erhalten bzw. wird verbessert.
 
 __P2:__ Das System wird zerlegt, seine Komponenten anders reorganisiert.  Als
 typisches Phänomen wird "Vakuum" diagnostiziert, wie es auch als Machtvakuum
@@ -281,6 +282,6 @@ Giddens' Ansatz der "rules as structures, which are recursively reproduced
 (used, changed) by actors" weist in eine Richtung, in der solche strukturellen
 Erkenntnisse mit Beschreibungen von Handlungsvollzugsformen konkreter
 kooperativer Subjekte auf verschiedenen Abstraktionsebenen zu kombinieren
-sind.
+wären.
 
 Hans-Gert Gräbe, 27.01.2020
