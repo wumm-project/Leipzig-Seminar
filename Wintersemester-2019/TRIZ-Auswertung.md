@@ -1,7 +1,6 @@
 # Auswertung der Arbeit mit dem TRIZ-Trainer
 
-Grundlage der folgenden Überlegungen sind eigene Beobachtungen sowie ein
-ausführliches Gespräch mit den beteiligten Studierenden am 28.01.2020.
+## Aufzeichnungen nach der Diskussion am 28.01.2020 mit den beteiligten Studierenden.
 
 Zunächst die methodischen Erfahrungen:
 
@@ -57,7 +56,7 @@ diskutiert.
 (a) Das hatte ich schon anderenorts thematisiert. Geht man vom System
 "Wasserstraßennetz" aus, so ist eine einfache Lösung "gib im Navi ein, dass
 die Brücke gesperrt ist, und lass das Navi einen anderen Weg suchen".  Das ist
-wahrscheonlich nicht im Sinne der Aufgabenstellung, denn die fordert
+wahrscheinlich nicht im Sinne der Aufgabenstellung, denn die fordert
 eigentlich, dort durchzufahren, egal wie sinnvoll das ist.  Start könnte also
 beim System "Boot" sein, bei dessen Analyse kommt der Mast aber nicht vor.  Es
 bleibt hier also unklar, wozu der Mast überhaupt gut ist. Die beiden
@@ -116,3 +115,74 @@ Lösungen unter dieser Bedingung seien überhaupt nur im System "Steinbruch" als
 Ganzem denkbar.
 
 An welche Lösung denken die Autoren?
+
+## Antwort von Nikolay Shpakovsky
+
+<blockquote> Das Ziel ist nicht, Probleme zu lösen, sondern am Lösen von
+Problemen mit der Methodik vertraut zu werden. </blockquote>
+
+Richtig, das Ziel ist es, sich mit der Methodik vertraut zu machen und die
+Fähigkeiten zu trainieren. Der Kurs ist so konzipiert, dass die Vertrautheit
+mit der Methodik durch Problemlösen entsteht. Die ersten Aufgaben werden mit
+dem Trainer ausführlich besprochen, damit der Student die Essenz des
+Algorithmus und die Aktionen in ihren spezifischen Schritten versteht. Dies
+ist nicht möglich, ohne die Theorie zu verstehen. Mit zunehmendem Verständnis
+wird der selbstständigen Arbeit, dem Training und der Entwicklung von
+Fähigkeiten mehr Aufmerksamkeit geschenkt.
+
+In der Tat wird das Prinzip des „flipped classroom“ angewendet, aber Folgendes
+muss beachtet werden. In jedem Schritt gibt es Tipps und Links zu den
+entsprechenden Abschnitten der Theorie.  Sie sollten besonders aktiv
+eingesetzt werden, wenn die ersten 5-7 Aufgaben gelöst werden, bis die
+Teilnehmer verstehen, was von ihnen verlangt wird. Hier spielt auch der
+Trainer eine wichtige Rolle, der dies erklären muss.
+
+<blockquote> Parallel zum Praktikum einen Online-Kurs anbieten. </blockquote>
+
+Während des Fernunterrichts erfolgt die Kommunikation die gesamte Zeit über
+den Chat - so kann direkt mit den Studenten gearbeitet werden.  Der Ansatz
+eines begleitenden Online-Kurses unterscheidet sich kaum vom klassischen, wo
+der größte Teil der Zeit für das Studium der Theorie aufgewendet wird. Dies
+ist ohne Bezugnahme auf das Lösen von Problemen unproduktiv. Wir halten dies
+für falsch, die Theorie sollte auf der Basis zu lösender Probleme
+verinnerlicht werden.  Das schließt natürlich nicht aus, dass der Student sich
+mit der Theorie vertraut macht.  Er soll diese bei der Lösung der Probleme
+studieren.
+
+<blockquote> Arbeit in Zweier-Teams. </blockquote>
+
+Dies ist eine sehr gute Idee, wir werden die Möglichkeit ihrer Umsetzung
+prüfen.
+
+<blockquote>Kontextualisierung des Problems. </blockquote>
+
+Ganz richtig, das ist das Problem des TRIZ-Trainings. Altschuller tat dies in
+seinen Büchern. Aber im Unterricht (bei Altschuller) lösten die Leute das
+Problem und passten nicht die Antwort an die TRIZ-Methodik an. Leider ist das
+weitgehend vergessen und TRIZ-Training besteht heute oft darin, die Antwort zu
+begründen, die der Student bereits kennt.
+
+Genau dieses Problem lösen wir mit unserem Ansatz. Es ist die Lösung von
+Problemen nach dem zu trainierenden Algorithmus zu finden. Zu sagen, mit
+welcher TRIZ-Methode ein bereits gelöstes Problem gelöst werden kann - das hat
+nur einen sehr geringen Effekt.
+
+An der Tatsache, dass die Lösung dem Trainer bekannt ist, ist nichts
+auszusetzen, denn dafür ist er der Trainer. Seine Hauptaufgabe ist es, den
+Studenten durch den im TRIZ-Trainer festgelegten Prozess zu führen. Die
+Hauptsache ist, den Studenten zu überzeugen, nach dem Algorithmus und dem
+empfohlenen Prozess zu arbeiten.
+
+Wir glauben natürlich, dass Trainer von unseren Spezialisten geschult werden
+sollten, um den Lernprozess des TRIZ-Trainers besser zu verstehen.  Das machen
+wir jetzt mit den Ukrainern.  Außerdem bereiten wir methodische Materialien
+vor. Das wichtigste davon ist die Analyse jeder Aufgabe nach dem Template. Nur
+der Trainer kann diese Analysen sehen, was ihm hilft, die Studenten bei der
+Lösung des Problems besser anzuleiten.  Natürlich wäre es besser, Schulungen
+für Trainer zu organisieren. Wir werden in Zukunft darauf bestehen, aber jetzt
+musste alles schnell gehen, um die deutsche Version noch in diesem Semester
+produktiv zu schalten. Deshalb stellen sich Fragen.
+
+## Hinweise zu den Lösungen einzelner Aufgaben
+
+Das wird im Seminar genauer besprochen. 
