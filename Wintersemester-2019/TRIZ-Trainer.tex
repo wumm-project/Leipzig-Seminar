@@ -9,7 +9,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{1. März 2020}
+\date{2. März 2020}
 
 \begin{document}
 \maketitle
@@ -39,13 +39,12 @@ sind aber nicht Teil des im TRIZ-Trainer eingebauten strukturierten Vorgehens.
 Der TRIZ-Trainer ist selbst noch in Entwicklung, insbesondere der Ausbau
 verschiedener Sprachversionen.  Im Rahmen unserer Kooperation habe ich die
 Minsker Kollegen bei der Erstellung einer deutschsprachigen Version
-unterstützt.  Diese Arbeit ist aktuell zu 80\% umgesetzt, ein Teil der
-deutschen Texte sind noch die Rohversionen, die Google Translate geliefert
-hat.  Einige Teile des TRIZ-Trainers im Bereich \emph{Ergänzendes} sind noch
-nicht in einer deutschen Version verfügbar. Dies sowie die weitere
-Konsolidierung der Übersetzungen erfolgt im Zuge des weiteren Einsatzes des
-TRIZ-Trainers über das dort eingebaute Redaktionssystem.  Fortschritte in
-diesem Bereich werden also unmittelbar wirksam.
+unterstützt.  Diese Arbeit ist aktuell zu 80\% umgesetzt, einige Teile des
+TRIZ-Trainers im Bereich \emph{Ergänzendes} sind noch nicht in einer deutschen
+Version verfügbar. Dies sowie die weitere Konsolidierung der Übersetzungen
+erfolgt im Zuge des weiteren Einsatzes des TRIZ-Trainers über das dort
+eingebaute Redaktionssystem.  Fortschritte in diesem Bereich werden also
+unmittelbar wirksam.
 
 \section{Der Workflow im TRIZ-Trainer}
 
@@ -79,7 +78,8 @@ Trainer Kommentare abgeben. Da in den bisherigen Auswertungen die Sichtbarkeit
 des „Teacher's Review“ bemängelt wurde, werde ich solche Kommentare
 grundsätzlich nur noch in die Felder „Teacher Comment“ eintragen.  Basierend
 auf den Ergebnissen der Durchsicht wird die Aufgabe bewertet und abgeschlossen
-oder zur Überarbeitung zurückgeben.
+(Status \emph{credited}) oder zur Überarbeitung zurückgeben (Status \emph{to
+  fix}).
 
 Es gibt also kein „richtig“ oder „falsch“, sondern die Qualität der Lösung
 wird begutachtet. Mehr dazu auch weiter unten in den „Anmerkungen von
@@ -106,14 +106,15 @@ einzelnen Schritten hinterlassen.
 Wenn der Bearbeiter das Problem gelöst hat, kann er auf die Schaltfläche
 \emph{Zur Überprüfung einreichen} klicken und damit die Aufgabe einreichen.
 Der Trainer analysiert die Lösung des Bearbeiters, kommentiert einzelne
-Schritte und trifft die Entscheidung, die Lösung anzuerkennen oder zur
-Überarbeitung zurückzugeben. Die Möglichkeit einer \emph{Bewertung} ist
-aktuell nicht aktiviert, sondern nur als potenzielle Variante für eine spätere
-Implementierung angelegt. Dem Bearbeiter wird der Status der Lösung und die
-Kommentare des Trainers (falls vorhanden) über seine Benachrichtigungen und
-auch per E-Mail mitgeteilt.  Wenn die Aufgabe zur Überarbeitung
-zurückverwiesen wird, ist sie vom Bearbeiter erneut zu bearbeiten. Wenn die
-Lösung akzeptiert wurde, ist die Bearbeitung der Aufgabe beendet.
+Schritte und trifft die Entscheidung, die Lösung anzuerkennen (Status
+\emph{credited}) oder zur Überarbeitung zurückzugeben (Status \emph{to fix}).
+Die Möglichkeit einer \emph{Bewertung} ist aktuell nicht aktiviert, sondern
+nur als potenzielle Variante für eine spätere Implementierung angelegt. Dem
+Bearbeiter wird der Status der Lösung und die Kommentare des Trainers (falls
+vorhanden) über seine Benachrichtigungen und auch per E-Mail mitgeteilt.  Wenn
+die Aufgabe zur Überarbeitung zurückverwiesen wird, ist sie vom Bearbeiter
+erneut zu bearbeiten. Wenn die Lösung akzeptiert wurde, ist die Bearbeitung
+der Aufgabe beendet.
 
 \section{Was ist zu tun?}
 
@@ -121,9 +122,10 @@ Lösung akzeptiert wurde, ist die Bearbeitung der Aufgabe beendet.
 
 Nach dem Einloggen gehen Sie auf die Seite \emph{Aufgaben} und beginnen, die
 Aufgaben zu lösen, die Sie mögen.  Es empfiehlt sich natürlich, vorher die
-Hinweise unter \emph{Lösungsprozess} genauer zu studieren.  Dort sind zu jedem
-Schritt im Lösungsprozess ausführliche Hinweise gegeben, was im jeweiligen
-Schritt zu tun ist, und wie an die Teilaufgabe herangegangen werden sollte.
+Hinweise unter \emph{Lösungsprozess} und diese Handreichung genauer zu
+studieren.  Im Hilfesystem des TRIZ-Trainers sind zu jedem Schritt im
+Lösungsprozess ausführliche Hinweise gegeben, was im jeweiligen Schritt zu tun
+ist, und wie an die Teilaufgabe herangegangen werden sollte.
 
 Es werden Ihnen mehrere Aufgabenserien angeboten, was aber eine eher
 technische Einteilung ist.  Das Lösen der Aufgaben setzt eine gewisse
@@ -148,7 +150,7 @@ gelöst werden könnte. Es geht zunächst darum,
   Spezifikation, Abschnitt „Präzisierung der Umstände“) zu ermitteln,
 \item dessen Komponenten und deren Funktionalitäten zu bestimmen
   (Aufbauorganisation, Abschnitt „Maschine“; beachten Sie den Abschnitt
-  „Aufbau und Funktionsweise der Maschine erforschen“ im Teil
+  „Aufbau und Funktionsweise der Maschine erforschen“ im Hilfeteil
   „Lösungsprozess“),
 \item das Zusammenwirken der Komponenten zur Erfüllung des System-Zwecks zu
   beschreiben (Abschnitt „Wie die Maschine arbeitet“) und 
@@ -163,7 +165,7 @@ bezeichnet) steht ein genaues Modell des Systems.  Weiter ist (Abschnitt
 Umsetzung das Problem lösen würde. In anderen Ansätzen wird diese Aufgabe auch
 bereits als \emph{partielle Lösung} bezeichnet, da mit der Formulierung der
 Hypothese im Gegensatz zum Brainstorming der im Weiteren zu analysierende
-Lösungsraum \emph{begründet} bereits massiv fokussiert wurde, die
+Lösungsraum \emph{begründet} bereits massiv fokussiert wird, die
 \emph{Richtung} der Lösung an dieser Stelle bereits klar ist, auch wenn die
 Details im weiteren Prozess noch ausgearbeitet werden müssen.
 
@@ -185,7 +187,7 @@ Zusammenhängen, die Ihnen aus der Schule geläufig sein sollten\footnote{Etwa
 Zur spezifizierten Hypothese werden in der \emph{zweiten Phase der Lösung}
 durch genaue Analyse der verfügbaren Ressourcen eine oder mehrere
 \emph{Lösungsideen} gefunden, von denen in der \emph{dritten Phase} eine zur
-\emph{finalen Lösung} genauer auszuarbeiten ist.  Im Gegensatz zur
+\emph{finalen Lösung} genauer auszuarbeiten ist.  Im Vergleich zur
 Anforderungsanalyse stehen dabei andere TRIZ-Werkzeuge im Vordergrund.
 
 \subsection{Modellieren der Anforderungssituation}
@@ -193,16 +195,17 @@ Anforderungsanalyse stehen dabei andere TRIZ-Werkzeuge im Vordergrund.
 Als wesentliches Defizit der bisherigen Bearbeitungen der Aufgaben hat sich
 die oberflächliche Modellierung der jeweiligen Anforderungssituationen
 herausgestellt, die durch die (scheinbar) relativ kleinteilige Struktur der
-Fragestellungen noch befördert wird und zu reinen Brainstorming-Lösungen
-verleitet -- also solchen, wo für den Bearbeiter von vornherein klar ist, wo
-die Reise hingehen soll und alle Begründungen so ohingebogen werden, dass am
-Ende dieses eine Resultat herauskommen \emph{muss}.  Dabei wird der Prozess
-der Konkretisierung der Aufgabenstellung mit ungenügender Präzision
-durchlaufen und damit das methodische Potenzial von TRIZ nicht genutzt.
+Fragestellungen Im Einstiegsbereich „Präzisierung der Umstände“ noch befördert
+wird und zu reinen Brainstorming-Lösungen verleitet -- also solchen, wo für
+den Bearbeiter von vornherein klar ist, wo die Reise hingehen soll und alle
+Begründungen so hingebogen werden, dass am Ende dieses eine Resultat
+herauskommen \emph{muss}.  Dabei wird der Prozess der Konkretisierung der
+Aufgabenstellung mit ungenügender Präzision durchlaufen und damit das
+methodische Potenzial von TRIZ nicht genutzt.
 
 Im Seminar hatten wir herausgefunden, dass der \emph{Systembegriff} am
 sinnvollsten im Wechselspiel mit dem \emph{Begriff Komponente} entwickelt
-wird.  Komponenten  sind zwar auch Systeme, sie werden abeer allein durch ihre
+wird.  Komponenten sind zwar auch Systeme, sie werden aber allein durch ihre
 \emph{Spezifikation} und damit die nach außen zu erfüllende kontraktuelle
 Leistung charakterisiert.  Im Betrieb des Systems wird vorausgesetzt, dass
 seine Komponenten spezifikationskonform \emph{funktionieren} -- wobei das
@@ -216,19 +219,19 @@ nach außen dargestellt wird. Für ein System ist aber weiter die
 die spezifizierte Leistung im Zusammenspiel der Komponenten und weiterer
 Ressourcen erbracht wird.
 
-Neben der \emph{Aufbauorganisation} ist für ein System auch dessen
-\emph{Ablauforganisation} wichtig. Zur Darstellung von Abläufen sind
-entsprechende Diagramme wie Sequenzdiagramme, Zustandsdiagramme,
-Zustandsübergangsdiagramme, Prozessketten usw.\ hilfreich. Die Abläufe in
-System verbinden Abläufe in den einzelnen Komponenten, die auf Systemebene als
-\emph{elementar} betrachtet (und in Diagrammdarstellungen in Unterdiagramme
-ausgelagert) werden, können neben dem Aufruf von Funktionalität aber auch
-Zustandsänderungen an bearbeiteten gemeinsamen \emph{Objekten} bewirken.
-Komponenten sind in diesem Zusammenhang Systemteile mit eigener aktiver
-Funktionalität, Ressourcen und Objekte passive Targets funktionaler
-Transformationen\footnote{Der Objektbegriff unterscheidet sich damit von dem
-  der OO-Programmierung und folgt den Ansätzen aus \emph{C. Szyperski.
-    Component Software. Addison Wesley, Boston 2002.}}.
+Neben der \emph{Aufbauorganisation} (statisches Modell) ist für ein System
+auch dessen \emph{Ablauforganisation} (dynamisches Modell) wichtig. Zur
+Darstellung von Abläufen sind entsprechende Diagramme wie Sequenzdiagramme,
+Zustandsdiagramme, Zustandsübergangsdiagramme, Prozessketten
+usw.\ hilfreich. Die Abläufe im System verbinden Abläufe in den einzelnen
+Komponenten, die auf Systemebene als \emph{elementar} betrachtet (und in
+Diagrammdarstellungen in Unterdiagramme ausgelagert) werden, können neben dem
+Aufruf von Funktionalität aber auch Zustandsänderungen an bearbeiteten
+gemeinsamen \emph{Objekten} bewirken.  Komponenten sind in diesem Zusammenhang
+Systemteile mit eigener aktiver Funktionalität, Ressourcen und Objekte passive
+Targets funktionaler Transformationen\footnote{Der Objektbegriff unterscheidet
+  sich damit von dem der OO-Programmierung und folgt den Ansätzen etwa in
+  \emph{C. Szyperski.  Component Software. Addison Wesley, Boston 2002.}}.
 
 Für die Modellierung der Gegebenheiten der Aufgabenstellung sind also zu
 identifizieren 
@@ -248,12 +251,13 @@ identifizieren
 \item die Aufbauorganisation des Systems -- welche Komponenten und welche
   Ressourcen werden genutzt -- (Abschnitt „Maschine“) und
 \item die Ablauforganisation des Systems (Abschnitt „Wie die Maschine
-  arbeitet“)
+  arbeitet“).
 \end{enumerate}
-In der Regel kann das System so modifiziert werden, dass es seine Funktion im
-Obersystem weiter so erfüllt, dass dort keine oder nur unwesentliche
-Modifikationen vorgenommen werden müssen, sich die Transformation der
-Ablaufstrukturen also auf den Kontext des Systems selbst beschränken lässt.
+In der Regel kann im Lösungsprozess das System so modifiziert werden, dass es
+seine Funktion im Obersystem weiter erfüllt wie bisher spezifiziert oder nur
+unwesentliche Modifikationen vorgenommen werden müssen, sich die
+Transformation der Ablaufstrukturen also auf den Kontext des Systems selbst
+beschränken lässt.
 
 Die Ablauforganisation im Obersystem führt weiterhin oft auf eine klare
 Unterscheidung verschiedener \emph{Zustände}, die für optimale Lösungen in der
@@ -270,59 +274,47 @@ Modellierung über verschiedene Betriebsmodi im System zu berücksichtigen sind.
 
 \section{Weitere Hinweise}
 
-Im TRIZ-Trainer wird in der Analysephase das Konzept der \emph{Maschine} als
-grundlegende Struktur der Modellierung eingesetzt, womit die Wirkung eines
-\emph{Werkzeugs} (Instrument, Arbeitsorgan) auf ein \emph{zu bearbeitendes
-  Objekt} erfasst wird, um ein \emph{nützliches Produkt} herzustellen.  Dieses
-\emph{Arbeitsorgan} ist Teil eines Produktionsprozesses, der durch einen
-\emph{Antrieb} angetrieben wird, dessen Leistung über eine \emph{Transmission}
-auf das Arbeitsorgan übertragen wird.  Das Ganze wird von einer
-\emph{Steuereinheit} gesteuert und der Antrieb von einer \emph{Energiequelle}
-gespeist.  Dieses stark an ingenieur-technischen Termini orientierte Konzept
-wird auch auf allgemeinere Situationen übertragen und ist dann sinngemäß
-anzuwenden.  Siehe auch \emph{Lösungsprozess $\to$ Aufbau und Bedienung der
-  Maschine}.
+Im TRIZ-Trainer wird in der Analysephase des Systems das Metakonzept der
+\emph{Maschine} als grundlegende Struktur der Modellierung eingesetzt, womit
+die Wirkung eines \emph{Werkzeugs} (Instrument, Arbeitsorgan) auf ein \emph{zu
+  bearbeitendes Objekt} erfasst wird, um ein \emph{nützliches Produkt}
+herzustellen.  Dieses \emph{Arbeitsorgan} ist Teil eines Produktionsprozesses,
+der durch einen \emph{Antrieb} angetrieben wird, dessen Leistung über eine
+\emph{Transmission} auf das Arbeitsorgan übertragen wird.  Das Ganze wird von
+einer \emph{Steuereinheit} gesteuert und der Antrieb von einer
+\emph{Energiequelle} gespeist.  Dieses stark an ingenieur-technischen Termini
+orientierte Konzept wird auch auf allgemeinere Situationen übertragen und ist
+dann sinngemäß anzuwenden.  Siehe auch \emph{Lösungsprozess $\to$ Aufbau und
+  Bedienung der Maschine}.
 
 Es empfiehlt sich, das zu lösende Problem erst einmal mit Bleistift und Papier
 genauer zu analysieren. Dabei sollte man für sich genau klären
 \begin{itemize}
 \item[1.] Was ist das \emph{System} -- also jener Teil, der für die von den
-  widersprüchlichen Anforderungen betroffene \emph{Hauptfunktion} relevant
-  ist? Also etwa im Beispiel Schiffsmast „das Boot“.
+  widersprüchlichen Anforderungen betroffene \emph{Hauptfunktion} relevant ist
+  -- und wie ist dieses ins \emph{Obersystem} eingebettet? Also etwa im
+  Beispiel Schiffsmast „das Boot“.
 
 \item[2.] Was ist das nützliche Produkt? Ein Produkt ist etwas (zu einem
   späteren Zeitpunkt) bereits Fertiges, etwa „Das Boot ist auf der anderen
-  Seite der Brücke“.
+  Seite der Brücke“. Damit wird der \emph{Zweck} im betrachteten Kontext grob
+  fixiert. 
 
 \item[3.] Was ist das Nützlichkeitsprinzip? Wie entsteht das nützliche
-  Produkt? Etwa, „das Boot fährt unter der Brücke hindurch“.
+  Produkt? Etwa, „das Boot fährt unter der Brücke hindurch“. Damit wird die
+  Ablauforganisation im System grob fixiert. 
 
 \item[4.] Genaue Analyse der Maschine (mit den oben angegebenen Teilen), dazu
   den Begriff „Maschine“ im Sinne des TRIZ-Trainers verstehen, siehe
   \emph{Ergänzendes $\to$ nützliches technisches System} und wie die Maschine
-  arbeitet (siehe \emph{Funktionales Modell} und \emph{Prozessmodell}).
+  arbeitet (siehe \emph{Funktionales Modell} und \emph{Prozessmodell}).  Damit
+  werden Aufbau- und Ablauforganisation des Systems so weit detailliert, dass
+  auf der Basis dieser Beschreibungen die problematischen Wirkungen genauer
+  untersucht werden können. 
 \end{itemize}
-Das \emph{System} hat einen äußeren Zweck (nach dem Prinzip hergestelltes
-nützliches Produkt) -- die Spezifikation. Mit der \emph{Maschine} wird
-beschrieben, wie das systemintern implementiert ist. Ein System und damit die
-Maschine besteht aus Komponenten, die ggf. weiter analysiert werden müssen.
-In der klassischen Sprache der Modellierung umfasst diese Analyse die
-Aufbauorganisation (statisches Modell) sowie die Ablauforganisation
-(dynamisches Modell).
-
 Müssen Komponenten genauer analysiert werden, so wird dasselbe Analyseschema
 rekursiv auf die interessierende Komponenten angewendet, siehe
 \emph{Ergänzendes $\to$ Hierarchisches Prozessmodell}.
-
-In vielen Fällen wurde diese Analyse sehr ungenau vorgenommen, aber eine
-plausible Lösung als Endergebnis vorgeschlagen, die dann aber meist vom Himmel
-fällt (in dem Sinne, dass von der ersten Zeile eigentlich klar ist, wo die
-Reise hingehen soll). In einem solchen Fall lohnt es, das Ganze von hinten her
-aufzurollen und zu überlegen, wie man mit TRIZ auf diese Lösung gekommen wäre
-und welche „Abzweigungen“ dabei „übersehen“ wurden. Insbesondere steht die
-Frage, ob eines der 40 TRIZ-Prinzipien (oder mehrere) anwendbar wäre und
-ggf. welche(s). Durch den Übergang auf eine solche abstraktere Ebene wird oft
-auch klarer, wie man die Modellierung hätte aufziehen sollen.
 
 \section{Anmerkungen von Anton}
 
