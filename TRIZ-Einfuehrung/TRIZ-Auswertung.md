@@ -1,6 +1,6 @@
 # Auswertung der Arbeit mit dem TRIZ-Trainer
 
-## Aufzeichnungen nach der Diskussion am 28.01.2020 mit den beteiligten Studierenden.
+## Diskussion am 28.01.2020 mit den beteiligten Studierenden.
 
 Zunächst die methodischen Erfahrungen:
 
@@ -183,6 +183,43 @@ für Trainer zu organisieren. Wir werden in Zukunft darauf bestehen, aber jetzt
 musste alles schnell gehen, um die deutsche Version noch in diesem Semester
 produktiv zu schalten. Deshalb stellen sich Fragen.
 
-## Hinweise zu den Lösungen einzelner Aufgaben
+## Zeite Auswertung vom 07.03.2020 
 
-Das wird im Seminar genauer besprochen. 
+Das Hauptproblem, mit dem ich bisher bei allen Lösungen konfrontiert bin: Die
+Studenten präsentieren im Prinzip eine Brainstorming-Lösung und biegen diese
+so lange zurecht, bis sie - ihrer Meinung nach - auf den Lösungsalgorithmus
+passt. Begünstigt wird das durch die recht laschen Modellierungsvorgaben im
+Anfangsteil (der ganze Zweig bis zur Hypothese). Ich habe für diesen Teil
+genauere Vorgaben entwickelt, die ich nun auch in den Lösungen konsequenter
+abfordere, siehe die angehängte Datei (mit Auszügen aus der überarbeiteten
+Version von TRIZ-Trainer.tex). Sie setzt meine früher bereits aufgeschriebenen
+Überlegungen fort, wie ein Begriff "technisches System" sinnvoll gefasst
+werden kann.
+
+Zu den studentischen Lösungen: AK und FN haben ihren Teil noch vor diesen
+Modifikationen abgeschlossen, dort sieht man also eher die Unzulänglichkeiten
+der Argumentation. FH habe ich die 5 letzten Aufgaben zur Überarbeitung
+zurückgegeben, seither aber nichts mehr von ihm gehört.  Allein LL arbeitet
+aktuell weiter an den Aufgaben und bearbeitet derzeit "Angeln" und
+"Bibliotheksumzug". Ich habe ihm die Aufgaben mehrfach zur Überarbeitung
+zurückgegeben, um genau die genannten Aspekte besser auszuführen, wobei immer
+wieder Ungereimtheiten und Inkonsistenten bis hin zu Widersprüchen in der
+studentischen Argumentation auftauchen, die nach den Hinweisen Schritt für
+Schritt in Richtung einer konsistenten Modellierung beseitigt werden.
+
+Meine Kommentare schreibe ich nur noch in die offen sichtbaren Felder
+"Teacher's Comment", denn das versteckte Feld "Teacher's Review" wurde von den
+Studenten nicht beachtet (bzw. gar nicht wahrgenommen).
+
+Mein Vorschlag geht dahin, diesen ersten Teil genau wie vorgeschlagen (Was ist
+das System? Was ist das Obersystem? Welche Funktion erfüllt das System im
+Obersystem? Wie ist das System aufgebaut? Wie sind die Systemfunktionen
+implementiert?) detaillierter zu strukturieren. Man könnte sogar bewusst mit
+der Aufforderung zu einer Brainstorming-Lösung beginnen (die sind nicht so
+schlecht wie ihr Ruf) und dann am Ende in einer Frage "Lessons learned" den
+Kontrast reflektieren lassen.
+
+Ich möchte gern im Sommersemester wieder ein TRIZ Online-Praktikum anbieten,
+muss aber noch klären, wie das bezahlt werden kann. Wer wäre da ggf. unser
+Geschäftspartner, der eine Rechnung stellt?
+

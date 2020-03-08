@@ -12,6 +12,13 @@
   - Beispiele aus dem TRIZ-Trainer
 * TRIZ, Patentrecherchen und der "Stand der Technik"
 
+## Der Minsker TRIZ-Trainer
+
+Dazu
+* Material TRIZ-Einfuehrung.tex als Begleittext für eine etwas abgewandelte
+  Methodik
+* Erfahrungsberichte aus dem Einsatz in W19 an der Leipziger Universität
+
 ## Material zu TRIZ
 
 **Educating the Edisons of the 21st Century**
