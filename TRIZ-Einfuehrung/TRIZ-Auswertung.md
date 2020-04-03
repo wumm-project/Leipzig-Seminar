@@ -15,8 +15,8 @@ geht auch Denis Cavallucci in Strasbourg vor.
 
 2) Trotz der guten Online-Anleitung im Abschnitt "Lösungsprozess" wurde diese
 initial kaum zur Kenntnis genommen. Im Sinne eines "flipped classroom"
-Konzepts muss und soll das aber vorausgesetzt werden.  Bei Denis müssen
-parallel zum Praktikumskurs hier Testfragen beantwortet werden, was zum
+Konzepts muss und soll das aber vorausgesetzt werden.  Bei Denis Cavallucci
+müssen parallel zum Praktikumskurs hier Testfragen beantwortet werden, was zum
 Bestehen des Praktikums zusätzlich auf angemessenem Niveau zu absolvieren ist.
 Der Stand ist in einer Online-Übersicht wenigstens für den Dozenten einsehbar.
 
@@ -33,19 +33,18 @@ Die meisten Beispiele sind so gebaut, dass man im Nachhinein eine tolle Lösung
 daraufhin analysiert, wie man auch mit TRIZ hätte drauf kommen können. Auch
 Altschullers Patentanalyse hat diesen Charakter.  Die implizite
 Kontextualisierung der Aufgabenstellung geht dabei allerdings verloren, womit
-eine starke Erwartungshaltung an den Lösungsweg verbunden ist (? - ich kenne
-keine Musterlösungen), die teilweise bis in die Aufgabenstellung hinein
-formuliert ist.  Das methodische Problem ist aus der Mathematik gut bekannt -
-ein Beweis wird üblicherweise durch Rückwärtsarbeiten "erarbeitet", ist aber
-"im Vorwärtsgang" aufzuschreiben.  Wenn man das erstere nicht versteht, fallen
-im zweiteren die Argumente "vom Himmel" (z.B.: Warum die Terme im Beweis nun
-genau so exotisch zusammenfassen? Weil beim Rückwärtsarbeiten genau dieser
-Term entstanden ist und auseinandergenommen wurde.). Eine wirkliche Antwort
-auf dieses Problem habe ich nicht, sehe nur auf der anderen Seite aus den
-Gesprächen mit Kirill Domkin, dass die Anwendung der TRIZ-Methodik auf
-konkrete praktische Problemsituationen vor diesem Problem nicht steht, da dort
-die Kontextualisierung bekannt und die Lösung auch den "Trainern" unbekannt
-ist.
+eine starke Erwartungshaltung an den Lösungsweg verbunden ist, die teilweise
+bis in die Aufgabenstellung hinein formuliert ist.  Das methodische Problem
+ist aus der Mathematik gut bekannt - ein Beweis wird üblicherweise durch
+Rückwärtsarbeiten "erarbeitet", ist aber "im Vorwärtsgang" aufzuschreiben.
+Wenn man das erstere nicht versteht, fallen im zweiteren die Argumente "vom
+Himmel" (z.B.: Warum die Terme im Beweis nun genau so exotisch zusammenfassen?
+Weil beim Rückwärtsarbeiten genau dieser Term entstanden ist und
+auseinandergenommen wurde.). Eine wirkliche Antwort auf dieses Problem habe
+ich nicht, sehe nur auf der anderen Seite aus den Gesprächen mit Kirill
+Domkin, dass die Anwendung der TRIZ-Methodik auf konkrete praktische
+Problemsituationen vor diesem Problem nicht steht, da dort die
+Kontextualisierung bekannt und die Lösung auch den "Trainern" unbekannt ist.
 
 2) Wir haben dies intensiv an den drei Aufgaben
 (a) Schiffsmast
@@ -65,7 +64,7 @@ gehört zur vorgeschriebenen Beleuchtung (Obersystem "Wasserstraßennetz"), die
 Antenne zur Komponente "Radiosystem" des Teilsystems "Steuerung". Beides hätte
 man längst anders realisieren und den Mast rauswerfen können.  Hier scheinen
 also noch zusätzliche Funktionen im Spiel zu sein, die zu der Randbedingung
-führen, dass der Mast auf keinen Fall verändert werden kann.
+führen, dass der Mast auf keinen Fall komplett entfernt werden kann.
 
 Studentische Lösungen:
 * Mast klappbar gestalten
@@ -73,8 +72,6 @@ Studentische Lösungen:
   hohen Mast zu markieren - kein Mast, kein Oberlicht erforderlich)
 * Hohlräume des Schiffs mit Wasser füllen, die Wasserlinie des Bootes kommt
   höher und das Boot passt wieder unter der Brücke durch.
-
-An welche Lösung denken die Autoren? 
 
 (b) Das war relativ klar, eine Analyse genau nach der Methodik war schwer (was
 ist Inertialwiderstand, geht es um Kraft oder Energie, welche Energieformen
@@ -85,10 +82,8 @@ sind wo präsent?). Lösungen waren im Wesentlichen
   (Problem hier, ob die Kupplungen das aushalten).
 * Mein Ansatz: Zug scharf zusammenschieben, so dass die Puffer krachen. Damit
   wird potenzielle Energie in den Federn der Puffer gespeichert und beim
-  weiteren Anfahren Schritt für Schritt abgegeben. Analog 2. Lösung, abr nich
+  weiteren Anfahren Schritt für Schritt abgegeben. Analog 2. Lösung, aber noch
   etwas weiter analysiert.
-
-An welche Lösung denken die Autoren? 
 
 (c) Hier gab es die schärfste Diskussion zur Aufgabenstellung:
 
@@ -105,7 +100,7 @@ Lösungen:
 * Meine Lösung: Analyse Maschine "Kipper", Teilsystem "Motoranlage" (von
   Ansaugeinrichtung bis Abgasanlage), Komponentenanalyse dieses Systems,
   vorhandene Komponente Filter in der Abgasanlage entweder modifizieren oder
-  weitere Komponente mit entsprechender neutraisierender Funktion anhängen
+  weitere Komponente mit entsprechender neutralisierender Funktion anhängen
   (typische Lösung heute: ad blue, also Harnstoff nutzen, um die schädlichen
   Gase zu neutralisieren; TRIZ Prinzip der starken Oxidationsmittel).
 
@@ -114,12 +109,10 @@ Beide Lösungen wurden in der Diskussion hart verworfen, da sie die Bedingung
 Lösungen unter dieser Bedingung seien überhaupt nur im System "Steinbruch" als
 Ganzem denkbar.
 
-An welche Lösung denken die Autoren?
-
 ## Antwort von Nikolay Shpakovsky
 
-<blockquote> Das Ziel ist nicht, Probleme zu lösen, sondern am Lösen von
-Problemen mit der Methodik vertraut zu werden. </blockquote>
+> Das Ziel ist nicht, Probleme zu lösen, sondern am Lösen von Problemen mit
+> der Methodik vertraut zu werden.
 
 Richtig, das Ziel ist es, sich mit der Methodik vertraut zu machen und die
 Fähigkeiten zu trainieren. Der Kurs ist so konzipiert, dass die Vertrautheit
@@ -137,7 +130,7 @@ eingesetzt werden, wenn die ersten 5-7 Aufgaben gelöst werden, bis die
 Teilnehmer verstehen, was von ihnen verlangt wird. Hier spielt auch der
 Trainer eine wichtige Rolle, der dies erklären muss.
 
-<blockquote> Parallel zum Praktikum einen Online-Kurs anbieten. </blockquote>
+> Parallel zum Praktikum einen Online-Kurs anbieten. 
 
 Während des Fernunterrichts erfolgt die Kommunikation die gesamte Zeit über
 den Chat - so kann direkt mit den Studenten gearbeitet werden.  Der Ansatz
@@ -149,12 +142,12 @@ verinnerlicht werden.  Das schließt natürlich nicht aus, dass der Student sich
 mit der Theorie vertraut macht.  Er soll diese bei der Lösung der Probleme
 studieren.
 
-<blockquote> Arbeit in Zweier-Teams. </blockquote>
+> Arbeit in Zweier-Teams.
 
 Dies ist eine sehr gute Idee, wir werden die Möglichkeit ihrer Umsetzung
 prüfen.
 
-<blockquote>Kontextualisierung des Problems. </blockquote>
+> Kontextualisierung des Problems. 
 
 Ganz richtig, das ist das Problem des TRIZ-Trainings. Altschuller tat dies in
 seinen Büchern. Aber im Unterricht (bei Altschuller) lösten die Leute das
@@ -218,8 +211,4 @@ implementiert?) detaillierter zu strukturieren. Man könnte sogar bewusst mit
 der Aufforderung zu einer Brainstorming-Lösung beginnen (die sind nicht so
 schlecht wie ihr Ruf) und dann am Ende in einer Frage "Lessons learned" den
 Kontrast reflektieren lassen.
-
-Ich möchte gern im Sommersemester wieder ein TRIZ Online-Praktikum anbieten,
-muss aber noch klären, wie das bezahlt werden kann. Wer wäre da ggf. unser
-Geschäftspartner, der eine Rechnung stellt?
 
