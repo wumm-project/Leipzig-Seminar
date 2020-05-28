@@ -285,3 +285,60 @@ kooperativer Subjekte auf verschiedenen Abstraktionsebenen zu kombinieren
 wären.
 
 Hans-Gert Gräbe, 27.01.2020
+
+##  Adaptives und transitionales Management (Foxon 2009)
+
+Die im ersten Teil der Anmerkungen diskutierten Transitionspfade haben ein
+wesentliches epistemisches Problem - das Problem des äußeren Standpunkts, von
+dem aus Bechreibungsformen entwickelt werden, um Einfluss auf realweltliche
+Wandlungsprozesse zu gewinnen.
+
+(Foxon 2009) schlägt hier einen komplett anderen Zugang vor, indem diese
+Beschreibungs- und Analyseformen von den beiteiligten Akteuren (mit
+methodischer Unterstützung) selbst entwickelt werden. Der Zugang folgt dennoch
+klassischen TRIZ-Methodiken der Modellierung, indem zunächst ein Obersystem
+als Kontext der Bestimmung der Zwecke des untersuchten Systems identifiziert
+wird, um dann das System selbst genauer zu modellieren. Jene Modellierung wird
+aber nicht als externer Prozess verstanden, sondern als Konsensfindung
+gemeinsamer Beschreibungsformen der Stakeholder selbst, ohne welche
+kooperatives Agieren nicht möglich ist (siehe das Konzertbeispiel). In einer
+solchen Modellierung sind zwei dialektische Prinzipien bereits eingebaut
+
+(A) die dynamische Weiterentwicklung des Modells selbst längs der Differenzen
+zwischen begründeten Erwartungen und erfahrenen Ergebnissen der Vollzugsform -
+unter Einbeziehung einer möglichst breiten Stakeholder-Landschaft (TRIZ-Trend
+der Vollständigkeit der Teile des Systems) und
+
+(B) die Weiterentwicklung der Zwecke im Obersystem, in dem das System selbst
+als Komponente ("Stakeholder") erscheint und dort über seine spezifizierte
+Schnittstelle seinen Beitrag dazu in der Vollzugform einbringen kann.
+
+Ersteres ist Schwerpunkt des Ansatzes _Adaptives Management_, zweiteres des
+Ansatzes _Transitionales Management_.  In beiden Fällen ist die
+Weiterentwicklung der Beschreibungsform Teil der Vollzugsform.
+
+Beide Ansätze unterscheiden sich weiter in der Strategie der
+Komplexitätsreduktion.  Während adaptives Management eine Vielzahl
+_verschiedener_ funktionaler Parameter in der konkreten Ausprägung im lokalen
+Kontext eines _Unikats_ betrachtet, erfolgt die Reduktion auf der Ebene des
+_transitionalen Managements_ auf der Basis eines _funktionalen Prinzips_, nach
+dem _gleichartige_ funktionale Parameter gebündelt werden (etwa
+"Energieversorgung der Zukunft", "Wasserreinhaltung", "Biodiversität"), um
+dieses Prinzip genauer und besser zu verstehen. Während zweiteres also mehr
+der Devise "global denken" folgt, steht ersteres in der Perspektive "lokal
+handeln".  Auch dies hat sein Analogon in der TRIZ-Methodik, wo "global
+denken" den Schritt von der abstrakten Problemstellung zur abstrakten Lösung
+markiert, die man im besten Fall bereits als "technische Komponente" (nach
+Deployment und Konfiguration) in konkrete Lösungen einbauen kann, in den
+meisten Fällen aber noch eine klare Konkretisierung auf die komplexe und
+einzigartige _realweltliche_ Problemsituation erforderlich ist.  Wir haben
+also auch auf dieser Ebene dieselbe Unterscheidung wie die zwischen
+Komponentenbauern und Industrieanlagenbauern im Technikbereich.
+
+Der Aufsatz bricht damit eine Lanze für die Koevolution von Beschreibungsform
+und Vollzugsform in kooperativen Zusammenhängen. Beides ist nicht
+widerspruchsfrei, allerdings kann versucht werden, artikulierte Widersprüche
+mit entsprechenden Transitionsstrategien im Netz der Systeme bewusst an eine
+solche Stelle zu verschieben, wo sie gelöst werden können. 
+
+Hans-Gert Gräbe, 28.05.2020
