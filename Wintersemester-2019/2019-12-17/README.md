@@ -294,15 +294,24 @@ dem aus Bechreibungsformen entwickelt werden, um Einfluss auf realweltliche
 Wandlungsprozesse zu gewinnen.
 
 (Foxon 2009) schlägt hier einen komplett anderen Zugang vor, indem diese
-Beschreibungs- und Analyseformen von den beiteiligten Akteuren (mit
+Beschreibungs- und Analyseformen von den beteiligten Akteuren (mit
 methodischer Unterstützung) selbst entwickelt werden. Der Zugang folgt dennoch
 klassischen TRIZ-Methodiken der Modellierung, indem zunächst ein Obersystem
 als Kontext der Bestimmung der Zwecke des untersuchten Systems identifiziert
 wird, um dann das System selbst genauer zu modellieren. Jene Modellierung wird
 aber nicht als externer Prozess verstanden, sondern als Konsensfindung
 gemeinsamer Beschreibungsformen der Stakeholder selbst, ohne welche
-kooperatives Agieren nicht möglich ist (siehe das Konzertbeispiel). In einer
-solchen Modellierung sind zwei dialektische Prinzipien bereits eingebaut
+kooperatives Agieren nicht möglich ist (siehe das Konzertbeispiel).  Dieser
+Modellierungsprozess wird damit zugleich zum _politischen_ Prozess, da als
+Ergebnis nicht nur anerkannte Beschreibungsformen erwartet werden, sondern
+_institutionalisierte Verfahrensweisen_. Ersteres (anerkannte
+Beschreibungsformen) ist zweiterem allerdings vorgängig in dem Sinn, dass
+widersprüchliche Anforderungen zunächst artikuliert werden müssen, ehe diese
+Widersprüche gelöst werden können. Dies entspricht aber auch den zwei Phasen
+des TRIZ-Prozesses (im OTSM-Verständnis). 
+
+In einer solchen Modellierung sind zwei dialektische Prinzipien bereits
+eingebaut
 
 (A) die dynamische Weiterentwicklung des Modells selbst längs der Differenzen
 zwischen begründeten Erwartungen und erfahrenen Ergebnissen der Vollzugsform -
@@ -317,6 +326,12 @@ Ersteres ist Schwerpunkt des Ansatzes _Adaptives Management_, zweiteres des
 Ansatzes _Transitionales Management_.  In beiden Fällen ist die
 Weiterentwicklung der Beschreibungsform Teil der Vollzugsform.
 
+Damit ist (Foxon 2009) in gewissem Sinne orthogonal zu (Geels 2007), indem
+_das Innere_ einer Transitionsphase in ein methodisches Gerüst gebracht wird.
+Es steht natürlich sofort die Frage, für welche der Transitionstypen in (Geels
+2007) dieses methodische Gerüst brauchbar ist oder ob auch hier wiederum ein
+Konzept als "Allzweckwaffe" vorgeschlagen wird. 
+
 Beide Ansätze unterscheiden sich weiter in der Strategie der
 Komplexitätsreduktion.  Während adaptives Management eine Vielzahl
 _verschiedener_ funktionaler Parameter in der konkreten Ausprägung im lokalen
@@ -326,14 +341,29 @@ dem _gleichartige_ funktionale Parameter gebündelt werden (etwa
 "Energieversorgung der Zukunft", "Wasserreinhaltung", "Biodiversität"), um
 dieses Prinzip genauer und besser zu verstehen. Während zweiteres also mehr
 der Devise "global denken" folgt, steht ersteres in der Perspektive "lokal
-handeln".  Auch dies hat sein Analogon in der TRIZ-Methodik, wo "global
-denken" den Schritt von der abstrakten Problemstellung zur abstrakten Lösung
-markiert, die man im besten Fall bereits als "technische Komponente" (nach
-Deployment und Konfiguration) in konkrete Lösungen einbauen kann, in den
-meisten Fällen aber noch eine klare Konkretisierung auf die komplexe und
-einzigartige _realweltliche_ Problemsituation erforderlich ist.  Wir haben
-also auch auf dieser Ebene dieselbe Unterscheidung wie die zwischen
-Komponentenbauern und Industrieanlagenbauern im Technikbereich.
+handeln".
+
+Ein solches Phänomen der verschiedenen Bündelung hatten wir bereits oben im
+Kausalverhältnis der Sphären 1 und 2 (der Beschreibungsformen und der
+systemisch strukturierten Wirklichkeit) angetroffen. Dieses Phänomen ist auch
+aus der Komponententechnologie (Szyperski 2002) gut bekannt -- der _Zuschnitt_
+von Komponenten erfolgt unter Bündelung _gleichartiger_ Anforderungen aus
+_verschiedenen_ Quellen, der _Einsatz_ von Komponenten erfolgt durch Bündelung
+_verschiedenartiger_ Funktionalitäten im _gleichen_ Zielsystem.  (Szyperski
+2002) zeigt, dass dies bis hin zur Ausdifferenzierung von Berufsbildern
+verfolgt werden kann -- Komponentenentwickler erscheinen im "design for
+component" als Fachspezialisten, Komponentenmonteure im "design from
+component" als Generalisten. 
+
+Auch dies hat sein Analogon in der TRIZ-Methodik, wo "global denken" den
+Schritt von der abstrakten Problemstellung zur abstrakten Lösung markiert, die
+man im besten Fall bereits als "technische Komponente" (nach Deployment und
+Konfiguration) in konkrete Lösungen einbauen kann, in den meisten Fällen aber
+noch eine klare Konkretisierung auf die komplexe und einzigartige
+_realweltliche_ Problemsituation erforderlich ist.  Wir haben also auch auf
+dieser Ebene dieselbe Unterscheidung wie die zwischen Komponentenbauern
+("design to component") und Industrieanlagenbauern ("design from component")
+im Technikbereich.
 
 Der Aufsatz bricht damit eine Lanze für die Koevolution von Beschreibungsform
 und Vollzugsform in kooperativen Zusammenhängen. Beides ist nicht
@@ -341,4 +371,4 @@ widerspruchsfrei, allerdings kann versucht werden, artikulierte Widersprüche
 mit entsprechenden Transitionsstrategien im Netz der Systeme bewusst an eine
 solche Stelle zu verschieben, wo sie gelöst werden können. 
 
-Hans-Gert Gräbe, 28.05.2020
+Hans-Gert Gräbe, 29.05.2020
