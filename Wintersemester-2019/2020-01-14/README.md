@@ -18,10 +18,8 @@ systematische Weise zu finden.
 Dieser Ansatz unterscheidet sich in zwei Dimensionen wesentlich von den bisher
 betrachteten:
 
-1. geht es um die _praktische_ Vollzugsdimension einer solchen Transformaton
-und
-
-2. ist der Zugang problemgetrieben und nicht analysegetrieben.
+1. Es geht um die _praktische_ Vollzugsdimension einer solchen Transformation.
+2. Der Zugang ist problemgetrieben und nicht analysegetrieben.
 
 Letzteres (die Analyse) beginnt mit dem Thema "TRIZ und Business" (wieder)
 eine größere Rolle zu spielen, indem praktische Transitionserfahrungen
@@ -44,7 +42,7 @@ complicated. And so traditional TRIZ worked. In today’s massively
 inter-connected world, however, it is increasingly rare that we find ourselves
 able to ‘merely’ focus on just the technical problem".  Damit werden die
 Problemlösekapazitäten von TRIZ als erfinderisches Wirken in _jungen_
-Tchnologien noch einigermaßen korrekt beschrieben. Dies gilt allerdings schon
+Technologien noch einigermaßen korrekt beschrieben. Dies gilt allerdings schon
 nicht mehr für die meisten der heutigen TRIZ-Praxen, die sich auf
 Problemlösungen (auch ingenieur-technischer Art) in _funktionierenden
 unternehmerischen Kontexten_ beziehen und damit neben der Lösung des
@@ -98,7 +96,7 @@ Wie bereits am 17.12. in der Diskussion um (Geels 2007) und (Foxon 2009) steht
 dabei die Frage, wie allgemeingültig derartige Trends, Muster und Standards
 sind.  TRIZ erhebt hier einen sehr universalistischen Anspruch, der seine
 historischen Gründe haben mag (siehe dazu (Gerovich 1996)), aber praktisch
-nicht zu rechtfertigen ist. Eine "methodische Kontextualisierung" der
+nicht zu rechtfertigen ist. Eine _methodische Kontextualisierung_ der
 TRIZ-Methodik (wann greifen welche Methoden) ist also angezeigt, und in genau
 diese Richtung argumentiert (Mann 2019). Das dort entwickelte Modell ist sehr
 einfach und stellt "Komplexität" von System und Umwelt auf einer 4-stufigen
@@ -126,7 +124,7 @@ eine Vielzahl von verschiedenen einfacheren technologischen Lösungen für
 verschiedene spezifischere Anwendungskontexte.
 
 Als "Quer"-Tendenz (horizontal in Fig. 3) wird der "2. Hauptsatz der
-Thrmodynamik" bemüht, um zu begründen, dass sich realweltliche
+Thermodynamik" bemüht, um zu begründen, dass sich realweltliche
 Kontextualisierungen ändern und damit früher passfähige Lösungen nicht mehr
 passen.  Darauf ist angemessen durch Gegenstrategien (Mann 2019:Fig. 4) zu
 reagieren.  Das "Chaos der Welt", das hier über den 2. Hauptsatz in die

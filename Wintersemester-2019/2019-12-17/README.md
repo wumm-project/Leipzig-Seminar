@@ -187,8 +187,8 @@ einem "model of agency" läuft, werden als Basis einer gemeinsamen
 die sich im _Handeln_ jener Strukturen ("use rules", "rules are not only
 constraining but also enabling") bewähren müssen und befestigt werden.  Dies
 sind die Formen, in denen die _Pragmatik_ zwischen den Sphären 1 und 2
-vermittelt und damit _realweltliche Begriffsbildungsprozesse_ induziert bis
-hin zur "conceptualisation of sociotechnical landscape" that "... forms an
+vermittelt und damit _realweltliche Begriffsbildungsprozesse_ induziert werden
+bis hin zur "conceptualisation of sociotechnical landscape" that "... forms an
 external context that actors cannot influence in the short run".
 
 Damit werden die Argumentationen in (ebenda:Fig. 4 und Table 1) in ihrem
@@ -346,12 +346,12 @@ handeln".
 Ein solches Phänomen der verschiedenen Bündelung hatten wir bereits oben im
 Kausalverhältnis der Sphären 1 und 2 (der Beschreibungsformen und der
 systemisch strukturierten Wirklichkeit) angetroffen. Dieses Phänomen ist auch
-aus der Komponententechnologie (Szyperski 2002) gut bekannt -- der _Zuschnitt_
+aus der Komponententechnologie (Szyperski 2002) gut bekannt - der _Zuschnitt_
 von Komponenten erfolgt unter Bündelung _gleichartiger_ Anforderungen aus
 _verschiedenen_ Quellen, der _Einsatz_ von Komponenten erfolgt durch Bündelung
 _verschiedenartiger_ Funktionalitäten im _gleichen_ Zielsystem.  (Szyperski
 2002) zeigt, dass dies bis hin zur Ausdifferenzierung von Berufsbildern
-verfolgt werden kann -- Komponentenentwickler erscheinen im "design for
+verfolgt werden kann - Komponentenentwickler erscheinen im "design for
 component" als Fachspezialisten, Komponentenmonteure im "design from
 component" als Generalisten. 
 

@@ -11,9 +11,9 @@ Systems_, mit Systembegriffen harmoniert, die im TRIZ-Umfeld verwendet werden.
 (TESE) ist hierfür eine gute Referenz, da die zusammenfassende Darstellung der
 "Entwicklungstrends von ingenieur-technischen Systemen" den Status eines
 "durch die MATRIZ autorisierten Lehrbuchs" hat. Es wird explizit der Begriff
-"engineering system" gegenüber dem in der sonstigen TRIZ-Literatur, besonders
-auch der russisch-sprachigen, üblichen Begriff des "technischen Systems" - oft
-kurz auch TS - verwendet.
+_engineering system_ gegenüber dem in der sonstigen TRIZ-Literatur, besonders
+auch der russisch-sprachigen, üblichen Begriff des _technischen Systems_
+verwendet.
 
 Allerdings finden sich weder in (TESE) noch in den anderen Referenzen genauere
 Begriffsdefinitionen, was unter einem _technischen System_ zu verstehen sei.
@@ -52,7 +52,7 @@ die Altschuller 1977 in Baku veröffentlicht hat und das weitere
 9. Gesetz der Dynamisierung starrer technischer Systeme
 
 enthält, was auch im TRIZ-Prinzip 15 gelistet ist.  Die Abgrenzung von Trends,
-Standards und Prinzipien bleibt in TRIZ also problematisch.
+Standards und Prinzipien ist in der TRIZ aber generell problematisch.
 
 (Goldovsky 1983) scheint eine wichtige Referenz zu sein, welche die Verbindung
 zwischen den Ansätzen eines "Schöpfertums als exakter Wissenschaft"
@@ -70,12 +70,12 @@ Hierarchisierung der dort formulierten Gesetze in
 
 1. Grundlegende Entwicklungsmuster
 2. Methodologische Muster der Entwicklung technischer Systeme
-3. Gesetzmäßigkeiten des Baus arbeitsfähiger technischer Systeme
+3. Gesetzmäßigkeiten der Herstellung arbeitsfähiger technischer Systeme
 4. Gesetzmäßigkeiten funktioneller Transformationen technischer Systeme
 5. Gesetzmäßigkeiten struktureller Transformationen technischer Systeme
 6. Muster der Transformation der Systemzusammensetzung
 
-wobei die formulierten Punkte eher metaphysischen Charakter der
+wobei die formulierten Punkte eher einen metaphysischen Charakter der
 Kontextualisierung einer Betrachtungsperspektive haben, und somit doch zur
 Schärfung der Begrifflichkeit eines "technischen Systems" beitragen,
 insbesondere durch die "methodologischen Muster" 2.1-2.4.
@@ -100,7 +100,7 @@ tieferliegenden Erkenntnisse aus diesen eher metaphysisch formulierten Mustern
 zur Bewältigung _realer_ Transitionserfordernisse zu gewinnen sind.
 
 Altschuller selbst teilt seine Gesetze in statische (1-3), kinematische (4-6)
-und dynamische (7-8) und postuliert die Allgemeingültigkeit der statischen und
+und dynamische (7-8) und postuliert die Gültigkeit der statischen und
 kinematischen Gesetze für die Entwicklung auch allgemeiner Systeme, während er
 die dynamischen Gesetze 7-8 als zeit- und domänenspezifisch ansieht.  Diese
 Überlegungen werden in (Rubin 2019) weiter detailliert. Wie in (TESE) werden
@@ -113,9 +113,9 @@ geschlagen.
 
 Sowohl die Auswahl der Gesetze als auch die genaue Ausgestaltung der kausalen
 Beziehungen unterscheiden sich zwischen der Darstellung von Lyubomirsky und
-Litvin in (TESE) S. 6, Rubins Darstellung der Gesetze nach Lyubomirsky und
-Litvin (Abb. 1) und der eigenen Darstellung (Abb. 2). Rubin diskutiert weiter
-die Verbindung dieser Gesetze zu einer allgemeinen Systemtheorie, für die er
-12 Gesetze in 4 Blöcken formuliert, die weiter zu analysieren bleibt.
+Litvin selbst in (TESE) S. 6, Rubins Darstellung der Gesetze nach Lyubomirsky
+und Litvin (Abb. 1) und der eigenen Darstellung (Abb. 2). Rubin diskutiert
+weiter die Verbindung dieser Gesetze zu einer allgemeinen Systemtheorie, für
+die er 12 Gesetze in 4 Blöcken formuliert, was weiter zu analysieren bleibt.
 
 Hans-Gert Gräbe, 30.05.2020

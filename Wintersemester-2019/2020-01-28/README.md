@@ -21,7 +21,7 @@ aufeinander bezogener Ansätze konfrontiert sind, was zum Begriff der
 _Systemwissenschaft_ im Seminartitel Anlass gab.  (Ropohl 2009) lotet dieses
 Problem weiter aus und identifiziert drei wesentlich verschiedene Ansätze
 
-1. das funktionale Konzept eines Systems als "Bloack Box",
+1. das funktionale Konzept eines Systems als "Black Box",
 2. das strukturelle Konzept der Modellierung von Wechselwirkungen zwischen
    Komponenten und
 3. das hierarchische Konzept einer System-Umwelt-Beziehung.
@@ -72,7 +72,7 @@ Praktische Konsequenzen eines solchen Übergangs zum "Primat des Politischen":
 1. Wir brauchen eine Initialphase. Wie kommen wir dahin?
 2. Die Initialphase ist mit Vorurteilen beladen. Diese können
    systemtheoretisch-analytisch hintergangen werden.
-3. Was leiste hierbei Frametheorien _praktisch_?
+3. Was leisten hierbei Frametheorien _praktisch_?
 
 Hans-Gert Gräbe, 30.05.2020
 
