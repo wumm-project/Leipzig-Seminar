@@ -180,7 +180,7 @@ wesentlich interagieren:
 Zwischen den Sphären 1 und 2 bestehen _kausale_ m:n-Beziehungen, durch Sphäre
 3 werden diese Beziehungen _praktisch_ vermittelt.
 
-Die drei "kinds of rules" (ebenda:3.3. - der Begrifff "Institution" wird hier
+Die drei "kinds of rules" (ebenda:3.3. - der Begriff "Institution" wird hier
 bewusst abgewählt - S. 403, Fußnote 1), über welche eine solche Vermittlung in
 einem "model of agency" läuft, werden als Basis einer gemeinsamen
 "interpretation of the world" konkreter kooperativer Subjekte identifiziert,
