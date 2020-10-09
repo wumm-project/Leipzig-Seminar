@@ -1,7 +1,7 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage{a4wide,url,graphicx}
+\usepackage{a4wide,url,graphicx,enumitem}
 \usepackage[utf8]{inputenc}
-\usepackage[russian,main=german]{babel}
+\usepackage[ngerman]{babel}
 
 \parindent0pt
 \parskip4pt
@@ -9,7 +9,7 @@
 
 \author{Hans-Gert Gr\"abe, Leipzig}
 
-\date{14. Juli 2020}
+\date{14. Juli 2020, Update 9. Oktober 2020}
 
 \begin{document}
 \maketitle
@@ -142,7 +142,7 @@ Daran schließt als zweiter Abschnitt „Systemkonflikt“ die genaue Modellieru
 des Systems als White Box sowie die Identifizierung der Konfliktstruktur an.
 Das als White Box zu untersuchende System wird dabei verallgemeinernd als
 \emph{Maschine} bezeichnet, siehe dazu auch die Ausführungen im
-Online-Hilfesystem.
+Online-Hilfesystem des TRIT-Trainers.
 
 Für diesen zweiten Abschnitt ergibt sich damit folgende Aufgabenstellung:
 \begin{itemize}
@@ -182,7 +182,7 @@ Charakters aufzustellen, welche Maßnahmen im Sinne eines \emph{idealen
   der weitere Lösungsprozess in der zweiten Phase konzentriert.} das Problem
 lösen würden.  Einer dieser Ansätze wird als „Bedingungen der Aufgabe“ genauer
 formuliert, um diese dann in der zweiten Phase des Lösungsprozesses mit den
-TRIZ-Werkzeugen zu lösen.
+TRIZ-Werkzeugen zu bearbeiten.
 
 \subsection*{Nachbarsysteme und Komponenten}
 
@@ -215,48 +215,55 @@ wesentliche Beziehungen) nach vorgegebenem methodischem Muster (Energiequelle,
 Transmission, Werkzeug, ..., Steuerung) reduziert, besteht kein Problem,
 zunächst \emph{alle} Nachbarsysteme als Komponenten in die Modellierung des zu
 untersuchenden Systems und die Beziehungen zwischen ihnen als Beziehungen
-zwischen Komponenten aufzunehmen.  Dies ist freilich ein formaler, für den
-TRIZ-Neuling weitgehend transparenter Schritt, der von der Selektion der für
-die innere Logik des Systems \emph{wesentlichen} Komponenten und Beziehungen
-im APIS-2015 nicht separiert ist und nicht separiert werden soll.  Der
-methodische Vorteil ist allerdings, dass das zu modellierende System \emph{in
-  diesem Modellierungskontext} dann kein Außen mehr hat.
+zwischen Komponenten aufzunehmen.
 
+Dies ist freilich ein formaler, für den TRIZ-Neuling weitgehend transparenter
+Schritt, der von der Selektion der für die innere Logik des Systems
+\emph{wesentlichen} Komponenten und Beziehungen im APIS-2015 nicht separiert
+ist und nicht separiert werden soll.  Der methodische Vorteil ist allerdings,
+dass das zu modellierende System \emph{in diesem Modellierungskontext} dann
+kein Außen mehr hat.
 
+Im APIS-2015 wird für die Suche nach Ressourcen ein Schalenmodell
+vorgeschlagen (Hilfesystem \emph{Lösungsprozess $\to$ Suche nach einer
+  Ressource}), nach dem in die Suche Schritt für Schritt
+\begin{enumerate}[noitemsep]
+\item die operative Zone mit Werkzeug und verarbeitetem Objekt,
+\item Systemkomponenten im Umfeld der operativen Zone,
+\item Systemkomponenten überhaupt (d.h. solche, die in der vorausgegangenen
+  Modellierung bereits als Teil des Systems identifiziert wurden),
+\item leicht verfügbare Ressourcen aus der Umgebung (dem „Obersystem“),
+\item Maschinenkomponenten (das ist in gewissem Sinne redundant) und
+\item Umweltkomponenten
+\end{enumerate}
+einbezogen werden. Eine Unterscheidung zwischen Ressourcen und Komponenten
+bleibt in der Betrachtung vage, Ressourcen sind der allgemeinere Begriff und
+umfassen auch „natürliche“ Ressourcen, obwohl zu jeder für den Einsatz im
+System nützlichen Ressource auch eine (und sei es rudimentäre)
+\emph{Beschreibung} ihrer „nützlichen“ Eigenschaften im Form eines
+Black-Box-Modells vorliegen muss. Insoweit unterscheiden sich die Begriffe nur
+graduell. 
+
+Für die Suche nach Ressourcen ist eine gute Funktionsanalyse \cite[Abschnitt
+  4.4]{Koltze2017} wichtig, um die geforderten Eigenschaften der Ressource
+möglichst genau zu beschreiben.  In fortgeschrittenen Anwendungen ist auch das
+Gegenteil hilfreich, nämlich die genaue Kenntnis der Eigenschaften von
+Ressourcen in einer \emph{Effektendatenbank} wie in \cite[Abschnitt
+  8.2]{Koltze2017} genauer beschrieben sowie das Potenzial einer
+\emph{funktionsorientierten Suche} wie in \cite[Abschnitt 4.14]{Koltze2017}
+genauer beschrieben, die gezielt nach genauer spezifizierten Funktionalitäten
+gleicher Bauart in anderen Technikbereichen sucht. 
+\newpage
 \bibliographystyle{plain}
 \begin{thebibliography}{xxx}
 \bibitem{Cavallucci} Denis Cavallucci. PICC Solutions. Augmented Human
   Intelligence.  \url{https://www.picc-solution.com/}
 \bibitem{Graebe2020} Hans-Gert Gräbe (2020). Die Menschen und ihre Technischen
   Systeme. LIFIS Online, Mai 2020. \url{doi:10.14625/graebe_20200519}
+\bibitem{Koltze2017} Karl Koltze, Valeri Souchkov (2017). Systematische
+  Innovationsmethoden. Hanser, München. 
 \bibitem{Szyperski2002} Clemens Szyperski (2002). Component Software. Addison
   Wesley, Boston. 
 \end{thebibliography}
 
 \end{document}
-
-Probleme mit den Übersetzungen:
-
-
-Analysis of problem situation (ist englisch)
-
-Abschnitte im TRIZ-Trainer:
-
-1. Analyse der Problemsituation
-1.1. Präzisierung der Umstände
-Nützliches Produkt
-Nützlichkeitsprinzip
-Unerwünschter Effekt
-1.2. Systemkonflikt
-Maschine
-Wie die Maschine arbeitet
-Eine Wirkung, die nicht ohne Probleme abgeschlossen werden kann
-Konfliktstruktur
-Ort des Konflikts
-Konfliktzeit
-1.3. Aufstellen einer Hypothese
-Konfliktursachen
-Konfliktlösungshypothese
-1.4. Bedingungen der Aufgabe
-Formulierung der Bedingungen der Aufgabe
-2. Lösung der Aufgabe
