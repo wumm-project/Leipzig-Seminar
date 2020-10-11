@@ -1,5 +1,5 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage{a4wide,url}
+\usepackage{a4wide,url,enumitem}
 \usepackage[utf8]{inputenc}
 \usepackage[russian,german]{babel}
 
@@ -9,7 +9,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{3. April 2020}
+\date{11. Oktober 2020}
 
 \begin{document}
 \maketitle
@@ -33,11 +33,10 @@ besprochen werden, können eingesetzt werden, sind aber nicht Teil des im
 TRIZ-Trainer eingebauten strukturierten Vorgehens.
 
 Der TRIZ-Trainer ist selbst noch in Entwicklung.  Im Rahmen unserer
-Kooperation habe ich die Minsker Kollegen bei der Erstellung einer
-deutschsprachigen Version unterstützt, wobei einige Teile des TRIZ-Trainers im
-Bereich \emph{Ergänzendes} noch nicht in einer deutschen Version verfügbar
-sind. Das wird zügig weiter über das redaktionelle System der Anwendung
-konsolidiert.  Fortschritte werden damit unmittelbar im System wirksam.
+Kooperation unterstützen wir die Minsker Kollegen bei der Aktualisierung der
+deutschsprachigen Version.  Neue oder noch nicht übersetzte Teile werden zügig
+über das redaktionelle System der Anwendung konsolidiert.  Bitte informieren
+Sie uns zeitnah über entsprechende Probleme.
 
 \section{Der Workflow im TRIZ-Trainer}
 
@@ -65,9 +64,9 @@ verfolgen, kommentieren und bewerten.
 Nach dem Einloggen gehen Sie auf die Seite \emph{Aufgaben} und beginnen, die
 Aufgaben zu lösen, die Sie mögen.  Es empfiehlt sich natürlich, vorher die
 Hinweise unter \emph{Lösungsprozess} und diese Handreichung genauer zu
-studieren.  Im Hilfesystem des TRIZ-Trainers sind zu jedem Schritt im
+studieren.  Im Hilfesystem des TRIZ-Trainers werden zu jedem Schritt im
 Lösungsprozess ausführliche Hinweise gegeben, was im jeweiligen Schritt zu tun
-ist, und wie an die Teilaufgabe herangegangen werden sollte.
+ist und wie an die Teilaufgabe herangegangen werden sollte.
 
 Es werden Ihnen mehrere Aufgabenserien angeboten, was aber eine eher
 technische Einteilung ist.  Das Lösen der Aufgaben setzt eine gewisse
@@ -88,9 +87,10 @@ diesem Stadium bereits Kommentare zu den einzelnen Schritten geben.
 Ist Ihre Lösung komplett, klicken Sie auf die Schaltfläche \emph{Zur
   Überprüfung einreichen} und reichen damit die Aufgabe zur Bewertung ein.
 Der Trainer analysiert Ihre Lösung, kommentiert einzelne Schritte und trifft
-die Entscheidung, die Lösung anzuerkennen (Status \emph{credited}) oder zur
-Überarbeitung zurückzugeben (Status \emph{to fix}).  Kommentare trage ich
-grundsätzlich in die offen sichtbaren Felder „Teacher Comment“ ein.
+die Entscheidung, die Lösung anzuerkennen (Status \emph{angerechnet}) oder zur
+Überarbeitung zurückzugeben (Status \emph{zu überarbeiten}).  Kommentare trage
+ich grundsätzlich in die offen sichtbaren Felder „Kommentare des Trainers“
+ein.
 
 Ihnen werden der Status der Lösung und die Kommentare des Trainers sowohl über
 die internen \emph{Notifications} als auch per E-Mail mitgeteilt.  Wenn die
@@ -118,7 +118,7 @@ Die Aufgaben sind so weit heruntergebrochen, dass sie (meist) nur \emph{eine}
 widersprüchliche Grundsituation enthalten bzw. nur auf \emph{eine} solche
 fokussiert wird.  Der gelegentlich vorhandene Interpretationsspielraum ist
 stets so zu verstehen ist, dass
-\begin{itemize}\itemsep0pt
+\begin{itemize}[noitemsep]
 \item in der \emph{konkret betrachteten} Situation
 \item eine der Situation angemessene \emph{konkrete} Lösung
 \item mit möglichst wenig zusätzlichen Hilfsmitteln und 
@@ -133,23 +133,26 @@ mit der Formulierung verschiedener Hypothesen\footnote{In anderen
   da mit einer genauen Modellierung bereits ein wesentlicher Schritt auf dem
   Weg zu einer kompletten Lösung bewältigt ist.}, wie die analysierte
 widersprüchliche Situation aufgelöst werden kann, aus denen eine für die
-zweite Phase als \emph{Aufgabe} ausgewählt und genauer analysiert wird.
+zweite Phase als \emph{Aufgabe} formuliert und genauer analysiert wird.  Bitte
+beachten Sie die präzisierenden Ausführungen zu dieser Phase im Abschnitt 4
+dieser Handreichung. 
 
-In der \textbf{zweiten Phase} \emph{Lösung der Aufgabe} ist diese Aufgabe nach
-einem (oder mehreren) von vier Problemmodellen
-\begin{itemize}\itemsep0pt
+In der \textbf{zweiten Phase} \emph{Lösung der Aufgabe} ist diese präzisierte
+Aufgabe nach einem (oder mehreren) von vier Aufgabenmodellen
+\begin{itemize}[noitemsep]
 \item Bedingungen in der operativen Zone,
-\item Wirkungen in der operativen Zone, 
+\item Aktionen in der operativen Zone, 
 \item Technischer Widerspruch,
-\item Physikalischer Widerspruch
+\item Naturgesetzlicher (früher: physikalischer) Widerspruch
 \end{itemize}
-entsprechend der für das jeweilige Problemmodell vorgesehenen Methodik genauer
-zu analysieren.  Während in der ersten Phase die genaue \emph{Modellierung der
-  Situation} im Vordergrund stand und damit das \emph{Problem
-  kontextualisiert} wurde, geht es nun darum, den Kontext \emph{systematisch}
-nach Ressourcen (Stoffe, Felder, Werkzeuge, Beziehungen, Prinzipien,
-Standardlösungen) zur Lösung des Problems abzusuchen und so die identifizierte
-Aufgabe in ein \emph{Bündel vorläufiger Lösungsvorschläge} zu transformieren.
+entsprechend der für das jeweilige Aufgabenmodell vorgesehenen Methodik
+genauer zu analysieren.  Während in der ersten Phase die genaue
+\emph{Modellierung der Situation} im Vordergrund stand und damit das
+\emph{Problem kontextualisiert} wurde, geht es nun darum, den Kontext
+\emph{systematisch} nach Ressourcen (Stoffe, Felder, Werkzeuge, Beziehungen,
+Prinzipien, Standardlösungen) zur Lösung des Problems abzusuchen und so die
+identifizierte Aufgabe in ein \emph{Bündel vorläufiger Lösungsvorschläge} zu
+transformieren.
 
 Es kann sein, dass sich in der zweiten Phase bei der Analyse der Aufgabe
 herausstellt, dass der Ansatz nicht zielführend ist. Dann muss in die erste
@@ -178,20 +181,21 @@ zu bearbeiten, dass die Lösungen vom Trainer akzeptiert werden.
 
 Die Erfassungsmaske des TRIZ-Trainers für diese erste Phase geht mit den vier
 Punkten
-\begin{itemize}\itemsep0pt
+\begin{itemize}[noitemsep]
 \item Präzisierung der Umstände 
 \item Systemkonflikt
 \item Aufstellen einer Hypothese 
 \item Bedingungen der Aufgabe 
 \end{itemize}
-bereits von einem klaren Verständnis der Vorgehensweise aus, wie sie im
-Hilfesystem im Abschnitt „Analyse der Problemsituation“ genauer beschrieben
-ist.  In der praktischen Anwendung dieser Handreichung stellte sich heraus,
-dass die \emph{dort vorausgesetzten Fähigkeiten zur Systemanalyse} bei unseren
-Studierenden oft unzureichend ausgeprägt sind.  Als Folge wird der Prozess der
-Konkretisierung der Aufgabenstellung mit ungenügender Präzision durchlaufen
-und damit das methodische Potenzial von TRIZ nicht genutzt.  Deshalb hierzu
-noch einige grundsätzliche Ausführungen.
+von einer klaren Kontextualisierung der Aufgabenstellung aus.  In der
+bisherigen Praxis stellte sich heraus, dass dies eine zusätzliche Hürde für
+Studierende ist, so dass der erste Teil der ersten Phase dahingehend
+präzisiert wurde, diese Kontextualisierung (\emph{Abgrenzung} des zu
+untersuchenden Technischen Systems als Black Box, Bestimmung seines
+\emph{Zwecks} in einem \emph{Obersystem}) systematisch vorzunehmen,
+\emph{bevor} der innere Aufbau (Wie ist die \emph{Maschine} aufgebaut und wie
+arbeitet sie?) genauer analysiert wird.  Deshalb hierzu noch einige
+grundsätzliche Ausführungen.
 
 \paragraph{Systeme und Komponenten.} 
 Der Systembegriff ist eng mit \emph{Praxen planmäßigen Vorgehens} verbunden,
@@ -206,11 +210,11 @@ zu berücksichtigen.
 Mit Blick auf die grundsätzlich beschränkten Möglichkeiten der Beschreibung
 von Prozessen ist eine Komplexitätsreduktion erforderlich. Deshalb müssen
 System\emph{beschreibungen} in ihrem Konzept \emph{räumlich, zeitlich und
-  kausal} beschränkt werden, während die Performanz der auf dieser Basis
-geschaffenen \emph{realen} technischen Systeme zur Laufzeit alle drei
-Schranken trans"|zendiert. Der \emph{Zuschnitt} von Systemen muss deshalb so
-erfolgen, dass diese Transzendenz in möglichst engen Grenzen verbleibt, dass
-also das System in weiten Bereichen auch so funktioniert wie geplant.
+  kausal} beschränkt (kontextualisiert) werden, während die Performanz der auf
+dieser Basis geschaffenen \emph{realen} technischen Systeme zur Laufzeit alle
+drei Schranken trans"|zendiert. Der \emph{Zuschnitt} von Systemen muss deshalb
+so erfolgen, dass diese Transzendenz in möglichst engen Grenzen verbleibt,
+dass also das System in weiten Bereichen auch so funktioniert wie geplant.
 
 Ein typischer ingenieur-technischer Zugang zur Realisierung dieser Anforderung
 ist der \emph{Aufbau eines Systems aus Komponenten}, dieses also aus
@@ -254,8 +258,7 @@ sind.
 
 Ein einigermaßen vollständiges System umfasst nach (Lyubomirskiy u.a. 2018,
 S. 39)
-\enlargethispage{1em}
-\begin{itemize}\itemsep0pt
+\begin{itemize}[noitemsep]
 \item die Funktionalität des operierenden Agenten,
 \item Transmissionsfunktionalitäten,
 \item Energiebereitstellungsfunktionalitäten und
@@ -278,8 +281,8 @@ ersten Phase zu identifizieren
   im Obersystem) überhaupt für menschliche Praxen relevant ist,
 \item [2\,b.] wie das System in die \emph{Abläufe} des Obersystems eingebettet
   ist und
-\item [2\,c.] welche \emph{Funktionen} das System im Obersystem zu erfüllen
-  hat,
+\item [2\,c.] welche \emph{primär nützliche Funktion} (PNF) das System im
+  Obersystem erfüllt,
 \end{enumerate}
 (Beides im Abschnitt „Präzisierung der Umstände“)
 \item die Aufbauorganisation des Systems -- welche Komponenten und welche
@@ -288,17 +291,21 @@ ersten Phase zu identifizieren
   arbeitet).
 \end{enumerate}
 In der Regel kann im Lösungsprozess das System so modifiziert werden, dass es
-seine Funktion im Obersystem weiter erfüllt wie bisher spezifiziert oder nur
+seine PNF im Obersystem weiter erfüllt wie bisher spezifiziert oder nur
 unwesentliche Modifikationen vorgenommen werden müssen, sich die
 Transformation der Ablaufstrukturen also auf den Kontext des Systems selbst
-beschränken lässt.
+beschränken lässt.  In anderen Aufgaben geht es um eine temporär zusätzliche
+Funktion des Systems, die in einem anderen Systemzustand auszuführen ist. Auch
+in diesem Fall ist die Analyse der PNF wichtig, da über diese Funktion die
+verfügbaren Systemressourcen identifiziert werden können, die auch für die
+zusätzliche Funktion genutzt werden können (und sollten).
 
 Die Ablauforganisation im Obersystem führt weiterhin oft auf eine klare
 Unterscheidung verschiedener \emph{Zustände}, die für optimale Lösungen in der
 Modellierung über verschiedene Betriebsmodi im System zu berücksichtigen sind.
 
 \paragraph{Typische Identifizierungen in einzelnen Aufgaben:}
-\begin{itemize}\itemsep0pt
+\begin{itemize}[noitemsep]
 \item Schiffsmast: Obersystem Wasserstraßenverkehr, System Boot.
 \item Güterzug anfahren: Obersystem Gütertransport auf der Schiene, System
   Güterzug. 
@@ -309,19 +316,20 @@ Modellierung über verschiedene Betriebsmodi im System zu berücksichtigen sind.
 Am Ende dieser ersten Phase (in der Informatik auch als
 \emph{Anforderungsanalyse} bezeichnet) steht ein genaues Modell des Systems.
 Weiter ist (Abschnitt „Hypothesen aufstellen“) auf der Basis dieser genauen
-Modellkenntnis eine \emph{Aufgabe} zu formulieren, deren Umsetzung das Problem
-lösen würde. Im Gegensatz zu Analysemethoden wie \emph{Design Thinking} oder
-\emph{Six Sigma}, die stark auf die Wünsche des Kunden, aber weniger auf die
-technischen Gegebenheiten ausgerichtet sind, wird durch die systematische
-Modellierung ein gutes Verständnis\footnote{In der Praxis wirken hier oft
-  Beratungsfirmen (methodisches Wissen) und Praktiker (fachliches Wissen)
-  interdisziplinär zusammen.} für die technischen Gegebenheiten erarbeitet und
-damit im Gegensatz zum Brainstorming der zu analysierende Lösungsraum
-\emph{begründet} bereits massiv fokussiert.  Diese stark fokussierende Wirkung
-einer TRIZ-Analyse auf \emph{praktisch} Umsetzbares wird von Anwendern immer
-wieder als großer Vorteil dieser Methodik hervorgehoben.  Mit der Formulierung
-der Aufgabe ist die \emph{Richtung} der Lösung an dieser Stelle bereits klar,
-auch wenn die Details im weiteren Prozess noch ausgearbeitet werden müssen.
+Modellkenntnis eine \emph{präzisierte Aufgabe} zu formulieren, deren Umsetzung
+das Problem lösen würde. Im Gegensatz zu Analysemethoden wie \emph{Design
+  Thinking} oder \emph{Six Sigma}, die stark auf die Wünsche des Kunden, aber
+weniger auf die technischen Gegebenheiten ausgerichtet sind, wird durch die
+systematische Modellierung ein gutes Verständnis\footnote{In der Praxis wirken
+  hier oft Beratungsfirmen (methodisches Wissen) und Praktiker (fachliches
+  Wissen) interdisziplinär zusammen.} für die technischen Gegebenheiten
+erarbeitet und damit im Gegensatz zum Brainstorming der zu analysierende
+Lösungsraum \emph{begründet} bereits massiv fokussiert.  Diese stark
+fokussierende Wirkung einer TRIZ-Analyse auf \emph{praktisch} Umsetzbares wird
+von Anwendern immer wieder als großer Vorteil dieser Methodik hervorgehoben.
+Mit der Formulierung der Aufgabe ist die \emph{Richtung} der Lösung an dieser
+Stelle bereits klar, auch wenn die Details im weiteren Prozess noch
+ausgearbeitet werden müssen.
 
 Es kann sein, dass sich während dieser Systemmodellierung herausstellt, dass
 ein anderer Detailgrad als System angemessener ist, siehe den Abschnitt
@@ -329,13 +337,14 @@ ein anderer Detailgrad als System angemessener ist, siehe den Abschnitt
 jenem Level wiederholt werden. Mehr dazu finden Sie im Abschnitt „AIPS-2015“
 des Hilfesystems.  Hilfreich ist es hierbei auch, die Ausführungen in
 (Koltze/Souchkov 2017, Kapitel 4.3) zum Zusammenhang zwischen technischen (TW)
-und physikalischen (PW) Widersprüchen zu beachten und zu einem (gelegentlich
-offensichtlichen) PW die TW zu rekonstruieren, um zu verstehen, wie der PW im
-Gesamtsystem der Modellierung einzubetten ist.  Vorausgesetzt werden natürlich
-auch elementare Kenntnisse zu physikalischen Begriffen und
-physikalisch-technischen Zusammenhängen, die Ihnen aus der Schule geläufig
-sein sollten\footnote{Etwa Zusammenhänge zwischen verschiedenen Energieformen,
-  zu Kräften, Momenten, Bewegungsgrößen usw.}.
+und naturgesetzlichen\footnote{auch „physikalischer Widerspruch“, allerdings
+  gibt es auch Widersprüche mit chemischem oder biologischem Hintergrund.}
+(NW) Widersprüchen zu beachten und zu einem (gelegentlich offensichtlichen) NW
+die TW zu rekonstruieren, um zu verstehen, wie der NW im Gesamtsystem der
+Modellierung einzubetten ist.  Vorausgesetzt werden natürlich auch elementare
+Kenntnisse zu naturgesetzlichen Begriffen und Zusammenhängen, die Ihnen aus
+der Schule geläufig sein sollten\footnote{Etwa Zusammenhänge zwischen
+  verschiedenen Energieformen, zu Kräften, Momenten, Bewegungsgrößen usw.}.
 
 \subsection{Zweite Phase: Lösung der Aufgabe}
 
@@ -362,18 +371,18 @@ Behälter für den Tee, also kann nur was mit der Hand geändert werden. Fasse
 das Glas mit einem Handschuh an (der wirkt wärmedämmend), oder mit einer
 Grillzange (Abstand). Oder verwende einen Teeglashalter (perfektioniert die
 Idee mit der Grillzange).  Oder pappe den Henkel des Teeglashalters gleich an
-das Teeglas (schon perfektere räumliche Separation am Teeglas selbst).  Oder
-analysiere genauer: Glaswand muss \emph{innen} heiß und \emph{außen} kalt
-sein.  Stelle das Glas also aus wäredämmendem Material her -- wir haben den
-Coffee-To-Go-Becher erfunden.
+das Teeglas (schon perfektere räumliche Separation am Teeglas selbst;
+„Trimmen“ des Teeglashalters).  Oder analysiere genauer: Glaswand muss
+\emph{innen} heiß und \emph{außen} kalt sein.  Stelle das Glas also aus
+wäredämmendem Material her -- wir haben den Coffee-To-Go-Becher erfunden.
 
 \paragraph{Systematische Kontextanalyse.}
 In der zweiten Phase der Lösung ist dieser Suchprozess für den Konflikt, seine
 Bedingtheiten und die dazu spezifizierte Aufgabe \emph{systematisch}
-auszuführen.  Hierfür stehen vier verschiedene Problemmodelle zur Verfügung,
+auszuführen.  Hierfür stehen vier verschiedene Aufgabenmodelle zur Verfügung,
 die alle probiert werden können. Aus der spezifischen Konstellation von
-Modellierung und Konfliktstruktur kann aber oft eines der Problemmodelle
-favorisiert werden.  Die Anwendungsgebiete der vier Problemmodelle sind im
+Modellierung und Konfliktstruktur kann aber oft eines der Aufgabenmodelle
+favorisiert werden.  Die Anwendungsgebiete der vier Aufgabenmodelle sind im
 Abschnitt „Lösen der herausgearbeiteten Aufgabe“ des Hilfesystems hinreichend
 detailliert erläutert.
 
@@ -384,10 +393,10 @@ Modell TRIZ-Werkzeuge angewendet werden, um dieses in ein \emph{abstraktes
   Lösungsmodell} zu transformieren -- also ein \emph{Bündel strukturierter
   Lösungsideen} nach vielfach bewährten TRIZ-Prinzipien zu entwickeln.  Diese
 zunächst abstrakten Lösungsideen (etwa „mache irgendwas mit akustischen
-Feldern“) werden im dritten Schritt mit den in der realen Situation
+Feldern“) werden im zweiten Schritt mit den in der realen Situation
 verfügbaren Ressourcen abgeglichen und daraus \emph{vorläufige Lösungen}
-entwickelt, die im vierten Schritt miteinander verglichen und die beste als
-\emph{finale Lösung} ausgewählt wird.
+entwickelt, die im dritten Schritt miteinander verglichen, ggf. kombiniert und
+die beste als \emph{finale Lösung} ausgewählt wird.
 
 Da dieser Teil im Hilfesystem sehr genau beschrieben ist, kann hier auf
 weitere Ausführungen verzichtet werden. 
@@ -401,7 +410,7 @@ betriebsinternen Abläufen ergeben.  Deshalb konzentriert sich die Beratung
 nicht darauf, eine einzige starke Lösung zu finden, die unter bestimmten
 Bedingungen wahrscheinlich schwierig zu implementieren ist, sondern bietet
 eine Reihe von (begründeten) Lösungen, aus denen der Kunde die für ihn am
-besten geeignete, lokal ideale Lösung auswählt.
+besten geeignete, lokal ideale Lösung kombinieren kann.
  
 Dieser Ansatz wird auch im TRIZ-Trainer verfolgt, auch wenn wir hier keinen
 \emph{Kunden} als Quelle der Probleme und zur Evaluierung der Lösungen haben.
@@ -426,7 +435,7 @@ wird die Lösung zur Überarbeitung zurückgegeben mit folgenden zwei Optionen:
 \item Sie bleiben in Phase 2 und durchlaufen den Lösungszyklus erneut mit den
   erweiterten Kenntnissen und derselben Hypothese (Iteration).
   
-  Modifizieren Sie das Aufgabenmodell oder verwenden Sie ein aderes, führen
+  Modifizieren Sie das Aufgabenmodell oder verwenden Sie ein anderes, führen
   Sie noch einmal die Lösungsschritte aus und reichen die neue Lösung zur
   Bewertung ein.
 \item Sie kehren in Phase 1 zurück, gehen anders an die Modellierung heran,
@@ -439,9 +448,9 @@ wird die Lösung zur Überarbeitung zurückgegeben mit folgenden zwei Optionen:
 \begin{thebibliography}{xxx}
 \bibitem{KS2017} Karl Koltze, Valeri Souchkov (2017). Systematische
   Innovation.  2. Auf"|lage, Hanser, München.  
-\bibitem{TESE2018} Alex Lyubomirskiy, Simon Litvin, Sergei Ikovenko, Christian
-  M. Thurnes, Robert Adunka (2018). Trends of Engineering System Evolution
-  (TESE).  TRIZ Consulting Group. ISBN 978-3-00-059846-3.
+\bibitem{TESE2018} Alex Lyubomirskiy, Simon Litvin, Sergei Ikovenko et
+  al. (2018). Trends of Engineering System Evolution (TESE).  TRIZ Consulting
+  Group. ISBN 978-3-00-059846-3.
 \bibitem{Szyperski2002} Clemens Szyperski (2002). Component Software. Addison
   Wesley, Boston. 
 \end{thebibliography}
