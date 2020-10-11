@@ -7,8 +7,8 @@
 \parskip4pt
 \setcounter{secnumdepth}{-2}
 
-\title{Vorlesungsplan „Modellierung nachhaltiger Systeme und Semantic Web“ im
-  Wintersemester 2020/21}
+\title{Vorlesungsplan „Modellierung nachhaltiger Systeme\\ und Semantic Web“
+  im Wintersemester 2020/21}
 
 \author{Hans-Gert Gr\"abe}
 
@@ -23,26 +23,37 @@ orientert sich am Flipped Classroom Konzept. Die Vorlesung besteht aus drei
 Teilen.
 
 Im ersten Teil werden wir das Konzept eines \emph{Technischen Systems}
-erschließen und uns mit TRIZ als wichtigster Systematischer
+erschließen und uns mit der TRIZ als wichtigster Systematischer
 Innovationsmethodik beschäftigen.  Im Gegensatz zu anderen Kreativitäts- und
-Innovationsmethodiken setzt TRIZ auf einer Systematisierung
-ingenieur-technischer Erfahrungen auf.   
+Innovationsmethodiken setzt die TRIZ auf die Systematisierung
+ingenieur-technischer Erfahrungen. 
 
+Im zweiten Teil befassen wir uns genauer mit Aspekten der Erstellung von
+Begriffsnetzen für Datenmodelle auf der Basis von RDF, dem \emph{Resource
+  Description Framework}, der \emph{Linked Open Data Cloud}, dem dabei
+entstehenden \emph{Giant Global Graph} und der Bedeutung dieser Entwicklungen
+für die Organisation kooperativer Handlungszusammenhänge.
 
-Neben einer allgemeinen
-Literaturliste wird dazu zu jeder Vorlesung Literatur zur Vorbereitung
-angegeben. In der Vorleung wird das Thema nur kursorisch beleuchtet, es
-besteht aber die Möglichkeit, Fragen zur Literatur zu stellen und einzelne
-Aspekte gemeinsam zu diskutieren.
+Im dritten Teil untersuchen wir schließlich die Rolle von Daten und
+Informationen sowie die Erzeugung neuer Sprache für die Entwicklung
+technischer Systeme in der bürgerlichen Gesellschaft. 
+
+Neben einer allgemeinen Literaturliste wird dazu zu jeder Vorlesung Literatur
+zur Vorbereitung angegeben. In der Vorleung wird das Thema nur kursorisch
+beleuchtet, es besteht aber die Möglichkeit, Fragen zur Literatur zu stellen
+und einzelne Aspekte gemeinsam zu diskutieren.
 
 \textbf{Allgemeine Literaturliste:}
 \begin{itemize}[noitemsep]
-\item Karl Koltze, Valeri Souchkov. Systematische Innovationsmethoden. Hanser,
-  München 2017.
-\item Lyubomirski u.a.: Theory of Evolution of Technical Systems.
-  Sulzbach-Rosenberg, 2018.
-\item Dietmar Zobel. TRIZ für alle. Expert Verlag, Renningen 2018.
-\item Dietmar Zobel. Kreatives Denken. Expert Verlag, Renningen 2007.
+\item Karl Koltze, Valeri Souchkov (2017). Systematische Innovationsmethoden.
+  Hanser Verlag, München. ISBN 9783446451278
+\item Alex Lyubomirskiy, Simon Litvin, Sergei Ikovenko et al. (2018). Trends
+  of Engineering System Evolution (TESE).  TRIZ Consulting Group. ISBN
+  9783000598463.
+\item Dietmar Zobel (2007). Kreatives Arbeiten. Expert Verlag, Renningen.\\
+  ISBN 9783816927136.
+\item Dietmar Zobel (2020). TRIZ für alle. Expert Verlag, Renningen. ISBN
+  9783816985105.
 \end{itemize}
 \newpage
 \tableofcontents
@@ -61,7 +72,7 @@ Technikbegriff als Einheit von
 
 \textbf{Literaturliste:}
 \begin{itemize}[noitemsep]
-\item Hans-Gert Gräbe. Die Menschen und ihre Technischen Systeme. LIFIS
+\item Hans-Gert Gräbe (2020). Die Menschen und ihre Technischen Systeme. LIFIS
   Online, 19. Mai 2020. \url{http://dx.doi.org/10.14625/graebe_20200519}.
 \end{itemize}
 
@@ -79,15 +90,16 @@ Technikbegriff als Einheit von
 
 \textbf{Literaturliste:}
 \begin{itemize}[noitemsep]
-\item Hans-Gert Gräbe. TRIZ-Methodik.pdf
-\item {}[Koltze, Souchkov]
+\item Hans-Gert Gräbe (2020). Zur Methodik des TRIZ-Trainers und AIPS-2015.\\ 
+  Als \texttt{TRIZ-Methodik.pdf} im Repo \emph{wumm-project/Leipzig-Seminar}.
+\item (Koltze, Souchkov 2017)
 \end{itemize}
 
 \textbf{Lernziele:}
 \begin{itemize}[noitemsep]
 \item Kontextualisierung von Anforderungssituationen durch den Systemoperator 
-\item Technischer Systeme als Black Box, Zwecke und die Bestimmung der PNF (primär nützlichen
-  Funktion, core concern) 
+\item Technische Systeme als Black Box, Zwecke und die Bestimmung der PNF
+  (primär nützliche Funktion, core concern)
 \item Bestimmung von Aufbau- und Ablauforganisation eines Systems nach
   AIPS-2015 
 \item Nützliche und schädliche Effekte, operative Zone und operative Zeit von
@@ -99,7 +111,18 @@ Technikbegriff als Einheit von
 
 \textbf{Literaturliste:}
 \begin{itemize}
-\item Hans-Gert Gräbe. Linkliste aus dem Seminar im Vorjahr
+\item Hans-Gert Gräbe (2020).  Zum Systembegriff in der Theorie dynamischer
+  Systeme.  Als \texttt{TDS.md} im Repo \emph{wumm-project/Leipzig-Seminar}.
+\end{itemize}
+Zusatzliteratur:
+\begin{itemize}
+\item Ludwig von Bertalanffy (1950). An outline of General System Theory, The
+  British Journal for the Philosophy of Science, Volume I.2, 134–165.
+  \url{https://doi.org/10.1093/bjps/I.2.134}
+\item Erich Jantsch (1992). Die Selbstorganisation des Universums. Hanser,
+  München.
+\item Ilya Prigogine, Isabelle Stengers (1993). Das Pardox der Zeit. Piper,
+  München, Kap. 3--5.
 \end{itemize}
 
 \textbf{Lernziele:}
@@ -113,14 +136,27 @@ Technikbegriff als Einheit von
 
 \textbf{Literaturliste:}
 \begin{itemize}[noitemsep]
-\item Holling, Fox, Gehrs, Gräbe aus dem Vorjahr
+\item Frank W. Geels, Johan Schot (2007). Typology of Sociotechnical
+  Transition Pathways. In: Research Policy 36 (2007), 399–417.\\
+  \url{https://doi.org/10.1016/j.respol.2007.01.003} 
+\item Hans-Gert Gräbe (2020). TRIZ und Transformationen sozio-technischer und
+  sozio-ökolo\-gischer Systeme. LIFIS Online, 27.06.2020.
+  \url{http://dx.doi.org/10.14625/graebe_20200627}.
+\item C.S. Holling (2000). Understanding the Complexity of Economic,
+  Ecological, and Social Systems. In: Ecosystems (2001) 4, 390–405.
+  \url{https://www.esf.edu/cue/documents/Holling_Complexity-EconEcol-SocialSys_2001.pdf}
 \end{itemize}
 
 Zusatzliteratur:
 \begin{itemize}[noitemsep]
-\item Mike Davis. Arche
-\item Hans-Gert Gräbe. Wie geht Fortschritt?
-\item Rainer Thiel. Allmählichkeit der Revolution.
+\item Mike Davis (2009).  Wer wird die Arche bauen? Das Gebot utopischen
+  Denkens im Zeitalter der Katastrophen.  In: Das Ende des
+  Kasino-Kapitalismus?  Globalisierung und Krise. Blätter
+  Verlagsges., Berlin, S. 267-285. ISBN 3980492559. 
+\item Hans-Gert Gräbe (2012). Wie geht Fortschritt? LIFIS Online, 12.11.2012.
+  \url{http://www.leibniz-institut.de/archiv/graebe_12_11_12.pdf}
+\item Rainer Thiel (2000). Die Allmählichkeit der Revolution. Blick in sieben
+  Wissenschaften.  LIT-Verlag, Münster. ISBN 9783825849457. 
 \end{itemize}
 
 \textbf{Lernziele:}
@@ -160,7 +196,8 @@ Zusatzliteratur:
 
 \textbf{Lernziele:}
 \begin{itemize}[noitemsep]
-\item Modellierung von Begriffswelten als Teil der Modellierung Technischer Systeme
+\item Modellierung von Begriffswelten als Teil der Modellierung Technischer
+  Systeme
 \item RDF-Grundbegriffe URI, Namensraum, Subjekt, Prädikat, Objekt
 \end{itemize}
 
@@ -178,7 +215,7 @@ Zusatzliteratur:
 \end{itemize}
 
 \subsection{7.1.: Die Linked Open Data Cloud. Ontologien und Begriffswelten.
-Der Google Knowledge Graph}
+Der Giant Global Graph}
 
 \textbf{Literaturliste:}
 \begin{itemize}
