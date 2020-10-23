@@ -1,4 +1,4 @@
-# Anmerkungen zu den Seminararbeiten
+# Anmerkungen zu den Seminararbeiten 
 
 Es wurden insgesamt zwei Seminararbeiten direkt zu Patentrecherchen
 eingereicht, weitere Arbeiten befassten sich mit anderen Aspekten der Theorie
@@ -40,7 +40,7 @@ _Anmerkungen zur Darstellung in der Arbeit:_
 ### Patchantenne
 
 _Patentschrift:_ Es geht darum, bestehende elektro-magnetische Felder für die
-Elergieversorgung zu nutzen.  Die Kommunikationsfunktion dieser Felder wird
+Energieversorgung zu nutzen.  Die Kommunikationsfunktion dieser Felder wird
 gewöhnlich über eine Modulation der Wellen realisiert, warum also nicht die
 Grundenergie der Wellenübertragung für andere Zwecke nutzen.
 
@@ -191,5 +191,8 @@ extrahiert, die in den Arbeiten von Häßler und Seidel untersucht wurden.
 ## Binqing Hu
 
 In dem Text wird die Situation von TRIZ in China beschrieben und mit der
-Situation in der DDR in den 1980er Jahren verglichen.  Die Arbeit muss noch
-deutlich editorisch überarbeitet werden.
+Situation in der DDR in den 1980er Jahren verglichen.  Die Arbeit wurde im
+Nachgang von Hans-Gert Gräbe deutlich editorisch überarbeitet, die
+versprochene Autorisierung der Bearbeitung durch den Autor der Arbeit erfolgte
+nicht - die entsprechenden Kontaktversuche gingen ins Leere.  Im Repo sind
+beide Versionen verfügbar.
