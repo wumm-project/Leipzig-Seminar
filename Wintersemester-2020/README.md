@@ -3,8 +3,8 @@
 ## Konzeption
 
 Das Seminar ist Teil des Vertiefungsmoduls "Semantic Web", zu dem weiter eine
-Vorlesung "Nachhaltigkeit und Digitale Skills" sowie ein Online-Praktikum mit
-dem TRIZ-Trainer von Nikolai Shpakovski gehören.
+Vorlesung "Modellierung nachhaltiger Systeme und Semantic web" sowie ein
+Online-Praktikum mit dem TRIZ-Trainer von Nikolay Shpakovsky gehören.
 
 Im Seminar wollen wir uns weiter mit dem für die TRIZ-Methodik zentralen
 Begriff des "Systems" auseinandersetzen, uns dazu die TRIZ-Historie dieses
@@ -15,13 +15,7 @@ WiFa sowie Ken Kleemann (Philosophie) organisiert.
 Zitat aus OTSM-TRIZ: "Die Gesetze der Entwicklung technischer Systeme ergeben
 sich aus den Gesetzen der Dialektik, die allen Systemen gemein sind."
 
-## TRIZ als systematische Innovationsmethodik und Nachhaltigkeit
-
-Eine Reihe von Videos zur Bedeutung von TRIZ als systematischer
-Innovationsmethodik im Kontext von Fragen von Nachhaltigkeit und biologischer
-Systeme ([BioTRIZ](http://biotriz.be/)), insbesondere zur Anwendung von
-Biomimikry.
-
-* https://www.youtube.com/watch?v=KLbRom-g8QE
-* https://www.youtube.com/watch?v=jaKK8TMzOVU
-* https://www.youtube.com/watch?v=4mp0JjAr6SM
+Ähnlich argumentiert auch V. Petrov in einer 4-bändigen Monographie zu den
+Gesetzen der Entwicklung technischer und allgemeinerer Systeme (in Russisch),
+so dass wir im aktuellen Seminar die verschiedenen Sichten innerhalb der
+TRIZ-Community auf diese Entwicklungsgesetze genauer studieren werden.
