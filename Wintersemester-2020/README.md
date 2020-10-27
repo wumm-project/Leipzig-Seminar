@@ -66,3 +66,13 @@ Ebenda, Folie 42
 > is linked with a human being as soon as we are in a problem solving context,
 > evolves in accordance with objective laws and takes into account specific
 > objective and subjective factors.
+
+## Datenschutz
+
+Wir folgen nicht nur theoretisch, sondern auch praktisch einem Open Culture
+Ansatz und stellen Kursmaterialien öffentlich zur Verfügung.  Dies gilt auch
+für die von Ihnen angefertigten Kursmaterialien (Präsentationen,
+Seminararbeiten) sowie für (kommentierte) Chatverläufe der
+Seminardiskussionen, in denen auch Ihre Namen genannt werden.  Wir gehen von
+Ihrem Einverständnis mit diesem Vorgehen aus, wenn Sie dem nicht explizit
+widersprechen.  Die Diskussionen selbst werden __nicht__ aufgezeichnet.
