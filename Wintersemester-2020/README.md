@@ -2,6 +2,7 @@
 
 * Vorlesung: do 11:15-12:45 Uhr
 * Seminar: di 9:15-10:45 Uhr
+
 Beides findet synchron online statt im BBB-Raum
 <https://conf.informatik.uni-leipzig.de/b/gra-fgy-6fw>.
 
