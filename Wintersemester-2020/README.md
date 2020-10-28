@@ -82,3 +82,10 @@ Seminararbeiten) sowie für (kommentierte) Chatverläufe der
 Seminardiskussionen, in denen auch Ihre Namen genannt werden.  Wir gehen von
 Ihrem Einverständnis mit diesem Vorgehen aus, wenn Sie dem nicht explizit
 widersprechen.  Die Diskussionen selbst werden __nicht__ aufgezeichnet.
+
+## Weitere Literaturverweise:
+
+Moskauer Methodologischer Kreis:
+* <http://v2.circleplus.ru/archive/ing/8/text>
+* <http://v2.circleplus.ru/archive/ing/4/text>
+* <https://journals.openedition.org/monderusse/8169>
