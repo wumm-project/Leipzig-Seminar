@@ -124,7 +124,8 @@ __Lernziele__:
 __Literaturliste__:
 * Michael Schetsche: Die digitale Wissensrevolution – Netzwerkmedien,
   kultureller Wandel und die neue soziale Wirklichkeit. In: zeitenblicke 5
-  (2006), Nr. 3, [2006-12-03]. urn:nbn:de:0009-9-6419
+  (2006), Nr. 3, [2006-12-03].
+  * <http://www.zeitenblicke.de/2006/3/Schetsche>
 
 __Zusatzliteratur__:
 * Felix Stalder. Kultur der Digitalität. Suhrkamp 2016.
