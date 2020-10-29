@@ -12,7 +12,7 @@
 * Andrei Kuryan, Dmitri Kucharavy (2018). The OTSM-TRIZ Heritage of
   Nikolai N. Khomenko. A General Theory of Powerful Thinking. Folien eines
   Vortrags auf dem TDS 2018 in St. Petersburg.
-  * <../Material/OTSM-Folien.pdf>
+  * [OTSM-Folien.pdf](../Material/OTSM-Folien.pdf)
 * Nikolai Khomenko, John Cooke (2007). Inventive problem solving using the
   OTSM-TRIZ “TONGS” model.
   * <../Material/tongs-en.pdf>
