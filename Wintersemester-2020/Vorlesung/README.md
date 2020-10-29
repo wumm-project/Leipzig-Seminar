@@ -15,7 +15,7 @@
   * [OTSM-Folien.pdf](../Material/OTSM-Folien.pdf)
 * Nikolai Khomenko, John Cooke (2007). Inventive problem solving using the
   OTSM-TRIZ “TONGS” model.
-  * <../Material/tongs-en.pdf>
+  * [tongs-en.pdf](../Material/tongs-en.pdf)
 * Alex Lyubomirskiy, Simon Litvin, Sergei Ikovenko et al. (2018). Trends
   of Engineering System Evolution (TESE).  TRIZ Consulting Group. ISBN
   9783000598463.
@@ -53,7 +53,7 @@ __Lernziele:__
 
 __Literaturliste__:
 * Hans-Gert Gräbe (2020). Zur Methodik des TRIZ-Trainers und AIPS-2015. 
-  * <../Material/TRIZ-Methodik.pdf>
+  * [TRIZ-Methodik.pdf](../Material/TRIZ-Methodik.pdf)
 * (Kuryan, Kucharavy 2018), ab Folie 31.
 
 __Zusatzliteratur__:
@@ -74,7 +74,7 @@ __Lernziele__:
 __Literaturliste__:
 * Hans-Gert Gräbe (2020).  Zum Systembegriff in der Theorie dynamischer
   Systeme.
-  * <../Material/TDS.md>
+  * [TDS.md](../Material/TDS.md)
   
 __Zusatzliteratur__:
 * Ludwig von Bertalanffy (1950). An outline of General System Theory, The
@@ -158,7 +158,7 @@ __Lernziele__:
 __Literaturliste__:
 * Open Data Support (2013). Trainingsmodul 1.3 Einführung
   in RDF & SPARQL.
-  * <../Material/RDF-Einfuehrung.pdf>
+  * [RDF-Einfuehrung.pdf](../Material/RDF-Einfuehrung.pdf)
 
 __Lernziele__:
 * RDF Konzepte. RDF-Graphen, Mustersuche, SPARQL Anfragesprache
