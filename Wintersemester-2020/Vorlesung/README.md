@@ -139,7 +139,7 @@ __Lernziele__:
 
 __Literaturliste__:
 * Marc Zobrist (2018). Ontologien und Datenmodelle. 
-  * <https://histhub.ch/ontologien-und-datenmodelle/}
+  * <https://histhub.ch/ontologien-und-datenmodelle/>
 * Hans-Gert Gräbe, Thomas Riechert, Michael Martin (2011). OD.FMI –
   Engineering operativ-administrativer Daten für die universitäre Lehre.
   Manuskript, eingereicht und abgelehnt bei der Delfi 2011, September 2011, TU
