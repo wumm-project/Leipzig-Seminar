@@ -143,3 +143,5 @@ Ken Kleemann, 31.10.2020
     Deutsche Übersetzung eines freien Fragments aus Band 1.   
 * Nikolay Shpakovsky (2003): Menschen und Technische Systeme.
   * <https://wumm-project.github.io/Texts/Shpakovsky-mts-de.pdf>
+  * Dazu auch eine [Kontroverse](https://wumm-project.github.io/2019-08-07) im
+    HGG-Blog.
