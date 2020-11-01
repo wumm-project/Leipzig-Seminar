@@ -133,15 +133,19 @@ __Technik__:
 
 Ken Kleemann, 31.10.2020
 
-## Weitere Literatur
+## Literatur
 
-* Annette Schlemm (2004): Hegels Gesetzesbegriff.
-  * <https://www.thur.de/philo/hegel/hegel20.htm>
+Literatur:
+* Einträge zu den Begriffen in der Wikipedia
 * Vladimir Petrov (2020): Gesetze und Gesetzmäßigkeiten der Systementwicklung.
   Monografie in 4 Bänden (in Russisch).
-  * <https://wumm-project.github.io/Texts/Petrov-LawsFragment-de.pdf>.
-    Deutsche Übersetzung eines freien Fragments aus Band 1.   
+  * Davon <https://wumm-project.github.io/Texts/Petrov-LawsFragment-de.pdf>.
+    Deutsche Übersetzung eines freien Fragments aus Band 1.
+
+Zusatzliteratur:
 * Nikolay Shpakovsky (2003): Menschen und Technische Systeme.
   * <https://wumm-project.github.io/Texts/Shpakovsky-mts-de.pdf>
-  * Dazu auch eine [Kontroverse](https://wumm-project.github.io/2019-08-07) im
-    HGG-Blog.
+* [Kontroverse](https://wumm-project.github.io/2019-08-07) zum Begriff eines
+    Technischen Systems im HGG-Blog.
+* Annette Schlemm (2004): Hegels Gesetzesbegriff.
+  * <https://www.thur.de/philo/hegel/hegel20.htm>
