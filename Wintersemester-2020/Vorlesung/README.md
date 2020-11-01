@@ -49,6 +49,9 @@ __Lernziele:__
 * Infrastrukturelle Einbettung Technischer Systeme in die „Welt der
   technischen Systeme“
 
+__Folien__:
+* [Technische Systeme](TechnischeSysteme.pdf)
+
 ## 12.11.: Modellierung widersprüchlicher Anforderungen und die TRIZ-Methodik nach AIPS-2015
 
 __Literaturliste__:
