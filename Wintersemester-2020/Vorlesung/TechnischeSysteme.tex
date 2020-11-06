@@ -1,0 +1,365 @@
+\documentclass{beamer}
+\usepackage{lsfolien}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+
+\myfootline{Systemmodellierung und Semantic Web -- WS 20/21}{Hans-Gert Gräbe}
+
+\newcommand{\ueberschrift}[1]{\begin{center}\bf #1\end{center}}
+
+\title{Modellierung nachhaltiger Systeme\\ und Semantic Web\vskip2em}
+
+\subtitle{Vorlesung im Modul 10-202-2330\\ im Master und Lehramt Informatik\\
+  sowie im Modul 10-202-2309 im Master Informatik}
+
+\author{Prof. Dr. Hans-Gert Gräbe\\
+\url{http://www.informatik.uni-leipzig.de/~graebe}}
+
+\date{Wintersemester 2020/21}
+\begin{document}
+
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}}
+
+\section{Grundlagen}
+\begin{frame}\frametitle{Technische Systeme in der TRIZ}
+
+„... a \emph{number of components} combined to a system by establishing
+  \emph{specific interactions} between the components ... assigned to
+  \emph{perform a controllable main useful function} ... within a particular
+  context.“ (Glossar V. Souchkov) \vskip1em
+
+Ein System ist eine Menge von Elementen, ... die ein \emph{einheitliches
+  Ganzes} bilden, das \emph{Eigenschaften} besitzt, die sich erst aus dem
+\emph{Zusammenspiel} der Teile ergeben (\emph{Emergenz} der primär nützlichen
+Funktion).  (V. Petrov, 2020) \vskip1em
+
+Bedeutung des Systemoperators in der TRIZ, Nichttrivialität des Antisystems
+(N. Feygenson, 2020)
+\end{frame}
+
+\begin{frame}\frametitle{Grundlagen}
+Trotz seiner Bedeutsamkeit bleibt die Begriffsbestimmung vage.\vskip1em
+  
+Wie kann der Begriff eines \emph{Technischen Systems} genauer umrissen
+werden? \vskip1em
+  
+  \begin{itemize}
+  \item [1.] Welche Aspekte sollten berücksichtigt werden?
+  \item [2.] Vier Dimensionen des Begriffs \emph{technisches System} (TS).
+  \item [3.] Technische Systeme als Black Box.
+  \end{itemize}
+\end{frame}
+\begin{frame}\frametitle{Aspekte}
+  \begin{block}{Unterscheidung zwischen Designzeit und Laufzeit}
+    \begin{itemize}
+    \item Während der Entwurfsphase wird die grundlegende kooperative
+      Zusammenarbeit \emph{geplant}.
+    \item Während der Ausführung wird \emph{dieser Plan ausgeführt}.
+    \end{itemize}
+  \end{block}
+  \begin{block}{Unterscheidung der interpersonellen} 
+    \begin{itemize}
+    \item Beschreibungsformen, die als \emph{begründete Erwartungen}
+      kommuniziert werden, und
+    \item Ausführungsformen, deren \emph{erfahrenen Resultate} in einem
+      widersprüchlichen Verhältnis zu den begründeten Erwartungen stehen.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}\frametitle{Aspekte}
+  \begin{block}{Aspekt der Nachnutzung}
+    \begin{itemize}
+    \item Dies gilt nicht für die meisten großen TS -- diese sind
+      \emph{Unikate}, auch wenn sie aus Standardkomponenten zusammengebaut
+      werden.
+    \item Die meisten Computerspezialisten erstellen auch solche
+      \emph{Unikate}, denn die IT-Systeme, die solche großen technischen
+      Systeme operativ steuern, sind ebenfalls einzigartig.
+    \item Das gleiche gilt für Ämter, Behörden, Regierungsstellen usw.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}\frametitle{Aspekte}
+  \begin{block}{Klare Unterscheidung zwischen den Berufen}
+    \begin{itemize}
+    \item des Maschinen- und des Industrieanlagenbauers sowie  
+    \item des Ausrüsters (Spezialist) und „Baumeisters“
+      entsprechender Unikate (Generalist).
+    \end{itemize}
+  \end{block}\vskip2em
+  \begin{alertblock}{These 1:}
+    Die Besonderheiten technischer Systemen liegen hauptsächlich im
+    \emph{Zusammenwirken von Komponenten} in einer \emph{Welt technischer
+      Systeme}.
+
+    \emph{Zwecke} betten diese Relationalität in menschliche Praxen ein. 
+\end{alertblock}
+\end{frame}
+\begin{frame}\frametitle{Erste Näherung}
+  \begin{block}{Die vier Dimensionen des Begriffs \emph{Technisches System}}.
+    \begin{itemize}
+    \item [1.] Das realweltliche Unikat.
+    \item [2.] Die Beschreibung dieses realweltlichen Unikats.
+    \end{itemize}
+    Für Komponenten, die in größerer Stückzahl hergestellt werden, auch
+    \begin{itemize}
+    \item [3.] Die Beschreibung des Designs der Systemvorlage.  
+    \item [4.] Die Beschreibung und das Funktionieren von Auslieferung,
+      Montage und Betrieb der realweltlichen Unikate, die nach dieser Vorlage
+      hergestellt wurden (z.B. Produktionsplan, Qualitätssicherungsplan,
+      Auslieferungsplanung, Pläne für Betrieb, Wartung und Instandhaltung).
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}\frametitle{Erste Näherung}
+  \ueberschrift{TS als Black Box}
+
+  Die Grundlage des Konzepts ist der \emph{Begriff des offenes Systems} aus
+  der allgemeineren Theorie Dynamischer Systeme.\vskip1em
+
+  Bestehende TS sind normativ charakterisiert 
+  \begin{itemize}
+  \item auf der Ebene der Beschreibungsform durch die \emph{Spezifikation
+    ihrer Schnittstellen} und
+  \item auf der Ebene der Ausführungsform durch das \emph{garantierte
+    Funktionieren nach dieser Spezifikation}.
+  \end{itemize}\vskip1em
+
+  Ein TS besteht aus Komponenten, die wiederum TS sind, deren
+  spezifikationskonformes Funktionieren vorausgesetzt wird.\vskip1em
+
+\end{frame}
+\begin{frame}\frametitle{Funktion des Begriffs eines TS}.
+  
+  Das TS-Konzept hat eine epistemische Funktion der (funktionalen) „Reduktion
+  auf das Wesentliche“. \vskip1em
+
+  Die menschliche Praxis ist untrennbar in das Konzept des TS eingebaut,
+  denn die Begriffe „wesentlich“, „garantiert“ und „funktioniert“ können nur
+  aus diesen Praxen heraus mit Bedeutung gefüllt werden. \vskip1em
+
+  Damit wird die in der TRIZ verbreitete Unterscheidung zwischen technischen
+  und sozio-technischen Systemen problematisch.
+\end{frame}
+  
+\section{Das Konzept eines TS}
+\begin{frame}{TS als White Box}
+  \begin{itemize}
+  \item [1.] Definition des Begriffs eines Technischen Systems.
+  \item [2.] TS und die Welt der technischen Systeme.
+  \end{itemize}\vskip2em
+  \begin{block}{Kern eines Technischen Systems ist ... }
+  ... die Beschreibung konkreter Prozesse durch Reduktion auf das Wesentliche
+    mit dem Ziel ihrer praktischen Anwendung.
+  \end{block}
+\end{frame}
+\begin{frame}{TS als White Box}
+  \begin{block}{Die Reduktion auf das Wesentliche ... }
+    ... fokussiert auf die folgenden drei Dimensionen:
+    \begin{itemize}
+    \item[(1)] Abgrenzung des TS nach außen gegen eine \emph{Umwelt},
+      Reduktion dieser Beziehungen auf Input/Output-Beziehungen und
+      garantierten Durchsatz (Zweckbestimmtheit und Arbeitsfähigkeit).
+    \item[(2)] Abgrenzung des TS nach innen durch Gruppierung von Teilen als
+      \emph{Komponenten}, deren Funktionieren auf eine „Verhaltenssteuerung“
+      über deren Schnittstellen reduziert wird.
+    \item[(3)] Reduktion der Beziehungen im TS selbst auf \emph{kausal
+      wesentliche}.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{TS als White Box}
+  \begin{block}{Das TS in der Welt der technischen Systeme}
+    Die Beschreibung des TS selbst ist nur auf der Grundlage von
+    Beschreibungen anderer (explizit oder implizit gegebener) TS möglich.  Der
+    Beschreibung vorgängig sind:
+    \begin{itemize}
+    \item[(1)] Eine vage Vorstellung der (funktionierenden)
+      Input/Output-Charakteristika der Umwelt.
+    \item [(2)] Ein klares Bild von der Funktionsweise der Komponenten über
+      die reine Spezifikation hinaus.
+    \item [(3)] Eine vage Vorstellung von Ursache-Wirkungs-Beziehungen im
+      System selbst, das der detaillierten Modellierung vorausgeht.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{TS als White Box}
+
+  Das Konzept basiert auf der Verfügbarkeit bereits bestehender TS, die in (2)
+  als Komponenten und in (3) als Nachbarsysteme eingehen. \vskip1em
+
+  Ingenieur-technische Praktiken vollziehen sich damit in einer \emph{Welt
+    Technischer Systeme}.\vskip1em
+
+  In die konkrete Beschreibung eines TS gehen andere Systeme --- Komponenten
+  oder Nachbarsysteme -- nur durch ihre Spezifikationen ein. \vskip1em
+
+  Voraussetzung für den reibungslosen Betrieb eines TS ist damit das
+  garantierte spezifikationskonforme Funktionieren der entsprechenden
+  Infrastruktur.
+\end{frame}
+\section{Komponenten}
+\begin{frame}{Komponenten}
+  \begin{itemize}
+  \item [1.] Der Begriff der Komponente nach Szyperski.
+  \item [2.] core concern, cross cutting concern.
+  \item [3.] Komponenten als funktionale Verbindungen.
+  \item [4.] Komponenten als Funktions-Objekt-Beziehungen zwischen
+    unabhängigen Dritten.
+  \item [5.] Komponenten und Infrastruktur.
+  \item [6.] Normen und Standards.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Die Welt der Komponenten}
+  \begin{block}{Der Begriff der Komponente nach Szyperski}
+    Was ist eine Komponente?
+
+    Szyperski gibt eine einfache Antwort: „Components are for composition“.
+  \end{block}\vskip2em
+
+  TS werden aus bereits vorhandenen Komponenten zusammengesetzt. Komponenten
+  können von Dritten erworben oder selbst entwickelt werden.
+\end{frame}
+
+\begin{frame}{Die Welt der Komponenten}
+
+  \begin{block}{core concern, cross cutting concerns}
+    Szyperski teilt die Welt der Komponentenherstellung (d.h. der TS) in zwei
+    Teilwelten -- „design for component“  und „design from component“.
+  \end{block}\vskip1em
+
+  Die erste Welt ist die Welt der Komponentenentwickler, die spezielle
+  Komponentenfunktionen für Geschäftsanwendungen -- „core concern“, dies
+  entspricht der PNF -- als \emph{Kernsystemfunktion} entwickeln. \vskip1em
+\end{frame}
+
+\begin{frame}{Die Welt der Komponenten}
+
+Zusätzlich zu dieser Kernfunktion benötigt die Komponente eine große Anzahl
+von \emph{unterstützenden Funktionen} (Protokollierung, Datensicherheit,
+Zugriffskontrolle, Druckersteuerung usw. -- „cross cutting concerns“), die auf
+\emph{etablierte Konzepte} (Beschreibungsdimension) zurückgreifen und dafür
+Dienste anderer, bereits \emph{vorgefertigter Komponenten} integrieren
+(Anwendungsdimension), die \emph{andere technische Prinzipien} in anderen
+Systemen umsetzen. \vskip1em
+
+\begin{alertblock}{These 2:} 
+  Realweltliche Komponenten sind in diesem Sinne immer \emph{Funktionsbündel},
+  die prozedurales Wissen aus \emph{mehreren} Bereichen bündeln.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Die Welt der Komponenten}
+
+Der \emph{Komponentenentwickler} muss all diese Beschreibungsformen der
+Funktionen von Hilfskomponenten beherrschen, zumindest auf der
+Abstraktionsebene ihrer Spezifikationen, um nützliche Komponenten zu bauen.
+\vskip1em
+
+Die zweite Welt ist die Welt der \emph{Komponentenassembler}. Diese bauen
+(nach vorher entworfenem Plan) das System aus vorhandenen Komponenten
+zusammen, entwickeln oder modifizieren zusätzliche Unterstützungsfunktionen
+(„glue code“), integrieren und testen das komplette System, bevor Sie es für
+die Nutzung durch den Kunden freigeben.
+\end{frame}
+
+\section{Standardi- sierung}
+\begin{frame}{Modularisierung und Standardisierung}
+
+Dieser Ansatz der Arbeitsteilung in Entwickler und Assembler von Komponenten
+im Bereich des Software Engineering wird auch in ingenieur-technischen
+Anwendungen umfassend genutzt.\vskip1em
+
+„Modulare Systeme“ sind weit verbreitet und ermöglichen die Standardisierung
+des Entwurfs der einzigartigen realweltlichen technischen Systeme. \vskip1em
+\end{frame}
+
+\begin{frame}{Komponenten und Frameworks}
+
+Dabei muss die \emph{Anwendungslogik} der Komponente als „core concern“ mit
+der \emph{Logik der infrastrukturellen Vernetzung} als „cross cutting
+concerns“ verbunden werden.\vskip1em
+
+\begin{alertblock}{These 3:} 
+  Die Infrastrukturlogik ist normalerweise Teil des
+  \emph{Komponenten-Frameworks}, das nur dann effektiv genutzt werden kann,
+  wenn es \emph{gemeinschaftliches „Eigentum“ eines ganzen
+    Technologiebereichs} ist.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Standardisierung und Trends der Evolution TS}
+
+Anwendungslogik und Infrastrukturlogik sind orthogonal zueinander, womit die
+Trends \emph{4.2 zunehmende Vollständigkeit des Systems} und \emph{4.4
+  Migration zum Supersystem} in der Entwicklung TS einander praktisch
+entgegenwirken.  \vskip1em
+
+\begin{alertblock}{These 4:} 
+  Eine Verbesserung des Verständnis der \emph{Infrastrukturanforderungen}
+  miteinander interagierender Komponenten (Übergang zum Supersystem) als
+  Beschreibungsform führt zu einer \emph{Verringerung des Niveaus der
+    Anforderungen an die Vollständigkeit} einzelner Komponenten.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Standardisierung und Skaleneffekte}
+
+Standardisierung eröffnet die Aussicht auf Skaleneffekte für
+Standardkomponenten. Skaleneffekte führen zu geringeren Kosten pro Einheit und
+verschieben damit die führende Rolle des Wettbewerb von der Konkurrenz
+\emph{um die bessere technische Lösung} zur Konkurrenz um die \emph{billigere
+  wirtschaftliche Herstellung}.\vskip1em
+
+Damit wechselt die S-Kurve auf dem Höhepunkt ausgereifter technischer Lösungen
+(Standardisierung eingeschlossen) in der Phase der allgemeinen Verfügbarkeit
+in einen \emph{anderen Modus}, in dem die Reduzierung der wirtschaftlichen
+Kosten für die Verfügbarkeit dieses „Stands der Technik“ die Leitfunktion für
+die weitere Entwicklung übernimmt.
+\end{frame}
+
+\begin{frame}{Standardisierung und Skaleneffekte}
+
+\begin{alertblock}{These 5:} 
+  Der technische „Trend 4.1 des steigenden (technischen) Werts" geht auf der
+  dritten Stufe der Entwicklung der S-Kurve über in einen ökonomischen
+  „Trend der Verringerung des (ökonomischen) Werts“.
+\end{alertblock}\vskip1em
+
+Oder, in ökonomischen Termini: ein nachfragegetriebener Markt geht über in
+einen angebotsgesteuerten Markt. Derselbe (reife) Gebrauchswert hat einen
+immer geringeren Tauschwert.
+
+\end{frame}
+
+\section{Schluss- folgerungen}
+\begin{frame}{Schlussfolgerungen}
+  \begin{alertblock}{These 6:} 
+    In der TRIZ-Theorie der Evolution TS muss klarer zwischen jungen und
+    ausgereiften Technologien unterschieden werden.
+  \end{alertblock}\vskip1em
+  \begin{block}{In ausgereiften Technologien ... } 
+    \begin{itemize}
+    \item sind TS \emph{Bündel technischer Prinzipien},
+    \item die in der Beschreibungsform \emph{Einheit in der Vielfalt} (global
+      denken) zum Ziel haben und
+    \item in der Praxisform \emph{Vielfalt in realweltlichen lokalen
+      Anwendungskontexten} (lokal handeln) aus dieser Einheit zurückgewinnen.
+  \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{Schlussfolgerungen}
+  \begin{alertblock}{These 7:} 
+    Der gerichtete Graph der \emph{Zweckbestimmungen} ist der Kern der
+    Relationalität in der Welt der Technischen Systeme.\vskip1em
+
+    Dieser Graph ist ein globales sozio-technisches Artefakt und entwickelt
+    sich seinerseits in der Widersprüchlichkeit von Beschreibungs- und
+    Vollzugsform.
+  \end{alertblock}
+\end{frame}
+\end{document}
