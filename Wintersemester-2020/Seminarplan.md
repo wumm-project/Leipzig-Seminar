@@ -18,7 +18,7 @@ Diskussionsleitung: Ken Kleemann
 
 (Koltze/Souchkov 2017, Abschnitt 4.12.)
 
-Diskussionsleitung: Ken Kleemann
+Diskussionsleitung: Hans-Gert Gräbe
 
 ## 17.11. Evolution TS im TESE-Buch
 
