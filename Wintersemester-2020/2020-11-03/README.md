@@ -183,9 +183,9 @@ bezeichnet.
 __Emergenz__ bedeutet in der Systemtheorie das Vorhandensein besonderer
 Eigenschaften eines Systems, die seinen Teilsystemen und Blöcken nicht
 inhärent sind, auch nicht der einfachen Summe der nicht verbundenen Elemente
-ohne deren besonderen systembildenden Beziehungen; Nichtreduzierbarkeit der
-Systemeigenschaften auf die Summe der Eigenschaften seiner Komponenten;
-Synonym -- „Systemeffekt“.
+ohne deren besonderen systembildenden Beziehungen. Die Systemeigenschaften
+sind nicht reduzierbar auf die Summe der Eigenschaften seiner Komponenten;
+Synonym - __Systemeffekt__.
 
 Häufig wird diese Eigenschaft auch als __Synergieeffekt__ bezeichnet -
 Steigerung der Effizienz der Wirkung als Ergebnis der Integration, des
@@ -201,24 +201,25 @@ hinausgeht.
 Auch diese genaue und ausführliche Defintion lässt eine Reihe von Fragen
 offen.  Insbesondere wurde gefragt, im welchem Umfang zwischen _System_ (als
 Produkt von Denktätigkeit) und _Systematisierung_ (als spezieller Form der
-Denktätigkeit selbst) unterscheiden müsse. Zu klären sind vor allem
+Denktätigkeit selbst) unterschieden werden müsse. Zu klären sind vor allem
 * Abgrenzungsproblematik,
 * Kontextualisierung, Framing und "Umwelt"
-* immersiver vs. submersiver Systembegriff
-  * Dazu wird es eine eigene Vorlesung geben.
+* immersiver vs. submersiver Systembegriff (Dazu wird es eine eigene Vorlesung
+  geben)
 * Zusammenhang zwischen Strukturierung und Durchsatz von Stoff und Energie
   durch das System
 * Ebenenproblematik
 
 Eingehender diskutiert wurde insbesondere, ob Beschreibungen immer
-retrospektiv seien oder gerade einer prospektiven Komponente eine besondere
-Bedeutung zukommt. Ingenieure werden sich wie die Philosophen des MMK
-(Moskauer Methodologischer Kreis) primär für die prospektive Dimension
+_retrospektiv_ seien oder gerade einer _prospektiven Komponente_ eine
+besondere Bedeutung zukomme. Ingenieure werden sich, wie die Philosophen des
+MMK (Moskauer Methodologischer Kreis), primär für die prospektive Dimension
 interessieren, denn diese sind für die "Gestaltung von Verhältnissen" (Schlemm
-am Ende von Abschnitt 2.3.2 mit Bezug auf Lucien Séve) entscheidend. Die kUnst
-besteht darin, dabei die retorspektive Dimension, die "historische
-Perspektive" angemessen zu integrieren, ob nun als _Abduktion_ oder
-_Heuristik_, mag hier dahingestellt bleiben.  Zu MMK und "la prospective" etwa
+am Ende von Abschnitt 2.3.2 mit Bezug auf Lucien Séve) entscheidend. Die Kunst
+besteht darin, dabei die retrospektive Dimension, die "historische
+Perspektive", angemessen zu integrieren, ob nun als _Abduktion_ oder
+_Heuristik_, mag hier dahingestellt bleiben.  Zu MMK und deren "la
+prospective" etwa
 * Egle Rindzevičiūtė (2015). The future as an intellectual technology in the
   Soviet Union. Cahiers du monde russe, 56/1.
   * <https://doi.org/10.4000/monderusse.8169>
@@ -234,38 +235,35 @@ Regenerationsfähigkeit der beteiligten Systeme (vor allem von Lebewesen und
 Ökosystemen) gewährleistet werden soll, (Wikipedia)
 </blockquote>
 
-reduzieren lässt.  Die Überlegungen des "königlich-polnischen und
+reduzieren lässt, da ein solches "Handlungsprinzip" wenig Raum für Veränderung
+lässt.  Die Überlegungen des "königlich-polnischen und
 kurfürstlich-sächsischen Kammer- und Bergrats Hans Carl von Carlowitz"
 (Wikipedia), der gemeinhin als der Begründer des Prinzips "Nachhaltigkeit"
 gilt, wurden als zeitspezifischer Zugang zu einer Problematik identifiziert,
 die sich im Zuge des Übergangs zu einer kapitalistischen Produktionsweise auch
-in der Forstwirtschaft auftat, in dem Jahrhunderte alte stabile
-Bewirtschaftungsformen einer Allmende durch privatwirtschaftliche Formen
-abgelöst werden.  Die Probleme eines nachhaltigen Bewirtschaftens von
-Infrastrukturen in privatwirtschaftlichen Formen, ein Credo neoliberaler
-Theorie in guter Tradition von (Hardin 1968), sind inzwischen selbst in
-sogenannten ÖPP-Projekten mehr als deutlich geworden und Grund zum Umdenken.
-Hierzu etwa:
-* John M. Anderies, Marco A. Janssen, Elinor Ostrom (2004).  Framework to
-  Analyze the Robustness of Social-ecological Systems from an Institutional
-  Perspective. In: Ecology and Society 9 (1), 18.
-  * <https://www.ecologyandsociety.org/vol9/iss1/art18/>
-* Frank W. Geels, Johan Schot (2007). Typology of Sociotechnical Transition
-  Pathways. In: Research Policy 36 (2007), 399–417.
-  * <https://doi.org/10.1016/j.respol.2007.01.003>
-* Hans-Gert Gräbe (2020c). TRIZ und Transformationen sozio-technischer und
-  sozio-ökologischer Systeme. LIFIS Online, 27.06.2020.
-  * <http://dx.doi.org/10.14625/graebe_20200627>
-* Garrett Hardin (1968). The Tragedy of the Commons. In: Science. 162, 1968,
-  S. 1243–1248.
-* Gisela Jacobasch (2019). Bienensterben - Ursachen und Folgen.  Leibniz
-  Online 37 (2019).
-  * <https://leibnizsozietaet.de/bienensterben-ursachen-und-folgen/>
-* Elinor Ostrom (2007). A diagnostic approach for going beyond panaceas.
-  Proceedings of the national Academy of sciences, 104(39), 15181-15187.
-  * <https://doi.org/10.1073/pnas.0702288104>
-* Volker Stollorz (2011). Elinor Ostrom und die Wiederentdeckung der Allmende.
-  Argumente Politik und Zeitgeschichte 28-30, S. 3-15.
+in der Forstwirtschaft auftat, in dem zu jener Zeit auch in Sachsen
+Jahrhunderte alte stabile Bewirtschaftungsformen einer Allmende durch
+privatwirtschaftliche Formen abgelöst werden.  Die Probleme eines nachhaltigen
+Bewirtschaftens von Infrastrukturen in privatwirtschaftlichen Formen, ein
+Credo neoliberaler Theorie in guter Tradition von (Hardin 1968), sind
+inzwischen selbst in sogenannten ÖPP-Projekten mehr als deutlich geworden und
+Grund zum Umdenken.  Hierzu etwa: * John M. Anderies, Marco A. Janssen, Elinor
+Ostrom (2004).  Framework to Analyze the Robustness of Social-ecological
+Systems from an Institutional Perspective. In: Ecology and Society 9 (1), 18.
+* <https://www.ecologyandsociety.org/vol9/iss1/art18/> * Frank W. Geels, Johan
+Schot (2007). Typology of Sociotechnical Transition Pathways. In: Research
+Policy 36 (2007), 399–417.  * <https://doi.org/10.1016/j.respol.2007.01.003> *
+Hans-Gert Gräbe (2020c). TRIZ und Transformationen sozio-technischer und
+sozio-ökologischer Systeme. LIFIS Online, 27.06.2020.  *
+<http://dx.doi.org/10.14625/graebe_20200627> * Garrett Hardin (1968). The
+Tragedy of the Commons. In: Science. 162, 1968, S. 1243–1248.  * Gisela
+Jacobasch (2019). Bienensterben - Ursachen und Folgen.  Leibniz Online 37
+(2019).  * <https://leibnizsozietaet.de/bienensterben-ursachen-und-folgen/> *
+Elinor Ostrom (2007). A diagnostic approach for going beyond panaceas.
+Proceedings of the national Academy of sciences, 104(39), 15181-15187.  *
+<https://doi.org/10.1073/pnas.0702288104> * Volker Stollorz (2011). Elinor
+Ostrom und die Wiederentdeckung der Allmende.  Argumente Politik und
+Zeitgeschichte 28-30, S. 3-15.
 
 ### Synthese
 
