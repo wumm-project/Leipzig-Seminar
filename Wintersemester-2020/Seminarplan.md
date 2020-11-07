@@ -46,38 +46,38 @@
 
 Die Konzepte „Gesetz“, „Gesetzmäßigkeit“, „Trend“ und „Entwicklungslinie“
 werden in der TRIZ-Literatur im Zusammenhang mit Untersuchungen der Evolution
-TS sehr heterogen gebraucht. Das soll auf eine etwas solidere Basis gestellt
+Technischer Systeme sehr heterogen gebraucht. Das soll auf eine etwas solidere Basis gestellt
 werden.
 
 Diskussionsleitung: Ken Kleemann
 
-## 10.11. Evolution TS bei Koltze/Souchkov
+## 10.11. Evolution Technischer Systeme bei Koltze/Souchkov
 
 (Koltze/Souchkov 2017, Abschnitt 4.12.)
 
 Diskussionsleitung: Hans-Gert Gräbe
 
-## 17.11. Evolution TS im TESE-Buch
+## 17.11. Evolution Technischer Systeme im TESE-Buch
 
 (Lyubomirsky et al. 2018)
 
-## 24.11. Evolution TS bei D. Zobel
+## 24.11. Evolution Technischer Systeme bei D. Zobel
 
 (Zobel 2007, Abschnitt 3.3.3), (Zobel 2020, Abschnitt 3.4)
 
-## 01.12. Evolution TS bei G.S. Altschuller
+## 01.12. Evolution Technischer Systeme bei G.S. Altschuller
 
 (Altschuller 1979), (Petrov 2020a)
 
 Diskussionsleitung: Nadine Schumann
 
-## 08.12. Evolution TS bei V.M. Petrov 
+## 08.12. Evolution Technischer Systeme bei V.M. Petrov 
 
 (Petrov 2020b) (Petrov 2020a)
 
 Diskussionsleitung: Michael Koch 
 
-## 15.12. Evolution TS bei B.I. Goldovsky 
+## 15.12. Evolution Technischer Systeme bei B.I. Goldovsky 
 
 (Goldovsky 2017)
 
@@ -89,7 +89,7 @@ Diskussionsleitung: Tarek Stelzle
 
 Diskussionsleitung: Immanuel Thoke
 
-## 12.01. Evolutionsbäume TS bei N.A. Shpakovsky
+## 12.01. Evolutionsbäume Technischer Systeme bei N.A. Shpakovsky
 
 (Shpakovsky 2016)
 

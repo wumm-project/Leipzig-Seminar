@@ -137,9 +137,9 @@ Ken Kleemann, 31.10.2020
 
 In Vortrag und Diskussion wurden die ersten drei Begriffe (Modellierung,
 System, Nachhaltigkeit) aus der umfangreicheren Begriffsliste thematisiert.
-eine solche Beschränkung der Diskussion war beabsichtigt, eine Befassung mit
-den weiteren begriffen ist damit aufgeschoben, nicht aufgehoben.  Bitte
-beachten Sie acuh den [Chat](chat-20201103.md) zu diesem Seminar.
+Eine solche Beschränkung der Diskussion war beabsichtigt, eine Befassung mit
+den weiteren Begriffen ist damit aufgeschoben, nicht aufgehoben.  Bitte
+beachten Sie auch den [Chat](chat-20201103.md) zu diesem Seminar.
 
 ### Modellierung und Modell
 
@@ -147,7 +147,7 @@ Die Selbstähnlichkeit der Tätigkeit "Modellieren", die auch immer mit einer
 Reduktion auf unterschiedlich Wesentliches zu tun hat, wurde am Beispiel der
 Modellierung von Rakete und Raketentriebwerk diskutiert. Diese Argumente
 finden sich auch im TRIZ-Ansatz _Hierarchisches Prozessmodell_, etwa im
-TRIZ-Trainer oder bei (Koltze/Souchkov, S. 128) in einer etwas anderen
+TRIZ-Trainer, oder bei (Koltze/Souchkov, S. 128) in einer etwas anderen
 Perspektive als _prozessorientiertes Funktionsmodell_.
 
 Die Notwendigkeit der Unterscheidung von
@@ -171,6 +171,7 @@ weiter detailliert, was sich leicht auch auf allgemeine Systeme übertragen
 lässt.  (Petrov 2020a) kommt mit einer klaren Definition (Auszug)
 
 <blockquote>
+
 Ein __System__ ist eine Menge von _Elementen_, die _untereinander verbunden_
 sind und _miteinander interagieren_, die ein _einheitliches Ganzes_ bilden,
 das _Eigenschaften_ besitzt, die nicht bereits in den konstituierenden
@@ -194,6 +195,7 @@ Als __Synergie__ bezeichnet man den summierenden Effekt der Wechselwirkung von
 zwei oder mehr Faktoren, dadurch charakterisiert, dass ihre Wirkung deutlich
 über die Wirkung jeder einzelnen der Komponenten und deren einfache Summe
 hinausgeht.
+
 </blockquote>
 
 Auch diese genaue und ausführliche Defintion lässt eine Reihe von Fragen
