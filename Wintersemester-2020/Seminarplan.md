@@ -1,7 +1,44 @@
 # Seminarplan für das Wintersemester 2020/21
 
-Die Literaturangaben beziehen sich auf die Literaturliste in der Handreichung
-zum Seminar.
+## Literatur 
+
+* Genrich Altschuller (1979).  Schöpfertum als exakte Wissenschaft (in
+  Russisch).  Deutsch 1983 "Erfinden -- (k)ein Problem".
+* Boris Goldovsky (1983). System der Gesetzmäßigkeiten des Aufbaus und der
+  Entwicklung technischer Systeme. Dt. Übersetzung des russischen Originals. 
+  * <https://wumm-project.github.io/TTS.html>
+* Boris Goldovsky (2017). Über die Gesetze der Konstruktion technischer
+  Systeme. Dt. Übersetzung des russischen Originals.
+  * <https://wumm-project.github.io/TTS.html>
+* Hans-Gert Gräbe (2020). Die Menschen und ihre Technischen Systeme. LIFIS
+  Online, 19. Mai 2020.
+  * <http://dx.doi.org/10.14625/graebe_20200519>
+* Karl Koltze, Valeri Souchkov (2017).  Systematische Innovationsmethoden.
+  Hanser Verlag, München. ISBN 9783446451278.
+* Alex Lyubomirsky, Simon Litvin, Sergei Ikovenko u.a. (2018). Trends of
+  Engineering System Evolution (TESE).  TRIZ Consulting Group. ISBN
+  9783000598463.
+* Nikolai Khomenko, John Cooke (2007).  Inventive problem solving using the
+  OTSM-TRIZ “TONGS” model. 
+  * Im [Materialordner](Material/tongs_en.pdf).
+* Vladimir Petrov (2020a). Gesetze und Gesetzmäßigkiten der Systemevolution.
+  Monografie in 4 Bänden (in Russisch), ISBN 978-5-0051-5728-7.
+  * Deutsche Übersetzung eines frei verfügbaren Auszugs aus dem ersten Band. 
+    <https://wumm-project.github.io/TTS.html>
+* Vladimir Petrov (2020b). Gesetzmäßigkeiten der Entwicklung künstlicher
+  Systeme. 
+  * <https://wumm-project.github.io/TTS.html>
+* Michail Rubin (2019). Zum Zusammenhang der Entwicklungsgesetze allgemeiner
+  Systeme und der Entwicklungsgesetze technischer Systeme.  
+  * <https://wumm-project.github.io/TTS.html>
+* Nikolay Shpakovsky (2016). Tree of Technology Evolution. Englische
+  Übersetzung der russischen Ausgabe, die bei Forum, Moskau 2010 erschienen
+  ist.  
+  * <https://wumm-project.github.io/TTS.html>
+* Dietmar Zobel (2007). Kreatives Arbeiten. Expert Verlag, Renningen. ISBN
+  9783816927136.
+* Dietmar Zobel (2020). TRIZ für alle. Expert Verlag, Renningen. ISBN
+  9783816985105.
 
 ## 27.10. Auftakt des Seminars. Diskussion des Seminarplans
 
