@@ -1,0 +1,128 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ls}
+\usepackage[german]{babel}
+
+\title{Themen für Seminararbeiten\\ im Modul \emph{Angewandte Informatik}\\ im
+  Wintersemester 2020/21}
+
+\author{Hans-Gert Gr\"abe}
+
+\date{7. November 2020}
+
+\begin{document}
+\maketitle
+
+\section{Hintergrund}
+
+Im Bereich der TRIZ-Forschung wurde vor einem Jahr ein
+TRIZ-Ontologie-Projekt\footnote{Siehe \url{https://triz-summit.ru/onto_triz/}
+  (in Russisch).}  begonnen, um die verschiedenen Teile der TRIZ-Theorie
+ontologisch zu „kartieren“ und die wesentlichen Zusammenhänge zwischen den
+einzelnen Teilen mit Mitteln semantischer Technologien zu erfassen. Hierzu
+liegen aktuell vor
+\begin{itemize}
+\item[(1)] eine „Übersichtskarte“ der verschiedenen Theoriefelder und der
+  Zusammenhänge zwischen diesen,
+\item[(2)] ein „Atlas“ von Ontokarten, die grob einzelne Bereiche markieren,
+  die weiter zu detaillieren sind,
+\item[(3)] zu einzelnen dieser Ontokarten erste Versuche, Struktur in das
+  begriff\-liche Chaos zu bringen,
+\item[(4)] ein Glossar (oder auch nur ein Thesaurus) von Begriffen, die
+  hierfür wichtig sind.
+\end{itemize}
+
+Während zu (1) und (2) weitgehend Konsens besteht, sind die Modellierungen in
+(3) stark umstritten, da die entsprechenden Semantiken und Zusammenhänge in
+den unterschiedlichen TRIZ-Schulen naturgemäß unterschiedlich verstanden
+werden.
+
+Streit gibt es auch zu (4), der aber deutlich einfacher zu klären ist, wenn 
+\begin{itemize}
+\item[(4a)] zunächst einmal alle Begriffe gesammelt und „URIfiziert“ werden
+  (Thesaurus raw),
+\item[(4b)] URIs so weit zusammengeführt werden, dass verschiedene URIs auf
+  verschiedene Konzepte verweisen, aber Raum bleibt, für gleiche Konzepte
+  verschiedene Semantiken zu hinterlegen (Thesaurus final),
+\item[(4c)] diese verschiedenen Semantiken auch wirklich zusammengetragen und
+  formalisiert werden (Glossar raw) und schließlich
+\item[(4d)] die Semantiken in einem komplexen sozialen Abstimmungsprozess so
+  weit wie \emph{möglich} abgeglichen und essenzielle Differenzen semantisch
+  modelliert werden. 
+\end{itemize}
+In \cite{Kuryan2019} wird das Projekt genauer beschrieben, in
+\cite{Kuryan2020} der aktuelle Stand dargestellt. Andere Vorarbeiten fanden
+wenig Berücksichtigung\footnote{Details dazu auf der Webseite
+  \url{https://wumm-project.github.io/Ontology.html}.}, insbesondere auch
+nicht \cite{VDI}. Im Herbst 2020 läuft eine Webinarreihe (in Russisch), deren
+Materialien auch verfügbar\footnote{Siehe
+  \url{https://wumm-project.github.io/OntologyWebinar}.} und teilweise ins
+Englische übersetzt sind.
+
+Arbeitsgrundlage ist ein Glossar von V. Souchkov \cite{SG}, wobei dessen
+Einträge sowohl drei TRIZ-Generationen (TRIZ-1..3) als auch 5 Kategorien
+(Basisbegriffe, Modelle, Regeln, Begriffsgruppen, Synonyme) zugeordnet
+werden. Ein Webinarteilnehmer wies auf einen weiteren Thesaurus auf den
+einschlägigen russischen Altschullerseiten hin, der bereits multilingual ist.
+
+Im Rahmen des WUMM-Projekts wurden und werden Teile dieser Ontologisierungen
+nachmodelliert\footnote{Siehe dazu das Verzeichnis \texttt{Ontologies} im
+  github-Repo \url{https://github.com/wumm-project/RDFData}}, die im Original
+bisher ausschließlich durch grafische Ontogramme sowie die Möglichkeit einer
+visuellen Inspektion im verwendeten OSA-Ontologie-Editor\footnote{Siehe
+  \url{https://onto.devtas.ru/ts2o1} (in Russisch).} zugänglich sind.  Diese
+im Original ausschließlich russischsprachigen Quellen wurden dabei in Teilen
+auch ins Englische und Deutsche übertragen.  Weitgehend semantisch erfasst
+sind (1) und (2). Weiterhin wurde bereits früher das VDI-Glossar „RDFiziert“
+und die dort vorhandenen deutschen und englischen Erläuterungen um eine
+russische Übersetzung ergänzt. Dies sowie der einfach zu transformierende
+Thesaurus auf den Altschullerseiten bilden die Grundlage für einen eigenen
+Thesaurus nach (4a), der mit den Begriff\-lichkeiten des Originalprojekts
+weiter abzugleichen ist.  Das Glossar \cite{SG} liegt als pdf, nicht aber als
+maschinenlesbare Datei vor. Da mit unserem aktuellen WUMM-Thesaurus bereits
+eine gute Abdeckung der Begriff\-lichkeiten erreicht ist und \cite{SG} auch
+erst in Phase (4c) komplett relevant wird, wird auf weitere Arbeit an dieser
+Front zunächst verzichtet.
+
+\section{Themen für Seminararbeiten}
+
+In den Seminararbeiten soll am Punkt (3) weitergearbeitet werden, indem für
+eine konkrete Ontokarte $X$ 
+\begin{itemize}
+\item[(A)] die Zusammenhänge für das WUMM-Projekt in RDF in einer gemeinsamen
+  Rahmensetzung nachmodelliert werden sowie
+\item[(B)] differierende Semantiken, Probleme und Widersprüche im Verständnis
+  der modellierten TRIZ-Konzepte zusammengetragen und systematisiert werden.  
+\end{itemize}
+Während (A) primär einen ingenieur-technischen Charakter hat, erfordert (B)
+stärker einen akademischen Zugang von Recherche und Vergleich einschlägiger
+Publikationen.
+
+Die Seminararbeit soll in {\LaTeX} erstellt werden und möglichst in Englisch
+verfasst sein.
+
+Mögliche Themen ($X$, die Liste ist nicht final) sind
+\begin{itemize}
+\item Funktionale Analyse
+\item Stoff-Feld- und Element-Feld-Modelle
+\item Flussmodelle und Flussanalyse
+\item Der TRIZ-Modellbegriff
+\end{itemize}
+
+\begin{thebibliography}{xxx}
+\bibitem{Kuryan2019} A. Kuryan, V. Souchkov, D. Kucharavy (2019). Towards
+  ontology of TRIZ. TRIZ Developers Summit, Minsk 2019.
+  \\ \url{https://wumm-project.github.io/Texts/Ontology-TDS2019-en.pdf}
+\bibitem{Kuryan2020} A. Kuryan, M. Rubin, N. Shchedrin, O. Eckardt, N. Rubina.
+  TRIZ Ontology. Current State and Perspectives. TRIZ Developers Summit 2020
+  (in Russisch). Englische Übersetzung:
+  \\ \url{https://wumm-project.github.io/Texts/Ontology-TDS2020-en.pdf}
+\bibitem{SG} V. Souchkov. Glossary of TRIZ and TRIZ-related terms. Mehrere
+  Versionen seit 1991. Letzte Version von 2014.
+  \\ \url{http://www.xtriz.com/publications/TRIZGlossaryVersion1_0.pdf}.
+\bibitem{VDI} VDI Richtlinie 4521. Erfinderisches Problemlösen mit TRIZ.\\
+  Blatt 1: Grundlagen und Begriffe (April 2016).\\ Blatt 2: Zielbeschreibung,
+  Problemdefinition und Lösungspriorisierung (April 2018).\\ Blatt 3:
+  Lösungssuche (Juli 2020). 
+\end{thebibliography}
+
+\end{document}
