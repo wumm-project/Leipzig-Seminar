@@ -247,8 +247,9 @@ privatwirtschaftliche Formen abgelöst werden.  Die Probleme eines nachhaltigen
 Bewirtschaftens von Infrastrukturen in privatwirtschaftlichen Formen, ein
 Credo neoliberaler Theorie in guter Tradition von (Hardin 1968), sind
 inzwischen selbst in sogenannten ÖPP-Projekten mehr als deutlich geworden und
-Grund zum Umdenken.  Hierzu etwa:
+Grund zum Umdenken.
 
+Hierzu etwa:
 * John M. Anderies, Marco A. Janssen, Elinor Ostrom (2004).  Framework to
   Analyze the Robustness of Social-ecological Systems from an Institutional
   Perspective. In: Ecology and Society 9 (1), 18.
