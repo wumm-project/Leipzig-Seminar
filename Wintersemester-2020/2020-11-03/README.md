@@ -247,23 +247,28 @@ privatwirtschaftliche Formen abgelöst werden.  Die Probleme eines nachhaltigen
 Bewirtschaftens von Infrastrukturen in privatwirtschaftlichen Formen, ein
 Credo neoliberaler Theorie in guter Tradition von (Hardin 1968), sind
 inzwischen selbst in sogenannten ÖPP-Projekten mehr als deutlich geworden und
-Grund zum Umdenken.  Hierzu etwa: * John M. Anderies, Marco A. Janssen, Elinor
-Ostrom (2004).  Framework to Analyze the Robustness of Social-ecological
-Systems from an Institutional Perspective. In: Ecology and Society 9 (1), 18.
-* <https://www.ecologyandsociety.org/vol9/iss1/art18/> * Frank W. Geels, Johan
-Schot (2007). Typology of Sociotechnical Transition Pathways. In: Research
-Policy 36 (2007), 399–417.  * <https://doi.org/10.1016/j.respol.2007.01.003> *
-Hans-Gert Gräbe (2020c). TRIZ und Transformationen sozio-technischer und
-sozio-ökologischer Systeme. LIFIS Online, 27.06.2020.  *
-<http://dx.doi.org/10.14625/graebe_20200627> * Garrett Hardin (1968). The
-Tragedy of the Commons. In: Science. 162, 1968, S. 1243–1248.  * Gisela
-Jacobasch (2019). Bienensterben - Ursachen und Folgen.  Leibniz Online 37
-(2019).  * <https://leibnizsozietaet.de/bienensterben-ursachen-und-folgen/> *
-Elinor Ostrom (2007). A diagnostic approach for going beyond panaceas.
-Proceedings of the national Academy of sciences, 104(39), 15181-15187.  *
-<https://doi.org/10.1073/pnas.0702288104> * Volker Stollorz (2011). Elinor
-Ostrom und die Wiederentdeckung der Allmende.  Argumente Politik und
-Zeitgeschichte 28-30, S. 3-15.
+Grund zum Umdenken.  Hierzu etwa:
+
+* John M. Anderies, Marco A. Janssen, Elinor Ostrom (2004).  Framework to
+  Analyze the Robustness of Social-ecological Systems from an Institutional
+  Perspective. In: Ecology and Society 9 (1), 18.
+  * <https://www.ecologyandsociety.org/vol9/iss1/art18/>
+* Frank W. Geels, Johan Schot (2007). Typology of Sociotechnical Transition
+  Pathways. In: Research Policy 36 (2007), 399–417.
+  * <https://doi.org/10.1016/j.respol.2007.01.003>
+* Hans-Gert Gräbe (2020c). TRIZ und Transformationen sozio-technischer und
+  sozio-ökologischer Systeme. LIFIS Online, 27.06.2020.
+  * <http://dx.doi.org/10.14625/graebe_20200627>
+* Garrett Hardin (1968). The Tragedy of the Commons. In: Science. 162, 1968,
+  S. 1243–1248.
+* Gisela Jacobasch (2019). Bienensterben - Ursachen und Folgen.  Leibniz
+  Online 37 (2019).
+  * <https://leibnizsozietaet.de/bienensterben-ursachen-und-folgen/>
+* Elinor Ostrom (2007). A diagnostic approach for going beyond panaceas.
+  Proceedings of the national Academy of sciences, 104(39), 15181-15187.
+  * <https://doi.org/10.1073/pnas.0702288104>
+* Volker Stollorz (2011). Elinor Ostrom und die Wiederentdeckung der Allmende.
+  Argumente Politik und Zeitgeschichte 28-30, S. 3-15.
 
 ### Synthese
 
