@@ -100,7 +100,7 @@ __Objektivität und Realität__:
 
 __Menschenbild__:
 * Referenz semantisches Modell als Kommunikations- und Informationsmodell
-* Referenz- oder Signifikanzketten – das Problem vonFantasie, Spontanität,
+* Referenz- oder Signifikanzketten – das Problem von Fantasie, Spontanität,
   Kreativität
 * Urteilsketten und explizierbare Kontexte
 * Abrichtung in Vollzugsformen 
@@ -198,23 +198,23 @@ hinausgeht.
 
 </blockquote>
 
-Auch diese genaue und ausführliche Defintion lässt eine Reihe von Fragen
+Auch diese genaue und ausführliche Definition lässt eine Reihe von Fragen
 offen.  Insbesondere wurde gefragt, im welchem Umfang zwischen _System_ (als
 Produkt von Denktätigkeit) und _Systematisierung_ (als spezieller Form der
 Denktätigkeit selbst) unterschieden werden müsse. Zu klären sind vor allem
 * Abgrenzungsproblematik,
-* Kontextualisierung, Framing und "Umwelt"
-* immersiver vs. submersiver Systembegriff (Dazu wird es eine eigene Vorlesung
+* Kontextualisierung, Framing und der Begriff "Umwelt"
+* immersiver vs. submersiver Systembegriff (dazu wird es eine eigene Vorlesung
   geben)
-* Zusammenhang zwischen Strukturierung und Durchsatz von Stoff und Energie
-  durch das System
+* Zusammenhang zwischen Strukturierung eines Systems und dem Durchsatz von
+  Stoff und Energie durch das System
 * Ebenenproblematik
 
 Eingehender diskutiert wurde insbesondere, ob Beschreibungen immer
 _retrospektiv_ seien oder gerade einer _prospektiven Komponente_ eine
 besondere Bedeutung zukomme. Ingenieure werden sich, wie die Philosophen des
 MMK (Moskauer Methodologischer Kreis), primär für die prospektive Dimension
-interessieren, denn diese sind für die "Gestaltung von Verhältnissen" (Schlemm
+interessieren, denn diese ist für die "Gestaltung von Verhältnissen" (Schlemm
 am Ende von Abschnitt 2.3.2 mit Bezug auf Lucien Séve) entscheidend. Die Kunst
 besteht darin, dabei die retrospektive Dimension, die "historische
 Perspektive", angemessen zu integrieren, ob nun als _Abduktion_ oder
@@ -241,7 +241,7 @@ kurfürstlich-sächsischen Kammer- und Bergrats Hans Carl von Carlowitz"
 (Wikipedia), der gemeinhin als der Begründer des Prinzips "Nachhaltigkeit"
 gilt, wurden als zeitspezifischer Zugang zu einer Problematik identifiziert,
 die sich im Zuge des Übergangs zu einer kapitalistischen Produktionsweise auch
-in der Forstwirtschaft auftat, in dem zu jener Zeit auch in Sachsen
+in der Forstwirtschaft auftat, in der zu jener Zeit auch in Sachsen
 Jahrhunderte alte stabile Bewirtschaftungsformen einer Allmende durch
 privatwirtschaftliche Formen abgelöst werden.  Die Probleme eines nachhaltigen
 Bewirtschaftens von Infrastrukturen in privatwirtschaftlichen Formen, ein
@@ -293,6 +293,6 @@ Zusatzliteratur:
 * Nikolay Shpakovsky (2003): Menschen und Technische Systeme.
   * <https://wumm-project.github.io/Texts/Shpakovsky-mts-de.pdf>
 * [Kontroverse](https://wumm-project.github.io/2019-08-07) zum Begriff eines
-    Technischen Systems im HGG-Blog.
+    Technischen Systems, verlinkt im HGG-Blog.
 * Annette Schlemm (2004): Hegels Gesetzesbegriff.
   * <https://www.thur.de/philo/hegel/hegel20.htm>
