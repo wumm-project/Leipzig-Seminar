@@ -1,0 +1,141 @@
+\documentclass{beamer}
+\usepackage{lsfolien}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+
+\myfootline{Systemmodellierung und Semantic Web -- WS 20/21}{Hans-Gert Gräbe}
+
+\title{Modellierung nachhaltiger Systeme\\ und Semantic Web\\[6pt] \Large
+  Modellierung widersprüchlicher Anforderungen\\ in der TRIZ
+  \vskip1em}
+
+\subtitle{Vorlesung im Modul 10-202-2330\\ im Master und Lehramt Informatik\\
+  sowie im Modul 10-202-2309 im Master Informatik}
+
+\author{Prof. Dr. Hans-Gert Gräbe\\
+\url{http://www.informatik.uni-leipzig.de/~graebe}}
+
+\date{Wintersemester 2020/21}
+\begin{document}
+
+\section{Grundlagen}
+\begin{frame}{TRIZ und ARIZ}
+
+TRIZ ist nicht nur eine Theorie, sondern schlägt als anzuwendende Methodik ein
+genaues algorithmisches Vorgehen vor.\vskip1em
+
+Von diesem Algorithmus ARIZ (Algorithmus zur Lösung erfinderischer Probleme)
+gibt es mehrere Varianten, die „offizielle“ ist ARIZ-85C, die auf eine Version
+von Altschuller aus dem Jahr 1985 zurückgeht. Andere (D. Zobel) sehen wenig
+Fortschritt gegenüber ARIZ-77 und empfehlen diesen etwas einfacheren
+Zugang.\vskip1em
+
+Wir orientieren uns an AIPS-2015 (Algorithmus zur Korrektur von
+Problemsituationen), einer Version in der Tradition des OTSM-TRIZ, die auch im
+Minsker TRIZ-Trainer zum Einsatz kommt.
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- die erste Phase des Lösungsprozesses}
+  
+Die erste Phase des Lösungsprozesses liefert ein genaues Modell des „Systems,
+wie es ist“, das zur Lösung der Problematik transformiert werden muss. Sie
+besteht aus drei Schritten
+\begin{itemize}
+\item [(A)] Kontextualisierung der Aufgabenstellung. Das System als Black
+  Box. 
+\item [(B)] Analyse und Modellierung von Aufbau- und Ablauforganisation des
+  „Systems, wie es ist“ -- der „Maschine“ in der Terminologie des
+  TRIZ-Trainers
+\item [(C)] Identifizierung und Lokalisierung des zentralen Widerspruchs,
+  Bestimmung der operativen Zone und der operativen Zeit, wo und wann der
+  Widerspruch auftritt, sowie Aufstellen möglicher Konflikthypothesen.  
+\end{itemize}
+Aus diesen Hypothesen wird eine Aufgabe formuliert, die in der zweiten Etappe
+genauer analysiert werden soll. 
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- die erste Phase des Lösungsprozesses}
+  
+Erster Abschnitt „Präzisierung der Umstände“:
+\begin{itemize}
+\item [1.] Identifiziere das zu untersuchende System als Black Box und gib ihm
+  einen „sprechenden Namen“, aus dem sich die Semantik des Systems bereits
+  grob erschließt -- was ist das „nützliches Produkt“? 
+\item [2.] Identifiziere die \emph{primär nützliche Funktion} (PNF) des
+  Systems.
+
+  Untersuche dazu ggf., welchem \emph{Zweck} das System im Obersystem dient
+  und bestimme ggf. den für den Betrieb des Systems erforderlichen Durchsatz
+  (Leistung des Obersystems für das Funktionieren des Systems).
+\item [3.] Formuliere das bestehende Problem, welches dem spezifikationskonformen
+  Verhalten des Systems im Wege steht -- den „unerwünschten Effekt“.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- die erste Phase des Lösungsprozesses}
+  
+Zweiter Abschnitt „Systemkonflikt“: 
+\begin{itemize}
+\item [4.] Bestimme die Bestandteile der Maschine (deren Aufbauorganisation)
+  sowie deren Arbeitsweise (deren Ablauforganisation). Oft reicht es aus, den
+  Schwerpunkt auf eine der beiden Fragen zu legen.\vskip1em
+
+  Folge dabei dem allgemeinen Aufbaumuster „Energiequelle, Antrieb,
+  Transmission, Werkzeug, Aktion, bearbeitetes Objekt, nützliches Produkt plus
+  Steuerung“.\vskip1em
+  
+  Hierbei ist es wichtig, die primär nützliche Funktion (PNF) des Systems zu
+  beschreiben, auch wenn das Problem durch eine Nebenfunktion ausgelöst wird,
+  da sich um die PNF herum die im System genutzten Ressourcen gruppieren.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- die erste Phase des Lösungsprozesses}
+  
+\begin{itemize}
+\item [5.] Diese PNF steht in gewissem Verhältnis zur „Wirkung, die nicht ohne
+  Probleme abgeschlossen werden kann“.\vskip1em
+
+  Diese Wirkung sowie ihr Verhältnis zur PNF sind nun genauer zu bestimmen als
+  Kern des zu lösenden Konflikts.\vskip1em
+
+  Bei dieser Analyse sind insbesondere Ort und Zeit des Konflikts genauer
+  einzugrenzen, um mögliche spätere Separationen nach Ort oder Zeit als
+  grundlegende Lösungsmethoden vorzubereiten.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- die erste Phase des Lösungsprozesses}
+  
+Dritter Abschnitt „Aufstellen einer Hypothese“: 
+\begin{itemize}
+\item Durch genauere Analyse der „Konfliktursachen“ werden eine oder mehrere
+  Hypothesen allgemeinen Charakters aufgestellt, welche Maßnahmen im Sinne
+  eines \emph{idealen Endresultats} das Problem lösen würden.\vskip1em
+  
+  Einer dieser Ansätze wird als „Aufgabe“ für die zweiten Phase des
+  Lösungsprozesses genauer formuliert, um diese dann mit passenden
+  TRIZ-Werkzeugen zu bearbeiten.
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Das Ideale Endresultat}
+  
+Das \textbf{Ideale Endresultat} (IER) beschreibt das „System, wie es sein
+soll“ als \emph{Ziel} der Transformation, ohne sich zunächst darum zu scheren,
+ob das formulierte Resultat praktisch realisiert werden kann. Im weiteren
+Lösungsprozess werden die Hindernisse identifiziert, die auf dem Weg zum IER
+zu überwinden sind, und auf Basis der TRIZ-Methodik Strategien entwickelt, wie
+diese Hindernisse praktisch überwunden werden können.\vskip1em
+
+Das IER ist einer der Grundbegriffe der TRIZ. Das IER ist eine
+Orientierungsgröße im Sinne einer „konkreten Utopie“, die wesentlich den
+Zielkorridor bestimmt, auf den sich der weitere Lösungsprozess in der zweiten
+Phase konzentriert.
+
+\end{frame}
+
+\end{document}

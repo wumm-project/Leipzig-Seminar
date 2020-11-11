@@ -4,6 +4,10 @@
 
 * Genrich Altschuller (1979).  Schöpfertum als exakte Wissenschaft (in
   Russisch).  Deutsch 1983 "Erfinden -- (k)ein Problem".
+* Gaetano Cascini (2012). TRIZ-based Anticipatory Design of Future Products
+  and Processes. Journal of Integrated Design and Process Science 16 (3),
+  29-63.  
+  * <http://dx.doi.org/10.3233/jid-2012-0005>
 * Boris Goldovsky (1983). System der Gesetzmäßigkeiten des Aufbaus und der
   Entwicklung technischer Systeme. Dt. Übersetzung des russischen Originals. 
   * <https://wumm-project.github.io/TTS.html>

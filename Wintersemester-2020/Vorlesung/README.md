@@ -7,6 +7,10 @@
 * Iouri Belski (2020). Tools of TRIZ. A web repository of TRIZ materials
   on 12 simple TRIZ heuristics.
   * <https://emedia.rmit.edu.au/triz/content/tools-triz>
+* Gaetano Cascini (2012). TRIZ-based Anticipatory Design of Future Products
+  and Processes. Journal of Integrated Design and Process Science 16 (3),
+  29-63.  
+  * <http://dx.doi.org/10.3233/jid-2012-0005>
 * Karl Koltze, Valeri Souchkov (2017). Systematische Innovationsmethoden.
   Hanser Verlag, München. ISBN 9783446451278
 * Andrei Kuryan, Dmitri Kucharavy (2018). The OTSM-TRIZ Heritage of
@@ -19,6 +23,8 @@
 * Alex Lyubomirskiy, Simon Litvin, Sergei Ikovenko et al. (2018). Trends
   of Engineering System Evolution (TESE).  TRIZ Consulting Group. ISBN
   9783000598463.
+* Clemens Szyperski (2002). Component Software. Pearson Education. 2. Auflage.
+  ISBN 0201745720.
 * Dietmar Zobel (2007). Kreatives Arbeiten. Expert Verlag, Renningen.
   ISBN 9783816927136.
 * Dietmar Zobel (2020). TRIZ für alle. Expert Verlag, Renningen. ISBN
@@ -52,25 +58,30 @@ __Lernziele:__
 __Folien__:
 * [Technische Systeme](TechnischeSysteme.pdf)
 
-## 12.11.: Modellierung widersprüchlicher Anforderungen und die TRIZ-Methodik nach AIPS-2015
+## 12.11.: Modellierung widersprüchlicher Anforderungen in der TRIZ
 
 __Literaturliste__:
-* Hans-Gert Gräbe (2020). Zur Methodik des TRIZ-Trainers und AIPS-2015. 
+* Hans-Gert Gräbe (2020). Zur Methodik des TRIZ-Trainers. 
   * [TRIZ-Methodik.pdf](../Material/TRIZ-Methodik.pdf)
 * (Kuryan, Kucharavy 2018), ab Folie 31.
+* (Cascini 2012)
 
 __Zusatzliteratur__:
 * (Koltze, Souchkov 2017)
 * (Adunka 2020)
+* (Szyperski 2002)
 
 __Lernziele__:
-* Kontextualisierung von Anforderungssituationen durch den Systemoperator 
-* Technische Systeme als Black Box, Zwecke und die Bestimmung der PNF
-  (primär nützliche Funktion, core concern)
-* Bestimmung von Aufbau- und Ablauforganisation eines Systems nach
-  AIPS-2015 
+* Grundlegendes Herangehen der TRIZ an widersprüchliche Anforderungen
+* Konkretes und Abstraktes. Das TRIZ-Hügelschema
+* Kontextualisierung von Anforderungssituationen 
+* Bestimmung von Zweck und PNF eines technischen Systems
+* Aufbau- und Ablauforganisation eines Systems
 * Nützliche und schädliche Effekte, operative Zone und operative Zeit von
   widersprüchlichen Systemeigenschaften
+
+__Folien__:
+* [Technische Systeme](Folien-20201110.pdf)
 
 ## 19.11.: Modellierung natürlicher Systeme und die Theorie Offener Systeme
 

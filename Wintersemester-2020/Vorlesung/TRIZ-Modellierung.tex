@@ -1,0 +1,166 @@
+\documentclass{beamer}
+\usepackage{lsfolien}
+\usepackage[german]{babel}
+\usepackage[utf8]{inputenc}
+
+\myfootline{Systemmodellierung und Semantic Web -- WS 20/21}{Hans-Gert Gräbe}
+
+\title{Modellierung nachhaltiger Systeme\\ und Semantic Web\\[6pt] \Large
+  Modellierung widersprüchlicher Anforderungen\\ in der TRIZ
+  \vskip1em}
+
+\subtitle{Vorlesung im Modul 10-202-2330\\ im Master und Lehramt Informatik\\
+  sowie im Modul 10-202-2309 im Master Informatik}
+
+\author{Prof. Dr. Hans-Gert Gräbe\\
+\url{http://www.informatik.uni-leipzig.de/~graebe}}
+
+\date{Wintersemester 2020/21}
+\begin{document}
+
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}}
+
+\section{Grundlagen}
+\begin{frame}{Begriff eines Technischen Systems}
+
+(V. Petrov, 2020) \vskip1em
+
+Ein \textbf{System} ist eine Menge von \emph{Elementen}, die
+\emph{untereinander verbunden} sind und \emph{miteinander interagieren}, die
+ein \emph{einheitliches Ganzes} bilden, das \emph{Eigenschaften} besitzt, die
+nicht bereits in den konstituierenden Elementen, einzeln betrachtet, enthalten
+sind.\vskip1em
+
+Eine solche Eigenschaft wird als \textbf{Systemeffekt}, \textbf{Synergie} oder
+\textbf{Emergenz} bezeichnet.\vskip1em
+
+Als \textbf{Synergie} bezeichnet man den summierenden Effekt der
+Wechselwirkung von zwei oder mehr Faktoren, dadurch charakterisiert, dass ihre
+Wirkung deutlich über die Wirkung jeder einzelnen der Komponenten und deren
+einfache Summe hinausgeht.
+\end{frame}
+
+\begin{frame}{Technische Systeme als Reduktion auf Wesentliches}
+  \begin{block}{Die Reduktion auf das Wesentliche ... }
+    ... fokussiert auf die folgenden drei Dimensionen:
+    \begin{itemize}
+    \item[(1)] Abgrenzung des TS nach außen gegen eine \emph{Umwelt},
+      Reduktion dieser Beziehungen auf Input/Output-Beziehungen und
+      garantierten Durchsatz (Zweckbestimmtheit und Arbeitsfähigkeit).
+    \item[(2)] Abgrenzung des TS nach innen durch Gruppierung von Teilen als
+      \emph{Komponenten}, deren Funktionieren auf eine „Verhaltenssteuerung“
+      über deren Schnittstellen reduziert wird.
+    \item[(3)] Reduktion der Beziehungen im TS selbst auf \emph{kausal
+      wesentliche}.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Technische Systeme und Vorgängigkeit}
+  \begin{block}{Das TS in der Welt der technischen Systeme}
+    Die Beschreibung des TS selbst ist nur auf der Grundlage von
+    Beschreibungen anderer (explizit oder implizit gegebener) TS möglich.  Der
+    Beschreibung vorgängig sind:
+    \begin{itemize}
+    \item[(1)] Eine vage Vorstellung der (funktionierenden)
+      Input/Output-Charakteristika der Umwelt.
+    \item [(2)] Ein klares Bild von der Funktionsweise der Komponenten über
+      die reine Spezifikation hinaus.
+    \item [(3)] Eine vage Vorstellung von Ursache-Wirkungs-Beziehungen im
+      System selbst, das der detaillierten Modellierung vorausgeht.
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Komponenten und Objekte}
+  (Szyperski 2002)
+  \begin{itemize}
+  \item Komponenten sind wieder Systeme.
+  \item Die können selbst entwickelt oder von Dritten erworben sein. 
+  \item Man muss nicht die ganze Komponente erwerben, es reicht aus, den
+    \emph{Dienst} zu nutzen.
+  \end{itemize}
+  So ist es auch in vielen Fällen: Eine Komponente ist im System mit ihrer PNF
+  über deren Spezifikation als Black Box verfügbar, der Betrieb der Komponente
+  (Bereitstellung der Funktion) erfolgt durch Dritte, aus \emph{deren}
+  Verantwortungsbereich heraus, die Funktion wirkt auf „meinen“ Objekte in
+  \emph{meinem} Verantwortungsbereich.
+  \begin{itemize}
+  \item Damit die Unterscheidung nach Szyperski: Komponenten kapseln
+    Funktionalität, Objekte kapseln Systemzustände. 
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Das minimale technische System in der TRIZ}
+
+\begin{center}
+  \begin{tikzpicture}[line width=1pt,
+      pfeil/.style={shorten <=4pt, shorten >=4pt, line width=1.5pt},
+      mytext/.style={text width=2.5cm,align=center}]
+    \node[draw] at (0,1.3) [rectangle] (A0) {Werkzeug};
+    \node[draw] at (5,1.3) [rectangle] (A2) {Objekt};
+    \node[text width=2cm,align=center] at (8,1.3) [rectangle] (A3) {nützliches Produkt};
+    \node[draw,mytext] at (0,3.5) [rectangle] (A4) {Betrieb durch Dritte};
+    %\node[mytext,below of = A0] {Old state of the library};
+    %\node[mytext,below of = A1] {New state of the library};
+    \draw[pfeil,->] (A0)--(A2) ;
+    \draw[pfeil,->] (A2)--(A3) ;
+    \draw[pfeil,->,dashed] (A4)--(A0) ;
+    \draw[dashed] (-1.5,0) -- (6,0) -- (6,2) -- (-1.5,2) -- cycle ;
+    \node[fill=white] at (2.7,1.3) [rectangle] {wirkt auf};
+    \node[] at (2.7,.3) {mein Verantwortungsbereich};
+  \end{tikzpicture}
+\end{center}
+Gestrichelter Rahmen = das minimale technische System
+
+Gestrichelter Pfeil = wird bei Szyperski, nicht aber in der TRIZ thematisiert 
+\end{frame}
+
+\begin{frame}{Komponenten und Umwelt}
+  Komponenten (insbesondere solche, die durch Dritte betrieben werden) sind
+  damit Pointer an andere Stellen in der \emph{Welt technischer Systeme} und
+  stellen somit nur eine andere Form der „Beziehung eines Systems zur Umwelt“
+  dar.\vskip1em
+
+  Es entsteht die Frage, ob die Aspekte (1) und (3) in der Liste der
+  „Reduktionen auf Wesentliches“ unter diesem Ansatz vereinigt werden können.
+  \vskip1em
+
+  Andererseits entsteht die Frage, wie der Objektbegriff in die
+  Gesamtlogik einzubauen ist.\vskip1em
+
+  Beide Fragen lassen wir an dieser Stelle erst einmal offen. 
+\end{frame}
+
+\begin{frame}{Modellierung von Systemen}
+  Zwei Fragestellungen:
+  \begin{itemize}
+  \item[(1)] Neues System bauen
+  \item[(2)] Bestehendes System umbauen
+  \end{itemize}\vskip2em
+  (1) kann als Spezialfall von (2) aufgefasst werden, da jeder Bedarf nach
+  einem neuen System mit wenigstens \emph{groben Vorstellungen} über jenes
+  neue System kommt, also auch unter (1) eine wenigstens \emph{grobe
+    Beschreibungsform} des zu schaffenden Systems existiert.
+\end{frame}
+
+\begin{frame}{Modellierung von Systemen}
+\begin{center}
+  \begin{tikzpicture}[line width=1pt,
+      pfeil/.style={shorten <=4pt, shorten >=4pt, line width=1.5pt},
+      mytext/.style={text width=2.5cm,align=center}]
+    \node[draw,mytext] at (0,0) [rectangle] (A0) {System, wie es ist};
+    \node[draw,mytext] at (7,0) [rectangle] (A2) {System, wie es sein soll};
+    \draw[pfeil,->] (A0)--(A2) ;
+    \node[fill=white] at (3.5,.3) [rectangle] {Transformation};
+  \end{tikzpicture}
+\end{center}
+  Dieses grundlegende Schema passt nicht nur auf technische Systeme, sondern
+  auch auf die Modellierung sozialer, sozio-ökologischer und kultureller
+  Systeme, ist also hinreichend universell.   
+\end{frame}
+
+\end{document}
