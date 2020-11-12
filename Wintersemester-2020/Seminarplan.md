@@ -65,9 +65,13 @@ Diskussionsleitung: Hans-Gert Gräbe
 
 (Lyubomirsky et al. 2018)
 
+Diskussionsleitung: Hans-Gert Gräbe
+
 ## 24.11. Evolution Technischer Systeme bei D. Zobel
 
 (Zobel 2007, Abschnitt 3.3.3), (Zobel 2020, Abschnitt 3.4)
+
+Diskussionsleitung: Karim Rakia
 
 ## 01.12. Evolution Technischer Systeme bei G.S. Altschuller
 
