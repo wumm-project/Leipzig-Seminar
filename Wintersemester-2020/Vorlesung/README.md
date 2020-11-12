@@ -88,21 +88,27 @@ __Folien__:
 __Literaturliste__:
 * Hans-Gert Gräbe (2020).  Zum Systembegriff in der Theorie dynamischer
   Systeme.
-  * [TDS.md](../Material/TDS.md)
+  * [TDS.md](TDS.md)
   
 __Zusatzliteratur__:
 * Ludwig von Bertalanffy (1950). An outline of General System Theory, The
   British Journal for the Philosophy of Science, Volume I.2, 134–165.
   * <https://doi.org/10.1093/bjps/I.2.134>
+* Hans-Gert Gräbe (2012). Wie geht Fortschritt? LIFIS Online, 12.11.2012.
+  * <https://www.leibniz-institut.de/archiv/graebe_12_11_12.pdf>
 * Erich Jantsch (1992). Die Selbstorganisation des Universums. Hanser,
   München.
 * Ilya Prigogine, Isabelle Stengers (1993). Das Pardox der Zeit. Piper,
   München, Kap. 3-5.
 
 __Lernziele__:
-* Der AIPS-2015 Workflow als Ausprägung einer allgemeineren Theorie
-  Dynamischer Systeme 
-* Grundlagen der Modellierung natürlicher Systeme
+* Systeme und "Umwelt". Immersiver und submersiver Systembegriff
+* Begriff des _offenen Systems_. Durchsatz und Struktur. Das Beispiel
+  Bénardzelle.
+* Dynamik in offenen Systemen. Grenzzyklen und Attraktoren
+* Einfache Beschreibung, komplexer Vollzug. Deterministisches Chaos
+* Koevolution auf Mikro- und Makroebene. "Versklavungseffekt"
+* Dissipative Strukturen und Fließgleichgewichte.
 
 ## 26.11.: Nachhaltigkeit und Entwicklungszyklen von Systemen
 
