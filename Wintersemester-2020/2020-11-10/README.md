@@ -16,6 +16,7 @@ Die Bilder in den Folien sind aus
 
 ## Anmerkungen
 
+Weitere Anmerkungen im [Chat](chat-20201110.md).
 
 Zusätzliche Literatur:
 * Gaetano Cascini (2012). TRIZ-based Anticipatory Design of Future Products
