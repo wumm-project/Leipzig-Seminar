@@ -77,7 +77,7 @@ Diskussionsleitung: Karim Rakia
 
 (Altschuller 1979), (Petrov 2020a)
 
-Diskussionsleitung: Nadine Schumann
+Diskussionsleitung: Nadine Schumann, Daniel Huthmann
 
 ## 08.12. Evolution Technischer Systeme bei V.M. Petrov 
 

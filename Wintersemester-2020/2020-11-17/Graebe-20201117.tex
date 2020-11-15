@@ -1,0 +1,222 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ls}
+\usepackage[main=german,russian]{babel}
+
+\newcommand{\bbox}[2]{\parbox{#1cm}{\small\centering #2}}
+
+\title{Modellierung nachhaltiger Systeme und Semantic Web\\[6pt] Technische
+  Systeme im TESE-Buch \\[6pt]\Large Diskussionsgrundlage für das
+  Seminar am 17.11.2020}
+
+\author{Hans-Gert Gr\"abe}
+
+\date{15. November 2020}
+
+\begin{document}
+\maketitle
+
+\section{Vorbemerkungen}
+
+Ich überlasse die Diskussion konkreter Gesetze, Trends und Entwicklungslinien
+(kurz noch immer \emph{Gesetze} -- siehe die Anmerkungen zum Seminar am
+10.11.) späteren Seminarvorträgen.
+
+In \cite{TESE2018} werden 10 solche Gesetze und das \emph{Gesetz der
+  Entwicklung nach S-Kurven} als Supergesetz thematisiert und ausführlich an
+Hand von Beispielen erläutert. Die Gesetze werden dabei in eine gewissen
+Hierarchie gebracht.  Auch darauf werde ich nicht eingehen.
+\begin{center}
+\newcommand{\law}[2]{\parbox{#1cm}{\small\centering #2}}
+\tikz[>={Triangle[length=3pt 9, width=3pt 3]}] {
+  
+\node[draw] at (5,10) [rectangle]
+(A0) {\law{4}{Trend der Evolution nach S-Kurven}};
+
+\node[draw] at (5,8) [rectangle]
+(A1) {\law{4}{Gesetz der Erhöhung der Idealität}};
+
+\node[draw] at (10,4) [rectangle]
+(A2) {\law{4}{Gesetz der Erhöhung der Vollständigkeit TS}};
+
+\node[draw] at (0,4) [rectangle]
+(A3) {\law{4}{Gesetz der Erhöhung der Abstimmung}};
+
+\node[draw] at (10,6) [rectangle]
+(A4) {\law{4}{Gesetz der Erhöhung der Effektivität der Ausnutzung von
+    Flüssen}}; 
+
+\node[draw] at (5,4) [rectangle]
+(A5) {\law{4}{Gesetz der ungleich- mäßigen Entwicklung der Teile des Systems}}; 
+
+\node[draw] at (10,2) [rectangle]
+(A7) {\law{4}{Gesetz der Verdrängung des Menschen aus TS}};
+
+\node[draw] at (0,2) [rectangle]
+(A8) {\law{4}{Gesetz der Erhöhung der Steuerbarkeit}};
+
+\node[draw] at (0,0) [rectangle]
+(A9) {\law{4}{Gesetz der Erhöhung der Dynamisierung}};
+
+\node[draw] at (0,6) [rectangle]
+(A10) {\law{4}{Gesetz des Übergangs ins Obersystem}};
+
+\node[draw] at (5,6) [rectangle]
+(A12) {\law{4}{Gesetz der Erhöhung der Multifunktionalität}};
+
+\draw[->] (A0) -- (A1) ;
+\draw[->] (A1) -- (-2.5,8) |- (A3) ;
+\draw[->] (1,8) -| (A10) ;
+\draw[->] (A1) -- (7.5,8) |- (A4) ;
+\draw[->] (7.5,8) |- (A2);
+\draw[->] (7.5,8) |- (A4);
+\draw[->] (7.5,8) |- (A5);
+\draw[->] (A1) -- (A12);
+\draw[->] (A2) -- (A7);
+\draw[->] (A5) -- (A3);
+\draw[->] (A3) -- (A8) ;
+\draw[->] (A8) -- (A9) ;}
+\end{center}
+
+\section{Technische Systeme und Produktkataloge}
+
+Ich gehe stattdessen auf die hier relativ gut erkennbaren, wenn auch nicht
+explizierten Prinzipien ein, nach denen technische Systeme abgegrenzt und in
+Kontinuitätslinien gruppiert werden.
+
+Hierfür werden offensichtlich Produktgruppenbegriffe aus Handelskatalogen wie
+Flugzeuge, Autos, Werkzeugmaschinen, Computer, Telefone, Speichereinheiten,
+Militärfahrzeuge, Computermäuse, Schreibwerkzeuge usw. (die Auf\-listung
+orientiert sich an den Abbildungen im Buch) verwendet, die selbst wieder in
+verschiedenen Korngrößen geclustert werden können.
+
+In \emph{diesen} -- aus dem ökonomischen Nachbarsystem übernommenen --
+Strukturen lassen sich in der Tat Evolutionslinien der „Produktgängigkeit“
+verfolgen, die für die Entwicklung von unternehmerischen Geschäftsstrategien
+\emph{praktisch} extrem relevant sind.
+
+Ich hoffe, dabei die Begriffe \emph{Evolution} und \emph{Entwicklung}
+entsprechend der Diskussion am 10.11. korrekt verwendet zu haben: \emph{Aus
+  der Sicht der Unternehmer} kann eine Geschäftsstrategie aktiv
+\emph{entwickelt} werden, während die Technik in einem naturwüchsigen, vom
+Unternehmen nicht beeinflussbaren Prozess als „Umweltleistung“
+\emph{evolviert}.
+
+Damit wird auch verständlich, was eine S-Kurve ist. Es geht dabei \emph{nicht}
+um die Entwicklung technischer Systeme nach einer Logik der
+Technikentwicklung, was das auch immer sei, sondern um die Dynamik von
+Produktzyklen.
+
+Ein solches Gesetz gibt es bei Altschuller schon deshalb nicht, weil eine
+solche Perspektive \emph{nicht} seine Perspektive ist.
+
+Es ist aber eine aus \emph{praktischer} Sicht sehr relevante Perspektive des
+\emph{unternehmerischen Innovationsmanagements}, die jedoch auch die
+\emph{Welt Technischer Systeme} in dem in der Vorlesung präzisierten
+Verständnis verlässt.  In \cite{TESE2018} wird deshalb auch von „S-curve
+analysis and pragmatic S-curve analysis“ (ebenda, Überschrift Kapitel 3)
+geschrieben. 
+
+\section{Konzeptualisierung eines „Innovationsmanagements“ in \cite{TESE2018}} 
+
+Dort (ebenda, Kapitel 1) wird für ein solches Innovationsmanagement das (neue)
+Konzept eines \emph{Technology Pull} als über die Konzepte \emph{Technology
+  Push} und \emph{Market Pull} hinausgehend entwickelt.  Diesen Ansatz habe
+ich in \cite{Graebe2020} genauer analysiert, indem ich die TRIZ-Instrumente
+der Widerspruchsanalyse auf diesen Gegenstand selbst angewendet habe.  Daraus
+ein längeres Zitat.
+\begin{quote}  
+  Gegenstand technologischer Evolution sind damit aber diese technologischen
+  Produktionsbedingungen selbst. Dies wird auch in \cite{TESE2018} so gesehen,
+  denn die im Buch beschriebenen Handlungsoptionen beziehen sich auf die
+  Organisation entsprechender Innovationsprozesse in Unternehmen. Damit kann
+  aber das Obersystem in unserer TRIZ-Analyse der begriff"|lichen Grundlagen
+  von \cite{TESE2018} weiter eingeschränkt werden auf die strategischen
+  Führungsstrukturen von Unternehmen, in denen die Innovationsprozesse
+  praktisch gestaltet werden. Auch hierbei haben wir es mit der Dualität von
+  System-Template -- gängigen gesellschaftlichen Verfahrensweisen zur
+  Organisation von Innovationsprozessen -- und konkreten realweltlichen
+  System"|ausprägungen in den einzelnen Unternehmen zu tun. Die
+  \emph{Hauptfunktion} jener Strukturen im Unternehmen ist die Organisation
+  des Innovationsprozesses in enger Verbindung mit der allgemeinen
+  Geschäftsstrategie.  Dieser Prozess selbst wird vom strategischen Management
+  entschieden und verantwortet, das hierzu die \emph{widersprüchlichen
+    Anforderungen} verschiedener Unternehmensteile (R\&D, Vertrieb, Finanzen,
+  Controlling, SCM, CRM) unter einen Hut zu bringen hat. Die in
+  \cite{TESE2018} zusammengetragenen Empfehlungen sind \emph{ein} Aspekt in
+  diesem komplexen Abwägungsprozess. Eine Methodik zwischen „technology push“
+  und „market pull“ ist dabei mit Blick etwa auf die Ausführungen in
+  \cite{Preez2006} eher auf dem Niveau der 1960er Jahre anzusiedeln. Ebenda
+  wird in Fig.~3 mit „state of the art in science and technology“ neben den
+  „needs of society and marketplace“ ein weiteres Obersystem in Stellung
+  gebracht, das auch bei Patenterteilungen mit den Begriffen „Stand der
+  Technik“ und „Erfindungshöhe“ eine wichtige Rolle spielt.
+\end{quote}
+\begin{center}
+  \begin{tikzpicture}[
+      >={Triangle[length=0pt 6,width=0pt 5]},
+      rounded corners=2pt,line width=1pt] 
+  \node[draw=green] at (0,2) [circle] (A0)
+       {\bbox{2}{Idea Generation}};
+  \node[draw=red] at (3,2) [rectangle] (A1)
+       {\bbox{1.8}{Develop- ment}};
+  \node[draw=red] at (6,2) [rectangle] (A2)
+       {\bbox{1.8}{Manufac- turing}};
+  \node[draw=red] at (9,2) [rectangle] (A3)
+       {\bbox{1.8}{Marketing and Sales}};
+  \node[draw=green] at (12,2) [circle] (A4)
+       {\bbox{2}{Commercial Product}};
+  \node[draw=green] at (6,4.3) [rectangle] (A5)
+       {\bbox{8}{State of the art\\[12pt] in science and technology}}; 
+  \node[draw=green] at (6,-.3) [rectangle] (A6)
+       {\bbox{8}{Needs of society\\[12pt] and the marketplace}};   
+  \draw[color=red] (1,.3) node
+       {\bbox{2}{\footnotesize \sc{Market Pull}}};
+  \draw[color=red] (11.3,3.6) node
+       {\bbox{2.3}{\footnotesize \sc{Technology Push}}};
+  \draw[color=red] (-.5,4.4) node {\bbox{2}{New\\ Technology}};
+  \draw[color=red] (-.5,-.5) node {\bbox{2}{New\\ Ideas}};
+  
+  \draw[<->] (1.2,2) -- (2,2) ;
+  \draw[<->] (4,2) -- (5,2) ;
+  \draw[<->] (7,2) -- (8,2) ;
+  \draw[<->] (10,2) -- (10.8,2) ;
+  \draw[<->] (3,2.5) -- (3,3.5) ;
+  \draw[<->] (6,2.5) -- (6,3.5) ;
+  \draw[<->] (9,2.5) -- (9,3.5) ;
+  \draw[<->] (3,1.5) -- (3,0.5) ;
+  \draw[<->] (6,1.5) -- (6,0.5) ;
+  \draw[<->] (9,1.5) -- (9,0.5) ;
+  \draw[<->] (-.4,4) -- (-.4,3.3) ;
+  \draw[<->] (.4,4.5) -- (1.4,4.5) ;
+  \draw[<->] (-.4,0) -- (-.4,0.7) ;
+  \draw[<->] (.4,-.5) -- (1.4,-.5) ;
+  \draw[->,dashed] (1,3) arc(120:60:10) ;
+  \draw[<-,dashed] (1,1) arc(-120:-60:10) ;
+\end{tikzpicture}\\
+Eine Reproduktion von \cite[Fig. 3]{Preez2006}, die dort von
+\cite{Galanakis2006} übernommen ist.
+\end{center}
+
+In \cite[Fig. 1]{Preez2006} werden sieben Generationen von
+Innovationsmanagement-Modellen aufgelistet, das in \cite{TESE2018} als
+Neuerung verkaufte gehört in die Kategorie der Modelle der dritten Generation,
+die in den 1970er Jahren entwickelt wurden.  Moderne
+Innovationsmanagementansätze wie etwa das in \cite{Preez2006} genauer
+beschriebene \emph{Fugle Innovation Process Model} gehen in ihrer Komplexität
+weit über derartige Ansätze hinaus.
+
+\begin{thebibliography}{xxx}
+\bibitem{Galanakis2006} Kostas Galanakis (2006).  Innovation process. Make
+  sense using systems thinking.  In: Technovation Volume 26, Issue 11,
+  p. 1222--1232.
+\bibitem{Graebe2020} Hans-Gert Gräbe (2020). Die Menschen und ihre Technischen
+  Systeme. LIFIS Online, 19.05.2020.
+  \url{http://dx.doi.org/10.14625/graebe_20200519}
+\bibitem{TESE2018} Alex Lyubomirsky, Simon Litvin, Sergei Ikovenko u.a.
+  (2018).  Trends of Engineering System Evolution (TESE).  TRIZ Consulting
+  Group. ISBN 9783000598463.
+\bibitem{Preez2006} Niek D Du Preez, Louis Louw, Heinz Essmann (2006). An
+  innovation process model for improving innovation capability.  Journal of
+  high technology management research, vol 17, 1--24.
+\end{thebibliography}
+\end{document}
