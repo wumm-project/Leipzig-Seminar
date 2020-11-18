@@ -30,7 +30,7 @@ angewendet, wäre ihm niemals aufgefallen, dass Eisen und Feder gleich schnell
 fallen.
 
 - Nicht alles, was wie Chaos aussieht, muss auch Chaos sein:
-  https://i.redd.it/zr7tet9mdfl01.gif
+  <https://i.redd.it/zr7tet9mdfl01.gif>
 
 ## Grenzzyklen und Attraktoren
 

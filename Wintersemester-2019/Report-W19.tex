@@ -1,16 +1,14 @@
 \documentclass[11pt,a4paper]{article}
-\usepackage{ls,bbm}
+\usepackage{ls,amsmath,bbm}
 \usepackage[utf8]{inputenc}
 \usepackage[german]{babel}
-
-
 
 \title{Seminarreport zum Seminar \\[6pt] Systemtheorie\\[6pt] im
   Wintersemester 2019/20} 
 
 \author{Hans-Gert Gr\"abe, Ken Pierre Kleemann}
 
-\date{16. November 2020}
+\date{18. November 2020}
 
 \begin{document}
 \maketitle
@@ -141,7 +139,7 @@ und nicht um apodiktische Wahrheiten.
 Der Kurs besteht aus drei Teilen:
 \begin{itemize}
 \item Die \textbf{Vorlesung} (do 11-13 Uhr). Dort werden grundlegende
-  Begrifflichkeiten wie Technik, Nachhaltigkeit im Kontext der bürgerlichen
+  Begriff\-lichkeiten wie Technik, Nachhaltigkeit im Kontext der bürgerlichen
   Gesellschaft, digitales Universum, RDF Basics, Ontologien (im Sinne der
   Informatik), Storytelling, Daten, Information, Wissen sowie kooperatives
   Handeln im digitalen Zeitalter genauer entwickelt.
@@ -170,36 +168,55 @@ Der Kurs besteht aus drei Teilen:
   wird.
 \end{itemize}
 
-\section{Anmerkungen zum Seminar am 22.10.2019}
+\section{Systembegriff in der Theorie dynamischer Systeme (Gräbe)}
 
-Systembegriff in der Theorie dynamischer Systeme (Gräbe)
-
-Literatur: (Prigogine/Stengers 1993) Zusatzliteratur: (Jantsch 1992),
-(Jooß 2017)
+Literatur: \cite{Prigogine1993}, Zusatzliteratur: \cite{Jantsch1992},
+\cite{Jooss2017}
 
 \subsection{Fragestellungen der Theorie dynamischer Systeme}
+\begin{quote}  
+  Ein \emph{dynamisches System} ist eine abgegrenzte zeitabhängige
+  Funktionseinheit, die durch ihre Signaleingänge und Signalausgänge in einer
+  Wechselwirkung mit der Umwelt steht. 
 
-https://de.wikipedia.org/wiki/Dynamisches\_System\_(Systemtheorie)
+  Das System hat mindestens einen Signaleingang und einen Signalausgang und
+  reagiert zu einem bestimmten Zeitpunkt auf ein beliebiges Eingangssignal mit
+  einer bestimmten zeitlichen Reaktion als Ausgangssignal. (Wikipedia)
+\end{quote}
+Das System kann in der Regel Informationen über vorherige Ereignisse durch
+interne Strukturtransformation speichern und entwickelt so ein „Gedächtnis“.
+\begin{quote}
+  Das Verhalten dieser Systeme kann linear, kontinuierlich nichtlinear,
+  diskontinuierlich nichtlinear, zeitinvariant, zeitvariant und
+  totzeitbehaftet sein. Dies gilt für Eingrößen- und Mehrgrößensysteme.
+  (Wikipedia)
+\end{quote}
 
 \subsection{Erste Beispiele}
 
 Beispiele im homogenen Gravitationsfeld (aus der Wikipedia)
-\begin{itemize}[noitemsep]
-\item  Das Pendel
-\item Gekoppelte Pendel
-\item Doppelpendel und chaotische Trajektorien, deterministisches Chaos
-\item Magnetisches Pendel
-
-  Pendel an einem festen Stab mit magnetischem Ende, das zwischen drei im
-  Dreieck aufgestellten Magneten pendelt und dabei um jeweils einen der
-  Magneten längere Zeit kreist, bis es chaotisch zu einem anderen Magneten
-  wechselt.
+\begin{itemize}
+\item[(1)] Pendel. Einfacher mathematischer Zusammenhang mit festem
+  Bezugspunkt führt zu „einfachem“ Verhalten.
+\item[(2)] Gekoppelte Pendel. Kopplung von zwei Zusammenhängen nach (1) führt
+  zu einer Reihe qualitativ verschiedener Kopplungsphänomene (Mitschwingen,
+  Gegenschwingen, Schwebung)
+\item[(3)] Doppelpendel.  Kopplung mit bewegtem Endpunkt als zweiter
+  Anfangspunkt führt bereits zu chaotischen Trajektorien, da über die Kopplung
+  in das zweite System Energie aus dem ersten eingetragen wird (bei kleinen
+  Ausschlägen synchronisieren sich die Pendel nach einere Weile)
+\item[(4)] Magnetisches Pendel. Pendel mit drei punktförmigen Attraktoren,
+  Energieeintrag hängt von den Entfernungen des Pendelendes von den drei
+  Magneten ab. Im Ergebnis pendelt das Ende längere Zeit um jeweils einen der
+  Magneten, bis es chaotisch zu einem anderen Magneten wechselt.
 \end{itemize}
 
 Beispiele mit gravitativer Wechselwirkung (auch Wikipedia)
 \begin{itemize}[noitemsep]
 \item Zweikörperproblem
-\item Dreikörperproblem und das Kolmogorow-Arnold-Moser-Theorem
+\item Dreikörperproblem und das Kolmogorow-Arnold-Moser-Theorem. Dieses
+  besagt, dass fast alle Trajektorien quasiperiodisch sind, dazwischen aber
+  immer wieder kompliziertere Trajektorien liegen. Beispiel: Saturnringe. 
 \end{itemize}
 Das sind bereits -- notwendigerweise reduktionistische -- Beschreibungsformen
 der Wirklichkeit: Etwa Pendel mit und ohne Dämpfungsglied.
@@ -218,12 +235,12 @@ Feder gleich schnell fallen.
 
 \begin{itemize}[noitemsep]
 \item Grenzzyklen
-\item Attraktor als stabile Lösung des entsprechenden
+\item Attraktor als stabile zeitinvariante Lösung des entsprechenden
   Differentialgleichungs-Systems 
 \end{itemize}
 
-Beispiel: Attraktoren des Magnetpendels waren die drei stabilen Endlagen, also
-drei Punkte im Phasenraum.
+\emph{Beispiel:} Die Attraktoren des Magnetpendels sind die drei stabilen
+Endlagen, also drei Punkte im Phasenraum.
 
 Weitere Phänomene:
 \begin{itemize}[noitemsep]
@@ -238,22 +255,20 @@ Wir sind in der Lage, solche sich \emph{näherungsweise} wiederholenden Muster
 in natürlichen Prozessen (d.h. Attraktoren) wahrzunehmen, also auch unabhängig
 von der Mathematik eine solche Reduktionsleistung zu vollbringen.
 
-\begin{itemize}[noitemsep]
-\item Frage: Wie kompliziert können solche Attraktoren werden?
-\item Der Lorenzattraktor.
+Frage: Wie kompliziert können solche Attraktoren werden?
+
+\emph{Beispiel:} Der Lorenzattraktor.
   
-  Achtung, bei den dort verwendeten numerischen Verfahren zur Visualisierung
-  ist schwer zu unterscheiden, ob das chaotische Verhalten 
-  \begin{itemize}[noitemsep]
-  \item Ergebnis des Aufschaukelns numerischer Fehler in einer dynamischen
-    Bahnverfolgung ist
-  \item oder der Attraktor als \emph{globales} Artefakt bestimmt wurde.
-  \end{itemize}
-\item \emph{Seltsame Attraktoren} als „Endzustand eines dynamischen Prozesses,
-  dessen fraktale Dimension nicht ganzzahlig und dessen Kolmogorov-Entropie
-  echt positiv ist. Es handelt sich damit um ein Fraktal, das nicht in
-  geschlossener Form geometrisch beschrieben werden kann“. (Wikipedia)
-\end{itemize}
+Achtung, im Gegensatz zum Magnetpendel entsteht das Bild \emph{nicht} durch
+Bahnverfolgung, sondern stellt wirklich den Attraktor als \emph{globales}
+Artefakt dar, als invariante Lösung des (recht einfachen, allerdings
+nichtlinearen) Systems aus drei Differenzialgleichungen dar.
+
+Es geht noch komplizierter: \emph{Seltsame Attraktoren} als „Endzustand eines
+dynamischen Prozesses, dessen fraktale Dimension nicht ganzzahlig und dessen
+Kolmogorov-Entropie echt positiv ist. Es handelt sich damit um ein Fraktal,
+das nicht in geschlossener Form geometrisch beschrieben werden kann“.
+(Wikipedia)
 
 \textbf{Damit ist der Trajektorienbegriff der klassischen Physik für
 derartige Phänomene nicht mehr anwendbar.} („Schmetterlingseffekt“)
@@ -273,29 +288,176 @@ dünn.
 \item Beispiel: Doppelpendel als Pendel, aber der Pendelkörper hat selbst noch
   eine innere Dynamik.
 
-  Das wurde in einem Handexperiment vorgeführt. Das Obersystem prägt dem
-  Untersystem durch Energieeintrag eine gemeinsame Dynamik auf. Obwohl das
-  Doppelpendel eigentlich chaotisch ist, ist das System damit (final)
-  \emph{nicht} chaotisch, sondern verhält sich wie ein einfaches Pendel mit
-  Masse im Schwerpunkt.
+  Das Obersystem prägt dem Untersystem durch Energieeintrag eine gemeinsame
+  Dynamik auf. Obwohl das Doppelpendel eigentlich chaotisch ist, ist das
+  System damit (final) \emph{nicht} chaotisch, sondern verhält sich wie ein
+  einfaches Pendel mit Masse im Schwerpunkt.
 \item In der Literatur als „Versklavungseffekt“ bekannt und besonders in
   methodisch schlecht fundierten soziologischen Betrachtungen als
   Verbalargument verbreitet.
 \item Siehe aber \url{https://de.wikipedia.org/wiki/Netzwerkforschung}
 \end{itemize}
 
+\emph{Projektionsphänomene:} Entstehung von Singularitäten bei Reduktion: Die
+glatte räumliche Trajektorie $\{(t,t^2,t^3)|t\in\mathbbm{R}\}$ geht bei
+Projektion in die $y$-$z$-Ebene in die Kurve $\{(t^2,t^3)|t\in\mathbbm{R}\}$
+über. Die Kurve wird durch die Gleichung $y^3=z^2$ beschrieben und hat im
+Ursprung eine Singularität (eine Spitze).
+
 Welche Probleme treten beim Zusammensetzen von (verstandenen) Mikroevolutionen
 von Teilsystemen zu einem Verständnis der Dynamik auf der Makroebene auf?
 
-\begin{itemize}[noitemsep]
-\item immersiver und submersiver Systembegriff (dazu ein Einschub weiter
-  unten)
-\item Projektionsphänomene -- Entstehung von Singularitäten bei Reduktion: Die
-  glatte räumliche Trajektorie $\{(t,t^2,t^3)|t\in\mathbbm{R}\}$ geht bei
-  Projektion in die $y$-$z$-Ebene in die Kurve $\{(t^2,t^3)|t\in\mathbbm{R}\}$
-  über. Die Kurve wird durch die Gleichung $y^3=z^2$ beschrieben und hat im
-  Ursprung eine Singularität (eine Spitze).
-\end{itemize}
+\subsection{Immersiver und submersiver Systembegriff}
+
+Komplexere Relationen von Systemen $S_1$ und $S_2$ innerhalb eines Obersystems
+$S$ kann man als \emph{Einbettung} der beiden Teilsysteme in das Obersystem
+beschreiben.
+
+Mathematische Formulierung der Fragestellung: 
+\begin{quote}
+  Gegeben sind die beiden Systeme $S_1$ und $S_2$ (als Instanzen einer
+  mathematischen Kategorie, zum Beispiel Mengen oder Vektorräume).
+  
+  Gesucht sind für jedes denkbare Obersystem $S$ geeignete Abbildungen $f_1:
+  S_1 \rightarrow S$, $f_2: S_2 \rightarrow S$, die diese „Einbettung“
+  realisieren.
+\end{quote}
+„Einbettung“ steht hier für beiebige Morphismen in der gegebenen Kategorie. 
+
+\emph{Frage:} Gibt es für diese Konstellation ein \emph{universelles}
+kategorielles Objekt, d.h. ein in dieser Kategorie allein aus $S_1$ und $S_2$
+konstruierbares universelles $U$ samt universellen Abbildungen $p_1: S_1
+\rightarrow U$, $p_2: S_2 \rightarrow U$, so dass sich für \emph{jedes} Tripel
+$(f_1, f_2, S)$ die obige Konstellation als
+\begin{gather*}
+  f_1 = f \circ p_1: S_1 \rightarrow U \rightarrow S,\quad f_2 = f \circ p_2:
+  S_2 \rightarrow U \rightarrow S
+\end{gather*}
+für ein geeignetes $f = f_1\oplus f_2: U \rightarrow  S$ schreiben lässt?
+
+$U$ heißt in dem Fall \emph{direkte Summe} und man schreibt $U = S_1\coprod
+S_2$.
+
+\paragraph{Mathematische Kategorien.}
+Die meisten mathematischen Modelle bewegen sich in derartigen konkreten
+Kategorien, zum Beispiel der Kategorie der Mengen, der Vektorräume, der
+Faserbündel, der algebraischen Varietäten usw.
+
+Jede solche Kategorie zeichnet sich dadurch aus, dass dort die Begriffe
+\emph{Objekt} und \emph{Morphismus} eine klare Bedeutung haben.  Morphismen
+zwischen Vektorräumen sind zum Beispiel operationstreue Abbildungen, also
+lineare Abbildungen, die sich für endlichdimensionale Vektorräume durch
+Matrizen beschreiben lassen.
+
+Nicht in jeder Kategorie existieren solche universellen Objekte.
+
+\emph{Anmerkung:} Die Konstruktion lässt sich leicht auf endlich viele $S_i$
+und sogar auf unendlich viele $S_i, i\in I$, verallgemeinern, und so ist es in
+der Mathematik auch gemeint.
+
+\paragraph{Kategorie der Mengen.}
+In dieser Kategorie existieren direkte Summen $U$ sowohl für endliche als auch
+unendliche Indexmengen $I$. Dies ist gerade die \emph{disjunkte Vereinigung}
+der Mengen $S_i$.
+
+Die Abbildungen $p_i$ sind gerade die Einbettungen $p_i: S_i \rightarrow U$
+der Teilmengen in deren disjunkte Vereinigung.
+
+Die Abbildung $f: U \rightarrow S$ ergibt sich wie folgt: Für jedes $a\in U$
+existieren genau ein $i$ und ein $a'\in S_i$ mit $a=p_i(a')$. Setze
+$f(a)=f_i(a')$.
+
+Ist $|S_1| = a$, $|S_2| = b$, so ist $|S_1\coprod S_2| = a+b$.  Das Ganze ist
+nicht mehr als die Summe seiner Teile.
+
+\paragraph{Kategorie der Vektorräume.}
+Auch in dieser Kategorie existieren direkte Summen $U$ sowohl für endliche als
+auch unendliche Indexmengen $I$.
+
+Die Abbildungen $p_i$ sind gerade die Einbettungen $p_i: S_i \rightarrow U$
+auf die $i$-te Koordinate von $U$ (alle anderen Komponenten gleich dem
+Nullelement des Vektorraums).
+
+Die Abbildung $f: U \rightarrow S$ ergibt sich wie folgt: Jedes $a\in U$ lässt
+sich eindeutig als (endliche!) Linearkombination von Basisvektoren $e_a$
+darstellen, von denen die Bilder $f(e_a)$ bekannt sind. Setze nun f linear
+fort.
+
+Ist $|S_1| = a$, $|S_2| = b$, so ist $|S_1\coprod S_2| = a \cdot b$.  Das
+Ganze scheint mehr als die Summe seiner Teile zu sein. Ich komme darauf
+zurück.
+
+\paragraph{Ein zentrales TRIZ-Prinzip ist Prinzip 13 der Funktionsumkehr.}
+Wenden  wir dieses hier an, drehen alle Pfeile um, und schauen, was wir
+erhalten. Das Verfahren ist in der Mathematik weit verbreitet und heißt in
+diesem Kontext „Übergang zur dualen Kategorie“.
+
+Gesucht sind also nun $f_1: S_1 \leftarrow S$, $f_2: S_2\leftarrow S$, d.h.
+Möglichkeiten, $S_1$ und $S_2$ aus einem Obersystem $S$ durch „Projektion“ zu
+gewinnen.
+
+Gibt es für diese Konstellation ein universelles kategorielles Objekt,
+d.h. ein universelles $U$ und universelle Abbildungen $p_1: S_1 \leftarrow U$,
+$p_2: S_2 \leftarrow U$, so dass sich für jedes Tripel $(f_1, f_2, S)$ die
+obige Konstellation als
+\begin{gather*}
+  f_1 = p_1 \circ f: S_1 \leftarrow U \leftarrow S,\quad f_2 = p_2 \circ f:
+  S_2 \leftarrow U \leftarrow S
+\end{gather*}
+für ein geeignetes $f = f_1\otimes f_2: S \rightarrow U$ schreiben lässt.
+
+$U$ heißt in dem Fall \emph{direktes Produkt} und man schreibt $U = S_1\prod
+S_2$. 
+
+Wie ändert sich dabei die Perspektive auf den Systembegriff?
+
+\paragraph{Kategorie der Mengen.}
+In dieser Kategorie existieren direkte Produkte $U$ sowohl für endliche als
+auch unendliche Indexmengen $I$. Dies ist gerade das \emph{karthesische
+  Produkt}.
+
+Die Abbildungen $p_i$ sind gerade die Projektionen $p_i : U \rightarrow S_i$
+des Produkts auf die einzelnen Komponenten.
+
+Die Abbildung $f : S \rightarrow U$ ergibt sich wie folgt: Für jedes $a\in S$
+ist $f(a) = (f_i(a))\in U$.
+
+Ist $|S_1| = a$, $|S_2| = b$, so ist $|S_1\prod S_2| = a\cdot b$.
+
+Das Ganze ist deutlich mehr als die Summe seiner Teile, der größte Teil der
+„Information“ ist relationaler Natur.
+
+\paragraph{Kategorie der Vektorräume.}
+Auch in dieser Kategorie existieren direkte Produkte $U$ sowohl für endliche
+als auch unendliche Indexmengen $I$.
+
+Für endliche Indexmengen unterscheiden sich die direkte Summe und das direkte
+Produkt von Vektorräumen (auf den ersten Blick) nicht.
+
+Das direkte Produkt besteht aber nur aus Vektoren, die nur an endlich vielen
+Stellen von null verschiedene Einträge haben, das direkte Produkt ist das
+volle kartesische Produkt.
+
+Ist der Grundkörper abzählbar (etwa $K=\mathbbm{Q}$) und $I$ auch, so bleibt
+die direkte Summe abzählbar, das direkte Produkt ist aber bereits
+überabzählbar.
+
+Auch hier ist enthält also das direkte Produkt deutlich mehr Information als
+die direkte Summe.
+
+\paragraph{Submersive und immersive Systemtheorien.}
+Systemtheorien machen selten einen Unterschied zwischen diesen beiden
+Zugängen.  Zur Unterscheidung der Zugänge bezeichnet man Systemtheorien, in
+denen das erste Modellierungsprinzip dominiert, als \emph{immersive}
+Systemtheorien. Man erkennt sie daran, dass ihre Konstruktionen wesentlich auf
+Einbettungen (Immersionen) aufbauen.
+
+Systemtheorien, die auf dem zweiten Modellierungsprinzip aufbauen, bezeichnet
+man als \emph{submersive} Systemtheorien.  Man erkennt sie daran, dass ihre
+Konstruktionen wesentlich auf Projektionen (Submersionen) aufbauen und damit
+auf Prozessen gestaffelter Komplexitätsreduktion.
+
+Die Theorie dynamischer Systeme ist eine submersive Systemtheorie.
 
 \subsection{Emergente Phänomene}
 
@@ -315,30 +477,149 @@ den submersiven Systembegriff zu.
 \item Die Erde als dissipatives System
 \end{itemize}
 
-\section{Anmerkungen zum Seminar am 29.10.2019}
+\section{Einführung in Systemwissenschaft, Nachhaltigkeit und Allgemeine
+Systemtheorie (Lautenschläger)}
 
-Einführung in Systemwissenschaft und Nachhaltigkeit, Allgemeine
-Systemtheorie (IIRM)
+Literatur: \cite{Bertalanffy1950}, \cite{Mele2010}, \cite{Binder2013}
 
-Literatur: (Bertalanffy 1950), (Mele u.a. 2010), (Binder u.a. 2013)
-
-Ziel dieses Termins war es u.a., eine Liste von Begrifflichkeiten
+Ziel dieses Termins war es u.a., eine Liste von Begriff\-lichkeiten
 aufzustellen, die in Systemtheorien immer wieder auftreten und für das
 Verständnis der Seminarinhalte zentral sind.
 
 Im Seminar wurde das Thema in zwei Vorträgen von Sabine Lautenschläger und
-Lydie Laforet vorgestellt, was die gesamte Seminarzeit in Anspruch nahm.
+Lydie Laforet vorgestellt.
 
-Hans-Gert Gräbe hat im Nachgang ein Standpunktpapier verfasst, in dem die
-Verbindungen zu konzeptionellen Fragen der Theorie Dynamischer Systeme sowie
-zu den Argumentationen zum Thema Nachhaltigkeit aus der Vorlesung (siehe
-hierzu die Folien im Uni-Moodle) aufgenommen werden.
+Im folgenden Text werden einige Aspekte der Theorie dynamischer Systeme (TDS)
+mit den von Lautenschläger und Laforet vorgetragenen Systemtheorieansätzen
+abgeglichen und damit zugleich einige Punkte der TDS genauer ausgeführt.
 
-Zu ergänzen.
+\subsection{Bertalanffys Allgemeine Systemtheorie}
 
-\section{Anmerkungen zum Seminar am 05.11.2019}
+Bertalanffy entwickelt in \cite{Bertalanffy1950} zunächst genau die Grundlagen
+der TDS im Verständnis jener Zeit.  Der Bezugstext steht damit ganz am Anfang
+einer stürmischen Entwicklung der TDS in den 1960er und 1970er Jahren, die zu
+fundamental neuen Einsichten in die Vielfalt von Formen der Lösungen
+gewöhnlicher Differentialgleichungssysteme geführt haben.  Bereits in diesem
+Gebiet\footnote{In den Gleichungen werden nur zeitabhängige Ableitungen
+  zugelassen, keine partiellen Ableitungen nach auch noch anderen Parametern,
+  das Gebiet der \emph{partiellen Differentialgleichungen} wird also noch
+  nicht betreten.} finden sich erstaunliche Phänomene wie der Lorenzattraktor,
+deterministisches Chaos, das Ende des Trajektorienbegriffs und fraktale
+Gebilde. Mit partiellen Differentialgleichungen kommen noch
+Solitonen\footnote{Auf dieses Phänomen bin ich in meinem Seminar nicht
+  eingegangen, obwohl diese Strukturen, die in vielen Systemen partieller
+  Differentialgleichungen als Lösungen auftreten, zu einem vollkommen neuen
+  Verständnis des Welle-Teilchen-Dualismus führen. Siehe dazu
+  \url{https://de.wikipedia.org/wiki/Soliton}. } hinzu. Bertalanffy hat also
+nur eine erste Ahnung möglicher Phänomene. Seine mathematischen Betrachtungen
+verwenden allein Taylorreihen und beschränken sich damit auf Phänomene nahe
+einer Gleichgewichtslage, können also mathematisch auf steady state
+Situationen (ohne wesentlich vereinfachende Annahmen) nicht einmal angewendet
+werden.
 
-Leitung: Ken Kleemann
+Seine wissenschaftstheoretischen Überlegungen fußen auf der Analogie
+entsprechender mathematischer Beschreibungsformen in verschiedenen
+Wissenschaftsgebieten\footnote{Komplexe Systemtheorie stellt die Adäquatheit
+  derartiger Beschreibungen heute selbst in Frage.} und stellen damit nach
+meinem Verständnis auf \emph{methodologische} Ähnlichkeit von Zugängen und
+\emph{nicht} auf Isomorphie von Strukturen (so Lautenschläger) ab. Dass
+Bertalanffys Zugang \emph{deduktiv} sei, kann sich damit auch maximal auf den
+mathematisch-deduktiven Kern seiner Argumentation beziehen, nicht aber auf die
+weitergehenden wissenschaftstheoretischen Beobachtungen, bzw. dies wäre noch
+genauer zu belegen.
+
+\subsection{Der Raumbegriff der TDS}
+
+Der Raumbegriff der TDS entwickelt sich aus dem physikalischen Begriff des
+\emph{Phasenraums}. So „lebt“ ein klassisches Vier-Teilchen-System in einem
+12-dimensionalen Phasenraum, der durch die $4\times 3$ Raumkoordinaten
+aufgespannt wird. Derartige Phasenräume dienen zunächst der Koordinatisierung
+der Bewegungsgleichungen, allerdings sieht bereits die Physik in solchen
+Koordinatenabhängigkeiten einen Mangel, da die Gesetze unter
+Koordinatentransformationen invariant sein müssen, also letztlich
+koordinatenfreie Zusammenhangsbeschreibungen mehr Einsicht in bestehende
+Zusammenhänge vermitteln. Damit steht zugleich die Frage, invariante
+geometrische Strukturen in solchen höherdimensionalen Phasenräumen zu
+beschreiben.
+
+Derartige Fragen sind Gegenstand zum Beispiel der algebraischen Geometrie oder
+der Differentialgeometrie. In diesen Beschreibungen (der invarianten
+geometrischen Gebilde) treten ihrerseits Räume auf, die sich etwa im Konzept
+der \emph{Vektorbündel} „materialisieren“ als \emph{Sprache}, um geometrische
+Eigenschaften der betrachteten invarianten Strukturen zu beschreiben (wie
+Fasern, Keime, Schnitte, Obstruktionen zur Fortsetzbarkeit von Schnitten,
+Homologieklassen als Strukturen derartiger Obstruktionen usw.).
+
+Im Bereich der Analysis wird der Raumbegriff weiter verallgemeinert zu
+unendlich-dimensio\-nalen Banach- und Sobolev-Räumen, in denen sich gewisse
+mathematische Konzepte (etwa das Lebesgue-Integral) überhaupt erst entfalten
+lassen für Situationen, wo man mit „klassischen“ Lösungen nicht mehr
+weiterkommt.  Theorien (wie etwa der Banachsche Fixpunktsatz) lassen sich
+überhaupt erst auf der Basis derart verallgemeinerter Raumbegriffe konsistent
+entwickeln.
+
+\subsection{Steady State und Fließgleichgewichte}
+
+Diese Begriffe entwickeln sich später zum Begriff des \emph{Attraktors}
+weiter.  Zugleich wird erkannt, dass derartige Attraktoren extrem komplexe
+Gestalt haben können, womit eine Unterscheidung zu chaotischem Verhalten
+allein auf phänomenologischer Ebene schwierig wird.  Zugleich wird die Rolle
+auch \emph{negativer Attraktoren} erkannt.  Derartige Strukturen und
+Strukturbildungsprozesse sind typisch für dissipative Prozesse fern von
+Gleichgewichtszuständen, die durch einen gewissen Durchsatz von Materie und
+Energie getrieben werden. Der Durchsatz von Information spielt dabei keine
+Rolle\footnote{Siehe dazu etwa noch einmal
+  \url{https://de.wikipedia.org/wiki/Dissipative_Struktur}.}. Ich komme unten
+auf diese Frage zurück.
+
+\subsection{Komplexe und komplizierte Systeme}
+
+Diese Unterscheidung habe ich überhaupt nicht begriffen. Sicher kann man einen
+solchen Unterschied nicht an der Zerlegbarkeit eines technischen Artefakts
+(„ein Auto ist kompliziert, nicht aber komplex“) festmachen, da ein
+entsprechender Technikbegriff noch deutlich hinter dem des VDI
+\cite{VDITechnik} zurückbliebe, der zum System wenigstens noch „Herstellung“
+und „Verwendung“ des Artefakts (oder -- dort bereits deutlich --
+„Sachsysteme“) rechnet.
+
+Eine solche Unterscheidung lässt sich nach meinem Verständnis ausschließlich
+an den Beschreibungsmethodiken festmachen, die etwa im Potsdamer Manifest
+\cite{VDW2005} als „mechanisch-materialistisch“ und „geistig-lebendig“
+unterschieden werden.  Damit kommen wir aber sofort auf grundlegende Fragen,
+welche Technik- und Wissenschaftsverständnisse überhaupt nur Grundlage für
+„Nachhaltigkeit“ sein können und welchen Anteil das Wert-Nutzen-Denken des
+homo oeconomicus oder auch nur des homo faber an der aktuellen Krise unserer
+fossil basierten Produktionsweise hat.
+
+Carlowitz hat vor 250 Jahren wenigstens noch über eine nachhaltige
+Bewirtschaftung der nachwachsenden Ressource „Holz“ raisonniert\footnote{Dass
+  Carlowitz' Probleme eng mit der aufkommenden kapitalistischen
+  Produktionsweise zusammenhängen und vergleichbare Probleme der
+  Bewirtschaftung von Infrastrukturen vorher mit den lokalen Allmendegesetzen
+  stabil prozessiert werden konnten, hat Elinor Ostrom klar gezeigt, siehe
+  etwa \cite{Stollorz2011}. }. Unsere gesamte Technik und Wissenschaft hat
+sich seither rasant weiterentwickelt, allerdings auf der Basis \emph{fossiler}
+Rohstoffe, die sich definitiv \emph{nicht} in so kurzen Zeiten regenerieren
+wie sie verbraucht werden.  Die damit verbundenen grundlegenden Probleme habe
+ich bereits in der 2. Vorlesung („Peak Oil? Peak Everything!“) angeschaut.
+Siehe dazu auch \cite{Davis2008}, \cite{Graebe2012}.
+
+\subsection{Informationsbegriff}
+
+„Komplexe Systeme sind lernfähig“ (Laforet). Lernfähigkeit setzt nach meinem
+Verständnis 1) Reflexionsfähigkeit und 2) Selbstreflexionsfähigkeit voraus.
+Ich denke nicht, dass der Begriff „komplexes System“ derart eingeengt werden
+sollte.  Insgesamt sind wir bei diesem Ansatz bei Informationstheorien auf dem
+Stand der 1970er Jahre, etwa \cite{Steinbuch1969}\footnote{„Geschichte ist die
+  uns überlieferte Information über frühere Versuche, die Zukunft zu
+  gestalten.“ (ebenda, S. 5)}, die Klaus Fuchs-Kittowski \cite{KFK2002} in der
+Unterscheidung zwischen Kybernetik 1. und 2. Ordnung noch einmal resümierte.
+Dieser Ansatz wurde bereits Ende der 1990er Jahre in Debatten zwischen Janich,
+Capurro, Fleissner, Hofkirchner u.a. fundamental kritisiert. Dazu etwa
+\cite{Janich2006}, \cite{Capurro1996}, \cite{Capurro1998}, \cite{Capurro2002},
+\cite{Klemm2003}.
+
+\section{Zum Verhältnis von Systembegriff und Wirklichkeit (Kleemann)}
 
 Grundlegendes Problem menschlicher Verhandlungs- und Entscheidungsstrukturen
 ist die Frage, wie wir die Vielfalt der Sichten auf die Wirklichkeit („Welten“
@@ -348,7 +629,7 @@ zugänglich, sondern nur über kooperative Sprachformen, die Erwartetes mit
 Gewesenem abgleichen können. Siehe dazu auch die
 Anmerkungen\footnote{\url{http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/SeminarWissen/2019-10-24}}
 zu einem anderen Seminar im Dorfwiki. In diesem Sinne gilt „Welt als
-Wirklichkeit \emph{für uns} ist Wirklichkeit im Prozess begrifflicher
+Wirklichkeit \emph{für uns} ist Wirklichkeit im Prozess begriff\-licher
 Erfassung“ (Vorlesung). Und in diesem Sinne sind die Begriffe \emph{Welt} und
 \emph{Wirklichkeit} im weiteren Text zu verstehen.
 
@@ -400,13 +681,13 @@ als Komplettierungsinstrumente für Theoriegebäude mit Ganzheitsanspruch in
 Stellung gebracht werden. Diese \emph{geschlossenen Theorien} begründen
 
 \begin{enumerate}
-\item eine neue argumentative Tradition des Verhältnisses von Induktion und
-  Deduktion (einen Begriff von „Science“ in der im angelsächsischen Sprachraum
-  verbreiteten Bedeutung) und
-\item eine Aufspaltung in Einzelwissenschaften, deren Vertreter den intern
-  stehenden (deduktiven) Ganzheitsanspruch an das jeweilige Theoriegebäude
-  gern mit dem alten (induktiven) Ganzheitsanspruch einer „Welterklärung“
-  verwechseln (Naturphilosophie, Empiriokritizismus).
+\item[(a)] eine neue argumentative Tradition des Verhältnisses von Induktion
+  und Deduktion (einen Begriff von „Science“ in der im angelsächsischen
+  Sprachraum verbreiteten Bedeutung) und
+\item[(b)] eine Aufspaltung in Einzelwissenschaften, deren Vertreter den
+  intern stehenden (deduktiven) Ganzheitsanspruch an das jeweilige
+  Theoriegebäude gern mit dem alten (induktiven) Ganzheitsanspruch einer
+  „Welterklärung“ verwechseln (Naturphilosophie, Empiriokritizismus).
 \end{enumerate}
 
 \paragraph{4.}
@@ -432,14 +713,14 @@ Auf der anderen Seite formen sich Bereiche (Einzelwissenschaften), in denen
 sich je spezifische Balancen zwischen spekulativen und deduktiven Ansätzen
 herausbilden, der Geschlossenheitsanspruch also eine je innerdisziplinäre
 sozialisierungsbasierte Institutionalisierung (Fachlogik) erfährt. Diese
-Fachlogiken, die T.S. Kuhn als \emph{Paradigmata} bezeichnet, stehen
-ihrerseits aber in dialektischen Entwicklungsprozessen bis hin zu Brüchen
-(Kuhn untersucht derartige Paradigmenwechsel intensiv).
+Fachlogiken, die T.S. Kuhn als \emph{Paradigmen} bezeichnet, stehen ihrerseits
+aber in dialektischen Entwicklungsprozessen bis hin zu Brüchen (Kuhn
+untersucht derartige Paradigmenwechsel intensiv).
 
 Als dritte Entwicklungslinie jener Zeit verwies Herr Kleemann auf die
 beginnende \emph{Technisierung} von Science im Sinne einer technischen
 Werkzeugunterstützung von Versuchsaufbaustrukturen bis hin zu repetitiven
-Vorgängen innerhalb jener Sprachformen einer mathematisch-deduktiven
+Vorgängen innerhalb jener Sprachformen einer mathe\-matisch-deduktiven
 Argumentation. Turing greift ältere derartige Ansätze (Rechenmaschinen von
 Leibniz und Pascal, die „Analytical Engine“ von Babbage und Lady Lovelace) im
 zunächst theoretischen Konzept der Turingmaschine (1936) auf, das in der
@@ -455,11 +736,11 @@ Zustandsstrukturen sind -- im Gegensatz zur engeren Klasse der Kellerautomaten
 
 \paragraph{5.}
 Seit den 1960er Jahren setzt sich jene instrumentelle Untersetzung
-mathematisch-deduktiver Ansätze in Kybernetik, Regelungssystemen, KI,
+mathematisch-deduk\-tiver Ansätze in Kybernetik, Regelungssystemen, KI,
 Automatisierungstechniken usw. fort. Die instrumentelle Untersetzung von
-Automatisierungstechniken ist allerdings deutlich älteren Datums - mechanische
-Regelwerke existieren seit Tausenden von Jahren, der Einsatz komplizierter,
-mechanisch fundierter Prozess-Steuerungen begleitet die
+Automatisierungstechniken ist allerdings deutlich älteren Datums --
+mechanische Regelwerke existieren seit Tausenden von Jahren, der Einsatz
+komplizierter, mechanisch fundierter Prozess-Steuerungen begleitet die
 Automatisierungstechnik seit den Anfängen der industriellen Produktionsweise
 Mitte des 19. Jahrhunderts, Zuses Z1 (1937) verwendete noch komplett eine
 derartige Technologie und selbst Zuses Z4 (1945) war nach dem Übergang zu
@@ -467,10 +748,10 @@ einer Technologie mit elektro-mechanischen Relais nur halbherzig
 „elektrifiziert“.
 
 Dem gesamten ingenieurtechnischen Konzept eines \emph{Stands der Technik}
-liegt ein solcher mathematisch-deduktiver Geschlossenheitsanspruch zugrunde,
+liegt ein solcher mathe\-matisch-deduktiver Geschlossenheitsanspruch zugrunde,
 der mit Blick auf die prinzipielle Orientierung von Technik am Lösen von
 Problemen aber interdisziplinär ist und damit die mathematisch-deduktiv
-begründeteten Geschlossenheitsansprüche jeder Einzelwissenschaft nur zu einem
+begründeten Geschlossenheitsansprüche jeder Einzelwissenschaft nur zu einem
 sozio-praktisch begründbaren Geschlossenheitsanspruch zusammenführen kann. Mit
 der fortschreitenden Durchdringung unserer Produktionsweise mit
 wissenschaftssprachlich fundierten Praxen und fortschreitender
@@ -543,10 +824,7 @@ In diesem Sinne stehen auch Begriffe/Systeme einerseits und Nachhaltigkeit
 andererseits in einem synergetischen Verhältnis. Billiger ist das Semantic Web
 nicht zu haben.
 
-\section{Anmerkungen zum Seminar am 12.11.2019}
-
-Thema: Systembegriffe. Systematisierung der Argumente aus einer Debatte unter
-Praktikern (Gräbe)
+\section{Systembegriffe in der Praxis (Gräbe)}
 
 Literatur: \url{https://wumm-project.github.io/2019-08-07}
 
@@ -574,16 +852,15 @@ aktuellen \emph{digitalen Wandel} eröffnen sich gerade auch hier vollkommen
 neue Möglichkeiten, die in einer Debatte um das \textbf{Semantic Web} nicht
 nur in ihrer technischen Dimension auszuloten sind.
 
-Im Gegensatz zu allen anderen Seminaren war diesmal als Grundlage keine
-akademische Arbeit ausgewählt worden, sondern der Zusammenschnitt einer
-Diskussion unter TRIZ-erfahrenen Personen über das Verhältnis theoretischer
-und praktischer Dimensionen eines Systembegriffs, der in der TRIZ-Methodologie
-eine wichtige Rolle spielt. Der Systembegriff taucht dort etwa in der
-\emph{9-Felder-Matrix} oder bei den \emph{Gesetzen der Evolution technischer
-  Systeme} auf, ist aber andererseits nur unscharf gegen Begriffe wie
-Funktion, Komponente, Element, Produkt oder Objekt abgegrenzt. Genau um die
-Problematik einer solchen Abgrenzung ging es in jener Diskussion und auch in
-der Diskussion im Seminar.
+Im Gegensatz zu anderen Seminaren war diesmal als Grundlage keine akademische
+Arbeit ausgewählt worden, sondern der Zusammenschnitt einer Diskussion unter
+TRIZ-erfahrenen Personen über das Verhältnis theoretischer und praktischer
+Dimensionen eines Systembegriffs, der in der TRIZ-Methodologie eine wichtige
+Rolle spielt. Der Systembegriff taucht dort etwa im \emph{Systemoperator} oder
+bei den \emph{Gesetzen der Evolution technischer Systeme} auf, ist aber
+andererseits nur unscharf gegen Begriffe wie Funktion, Komponente, Element,
+Produkt oder Objekt abgegrenzt. Genau um die Problematik einer solchen
+Abgrenzung ging es in jener Diskussion und auch in der Diskussion im Seminar.
 
 Das Ergebnis unserer Diskussion lässt sich wie folgt zusammenfassen. Der
 Systembegriff dient der Abgrenzung eines Beschreibungs- und Handlungsraums, in
@@ -593,15 +870,15 @@ einerseits nach dem \emph{Relevanzkriterium} und damit submersiv, andererseits
 nach dem \emph{Beeinflussungskriterium} und damit immersiv. Letzteres wurde
 besonders strittig diskutiert, aber zum Ende als \emph{Einbettung in
   vorhandene Praxen} erkannt. Diese Praxen treten einerseits als vorgefundene
-institutionalisierte „äußere“ Bedingungen (Supersystem in der
+institutionalisierte „äußere“ Bedingungen (Obersystem in der
 TRIZ-Terminologie), andererseits als vorgefundene technische Mittel
 (Komponenten in der TRIZ-Terminologie) in Erscheinung. Ob eine solche Trennung
 auf dem Hintergrund des in der Vorlesung entwickelten Technikbegriffs sinnvoll
 ist, sei dahingestellt.
 
-Das Begreifen einer derartigen \emph{begriffliche Weiterentwicklung} (in der
+Das Begreifen einer derartigen \emph{begriff\-liche Weiterentwicklung} (in der
 Vorlesung heißt es dazu „Welt als Wirklichkeit für uns ist Wirklichkeit im
-Prozess begrifflicher Erfassung“) vorgefundener Bedingungen kann sich
+Prozess begriff\-licher Erfassung“) vorgefundener Bedingungen kann sich
 prozessual am Konzertbeispiel aus der Vorlesung orientieren, besser aber noch
 am Konzept einer \emph{Software aus Komponenten}, nach dem heute moderne
 IT-Systeme entworfen und realisiert werden. Derartige aus Komponenten
@@ -635,11 +912,9 @@ ihrerseits in System-Komponenten-Dichotomien auf einer höheren
 Abstraktionsebene (etwa auf der Ebene von Geschäftsprozessen) einordnen
 lassen.
 
-\section{ Anmerkungen zum Seminar am 19.11.2019}
+\section{Organisation in lebenden Systemen (Laforet)}
 
-Thema: Organisation in lebenden Systemen (IIRM)
-
-Literatur: (Mingers 1989), (Ulanowicz 2009)
+Literatur: \cite{Mingers1989}, \cite{Ulanowicz2009}
 
 \subsection{Vorbemerkungen}
 
@@ -657,23 +932,23 @@ Systembegriff als Beschreibungsfokussierung identifiziert, mit der konkrete
 Phänomene durch „Reduktion auf das Wesentliche“, also durch einen submersiven
 Zugang, einer Beschreibung zugänglich sind. Die Reduktion richtete sich auf
 mehrere Aspekte
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item Abgrenzung des Systems nach außen gegen eine \emph{Umwelt}, Reduktion
   dieser Beziehungen auf Input/Output-Beziehungen.
 \item Abgrenzung des Systems nach innen durch Zusammenfassen von Teilbereichen
   als \emph{Komponenten}, deren Funktionieren auf eine „Verhaltenssteuerung“
-  über Input/Output-Beziehungen reduziert wird.
+  über Input/Output-Be\-ziehungen reduziert wird.
 \item Reduktion der Beziehungen im System selbst auf „kausal wesentliche“
   Beziehungen.
 \end{itemize}
 Eine grundlegende Einsicht war, dass Systembeschreibungen ähnlich dem
 Konzertbeispiel aus der Vorlesung im Sinne einer „Wirklichkeit im
-Prozess begrifflicher Erfassung“ stets auf bereits vorgefundene
+Prozess begriff\-licher Erfassung“ stets auf bereits vorgefundene
 Beschreibungen aufsetzen. Die mit einer Systembeschreibung verbundene
 Reduktion setzt in diesem Sinne bestehende Beschreibungsformen auf drei
 Ebenen voraus, die mit der Weiterentwicklung der Beschreibung des
 Systems selbst (explizit oder implizit) weiterentwickelt werden sollen:
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item[1.] Eine wenigstens vage Vorstellung über die Input/Output-Leistungen
   der Umgebung.
 \item[2.] Eine deutliche Vorstellung über das innere Funktionieren der
@@ -712,17 +987,17 @@ Ausdehnungen (etwa der Pendellänge) zusammen. Zeit erscheint in solchen
 Systemen aber nicht als lineare Zeit, sondern als \textbf{Eigenzeiten}
 (Frequenzen), in denen sich Systemzustände (näherungsweise)
 wiederholen. Derartige Strukturmomente von Systemen spielten in den bisherigen
-Betrachtungen keine Rolle und werden auch im Ansatz von (Ulanowicz 2009) nicht
-berücksichtigt, wenn allein \emph{Flüsse} T\_ij zwischen Systemkomponenten
-betrachtet werden, nicht aber deren zeitliche Strukturierung. Eigenzeiten,
-deren systemische Quelle noch zu identifizieren ist, spielen eine große Rolle
-in der Taktung sowohl biologischer („biologische Uhr“) als auch technischer
-(Taktfrequenzen) Systeme und damit im koordinierten Zusammenspiel solcher
-Systeme.
+Betrachtungen keine Rolle und werden auch im Ansatz in \cite{Ulanowicz2009}
+nicht berücksichtigt, wenn allein \emph{Flüsse} $T_{ij}$ zwischen
+Systemkomponenten betrachtet werden, nicht aber deren zeitliche
+Strukturierung.  Eigenzeiten, deren systemische Quelle noch zu identifizieren
+ist, spielen eine große Rolle in der Taktung sowohl biologischer („biologische
+Uhr“) als auch technischer (Taktfrequenzen) Systeme und damit im koordinierten
+Zusammenspiel solcher Systeme.
 
 \subsection{Autopoiesis}
 
-(Mingers 1989) stellt dar, wie historisch mit dem Begriff
+In \cite{Mingers1989} wird dargestellt, wie historisch mit dem Begriff
 \textbf{Lebendigkeit} versucht wurde, eine Klasse von Systemen näher
 einzugrenzen. Diese Beschreibungsversuche gehen von der epistemischen Annahme
 aus, dass jene Systeme durch ein „geheimnisvolles“ inneres Agens angetrieben
@@ -760,8 +1035,9 @@ auf Modelle mit sehr komplexem (kompliziertem?) Verhalten. Moderne
 Wettermodelle sind noch deutlich umfangreicher, deren Geneseprozess als
 „Fortschreiben bereits vorgefundener Modellvorstellungen“ klar zu erkennen.
 
-Die Beobachtungen von (Elsasser 1981), zitiert in (Ulanowicz 2009) 
-\begin{itemize}
+Die Beobachtungen von Elsasser \cite{Elsasser1981}, zitiert in
+\cite{Ulanowicz2009}
+\begin{itemize}[noitemsep]
 \item Es gibt keine Regeln für die Biologie, die den Kräftegesetzen der Physik
   ähneln, und
 \item Ökosysteme sind voller einzigartiger Events, die nicht mit bekannten
@@ -769,7 +1045,7 @@ Die Beobachtungen von (Elsasser 1981), zitiert in (Ulanowicz 2009)
 \end{itemize}
 erscheinen mit Blick auf das Phänomen „Wetter“ zumindest zweifelhaft,
 da wir es dabei 
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item mit einem komplexen Wechselspiel primär physikalischer Gesetze zu tun
   haben,
 \item die (aus denselben Gründen der kombinatorischen Variantenexplosion wie
@@ -785,8 +1061,8 @@ Input/Output-Ströme getriebenen Dynamik (noch) nicht erfasst sind.
 
 \subsection{Autokatalyse}
 
-Ein weiteres wichtiges Konzept in (Ulanowicz 2009) ist das der
-Autokatalyse. Dieses Konzept spielt auch in der Theorie Dynamischer Systeme
+Ein weiteres wichtiges Konzept in \cite{Ulanowicz2009} ist das der
+Autokatalyse.  Dieses Konzept spielt auch in der Theorie Dynamischer Systeme
 eine wichtige Rolle, etwa als chemische Autokatalyse in der
 \emph{Belousov-Zhabotinski-Reaktion}.  Derartige autokatalytische Prozesse
 spielen im Stoffwechsel „lebender“ Materie eine herausragende Rolle -- von der
@@ -798,26 +1074,26 @@ Prozessen zwischen Zellgruppen (Organen), an deren Vermittlung selbst Zellen
 wenigen Beispielen bereits eine Verschränkung autokatalytischer Vorgänge auf
 verschiedenen Zeitskalen, womit sich die argumentative Einführung in
 Maturana/Varela am Beispiel von Prozessen \emph{innerhalb} einer Zelle in
-(Mingers 1989) als sehr speziell erweist.
+\cite{Mingers1989} als sehr speziell erweist.
 
-Natürlich steht die Frage, ob die genannten Prozesse auf jeder dieser
-Ebenen als „autokatalytisch“ durchgehen. Zumindest im Sinne positiver
-Feedback-Kreisläufe wie in (Ulanowicz 2009) ist dies zu bejahen.
-Allerdings bleiben dort wesentliche Charakteristika autokatalytischer
-Prozesse ausgeblendet, die in der Theorie Dynamischer Systeme eine
-wesentliche Rolle spielen: 
-\begin{itemize}
+Natürlich steht die Frage, ob die genannten Prozesse auf jeder dieser Ebenen
+als „autokatalytisch“ durchgehen. Zumindest im Sinne positiver
+Feedback-Kreisläufe wie in \cite{Ulanowicz2009} ist dies zu bejahen.
+Allerdings bleiben dort wesentliche Charakteristika autokatalytischer Prozesse
+ausgeblendet, die in der Theorie Dynamischer Systeme eine wesentliche Rolle
+spielen:
+\begin{itemize}[noitemsep]
 \item[1.] Autokatalytische Prozesse haben eine \textbf{Eigenzeit} und sind
   damit sowohl Quelle eigener Taktraten als auch Phänomenen der Resonanz und
   Dissonanz gegenüber getakteten Input/Output-Beziehungen unterworfen.
 \item[2.] Positive Feedback-Kreisläufe führen -- für sich genommen -- in der
   Regel zu exponentiellem Wachstum.
-\end{itemize}
+
 Stabilität autokatalytischer Prozesse ist also nur dann zu erklären, wenn auch
 der begrenzende Faktor identifiziert wird, der sich meist aus den
 Input/Output-Beziehungen ergibt, in welche das autokatalytische System
 eingebunden ist. 
-\begin{itemize}
+
 \item[3.] Diese externen Dynamiken, welche das Wachstum autokatalytischer
   Systeme begrenzen, sind oft selbst Teil eines autokatalytischen Systems.
 \end{itemize}
@@ -830,8 +1106,8 @@ Rolle.
 
 Die im Punkt 3 thematisierte Verschränkung von Mikro- und Makroevolution wird
 in der Theorie Dynamischer Systeme intensiv untersucht, insbesondere wenn die
-Zeitskalen der Eigenzeiten von Mikro- und Makrosystem weit auseinander
-liegen. Dann kann auf kleinen Zeitskalen der durch das Makrosystem induzierte
+Zeitskalen der Eigenzeiten von Mikro- und Makrosystem weit auseinander liegen.
+Dann kann auf kleinen Zeit\-skalen der durch das Makrosystem induzierte
 Durchsatz als Input/Output bei der Analyse der Dynamik der Mikrosysteme als
 konstant betrachtet werden.  Umgekehrt kann auf der Makroskala davon
 ausgegangen werden, dass sich Volatilitäten auf der Ebene der Mikrosysteme
@@ -839,18 +1115,15 @@ ausgegangen werden, dass sich Volatilitäten auf der Ebene der Mikrosysteme
 einer Attraktorlage bewegend angesehen werden und dessen Verhalten damit
 „deterministisch“ modelliert werden kann.
 
-\section{Anmerkungen zum Seminar am 26.11.2019}
+\section{Resilienz (Laforet, Lautenschläger)}
 
-Thema: Resilienz (IIRM)
-
-Literatur: (Holling 2000), (Walker 2004),
-
-Zusatzliteratur: (Brand 2007) 
+Literatur: \cite{Holling2000}, \cite{Walker2004}, Zusatzliteratur:
+\cite{Brand2007}
 
 \subsection{Stadt als System}
 
 An dieser Fragestellung ist besonders deutlich zu sehen, was „Wirklichkeit für
-uns als Wirklichkeit im Prozess begrifflicher Erfassung“ bedeutet. Eine
+uns als Wirklichkeit im Prozess begriff\-licher Erfassung“ bedeutet. Eine
 \textbf{konkrete Stadt} ist zunächst eine \emph{Lebenswirklichkeit}, die als
 „Wirklichkeit für uns“ bereits konzeptionell (im Begriff „Stadt“) grob
 abgegrenzt ist. Diese Lebenswirklichkeit wird als strukturiert wahrgenommen,
@@ -859,15 +1132,14 @@ epistemische Annahme ist, sondern auf einer Praxis aufsetzt, die auf der Basis
 bereits vorhandener strukturierter Beschreibungsformen die Wirklichkeit nach
 diesem Vorbild zu strukturieren versucht.
 
-In meinen Anmerkungen zum 19.11. wurden für Systembeschreibungen die folgenden
-\textbf{drei Reduktionsdimensionen} als „Reduktion auf das Wesentliche“
-thematisiert: 
-\begin{itemize}
+Oben wurden für Systembeschreibungen die folgenden \textbf{drei
+  Reduktionsdimensionen} als „Reduktion auf das Wesentliche“ thematisiert:
+\begin{itemize}[noitemsep]
 \item[1.] Abgrenzung des Systems nach außen gegen eine \emph{Umwelt},
   Reduktion dieser Beziehungen auf Input/Output-Beziehungen.
 \item[2.] Abgrenzung des Systems nach innen durch Zusammenfassen von
   Teilbereichen als \emph{Komponenten}, deren Funktionieren auf eine
-  „Verhaltenssteuerung“ über Input/Output-Beziehungen reduziert wird.
+  „Verhaltenssteuerung“ über Input/Output-Be\-ziehungen reduziert wird.
 \item[3.] Reduktion der Beziehungen im System selbst auf „kausal wesentliche“
   Beziehungen.
 \end{itemize}
@@ -904,8 +1176,8 @@ Modellierungen verschiedener Stadtsysteme wird erst möglich, wenn zu einem
 Kontext verschiedener Praxen können die dafür erforderlichen sprachlichen
 Mittel entwickelt werden.
 
-Dies korrespondiert mit einem der zentralen TRIZ-Gesetze der Entwicklung
-Technischer Systeme (GETS), der „Tendenz des Übergangs zum Obersystem“.
+Dies korrespondiert mit einem der TRIZ-Gesetze der Entwicklung Technischer
+Systeme, der \emph{Tendenz des Übergangs zum Obersystem}.
 
 \subsection{System von Systemen}
 
@@ -913,10 +1185,10 @@ In den bisherigen Debatten war der Fokus auf ein genaueres Verständnis des
 Begriffs \emph{System} gerichtet, der als Reduktion von Komplexität in den
 drei oben angeführten Richtungen betrachtet werden kann. Da in diesem
 Verständnis Komponenten eines Systems selbst wieder Systeme sind, liegt die
-Betrachtung eines Systems als „System von Systemen“ nahe, wie es in (Holling
-2001) thematisiert wird. Wesentliches Reduktionskriterium für Beziehungen (3)
-sind in solchen Systemen spezifische Eigenzeiten und Eigenräume wie in den
-Abbildungen 1-3 in (Holling 2001) dargestellt.
+Betrachtung eines Systems als „System von Systemen“ nahe, wie es in
+\cite{Holling2000} thematisiert wird. Wesentliches Reduktionskriterium für
+Beziehungen (3) sind in solchen Systemen spezifische Eigenzeiten und
+Eigenräume wie in den Abbildungen 1--3 in \cite{Holling2000} dargestellt.
 
 Der ebenda für einen solchen epistemischen Prozess geprägte Begriff der
 \textbf{Panarchie} bedarf aber einer weiteren Präzisierung durch Offenlegung
@@ -926,22 +1198,22 @@ Grunde liegen.
 \paragraph{a)}
 Die \textbf{erste epistemische Annahme} betrifft die Auswahl vorgefundener
 Systeme (Systemkomponenten), die zu einem neuen System zusammengefasst
-werden. Dazu heißt es in (Holling 2001:392) „semi-autonomous levels are formed
-from the interactions among a set of variables that share similar speed (and,
-we would add, geometric/spatial attributes)“. Hinzuzufügen aus einer früheren
-Diskussion in unserem Seminar ist der Umstand, dass diese Komponenten darüber
-hinaus in einem „autokatalytischen“, positiven Feedbackverhältnis stehen
-müssen, das allein Quelle von Wachstum und damit Entwicklung sein kann.
-Derartige Verhältnisse werden in anderen Kontexten als \textbf{synergetisch}
-bezeichnet. Die Beschreibung der zentralen Dynamik eines solchen
-synergetischen Verhältnisses (in welchem das Ganze mehr als die Summe seiner
-Teile ist) ergibt sich aus dem \emph{dynamischen Prozess} der Wechselwirkung
-der Systemkomponenten, wie er in den Abbildungen 4 und 5 in (Holling 2001)
-dargestellt ist, während die Systemkomponenten selbst in diese Beschreibung
-allein durch ihre Input/Output-Charakteristika eingehen, die innere Dynamik
-der Komponenten aber, welche die Input/Output-Leistungen garantieren, außer
-Betracht bleibt. Die Systembeschreibung ist damit eine \textbf{Fiktion} im
-Sinne des Gebrauchs dieses Begriffs in der Vorlesung.
+werden. Dazu heißt es in \cite[S. 392]{Holling2000} „semi-autonomous levels
+are formed from the interactions among a set of variables that share similar
+speed (and, we would add, geometric/spatial attributes)“. Hinzuzufügen aus
+einer früheren Diskussion in unserem Seminar ist der Umstand, dass diese
+Komponenten darüber hinaus in einem „autokatalytischen“, positiven
+Feedbackverhältnis stehen müssen, das allein Quelle von Wachstum und damit
+Entwicklung sein kann.  Derartige Verhältnisse werden in anderen Kontexten als
+\textbf{synergetisch} bezeichnet. Die Beschreibung der zentralen Dynamik eines
+solchen synergetischen Verhältnisses (in welchem das Ganze mehr als die Summe
+seiner Teile ist) ergibt sich aus dem \emph{dynamischen Prozess} der
+Wechselwirkung der Systemkomponenten, wie er in den Abbildungen 4 und 5 in
+\cite{Holling2000} dargestellt ist, während die Systemkomponenten selbst in
+diese Beschreibung allein durch ihre Input/Output-Charakteristika eingehen,
+die innere Dynamik der Komponenten aber, welche die Input/Output-Leistungen
+garantieren, außer Betracht bleibt. Die Systembeschreibung ist damit eine
+\textbf{Fiktion} im Sinne des Gebrauchs dieses Begriffs in der Vorlesung.
 
 Die Erklärung der Leistung eines Systems ergibt sich unter diesen
 epistemischen Voraussetzungen vor allem aus dem \emph{Zusammenspiel} der
@@ -1003,23 +1275,24 @@ damit Handlungsräume aktiv gestaltet.
 
 \paragraph{b)}
 Die \textbf{zweite epistemische Annahme} betrifft die Beschreibungsformen der
-Systemdynamik selbst. (Holling 2001) geht von längeren Phasen stabiler
-Entwicklung bis hin zu „konservativem Verhalten“ (Phasen r und K) und kürzeren
-Phasen kompletten Systemumbaus (Phasen Omega und alpha) aus als „normale
-Systementwicklung“, die dort als \textbf{adaptiver Zyklus} bezeichnet wird.
+Systemdynamik selbst. \cite{Holling2000} geht von längeren Phasen stabiler
+Entwicklung bis hin zu „konservativem Verhalten“ (Phasen $r$ und $K$) und
+kürzeren Phasen kompletten Systemumbaus (Phasen $\Omega$ und $\alpha$) aus als
+„normale Systementwicklung“, die dort als \textbf{adaptiver Zyklus} bezeichnet
+wird.
 
 Die genaue beschreibungstechnische Basis bleibt im Dunkeln, die Ausführungen
-in (Walker 2004) weisen darauf hin, dass hier eher auf eine Beschreibung der
-unmittelbaren Bewegung im Phasenraum orientiert wird, die aus irgendwelchen
-Gründen mit \emph{Störungen} (disturbances) aufgeladen ist. Bilder wie die
-Abbildungen 1a und 1b in (Walker 2004) werden allerdings dem Umstand nicht
-gerecht, dass wir grundsätzlich dissipative Prozesse weitab von
-Gleichgewichtslagen beschreiben wollen.  Diese Differenz zwischen „zwei
-Bedeutungen des Resilienzbegriffs“ wird in (Brand 2007) klar
+in \cite{Walker2004} weisen darauf hin, dass hier eher auf eine Beschreibung
+der unmittelbaren Bewegung im Phasenraum orientiert wird, die aus
+irgendwelchen Gründen mit \emph{Störungen} (disturbances) aufgeladen ist.
+Bilder wie die Abbildungen 1a und 1b in \cite{Walker2004} werden allerdings
+dem Umstand nicht gerecht, dass wir grundsätzlich dissipative Prozesse weitab
+von Gleichgewichtslagen beschreiben wollen.  Diese Differenz zwischen „zwei
+Bedeutungen des Resilienzbegriffs“ wird in \cite{Brand2007} klar
 herausgearbeitet. In einem solchen „Kontext zweiter Art“ kann ebenfalls mit
 Begriffen wie „Potenzialbassins“ gearbeitet werden, allerdings nur, wenn die
 systemischen Rückstellkräfte in der Nähe von „Fließgleichgewichten“ -- also
-systemischen Attraktoren - modelliert werden.
+systemischen Attraktoren -- modelliert werden.
 
 Eine solche Modellierung geht epistemisch davon aus, dass die realweltliche
 systemische Dynamik beschreibungstechnisch in einen dominanten „verstandenen“
@@ -1030,24 +1303,24 @@ der Nähe eines Attraktors hält (durch entsprechende Rückstellkräfte, die
 rückstellend wirken). Damit kann in der Systembeschreibung erläutert werden,
 warum sich im System kleine Störungen nicht aufschaukeln, sondern „absorbiert“
 werden. Beim Absorbieren von Störungen bewegt sich der Referenzpunkt des
-Systems auf dem Attraktor, das System „entwickelt sich“ (Phase r), wenn dies
+Systems auf dem Attraktor, das System „entwickelt sich“ (Phase $r$), wenn dies
 die lokalen Bedingungen für den Referenzpunkt auf dem Attraktor zulassen. Ein
-„konservierender Zustand“ (Phase K) tritt ein, wenn die Rückstellkräfte
+„konservierender Zustand“ (Phase $K$) tritt ein, wenn die Rückstellkräfte
 (conservation forces) das System stets auf denselben Referenzpunkt auf dem
 Attraktor zurückführen, etwa, weil auf dem Attraktor eine gewisse
 \emph{Extremlage} erreicht ist. Da das System auf dem Attraktor nur noch
 eingeschränkte Entwicklungsmöglichkeiten in der lokalen Umgebung des
 Referenzpunkts hat, können sich Störungen so weit aufschaukeln, dass der
 Bereich der Wirkung der Rückstellkräfte verlassen wird und das System in einen
-Zustand höherer Dynamik (Phase Omega) übergeht. Im Rahmen eines
+Zustand höherer Dynamik (Phase $\Omega$) übergeht. Im Rahmen eines
 \emph{adaptiven Zyklus} wird allerdings angenommen, dass das System relativ
-rasch zu einem anderen Ort auf dem Attraktor findet und so - ggf. auf Kosten
+rasch zu einem anderen Ort auf dem Attraktor findet und so -- ggf. auf Kosten
 innerer Umbauprozesse in den Systembeziehungen oder in den Systemkomponenten
 -- sich selbst und damit seine nach außen ins Obersystem exportierte
 \emph{Funktion} stabilisiert. Die „Katastrophe“ bleibt lokal begrenzt.
 
 Ähnliche 4-Phasen-Dynamiken (Frühling, Sommer, Herbst, Winter) sind aus der
-Theorie der {K-Wellen} (Kondratjew-Zyklus) bekannt und spielen auch in
+Theorie der \emph{K-Wellen} (Kondratjew-Zyklus) bekannt und spielen auch in
 Schumpeters Ansatz einer „creative destruction“ sowie bei den von T.S. Kuhn
 untersuchten Paradigmenwechseln in der Wissenschaft eine Rolle. Das Verhalten
 kann auch kurz als „evolutionäre Entwicklung des Systems durch revolutionären
@@ -1061,11 +1334,11 @@ Dynamiken von System und Systemkomponenten (bzw.  Obersystem und System), also
 die Beschreibungsform der Verschränkung von Mikro- und Makroevolution auf den
 jeweiligen kurzwelligen (Systemkomponenten) und langwelligen (System) Skalen.
 
-In diesem Punkt können die Modellvorstellungen in (Holling 2001) nicht
+In diesem Punkt können die Modellvorstellungen in \cite{Holling2000} nicht
 überzeugen, da ein weitgehendes Nebeneinander der Dynamiken (Abbildungen
 1-3,6) bzw. nur ein loser Einfluss (Abbildung 7) postuliert wird. Der Ansatz
 der Theorie Dynamischer Systeme geht von einer deutlich intensiveren
-Verschränkung sowohl auf der Ebene der stofflichen Flüsse als auch der
+Verschränkung sowohl auf der Ebene der stoff\-lichen Flüsse als auch der
 Taktraten aus. Beide (sowohl die quantitativen Charakteristika des
 Materiedurchsatzes als auch dessen Taktung) sind wesentliche Charakteristika
 der \textbf{Schnittstelle} zwischen dem System und dessen Komponenten -- in
@@ -1075,26 +1348,27 @@ Input/Output-Charakteristika, welche die innere Dynamik der Komponente
 antreiben. Wir haben damit eine \textbf{vierte Reduktionsdimension}
 identifiziert, die für eine beschreibungstechnische Entkopplung der Dynamiken
 von System und Komponenten von Bedeutung ist. Erst \emph{nach} einer solchen
-Reduktion lassen sich Ebenen von Systemen wie bei (Holling 2011) sinnvoll
+Reduktion lassen sich Ebenen von Systemen wie bei \cite{Holling2000} sinnvoll
 voneinander scheiden, in denen das System auf der nächst höheren Ebene
 angesiedelt ist im Vergleich zu seinen Komponenten.
 
 Holling verweist auf Simons Argumentation, „that each of the levels of a
 dynamic hierarchy serves two functions. One is to conserve and stabilize
 conditions for the faster and smaller levels; the other is to generate and
-test innovations by experiments occuring within a level“ (Holling 2001:393),
-und betont, dass die zweite Funktion die entscheidende für das Funktionieren
-„adaptiver Zyklen“ sei. Die eher anthropomorphe Beschreibung
-(„Experimentieren“) dieser zweiten Funktion habe ich oben auf ein klares
-Verständnis in der Sprache der Beschreibungen des Systemverhaltens relativ zu
-seinem Attraktor zurückgeführt. Mit der ersten Funktion wird behauptet, dass
-jedes System die Kapazität hat, stabilisierend auf die Dynamiken der
-kurzwelligeren Systemkomponenten zu wirken -- dieser Effekt wird in der TDS
-auch als \emph{Versklavungseffekt} bezeichnet. Dies wird allerdings durch die
-„panarchial connections“ (Abbildung 7) konterkatiert, in der nicht nur eine
-Wirkung „remember“ im Sinne dieser „ersten Funktion“ postuliert wird, sondern
-auch eine weitere Funktion „revolt“, mit welcher die Systemkomponenten
-Einfluss auf die Adaptivität des Systems nehmen.
+test innovations by experiments occuring within a level“
+\cite[S. 393]{Holling2000}, und betont, dass die zweite Funktion die
+entscheidende für das Funktionieren „adaptiver Zyklen“ sei. Die eher
+anthropomorphe Beschreibung („Experimentieren“) dieser zweiten Funktion habe
+ich oben auf ein klares Verständnis in der Sprache der Beschreibungen des
+Systemverhaltens relativ zu seinem Attraktor zurückgeführt. Mit der ersten
+Funktion wird behauptet, dass jedes System die Kapazität hat, stabilisierend
+auf die Dynamiken der kurzwelligeren Systemkomponenten zu wirken -- dieser
+Effekt wird in der TDS auch als \emph{Versklavungseffekt} bezeichnet. Dies
+wird allerdings durch die „panarchial connections“ (Abbildung 7)
+konterkatiert, in der nicht nur eine Wirkung „remember“ im Sinne dieser
+„ersten Funktion“ postuliert wird, sondern auch eine weitere Funktion
+„revolt“, mit welcher die Systemkomponenten Einfluss auf die Adaptivität des
+Systems nehmen.
 
 Die epistemische Kausalität der Beschreibungslogik des Ansatzes „System von
 Systemen“ geht von längerwelligen großräumigeren Dynamiken zu kurzwelligeren
@@ -1111,7 +1385,7 @@ Wirtschaftsweise planetar verursacht, in den Griff zu bekommen.
 
 \subsection{Resilienz und Panarchie}
 
-(Brand 2007) betont, dass der Begriff \textbf{Resilienz} in den Debatten
+\cite{Brand2007} betont, dass der Begriff \textbf{Resilienz} in den Debatten
 vielfach überladen ist. Im Kontext der Betrachtung dissipativer Systeme („the
 second kind of resilience to which we refer in this text“ -- Brand 2007)
 werden allein 10 Ansätze aus der Literatur aufgelistet, mit denen Resilienz
@@ -1127,11 +1401,11 @@ Resilienz ist dabei im Sinne von „Widerständigkeit“ zu verstehen, die
 einerseits die Fähigkeit zu relativer Stabilität, aber andererseits die
 Fähigkeit auch zu radikalem Umbau umfasst, ohne die Qualität der
 Input/Output-Beziehungen in der eigenen Umwelt sowohl quantitativ als auch
-qualitativ in Frage zu stellen. So heißt es in (Walker 2004) „resilience is
-the capacity of a system to absorb disturbance and reorganize while undergoing
-change so as to still retain essentially the same function, structure,
-identity, and feedbacks.“ Resilienz ist in diesem Sinne also die (zunächst
-qualitative) \emph{Fähigkeit} eines Systems, seine
+qualitativ in Frage zu stellen. So heißt es in \cite{Walker2004} „resilience
+is the capacity of a system to absorb disturbance and reorganize while
+undergoing change so as to still retain essentially the same function,
+structure, identity, and feedbacks.“ Resilienz ist in diesem Sinne also die
+(zunächst qualitative) \emph{Fähigkeit} eines Systems, seine
 Input/Output-Charakteristika als funktionale Rolle in Obersystemen auch unter
 Bedingungen eines möglichen systeminternen Umbaus beizubehalten. Eine halbe
 Seite vorher wurde noch eine „major distinction between resilience and
@@ -1146,7 +1420,7 @@ Zunächst steht allerdings die Frage, ob Resilienz eine allein qualitativ
 fassbare \emph{Fähigkeit} oder doch eine, dann auch quantifizierbare
 „Kapazität“ ist. Für Holling sind es zunächst die drei zu quantisierenden
 Eigenschaften adaptiver Zyklen (also von Systemen in unserem Verständnis)
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item inhärentes Änderungspotenzial (wealth),
 \item interne Kontrollfähigkeit (controllability) und
 \item adaptive Kapazität oder Resilienz (adaptive capacity),
@@ -1158,13 +1432,13 @@ zugeordnet werden kann.
 Wir hatten bereits oben gesehen, dass derart generalisierende „emergente“
 Parameter aus Sicht der TDS wenig aussagefähig sind, wenn nicht das Potenzial
 der lokalen Dynamik um den Referenzpunkt des aktuellen Systemzustands auf dem
-Attraktor mit in die Betrachtung einbezogen wird. Das geschieht in (Holling
-2001) mit einem 4-Phasen-Modell, womit „Widerständigkeit“ aber schon abhängig
-vom aktuellen Systemzustand wird. Eine Quantifizierung von Widerständigkeit in
-einem solchen Verständnis ist insbesondere nach einer Reorganisation des
-Systems in einer Alpha-Phase vollkommen neu zu bestimmen, da sich der
-Referenzpunkt des Systems auf dem Attraktor dann weit entfernt vom
-ursprünglichen Referenzpunkt befindet.
+Attraktor mit in die Betrachtung einbezogen wird. Das geschieht in
+\cite{Holling2000} mit einem 4-Phasen-Modell, womit „Widerständigkeit“ aber
+schon abhängig vom aktuellen Systemzustand wird. Eine Quantifizierung von
+Widerständigkeit in einem solchen Verständnis ist insbesondere nach einer
+Reorganisation des Systems in einer $\alpha$-Phase vollkommen neu zu
+bestimmen, da sich der Referenzpunkt des Systems auf dem Attraktor dann weit
+entfernt vom ursprünglichen Referenzpunkt befindet.
 
 Fasst man Resilienz als substantiviertes Adjektiv, so steht mit aller Schärfe
 die einfache Frage, \emph{wovon} es denn eine Eigenschaft sei.  Um sich dieser
@@ -1177,11 +1451,11 @@ gesamte Panarchie umfasst sowie der Frage, in welchem Verhältnis die hier
 möglicherweise synonym gebrauchten Begriffe resilience und substainability
 stehen. Zur Klarheit der Begriffe bezeichne ich im Weiteren diese
 Abstraktionsebene der Betrachtungen, die etwa in den Abbildungen 7 und 9 in
-(Holling 2001) eine Rolle spielt, als \emph{Panarchie} -- in (Brand 2007) auch
-als \emph{Metasystem} bezeichnet - und reserviere die Bezeichnung
-\emph{System} für die bisher eingenommene Abstraktionsebene, in der „adaptiver
-Zyklus“ für die Beschreibung der Dynamik dieses Systems auf einer hohen
-Abstraktionsebene steht.
+\cite{Holling2000} eine Rolle spielt, als \emph{Panarchie} -- in
+\cite{Brand2007} auch als \emph{Metasystem} bezeichnet -- und reserviere die
+Bezeichnung \emph{System} für die bisher eingenommene Abstraktionsebene, in
+der „adaptiver Zyklus“ für die Beschreibung der Dynamik dieses Systems auf
+einer hohen Abstraktionsebene steht.
 
 Wie bereits oben ausgeführt ist eine solche \emph{Panarchie} als
 Beschreibungsform ein Zusammenspiel von Systembeschreibungen auf verschiedenen
@@ -1190,33 +1464,33 @@ Beschreibungsform ein Zusammenspiel von Systembeschreibungen auf verschiedenen
 verbunden sind, deren epistemische Charakteristik sich in der Dichotomie von
 Spezifikation und Implementierung klassischer API-Strukturen der Informatik
 wiederfindet. Damit ist aber eine Panarchie keineswegs ein „nested set of
-adaptive cycles“, sondern - wie bereits oben genauer erläutert -- eine
+adaptive cycles“, sondern -- wie bereits oben genauer erläutert -- eine
 Beschreibungsstruktur ineinander greifender adaptiver Zyklen, die nach
 demselben epistemischen Reduktionsschema rekursiv ausgeführt sind und auch zu
 einer realweltlichen Strukturierung führen, wenn kooperative Subjekte diese
 Beschreibungsformen als Basis ihrer Handlungsvollzüge nehmen.
 
-Entsprechend werden in (Walker 2004) vier „crucial aspects of
-resilience“ genannt: 
-\begin{itemize}
-\item Latitude: Wie weit sind kritische Punkte (threshold) voneinander
+Entsprechend werden in \cite{Walker2004} vier „crucial aspects of resilience“
+genannt:
+\begin{itemize}[noitemsep]
+\item \emph{Latitude:} Wie weit sind kritische Punkte (threshold) voneinander
   entfernt?
-\item Resistance: Wie „widerständig“ ist ein System gegen Veränderung, wie
-  „schnell“ bewegt es sich im Phasenraum?
-\item Precariousness: Wie nahe ist der Systemzustand am nächsten kritischen
-  Punkt?
-\item Panarchy: Welche „cross-scale interactions“ haben Einfluss auf das
-  System?
+\item \emph{Resistance:} Wie „widerständig“ ist ein System gegen Veränderung,
+  wie „schnell“ bewegt es sich im Phasenraum?
+\item \emph{Precariousness:} Wie nahe ist der Systemzustand am nächsten
+  kritischen Punkt?
+\item \emph{Panarchy:} Welche „cross-scale interactions“ haben Einfluss auf
+  das System?
 \end{itemize}
 Diese Begriffe lassen sich in der TDS deutlicher in der Sprache systemischer
 Eigenzeiten und Eigenräume fassen.
 
-Mit den beiden Pfeilen „revolt“ und „remember“ in Abbildung 7 von (Holling
-2001) wird suggeriert und auf S. 402 explizit postuliert, dass der Begriff
-Resilienz überhaupt nur unter Betrachtung von drei konsekutiven „Ebenen“ einer
-Panarchie gefasst werden kann (was im Übrigen sehr genau mit dem
-9-Felder-Ansatz von TRIZ zusammenpasst). Das ist allerdings unzutreffend, da
-„revolt“ und „remember“ auch als nichtfunktionale Eigenschaften der
+Mit den beiden Pfeilen „revolt“ und „remember“ in Abbildung 7 von
+\cite{Holling2000} wird suggeriert und auf S. 402 explizit postuliert, dass
+der Begriff Resilienz überhaupt nur unter Betrachtung von drei konsekutiven
+„Ebenen“ einer Panarchie gefasst werden kann (was im Übrigen sehr genau mit
+dem Systemoperator von TRIZ zusammenpasst). Das ist allerdings unzutreffend,
+da „revolt“ und „remember“ auch als nichtfunktionale Eigenschaften der
 Schnittstellen zwischen den Ebenen als Teil einer sinnvoll ausgeführten
 Reduktion entlang der oben thematisierten vierten Reduktionsdimension und
 damit als Teil der Systembeschreibung selbst gefasst werden können (zu der ja
@@ -1226,30 +1500,22 @@ Schnittstellen der Systemkomponenten gehört).
 Die weiteren Fragen in den drei Aufsätzen, in welchem Umfang Resilienz durch
 konkrete menschliche Akteure praktisch steuernd beeinflusst werden kann, lässt
 sich erst auf der Basis eines ausreichend entfalteten Technikbegriffs sinnvoll
-diskutieren. In (Holling 2001) werden drei zusätzliche „features“ Vorausschau,
-Kommunikation und Technologie aufgeführt, mit denen „human systems“ (was das
-auch immer ist, ich bevorzuge den Begriff „kooperative Subjekte“, denn nur
-solche sind handlungsfähig) ihren Einfluss auf die Frage der Resilienz von
-Systemen erhöhen können, insbesondere auf „Charakter und Lage der Variabilität
-innerhalb der Panarchie“, um damit „das Potenzial der Panarchie selbst
-drastisch zu erhöhen“ (S. 401). Damit wandert der Resilienz-Begriff (falls es
-sich noch immer um diesen handelt) von der Ebene der Systeme zum „Metasystem
-Panarchie“. Die drei neuen „features“ liegen allerdings irgendwie quer zu den
-drei Dimensionen „gesellschaftliches Verfahrenswissen“, „institutionalisierte
-Verfahrensweisen“ und „privates Verfahrenskönnen“ des Technikbegriffs der
-Vorlesung. Auf jeden Fall sind sie Teil eines weiteren einer Beschreibung
-zugänglichen Systems -- des Systems der Reproduktion des Wissens der
-Menschheit. Diese Fragen werden in drei weiteren Aufsätzen (Stollorz 2011),
-(Helfrich 2011), (Dobusch 2011) aufgegriffen.
-
-\begin{itemize}[noitemsep]
-\item Volker Stollorz. Elinor Ostrom und die Wiederentdeckung der Allmende.
-\item Silke Helfrich, Felix Stein. Was sind Gemeingüter?
-\item Leonard Dobusch, Sigrid Quack. Auf dem Weg zu einer Wissensallmende?
-\end{itemize}
-
-Alles in der Publikation „Gemeingüter“ der Bundeszentrale für politische
-Bildung. Aus Politik und Zeitgeschichte, 28-30/2011.
+diskutieren. In \cite{Holling2000} werden drei zusätzliche „features“
+Vorausschau, Kommunikation und Technologie aufgeführt, mit denen „human
+systems“ (was das auch immer ist, ich bevorzuge den Begriff „kooperative
+Subjekte“, denn nur solche sind handlungsfähig) ihren Einfluss auf die Frage
+der Resilienz von Systemen erhöhen können, insbesondere auf „Charakter und
+Lage der Variabilität innerhalb der Panarchie“, um damit „das Potenzial der
+Panarchie selbst drastisch zu erhöhen“ (S. 401). Damit wandert der
+Resilienz-Begriff (falls es sich noch immer um diesen handelt) von der Ebene
+der Systeme zum „Metasystem Panarchie“. Die drei neuen „features“ liegen
+allerdings irgendwie quer zu den drei Dimensionen „gesellschaftliches
+Verfahrenswissen“, „institutionalisierte Verfahrensweisen“ und „privates
+Verfahrenskönnen“ des Technikbegriffs der Vorlesung. Auf jeden Fall sind sie
+Teil eines weiteren einer Beschreibung zugänglichen Systems -- des Systems der
+Reproduktion des Wissens der Menschheit. Diese Fragen werden in drei weiteren
+Aufsätzen \cite{Stollorz2011}, \cite{Helfrich2011}, \cite{Dobusch2011}
+aufgegriffen.
 
 \section{ Anmerkungen zum Seminar am 03.12.2019}
 
@@ -1359,7 +1625,7 @@ Derartige Systeme spielen im TRIZ-Kontext als \emph{Technische Systeme}
 (klassische TRIZ-Terminologie), \emph{Engineering Systems} oder \emph{man-made
   systems} (Souchkov 2014) eine zentrale Rolle, wobei Menschen hier sowohl als
 Subjekte des Handelns als auch als Objekte der Systemdynamik in Erscheinung
-treten. Diese drei begrifflichen Ansätze nehmen dabei ihrerseits Reduktionen
+treten. Diese drei begriff\-lichen Ansätze nehmen dabei ihrerseits Reduktionen
 der Rolle menschlichen Handelns auf unterschiedliche Weise vor.
 
 Der Ansatz „Technische Systeme“ -- zusammen mit dem grundlegenden TRIZ-Prinzip
@@ -1396,21 +1662,21 @@ Verhältnisses von System und Obersystem(en), übernimmt, in der Betrachtung
 systemübergreifender ingenieurtechnischer Praxen aber noch
 Entfaltungsmöglichkeiten hat.
 
-Der Ansatz „man-made systems“ schießt begrifflich über das Ziel hinaus, da er
--- wenigstens in der unmittelbaren Bedeutung der Worte - die naturgesetzliche
-Kontextualisierung der Bedingtheiten menschlichen Handelns bei einer
-„Reduktion auf das Wesentliche“ ausblendet. In dieser Beschränkung steht ein
-solcher Ansatz aber in eigentümlicher Nähe sowohl zu den Bemühungen und die
-Formierung eines Konzepts von \emph{Resilienz} als auch zu den Konzepten, die
-in (Ashby 1958) und (Boisot 2011) für eine Systembewertung auf der Basis rein
-quantitativer Verhältnisse von Störungsdruck und Reaktionsvermögen diskutiert
-wurden.  Auf diesem Hintergrund sind auch die beiden Aufsätze (Ostrom 2007)
-und (Anderies 2004) zu bewerten. In beiden Aufsätzen geht es darum, recht
-einfach gehaltenen Ansätze agenten-basierter Systeme, wie etwa in (Holland
-2006) zu finden, mit der realen Komplexität institutionalisierter menschlicher
-Handlungsvollzüge zu konfrontieren.  In (Ostrom 2007) wird dazu ein komplexes
-\emph{System von Parametern} zur Bewertung sozial-ökologischer Systeme
-vorgeschlagen.
+Der Ansatz „man-made systems“ schießt begriff\-lich über das Ziel hinaus, da
+er -- wenigstens in der unmittelbaren Bedeutung der Worte - die
+naturgesetzliche Kontextualisierung der Bedingtheiten menschlichen Handelns
+bei einer „Reduktion auf das Wesentliche“ ausblendet. In dieser Beschränkung
+steht ein solcher Ansatz aber in eigentümlicher Nähe sowohl zu den Bemühungen
+und die Formierung eines Konzepts von \emph{Resilienz} als auch zu den
+Konzepten, die in (Ashby 1958) und (Boisot 2011) für eine Systembewertung auf
+der Basis rein quantitativer Verhältnisse von Störungsdruck und
+Reaktionsvermögen diskutiert wurden.  Auf diesem Hintergrund sind auch die
+beiden Aufsätze (Ostrom 2007) und (Anderies 2004) zu bewerten. In beiden
+Aufsätzen geht es darum, recht einfach gehaltenen Ansätze agenten-basierter
+Systeme, wie etwa in (Holland 2006) zu finden, mit der realen Komplexität
+institutionalisierter menschlicher Handlungsvollzüge zu konfrontieren.  In
+(Ostrom 2007) wird dazu ein komplexes \emph{System von Parametern} zur
+Bewertung sozial-ökologischer Systeme vorgeschlagen.
 
 In (Anderies 2004) wird ein \emph{grobes Modell} entwickelt, auf das sich das
 Verhältnis von Ressourcen und Ressourcennutzern im Kontext einer Infrastruktur
@@ -1540,7 +1806,7 @@ Zeit-, Raum- und Kausalhorizonte eine Rolle spielen. Insbesondere kann das
 wissenschaftlich-technische \emph{Beschreibungsmodell} als Basis der
 Handlungsvollzüge mehr den ökonomischen Wunschvorstellungen folgen als den
 realweltlichen kausalen Zusammenhängen und damit zum Zusammenbruch der
-realweltlichen Reproduktionsstrukturen führen (Omega-Phase des adaptiven
+realweltlichen Reproduktionsstrukturen führen ($\Omega$-Phase des adaptiven
 Zyklus). Da die Wirkung jenseits einer Triggerschranke sehr schnell an Fahrt
 gewinnt, spielt vorher oft der Aufbau einer ideologischen \emph{Scheinwelt}
 eine Rolle, die trotz entsprechender realweltlicher Signale eigene interne
@@ -1647,7 +1913,7 @@ kombinierten Frameworks und sechs Probleme wurden eingekreist.
   überhaupt ist; ein Prototyp, eine Verfahrensweise, eine Idee?
 \item Im 4. Fall ist nicht klar, warum die $y$-Achse fehlt und von Symbiose
   geredet wird.
-\item Die begriffliche Verwendung von Transition und Transformation in ihrer
+\item Die begriff\-liche Verwendung von Transition und Transformation in ihrer
   Synonymisierung ist nicht klar. In anderen Wissenschaftsdisziplinen wird
   Transition für eine Veränderung mit Erhaltung von Systemkomponenten
   verwendet und Transformation für eine echte vollständige Änderung aller
@@ -1677,8 +1943,8 @@ Systemtheorie finden.
 
 In (Geels 2007) werden eine Reihe von Transitionspfaden beschrieben, die in
 Umbauphasen von Systemen beschritten werden. Damit wird versucht - ohne dies
-allerdings zu explizieren -- etwas Struktur in die in (Holling 2001)
-weitgehend unverstandene Omega-alpha-Umbauphase zu bringen. Auch (Geels 2007)
+allerdings zu explizieren -- etwas Struktur in die in \cite{Holling2000}
+weitgehend unverstandene $\Omega$-$\alpha$-Umbauphase zu bringen. Auch (Geels 2007)
 bleibt dabei weitgehend auf einer phänomenologischen Ebene stehen und
 entwickelt wenig Konzeptionelles, gesellschaftliche, ökonomische und
 technische Entwicklungen zusammen zu denken. Der Aufsatz geht auch nicht so
@@ -1690,8 +1956,8 @@ Systemumbau dadurch gegeben, dass die \emph{lokalen} Entwicklungsmöglichkeiten
 auf dem Systemattraktor ausgeschöpft sind, weil sich das System durch ständig
 fortschreitende „Idealisierung“ in ein lokales Extremum des Attraktors
 manövriert hat (Hollings K-Phase), in dem sich externe Störungen aufschaukeln
-und das System in einen instabilen Zustand treiben (Hollings Omega-Phase), aus
-dem durch Umorganisation (Hollings alpha-Phase) ein neuer, vom ursprünglichen
+und das System in einen instabilen Zustand treiben (Hollings $\Omega$-Phase), aus
+dem durch Umorganisation (Hollings $\alpha$-Phase) ein neuer, vom ursprünglichen
 weit entfernter Referenzpunkt auf dem Systemattraktor eingenommen wird.
 
 Ein solcher Systemumbau übt einen größeren Stress auf die mit dem System
@@ -1715,7 +1981,7 @@ deterministisch oder wenigstens stochastisch, da sich die Störungen des
 schnellen Systems auf der Zeitskala des langsameren weitgehend ausmitteln.
 
 Betrachten wir aus einer solchen Perspektive die Argumente aus (Geels 2007)
-und (Holling 2001), so fällt zunächst der stark agentenbasierte Ansatz der
+und \cite{Holling2000}, so fällt zunächst der stark agentenbasierte Ansatz der
 ersteren Arbeit auf. Agenten gibt es auch bei Holling, siehe etwa (Holling
 2001: Tab. 2), doch setzt (Geels 2007) mit „agency“, „regime“, „organisation“
 und „institution“ den Fokus deutlich anders. Mit allen vier Begriffen, die
@@ -1816,12 +2082,12 @@ jenseits der K-Phase. Das System kann nur durch Reorganisation der Beziehungen
 reagieren. Die Autoren sind weitgehend ratlos, vermischen allerdings auch zwei
 Modi:
 \begin{enumerate}[noitemsep]
-\item Das System ist in der alpha-Phase eigener Umbauprozesse.
-\item Das System ist im Übergang in die Omega-Phase.
+\item Das System ist in der $\alpha$-Phase eigener Umbauprozesse.
+\item Das System ist im Übergang in die $\Omega$-Phase.
 \end{enumerate}
 
 Das Beispiel (Dänische Hygiene-Transition) ist klar eines für die Dynamik in
-der Omega-Phase, dem auf der TRIZ-Seite ein Übergang von einer S-Kurve auf
+der $\Omega$-Phase, dem auf der TRIZ-Seite ein Übergang von einer S-Kurve auf
 eine andere entspricht. Wie das geht, versteht man dort allerdings auch
 nicht. Das Beispiel folgt \textbf{Modell $\Omega_1$:} Das System wird
 reorganisiert, die Funktion nach außen bleibt erhalten bzw. wird verbessert.
@@ -1849,10 +2115,10 @@ da das produktive Ausrollen der neuen Technologien in größerem Umfang auch
 größere Mengen vorgeschossenes Kapital erfordert.
 
 \paragraph{P4:}
-Komponenten in Omega-Phase treffen auf ein System in alpha-Phase. Eigentlich
+Komponenten in $\Omega$-Phase treffen auf ein System in $\alpha$-Phase. Eigentlich
 wird die Transition aber aus einer kausal tiefer liegenden Technologieebene
 getriggert, die Auswirkungen auf \emph{viele} Komponenten hat und diese in
-Omega-Phase bringt, was jedoch vom System in alpha-Phase (und damit in
+$\Omega$-Phase bringt, was jedoch vom System in $\alpha$-Phase (und damit in
 besonders flexibler r-Phase) aufgefangen werden kann. So auch das Beispiel.
 
 \paragraph{P5:}
@@ -2119,7 +2385,7 @@ Spulenentwicklungen gezeigt, dass auch in der TRIZ-Welt Analogielösungen an
 konkrete Parameterbereiche gebunden sind, deren Grenzen „disruptive“ Lösungen
 einfordern, die nur durch Übergang zu anderen physikalisch-technischen
 Prinzipien möglich sind. Wir finden also auch in diesem Bereich die r-, K-,
-Omega- und alpha-Phasen aus (Holling 2001), wobei TRIZ vor allem in der
+$\Omega$- und $\alpha$-Phasen aus \cite{Holling2000}, wobei TRIZ vor allem in der
 Bewältigung von Übergängen seine analytischen Stärken ausspielt, in denen
 wohlfeile Kontexte zu transzendieren sind. TRIZ bietet hierfür ein größeres
 Arsenal von abstrakten Trends, Mustern und Standards an, um Kontexte gezielt
@@ -2145,7 +2411,7 @@ Gleichwohl können die vier Stadien „einfach“, „kompliziert“, „komplex
 „chaotisch“ durchaus verwendet werden, um die Kopplung von
 Strukturierungsprozessen in System und Obersystem zu besprechen. Der Hinweis
 „natural forces act against resilience“ (Mann 2019:Fig. 3) entspricht dem
-Übergang von der r- in die K-Phase in (Holling 2001) und wird auch ähnlich
+Übergang von der r- in die K-Phase in \cite{Holling2000} und wird auch ähnlich
 begründet: Eine \emph{junge} Technologie ist zunächst wenig verstanden und
 deshalb „komplex“. Im Zuge der weiteren Entwicklung werden nicht nur die
 Beschreibungsformen präziser, sondern auch die institutionalisierten
@@ -2213,7 +2479,7 @@ sei. In allen Quellen wird auf die Anschauung verwiesen, wobei wir mit der
 überdeckt. Allerdings kommt selbst in jenen Betrachtungen die im Kommentar zu
 (Mann 2019) aufgeworfene Frage nicht vor, ob \emph{Managementtechniken} auch
 in Systemen technischer Art erfasst werden können oder hier mit anderen
-Begrifflichkeiten zu operieren sei.  Der Rückzug auf „ingenieur-technische
+Begriff\-lichkeiten zu operieren sei.  Der Rückzug auf „ingenieur-technische
 Systeme“ wie in (TESE) verschiebt das Problem nur zur Frage, ob modernes
 Management- und Verwaltungshandeln nicht auch eine Ingenieurstätigkeit sei.
 Von den Anforderungen an spezifische Kenntnisse theoretischer Grundlagen,
@@ -2270,7 +2536,7 @@ Hierarchisierung der dort formulierten Gesetze in
 \end{enumerate}
 wobei die formulierten Punkte eher einen metaphysischen Charakter der
 Kontextualisierung einer Betrachtungsperspektive haben, und somit doch zur
-Schärfung der Begrifflichkeit eines „technischen Systems“ beitragen,
+Schärfung der Begriff\-lichkeit eines „technischen Systems“ beitragen,
 insbesondere durch die „methodologischen Muster“ 2.1-2.4.
 
 Diese Hierarchisierung reflektiert in gewisser Weise die Komplexität von
@@ -2423,6 +2689,9 @@ Praktische Konsequenzen eines solchen Übergangs zum „Primat des Politischen�
 \bibitem{Dobusch2011} Leonhard Dobusch, Sigrid Quack (2011). Auf dem Weg zu
   einer Wissensallmende? Argumente Politik und Zeitgeschichte 28--30,
   S. 41--46.
+\bibitem{Elsasser1981} W.M. Elsasser (1981). A form of logic suited for
+  biology? In Robert Rosen (ed.). Progress in Theoretical Biology, Volume 6.
+  Academic Press, p. 23--62.
 \bibitem{Foxon2009} T.J. Foxon, M.S. Reed, L.C. Stringer (2009). Governing
   long‐term social–ecological change: what can the adaptive management and
   transition management approaches learn from each other? Environmental Policy
@@ -2441,6 +2710,8 @@ Praktische Konsequenzen eines solchen Übergangs zum „Primat des Politischen�
   Online, 12.11.2012.
 \bibitem{Graebe2019} Hans-Gert Gräbe (2019). Zur Entwicklung Technischer
   Systeme.  Manuskript. \\ \url{https://wumm-project.github.io/Texts.html}
+\bibitem{Helfrich2011} Silke Helfrich, Felix Stein. Was sind Gemeingüter?
+  Argumente Politik und Zeitgeschichte 28--30, 9-15.
 \bibitem{Holland2006} John H. Holland (2006). Studying complex adaptive
   systems. In: Journal of systems science and complexity, 19 (1),
   1–8.\\ \url{https://link.springer.com/article/10.1007/s11424-006-0001-z}
@@ -2450,7 +2721,7 @@ Praktische Konsequenzen eines solchen Übergangs zum „Primat des Politischen�
 \bibitem{Jacobasch2019} Gisela Jacobasch (2019). Bienensterben -- Ursachen und
   Folgen.  Leibniz Online 37 (2019).
   \url{https://leibnizsozietaet.de/bienensterben-ursachen-und-folgen/}
-\bibitem{Janich 2006} Peter Janich (2006). Was ist Information?
+\bibitem{Janich2006} Peter Janich (2006). Was ist Information?
   Frankfurt/Main.
 \bibitem{Jantsch1992} Erich Jantsch (1992). Die Selbstorganisation des
   Universums. Vom Urknall zum menschlichen Geist.  Hanser, München.
@@ -2501,12 +2772,13 @@ Praktische Konsequenzen eines solchen Übergangs zum „Primat des Politischen�
   Stuttgart, 2. Auflage.
 \bibitem{Stollorz2011} Volker Stollorz (2011). Elinor Ostrom und die
   Wiederentdeckung der Allmende. Argumente Politik und Zeitgeschichte 28--30,
-  S. 3--15.
+  S. 3--8.
 \bibitem{Szyperski2002} Clemens Szyperski (2002). Component Software.
   2. Auf\-lage.  Pearson Education.
 \bibitem{Ulanowicz2009} Robert E. Ulanowicz (2009). The dual nature of
   ecosystem dynamics.  In: Ecological Modelling 220 (2009),
   1886–1892.\\ \url{https://people.clas.ufl.edu/ulan/files/Dual.pdf}
+\bibitem{VDITechnik} VDI-Norm „Technik“. 
 \bibitem{VDW2005} VDW -- Verein Deutscher Wissenschaftler (2005). „We have to
   learn to think in a new way“. Potsdamer Denkschrift.
 \bibitem{Vernadsky1938} V.I. Vernadsky(1997, Original 1936--38). Scientific
