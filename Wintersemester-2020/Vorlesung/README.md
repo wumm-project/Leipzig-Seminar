@@ -81,14 +81,15 @@ __Lernziele__:
   widersprüchlichen Systemeigenschaften
 
 __Folien__:
-* [Technische Systeme](Folien-20201110.pdf)
+* [Modellierung widersprüchlicher Anforderungen in der
+  TRIZ](Folien-20201110.pdf)
 
 ## 19.11.: Modellierung natürlicher Systeme und die Theorie Offener Systeme
 
 __Literaturliste__:
 * Hans-Gert Gräbe (2020).  Zum Systembegriff in der Theorie dynamischer
-  Systeme.
-  * [TDS.md](TDS.md)
+  Systeme. Siehe dazu die Wikipedia-Seiten, die unter [TDS.md](TDS.md)
+  gelistet sind.
   
 __Zusatzliteratur__:
 * Ludwig von Bertalanffy (1950). An outline of General System Theory, The
@@ -102,13 +103,17 @@ __Zusatzliteratur__:
   München, Kap. 3-5.
 
 __Lernziele__:
-* Systeme und "Umwelt". Immersiver und submersiver Systembegriff
-* Begriff des _offenen Systems_. Durchsatz und Struktur. Das Beispiel
-  Bénardzelle.
+* Entwicklung eines Systems. Ideallinie und Reallinie der Entwicklung.
+* Der Grundansatz der Theorie Dynamischer Systeme
 * Dynamik in offenen Systemen. Grenzzyklen und Attraktoren
 * Einfache Beschreibung, komplexer Vollzug. Deterministisches Chaos
+* Offene Systeme. Durchsatz und Struktur. Das Beispiel Bénardzelle.
 * Koevolution auf Mikro- und Makroebene. "Versklavungseffekt"
 * Dissipative Strukturen und Fließgleichgewichte.
+* Systeme und "Umwelt". Immersiver und submersiver Systembegriff
+
+__Folien__:
+* [Systeme und Entwicklung](Systementwicklung.pdf)
 
 ## 26.11.: Nachhaltigkeit und Entwicklungszyklen von Systemen
 

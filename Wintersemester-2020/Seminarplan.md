@@ -71,7 +71,7 @@ Diskussionsleitung: Hans-Gert Gräbe
 
 (Zobel 2007, Abschnitt 3.3.3), (Zobel 2020, Abschnitt 3.4)
 
-Diskussionsleitung: Karim Rakia
+Diskussionsleitung: Karim Rakia, Sabine Lautenschläger
 
 ## 01.12. Evolution Technischer Systeme bei G.S. Altschuller
 
@@ -100,6 +100,8 @@ Diskussionsleitung: Immanuel Thoke
 ## 12.01. Evolutionsbäume Technischer Systeme bei N.A. Shpakovsky
 
 (Shpakovsky 2016)
+
+Diskussionsleitung: Tom Strempel
 
 ## 19.01. Evolution von allgemeinen Systemen bei Goldovsky 1983
 
