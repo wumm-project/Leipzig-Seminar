@@ -50,8 +50,8 @@
 
 Die Konzepte „Gesetz“, „Gesetzmäßigkeit“, „Trend“ und „Entwicklungslinie“
 werden in der TRIZ-Literatur im Zusammenhang mit Untersuchungen der Evolution
-Technischer Systeme sehr heterogen gebraucht. Das soll auf eine etwas solidere Basis gestellt
-werden.
+Technischer Systeme sehr heterogen gebraucht. Das soll auf eine etwas solidere
+Basis gestellt werden.
 
 Diskussionsleitung: Ken Kleemann
 

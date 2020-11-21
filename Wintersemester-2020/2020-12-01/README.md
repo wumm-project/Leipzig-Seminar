@@ -2,7 +2,7 @@
 
 __Thema:__ Evolution Technischer Systeme bei G.S. Altschuller
 
-Diskussionsleitung: Nadine Schumann, Daniel Huthmann
+Diskussionsleitung: Nadine Schumann
 
 ## Ankündigung
 
