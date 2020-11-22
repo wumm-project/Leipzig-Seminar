@@ -17,12 +17,13 @@ Literatur:
   Engineering System Evolution (TESE).  TRIZ Consulting Group. ISBN
   9783000598463.
 
-## Kommentierter Chat (noch zu kommentieren)
+## Kommentierter Chat
 
 ### Naturwüchsigkeit
 
 [09:30] Nadine : Was bedeutet Naturwüchsigkeit in Bezug auf Technik? Welches
-Naturverständnis steht dahinter?
+Naturverständnis steht dahinter? als Metapher? für Black box. ok, und Natur
+ist auch Black Box?
 * Diesen Begriff habe ich nur verwendet, um diese Seite des im TESE-Buch
   verfolgten Ansatzes deutlich zu machen - eine Theorie des "Technology Pull"
   und "Market Push" geht von einer unternehmerischen Perspektive aus, in der
@@ -41,13 +42,9 @@ Naturverständnis steht dahinter?
   über viele Jahre defizitär bleiben dürfen. So ein Ansatz wird im TESE-Buch
   aber an keiner Stelle systematisch entwickelt. In meinem Aufsatz schon.
 
-[09:52] Nadine : als Metapher?
-[09:52] Nadine : für Black box
-[09:53] Nadine : ok, und Natur ist auch Black Box?
-[09:53] Nadine : ja genau
 
-[09:55] Daniel : die Umwelt/Natur ist auch nicht zu einem technischen System
-gleichzusetzen
+[09:55] Daniel : die Umwelt/Natur ist auch nicht einem technischen System
+gleichzusetzen.
 * Das ist ein großes Problem, weil "die Umwelt" in meinem Ansatz (einer
   Theorie Technischer Systeme) nur als "Welt technischer Systeme" vorkommen
   kann (andere Beschreibungsmittel werden - zunächst - nicht entwickelt).  Man
@@ -69,11 +66,12 @@ gleichzusetzen
 gleichgesetzt werden mit der Entwicklung eines technischen Systems
 * Dem habe ich widersprochen, da ein bewirtschafteter (!) Wald, einer, der vom
   "Wald an sich" zum "Wald für uns" geworden ist, sehr gut einer TRIZ-Analyse
-  unterorfen werden kann.  Dort gibt es Energiemaschinen, Werkzeuge, Prozesse,
-  Aktionen, Objekte und der Wald ist auch ein "nützliches Produkt", hat aber
-  mglw. mehr als eine PNF. Letzteres ist aber in komplexeren TRIZ-Modellen wie
-  etwa dem IDM sowieso in eine Mehrzahl von Actionparametern auf der einen
-  Seite und Evaluationparametern auf der anderen Seite aufgelöst.
+  unterworfen werden kann.  Dort gibt es Energiemaschinen, Werkzeuge,
+  Prozesse, Aktionen, Objekte und der Wald ist auch ein "nützliches Produkt",
+  hat aber mglw. mehr als eine PNF. Letzteres ist aber in komplexeren
+  TRIZ-Modellen wie etwa dem IDM sowieso in eine Mehrzahl von Actionparametern
+  auf der einen Seite und Evaluationparametern auf der anderen Seite
+  aufgelöst.
 
 [09:57] Immanuel Thoke : in großen Unternehmen gibt es ja auch eine
 F&E-Abteilung das wird da ja durchaus integriert
@@ -90,9 +88,9 @@ F&E-Abteilung das wird da ja durchaus integriert
   gebraucht wird, der Prozess also "naturwüchsig" abläuft und (im betrachteten
   Kontext!) keine Intervention von Menschen benötigt. Das wäre dann die hohe
   Kunst des TRIZ-Prinzips 25: SelfService - die Von-Selbst-Arbeitsweise.  Wenn
-  wir heute den Wald "sich selbst" überlassen, dann doch mit der Hoffnung,
-  dass er selbst in einen Reproduktionsmodus zurückfindet, in dem das
-  TRIZ-Prinzip 25 viel einfacher angewendet werden kann.
+  wir heute den Wald "sich selbst" überlassen, dann doch in der Hoffnung, dass
+  er selbst in einen Reproduktionsmodus zurückfindet, in dem das TRIZ-Prinzip
+  25 viel einfacher angewendet werden kann.
 
 [10:02] S. Lautenschläger : ja, Kulturlandschaft, aber ein Wald würde sich
 auch ohne Einfluss des Menschen weiterentwickeln, ein technisches System
@@ -166,11 +164,11 @@ oder ist das nicht an das Lebendige geknüpft (Maturana/Varela)
 
 [10:25] Nadine : ja, Autopoiesis als charakteristisches
 Merkmal/Organisationsform...Selbsterschaffung und Selbsterhaltung
-* Diesen Quatsch hatten wir schon vor einem Jahr,
-  [am 19.11.2019](../../Wintersemester-2019/2019-11-19/README.md),
-  massiv auseinandergenommen.  Autopoiesis ist eine sehr spezifische Form der
-  Komplexitätsüberreduktion, die an ein paar entscheidenden Stellen kmplett in
-  die Irre führt. Statt strukturbildendem _Durchsatz_ wird der
+* Diesen Quatsch hatten wir schon vor einem Jahr, [am
+  19.11.2019](../../Wintersemester-2019/2019-11-19/README.md), massiv
+  auseinandergenommen.  Autopoiesis ist eine sehr spezifische Form der
+  Komplexitätsüberreduktion, die an ein paar entscheidenden Stellen komplett
+  in die Irre führt. Statt strukturbildendem _Durchsatz_ wird der
   Selbstorganisationbegriff massiv überbewertet. Ist Wetter autopoietisch,
   lautete damals eine Frage.
 
