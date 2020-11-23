@@ -17,3 +17,7 @@ zu ergänzen
   3.4.
 * Dietmar Zobel, Rainer Hartmann (2009). Erfindungsmuster. Expert Verlag,
   Renningen. Abschnitt 3.3.
+  
+* Dietmar Zobel (2020a).  Beiträge zur Weiterentwicklung der TRIZ.  LIFIS
+  Online, 19.01.2020
+  * <http://dx.doi.org/10.14625/zobel_20200119>
