@@ -43,6 +43,9 @@
   9783816927136.
 * Dietmar Zobel (2020). TRIZ für alle. Expert Verlag, Renningen. ISBN
   9783816985105.
+* Dietmar Zobel (2020a).  Beiträge zur Weiterentwicklung der TRIZ.  LIFIS
+  Online, 19.01.2020.
+  * <http://dx.doi.org/10.14625/zobel_20200119>
 
 ## 27.10. Auftakt des Seminars. Diskussion des Seminarplans
 
