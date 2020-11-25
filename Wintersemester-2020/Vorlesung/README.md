@@ -107,9 +107,6 @@ __Lernziele__:
 * Der Grundansatz der Theorie Dynamischer Systeme
 * Dynamik in offenen Systemen. Grenzzyklen und Attraktoren
 * Einfache Beschreibung, komplexer Vollzug. Deterministisches Chaos
-* Offene Systeme. Durchsatz und Struktur. Das Beispiel Bénardzelle.
-* Koevolution auf Mikro- und Makroebene. "Versklavungseffekt"
-* Dissipative Strukturen und Fließgleichgewichte.
 * Systeme und "Umwelt". Immersiver und submersiver Systembegriff
 
 __Folien__:
@@ -118,6 +115,9 @@ __Folien__:
 ## 26.11.: Nachhaltigkeit und Entwicklungszyklen von Systemen
 
 __Literaturliste__:
+* Hans-Gert Gräbe (2020).  Zum Systembegriff in der Theorie dynamischer
+  Systeme. Siehe dazu weitere Wikipedia-Seiten, die unter [TDS.md](TDS.md)
+  gelistet sind.
 * Frank W. Geels, Johan Schot (2007). Typology of Sociotechnical Transition
   Pathways. In: Research Policy 36 (2007), 399–417.
   * <https://doi.org/10.1016/j.respol.2007.01.003> 
@@ -140,8 +140,11 @@ __Zusatzliteratur__:
   Wissenschaften.  LIT-Verlag, Münster. ISBN 9783825849457.
 
 __Lernziele__:
+* Offene Systeme. Durchsatz und Struktur. Das Beispiel Bénardzelle.
+* Eigenzeiten und Eigenräume von Systemen.
+* Dissipative Strukturen und Fließgleichgewichte.
+* Koevolution auf Mikro- und Makroebene. "Versklavungseffekt"
 * Entwicklung von Systemen, Grenzübergänge und Rekontextualisierungen 
-* Evolution und Revolution
 * Systemische Transformationsprozesse
 
 ## 3.12.: Digitales Universum. Der digitale Wandel als techno-kultureller Umbruch
