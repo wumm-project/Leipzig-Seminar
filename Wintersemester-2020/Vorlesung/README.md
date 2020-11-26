@@ -57,6 +57,7 @@ __Lernziele:__
 
 __Folien__:
 * [Technische Systeme](TechnischeSysteme.pdf)
+* [Chat](chat-20201105.md)
 
 ## 12.11.: Modellierung widersprüchlicher Anforderungen in der TRIZ
 
@@ -83,6 +84,7 @@ __Lernziele__:
 __Folien__:
 * [Modellierung widersprüchlicher Anforderungen in der
   TRIZ](Folien-20201110.pdf)
+* [Chat](chat-20201112.md)
 
 ## 19.11.: Modellierung natürlicher Systeme und die Theorie Offener Systeme
 
@@ -111,6 +113,7 @@ __Lernziele__:
 
 __Folien__:
 * [Systeme und Entwicklung](Systementwicklung.pdf)
+* [Chat](chat-20201119.md)
 
 ## 26.11.: Nachhaltigkeit und Entwicklungszyklen von Systemen
 
@@ -146,6 +149,10 @@ __Lernziele__:
 * Koevolution auf Mikro- und Makroebene. "Versklavungseffekt"
 * Entwicklung von Systemen, Grenzübergänge und Rekontextualisierungen 
 * Systemische Transformationsprozesse
+
+__Folien__:
+* [Entwicklung von Systemen und deren Komponenten](Koevolution.pdf)
+* [Chat](chat-20201126.md)
 
 ## 3.12.: Digitales Universum. Der digitale Wandel als techno-kultureller Umbruch
 
