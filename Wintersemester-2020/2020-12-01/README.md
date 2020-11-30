@@ -6,4 +6,5 @@ Diskussionsleitung: Nadine Schumann
 
 ## Ankündigung
 
-Zu ergänzen
+* [Handout](Handout.pdf)
+
