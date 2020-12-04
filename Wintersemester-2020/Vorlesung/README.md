@@ -173,6 +173,7 @@ __Lernziele__:
 __Folien__:
 * [Handeln im Digitalen Universum](DigitalerHandlungsraum.pdf)
 * Zusatz: [Foliensatz zu (Schetsche 2006)](DigitalerWandel.pdf)
+* [Chat](chat-20201203.md)
 
 ## 10.12.: Datenmodellierung und Modellierung von Begriffswelten
 
