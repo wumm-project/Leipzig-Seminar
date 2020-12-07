@@ -124,7 +124,6 @@ __Literaturliste__:
 * Frank W. Geels, Johan Schot (2007). Typology of Sociotechnical Transition
   Pathways. In: Research Policy 36 (2007), 399–417.
   * <https://doi.org/10.1016/j.respol.2007.01.003> 
-
 * Hans-Gert Gräbe (2020). TRIZ und Transformationen sozio-technischer und
   sozio-ökologischer Systeme. LIFIS Online, 27.06.2020.
   * <http://dx.doi.org/10.14625/graebe_20200627>
@@ -166,9 +165,15 @@ __Zusatzliteratur__:
 * Felix Stalder. Kultur der Digitalität. Suhrkamp 2016.
 
 __Lernziele__:
+* Welt und Wirklichkeit. Welt als Wirklichkeit _für uns_. Handeln.
 * Begriffe _Digitales Universum_, _Digitale Identitäten_
 * Authentifizierung und Autorisierung als sozio-technische Prozesse
 * Digitale Identitäten und Rollen
+
+__Folien__:
+* [Handeln im Digitalen Universum](DigitalerHandlungsraum.pdf)
+* Zusatz: [Foliensatz zu (Schetsche 2006)](DigitalerWandel.pdf)
+* [Chat](chat-20201203.md)
 
 ## 10.12.: Datenmodellierung und Modellierung von Begriffswelten
 
@@ -180,7 +185,6 @@ __Literaturliste__:
   Manuskript, eingereicht und abgelehnt bei der Delfi 2011, September 2011, TU
   Dresden.
   * <http://www.informatik.uni-leipzig.de/~graebe/Texte/delfi-11.pdf>
-
 * Hans-Gert Gräbe (seit 2007). Das OD.FMI Projekt. 
   * <http://www.informatik.uni-leipzig.de/~graebe/OLAT/LVPlanung/ODQuelle.html>
 
