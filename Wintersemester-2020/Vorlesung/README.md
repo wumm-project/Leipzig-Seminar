@@ -228,7 +228,7 @@ __Lernziele__:
 __Folien__:
 * [Begriffswelten](LOD.pdf)
 
-## 14.1.: Daten und Information
+## 14.1.: Daten und Information. Digitale Handlungsräume
 
 __Literaturliste__:
 * Helmut Klemm (2003). Ein großes Elend. Informatik-Spektrum 26, S. 267–273. 
