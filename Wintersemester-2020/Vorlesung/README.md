@@ -212,7 +212,7 @@ __Folien__:
 * [RDF Grundlagen](RDF.pdf)
 * [Begriffswelten](LOD.pdf)
 
-## 7.1.: Die Linked Open Data Cloud. Ontologien und Begriffswelten. Der Giant Global Graph
+## 7.1.: Die Linked Open Data Cloud. Begriffswelten und der Giant Global Graph
 
 __Literaturliste__:
 * Open Data Support (2013). Trainingsmodul 1.3 Einführung
@@ -231,17 +231,34 @@ __Folien__:
 ## 14.1.: Daten und Information
 
 __Literaturliste__:
-* TBA
+* Helmut Klemm (2003). Ein großes Elend. Informatik-Spektrum 26, S. 267–273. 
+  DOI 10.1007/s00287-003-0316-2
+* Capurro, Fleissner, Hofkirchner (2000). Is a unified theory of information
+  feasible? A Trialogue. <http://www.capurro.de/trialog.htm>
+* Berger, Luckmann (1969/1994): Die gesellschaftliche Konstruktion der
+  Wirklichkeit: eine Theorie der Wissenssoziologie. Fischer Taschenbuch
+  Verlag. ISBN 978-3-596-26623-4.
+
+__Zusatzliteratur__:
+* [Rafael Capurro](http://www.capurro.de/)
+  * Informatik: Von der Technokratie zur Lebenskunst (1995).
+    <http://www.capurro.de/zuerich.htm>
+  * Das Capurrosche Trilemma (1998). <http://www.capurro.de/janich.htm>
+* [Peter Janich](https://de.wikipedia.org/wiki/Peter_Janich)
+  * Was ist Wahrheit? Eine philosophische Einführung. ISBN 3-406-41052-9
+  * Was ist Erkenntnis? Eine philosophische Einführung. ISBN 3-406-45916-1.
+  * Was ist Information? Kritik einer Legende. ISBN 978-3-518-58470-5
 
 __Lernziele__:
 * Internet als "Welt von Fiktionen"
 * _Fiktionen_ als normale Form der Komplexitätsreduktion in interpersonalen
   Handlungszusammenhängen
-* Das OSI-7-Schichtenmodell und Aspekte der Sprachschöpfung beim Design
-  Technischer Systeme
+* Daten und Informationen
+* Was ist Wissen? 
 
 __Folien__:
 * [Daten und Informationen](DatenInformation.pdf)
+* [Digitale Handlungsräume](Storytelling.pdf)
 
 ## 21.1.: Kooperatives Handeln in der bürgerlichen Gesellschaft
 

@@ -110,7 +110,7 @@ Universum" in der Vorlesung). Moderne Debatten dazu:
 * [Peter Janich](https://de.wikipedia.org/wiki/Peter_Janich)
   * Was ist Wahrheit? Eine philosophische Einführung. ISBN 3-406-41052-9
   * Was ist Erkenntnis? Eine philosophische Einführung. ISBN 3-406-45916-1.
-  * Was ist Informatin? Kritik einer Legende. ISBN 978-3-518-58470-5
+  * Was ist Information? Kritik einer Legende. ISBN 978-3-518-58470-5
 
 Hans-Gert Gräbe, 08.12.2020
 
