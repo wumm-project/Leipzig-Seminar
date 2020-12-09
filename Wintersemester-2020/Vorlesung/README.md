@@ -175,11 +175,10 @@ __Folien__:
 * Zusatz: [Foliensatz zu (Schetsche 2006)](DigitalerWandel.pdf)
 * [Chat](chat-20201203.md)
 
-## 10.12.: Datenmodellierung und Modellierung von Begriffswelten
+## 10.12.: Internet Basics. RDF Grundbegriffe
 
 __Literaturliste__:
-* Marc Zobrist (2018). Ontologien und Datenmodelle. 
-  * <https://histhub.ch/ontologien-und-datenmodelle/>
+* Relevante Wikipedia-Einträge
 * Hans-Gert Gräbe, Thomas Riechert, Michael Martin (2011). OD.FMI –
   Engineering operativ-administrativer Daten für die universitäre Lehre.
   Manuskript, eingereicht und abgelehnt bei der Delfi 2011, September 2011, TU
@@ -188,12 +187,32 @@ __Literaturliste__:
 * Hans-Gert Gräbe (seit 2007). Das OD.FMI Projekt. 
   * <http://www.informatik.uni-leipzig.de/~graebe/OLAT/LVPlanung/ODQuelle.html>
 
+__Folien__:
+* [Internet Basics](InternetBasics.pdf)
+* [RDF Grundlagen](RDF.pdf)
+
 __Lernziele__:
-* Modellierung von Begriffswelten als Teil der Modellierung Technischer
-  Systeme
+* Internet Basics
+* Das OSI 7-Schichten-Modell
+* Verwaltung von IPs und Rechnernamen
 * RDF-Grundbegriffe URI, Namensraum, Subjekt, Prädikat, Objekt
 
-## 17.12.: RDF. Basics, Konzepte, Werkzeuge
+## 17.12.: Modellierung von Begriffswelten. RDF. Konzepte, Werkzeuge
+
+__Literaturliste__:
+* Marc Zobrist (2018). Ontologien und Datenmodelle. 
+  * <https://histhub.ch/ontologien-und-datenmodelle/>
+
+__Lernziele__:
+* RDF Konzepte. RDF-Graphen, Mustersuche, SPARQL Anfragesprache
+* RDF Werkzeuge. RDF Stores, SPARQL Endpunkte
+
+__Folien__:
+
+* [RDF Grundlagen](RDF.pdf)
+* [Begriffswelten](LOD.pdf)
+
+## 7.1.: Die Linked Open Data Cloud. Ontologien und Begriffswelten. Der Giant Global Graph
 
 __Literaturliste__:
 * Open Data Support (2013). Trainingsmodul 1.3 Einführung
@@ -201,17 +220,13 @@ __Literaturliste__:
   * [RDF-Einfuehrung.pdf](../Material/RDF-Einfuehrung.pdf)
 
 __Lernziele__:
-* RDF Konzepte. RDF-Graphen, Mustersuche, SPARQL Anfragesprache
-* RDF Werkzeuge. RDF Stores, SPARQL Endpunkte
-
-## 7.1.: Die Linked Open Data Cloud. Ontologien und Begriffswelten. Der Giant Global Graph
-
-__Literaturliste__:
-* TBA
-
-__Lernziele__:
+* Modellierung von Begriffswelten als Teil der Modellierung Technischer
+  Systeme
 * Modellierung gemeinsamer Begriffswelten als kooperativer sozialer Prozess
 * Bedeutung gemeinsamer Begriffswelten für das geordnete Zusammenleben 
+
+__Folien__:
+* [Begriffswelten](LOD.pdf)
 
 ## 14.1.: Daten und Information
 
@@ -219,10 +234,14 @@ __Literaturliste__:
 * TBA
 
 __Lernziele__:
+* Internet als "Welt von Fiktionen"
 * _Fiktionen_ als normale Form der Komplexitätsreduktion in interpersonalen
   Handlungszusammenhängen
 * Das OSI-7-Schichtenmodell und Aspekte der Sprachschöpfung beim Design
   Technischer Systeme
+
+__Folien__:
+* [Daten und Informationen](DatenInformation.pdf)
 
 ## 21.1.: Kooperatives Handeln in der bürgerlichen Gesellschaft
 
