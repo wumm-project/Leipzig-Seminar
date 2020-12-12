@@ -1,7 +1,7 @@
 # Seminar am 26.01.2021
 
-__Thema:__ Grundlagen der OTSM-TRIZ
+__Thema:__ Evolution von allgemeinen Systemen bei Goldovsky 1983
 
-Diskussionsleitung: NN
+Diskussionsleitung: Daniel Schubert
 
 ## Ankündigung

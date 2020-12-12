@@ -1,7 +1,7 @@
 # Seminar am 12.01.2021
 
-__Thema:__ Evolutionsbäume Technischer Systeme bei N.A. Shpakovsky
+__Thema:__ Evolution Technischer und allgemeiner Systeme bei M.S. Rubin
 
-Diskussionsleitung: Tom Strempel
+Diskussionsleitung: Immanuel Thoke
 
 ## Ankündigung
