@@ -197,7 +197,7 @@ __Lernziele__:
 * Verwaltung von IPs und Rechnernamen
 * RDF-Grundbegriffe URI, Namensraum, Subjekt, Prädikat, Objekt
 
-## 17.12.: Modellierung von Begriffswelten. RDF. Konzepte, Werkzeuge
+## 14.1.: Modellierung von Begriffswelten. RDF. Konzepte, Werkzeuge
 
 __Literaturliste__:
 * Marc Zobrist (2018). Ontologien und Datenmodelle. 
@@ -212,7 +212,7 @@ __Folien__:
 * [RDF Grundlagen](RDF.pdf)
 * [Begriffswelten](LOD.pdf)
 
-## 7.1.: Die Linked Open Data Cloud. Begriffswelten und der Giant Global Graph
+## 21.1.: Die Linked Open Data Cloud. Begriffswelten und der Giant Global Graph
 
 __Literaturliste__:
 * Open Data Support (2013). Trainingsmodul 1.3 Einführung
@@ -228,7 +228,7 @@ __Lernziele__:
 __Folien__:
 * [Begriffswelten](LOD.pdf)
 
-## 14.1.: Daten und Information. Digitale Handlungsräume
+## 28.1.: Daten und Information. Digitale Handlungsräume
 
 __Literaturliste__:
 * Helmut Klemm (2003). Ein großes Elend. Informatik-Spektrum 26, S. 267–273. 
@@ -260,7 +260,7 @@ __Folien__:
 * [Daten und Informationen](DatenInformation.pdf)
 * [Digitale Handlungsräume](Storytelling.pdf)
 
-## 21.1.: Kooperatives Handeln in der bürgerlichen Gesellschaft
+## 4.2..: Kooperatives Handeln in der bürgerlichen Gesellschaft
 
 __Literaturliste__:
 * TBA
@@ -272,20 +272,14 @@ __Lernziele__:
 * Kooperative Verfahrensweisen und deren Weiterentwicklung
 * Bedingungen der Möglichkeit des Handels in der bürgerlichen Gesellschaft 
 
-## 28.1.: Technikentwicklung und die Entwicklung kapitalistischer Unternehmensformen. Netzkooperation
-
-__Literaturliste__:
-* TBA
+## offen: Entwicklung kapitalistischer Unternehmensformen. Netzkooperation
 
 __Lernziele__:
 * Grundformen kapitalistischer Unternehmen und deren Verhältnis zu den
   Konzepten Innovation, Genialität und geistigem Eigentum
 * Bedingtheiten und Notwendigkeit von Open Culture
 
-## 4.2.: Herausbildung einer Open Culture als notwendiger Begleitprozess technischer Höherentwicklung
-
-__Literaturliste__:
-* TBA
+## offen: Herausbildung einer Open Culture
 
 __Lernziele__:
 * Open Culture und Infrastrukturentwicklung
@@ -293,6 +287,5 @@ __Lernziele__:
 
 ## 5.2.: Optional: Interdisziplinäres Gespräch
 
-17. Interdisziplinäres Gespräch „Zur Entwicklung technischer und allgemeiner
-Systeme“ als Blockseminar.
+17. Interdisziplinäres Gespräch "Evolution of Technical and General Systems" 
 * <http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/LeipzigerGespraeche/2021-02-05>
