@@ -211,6 +211,7 @@ __Folien__:
 
 * [RDF Grundlagen](RDF.pdf)
 * [Begriffswelten](LOD.pdf)
+* [Chat](chat-20210114.md)
 
 ## 21.1.: Die Linked Open Data Cloud. Begriffswelten und der Giant Global Graph
 
