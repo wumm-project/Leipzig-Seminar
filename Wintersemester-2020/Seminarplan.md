@@ -3,7 +3,10 @@
 ## Literatur 
 
 * Genrich Altschuller (1979).  Schöpfertum als exakte Wissenschaft (in
-  Russisch).  Deutsch 1983 "Erfinden -- (k)ein Problem".
+  Russisch).  Deutsch: "Erfinden -- (k)ein Problem". Verlag Technik, Berlin
+  1983.  
+* Genrich Altschuller, Alexander Seljuzki (1980).  Flügel für Ikarus.  Deutsch:
+  Verlag Mir, Moskau und Urania-Verlag, Leipzig 1983.
 * Gaetano Cascini (2012). TRIZ-based Anticipatory Design of Future Products
   and Processes. Journal of Integrated Design and Process Science 16 (3),
   29-63.  
