@@ -12,14 +12,14 @@ Diskussionsleitung: Immanuel Thoke
 ## Anmerkungen
 
 M.S. Rubin beschäftigt sich schon viele Jahrzehnte mit der Frage, wie sich
-Gesetze, Tendenzen und Entwicklungslinien technischer und allgemeiner
-Systemefassen lassen. Siehe dazu die Website [temm.ru](http://www.temm.ru),
-die einer __Theorie der Evolution von Materie und Modellen__ gewidmet ist und
-damit dem Zusammenhang zwischen materiellen Phänomenen und deren
-Beschreibungsformen.  Auf der Website sind Texte von Michail Rubin und Julij
-Murashkovsky zusammengetragen, wobei Rubin stärker den Zusammenhang von
-materiellen und immateriellen Systemen thematisiert, Murashkovsky dagegen
-stärker soziokulturelle Systeme untersucht.
+Gesetze, Tendenzen und Entwicklungslinien technischer und allgemeiner Systeme
+fassen lassen. Siehe dazu die Website [temm.ru](http://www.temm.ru), die einer
+__Theorie der Evolution von Materie und Modellen__ gewidmet ist und damit dem
+Zusammenhang zwischen materiellen Phänomenen und deren Beschreibungsformen.
+Auf der Website sind Texte von Michail Rubin und Julij Murashkovsky
+zusammengetragen, wobei Rubin stärker den Zusammenhang von materiellen und
+immateriellen Systemen thematisiert, Murashkovsky dagegen stärker
+soziokulturelle Systeme untersucht.
 
 In der Arbeit (Rubin 2019) werden nicht nur die Versionen von
 Entwicklungsgesetzen technischer Systeme in verschiedenen TRIZ-Schulen
@@ -36,8 +36,7 @@ Gesetzesbegriff reicht in seinen Begründungsanforderungen tiefer, allerdings
 _erscheint_ die Wirkung von Gesetzen nicht nur als _Invarianten_ (wie etwa im
 Energieerhaltungssatz oder Galileis Aussage, dass Blatt und Stein
 gleichschnell fallen), sondern kann sich auch als Trend (im Sinne eines
-Fließgleichgewichts) manifestieren.  Darauf soll hier aber nicht weiter
-eingegangen werden.
+Fließgleichgewichts) manifestieren.  Darauf wurde nicht weiter eingegangen.
 
 Die Entwicklung technischer Systeme (TS) kann sich nach Rubin auf drei Ebenen
 vollziehen, als Änderung des (realweltlichen) Systems (Vollzugsform), als
@@ -45,15 +44,15 @@ vollziehen, als Änderung des (realweltlichen) Systems (Vollzugsform), als
 realweltliche System) und als Änderung des Funktionsprinzips (Änderung der
 Implementierung bei gleichbleibender Spezifikation).
 
-Entwicklung eines Systems ist damit stets verbunden mit dessen Transformation.
-Da Transformationen (von einem _System mit Problem_ zu einem _System ohne
-Problem_, von einem "System, wie es ist" zu einem "System, wie es sein soll")
-das Fundament von TRIZ sind, ist zugleich klar, dass TRIZ wesentlich den
-Entwicklungsgedanken _umsetzt_, so dass dessen _theoretische Untermauerung_
-wesentlich für das TRIZ Theoriesystem ist.
+Die Entwicklung eines Systems ist damit stets verbunden mit dessen
+Transformation.  Da Transformationen (von einem _System mit Problem_ zu einem
+_System ohne Problem_, von einem "System, wie es ist" zu einem "System, wie es
+sein soll") das Fundament von TRIZ sind, ist zugleich klar, dass TRIZ
+wesentlich den Entwicklungsgedanken _umsetzt_, womit dessen _theoretische
+Untermauerung_ wesentlich für das TRIZ Theoriesystem ist.
 
 Weiter wurde über _Phylogenese_ und _Ontogenese_ TS diskutiert (aucn wenn
-diese bei Rubin grundsätzlich mit dem Adrejktiv "systemisch" versehen werden).
+diese bei Rubin grundsätzlich mit dem Adjektiv "systemisch" versehen werden).
 Diese Trennung in langfristige und kurzfristige Entwicklungsperspektiven, die
 in dieser aus der Biologie übernommenen Begrifflichkeit eingefangen werden
 soll, rief größere Irritation hervor, auch wenn uns die verfremdete Verwendung
@@ -117,8 +116,8 @@ es in (Altschuller 1980) genau umgekehrt ist.
 
 Für Rubin ist das eher ein Muster unter mehreren möglichen und auch mehr ein
 (unverbindliches) Denkmuster und kein empirisch untermauerter Fakt.  Zumal die
-auf der Ordniate abgetragene Größe vage bleibt (Rubin mit Altschuller:
-Hauptmerkmale wie Kapazität, Leistung, Geschwindigkeit usw.).
+auf der Ordinate abgetragene Größe vage bleibt (Rubin mit Altschuller:
+"Hauptmerkmale wie Kapazität, Leistung, Geschwindigkeit usw.").
 
 Bei Altschuller wird hier durch vertikale Abschnitte auch noch ein
 Phasenmodell der Entwicklung ("Kindheit", "Reife", "Alter" und dann alternativ
