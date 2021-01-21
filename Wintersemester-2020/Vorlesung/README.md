@@ -224,30 +224,14 @@ __Lernziele__:
 * Modellierung von Begriffswelten als Teil der Modellierung Technischer
   Systeme
 * Modellierung gemeinsamer Begriffswelten als kooperativer sozialer Prozess
-* Bedeutung gemeinsamer Begriffswelten für das geordnete Zusammenleben 
-
-__Beispiele__:
-* <http://lod-cloud.net/>
-* <http://lod-cloud.net/versions>
-* foaf: Friend of a Friend <http://xmlns.com/foaf/0.1/>
-* skos: Simple Knowledge Organization System
-  * <http://www.w3.org/2004/02/skos/core#>
-  * <https://www.w3.org/2009/08/skos-reference/skos.html>
-* org: The Organization Ontology <http://www.w3.org/ns/org#>
-  * rdfs:seeAlso <https://www.w3.org/TR/vocab-org/>
-* Große Datenbanken von Ontologien: <http://prefix.cc> oder
-  <http://lov.okfn.org> (Linked Open Vocabularies)
-* DBPedia: <http://dbpedia.org/page/Leipzig>
-* Linked-Data-Service der Deutschen Nationalbibliothek <http://www.dnb.de/lds>
-* Schema.org und Microdata: <https://schema.org/docs/gs.html>
-* Wolfram Alpha - Datenstrukturierung und Rechnen vereint:
-  <https://www.wolframalpha.com>
+* Bedeutung gemeinsamer Begriffswelten für das geordnete Zusammenleben
+* Fiktion als verkürzte Sprechweise über eine gesellschaftliche Normalität
 
 __Folien__:
 * [Begriffswelten](LOD.pdf)
 * [Daten und Informationen](DatenInformationen.pdf)
 
-## 28.1.: Daten und Information. Digitale Handlungsräume
+## 28.1.: Daten, Information, Wissen. Digitale Handlungsräume
 
 __Literaturliste__:
 * Helmut Klemm (2003). Ein großes Elend. Informatik-Spektrum 26, S. 267–273. 
@@ -270,14 +254,13 @@ __Zusatzliteratur__:
 
 __Lernziele__:
 * Internet als "Welt von Fiktionen"
-* _Fiktionen_ als normale Form der Komplexitätsreduktion in interpersonalen
-  Handlungszusammenhängen
-* Daten und Informationen
+* Storytelling und Handeln
+* Information und Sprache
 * Was ist Wissen? 
 
 __Folien__:
-* [Daten und Informationen](DatenInformation.pdf)
-* [Digitale Handlungsräume](Storytelling.pdf)
+* [Information und Sprache](Storytelling.pdf)
+* [Wissen und Handeln](Wissen.pdf)
 
 ## 4.2..: Kooperatives Handeln in der bürgerlichen Gesellschaft
 
@@ -298,11 +281,17 @@ __Lernziele__:
   Konzepten Innovation, Genialität und geistigem Eigentum
 * Bedingtheiten und Notwendigkeit von Open Culture
 
+__Folien__:
+* [Kooperatives Handeln](KooperativesHandeln.pdf)
+
 ## offen: Herausbildung einer Open Culture
 
 __Lernziele__:
 * Open Culture und Infrastrukturentwicklung
 * Services und Geschäftsmodelle unter den Bedingungen von Open Culture
+
+__Folien__:
+* [Open Culture](OpenCulture.pdf)
 
 ## 5.2.: Optional: Interdisziplinäres Gespräch
 
