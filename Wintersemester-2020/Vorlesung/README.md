@@ -226,8 +226,26 @@ __Lernziele__:
 * Modellierung gemeinsamer Begriffswelten als kooperativer sozialer Prozess
 * Bedeutung gemeinsamer Begriffswelten für das geordnete Zusammenleben 
 
+__Beispiele__:
+* <http://lod-cloud.net/>
+* <http://lod-cloud.net/versions>
+* foaf: Friend of a Friend <http://xmlns.com/foaf/0.1/>
+* skos: Simple Knowledge Organization System
+  * <http://www.w3.org/2004/02/skos/core#>
+  * <https://www.w3.org/2009/08/skos-reference/skos.html>
+* org: The Organization Ontology <http://www.w3.org/ns/org#>
+  * rdfs:seeAlso <https://www.w3.org/TR/vocab-org/>
+* Große Datenbanken von Ontologien: <http://prefix.cc> oder
+  <http://lov.okfn.org> (Linked Open Vocabularies)
+* DBPedia: <http://dbpedia.org/page/Leipzig>
+* Linked-Data-Service der Deutschen Nationalbibliothek <http://www.dnb.de/lds>
+* Schema.org und Microdata: <https://schema.org/docs/gs.html>
+* Wolfram Alpha - Datenstrukturierung und Rechnen vereint:
+  <https://www.wolframalpha.com>
+
 __Folien__:
 * [Begriffswelten](LOD.pdf)
+* [Daten und Informationen](DatenInformationen.pdf)
 
 ## 28.1.: Daten und Information. Digitale Handlungsräume
 

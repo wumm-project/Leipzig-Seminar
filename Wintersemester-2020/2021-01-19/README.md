@@ -6,7 +6,8 @@ Diskussionsleitung: Tom Strempel
 
 ## Ankündigung
 
-
+* [Handout](Handout.pdf)
+* [Folien](Folien.pdf)
 
 ## Anmerkung
 
