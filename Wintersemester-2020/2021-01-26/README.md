@@ -9,15 +9,15 @@ Diskussionsleitung: Daniel Schubert
 * [Handout](Handout.pdf)
 * [Folien](Folien.pdf)
 
-##Anmerkung
+## Anmerkung
 
-##Diskussionsvorschläge
+## Diskussionsvorschläge
 
 Wenn Gesetzmäßigkeiten von Mustern abgeleitet werden, worauf basieren die Muster? Sind sie mit Gesetzen gleichzusetzen?
 Sind die vorgestellten Gesetzmäßigkeiten vollständig? Sind einige Gesetzte redundant?
 Verändert sich der Entwicklungsprozess von Systemen, wenn ja wie?
 
-##Literatur
+## Literatur
 
 B.I.Goldovsky 1983 - *System der Gesetzmäßigkeiten des Aufbaus und der Entwicklung technischer Systeme*
 Vladimir Petrov 2020 - *Gesetze und Gesetzmäßigkeiten der Entwicklung von Systemen*
