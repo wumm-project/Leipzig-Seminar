@@ -2,11 +2,11 @@
 
 ## Hintergrund
 
-Im Bereich der TRIZ-Forschung wurde vor einem Jahr ein TRIZ-Ontologie-Projekt
-(TOP) <https://triz-summit.ru/onto_triz/> (in Russisch) begonnen, um die
-verschiedenen Teile der TRIZ-Theorie ontologisch zu „kartieren“ und die
-wesentlichen Zusammenhänge zwischen den einzelnen Teilen mit Mitteln
-semantischer Technologien zu erfassen. Hierzu liegen aktuell vor
+Im Bereich der TRIZ-Forschung wurde vor einem Jahr ein TRIZ Summit
+Ontologie-Projekt (TOP) <https://triz-summit.ru/onto_triz/> (in Russisch)
+begonnen, um die verschiedenen Teile der TRIZ-Theorie ontologisch zu
+„kartieren“ und die wesentlichen Zusammenhänge zwischen den einzelnen Teilen
+mit Mitteln semantischer Technologien zu erfassen. Hierzu liegen aktuell vor
 
 (1) eine „Übersichtskarte“ der verschiedenen Theoriefelder (des TRIZ Body of
     Knowledge) und der Zusammenhänge zwischen diesen,
@@ -83,7 +83,7 @@ ls.sty im Wurzelverzeichnis des Repos.
 ## Folgende Themen wurden dazu vergeben:
 
 * Funktionale Analyse (Tarek Stelzle)
-* Stoff-Feld- und Element-Feld-Modelle (Tom Strempel)
+* Evolutionsbäume zur Beschreibung technischer Entwicklung (Tom Strempel)
 * Flussmodelle und Flussanalyse (Immanuel Thoke) 
 * Modellierung des IDM-Modells aus Vorgängerarbeiten (Karim Rakia)
 

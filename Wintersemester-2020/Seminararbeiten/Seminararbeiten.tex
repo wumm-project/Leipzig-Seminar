@@ -7,20 +7,20 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{14. November 2020}
+\date{25. Januar 2021}
 
 \begin{document}
 \maketitle
 
 \section{Hintergrund}
 
-Im Bereich der TRIZ-Forschung wurde vor einem Jahr ein
-TRIZ-Ontologie-Projekt\footnote{Siehe \url{https://triz-summit.ru/onto_triz/}
-  (in Russisch).}  begonnen, um die verschiedenen Teile der TRIZ-Theorie
+Im Bereich der TRIZ-Forschung wurde vor einem Jahr ein TRIZ Summit
+Ontologie-Projekt\footnote{Siehe \url{https://triz-summit.ru/onto_triz/} (in
+  Russisch).}  begonnen, um die verschiedenen Teile der TRIZ-Theorie
 ontologisch zu „kartieren“ und die wesentlichen Zusammenhänge zwischen den
 einzelnen Teilen mit Mitteln semantischer Technologien zu erfassen. Hierzu
 liegen aktuell vor
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item[(1)] eine „Übersichtskarte“ der verschiedenen Theoriefelder und der
   Zusammenhänge zwischen diesen,
 \item[(2)] ein „Atlas“ von Ontokarten, die grob einzelne Bereiche markieren,
@@ -37,7 +37,7 @@ den unterschiedlichen TRIZ-Schulen naturgemäß unterschiedlich verstanden
 werden.
 
 Streit gibt es auch zu (4), der aber deutlich einfacher zu klären ist, wenn 
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item[(4a)] zunächst einmal alle Begriffe gesammelt und „URIfiziert“ werden
   (Thesaurus raw),
 \item[(4b)] URIs so weit zusammengeführt werden, dass verschiedene URIs auf
@@ -53,7 +53,7 @@ In \cite{Kuryan2019} wird das Projekt genauer beschrieben, in
 \cite{Kuryan2020} der aktuelle Stand dargestellt. Andere Vorarbeiten fanden
 wenig Berücksichtigung\footnote{Details dazu auf der Webseite
   \url{https://wumm-project.github.io/Ontology.html}.}, insbesondere weder
-\cite{IDM2011} noch \cite{VDI}. Im Herbst 2020 läuft eine Webinarreihe (in
+\cite{IDM2011} noch \cite{VDI}. Im Herbst 2020 lief eine Webinarreihe (in
 Russisch), deren Materialien auch verfügbar\footnote{Siehe
   \url{https://wumm-project.github.io/OntologyWebinar}.} und teilweise ins
 Englische übersetzt sind.
@@ -61,8 +61,9 @@ Englische übersetzt sind.
 Arbeitsgrundlage ist ein Glossar von V. Souchkov \cite{SG}, wobei dessen
 Einträge sowohl drei TRIZ-Generationen (TRIZ-1..3) als auch 5 Kategorien
 (Basisbegriffe, Modelle, Regeln, Begriffsgruppen, Synonyme) zugeordnet
-werden. Ein Webinarteilnehmer wies auf einen weiteren Thesaurus auf den
-einschlägigen russischen Altschullerseiten hin, der bereits multilingual ist.
+werden. Ein Webinarteilnehmer wies auf einen weiteren Thesaurus \cite{GSA} auf
+den einschlägigen russischen Altschullerseiten hin, der bereits multilingual
+ist.
 
 Im Rahmen des WUMM-Projekts wurden und werden Teile dieser Ontologisierungen
 nachmodelliert\footnote{Siehe dazu das Verzeichnis \texttt{Ontologies} im
@@ -77,17 +78,14 @@ und die dort vorhandenen deutschen und englischen Erläuterungen um eine
 russische Übersetzung ergänzt. Dies sowie der einfach zu transformierende
 Thesaurus auf den Altschullerseiten bilden die Grundlage für einen eigenen
 Thesaurus nach (4a), der mit den Begriff\-lichkeiten des Originalprojekts
-weiter abzugleichen ist.  Das Glossar \cite{SG} liegt als pdf, nicht aber als
-maschinenlesbare Datei vor. Da mit unserem aktuellen WUMM-Thesaurus bereits
-eine gute Abdeckung der Begriff\-lichkeiten erreicht ist und \cite{SG} auch
-erst in Phase (4c) komplett relevant wird, wird auf weitere Arbeit an dieser
-Front zunächst verzichtet.
+weiter abzugleichen ist.  Inzwischen wurde auch das Glossar \cite{SG} in der
+aktuellen Version 1.2 auf diese Weise aufbereitet.  Details dazu weiter unten.
 
 \section{Themen für Seminararbeiten}
 
 In den Seminararbeiten soll am Punkt (3) weitergearbeitet werden, indem für
 eine konkrete Ontokarte $X$ 
-\begin{itemize}
+\begin{itemize}[noitemsep]
 \item[(A)] die Zusammenhänge für das WUMM-Projekt in RDF in einer gemeinsamen
   Rahmensetzung nachmodelliert werden sowie
 \item[(B)] differierende Semantiken, Probleme und Widersprüche im Verständnis
@@ -100,16 +98,89 @@ Publikationen.
 Die Seminararbeit soll in {\LaTeX} erstellt werden und möglichst in Englisch
 verfasst sein.
 
-Mögliche Themen ($X$, die Liste ist nicht final) sind
+\section{Grundlagen des WUMM-Ontologie-Projekts}
+
+Im TRIZ Summit Ontologie-Projekt geht es zunächst darum, die
+TRIZ-Begriffslandschaft zu „kartieren“.  Das WUMM-Ontologie-Projekt begleitet
+diese Aktivitäten, um
+\begin{enumerate}[noitemsep]
+\item eine Remodellierung nach semantischen Standards auszuführen,
+\item die Materialien multilingual aufzubereitet und
+\item auf dieser Basis eine LOD-Infrastruktur aufzubauen
+\end{enumerate}
+und so eine bessere Basis für die erforderlichen sozialen Abstimmungsprozesse
+zu schaffen.
+
+\subsection{Die SKOS Ontologie als Basis}
+
+Dafür wird im WUMM-Kontext die SKOS-Ontologie \cite{SKOS} verwendet, die mit
+den Konzepten (K)
 \begin{itemize}[noitemsep]
-\item Funktionale Analyse
-\item Stoff-Feld- und Element-Feld-Modelle
-\item Flussmodelle und Flussanalyse
-\item Theorie der Entwicklung eines schöpferischen Vorstellungsvermögens
-\item Der TRIZ-Modellbegriff
-\item Modellierung des IDM-Modells aus Vorgängerarbeiten (insbesondere
-  \cite{IDM2011})
+\item \texttt{skos:Concept}, \texttt{skos:prefLabel}, \texttt{skos:altLabel}
+  -- Objektbenennung
+\item \texttt{skos:definition}, \texttt{skos:example}, \texttt{skos:note} --
+  Objekteigenschaften
+\item \texttt{skos:narrower}, \texttt{skos:broader} -- Objektrelationen
 \end{itemize}
+einen ersten Bschreibungsrahmen für Begrifflichkeiten bietet.  Auf der Basis
+wurden bisher drei Quellen ausgewertet,  
+\begin{itemize}[noitemsep]
+\item der mehrsprachige Thesaurus \cite{GSA},
+\item das Glossar der VDI-Norm \cite{VDI} und
+\item das Glossar \cite{SG}, Version 1.2, von V. Souchkov
+\end{itemize}
+sowie das Glossar des TRIZ Summit Projekts teilweise integriert.
+
+\textbf{Ziel des praktischen Teils der vergebenen Seminararbeiten} ist es, zu
+diesem Teil weitere Beschreibungen beizutragen.
+
+\subsection{URIs und Namensräume}
+
+Eines der zentralen Probleme der Überführung der vorhandenen Datenbestände zu
+TRIZ-Konzepten ist die Zuweiseung sinnvoller URIs, da die einzelnen
+Glossareinträge in den bisherigen Quellen einzig durch ihre Bezeichner
+(„labels“) identifiziert werden.  Hier macht auch die OSA-Plattform keine
+Ausnahme, denn die dort vergebenen URIs (sowohl für die Knoten als auch die
+Kanten des aufgebauten RDF-Graphen) sind nach außen nicht sichtbar.
+
+Bei der maschinellen Transformation der Datenbestände in ein valides
+RDF-Format wurden automatisiert URIs erzeugt, die alle im Namensraum
+\texttt{tc:} (wie \emph{TRIZ Concepts}) liegen. Eine wesentliche, noch
+bevorstehende Aufgabe ist die Unifizierung der URIs aus den Quellen, also die
+Zusammenführung von verschiedenen URIs, welche denselben Begriff bezeichnen.
+Diese Arbeit soll demnächst in Angriff genommen werden. 
+
+\subsection{Provenienz von Erläuterungen}
+
+Ein wesentliches Problem dieser ontologischen Modellierung ist die genauere
+Darstellung der Provenienz der einzelnen Erläuterungen. Hierzu wurden die
+unter (K) aufgeführten SKOS-Konzepte für jede einzelne Quelle durch Notationen
+aus dem Namensraum \texttt{od:} verfeinert, um zunächst die „Welten“ der
+einzelnen Autoren und TRIZ-Schulen zu erfassen.
+
+\texttt{od:} ist der Namensraum, den das WUMM-Projekt verwendet, um dort seine
+eigenen Konzepte zu entwickeln.  Eine genauere Beschreibung dieses Namensraums
+in einer eigenen RDF-Datei steht noch aus, die durch die URIs repräsentierten
+Konzepte sind bisher nur mündlich abgestimmt.
+
+Entsprechende Notationsvariationen sind etwa
+\begin{itemize}[noitemsep]
+\item \texttt{skos:Concept} $\to$ \texttt{od:GSAThesaurusEntry},
+  \texttt{od:VDIGlossaryEntry} \ldots
+\item \texttt{skos:definition} $\to$ \texttt{od:SouchkovDefinition},
+  \texttt{od:VDIGlossaryDefinition} \ldots
+\item \texttt{skos:example} $\to$ \texttt{od:VDIGlossaryExample} \ldots
+\end{itemize}
+usw. Siehe dazu die RDF-Daten selbst, die über den SPARQL-Endpunkt
+\begin{center}
+  \url{http://wumm.uni-leipzig.de:8891/sparql}
+\end{center}
+des WUMM-Projekts durchsucht werden können. Aus technischen Gründen tragen
+alle Datensätze den RDF-Typ \texttt{skos:Concept}, auch wenn als 
+\begin{center}
+  \texttt{od:GSAThesaurusEntry} \texttt{rdfs:subClassOf} \texttt{skos:Concept}
+\end{center}
+diese Information inferiert werden könnte. 
 
 \begin{thebibliography}{xxx}
 \bibitem{IDM2011} D. Cavallucci, F. Rousselot, C. Zanni (2011). An ontology
@@ -123,12 +194,16 @@ Mögliche Themen ($X$, die Liste ist nicht final) sind
   (in Russisch). Englische Übersetzung:
   \\ \url{https://wumm-project.github.io/Texts/Ontology-TDS2020-en.pdf}
 \bibitem{SG} V. Souchkov. Glossary of TRIZ and TRIZ-related terms. Mehrere
-  Versionen seit 1991. Letzte Version von 2014.
-  \\ \url{http://www.xtriz.com/publications/TRIZGlossaryVersion1_0.pdf}.
+  Versionen seit 1991. Letzte Version 1.2 von 2014.
+\bibitem{GSA} Thesaurus auf \texttt{altshuller.ru}.\\
+  \url{https://www.altshuller.ru/thesaur/thesaur.asp}
 \bibitem{VDI} VDI Richtlinie 4521. Erfinderisches Problemlösen mit TRIZ.\\
   Blatt 1: Grundlagen und Begriffe (April 2016).\\ Blatt 2: Zielbeschreibung,
   Problemdefinition und Lösungspriorisierung (April 2018).\\ Blatt 3:
   Lösungssuche (Juli 2020). 
+\bibitem{SKOS} W3C (2008). SKOS Simple Knowledge Organization System RDF
+  Schema.\\
+  \url{https://www.w3.org/TR/2008/WD-skos-reference-20080829/skos.html}
 \end{thebibliography}
 
 \end{document}
