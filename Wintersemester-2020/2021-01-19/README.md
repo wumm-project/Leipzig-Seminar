@@ -28,6 +28,107 @@ N.A. Shpakovsky (private Mail) behandelt in seinem Buch die folgenden Themen:
 * Wie sind die Linien und der Baum bei der Entwicklungsprognose zu verwenden.
 * Wie kann man die Linien und den Baum bei der Patentierung verwendet.
 
+Mit Shpakovskys Evolutionsbäumen liegt noch ein anderer Zugang zum Thema
+_Evolution Technischer Systeme_ vor. Der Zugang wird aus eigenen TRIZ-Praxen
+gespeist, die im Gegensatz zu Goldovskys Praxen eines stärker
+produktionsorganisatorisch gebundenen Chefentwicklers eher aus
+Consulting-Praxen resultieren, in denen die drei im Vortrag genannten
+Themenbereiche
+
+1. Lösung dringender technischer Probleme
+2. Beratung der strategischen Unternehmensführung durch Vorhersage der
+   Evolution von Technologien
+3. Patentschrifterstellung und Patentumgehung
+
+eine zentrale Rolle spielen. Besonders mit dem dritten Punkt reichen die
+Praxen auch näher an die Altschullerschen Praxen eines langjährigen
+Mitarbeiters im Marinepatentamt Baku heran.
+
+Im Gegensatz zu Goldovsky ist Shpakovsky damit primär in der Wartungs- und
+Überarbeitungsphase im Lebenszyklus konkreter technischer Systeme unterwegs
+und damit mit _bereits vorhandenen_ Beschreibungs- und Vollzugsformen TS
+konfrontiert, die im Zuge der gestellten Aufgaben selektiv verfeinert
+(Beschreibungsform) und dann transformiert (Vollzugsform) werden müssen.
+Fassen wir im Sinne von Petrov ein TS als Sammlung von Komponenten auf, dessen
+PNF sich als emergentes Phänomen des _Zusammenwirkens_ der Komponenten ergibt,
+so rücken wir nahe an die in (Gräbe 2020) entwickelte Sichtweise des
+Wechselspiels von Black-Box- und White-Box-Betrachtungen, in welcher die
+Komponenten eines zu analysierenden TS (White Box) in dieser Analyse zunächst
+als Black Boxes mit spezifikationskonformem Verhalten eingehen. Stellt sich im
+Zuge der Analyse heraus, dass die Probleme aus dem Verhalten einer bestimmten
+Komponente resultieren, macht sich eine Refokussierung der Analyse auf diese
+Komponente erforderlich, die nun ihrerseits einer White-Box-Analyse zu
+unterziehen ist (hierarchisches Prozessmodell).
+
+Als analytischer Kontext ergibt sich damit für Shpakovsky die in (Gräbe 2020)
+entwickelte "Welt technischer Systeme", allerdings als "Welt technischer
+Komponenten" (bei Shpakovsky "Objekte"), die funktional durch ihre
+_Spezifikation_ gegeben sind. Die PNF einer solchen Komponente erscheint im
+System als "elementare Funktion" oder sogar als "Objekteigenschaft" (insoweit
+eine solche Komponente als _Objekt_ gesehen wird), das Zusammenwirken der
+Komponenten im Erzeugen der emergenten PNF des Systems als "Folge elementarer
+Funktionen".  Damit reduziert sich das Nachdenken über
+Entwicklungszusammenhänge in der "Welt technischer Komponenten" auf ein
+Hilfsmittel in jenem Auswahlprozess zur Lösung konkreter Probleme, der sich
+auf die _Bewertung_ der _Entwicklung des Stands der Technik_ bezieht,
+hinsichtlich zweier Fragen:
+
+1. Führt die technologische Weiterentwicklung dazu, dass _Arrangements der
+   Komponenten_, die "Folge elementarer Funktionen", überdacht werden müssen?
+2. Gibt es inzwischen effizientere Wirkprinzipien für Teilfunktionen, womit
+   der gesamte _Komponentenzuschnitt des Systems_ auf den Prüfstand gehört?
+
+Reduziert man andere Ansätze auf die Frage von Entwicklungszusammenhängen in
+der "Welt technischer Komponenten", so stellt der _Ansatz der
+S-Kurven-Analyse_ ähnliche Fragen. Keiner der Ansätze beantwortet die Frage
+nach den Konstitutionsprinzipien jener Kontinuitätslinien hinreichend
+präzise - für den S-Kurven-Ansatz haben wir allerdings mit hinreichender
+Evidenz Produktkataloge aus der Ökonomie als Strukturierungsprinzip
+herausgearbeitet.  Dort entsteht im Gesamtbild eine lose Menge von S-Kurven
+als unzusammenhängende "Lebenslinien" - so der Begriff noch in (Altschuller
+1979) -, die durch einen mysteriösen Transformationsprozess "Übergang zur
+nächsten S-Kurve" verbunden sind, in dem weder das "Vorher - Nachher" noch die
+Dynamik des Übergangs selbst einer Apriori-Analyse zugänglich sind - eine der
+Hauptforderungen "exakter Wissenschaft".
+
+Shpakovskys Evolutionsbäume müssen sich dieselbe Frage nach den
+Konstitutionsprinzipien von Kontinuitätslinien gefallen lassen, allerdings
+orientieren sie sich an der Entfaltung _technisch-funktionaler_ Parameter und
+thematisieren einen technisch-technologischen _Ausdifferenzierungsprozess_.
+Der Ansatz geht damit in seiner Erklärungsqualität deutlich über das
+S-Kurven-Modell hinaus, obwohl sich Entwicklungsperspektiven _einsatzfähiger_
+technischer Komponenten nicht auf _funktionale_ Betrachtungen reduzieren
+lassen, sondern auch "energetischen Durchsatz" (das TRIZ-Desiderat für
+_infrastrukturelle Betriebsbedingungen_) und "Kosteneffizienz" (die
+_ökonomischen Betriebsbedingungen_ - kodiert im mysteriösen TRIZ-Quantum
+"Idealität") berücksichtigen müssen.
+
+Evolutionsbäume zeichnen also zeitlich-kausale Entwicklungszusammenhänge in
+der "Welt technischer Komponenten" nach. In Shpakovskys Darstellung fallen
+mehrere Setzungen auf:
+
+1. Die betrachteten Bäume sind nur Teilbäume eines komplexen
+   Entwicklungsgeschehens. Jenes komplexe Entwicklungsgeschehen ergibt sich
+   erst aus der Zusammenschau _aller_ solcher Bäume und kann dann auch nicht
+   mehr die Übersichtlichkeit der Visualisierung kleinerer Graphen
+   beanspruchen.
+2. Die betrachteten Bäume haben grundsätzlich eine Wurzel und einen "Stamm".
+   Beide Konzepte bleiben erklärungsbedürftig. Während die Wurzel noch durch
+   das Selektionsprinzip für einen solchen Teilbaum begründet werden kann, ist
+   dies für den "Stamm" schon schwieriger. Eine solche "Hauptlinie" ließe sich
+   über quantitative Charakteristika der "Verbreitung" der verschiedenen
+   Varianten begründen. Das hätte allerdings zwei Nachteile: (a) diese
+   "Verbreitung" entwickelt sich selbst, kann also nur dynamisch gefasst
+   werden, und (b) sie lässt sich kaum rein technisch-technologisch fassen.
+3. Die Struktur eines _Baumes_ selbst ist unverständlich. Wieso können
+   Entwicklungslinien nicht zusammenlaufen? Das (in (Koltze/Souchkov)
+   allerdings in einem eigenen Puntk 4.6 etwas separat stehende) _Trimmen_ von
+   Systemen weist sogar methodisch darauf hin, dass das Zusammenführen der
+   Funktionalität mehrerer Komponenten in einer einzigen (durch Feature
+   Transfer) ein wesentliches methodisches Designprinzip ist. 
+
+Hans-Gert Gräbe, 26.01.2021
+
 ## Chat
 
 ### Übersetzungen
