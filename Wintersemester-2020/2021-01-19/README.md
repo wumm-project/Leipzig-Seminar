@@ -171,10 +171,10 @@ damit wenig der originalen russischen Bedeutung.
 Die Übersetzungsodyssee des Begriffs __Trimmen__ ist komplex. Der Begriff
 kommt aus dem Englischen und wird im englisch-deutschen Online-Wörterbuch mit
 
-    kürzen, trimmen, beschneiden, besetzen [Stoff] textil., stutzen [kürzen,
-    in Form bringen], zustutzen, kappen, zurechtmachen, abkanten, ordnen,
-    begradigen [Oberflächen], versäubern, zusammenstreichen, ausrüsten,
-    garnieren, behauen nett machen
+> kürzen, trimmen, beschneiden, besetzen [Stoff] textil., stutzen [kürzen, in
+> Form bringen], zustutzen, kappen, zurechtmachen, abkanten, ordnen,
+> begradigen [Oberflächen], versäubern, zusammenstreichen, ausrüsten,
+> garnieren, behauen nett machen
 
 übersetzt. Im Deutschen wird er (nach Wikipedia) für "Stutzen" (prune) oder
 "Abgleichen" (align, adjust) verwendet, die Reübersetzungen sind also
