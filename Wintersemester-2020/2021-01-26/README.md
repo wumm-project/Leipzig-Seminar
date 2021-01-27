@@ -49,5 +49,5 @@ Insofern werden keine universalen Gesetze abgeleitet, sondern wiederum (nur) Ges
 
 ## Literatur
 
-B.I.Goldovsky 1983 - *System der Gesetzmäßigkeiten des Aufbaus und der Entwicklung technischer Systeme*
-Vladimir Petrov 2020 - *Gesetze und Gesetzmäßigkeiten der Entwicklung von Systemen*
+* B.I.Goldovsky 1983 - *System der Gesetzmäßigkeiten des Aufbaus und der Entwicklung technischer Systeme*
+* Vladimir Petrov 2020 - *Gesetze und Gesetzmäßigkeiten der Entwicklung von Systemen*
