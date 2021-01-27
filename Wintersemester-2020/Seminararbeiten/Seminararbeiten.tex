@@ -7,16 +7,16 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{25. Januar 2021}
+\date{26. Januar 2021}
 
 \begin{document}
 \maketitle
 
 \section{Hintergrund}
 
-Im Bereich der TRIZ-Forschung wurde vor einem Jahr ein TRIZ Summit
-Ontologie-Projekt\footnote{Siehe \url{https://triz-summit.ru/onto_triz/} (in
-  Russisch).}  begonnen, um die verschiedenen Teile der TRIZ-Theorie
+Im Bereich der TRIZ-Forschung wurde vor einem Jahr das \emph{TRIZ Summit
+  Ontologie-Projekt}\footnote{Siehe \url{https://triz-summit.ru/onto_triz/}
+  (in Russisch).}  begonnen, um die verschiedenen Teile der TRIZ-Theorie
 ontologisch zu „kartieren“ und die wesentlichen Zusammenhänge zwischen den
 einzelnen Teilen mit Mitteln semantischer Technologien zu erfassen. Hierzu
 liegen aktuell vor
@@ -53,21 +53,22 @@ In \cite{Kuryan2019} wird das Projekt genauer beschrieben, in
 \cite{Kuryan2020} der aktuelle Stand dargestellt. Andere Vorarbeiten fanden
 wenig Berücksichtigung\footnote{Details dazu auf der Webseite
   \url{https://wumm-project.github.io/Ontology.html}.}, insbesondere weder
-\cite{IDM2011} noch \cite{VDI}. Im Herbst 2020 lief eine Webinarreihe (in
-Russisch), deren Materialien auch verfügbar\footnote{Siehe
+\cite{IDM2011} noch \cite{GSA} oder \cite{VDI}. Im Herbst 2020 lief eine
+Webinarreihe (in Russisch), deren Materialien auch verfügbar\footnote{Siehe
   \url{https://wumm-project.github.io/OntologyWebinar}.} und teilweise ins
 Englische übersetzt sind.
 
-Arbeitsgrundlage ist ein Glossar von V. Souchkov \cite{SG}, wobei dessen
-Einträge sowohl drei TRIZ-Generationen (TRIZ-1..3) als auch 5 Kategorien
-(Basisbegriffe, Modelle, Regeln, Begriffsgruppen, Synonyme) zugeordnet
-werden. Ein Webinarteilnehmer wies auf einen weiteren Thesaurus \cite{GSA} auf
-den einschlägigen russischen Altschullerseiten hin, der bereits multilingual
-ist.
+Arbeitsgrundlage der TRIZ Summit Ontologie-Projekts ist ein Glossar von
+V. Souchkov \cite{SG}, wobei dessen Einträge sowohl drei TRIZ-Generationen
+(TRIZ-1..3) als auch 5 Kategorien (Basisbegriffe, Modelle, Regeln,
+Begriffsgruppen, Synonyme) zugeordnet werden. Ein Webinarteilnehmer wies auf
+einen weiteren Thesaurus \cite{GSA} auf den einschlägigen russischen
+Altschullerseiten hin, der bereits multilingual vorliegt.
 
 Im Rahmen des WUMM-Projekts wurden und werden Teile dieser Ontologisierungen
-nachmodelliert\footnote{Siehe dazu das Verzeichnis \texttt{Ontologies} im
-  github-Repo \url{https://github.com/wumm-project/RDFData}}, die im Original
+nachmodelliert und im \emph{WUMM RDFData github Repo}\footnote{Siehe dazu das
+  Verzeichnis \texttt{Ontologies} im github-Repo
+  \url{https://github.com/wumm-project/RDFData}} hochgeladen, die im Original
 bisher ausschließlich durch grafische Ontogramme sowie die Möglichkeit einer
 visuellen Inspektion im verwendeten OSA-Ontologie-Editor\footnote{Siehe
   \url{https://onto.devtas.ru/ts2o1} (in Russisch).} zugänglich sind.  Diese
@@ -84,7 +85,9 @@ aktuellen Version 1.2 auf diese Weise aufbereitet.  Details dazu weiter unten.
 \section{Themen für Seminararbeiten}
 
 In den Seminararbeiten soll am Punkt (3) weitergearbeitet werden, indem für
-eine konkrete Ontokarte $X$ 
+eine konkrete Ontokarte $X$ (bzw. einen anderen konkreten
+Modellierungszusammenhang im TRIZ-Kontext entsprechend den mündlichen
+Absprachen)
 \begin{itemize}[noitemsep]
 \item[(A)] die Zusammenhänge für das WUMM-Projekt in RDF in einer gemeinsamen
   Rahmensetzung nachmodelliert werden sowie
@@ -95,8 +98,27 @@ Während (A) primär einen ingenieur-technischen Charakter hat, erfordert (B)
 stärker einen akademischen Zugang von Recherche und Vergleich einschlägiger
 Publikationen.
 
-Die Seminararbeit soll in {\LaTeX} erstellt werden und möglichst in Englisch
-verfasst sein.
+Informationen zu (A) liegen typischerweise in Form von RDF-Diagrammen vor, wie
+etwa die \emph{Top Level Ontologie} in Abbildung 1, und sollen in eine
+Turtle-Datei vergleichbar zur Datei \texttt{TopLevel.ttl} im WUMM RDFData
+github Repo überführt werden. 
+
+\begin{center}
+  \includegraphics[width=\textwidth]{3.png}\\
+  \textbf{Abbildung 1:} Die Top Level Ontologie als RDF Graph
+\end{center}
+
+Entsprechende Quellen für einen Startpunkt Ihrer Recherchen finden Sie in der
+README-Datei in Ihrem Projektverzeichnis.
+
+Für jede Seminararbeit ist ein Unterverzeichnis eingerichtet. Bitte forken Sie
+(so weit noch nicht geschehen) das Repo auf einen eigenen Account, erstellen
+die Seminararbeit und geben Zwischen- und das Endergebnis über einen
+Merge-Request zur Begutachtung frei. Ich werde mich bemühen, die Ergebnisse
+kurzfristig zu durchzusehen und mit Ihnen zu besprechen.
+
+Die Seminararbeit selbst soll in {\LaTeX} erstellt werden und möglichst in
+Englisch verfasst sein.
 
 \section{Grundlagen des WUMM-Ontologie-Projekts}
 
@@ -106,15 +128,14 @@ diese Aktivitäten, um
 \begin{enumerate}[noitemsep]
 \item eine Remodellierung nach semantischen Standards auszuführen,
 \item die Materialien multilingual aufzubereitet und
-\item auf dieser Basis eine LOD-Infrastruktur aufzubauen
+\item auf dieser Basis eine LOD-Infrastruktur aufzubauen,
 \end{enumerate}
 und so eine bessere Basis für die erforderlichen sozialen Abstimmungsprozesse
 zu schaffen.
 
 \subsection{Die SKOS Ontologie als Basis}
 
-Dafür wird im WUMM-Kontext die SKOS-Ontologie \cite{SKOS} verwendet, die mit
-den Konzepten (K)
+Dafür wird die SKOS-Ontologie \cite{SKOS} verwendet, die mit den Konzepten (K)
 \begin{itemize}[noitemsep]
 \item \texttt{skos:Concept}, \texttt{skos:prefLabel}, \texttt{skos:altLabel}
   -- Objektbenennung
@@ -122,17 +143,21 @@ den Konzepten (K)
   Objekteigenschaften
 \item \texttt{skos:narrower}, \texttt{skos:broader} -- Objektrelationen
 \end{itemize}
-einen ersten Bschreibungsrahmen für Begrifflichkeiten bietet.  Auf der Basis
-wurden bisher drei Quellen ausgewertet,  
+einen ersten Beschreibungsrahmen für Begrifflichkeiten bietet.  Für die
+genauere Bedeutung der einzelnen Konzepte wird auf \cite{SKOS} veriesen.  Auf
+der Basis wurden bisher drei Quellen ausgewertet,
 \begin{itemize}[noitemsep]
 \item der mehrsprachige Thesaurus \cite{GSA},
 \item das Glossar der VDI-Norm \cite{VDI} und
-\item das Glossar \cite{SG}, Version 1.2, von V. Souchkov
+\item das Glossar \cite{SG}, Version 1.2, von V. Souchkov.
 \end{itemize}
-sowie das Glossar des TRIZ Summit Projekts teilweise integriert.
-
-\textbf{Ziel des praktischen Teils der vergebenen Seminararbeiten} ist es, zu
-diesem Teil weitere Beschreibungen beizutragen.
+Außerdem wurde das Glossar des TRIZ Summit Projekts teilweise integriert. Das
+Glossar ist derzeit öffentlich nur in einer HTML-Veresion verfügbar. Interne
+maschinenlesbare Versionen wurden mit dem Verweis auf den vorläufigen
+Charakter der Modellierung noch nicht zur Veröffentlichung freigegeben.  Auch
+lassen sich Daten in der OSA-Plattform nicht ohne Weiteres über eine API in
+gängigen RDF-Formaten extrahieren. Deshalb habe ich den genaueren Abgleich
+zugunsten der Konsolidierung des WUMM-Thesaurus zurückgestellt. 
 
 \subsection{URIs und Namensräume}
 
