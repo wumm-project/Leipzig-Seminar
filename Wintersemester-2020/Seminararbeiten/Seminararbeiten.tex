@@ -2,12 +2,12 @@
 \usepackage{ls}
 \usepackage[german]{babel}
 
-\title{Themen für Seminararbeiten\\ im Modul \emph{Angewandte Informatik}\\ im
-  Wintersemester 2020/21}
+\title{Handreichung für die Seminararbeiten\\ im Modul \emph{Angewandte
+    Informatik}\\ im Wintersemester 2020/21}
 
 \author{Hans-Gert Gr\"abe}
 
-\date{26. Januar 2021}
+\date{27. Januar 2021}
 
 \begin{document}
 \maketitle
@@ -144,44 +144,44 @@ Dafür wird die SKOS-Ontologie \cite{SKOS} verwendet, die mit den Konzepten (K)
 \item \texttt{skos:narrower}, \texttt{skos:broader} -- Objektrelationen
 \end{itemize}
 einen ersten Beschreibungsrahmen für Begrifflichkeiten bietet.  Für die
-genauere Bedeutung der einzelnen Konzepte wird auf \cite{SKOS} veriesen.  Auf
+genauere Bedeutung der einzelnen Konzepte wird auf \cite{SKOS} verwiesen.  Auf
 der Basis wurden bisher drei Quellen ausgewertet,
 \begin{itemize}[noitemsep]
 \item der mehrsprachige Thesaurus \cite{GSA},
 \item das Glossar der VDI-Norm \cite{VDI} und
 \item das Glossar \cite{SG}, Version 1.2, von V. Souchkov.
 \end{itemize}
-Außerdem wurde das Glossar des TRIZ Summit Projekts teilweise integriert. Das
-Glossar ist derzeit öffentlich nur in einer HTML-Veresion verfügbar. Interne
-maschinenlesbare Versionen wurden mit dem Verweis auf den vorläufigen
+Außerdem wurde das Glossar des TRIZ Summit Projekts teilweise integriert.
+Deren Glossar ist derzeit öffentlich nur in einer HTML-Version verfügbar.
+Interne maschinenlesbare Versionen wurden mit dem Verweis auf den vorläufigen
 Charakter der Modellierung noch nicht zur Veröffentlichung freigegeben.  Auch
 lassen sich Daten in der OSA-Plattform nicht ohne Weiteres über eine API in
 gängigen RDF-Formaten extrahieren. Deshalb habe ich den genaueren Abgleich
-zugunsten der Konsolidierung des WUMM-Thesaurus zurückgestellt. 
+zugunsten der Konsolidierung des WUMM-Thesaurus zurückgestellt.
 
 \subsection{URIs und Namensräume}
 
 Eines der zentralen Probleme der Überführung der vorhandenen Datenbestände zu
-TRIZ-Konzepten ist die Zuweiseung sinnvoller URIs, da die einzelnen
+TRIZ-Konzepten ist die Zuweisung sinnvoller URIs, da die einzelnen
 Glossareinträge in den bisherigen Quellen einzig durch ihre Bezeichner
 („labels“) identifiziert werden.  Hier macht auch die OSA-Plattform keine
 Ausnahme, denn die dort vergebenen URIs (sowohl für die Knoten als auch die
-Kanten des aufgebauten RDF-Graphen) sind nach außen nicht sichtbar.
+Kanten des aufgebauten RDF-Graphen) sind nicht öffentlich sichtbar.
 
 Bei der maschinellen Transformation der Datenbestände in ein valides
-RDF-Format wurden automatisiert URIs erzeugt, die alle im Namensraum
-\texttt{tc:} (wie \emph{TRIZ Concepts}) liegen. Eine wesentliche, noch
-bevorstehende Aufgabe ist die Unifizierung der URIs aus den Quellen, also die
-Zusammenführung von verschiedenen URIs, welche denselben Begriff bezeichnen.
-Diese Arbeit soll demnächst in Angriff genommen werden. 
+RDF-Format wurden für alle Konzepte automatisiert URIs erzeugt, die im
+Namensraum \texttt{tc:} (wie \emph{TRIZ Concepts}) liegen. Eine wesentliche
+noch bevorstehende Aufgabe ist die Unifizierung dieser URIs, also die
+Zusammenführung von verschiedenen URIs, welche auf denselben Begriff
+verweisen.  Diese Arbeit soll demnächst in Angriff genommen werden.
 
 \subsection{Provenienz von Erläuterungen}
 
-Ein wesentliches Problem dieser ontologischen Modellierung ist die genauere
+Ein weiteres Problem dieser ontologischen Modellierung ist die genauere
 Darstellung der Provenienz der einzelnen Erläuterungen. Hierzu wurden die
 unter (K) aufgeführten SKOS-Konzepte für jede einzelne Quelle durch Notationen
 aus dem Namensraum \texttt{od:} verfeinert, um zunächst die „Welten“ der
-einzelnen Autoren und TRIZ-Schulen zu erfassen.
+einzelnen Autoren und TRIZ-Schulen separat zu erfassen.
 
 \texttt{od:} ist der Namensraum, den das WUMM-Projekt verwendet, um dort seine
 eigenen Konzepte zu entwickeln.  Eine genauere Beschreibung dieses Namensraums
@@ -200,17 +200,132 @@ usw. Siehe dazu die RDF-Daten selbst, die über den SPARQL-Endpunkt
 \begin{center}
   \url{http://wumm.uni-leipzig.de:8891/sparql}
 \end{center}
-des WUMM-Projekts durchsucht werden können. Aus technischen Gründen tragen
-alle Datensätze den RDF-Typ \texttt{skos:Concept}, auch wenn als 
+des WUMM-Projekts durchsucht werden können.
+
+Die \emph{Verwendung verschiedener Prädikatsbezeichner} erlaubt es, auf
+einfache Weise die Herkunft -- etwa von Definitionen -- einzelnen Quellen
+bereits auf der Ebene von Tripeln zuzuordnen:
 \begin{center}
-  \texttt{od:GSAThesaurusEntry} \texttt{rdfs:subClassOf} \texttt{skos:Concept}
+  (Begriff X) -- (wird in Quelle A definiert als) -- (Definition von X in
+  Quelle A)\\ 
+  (Begriff X) -- (wird in Quelle B definiert als) -- (Definition von X in
+  Quelle B) 
 \end{center}
-diese Information inferiert werden könnte. 
+Würde einheitlich \texttt{skos:definition} verwendet, so müssten komplexere
+Konstrukte
+\begin{center}
+  (Begriff X) -- \texttt{skos:definition} -- \Big[\parbox{8cm}{\centering
+      (Quelle A) -- (Definition von X in Quelle A)\\
+      (Quelle B) -- (Definition von X in Quelle B)
+    }\Big]
+\end{center}
+eingesetzt werden. Auch wenn dies das finale Ziel der Übung ist, soll im
+aktuellen Stand der Modellierung die einfachere Form verwendet werden, obwohl
+damit die Zahl der Prädikate aufgebläht wird. Eine Konsolidierung der
+Modellierung in Richtung des „idealen Endresultats“ ist später durch eine
+einfache Modelltransformation zu erreichen.
+
+Dasselbe gilt für die Verwendung von provenienzabhängigen Unterklassen von
+\texttt{skos:Concept}.  Da der Abgleich der für Konzepte vergebenen URIs
+unterklassenübergreifend erfolgen muss, sind die Instanzen jeder Unterklasse
+auch als \texttt{skos:Concept} ausgezeichnet, obwohl dies auch über einen
+generalen Satz wie etwa
+\begin{center}\tt
+  od:VDIGlossaryEntry rdfs:subClassOf skos:Concept
+\end{center}
+beschrieben und dann durch Inferenz festgestellt werden könnte. Das Inferieren
+von Eigenschaften gehört aber zu komplexeren semantischen OWL-Konzepten und
+wird von einfachen RDF-Stores nicht unterstützt. Auch hier gilt, dass die
+Daten später durch eine einfache Modelltransformation konsolidiert werden
+können.
+
+\subsection{Modellierung eines TRIZ-Teilgebiets}
+
+Typischerweise liegt das zu modellierende Teilgebiet als RDF-Graph
+vergleichbar zu Abbildung 1 vor.  Dazu ist eine eigene Turtle-Datei anzulegen
+und zu befüllen, welche diesen Graphen nachmodelliert.
+
+Die RDF-Modellierung eines solchen Graphen sollte in drei Schritten
+vorgenommen werden:
+\begin{enumerate}
+\item Modelliere zunächst die Knoten als TRIZ-Konzepte, wobei möglichst URIs
+  und damit Konzepte aus dem vereinten Glossar (also bereits vorhandene
+  Instanzen vom Typ \texttt{skos:Concept}) verwendet werden sollten.  Die
+  Knotenbeschriftung ist entweder schon im Glossar oder als
+  \texttt{skos:prefLabel} oder (in einzelnen Fällen) als
+  \texttt{skos:altLabel} (in Ihrer Datei) zu ergänzen, ggf. auch
+  mehrsprachig. In jedem Fall muss das Label einen RDF-Sprachtag tragen.
+
+  Wenn Sie neue Konzept-URIs einführen, müssen diese im Namensraum
+  \texttt{tc:} liegen und als sowohl zum RDF-Typ \texttt{skos:Concept} als
+  auch \texttt{od:AdditionalConcept} gehörend ausgezeichnet sein.
+\item Modelliere danach die Kanten, wobei neue oder bereits vorhandene
+  Prädikat-URIs aus dem Namensraum \texttt{od:} verwendet werden.  Die Wahl
+  der URI sollte sich an einem kurzen englischen Begriff als „sprechender
+  Name“ orientieren.
+
+  Prädikate haben zunächst keinen Label, allerdings müssen Kanten im Graphen
+  mit gleichem Label durch dieselbe Prädikat-URI modelliert werden.  Zur
+  Auswahl von Prädikat-URIs unten mehr. 
+\item Ergänze schließlich Definitionen, Erläuterungen und Beispiele zu den
+  Knoten (so weit vorhanden), die als \texttt{skos:definition},
+  \texttt{skos:node} und \texttt{skos:example} zu modellieren sind. Auch hier
+  bitte konsequent RDF-Sprachtags einsetzen. Wenn Sie differierende
+  Erläuterungen desselben Prädikats aus unterschiedlichen Quellen erfassen,
+  dass spalten Sie das SKOS-Prädikat in verschiedene Unterprädikate aus dem
+  Namensraum \texttt{od:} auf wie im Abschnitt 3.3 erläutert.
+\end{enumerate}
+Wenn Sie nicht genau wissen, wie eine Objektinformation an einen Knoten
+angebunden werden soll, dann verwenden Sie das Prädikat
+\texttt{rdfs:comment}.
+
+Bitte beachten Sie, dass Literale in einfachen Quotes keine Zeilenumbrüche
+enthalten dürfen und Quotes im Text durch $\backslash$ ausgezeichnet werden
+müssen. Am einfachsten vermeiden Sie einfache Quotes innerhalb von Strings und
+ersetzen diese durch German Quotes („...“) oder French Quotes («...» in der
+russischen und deutschen Schreibweise oder »...« in der französi\-schen).
+
+Mehrzeilige Literale können durch Einschließen in Triple-Quotes erstellt
+werden. Dann müssen Quotes im Text auch nicht ausgezeichnet werden.
+
+\subsection{Modellieren von Prädikaten und UML-Diagramme}
+
+Ein Prädikat wird in einem RDF-Graphen durch einen beschrifteten gerichteten
+Pfeil zwischen zwei Knoten markiert.   Oft gibt es zu einem Prädikat auch ein
+inverses Prädikat (etwa \texttt{org:memberOf} und \texttt{org:hasMember}), das
+einem Pfeil in umgekehrter Richtung entspricht.
+
+Bitte beachten Sie, dass die Pfeile in den OSA-Diagrammen des TRIZ Summit
+Ontologie-Projekts willkürlich gerichtet sind, da im Modellierungs-Tool stets
+\emph{beide} Prädikate (direktes und inverses) benannt werden können, die
+Richtung der Pfeile im Diagramm willkürlich ist und in verschiedenen Ansichten
+auch wechselt.  Das gilt nicht für Cmap\footnote{Cmap ist ein weiteres
+  grafisches Modellierungstool, das im TRIZ Summit Ontologie-Projekt
+  eingesetzt wurde.}-Diagramme wie in Abbildung 1.
+
+In Arbeiten wie etwa \cite{IDM2011} werden \emph{UML-Diagramme} zur
+Modellierung verwendet, siehe etwa \cite[Fig. 2]{IDM2011}. Neben (wenigen)
+benannten Pfeilen werden dort UML-Konstrukte wie Unterklasse und Aggregation
+zur Darstellung von Beziehungen zwischen Klassen verwendet sowie
+Objekteigenschaften durch Klassenattribute modelliert.  Diese müssen alle
+durch Prädikate vom Typ \texttt{rdf:Property} \cite{RDFS} modelliert werden,
+da erst in höheren semantischen Konzepten wie OWL \cite{OWL} Verfeinerungen
+wie \texttt{owl:ObjectProperty} zur Verfügung stehen.  Es gibt keine
+etablierten Standards, wie relationale UML-Konstrukte nach RDF umgesetzt
+werden, weshalb Sie hier frei in der Wahl von Prädikat-URIs (aus dem
+Namensraum \texttt{od:}) sind, wenn Sie gleiche UML-Konstrukte auch gleich
+benennen.  Bei Attributen ist die Sache einfach, da sowohl der
+\texttt{rdfs:domain} (die Klasse, zu welcher das Attribut gehört) als auch das
+Label des Attributs feststeht.  Allein der \texttt{rdfs:range} muss
+gelegentlich genauer bestimmt werden, wenn er nicht \texttt{rdfs:Literal} ist.
+Bitte orientieren Sie sich auch hier an der Umsetzung der Top Level Ontologie
+in der Datei \texttt{TopLevel.ttl}.
+
 
 \begin{thebibliography}{xxx}
 \bibitem{IDM2011} D. Cavallucci, F. Rousselot, C. Zanni (2011). An ontology
   for TRIZ. Proc. TRIZ Future Conference 2009. Procedia Engineering 9,
-  251–260.  \url{https://doi.org/10.1016/j.proeng.2011.03.116}.
+  251–260.\\  \url{https://doi.org/10.1016/j.proeng.2011.03.116}.
 \bibitem{Kuryan2019} A. Kuryan, V. Souchkov, D. Kucharavy (2019). Towards
   ontology of TRIZ. TRIZ Developers Summit, Minsk 2019.
   \\ \url{https://wumm-project.github.io/Texts/Ontology-TDS2019-en.pdf}
@@ -220,15 +335,19 @@ diese Information inferiert werden könnte.
   \\ \url{https://wumm-project.github.io/Texts/Ontology-TDS2020-en.pdf}
 \bibitem{SG} V. Souchkov. Glossary of TRIZ and TRIZ-related terms. Mehrere
   Versionen seit 1991. Letzte Version 1.2 von 2014.
-\bibitem{GSA} Thesaurus auf \texttt{altshuller.ru}.\\
+\bibitem{GSA} Thesaurus auf \texttt{altshuller.ru}.
   \url{https://www.altshuller.ru/thesaur/thesaur.asp}
 \bibitem{VDI} VDI Richtlinie 4521. Erfinderisches Problemlösen mit TRIZ.\\
   Blatt 1: Grundlagen und Begriffe (April 2016).\\ Blatt 2: Zielbeschreibung,
   Problemdefinition und Lösungspriorisierung (April 2018).\\ Blatt 3:
   Lösungssuche (Juli 2020). 
+\bibitem{OWL} W3C (2004). OWL Web Ontology Language Guide.\\
+  \url{https://www.w3.org/TR/2004/REC-owl-guide-20040210}
 \bibitem{SKOS} W3C (2008). SKOS Simple Knowledge Organization System RDF
   Schema.\\
   \url{https://www.w3.org/TR/2008/WD-skos-reference-20080829/skos.html}
+\bibitem{RDFS} W3C (2014). RDF Schema 1.1.
+  \url{https://www.w3.org/TR/rdf-schema}
 \end{thebibliography}
 
 \end{document}
