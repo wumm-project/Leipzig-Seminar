@@ -231,16 +231,13 @@ __Folien__:
 * [Begriffswelten](LOD.pdf)
 * [Daten und Informationen](DatenInformationen.pdf)
 
-## 28.1.: Daten, Information, Wissen. Digitale Handlungsräume
+## 28.1.: Storytelling, Begriffsbildungen, Information und Sprache
 
 __Literaturliste__:
 * Helmut Klemm (2003). Ein großes Elend. Informatik-Spektrum 26, S. 267–273. 
   DOI 10.1007/s00287-003-0316-2
 * Capurro, Fleissner, Hofkirchner (2000). Is a unified theory of information
   feasible? A Trialogue. <http://www.capurro.de/trialog.htm>
-* Berger, Luckmann (1969/1994): Die gesellschaftliche Konstruktion der
-  Wirklichkeit: eine Theorie der Wissenssoziologie. Fischer Taschenbuch
-  Verlag. ISBN 978-3-596-26623-4.
 
 __Zusatzliteratur__:
 * [Rafael Capurro](http://www.capurro.de/)
@@ -256,29 +253,32 @@ __Lernziele__:
 * Internet als "Welt von Fiktionen"
 * Storytelling und Handeln
 * Information und Sprache
-* Was ist Wissen? 
 
 __Folien__:
 * [Information und Sprache](Storytelling.pdf)
-* [Wissen und Handeln](Wissen.pdf)
 
-## 4.2..: Kooperatives Handeln in der bürgerlichen Gesellschaft
+## 4.2.: Wissen und Handeln
 
 __Literaturliste__:
-* TBA
+* Berger, Luckmann (1969/1994): Die gesellschaftliche Konstruktion der
+  Wirklichkeit: eine Theorie der Wissenssoziologie. Fischer Taschenbuch
+  Verlag. ISBN 978-3-596-26623-4.
 
 __Lernziele__:
 * Menschliche Praxen als widersprüchliches Verhältnis von begründeten
-  Erwartungen und erfahrernen Ergebnissen
-* Sozialisierungsbedingungen von Wissen und von Handeln
+  Erwartungen und erfahrenen Ergebnissen
+* Sozialisierungsbedingungen von Wissen und kooperativem Handeln
 * Kooperative Verfahrensweisen und deren Weiterentwicklung
 * Bedingungen der Möglichkeit des Handels in der bürgerlichen Gesellschaft 
 
-## offen: Entwicklung kapitalistischer Unternehmensformen. Netzkooperation
+__Folien__:
+* [Wissen und Handeln](Wissen.pdf)
+
+## offen: Kooperatives Handeln im digitalen Wandel
 
 __Lernziele__:
 * Grundformen kapitalistischer Unternehmen und deren Verhältnis zu den
-  Konzepten Innovation, Genialität und geistigem Eigentum
+  Konzepten Innovation, Genialität und geistigem Eigentum im digitalen Wandel 
 * Bedingtheiten und Notwendigkeit von Open Culture
 
 __Folien__:
