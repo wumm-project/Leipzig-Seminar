@@ -7,7 +7,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{27. Januar 2021}
+\date{28. Januar 2021}
 
 \begin{document}
 \maketitle
@@ -272,7 +272,7 @@ vorgenommen werden:
   \texttt{skos:node} und \texttt{skos:example} zu modellieren sind. Auch hier
   bitte konsequent RDF-Sprachtags einsetzen. Wenn Sie differierende
   Erläuterungen desselben Prädikats aus unterschiedlichen Quellen erfassen,
-  dass spalten Sie das SKOS-Prädikat in verschiedene Unterprädikate aus dem
+  dann spalten Sie das SKOS-Prädikat in verschiedene Unterprädikate aus dem
   Namensraum \texttt{od:} auf wie im Abschnitt 3.3 erläutert.
 \end{enumerate}
 Wenn Sie nicht genau wissen, wie eine Objektinformation an einen Knoten
@@ -283,7 +283,9 @@ Bitte beachten Sie, dass Literale in einfachen Quotes keine Zeilenumbrüche
 enthalten dürfen und Quotes im Text durch $\backslash$ ausgezeichnet werden
 müssen. Am einfachsten vermeiden Sie einfache Quotes innerhalb von Strings und
 ersetzen diese durch German Quotes („...“) oder French Quotes («...» in der
-russischen und deutschen Schreibweise oder »...« in der französi\-schen).
+russischen und deutschen Schreibweise oder »...« in der französi\-schen).  Die
+entsprechenden Zeichen sind auf gängigen deutschen Tastaturen in der
+Alt-Gr-Belegung verfügbar. 
 
 Mehrzeilige Literale können durch Einschließen in Triple-Quotes erstellt
 werden. Dann müssen Quotes im Text auch nicht ausgezeichnet werden.
@@ -316,11 +318,36 @@ werden, weshalb Sie hier frei in der Wahl von Prädikat-URIs (aus dem
 Namensraum \texttt{od:}) sind, wenn Sie gleiche UML-Konstrukte auch gleich
 benennen.  Bei Attributen ist die Sache einfach, da sowohl der
 \texttt{rdfs:domain} (die Klasse, zu welcher das Attribut gehört) als auch das
-Label des Attributs feststeht.  Allein der \texttt{rdfs:range} muss
+Label des Attributs gegeben sind.  Allein der \texttt{rdfs:range} muss
 gelegentlich genauer bestimmt werden, wenn er nicht \texttt{rdfs:Literal} ist.
 Bitte orientieren Sie sich auch hier an der Umsetzung der Top Level Ontologie
-in der Datei \texttt{TopLevel.ttl}.
+in der Datei \texttt{TopLevel.ttl}, insbesondere an den dort bereits
+verwendeten Prädikat-URIs.
 
+\section{Werkzeuge}
+
+Im Zuge des Seminars haben Sie gezeigt, dass Sie mit {\LaTeX} umgehen können.
+Bitte verwenden Sie möglichst die Style-Vorlage \texttt{ls.sty} im Repo für
+die grundsätzlichen Definitionen und ergänzen Sie dies lokal in Ihrer
+\LaTeX-Präambel.  \texttt{ls.sty} kann etwa durch einen symbolischen Link in
+Ihrem Arbeitsverzeichnis verfügbar gemacht werden.
+
+Das Erstellen einer RDF-Ontologie bedarf keiner besonderen Werkzeuge, da eine
+Turtle-Datei eine Textdatei ist und mit jedem Texteditor erzeugt und
+bearbeitet werden kann, der plain text (!) liefert.  Für die Validierung und
+Transformation solcher Dateien haben sich die \emph{Redland RDF Libraries}
+\url{http://librdf.org} und dort besonders das Kommandozeilen-Tool
+\texttt{rapper}\footnote{\url{http://librdf.org/raptor/rapper.html}.  In
+  gängigen Linux-Distributionen kann das über die Paketverwaltung installiert
+  werden. } bewährt.
+Mit \texttt{rapper -gc (RDF-Datei)} kann damit die Syntax einer RDF-Datei
+validiert, mit 
+\begin{center}\tt
+  rapper -g (Eingabedatei) -o (format)
+\end{center}
+eine Eingabedatei in ein anderes RDF-Format (turtle, ntriples) umgewandelt
+oder im selben Format normalisiert (und formatiert) werden.  Die Ausgabe
+erfolgt auf \texttt{stdout} und muss ggf. umgelenkt werden.
 
 \begin{thebibliography}{xxx}
 \bibitem{IDM2011} D. Cavallucci, F. Rousselot, C. Zanni (2011). An ontology
@@ -333,7 +360,7 @@ in der Datei \texttt{TopLevel.ttl}.
   TRIZ Ontology. Current State and Perspectives. TRIZ Developers Summit 2020
   (in Russisch). Englische Übersetzung:
   \\ \url{https://wumm-project.github.io/Texts/Ontology-TDS2020-en.pdf}
-\bibitem{SG} V. Souchkov. Glossary of TRIZ and TRIZ-related terms. Mehrere
+\bibitem{SG} V. Souchkov. Glossary of TRIZ and TRIZ-related Terms. Mehrere
   Versionen seit 1991. Letzte Version 1.2 von 2014.
 \bibitem{GSA} Thesaurus auf \texttt{altshuller.ru}.
   \url{https://www.altshuller.ru/thesaur/thesaur.asp}
