@@ -136,15 +136,29 @@ diesbezüglich auch sehr interessant.
 
 [09:23] Immanuel Thoke : Gesetze der Dialektik nach Engels?
 
+Zu den Gesetzen und der Geschichte der Dialektik gibt es viele spannende
+Bücher, zu empfehlen (Holz 2011).
+
 [09:27] graebe : Widerspruch zwischen Spezialisierung und Universalisierung
 eines Systems. Wird der gelöst durch "design for component" und "design from
 component"?
 
+Siehe dazu (Gräbe 2020).
+
 [09:49] graebe : Wie ordnet sich in dieses Schema die Entwicklung des
 OSI-Modells ein?
 
+Bezieht sich auf "Änderung der Struktur technischer Systeme" und fragt, in
+welchem Umfang der in der VL diskutierte Zusammenhang von Interpretation und
+Formalisierung mit dem Punkt "Wechselbeziehungen zum Obersystem" hinreichend
+erfasst ist.  Behauptung war, dass der Begriff _Obersystem_ überladen ist,
+einmal im Sinne von "Fabrik - Maschine", die in einer gemeinsamen Sprache
+beschrieben werden können und anders wie im OSI-Modell, wo die eine Ebene erst
+die _Sprachelemente_ schafft, die auf der nächsten Ebene (im "Obersystem")
+erforderlich sind.
+
 [10:02] Immanuel Thoke : potenzielle Überabzählbarkeit der
-Übergangsbedingungen in sozialen Systemen("persönliche Freiheit") reduziert
+Übergangsbedingungen in sozialen Systemen ("persönliche Freiheit") reduziert
 sich dann eben auf Konventionen und Institutionalisierungsprozesse, damit das
 System realisierbar ist.
 
@@ -157,7 +171,72 @@ methodischer Ansatz zur Separierung in Raum und Zeit dieser Facetten.
 
 ## Anmerkungen
 
+Es zeichnet sich immer mehr ab, dass der Gesetzesbegriff in der Wissenschaft
+und in einem ingenieur-technischen Kontext unterschiedlich zu fassen sind.
+Beides hängt mit der Notwendigkeit zusammen, die eigenen Praxen durch valide
+begründete Beschreibungsformen zu begleiten, die akzeptierten interpersonalen
+Standards genügen. Die Rigorosität derartiger Begründungen unterscheidet sich
+bereits innerhalb der Wissenschaftssphäre - ein Physiker mag die Differenz
+zweier divergenter Reihen bilden und als Ergebnis "pi/3" verkünden, was einem
+Mathematiker die Haare zu Berge steigen lässt. Auf eine Begründung dieser aus
+mathematischer Sicht unzulässigen Operation mag die für seine Physikerkollegen
+vollkommen akzeptable Antwort kommen: "Aus physikalischen Gründen".
+
+Petrovs Unterscheidung von _Gesetz_ (notwendiges, wesentliches, nachhaltiges,
+sich wiederholendes Phänomen) und _Gesetzmäßigkeit_ (Existenz und Entwicklung
+in Übereinstimmung mit den Gesetzen) legt einen Zusammenhang zwischen
+Begründungselementen (Gesetz) und Entwicklung durch begründetes Handeln nahe.
+Letzteres verstehe ich so, dass ingenieur-technisches Handeln in einem
+kooperativen Kontext mit einem Begründungserfordernis verbunden ist, das
+dieses Handeln auf Grundsätze (eben Gesetze) zurückführt, die _in diesem
+Kontext_ anerkannt sind. Nur auf diese Weise kann Handeln von Dritten
+nachvollzogen und deren Handeln anschlussfähig gestaltet werden.
+
+Wir bewegen uns mit einem solchen Ansatz im Kontext einer Wissenstheorie etwa
+von (Berger/Luckmann 1966) mit Wissen als "legitimen Sinndeutungen",
+allerdings mit der besonderen Betonung einer Kontextualisierung innerhalb
+kooperativer Zusammenhänge, wmoit diese "legitimen Sinndeutungen" (als
+kontextualisierte "Gesetze") selbst stratifiziert sind: Als legitim innerhalb
+eines Kontexts anerkannte Sinndeutungen bedürfen einer umfassenderen (oder
+auch nur anderen) Legitimation und damit auch weiterer Begründung in anderen
+Kontexten.
+
+Genau auf diese Weise ist aber der große Korpus von "Mustern" und Gesetzen in
+(Goldovsky 1983) aufgebaut, wenn man ihn von hinten nach vorn liest.  Es wird
+ein mehrschichtiges Begründungsuniversum aufgebaut, in dem die verschiedenen
+"Muster" und "Gesetzmäßigkeiten" (Begriff hier nach Goldovsky) technischer
+Entwicklung (Abschnitt 3-6) in Begründungszusammenhänge eingebettet, die auf
+"allgemeinere Gesetze" im Sinne legitimer Sinndeutungen auf allgemeinerer
+Ebene verweisen, die ihrerseits in Begründungszusammenhänge in noch
+allgemeineren Kontexten eingebettet sind. Die oberste Ebene bilden allgemeine
+Gesetze der Dialektik und der Bewegung von Materie, die ohne weitere
+Begründung genannt sind. Ähnliches gilt für soziale Gesetze, wobei diese
+bereits teilweise untereinander begründet werden.
+
+Im Unterschied zu den "Gesetzen (ingenieur)-technischer Entwicklung", die wie
+moderne Technikpraxen als deren Grundlage erst jüngeren Datums sind, gehören
+jene nicht weiter begründeten "allgemeinen Gesetze" bereits seit Jahrhunderten
+zum diskursiven Begründungskanon und sind damit auch scheinbar diskursiv
+befestigt, wie eine Vielzahl von Monografien zum Thema nahelegt. Allerdings
+steht die Frage, sich solche Begründungserfordernisse mit dem Fortschreiben
+menschlicher Praxen weiterentwickeln und ob nicht massive Wechsel in
+Basistechnologien, wie sie etwa den digitalen Wandel begleiten, auch zu
+Umbrüchen in den institutionalisierten Formen jener Begründungserfordernisse
+führen.  
+
+Hans-Gert Gräbe, 29.01.2021
+
 ## Literatur
 
-* B.I.Goldovsky 1983 - *System der Gesetzmäßigkeiten des Aufbaus und der Entwicklung technischer Systeme*
-* Vladimir Petrov 2020 - *Gesetze und Gesetzmäßigkeiten der Entwicklung von Systemen*
+* Peter L. Berger, Thomas Luckmann (1966). The Social Construction of
+  Reality. 
+* B.I.Goldovsky 1983 - System der Gesetzmäßigkeiten des Aufbaus und der
+  Entwicklung technischer Systeme
+* Hans-Gert Gräbe (2020).  Die Menschen und ihre Technischen Systeme. LIFIS
+  Online, Mai 2020.  <http://dx.doi.org/10.14625/graebe_20200519>
+* Hans Heinz Holz (2011). Dialektik. Problemgeschichte von der Antike bis zur
+  Gegenwart
+* Vladimir Petrov 2020 - Gesetze und Gesetzmäßigkeiten der Entwicklung von
+  Systemen
+
+
