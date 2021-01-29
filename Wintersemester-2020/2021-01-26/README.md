@@ -131,8 +131,7 @@ jemals _ein_ Graviton finden kann, eher findet man sein Antiteilchen.. ;)
 [Frank Wilczeks](https://de.wikipedia.org/wiki/Frank_Wilczek) Werk ist
 diesbezüglich auch sehr interessant.
 
-
-## (noch nicht kommentierter) Chat
+## Chat
 
 [09:23] Immanuel Thoke : Gesetze der Dialektik nach Engels?
 
@@ -153,7 +152,7 @@ welchem Umfang der in der VL diskutierte Zusammenhang von Interpretation und
 Formalisierung mit dem Punkt "Wechselbeziehungen zum Obersystem" hinreichend
 erfasst ist.  Behauptung war, dass der Begriff _Obersystem_ überladen ist,
 einmal im Sinne von "Fabrik - Maschine", die in einer gemeinsamen Sprache
-beschrieben werden können und anders wie im OSI-Modell, wo die eine Ebene erst
+beschrieben werden können und anders als im OSI-Modell, wo die eine Ebene erst
 die _Sprachelemente_ schafft, die auf der nächsten Ebene (im "Obersystem")
 erforderlich sind.
 
@@ -201,17 +200,17 @@ eines Kontexts anerkannte Sinndeutungen bedürfen einer umfassenderen (oder
 auch nur anderen) Legitimation und damit auch weiterer Begründung in anderen
 Kontexten.
 
-Genau auf diese Weise ist aber der große Korpus von "Mustern" und Gesetzen in
-(Goldovsky 1983) aufgebaut, wenn man ihn von hinten nach vorn liest.  Es wird
-ein mehrschichtiges Begründungsuniversum aufgebaut, in dem die verschiedenen
+Genau auf diese Weise ist aber der große Korpus von Begründungen in (Goldovsky
+1983) aufgebaut, wenn man ihn von hinten nach vorn liest.  Es wird ein
+mehrschichtiges Begründungsuniversum aufgebaut, in dem die verschiedenen
 "Muster" und "Gesetzmäßigkeiten" (Begriff hier nach Goldovsky) technischer
-Entwicklung (Abschnitt 3-6) in Begründungszusammenhänge eingebettet, die auf
-"allgemeinere Gesetze" im Sinne legitimer Sinndeutungen auf allgemeinerer
-Ebene verweisen, die ihrerseits in Begründungszusammenhänge in noch
-allgemeineren Kontexten eingebettet sind. Die oberste Ebene bilden allgemeine
-Gesetze der Dialektik und der Bewegung von Materie, die ohne weitere
-Begründung genannt sind. Ähnliches gilt für soziale Gesetze, wobei diese
-bereits teilweise untereinander begründet werden.
+Entwicklung (Abschnitt 3-6) in Begründungszusammenhänge eingebettet werden,
+die auf "allgemeinere Gesetze" im Sinne legitimer Sinndeutungen auf
+allgemeinerer Ebene verweisen, die ihrerseits in Begründungszusammenhänge in
+noch allgemeineren Kontexten eingebettet sind. Die oberste Ebene bilden
+allgemeine Gesetze der Dialektik und der Bewegung von Materie, die ohne
+weitere Begründung genannt sind. Ähnliches gilt für soziale Gesetze, wobei
+diese bereits teilweise untereinander begründet werden.
 
 Im Unterschied zu den "Gesetzen (ingenieur)-technischer Entwicklung", die wie
 moderne Technikpraxen als deren Grundlage erst jüngeren Datums sind, gehören
@@ -222,7 +221,8 @@ steht die Frage, sich solche Begründungserfordernisse mit dem Fortschreiben
 menschlicher Praxen weiterentwickeln und ob nicht massive Wechsel in
 Basistechnologien, wie sie etwa den digitalen Wandel begleiten, auch zu
 Umbrüchen in den institutionalisierten Formen jener Begründungserfordernisse
-führen.  
+führen.  (Goldovsky 1983) ist selbst ein Beleg für diese Weiterentwicklung von
+Begründungszusammenhängen.
 
 Hans-Gert Gräbe, 29.01.2021
 
