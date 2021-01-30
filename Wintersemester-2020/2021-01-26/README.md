@@ -194,7 +194,7 @@ nachvollzogen und deren Handeln anschlussfähig gestaltet werden.
 Wir bewegen uns mit einem solchen Ansatz im Kontext einer Wissenstheorie etwa
 von (Berger/Luckmann 1966) mit Wissen als "legitimen Sinndeutungen",
 allerdings mit der besonderen Betonung einer Kontextualisierung innerhalb
-kooperativer Zusammenhänge, wmoit diese "legitimen Sinndeutungen" (als
+kooperativer Zusammenhänge, womit diese "legitimen Sinndeutungen" (als
 kontextualisierte "Gesetze") selbst stratifiziert sind: Als legitim innerhalb
 eines Kontexts anerkannte Sinndeutungen bedürfen einer umfassenderen (oder
 auch nur anderen) Legitimation und damit auch weiterer Begründung in anderen
@@ -230,13 +230,13 @@ Hans-Gert Gräbe, 29.01.2021
 
 * Peter L. Berger, Thomas Luckmann (1966). The Social Construction of
   Reality. 
-* B.I.Goldovsky 1983 - System der Gesetzmäßigkeiten des Aufbaus und der
-  Entwicklung technischer Systeme
+* B.I.Goldovsky (1983). System der Gesetzmäßigkeiten des Aufbaus und der
+  Entwicklung technischer Systeme. <https://wumm-project.github.io/TTS>
 * Hans-Gert Gräbe (2020).  Die Menschen und ihre Technischen Systeme. LIFIS
   Online, Mai 2020.  <http://dx.doi.org/10.14625/graebe_20200519>
 * Hans Heinz Holz (2011). Dialektik. Problemgeschichte von der Antike bis zur
   Gegenwart
-* Vladimir Petrov 2020 - Gesetze und Gesetzmäßigkeiten der Entwicklung von
-  Systemen
+* Vladimir Petrov (2020). Gesetze und Gesetzmäßigkeiten der Entwicklung von
+  Systemen. <https://wumm-project.github.io/TTS>
 
 
