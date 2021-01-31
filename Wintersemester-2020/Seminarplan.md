@@ -115,7 +115,7 @@ Diskussionsleitung: Tom Strempel
 
 Diskussionsleitung: Daniel Schubert
 
-## 02.02. Generaldebatte und Lessons learned
+## 02.02. OTSM-TRIZ, Generaldebatte und Lessons learned
 
 (Khomenko 2007)
 
