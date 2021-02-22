@@ -175,11 +175,10 @@ __Folien__:
 * Zusatz: [Foliensatz zu (Schetsche 2006)](DigitalerWandel.pdf)
 * [Chat](chat-20201203.md)
 
-## 10.12.: Datenmodellierung und Modellierung von Begriffswelten
+## 10.12.: Internet Basics. RDF Grundbegriffe
 
 __Literaturliste__:
-* Marc Zobrist (2018). Ontologien und Datenmodelle. 
-  * <https://histhub.ch/ontologien-und-datenmodelle/>
+* Relevante Wikipedia-Einträge
 * Hans-Gert Gräbe, Thomas Riechert, Michael Martin (2011). OD.FMI –
   Engineering operativ-administrativer Daten für die universitäre Lehre.
   Manuskript, eingereicht und abgelehnt bei der Delfi 2011, September 2011, TU
@@ -188,12 +187,33 @@ __Literaturliste__:
 * Hans-Gert Gräbe (seit 2007). Das OD.FMI Projekt. 
   * <http://www.informatik.uni-leipzig.de/~graebe/OLAT/LVPlanung/ODQuelle.html>
 
+__Folien__:
+* [Internet Basics](InternetBasics.pdf)
+* [RDF Grundlagen](RDF.pdf)
+
 __Lernziele__:
-* Modellierung von Begriffswelten als Teil der Modellierung Technischer
-  Systeme
+* Internet Basics
+* Das OSI 7-Schichten-Modell
+* Verwaltung von IPs und Rechnernamen
 * RDF-Grundbegriffe URI, Namensraum, Subjekt, Prädikat, Objekt
 
-## 17.12.: RDF. Basics, Konzepte, Werkzeuge
+## 14.1.: Modellierung von Begriffswelten. RDF. Konzepte, Werkzeuge
+
+__Literaturliste__:
+* Marc Zobrist (2018). Ontologien und Datenmodelle. 
+  * <https://histhub.ch/ontologien-und-datenmodelle/>
+
+__Lernziele__:
+* RDF Konzepte. RDF-Graphen, Mustersuche, SPARQL Anfragesprache
+* RDF Werkzeuge. RDF Stores, SPARQL Endpunkte
+
+__Folien__:
+
+* [RDF Grundlagen](RDF.pdf)
+* [Begriffswelten](LOD.pdf)
+* [Chat](chat-20210114.md)
+
+## 21.1.: Die Linked Open Data Cloud. Begriffswelten und der Giant Global Graph
 
 __Literaturliste__:
 * Open Data Support (2013). Trainingsmodul 1.3 Einführung
@@ -201,62 +221,79 @@ __Literaturliste__:
   * [RDF-Einfuehrung.pdf](../Material/RDF-Einfuehrung.pdf)
 
 __Lernziele__:
-* RDF Konzepte. RDF-Graphen, Mustersuche, SPARQL Anfragesprache
-* RDF Werkzeuge. RDF Stores, SPARQL Endpunkte
-
-## 7.1.: Die Linked Open Data Cloud. Ontologien und Begriffswelten. Der Giant Global Graph
-
-__Literaturliste__:
-* TBA
-
-__Lernziele__:
+* Modellierung von Begriffswelten als Teil der Modellierung Technischer
+  Systeme
 * Modellierung gemeinsamer Begriffswelten als kooperativer sozialer Prozess
-* Bedeutung gemeinsamer Begriffswelten für das geordnete Zusammenleben 
+* Bedeutung gemeinsamer Begriffswelten für das geordnete Zusammenleben
+* Fiktion als verkürzte Sprechweise über eine gesellschaftliche Normalität
 
-## 14.1.: Daten und Information
+__Folien__:
+* [Begriffswelten](LOD.pdf)
+* [Daten und Informationen](DatenInformationen.pdf)
+
+## 28.1.: Storytelling, Begriffsbildungen, Information und Sprache
 
 __Literaturliste__:
-* TBA
+* Helmut Klemm (2003). Ein großes Elend. Informatik-Spektrum 26, S. 267–273. 
+  DOI 10.1007/s00287-003-0316-2
+* Capurro, Fleissner, Hofkirchner (2000). Is a unified theory of information
+  feasible? A Trialogue. <http://www.capurro.de/trialog.htm>
+
+__Zusatzliteratur__:
+* [Rafael Capurro](http://www.capurro.de/)
+  * Informatik: Von der Technokratie zur Lebenskunst (1995).
+    <http://www.capurro.de/zuerich.htm>
+  * Das Capurrosche Trilemma (1998). <http://www.capurro.de/janich.htm>
+* [Peter Janich](https://de.wikipedia.org/wiki/Peter_Janich)
+  * Was ist Wahrheit? Eine philosophische Einführung. ISBN 3-406-41052-9
+  * Was ist Erkenntnis? Eine philosophische Einführung. ISBN 3-406-45916-1.
+  * Was ist Information? Kritik einer Legende. ISBN 978-3-518-58470-5
 
 __Lernziele__:
-* _Fiktionen_ als normale Form der Komplexitätsreduktion in interpersonalen
-  Handlungszusammenhängen
-* Das OSI-7-Schichtenmodell und Aspekte der Sprachschöpfung beim Design
-  Technischer Systeme
+* Internet als "Welt von Fiktionen"
+* Storytelling und Handeln
+* Information und Sprache
 
-## 21.1.: Kooperatives Handeln in der bürgerlichen Gesellschaft
+__Folien__:
+* [Information und Sprache](Storytelling.pdf)
+
+## 4.2.: Wissen und Handeln
 
 __Literaturliste__:
-* TBA
+* Berger, Luckmann (1969/1994): Die gesellschaftliche Konstruktion der
+  Wirklichkeit: eine Theorie der Wissenssoziologie. Fischer Taschenbuch
+  Verlag. ISBN 978-3-596-26623-4.
 
 __Lernziele__:
 * Menschliche Praxen als widersprüchliches Verhältnis von begründeten
-  Erwartungen und erfahrernen Ergebnissen
-* Sozialisierungsbedingungen von Wissen und von Handeln
+  Erwartungen und erfahrenen Ergebnissen
+* Sozialisierungsbedingungen von Wissen und kooperativem Handeln
 * Kooperative Verfahrensweisen und deren Weiterentwicklung
 * Bedingungen der Möglichkeit des Handels in der bürgerlichen Gesellschaft 
 
-## 28.1.: Technikentwicklung und die Entwicklung kapitalistischer Unternehmensformen. Netzkooperation
+__Folien__:
+* [Wissen und Handeln](Wissen.pdf)
 
-__Literaturliste__:
-* TBA
+## offen: Kooperatives Handeln im digitalen Wandel
 
 __Lernziele__:
 * Grundformen kapitalistischer Unternehmen und deren Verhältnis zu den
-  Konzepten Innovation, Genialität und geistigem Eigentum
+  Konzepten Innovation, Genialität und geistigem Eigentum im digitalen Wandel 
 * Bedingtheiten und Notwendigkeit von Open Culture
 
-## 4.2.: Herausbildung einer Open Culture als notwendiger Begleitprozess technischer Höherentwicklung
+__Folien__:
+* [Kooperatives Handeln](KooperativesHandeln.pdf)
 
-__Literaturliste__:
-* TBA
+## offen: Herausbildung einer Open Culture
 
 __Lernziele__:
 * Open Culture und Infrastrukturentwicklung
 * Services und Geschäftsmodelle unter den Bedingungen von Open Culture
 
+__Folien__:
+* [Open Culture](OpenCulture.pdf)
+
 ## 5.2.: Optional: Interdisziplinäres Gespräch
 
-17. Interdisziplinäres Gespräch „Zur Entwicklung technischer und allgemeiner
-Systeme“ als Blockseminar.
+17. Interdisziplinäres Gespräch "Evolution of Technical and General Systems" 
 * <http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/LeipzigerGespraeche/2021-02-05>

@@ -3,7 +3,10 @@
 ## Literatur 
 
 * Genrich Altschuller (1979).  Schöpfertum als exakte Wissenschaft (in
-  Russisch).  Deutsch 1983 "Erfinden -- (k)ein Problem".
+  Russisch).  Deutsch: "Erfinden -- (k)ein Problem". Verlag Technik, Berlin
+  1983.  
+* Genrich Altschuller, Alexander Seljuzki (1980).  Flügel für Ikarus.  Deutsch:
+  Verlag Mir, Moskau und Urania-Verlag, Leipzig 1983.
 * Gaetano Cascini (2012). TRIZ-based Anticipatory Design of Future Products
   and Processes. Journal of Integrated Design and Process Science 16 (3),
   29-63.  
@@ -94,33 +97,31 @@ Diskussionsleitung: Michael Koch
 
 Diskussionsleitung: Tarek Stelzle
 
-## 05.01. Evolution technischer und allgemeiner Systeme bei M.S. Rubin
+## 12.01. Evolution technischer und allgemeiner Systeme bei M.S. Rubin
 
 (Rubin 2019)
 
 Diskussionsleitung: Immanuel Thoke
 
-## 12.01. Evolutionsbäume Technischer Systeme bei N.A. Shpakovsky
+## 19.01. Evolutionsbäume Technischer Systeme bei N.A. Shpakovsky
 
 (Shpakovsky 2016)
 
 Diskussionsleitung: Tom Strempel
 
-## 19.01. Evolution von allgemeinen Systemen bei Goldovsky 1983
+## 26.01. Evolution von allgemeinen Systemen bei Goldovsky 1983
 
 (Goldovsky 1983) (Petrov 2020a)
 
 Diskussionsleitung: Daniel Schubert
 
-## 26.01. Grundlagen der OTSM-TRIZ
+## 02.02. OTSM-TRIZ, Generaldebatte und Lessons learned
 
 (Khomenko 2007)
 
 <http://www.trizminsk.org/d/Khomenko_Heritage(EN).pdf>
 
-## 02.02. Generaldebatte und Lessons learned
-
 ## 05.02. Interdisziplinäres Gespräch ...
 
-... zum Thema _Evolution Technischer und Allgemeiner Systeme_ als
+... zum Thema _Evolution of Technical and General Systems_ als
 Online-Workshop.
