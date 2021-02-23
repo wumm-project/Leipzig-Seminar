@@ -1,0 +1,188 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ls}
+\usepackage[german]{babel}
+
+\newenvironment{code}{\tt \begin{tabbing}
+\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
+{\end{tabbing}}
+\def\dq{{\char34}}
+
+\title{Erste Anmerkungen zur Modellierung der Ontologien}
+
+\author{Hans-Gert Gr\"abe}
+
+\date{23. Februar 2021}
+
+\begin{document}
+\maketitle
+
+\section{Hintergrund}
+
+Wie bereits in der \emph{Handreichung zu den Seminararbeiten} ausgeführt,
+schließen die auszufüh\-renden Modellierungen an das \emph{TRIZ Summit
+  Ontologie-Projekt} (TOP) an.  Im Gegensatz zu den dort bisher ausgeführten
+„großflächigen Ontologisierungen“, mit denen grundlegende Zusammenhänge
+verschiedener Teile der TRIZ-Theorie ontologisch „kartiert“ wurden, geht es in
+den Seminararbeiten darum, einzelne Teilbereiche semantisch genauer zu
+modellieren.
+
+\section{Abstraktonsebenen der Modellierung}
+
+Dabei geht es um eine „Modellierung der Modellierung“, denn die mit einer
+Ontologie angestrebte Klärung von Begriffen und Konzepten ist dazu gedacht, in
+realweltlichen Modellierungskontexten praktisch zur Anwendung zu kommen.
+Diese „Modellierung der Modellierung“ referenziert einen typischen
+ingenieur-technischen Kontext, in dem der \emph{Modellierung} von Systemen als
+Basis des weiteren planmäßigen Vorgehens (in Projektierung, Implementierung,
+Betrieb, Wartung, Weiterentwicklung) eine zentrale Rolle zukommt.
+
+Dabei sind \emph{mehrere Abstraktionsebenen} zu unterscheiden, was im TOP
+allerdings nicht ausreichend geschieht. Dies sind
+\begin{itemize}[noitemsep]
+\item [0.] Die Ebene des \emph{realweltlichen Systems}, auf das sich die
+  konkrete ingenieur-technische Modellierung bezieht. Diese Ebene ist nur
+  \emph{praktisch} zugänglich. In der Praxis muss sich die Modellierung
+  bewähren, alle dabei auftretenden Probleme, die inhärente
+  Widersprüchlichkeit von Modell und Praxis eingeschlossen, sind erst  und
+  usschließlich auf der \emph{Modellebene} sprachlich formulierbar in der
+  \emph{Anwendung} der dort verfügbaren Konzepte.  Diese Konzepe müssen also
+  nicht nur das System (genauer: sein Modell) selbst beschreiben können,
+  sondern auch die erforderlichen Aspekte seines Betriebs.
+\item [1.] Die Ebene der \emph{Modellierung} eines konkreten Systems, die
+  \emph{Modellebene}. Die Ontologie stellt hierfür die Sprachmittel, Konzepte
+  (RDF-Subjekte) und Eigenschaften (RDF-Prädikate) zur Verfügung, die auf
+  dieser Ebene \emph{angewendet} werden. Diese Ebene ist zugleich die
+  \emph{Ebene der methodologischen Praxis}. 
+\item [2.] Die Ebene des \emph{Metamodells} als die eigentliche
+  Ontologie-Ebene, auf der die systemischen Konzepte \emph{vereinbart}
+  (definert) unter Berücksichtigung und \emph{Anwendung} der methodologischen
+  Konzepte, deren Sprachmittel auf der Metaebene 2 zur Verfügung gestellt
+  werden. 
+\item [3.] Die \emph{Metaebene 2 der Modellierung}, auf der die
+  methodologischen Konzepte \emph{definiert} werden.  
+\end{itemize}
+
+In den weiteren Beispielen spielen drei Namensräume eine Rolle:
+\begin{itemize}[noitemsep]
+\item \texttt{ex:} ist der Namensraum einer konkreten Modellierung (Ebene 1). 
+\item \texttt{tc:} ist der Namensraum der TRIZ-Konzepte (Ebene 2, Subjekte).
+\item \texttt{od:} ist der Namensraum der WUMM-eigenen Konzepte
+  (methodologische Subjekte, Prädikate Ebene 2). 
+\end{itemize}
+
+\section{Typische Modellierungssituationen}
+
+\subsection{Morphologischer Kasten}
+
+Dabei handelt es sich um ein Konzept, das eine endliche Zahl von festen Werten
+annehmen kann (ein \texttt{enum} Datentyp in Java). 
+
+\emph{Beispiel:}  Farbe (rot, grün, gelb, blau)
+
+\begin{code}
+  ex:MeiersAuto od:hatFarbe tc:gruen . \\[4pt]
+  tc:Farbe a skos:Concept, od:AdditionalConcept ;\\
+  \>skos:prefLabel {\dq}Color{\dq}@en, {\dq}Farbe{\dq}@de ;\\
+  \>od:allowedValues tc:red, tc:green, tc:yellow, tc:blue .\\[4pt]
+  tc:FarbValue a skos:Concept, od:AdditionalConcept ;\\
+  \>skos:prefLabel {\dq}Value for Color{\dq}@en, {\dq}Farbwert{\dq}@de .\\[4pt]
+  tc:green a skos:Concept, tc:FarbValue, od:AdditionalConcept ;\\
+  \>skos:prefLabel {\dq}green{\dq}@en, {\dq}grün{\dq}@de .\\[4pt]
+  ...  
+\end{code}
+
+\subsection{Modellierung grundsätzlicher Konzepte}
+
+Das TOP-Modell folgt einem Vererbungskonzept, in dem sich allgemeine
+Unterscheidungen auf speziellere Konzepte vererben.  So wird etwa für Flüsse
+unterschieden zwischen Flow, FlowModel, FlowAsIs, FlowAsShouldBe. Das ist
+einerseits eine methodische Setzung (Ebene 3), andererseits wirkt sich diese
+Setzung erst auf Ebene 1 aus. Deshalb soll diese Information jeder Instanz
+über die Eigenschaft \texttt{od:hasMode} mit dem Wertebereich \texttt{tc:Mode}
+zugeordnet werden.
+
+\begin{code}
+  ex:MeiersAuto od:hasMode tc:theModelAsIs . \\[4pt]
+  
+  tc:Mode a skos:Concept, od:AdditionalConcept ;\\
+  \>skos:prefLabel {\dq}Modeling mode{\dq}@en, {\dq}Modellierungsmodus{\dq}@de ;\\
+  \>od:allowedValues od:theReal, od:theModel, od:theRealAsIs,\\
+  \>\>od:theRealAsShouldBe, od:theModelAsIs, od:theModelAsShouldBe .\\[4pt]
+  
+  tc:theModelAsIs a skos:Concept, od:AdditionalConcept ;\\
+  \> od:valueOf tc:ModeValue;\\ 
+  \>skos:prefLabel {\dq}the model as is{\dq}@en, {\dq}Modell, wie es
+  ist{\dq}@de .\\[4pt] 
+  ...  
+\end{code}
+
+Im TOP-Modell werden Eigenschaften von Klassen nur spärlich modelliert. Zum
+Beispiel kann ein Fluss ein \emph{diskreter Fluss} sein. Dies ist ein Wert
+einer Eigenschaft dieses Flusses. Um eine solche Beziehung zu modellieren,
+müssen die \emph{Eigenschaft} selbst, der \emph{Wertebereich der Eigenschaft}
+und die möglichen \emph{Werte} dieses Wertebereichs modelliert werden.
+
+\begin{code}
+  ex:MeiersFluss od:hasFlowType tc:discreteFlow . \\[4pt]
+  
+  od:hasFlowType a rdfs:Property;\\
+    \>rdfs:domain tc:Flow;\\
+    \>rdfs:range tc:FlowType .\\[4pt]
+
+  tc:FlowType a skos:Concept, od:AdditionalConcept ;\\
+    \>od:allowedValues tc:complexFlow, tc:discreteFlow, tc:continousFlow ;\\
+    \>skos:prefLabel {\dq}Type of flow{\dq}@en, {\dq}Flussart{\dq}@de ;\\
+    \>skos:altLabel {\dq}Art der Strömung{\dq}@de .\\[4pt]
+  
+  tc:discreteFlow a skos:Concept, od:AdditionalConcept;\\
+    \>od:valueOf tc:FlowType ;  \\
+    \>skos:prefLabel {\dq}discrete flow{\dq}@en, {\dq}Diskreter Fluss{\dq}@de .\\[4pt] 
+  ...  
+\end{code}
+
+Das Ganze ist schwer abzugrenzen von einer Klassenhierarchie, die mit
+Prädikatverfeinerungen \texttt{od:hasSubConcept} von \texttt{skos:narrower}
+modelliert werden sollten.  Das dazu inverse Prädikat \texttt{od:subConceptOf}
+wird aus Gründen der Übersichtlichkeit ebenfalls verwendet; es kann aber
+später auch maschinell ergänzt werden.
+
+\begin{code}
+  ex:MeiersFluss od:hasStaticFlowComponent tc:Pump . \\[4pt]
+  
+od:hasStaticFlowComponent a rdfs:Property;\\
+    \>rdfs:domain tc:Flow;\\
+    \>rdfs:range tc:StaticFlowComponent .\\[4pt]
+  
+tc:StaticFlowComponent\\
+    \>od:hasSubConcept tc:ControlUnit, tc:Receiver, tc:Source, tc:Channel ;\\
+    \>a skos:Concept, od:AdditionalConcept ;\\
+    \>skos:prefLabel {\dq}static components of the flow{\dq}@en,\\
+    \>\>{\dq}statische Flusskomponenten{\dq}@de .\\[4pt]
+
+tc:ControlUnit\\
+    \>od:subConceptOf tc:StaticFlowComponent ;\\
+    \>od:hasSubConcept tc:Pump, tc:Valve ;\\
+    \>skos:prefLabel {\dq}Control Unit{\dq}@en, {\dq}Steuerungssystem{\dq}@de ;\\
+    \>skos:altLabel {\dq}Management System{\dq}@en, {\dq}Managementsystem{\dq}@de .\\[4pt]
+
+tc:Pump\\
+    \>od:subConceptOf tc:ControlUnit ;\\
+    \>skos:prefLabel {\dq}pump{\dq}@en, {\dq}Pumpe{\dq}@de ;\\
+    \>a skos:Concept, od:AdditionalConcept .
+\end{code}
+
+Hier wäre zunächst abzugrenzen, ob \texttt{tc:Pump} mit in die Menge der
+Konzepte aufgenommen wird oder der Begriff zu speziell ist. Das ist natürlich
+eine Geschmacksfrage.
+
+Die Modellierung über Klassenhierarchien hat den Vorteil, dass man das Objekt
+des Prädikats \texttt{od:hasStaticFlowComponent} mit Instanzen der gesamten
+Klassenhierarchie belegen kann. Dessen genauen Typ kann man dann nur über eine
+zweite Modellanfrage ermitteln.  Alternativ hätte man in diesem Beispiel mit
+Prädikaten \texttt{od:hasStaticFlowComponent} und \texttt{od:hasControlUnit}
+arbeiten können, um den Objekttyp bereits am Prädikatbezeichner unterscheiden
+zu können.
+
+
+
+\end{document}
