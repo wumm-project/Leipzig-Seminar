@@ -1,0 +1,577 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+
+# Flow 
+tc:Flow
+    a skos:Concept ;
+    od:SouchkovCategory tc:FlowAnalysis ;
+    a od:SouchkovGlossaryEntry ;
+    od:SouchkovDefinition "A sequence of events that have the same common feature."@en ;
+    od:LebedevDefinition "motion of material, energetic or informational objects within a system" ;
+    skos:prefLabel "Flow"@en, "Fluss"@de, "Поток"@ru ;
+    skos:altLabel "Stream"@en, "Strom"@de .
+
+od:hasFlowType
+    a rdfs:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:FlowType .
+
+od:hasFlowSubstance
+    a rdfs:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:FlowSubstance .
+    
+od:hasFlowFunctionality
+    a rdfs:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:FlowFunctionality .
+
+od:hasFlowDefect
+    a rdfs:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:FlowDefect .
+    
+od:hasFlowSource
+    a rdfs:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:FlowSource .
+
+od:hasStaticFlowComponent
+    a rdfs:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:StaticFlowComponent .
+
+od:hasMethodOfDescription
+    a rdfs:Property ;
+    rdfs:domain tc:FlowModel, tc:FlowAsIs, tc:FlowModelAsShouldBe ;
+    rdfs:range tc:MethodOfDescription .
+
+# Flow subclasses
+## Flow types
+
+tc:FlowType
+    od:allowedValues tc:complexFlow, tc:discreteFlow, tc:continousFlow ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Type of flow"@en, "Flussart"@de ;
+    skos:altLabel "Art der Strömung"@de .
+
+ tc:complexFlow
+    od:valueOf tc:FlowType ;
+    skos:prefLabel "complex flow"@en, "Komplexer Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+ tc:discreteFlow
+    od:valueOf tc:FlowType ;
+    skos:prefLabel "discrete flow"@en, "Diskreter Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+ tc:continousFlow
+    od:valueOf tc:FlowType ;
+    skos:prefLabel "continuous flow"@en, "Kontinuierlicher Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+## substance of flows
+tc:FlowSubstance
+    od:allowedValues tc:InformationFlow, tc:EnergyFlow, tc:SubstanceFlow ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Substance of flow"@en, "Fluss-Substanz"@de ;
+    skos:altLabel "Zusammensetzung des Flusses"@de .
+
+tc:InformationFlow
+    od:valueOf tc:FlowSubstance ;
+    skos:prefLabel "information flow"@en, "Informationsfluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:EnergyFlow
+    od:valueOf tc:FlowSubstance ;
+    skos:prefLabel "energy flow"@en, "Energiefluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:SubstanceFlow
+    od:valueOf tc:FlowSubstance ;
+    skos:prefLabel "substance flow"@en, "Stofffluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+##Functions of Flow
+tc:FlowFunctionality
+    od:allowedValues tc:usefulFlow, tc:harmfulFlow, tc:parasiticFlow ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Functionality of the flow"@en, "Funktionalität des Flusses"@de .
+
+tc:usefulFlow
+    od:valueOf tc:FlowFunctionality ;
+    skos:prefLabel "useful flow"@en, "Nützlicher Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:harmfulFlow
+    od:valueOf tc:FlowFunctionality ;
+    skos:prefLabel "harmful flow"@en, "Schädlicher Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:parasiticFlow
+    od:valueOf tc:FlowFunctionality ;
+    skos:prefLabel "parasitic flow"@en, "Parasitärer Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+##Defect of Flow
+tc:FlowDefect
+    od:allowedValues tc:insufficientFlow, tc:excessiveFlow, tc:badControllableFlow, tc:absentFlow ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Defect of the flow"@en, "Unzulänglichkeit des Flusses"@de .
+
+tc:insufficientFlow
+    od:valueOf tc:FlowDefect ;
+    skos:prefLabel "insufficient flow"@en, "Zu schwacher Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:excessiveFlow
+    od:valueOf tc:FlowDefect ;
+    skos:prefLabel "excessive flow"@en, "Zu starker Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:badControllableFlow
+    od:valueOf tc:FlowDefect ;
+    skos:prefLabel "bad controllable flow"@en, "Schlecht kontrollierbarer Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:absentFlow
+    od:valueOf tc:FlowDefect ;
+    skos:prefLabel "absent flow"@en, "Fehlender Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+## Flow Source
+tc:FlowSource
+    od:allowedValues tc:primaryFlow, tc:secondaryFlow ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Source of flow"@en, "Flussquelle"@de .
+
+tc:primaryFlow
+    od:valueOf tc:FlowSource ;
+    od:LebedevDefinition "flow defined by the supersystem" ;
+    skos:prefLabel "primary flow"@en, "Primärer Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:secondaryFlow 
+    od:valueOf tc:FlowSource ;
+    od:LebedevDefinition "A flow, that emerged within the system as a result of a working body performing some useful function." ;
+    skos:prefLabel "secondary flow"@en, "Sekundärer Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+#list of special flows with own definition
+
+## static components
+tc:StaticFlowComponent
+    od:hasSubConcept tc:ControlUnit, tc:Receiver, tc:Source, tc:Channel ;
+    od:LebedevDefinition "(trans)forms the stream and specifies its initial parameters" ;
+    skos:prefLabel "static components of the flow"@en, "statische Flusskomponenten"@de ;
+    skos:altLabel "source flow system components"@en, "Flusskanalsystem"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:ControlUnit
+    od:subConceptOf tc:StaticFlowComponent ;
+    od:hasSubConcept tc:Pump, tc:Valve ;
+    skos:prefLabel "Control Unit"@en, "Steuerungssystem"@de ;
+    skos:altLabel "Management System"@en, "Managementsystem"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:Pump
+    od:subConceptOf tc:ControlUnit ;
+    od:LebedevDefinition "control unit to regulate the flow" ;
+    skos:prefLabel "pump"@en, "Pumpe"@de ;
+    skos:altLabel "flow regulation control"@en, "Durchflussregelungssteuerung"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:Valve
+    od:subConceptOf tc:ControlUnit ;
+    od:LebedevDefinition "unit to control channel conductivity" ;
+    skos:prefLabel "valve"@en, "Ventil"@de ;
+    skos:altLabel "channel conductivity control"@en, "Kanalleitfähigkeitssteuerung"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:Receiver
+    od:subConceptOf tc:StaticFlowComponent ;
+    od:LebedevTerm "Product"@en ;
+    od:LebedevDefinition "That component of the system that is transformed under the influence of a given useful flow (changing at least one of its parameters), or which is directly damaged by the considered harmful flow"@en ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Receiver"@en, "Empfänger"@de ;
+    skos:altLabel "Product"@en .
+
+tc:Source
+    od:subConceptOf tc:StaticFlowComponent ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Source"@en, "Quelle"@de .
+
+tc:EnergySource
+    a skos:Concept, od:AdditionalConcept .
+
+tc:SourceOfPotential
+    a skos:Concept, od:AdditionalConcept .
+
+tc:Channel
+    od:subConceptOf tc:StaticFlowComponent ;
+    od:LebedevDefinition "The component in which the flow moves directly through the system; holds, limits and determines the direction of the flow" ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Channel"@en, "Kanal"@de .
+
+##Method of Description
+tc:MethodOfDescription
+    od:allowedValues tc:TextDescription, tc:ParametricDescription, tc:GraphicDescription ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Method of description"@en, "Methode zur Beschreibung"@de .
+
+tc:TextDescription
+    od:valueOf tc:MethodOfDescription ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "textual description"@en, "Beschreibungstext"@de .
+
+tc:ParametricDescription
+    od:valueOf tc:MethodOfDescription ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "parametric description"@en, "parametrische Beschreibung"@de .
+
+tc:GraphicDescription
+    od:valueOf tc:MethodOfDescription ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "graphical description"@en, "graphische Beschreibung"@de .
+
+# Top Level Flow Analysis Model
+tc:FlowAnalysis
+    cc:attributionName "Flow Analysis Model" ;
+    a od:SouchkovGlossaryEntry, skos:Concept;
+    rdfs:comment "prescriptive base of the flow analysis model" ;
+    rdfs:label "Flow Analysis Model of Olga Eckardt" ;
+    skos:prefLabel "Flow Analysis Model"@en, "Modell der Flussanalyse"@de .
+
+## modal description
+tc:Mode
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Modeling mode"@en, "Modellierungsmodus"@de ;
+    od:allowedValues od:FlowModel, od:FlowModelAsIs, od:FlowModelAsShouldBe .
+
+tc:FlowModel
+    a skos:Concept, od:AdditionalConcept ;
+    od:valueOf tc:Mode ;   
+    skos:prefLabel "the Flow Model"@en, "Flussmodell"@de .
+
+tc:FlowModelAsIs
+    a skos:Concept, od:AdditionalConcept ;
+    od:valueOf tc:Mode ;   
+    skos:prefLabel "the Flow Model as is"@en, "Flussmodell, wie es ist"@de .
+
+tc:FlowModelAsShouldBe
+    a skos:Concept, od:AdditionalConcept ;
+    od:valueOf tc:Mode ;   
+    skos:prefLabel "the Flow Model as it should be"@en, "Flussmodell, wie sein sollte"@de .
+
+od:describesFlow
+    a rdfs:Property ;
+    rdfs:domain tc:FlowModel, tc:FlowAsIs, tc:FlowModelAsShouldBe ;
+    rdfs:range tc:Flow .
+
+od:usesDescriptionMethod
+    a rdfs:Property ;
+    rdfs:domain tc:FlowModel, tc:FlowAsIs, tc:FlowModelAsShouldBe ;
+    rdfs:range tc:MethodOfDescription .
+
+od:analysesFlow
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:Flow .
+
+od:definesGoals
+    a rdfs:Property ;
+    rdfs:domain tc:Context, tc:Requirements ;
+    rdfs:range tc:Goals .
+
+od:followsGoals
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:Goals .
+
+od:proofRequirements
+    a rdfs:Property ;
+    rdfs:domain tc:Goals ;
+    rdfs:range tc:Requirements .
+
+od:compliesRulesOfFlowAnalysis
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:RulesOfFlowAnalysis . 
+
+od:usesTechniquesOfModification
+    a rdfs:Property ;
+    rdfs:domain tc:FlowModelAsIs ;
+    rdfs:range tc:FlowModelAsShouldBe .
+
+od:applyChanges
+    a rdfs:Property ;
+    rdfs:domain tc:FlowModelAsShouldBe ;
+    rdfs:range tc:Flow .
+
+tc:Goals
+    od:hasSubConcept tc:Context, tc:Requirements ;
+    skos:prefLabel "goals"@en, "Ziele"@de ;
+    od:EckardtDefinition "descriptive and perfomative frame of the flow analysis" ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:Context
+    od:subConceptOf tc:Goals ;
+    skos:prefLabel "context"@en, "Kontext"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:Requirements
+    od:subConceptOf tc:Goals ;
+    od:hasPartialCase tc:IncreaseUsefulFlow, tc:ReduceHarmfulFlow, tc:ReduceParasiticFlow ;
+    skos:prefLabel "requirements"@en, "Anforderungen"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:IncreaseUsefulFlow
+    od:isPartOf tc:Requirements ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:ReduceHarmfulFlow
+    od:isPartOf tc:Requirements ;
+    od:includes tc:ReduceParasiticFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:ReduceParasiticFlow
+    od:isPartOf tc:ReduceHarmfulFlow, tc:Requirements ;
+    a skos:Concept, od:AdditionalConcept .
+
+##Rules of Flow Analysis
+
+od:applyRulesofConstruction
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:FlowModelAsIs .
+
+od:applyRulesofEvaluation
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:FlowModelAsIs .
+
+od:applyRulesofConstructionOfInconformRequirements
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:FlowModelAsShouldBe .
+
+od:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:FlowModelAsShouldBe .
+
+od:detects
+    a rdfs:Property ;
+    rdfs:domain tc:RulesOfEvaluation ;
+    rdfs:range tc:FlowDefect .
+
+tc:RulesOfFlowAnalysis
+    a skos:Concept, od:AdditionalConcept ;
+    od:hasSubConcept tc:RulesOfEvaluation, tc:RulesOfConstruction, tc:RulesOfConstructionOfInconformRequirements, tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:RulesOfConstruction
+    od:forms tc:FlowModelAsIs ;
+    od:subConceptOf tc:RulesOfFlowAnalysis ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:RulesOfEvaluation
+    od:issuedAt tc:FlowModelAsIs ;
+    od:subConceptOf tc:RulesOfFlowAnalysis ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:RulesOfConstructionOfInconformRequirements
+    od:subConceptOf tc:RulesOfFlowAnalysis ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems
+    od:subConceptOf tc:RulesOfFlowAnalysis ;
+    a skos:Concept, od:AdditionalConcept .
+
+## Techniques of modification
+
+# od:improves
+#    a rdfs:Property ;
+#    rdfs:domain tc:FlowModelAsShouldBe ;
+#    rdfs:range tc:StaticFlowComponent .
+#
+# od:setsup
+#    a rdfs:Property ;
+#    rdfs:domain  ;
+#    rdfs:range  .
+#
+# od:removes
+#    a rdfs:Property ;
+#    rdfs:domain tc:FlowModelAsShouldBe ;
+#    rdfs:range tc:FlowDisadvantage .
+
+tc:TechniquesOfModification
+    od:issuedAt tc:FlowModelAsIs ;
+    od:forms tc:FlowModelAsShouldBe ;
+    od:hasSubConcept tc:ModificationOfReceiver, tc:ModificationOfSource, tc:ModificationOfChannel, tc:ModificationOfControlUnit ;
+    a skos:Concept, od:AdditionalConcept .
+
+##
+tc:ModificationOfControlUnit
+    od:subConceptOf tc:TechniquesOfModification ;
+    a skos:Concept, od:AdditionalConcept .
+
+##
+tc:ModificationOfReceiver
+    od:subConceptOf tc:TechniquesOfModification ;
+    od:hasSubConcept tc:fortifyWorkspace, tc:improveAdmission, tc:impairAdmission ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:fortifyWorkspace
+    od:subConceptOf tc:ModificationOfReceiver, tc:IncreaseUsefulFlow, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:improveAdmission
+    od:subConceptOf tc:ModificationOfReceiver, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:impairAdmission
+    od:subConceptOf tc:ModificationOfReceiver, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+##
+
+tc:ModificationOfSource
+    od:subConceptOf tc:TechniquesOfModification ;
+    od:hasSubConcept tc:improveRelativeCharacteristica, tc:ModulationOfFlow, tc:addUsefulProperties, tc:exploitGradient, tc:reuseFlow, tc:useAdditionalFlow, tc:exploitResonance, tc:reduceIntensity, tc:avoidFlow, tc:distributeFlowEquallyInTime, tc:turnHarmfulFlowIntoUsefulFlow, tc:compensateWithSecondFlow, tc:overlayWithAntiFlow, tc:annihilateWithSelf, tc:avoidResonance ;
+    a skos:Concept, od:AdditionalConcept .
+
+## affect harmful flow  by upgrading source##
+tc:impairRelativeCharacteristica
+    od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:avoidFlow
+    od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:distributeFlowEquallyInTime
+    od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:turnHarmfulFlowIntoUsefulFlow
+    od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:compensateWithSecondFlow
+    od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:overlayWithAntiFlow
+    od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:annihilateWithSelf
+    od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:avoidResonance
+    od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+## affect useful flow  by upgrading source##
+tc:improveRelativeCharacteristica
+    od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:ModulationOfFlow
+    od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:addUsefulProperties
+    od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:exploitGradient
+    od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:reuseFlow
+    od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:useAdditionalFlow
+    od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:exploitResonance
+    od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:reduceIntensity
+    od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+##
+
+tc:ModificationOfChannel
+    od:subConceptOf tc:TechniquesOfModification ;
+    od:hasSubConcept tc:removeBottleNeck, tc:removeDeadZone, tc:removeGreyZone ,tc:changeFlowMedium, tc:outsourceFlow, tc:reduceAmountOfTransformations, tc:improvePermeability, tc:reduceLength, tc:ModificationOfControlUnit, tc:combineUsefulFlows, tc:channelFlow, tc:implementBottleNeck, tc:implementDeadZone, tc:reducePermeability, tc:extendLength ;
+    a skos:Concept, od:AdditionalConcept .
+
+## affect useful flow by upgrading channel##
+tc:removeBottleNeck
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:removeDeadZone
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:removeGreyZone
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:changeFlowMedium
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:outsourceFlow
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:reduceAmountOfTransformations
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:improvePermeability
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:reduceLength
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:combineUsefulFlows
+    od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+## affect harmful flow by upgrading channel##
+tc:channelFlow
+    od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:implementBottleNeck
+    od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:implementDeadZone
+    od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:reducePermeability
+    od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:extendLength
+    od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    a skos:Concept, od:AdditionalConcept .
+##
