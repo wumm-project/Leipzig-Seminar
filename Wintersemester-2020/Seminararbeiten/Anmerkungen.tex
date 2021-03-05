@@ -1,129 +1,215 @@
 \documentclass[11pt,a4paper]{article}
 \usepackage{ls}
-\usepackage[german]{babel}
+\usepackage[main=english,russian]{babel}
 
 \newenvironment{code}{\tt \begin{tabbing}
 \hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
 {\end{tabbing}}
 \def\dq{{\char34}}
 
-\title{Erste Anmerkungen zur Modellierung der Ontologien}
+\title{First remarks on the WUMM modelling of a TRIZ ontology}
 
 \author{Hans-Gert Gr\"abe}
 
-\date{23. Februar 2021}
+\date{March 5,  2021}
 
 \begin{document}
 \maketitle
 
-\section{Hintergrund}
+\section{Background}
 
-Wie bereits in der \emph{Handreichung zu den Seminararbeiten} ausgeführt,
-schließen die auszufüh\-renden Modellierungen an das \emph{TRIZ Summit
-  Ontologie-Projekt} (TOP) an.  Im Gegensatz zu den dort bisher ausgeführten
-„großflächigen Ontologisierungen“, mit denen grundlegende Zusammenhänge
-verschiedener Teile der TRIZ-Theorie ontologisch „kartiert“ wurden, geht es in
-den Seminararbeiten darum, einzelne Teilbereiche semantisch genauer zu
-modellieren.
+As already stated in the \emph{Handreichung zu den Seminararbeiten}, the
+modelling to be carried out follows the concepts of the \emph{TRIZ Summit
+  Ontology Project} (TOP) \cite{TOP} and should fit in the framework of the
+\emph{WUMM Ontology Companion Project} \cite{WUMM-Ontology}.  In contrast to
+the «large-scale ontologisations» within TOP, which models the basic
+interrelationships of different parts of TRIZ theory, the themes of the
+seminar papers are concerned with semantic modelling of different TRIZ
+sub-areas in more detail.
 
-\section{Abstraktonsebenen der Modellierung}
+\section{Abstraction levels of modelling}
 
-Dabei geht es um eine „Modellierung der Modellierung“, denn die mit einer
-Ontologie angestrebte Klärung von Begriffen und Konzepten ist dazu gedacht, in
-realweltlichen Modellierungskontexten praktisch zur Anwendung zu kommen.
-Diese „Modellierung der Modellierung“ referenziert einen typischen
-ingenieur-technischen Kontext, in dem der \emph{Modellierung} von Systemen als
-Basis des weiteren planmäßigen Vorgehens (in Projektierung, Implementierung,
-Betrieb, Wartung, Weiterentwicklung) eine zentrale Rolle zukommt.
+An ontology is about «modelling of models», because the clarification of terms
+and concepts aimed at with an ontology is intended to be practically used in
+real-world modelling contexts.  This «modelling of models» references a
+typical engineering context, in which the \emph{modelling} of systems plays a
+central role and serves as basis of further planned action (including project
+planning, implementation, operation, maintenance, further development of the
+system).
 
-Dabei sind \emph{mehrere Abstraktionsebenen} zu unterscheiden, was im TOP
-allerdings nicht ausreichend geschieht. Dies sind
+In this process, \emph{several levels of abstraction} are to be distinguished,
+which in TOP is not sufficiently worked out. These are
 \begin{itemize}[noitemsep]
-\item [0.] Die Ebene des \emph{realweltlichen Systems}, auf das sich die
-  konkrete ingenieur-technische Modellierung bezieht. Diese Ebene ist nur
-  \emph{praktisch} zugänglich. In der Praxis muss sich die Modellierung
-  bewähren, alle dabei auftretenden Probleme, die inhärente
-  Widersprüchlichkeit von Modell und Praxis eingeschlossen, sind erst  und
-  usschließlich auf der \emph{Modellebene} sprachlich formulierbar in der
-  \emph{Anwendung} der dort verfügbaren Konzepte.  Diese Konzepe müssen also
-  nicht nur das System (genauer: sein Modell) selbst beschreiben können,
-  sondern auch die erforderlichen Aspekte seines Betriebs.
-\item [1.] Die Ebene der \emph{Modellierung} eines konkreten Systems, die
-  \emph{Modellebene}. Die Ontologie stellt hierfür die Sprachmittel, Konzepte
-  (RDF-Subjekte) und Eigenschaften (RDF-Prädikate) zur Verfügung, die auf
-  dieser Ebene \emph{angewendet} werden. Diese Ebene ist zugleich die
-  \emph{Ebene der methodologischen Praxis}. 
-\item [2.] Die Ebene des \emph{Metamodells} als die eigentliche
-  Ontologie-Ebene, auf der die systemischen Konzepte \emph{vereinbart}
-  (definert) unter Berücksichtigung und \emph{Anwendung} der methodologischen
-  Konzepte, deren Sprachmittel auf der Metaebene 2 zur Verfügung gestellt
-  werden. 
-\item [3.] Die \emph{Metaebene 2 der Modellierung}, auf der die
-  methodologischen Konzepte \emph{definiert} werden.  
+\item [0.] The level of the \emph{real world system} to which the engineering
+  task refers. This level is only \emph{practically} accessible. The model to
+  be developed at level 1 must be appropriate to cover all problems arising in
+  the process of development and use of the system and express the inherent
+  contradictoriness of the system.
+
+  This contradictory nature of the system can be formulated only in language
+  form, i.e. on the model level and \emph{applying} the concepts available
+  there.  These concepts must therefore not only be able to describe the
+  system itself, but also cover a description of the necessary aspects of its
+  operation.
+\item[1.] The \emph{level of modelling} the system. The ontology provides the
+  language means, concepts (RDF subjects) and properties (RDF predicates),
+  which are to be \emph{applied} at this level. This level is also the
+  \emph{level of methodological practice}.
+\item[2.] The \emph{level of the meta-model} as the actual ontology level on
+  which the systemic concepts are \emph{defined}. This definition is processed
+  \emph{applying} the methodological concepts whose linguistic means are made
+  available on meta-level 2.
+\item [3.] The \emph{modelling meta-level 2} at which the methodological
+  concepts are defined.
 \end{itemize}
 
-In den weiteren Beispielen spielen drei Namensräume eine Rolle:
+In the examples below, three namespaces play a role:
 \begin{itemize}[noitemsep]
-\item \texttt{ex:} ist der Namensraum einer konkreten Modellierung (Ebene 1). 
-\item \texttt{tc:} ist der Namensraum der TRIZ-Konzepte (Ebene 2, Subjekte).
-\item \texttt{od:} ist der Namensraum der WUMM-eigenen Konzepte
-  (methodologische Subjekte, Prädikate Ebene 2). 
+\item \texttt{ex:} as the namespace of a special model (level 1). 
+\item \texttt{tc:} as the namespace of TRIZ concepts (level 2 subjects).
+\item \texttt{od:} as the namespace of WUMM's own concepts
+  (methodological subjects, level 2 predicates). 
 \end{itemize}
 
-\section{Typische Modellierungssituationen}
+\section{Basics of the WUMM Ontology Project}
 
-\subsection{Morphologischer Kasten}
+The WUMM ontology project accompanies the TOP activities in order 
+\begin{enumerate}[noitemsep]
+\item to carry out a remodelling according to semantic standards,
+\item to enhance the material multilingually and
+\item to build an LOD infrastructure on this basis,
+\end{enumerate}
+and thus to improve the basis for the necessary social coordination processes.
 
-Dabei handelt es sich um ein Konzept, das eine endliche Zahl von festen Werten
-annehmen kann (ein \texttt{enum} Datentyp in Java). 
+For this purpose, the SKOS ontology \cite{SKOS} is used with the concepts (K)
+\begin{itemize}[noitemsep]
+\item \texttt{skos:Concept}, \texttt{skos:prefLabel}, \texttt{skos:altLabel}
+  -- concept naming
+\item \texttt{skos:definition}, \texttt{skos:example}, \texttt{skos:note} --
+  concept properties
+\item \texttt{skos:narrower}, \texttt{skos:broader} -- concept relations.
+\end{itemize}
+It provides an initial descriptive framework for conceptualisations.  For the
+meaning of the individual concepts, please refer to \cite{SKOS}.
 
-\emph{Beispiel:}  Farbe (rot, grün, gelb, blau)
+\subsection{URIs and Namespaces}
+
+One of the central problems of transferring the existing data stocks on TRIZ
+concepts is the allocation of meaningful URIs, since the individual glossary
+entries in the existing sources are identified solely by their labels.  The
+OSA platform is no exception to this since the URIs assigned there (both for
+the nodes and the edges of the constructed RDF graph) are not publicly
+visible.
+
+During the computer based transformation of the datasets into a valid RDF
+format, URIs were automatically generated for all concepts, which are located
+in the namespace \texttt{tc:} (like \emph{TRIZ Concepts}). An essential task
+still to be done is the unification of these URIs, i.e. merging different URIs
+that refer to the same concept. 
+
+\subsection{Provenance of Explanations}
+
+A further problem of this ontological modelling is the representation of the
+provenance of the individual explanations. For this purpose the SKOS concepts
+listed under (K) were replaced for each individual source by notations from
+the namespace \texttt{od:} in order to first identify the «worlds» of the
+individual authors and TRIZ schools separately.
+
+\texttt{od:} is the namespace used by the WUMM project to develop its own
+concepts.  A more detailed description of this namespace in a separate RDF
+file is still pending, the concepts represented by the URIs have so far only
+been agreed verbally.
+
+Corresponding notation variations are for example
+\begin{itemize}[noitemsep]
+\item \texttt{skos:Concept} $\to$ \texttt{od:GSAThesaurusEntry},
+  \texttt{od:VDIGlossaryEntry} \ldots
+\item \texttt{skos:definition} $\to$ \texttt{od:SouchkovDefinition},
+  \texttt{od:VDIGlossaryDefinition} \ldots
+\item \texttt{skos:example} $\to$ \texttt{od:VDIGlossaryExample} \ldots
+\end{itemize}
+etc. See the RDF data itself, which can be accessed via the SPARQL endpoint
+\begin{center}
+  \url{http://wumm.uni-leipzig.de:8891/sparql}
+\end{center}
+of the WUMM project.
+
+The \emph{use of different predicate identifiers} allows easily to indicate
+the origin -- e.g. of definitions -- to different sources at the level already
+of triples:
+\begin{center}
+  (term X) -- (is defined in source A as) -- (definition of X in
+  source A)\\ 
+  (term X) -- (is defined in source B as) -- (definition of X in
+  source B) 
+\end{center}
+If \texttt{skos:definition} were used consistently, more complex constructs
+\begin{center}
+  (term X) -- \texttt{skos:definition} -- \Big[\parbox{8cm}{\centering
+      (source A) -- (definition of X in source A)\\
+      (source B) -- (definition of X in source B)}\Big]
+\end{center}
+had to be used. Although this is the final goal of the exercise, in the
+current state of the modelling, the simpler form will be used, even though
+this inflates the number of predicates. A consolidation towards the «ideal
+final result» can be achieved later on by a simple model transformation.  
+
+The same applies to the use of provenance-dependent subclasses of
+\texttt{skos:Concept}.  Since the matching of the URIs assigned to concepts
+must be carried out across subclasses, the instances of each subclass are also
+marked as \texttt{skos:Concept}, although this could also be done via a
+general sentence such as
+\begin{center}\tt
+  od:VDIGlossaryEntry rdfs:subClassOf skos:Concept
+\end{center}
+and then determined by inference. We proceed this way since inferencing
+belongs to the more complex semantic OWL concepts and is not supported by
+simple RDF stores. Again, the data can be consolidated later on by a simple
+model transformation.  
+
+\section{Typical modelling situations}
+
+\subsection{Morphological box}
+
+A Morphological box describes a concept that can take a finite number of fixed
+values (a \text{enum} data type in Java).
+
+\emph{Example:}  Colour (red, green, yellow, blue).
 
 \begin{code}
-  ex:MeiersAuto od:hatFarbe tc:gruen . \\[4pt]
-  tc:Farbe a skos:Concept, od:AdditionalConcept ;\\
+  ex:MeiersCar od:hasColour tc:green . \\[4pt]
+    
+  od:hasColour a rdfs:Property;\\
+    \>rdfs:domain tc:Flow;\\
+    \>rdfs:range tc:Colour .\\[4pt]
+
+  tc:Colour a skos:Concept, od:AdditionalConcept ;\\
   \>skos:prefLabel {\dq}Color{\dq}@en, {\dq}Farbe{\dq}@de ;\\
   \>od:allowedValues tc:red, tc:green, tc:yellow, tc:blue .\\[4pt]
-  tc:FarbValue a skos:Concept, od:AdditionalConcept ;\\
-  \>skos:prefLabel {\dq}Value for Color{\dq}@en, {\dq}Farbwert{\dq}@de .\\[4pt]
-  tc:green a skos:Concept, tc:FarbValue, od:AdditionalConcept ;\\
+
+  tc:green a skos:Concept, od:AdditionalConcept ;\\
+  \>od:valueOf tc:Colour ; \\
   \>skos:prefLabel {\dq}green{\dq}@en, {\dq}grün{\dq}@de .\\[4pt]
   ...  
 \end{code}
 
-\subsection{Modellierung grundsätzlicher Konzepte}
+Considered as datatypes \texttt{tc:green} is an instance of
+\texttt{tc:Colour}.  Since both \texttt{tc:Colour} and \texttt{tc:green} are
+modeled as \texttt{skos:Concept} the properties \texttt{od:allowedValues} and
+\texttt{od:valueOf} are subproperties of \texttt{skos:narrower} and
+\texttt{skos:broader}\footnote{From \cite{SKOS-Primer}: The subject of a
+  \texttt{skos:broader} statement is the more specific concept involved in the
+  assertion and its object is the more generic one.} and used to indicate the
+relation between attribute type and attribute value type
 
-Das TOP-Modell folgt einem Vererbungskonzept, in dem sich allgemeine
-Unterscheidungen auf speziellere Konzepte vererben.  So wird etwa für Flüsse
-unterschieden zwischen Flow, FlowModel, FlowAsIs, FlowAsShouldBe. Das ist
-einerseits eine methodische Setzung (Ebene 3), andererseits wirkt sich diese
-Setzung erst auf Ebene 1 aus. Deshalb soll diese Information jeder Instanz
-über die Eigenschaft \texttt{od:hasMode} mit dem Wertebereich \texttt{tc:Mode}
-zugeordnet werden.
-
-\begin{code}
-  ex:MeiersAuto od:hasMode tc:theModelAsIs . \\[4pt]
-  
-  tc:Mode a skos:Concept, od:AdditionalConcept ;\\
-  \>skos:prefLabel {\dq}Modeling mode{\dq}@en, {\dq}Modellierungsmodus{\dq}@de ;\\
-  \>od:allowedValues od:theReal, od:theModel, od:theRealAsIs,\\
-  \>\>od:theRealAsShouldBe, od:theModelAsIs, od:theModelAsShouldBe .\\[4pt]
-  
-  tc:theModelAsIs a skos:Concept, od:AdditionalConcept ;\\
-  \> od:valueOf tc:ModeValue;\\ 
-  \>skos:prefLabel {\dq}the model as is{\dq}@en, {\dq}Modell, wie es
-  ist{\dq}@de .\\[4pt] 
-  ...  
-\end{code}
-
-Im TOP-Modell werden Eigenschaften von Klassen nur spärlich modelliert. Zum
-Beispiel kann ein Fluss ein \emph{diskreter Fluss} sein. Dies ist ein Wert
-einer Eigenschaft dieses Flusses. Um eine solche Beziehung zu modellieren,
-müssen die \emph{Eigenschaft} selbst, der \emph{Wertebereich der Eigenschaft}
-und die möglichen \emph{Werte} dieses Wertebereichs modelliert werden.
+In the TOP model, properties of classes are modelled only sparsely.  For
+example, a flow can be a \emph{discrete flow}. This is a value of a property
+of this flow. To model such a relationship, the \emph{property itself}, the
+\emph{range of values of the property}, and the \emph{possible values} of this
+range must be modelled.
 
 \begin{code}
-  ex:MeiersFluss od:hasFlowType tc:discreteFlow . \\[4pt]
+  ex:MeiersFlow od:hasFlowType tc:discreteFlow . \\[4pt]
   
   od:hasFlowType a rdfs:Property;\\
     \>rdfs:domain tc:Flow;\\
@@ -135,19 +221,19 @@ und die möglichen \emph{Werte} dieses Wertebereichs modelliert werden.
     \>skos:altLabel {\dq}Art der Strömung{\dq}@de .\\[4pt]
   
   tc:discreteFlow a skos:Concept, od:AdditionalConcept;\\
-    \>od:valueOf tc:FlowType ;  \\
-    \>skos:prefLabel {\dq}discrete flow{\dq}@en, {\dq}Diskreter Fluss{\dq}@de .\\[4pt] 
+    \>od:valueOf tc:FlowType ; \\
+    \>skos:prefLabel {\dq}discrete flow{\dq}@en, {\dq}diskreter Fluss{\dq}@de .\\[4pt] 
   ...  
 \end{code}
 
-Das Ganze ist schwer abzugrenzen von einer Klassenhierarchie, die mit
-Prädikatverfeinerungen \texttt{od:hasSubConcept} von \texttt{skos:narrower}
-modelliert werden sollten.  Das dazu inverse Prädikat \texttt{od:subConceptOf}
-wird aus Gründen der Übersichtlichkeit ebenfalls verwendet; es kann aber
-später auch maschinell ergänzt werden.
+All this is hard to distinguish from a class hierarchy, which should be
+modelled with the predicate refinement \texttt{od:hasSubConcept} of
+\texttt{skos:narrower}.  \texttt{od:subConceptOf} as the inverse predicate is
+also used for reasons of clarity; however, it can also be added later
+automatically.
 
 \begin{code}
-  ex:MeiersFluss od:hasStaticFlowComponent tc:Pump . \\[4pt]
+  ex:MeiersFlow od:hasStaticFlowComponent tc:Pump . \\[4pt]
   
 od:hasStaticFlowComponent a rdfs:Property;\\
     \>rdfs:domain tc:Flow;\\
@@ -171,18 +257,31 @@ tc:Pump\\
     \>a skos:Concept, od:AdditionalConcept .
 \end{code}
 
-Hier wäre zunächst abzugrenzen, ob \texttt{tc:Pump} mit in die Menge der
-Konzepte aufgenommen wird oder der Begriff zu speziell ist. Das ist natürlich
-eine Geschmacksfrage.
+First of all, it would have to be decided whether \texttt{tc:Pump} should be
+included in the set of concepts or whether the term is too specific.  This is
+of course a question of taste.
 
-Die Modellierung über Klassenhierarchien hat den Vorteil, dass man das Objekt
-des Prädikats \texttt{od:hasStaticFlowComponent} mit Instanzen der gesamten
-Klassenhierarchie belegen kann. Dessen genauen Typ kann man dann nur über eine
-zweite Modellanfrage ermitteln.  Alternativ hätte man in diesem Beispiel mit
-Prädikaten \texttt{od:hasStaticFlowComponent} und \texttt{od:hasControlUnit}
-arbeiten können, um den Objekttyp bereits am Prädikatbezeichner unterscheiden
-zu können.
+Modelling via class hierarchies has the advantage that one can use as object
+of the predicate \texttt{od:hasStaticFlowComponent} instances of the entire
+class hierarchy. But its exact type can then only be determined by a second
+query to the model.  Alternatively, in this example one could have used
+predicates \texttt{od:hasStaticFlowComponent} and \texttt{od:hasControlUnit}
+in order to distinguish the object type already from the predicate identifier.
 
+
+\begin{thebibliography}{xxx}
+\raggedright
+\bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
+  \url{https://www.w3.org/TR/skos-reference/}.  
+\bibitem{SKOS-Primer} SKOS Simple Knowledge Organization System Primer.
+  \url{https://www.w3.org/TR/2009/NOTE-skos-primer-20090818/}.  
+\bibitem{TOP} The TRIZ Ontology Project (TOP)
+  \foreignlanguage{russian}{Онтология ТРИЗ} of the TRIZ Developer Summit.
+  \url{https://triz-summit.ru/Onto_TRIZ/}.
+\bibitem{WUMM} The WUMM Project. \url{https://wumm-project.github.io/} 
+\bibitem{WUMM-Ontology} The WUMM TOP Companion Project.
+  \url{https://wumm-project.github.io/Ontology.html} 
+\end{thebibliography}
 
 
 \end{document}

@@ -6,6 +6,15 @@
 @prefix od: <http://opendiscovery.org/rdf/Model#> .
 @prefix tc: <http://opendiscovery.org/rdf/Concept/> .
 
+<http://opendiscovery.org/rdf/Ontologies/FlowConcepts/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    a owl:Ontology ;
+    rdfs:comment "2021-03-03 graebe: Reference to General Concepts added";
+    rdfs:label "WUMM TRIZ Ontology - Flow Concepts" ;
+    owl:imports <http://opendiscovery.org/rdf/Ontologies/GeneralConcepts/> .
+
 # Flow 
 tc:Flow
     a skos:Concept ;
@@ -16,6 +25,13 @@ tc:Flow
     skos:prefLabel "Flow"@en, "Fluss"@de, "Поток"@ru ;
     skos:altLabel "Stream"@en, "Strom"@de .
 
+# Mode, a general concept
+od:hasMode
+    a rdfs:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:ModeValue .
+
+# Flow Properties
 od:hasFlowType
     a rdfs:Property ;
     rdfs:domain tc:Flow ;
@@ -48,7 +64,7 @@ od:hasStaticFlowComponent
 
 od:hasMethodOfDescription
     a rdfs:Property ;
-    rdfs:domain tc:FlowModel, tc:FlowAsIs, tc:FlowModelAsShouldBe ;
+    rdfs:domain tc:Flow ;
     rdfs:range tc:MethodOfDescription .
 
 # Flow subclasses
