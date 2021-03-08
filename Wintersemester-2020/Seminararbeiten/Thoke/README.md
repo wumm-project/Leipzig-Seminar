@@ -28,3 +28,7 @@ weiterführenden Links in der Top Level Ontologie des WUMM-Projekts.
 Weitere Literatur:
 * Koltze, Souchkov (2018). Systematische Innovation.
 * Anmerkungen auf <https://wumm-project.github.io/2020-10-27>
+* Yuri Lebedev (2015). Совершенствование инструментов потокового анализа
+  (Improving flow analysis tools).
+  * <https://triz-summit.ru/certif/master/matriz/15/302897/>
+  * Dort auch eine englische Zusammenfassung
