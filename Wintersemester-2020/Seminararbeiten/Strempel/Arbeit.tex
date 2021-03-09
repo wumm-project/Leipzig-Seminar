@@ -73,7 +73,7 @@ conceptualised as system transformations, leads in the analysis of historical
 technology development to the structure of a directed graph with the
 prototypical link
 \begin{center}\tt
-  OldSystem -- isTransformedInto $\to$ NewSystem
+  OldSystem \textrm{---}\fbox{isTransformedInto}$\to$ NewSystem
 \end{center}
 In the first approach, this graph is considered as a set of such links to be
 classified. The graph structure plays a subordinate role, because even in the
@@ -87,27 +87,6 @@ methodology of \emph{evolutionary potential analysis} \cite[4.8.7]{KS} and on
 the other hand to consolidate and improve the central TRIZ tools such as the
 40 application standards («principles») or the 76 inventive standards.
 
-The listing of 25 aspects of evolutionary potential analysis in \cite[Fig.
-  4.91]{KS} points to another abstraction phenomenon we encounter in the
-course of these conceptualisations -- the \emph{transition from verb to noun},
-from a process to a structure view. If (ibid.) one of the transformation rules
-is formulated as a verb as «5. coordinate the actions», the corresponding
-pattern is formulated as noun «5. coordinated actions». This seemingly small
-difference has a major impact on RDF modelling, as it involves a transition
-from the place of the predicate to the place of the subject or object. This is
-not a super problem in the context of RDF language constructs, since
-properties of predicates can also be expressed in RDF, but it is problematic
-for visualisation as an RDF graph. There, edges would then have to become
-additionally nodes. Since the aim of this work is to conceptualise the
-structure of evolutionary trees in close relation to their graphical
-representation, predicates are consistently used for this purpose, e.g.
-\begin{center}
-  \texttt{tc:tranfsformedBySeparationPattern} instead of
-  \texttt{tc:SeparationPattern} 
-\end{center}
-even if the namespace \texttt{tc:} of the TRIZ concepts is extended to
-predicates.
-
 \section{The Conceptualisations}
 
 The conceptualisations to be developed follow the basic assumptions and
@@ -120,6 +99,23 @@ particular, the following namespace prefixes are used:
   general concepts). 
 \end{itemize}
 
+Our central task is to model the links in concrete evolutionary trees. The
+full evolution tree as an edge-marked graph then can be conceptualised as a
+set of such links in the usual way.
+
+A link in such a concrete evolution graph has the typical shape
+\begin{center}\tt
+  ex:TVWithLargePixels ex:decreasePixelSize ex:TVWithMediumPixels .
+\end{center}
+where the transformation predicate \texttt{ex:decreasePixelSize} is assigned
+to certain evolution patterns (even several).
+\begin{code}\tt
+  ex:decreasePixelSize a rdf:Property, skos:Concept ;\\
+  \> od:usesPattern tc:SegmentationPattern ;\\
+  \> skos:description {\dq}{\dq}{\dq}Decrease pixel size by segmentation of
+  one big pixel\\\>\> in several smaller ones{\dq}{\dq}{\dq}@en. 
+\end{code}
+
 \begin{thebibliography}{xxx}
 \raggedright
 \bibitem{Altshuller1979} Genrich Altshuller (1979).  Creativity as an exact
@@ -131,15 +127,9 @@ particular, the following namespace prefixes are used:
 \bibitem{TESE2018} Alex Lyubomirsky, Simon Litvin, Sergei Ikovenko et al.
   (2018). Trends of Engineering System Evolution (TESE).  TRIZ Consulting
   Group. ISBN 9783000598463.
-\bibitem{Petrov2007} Vladimir Petrov, Michail Rubin, Simon Litvin (2007).
-  Fundamentals of TRIZ Theory of Inventive Problem Solving (in Russian).
-  Reprinted in 2020. ISBN 978-5-4496-8183-6.
 \bibitem{Shpakovsky2016} Nikolay Shpakovsky (2016). Tree of Technology
   Evolution. English translation of the Russian original (Forum, Moscow
   2010).\\ \url{https://wumm-project.github.io/TTS.html}
-\bibitem{Souchkov2018} Valeri Souchkov (2018).  Glossary of TRIZ and
-  TRIZ-related terms. Version 1.2.
-  \url{https://matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}. 
 \bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
   \url{https://www.w3.org/TR/skos-reference/}.  
 \bibitem{WUMM} The WUMM Project. \url{https://wumm-project.github.io/} 

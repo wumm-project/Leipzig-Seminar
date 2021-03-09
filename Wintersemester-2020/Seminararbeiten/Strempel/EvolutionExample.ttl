@@ -1,6 +1,7 @@
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix od: <http://opendiscovery.org/rdf/Model#> .
@@ -36,10 +37,10 @@ ex:Atomboot a ex:Boot; rdfs:label "Boot mit Atomantrieb"@de .
 
 ex:Baumstamm ex:addPaddles ex:Ruderboot .
 
-ex:addPaddles rdfs:subPropertyOf tc:transformedByNewPrinciple, tc:transformedAddingControlUnit;
+ex:addPaddles od:usesPattern tc:NewPrinciplePattern, tc:IncreasingControllabilityPattern;
 rdfs:label "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
 
 ex:Ruderboot ex:replacePaddleWithSail ex:Segelboot .
 
-ex:replacePaddleWithSail rdfs:subPropertyOf tc:transformedByNewPrinciple;
+ex:replacePaddleWithSail od:usesPattern tc:NewPrinciplePattern;
 rdfs:label "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
