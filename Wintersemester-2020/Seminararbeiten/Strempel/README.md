@@ -12,5 +12,9 @@ Das gilt es (A) in einer RDF-Ontologie genauer zu beschreiben und (B) die
 grundlegenden Konzepte und ihre Beziehungen zueinander aus der Vielzahl der
 Beispiele im Buch zu extrahieren.
 
+KS-4_72.pdf ist ein Evolutionsbaum aus (Koltze/Souchkov 2017)
+
 Literatur:
 * Nikolay Shpakovsky.  Tree of Technology Evolution.
+* Karl Koltze, Valeri Souchkov (2017).  Systematische Innovationsmethoden.
+  Hanser Verlag, München. ISBN 978-3-446-45127-8.

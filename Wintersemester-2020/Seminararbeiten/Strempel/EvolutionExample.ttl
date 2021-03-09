@@ -1,0 +1,45 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+@prefix ex: <http://example.orf/EvolutionExample/Boats/> .
+
+<http://opendiscovery.org/rdf/Ontologies/EvolutionExample/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    a owl:Ontology ;
+    rdfs:comment "from (Koltze/Souchkov 2018: Fig. 4.72)";
+    rdfs:label "Evolution Trees - an Example" ;
+    owl:imports <http://opendiscovery.org/rdf/Ontologies/EvolutionTrees/> .
+
+# nodes of the evolution tree
+
+ex:Baumstamm a ex:Boot; rdfs:label "Baumstamm"@de .
+
+ex:Ruderboot a ex:Boot; rdfs:label "Ruderboot"@de .
+
+ex:BootMitSegeln a ex:Boot; rdfs:label "Boot mit Segeln"@de .
+
+ex:Dampfboot a ex:Boot; rdfs:label "Dampfboot"@de .
+
+ex:Dieselschiff a ex:Boot; rdfs:label "Boot mit Dieselantrieb"@de .
+
+ex:DuesenSchiff a ex:Boot; rdfs:label "Boot mit Jetantrieb"@de .
+
+ex:Atomboot a ex:Boot; rdfs:label "Boot mit Atomantrieb"@de .
+
+# links of the evolution tree
+
+ex:Baumstamm ex:addPaddles ex:Ruderboot .
+
+ex:addPaddles rdfs:subPropertyOf tc:transformedByNewPrinciple, tc:transformedAddingControlUnit;
+rdfs:label "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
+
+ex:Ruderboot ex:replacePaddleWithSail ex:Segelboot .
+
+ex:replacePaddleWithSail rdfs:subPropertyOf tc:transformedByNewPrinciple;
+rdfs:label "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
