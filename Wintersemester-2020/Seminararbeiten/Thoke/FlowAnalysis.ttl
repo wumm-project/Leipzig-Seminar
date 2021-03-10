@@ -18,7 +18,7 @@
 
 # Flow 
 tc:Flow
-    a skos:Concept, od:SouchkovGlossaryEntry;
+    a skos:Concept, od:SouchkovGlossaryEntry ;
     od:WOPCategory od:Component;
     od:SouchkovCategory tc:FlowAnalysis ;
     od:SouchkovDefinition "A sequence of events that have the same common feature."@en ;
@@ -303,7 +303,7 @@ od:inContext
 od:appliesRule
     a rdfs:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:FlowAnalysisRule .
+    rdfs:range tc:RulesOfFlowAnalysis .
 
 od:generatesFlowTransformation
     a rdfs:Property ;
@@ -339,7 +339,7 @@ od:proofRequirements # unverständlich, range kann nur ja oder nein sein
 od:usesTechniqueOfModification
     a rdfs:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:FlowAnalysisRule .
+    rdfs:range tc:RulesOfFlowAnalysis .
 
 od:applyChanges 
     a rdfs:Property ;
