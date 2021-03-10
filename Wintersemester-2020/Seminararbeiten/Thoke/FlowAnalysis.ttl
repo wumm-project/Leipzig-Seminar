@@ -383,10 +383,10 @@ od:hasRequirement
     rdfs:domain tc:Context ;
     rdfs:range tc:Requirement .
 
-od:proofRequirements # unverständlich, range kann nur ja oder nein sein
-    a rdfs:Property ;
-    rdfs:domain tc:Goals ;
-    rdfs:range tc:Requirements .
+# od:proofRequirements # unverständlich, range kann nur ja oder nein sein --> used in the future for transformation processing
+#     a rdfs:Property ;
+#     rdfs:domain tc:Goals ;
+#     rdfs:range tc:Requirements .
 
 od:usesTechniqueOfModification
     a rdfs:Property ;
