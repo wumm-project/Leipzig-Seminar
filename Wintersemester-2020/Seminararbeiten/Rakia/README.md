@@ -1,9 +1,11 @@
-# Wintersemester 2020/21. Seminararbeit Tarim Rakia
+# Wintersemester 2020/21. Seminararbeit Karim Rakia
 
 ## Thema Modellierung des IDM-Modells aus Vorgängerarbeiten (Karim Rakia)
 
 Im Zentrum steht eine Übernahme der in Vorgängerarbeiten, vor allem von
-Zanni-Merk, ausgeführten Modellierungen und dem Verständnis der dort entwickelten Konzepte. 
+Zanni-Merk, ausgeführten Modellierungen und dem Verständnis der dort
+entwickelten Konzepte.  Ausgangspunkt sollte die Arbeit (Cavallucci u.a. 2011)
+sein.
 
 * A. Bultey, Wei Yan, C. Zanni (2015). A Proposal of a Systematic and
   Consistent Substance-field Analysis. Procedia Engineering 131, pp. 701-710.

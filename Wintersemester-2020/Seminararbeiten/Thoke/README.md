@@ -12,10 +12,23 @@ als auch Rhythmik) eine wichtige Rolle spielen.
 
 Im Rahmen des TOP Webinars wurde das Thema am 27.10.2020 von Olga Eckardt
 vorgetragen, siehe dazu <https://wumm-project.github.io/2020-10-27> und die
-Folien dort (in Russisch, eine Übertragung des "Nicht-Bild-Anteils" ins
-Deutsche ist in der Pipeline).  Olga Eckardt (Dortmund) arbeitet auch weiter
-an diesem Thema.
+Folien dort (in Russisch) sowie Anmerkungen (in englischer Übersetzung).  Der
+Foliensatz ist auch in diesem Verzeichnis verfügbar, eine Übersetzung der
+nicht-graphischen Teile ins Deutsche steht noch aus.  Olga Eckardt (Dortmund)
+arbeitet auch weiter an diesem Thema.
+
+Die Konzepte sind im TRIZ Summit Ontologie-Projekt kursorisch, allerdings in
+Russisch, dargestellt und von der Einstiegsseite
+<https://triz-summit.ru/onto_triz/mod/metod/triz/flow> aus erreichbar.
+
+Siehe auch den Eintrag Functional Analysis
+<http://wumm.uni-leipzig.de/displayuri.php?uri=FlowAnalysis> und die dort
+weiterführenden Links in der Top Level Ontologie des WUMM-Projekts.
 
 Weitere Literatur:
 * Koltze, Souchkov (2018). Systematische Innovation.
 * Anmerkungen auf <https://wumm-project.github.io/2020-10-27>
+* Yuri Lebedev (2015). Совершенствование инструментов потокового анализа
+  (Improving flow analysis tools).
+  * <https://triz-summit.ru/certif/master/matriz/15/302897/>
+  * Dort auch eine englische Zusammenfassung

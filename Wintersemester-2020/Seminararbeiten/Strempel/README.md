@@ -1,26 +1,20 @@
 # Wintersemester 2020/21. Seminararbeit Tom Strempel
 
-## Thema Stoff-Feld- und Element-Feld-Modelle
+## Thema Evolutionsbäume zur Beschreibung technischer Entwicklung
 
-Stoff-Feld- und Element-Feld-Modelle sind eine Weiterentwicklung der
-Funktionalen Analyse, die etwa im ARIZ-77 bei Altschuller noch eine größere
-Rolle gespielt haben, heute aber bereits als schwierig angesehen werden.
-Während im Funktionsmodell die Kette (Arbeitsorgan) -- (wirkt auf) -- (Objekt)
-im Mittelpunkt steht, wird im SF-Modell genauer untersucht, was diese Wirkung
-vermittelt und wie diese (nützliche) Wirkung verstärkt oder (bei einer
-schädlichen Wirkung) unterbunden werden kann.  Dabei rücken der stoffliche
-Charakter von Arbeitsorgan und Objekt in den Vordergrund. Es gibt 5 Klassen
-von Ansätzen, SF-Modelle zu komplettieren, in denen insgesamt 76 _Standards_
-formuliert werden.  Mit dem Ansatz werden Felder an Stoffe gebunden, über die
-deren Wirkung vermittelt wird.  Im EF-Ansatz wird die Frage der Energiequelle
-und von möglichen Energietransformationen in den Vordergrund gerückt.
+Shpakovskys Evolutionsbäume sind nach wohldefinierten Prinzipien aufgebaut.
+Die Knoten und Kanten in solchen Bäumen gehören zu verschiedenen Klassen und
+sind auf unterschiedliche Weise aufeinander bezogen.  Dabei spielen
+insbesondere verschiedene _Evolutionsmuster_ sowie _Systemtransformationen_
+eine tragende Rolle.  
 
-Im Rahmen des TOP Webinars wurde das Thema am 20.10.2020 von Nikolay Shchedrin
-vorgetragen, siehe dazu <https://wumm-project.github.io/2020-10-20> und die
-Folien dort (in Russisch, eine Übertragung des "Nicht-Bild-Anteils" ins
-Deutsche ist in der Pipeline).
+Das gilt es (A) in einer RDF-Ontologie genauer zu beschreiben und (B) die
+grundlegenden Konzepte und ihre Beziehungen zueinander aus der Vielzahl der
+Beispiele im Buch zu extrahieren.
 
-Weitere Literatur:
-* Koltze, Souchkov (2018). Systematische Innovation.
-* Efimov - zu ergänzen
-* Petrov - zu ergänzen
+KS-4_72.pdf ist ein Evolutionsbaum aus (Koltze/Souchkov 2017)
+
+Literatur:
+* Nikolay Shpakovsky.  Tree of Technology Evolution.
+* Karl Koltze, Valeri Souchkov (2017).  Systematische Innovationsmethoden.
+  Hanser Verlag, München. ISBN 978-3-446-45127-8.

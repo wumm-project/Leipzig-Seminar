@@ -1,0 +1,242 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ls}
+\usepackage[main=english,russian]{babel}
+
+\newcommand{\HGG}[1]{\begin{quote}\textbf{Anmerkung HGG:} #1\end{quote}}
+
+\newenvironment{code}{\tt \begin{tabbing}
+\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
+{\end{tabbing}}
+\def\dq{{\char34}}
+
+\title{A Proposal for Modelling the TRIZ Concepts\\ Flow and Flow Analysis}
+
+\author{Immanuel Thoke}
+
+\date{Version of March 9, 2021}
+
+\begin{document}
+\maketitle
+
+\section{Aim of the work}
+
+The aim of this paper is to elaborate a proposal for an ontological modelling
+of the areas of \emph{TRIZ Flows} and \emph{TRIZ Flow Analysis} based on the
+materials of the TRIZ Ontology Project (TOP) of the TRIZ Developer Summit
+\cite{TOP} and further own investigations. The work fits into the activities
+of the \emph{WUMM Project} \cite{WUMM} to accompany the TOP project and to
+transfer it into the language of modern semantic concepts
+\cite{WUMM-Ontology}.  The work therefore consists of two parts -- a
+\emph{turtle file}, in which the semantic modelling is performed based on the
+SKOS framework \cite{SKOS}, and \emph{this elaboration}, in which the
+backgrounds and motivations of the concrete modelling decisions are detailed.
+
+\section{Starting point} 
+
+Flows and flow analysis play a rather peripheral role in TRIZ.  In the
+standard reference \cite{Petrov2007} on a \emph{TRIZ Body of Knowledge} is
+listed as item 2.5.8, but in the 7 references to the literature listed there
+are no systematic explanations about the role of flows in TRIZ theory, but
+only individual examples in which concrete flows (such as magnetic flow)
+played a role in concrete modelling.  
+
+The most comprehensive source on issues of TRIZ modelling of flows and
+methodological issues of flow analysis is the thesis \cite{Lebedyev2015} by
+Yuri Lebedyev, which he submitted in 2015 under the supervision of S.A. 
+Logvinov for graduation as TRIZ Master. Since the thesis is only available in
+Russian, only the author's English summary was evaluated.
+
+Such a limitation is justified, since the aim of this seminar paper is not to
+completely cover the TRIZ theory of flow analysis, but only to identify its
+essential concepts and describe their connection with modern semantic RDF
+means based on the SKOS ontology. The basis for this is above all the
+presentation of Olga Eckardt in the webinar of the TOP project in October 2020
+\cite{Eckardt2020}, in which basic approaches of the Lebedyev's work have
+obviously been incorporated.
+
+We start from the definition of both concepts in the TOP Glossary
+\cite{TOP-Glossary}: 
+\begin{quote}
+  \textbf{Flow} is the directional movement in space of particles of mass of
+  matter, as well as the directional movement of energy or information. Flow
+  has dual properties: the properties of a substance of which the flow
+  consists, and the properties of a field, which is formed as a result of the
+  directional movement of particles of matter. Flows can be useful, harmful
+  and parasitic. The flow model contains static components: source, channel,
+  receiver, control system. Flow is a special case of a process in which
+  directional movement occurs in physical space.
+
+  \textbf{Flow analysis} is a method of systems analysis to establish
+  relationships in a system to flow, find resources, and determine compliance
+  with existing system requirements. The result of a flow analysis is a model
+  of the flow as is and a model of the flow to be. Flow modification
+  techniques are used to develop systems with flows and to solve inventive
+  problems in them.
+\end{quote}
+The use of these concepts is further included there in a single place in the
+context of cause-effect analysis (ibid.):
+\begin{quote}
+  Cause-effect analysis is performed: 
+  \begin{itemize}[noitemsep]
+  \item When the causes of an undesirable effect are not clear (when we cannot
+    go from an administrative contradiction to a technical one $AC\to TC$.
+  \item When it is necessary to clarify the causes of an undesirable effect
+    (to deepen the understanding of the causes of an undesirable effect, e.g.
+    after a functional or a flow analysis).
+  \end{itemize}
+\end{quote}
+Other sources are much more sparing in their statements on these two
+individual terms, but list other flow-related concepts, for example in
+\cite{Souchkov2018}:
+\begin{itemize}[noitemsep]
+\item Delay Zone -- A location in a flow in which the integral flow speed is
+  significantly lower than local flow speed. A Delay Zone is a typical
+  disadvantage identified by Flow Analysis. 
+\item Flow -- A sequence of events that have the same common feature.
+\item  Flow Analysis-- An analytical method and a tool which identifies
+  disadvantages in flows of energy, substances, and information in a technical
+  system.
+\item  Flow Disadvantage -- A disadvantage of a technical system being
+  analyzed identified during Flow Analysis. Examples: Bottlenecks, «Gray
+  Zones», «Stagnation Zones», etc.
+\item Flow Distribution Analysis-- A part of Flow Analysis that identifies
+  distribution of flows and their disadvantages. 
+\item Stagnation Zone -- A part of a flow in which the flow stops temporarily
+  or permanently. A Stagnation Zone is a typical disadvantage identified by
+  Flow Analysis.
+\item Transmission -- One of the key components (subsystems) of a Complete
+  Technical System which according to the Law of System Completeness of a
+  technical system transmits a flow of energy required to operate a working
+  unit from an engine to the working unit.
+\end{itemize}
+Further essential terms and contexts were mentioned by V.M. Petrov in the
+discussion on \cite{Eckardt2020}. 
+
+\section{The Conceptualisations}
+
+The conceptualisations to be developed follow the basic assumptions and
+positings that are elaborated in more detail in \cite{Graebe2021}. In
+particular, the following namespace prefixes are used:
+\begin{itemize}[noitemsep]
+\item \texttt{ex:} -- the namespace of a special system to be modelled. 
+\item \texttt{tc:} -- the namespace of the TRIZ concepts (RDF subjects).
+\item \texttt{od:} -- the namespace of WUMM's own concepts (RDF predicates,
+  general concepts). 
+\end{itemize}
+
+\subsection{\texttt{tc:Flow}}
+
+A flow is a component within a system and hence modeled as subconcept of
+\texttt{od:Component}.  It has several properties that are modeled along the
+rules for a morphological table, i.e. defining a PropertyDomain and a list of
+allowed values as listed below.
+
+\HGG{Alle Subjekt-URIs beginnen mit einem Großbuchstaben.  Alle Subjekte
+  sollten Singular sein, da eine Plural suggerierende Auflistung \texttt{A
+    od:does B, C, D} in drei Drei-Wort-Sätze mit dreimal Singular aufgelöst
+  wird.}
+
+As in Souchkov's Glossary we use URIs as 
+\begin{center}\tt
+  tc:HarmfulAction, tc:HarmfulFunction, tc:HarmfulInteraction,
+  tc:HarmfulMachine
+\end{center}
+that combine the property and the subject of the property except for
+\texttt{tc:FlowSubstance}.
+
+\begin{center}
+  \begin{tabular}{|c|c|}\hline
+    Property & PropertyDomain \\\hline
+    od:hasMode & tc:ModeValue \\
+    od:hasFlowType & tc:FlowType  \\
+    od:hasFlowSubstance & tc:FlowSubstance  \\
+    od:hasFlowFunctionality & tc:FlowFunctionality  \\
+    od:hasFlowDefect & tc:FlowDefect  \\
+    od:hasFlowSource & tc:FlowSource  \\
+    od:hasMethodOfDescription & tc:MethodOfDescription \\\hline 
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{|l|p{10cm}|}\hline
+    PropertyDomain & PropertyValues \\\hline
+    tc:ModeValue & tc:System, tc:Model, tc:SystemAsIs, tc:SystemAsRequired,
+    tc:ModelAsIs, tc:ModelAsRequired \\
+    tc:FlowType & tc:ComplexFlow, tc:DiscreteFlow, tc:ContinuousFlow \\
+    tc:FlowSubstance & tc:Information, tc:Energy, tc:Substance \\
+    tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow  \\
+    tc:FlowDefect & tc:InsufficientFlow, tc:ExcessiveFlow,
+    tc:BadControllableFlow, tc:AbsentFlow \\ 
+    tc:FlowSource & tc:ExternalSource, tc:InternalSource  \\
+    tc:MethodOfDescription & tc:TextDescription, tc:ParametricDescription,
+    tc:GraphicDescription \\\hline 
+  \end{tabular}
+\end{center}
+
+\subsection{Subconcepts of \texttt{tc:Flow}}
+
+A flow consists of several parts (source, channel, receiver, control unit)
+that are components by their own and hence modeled with the predicate
+\texttt{od:subConceptOf}. For the moment they are attached to the flow with a
+single predicate \texttt{od:hasStaticFlowComponent}.
+
+\HGG{Ist es sinnvoll, mit Blick auf das Konzept eines „minimal arbeitsfähigen
+  Flusses“, der alle Teile (source, channel, receiver, control unit) enthalten
+  muss, hier das Prädikat weiter zu differenzieren?}
+
+\subsection{\texttt{tc:FlowAnalysis}}
+
+A flow analysis is an analytic process concerned with a certain \emph{flow}
+(model) in a certain context.  The \emph{context} encapsulates all information
+about the exact conditions of the analysis (Goals, Requirements, Description
+Method).
+
+The goal of a functional analysis is to create a plan for a flow
+transformation based on the \emph{flow analysis rules} that can be applied to
+the flow and improves it in the given context. Hence the target of a flow
+analysis is a special document in a (yet hypothetic) Flow Transformation
+Description Language.
+
+The ontological representation of such a process is extremely difficult and is
+not considered here. The ontology of the flow analysis is restricted to the
+description of the \emph{formative elements of the analysis} and the creation
+of a manually generated \emph{FlowTransformation} document.
+
+\HGG{Ich denke, diese Einschränkung sollte gemacht werden. Es wäre weiter zu
+  klären, ob \texttt{od:hasDescriptionMethod} sowohl einen Fluss als auch eine
+Flussanalyse als \texttt{rdfs:domain} hat. In Ermangelung einer besseren Idee
+habe ich einer \texttt{tc:FlowTransformation} den Typ \texttt{foaf:Document}
+zugeordnet. }
+
+\begin{thebibliography}{xxx}
+\raggedright
+\bibitem{Eckardt2020} Olga Eckardt (2020).  The ontologies “Flow Model” and
+  “Flow Analysis”. Presentation (in Russian) at the TRIZ Ontology Webinar at
+  Oct. 27, 2020.  An English summary and discussion is available at
+  \url{https://wumm-project.github.io/2020-10-27}.
+\bibitem{Graebe2021} Hans-Gert Gr\"abe (2021). About the WUMM modelling
+  concepts of a TRIZ ontology.  \url{https://github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Anmerkungen.pdf}.
+\bibitem{Lebedyev2015} Yuri Lebedyev (2015). Improving flow analysis tools (in
+  Russian).  English summary.
+  \url{https://triz-summit.ru/certif/master/matriz/15/302897/}.
+\bibitem{Petrov2007} Vladimir Petrov, Michail Rubin, Simon Litvin (2007).
+  Fundamentals of TRIZ Theory of Inventive Problem Solving (in Russian).
+  Reprinted in 2020. ISBN 978-5-4496-8183-6.
+\bibitem{Souchkov2018} Valeri Souchkov (2018).  Glossary of TRIZ and
+  TRIZ-related terms. Version 1.2.
+  \url{https://matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}. 
+\bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
+  \url{https://www.w3.org/TR/skos-reference/}.  
+\bibitem{TOP} The TRIZ Ontology Project (TOP)
+  \foreignlanguage{russian}{Онтология ТРИЗ} of the TRIZ Developer Summit.
+  \url{https://triz-summit.ru/Onto_TRIZ/}.
+\bibitem{TOP-Glossary} TRIZ 100 Glossary. A short glossary of key TRIZ
+  concepts and terms (in Russian).
+  \url{https://triz-summit.ru/onto_triz/100/}.
+\bibitem{WUMM} The WUMM Project. \url{https://wumm-project.github.io/} 
+\bibitem{WUMM-Ontology} The WUMM TOP Companion Project.
+  \url{https://wumm-project.github.io/Ontology.html} 
+\end{thebibliography}
+
+\end{document}
+
