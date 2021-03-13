@@ -558,7 +558,7 @@ tc:MorphologicalBox  # MorphologicalTables, Problems
 
 tc:SpecificEvolutionTree
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Specific Evolution Trees"@en, "Spezifischer Evolutionsbäume"@de ;
+    skos:prefLabel "Specific Evolution Tree"@en, "Spezifischer Evolutionsbaum"@de ;
     skos:definition "A Specific Evolution Tree is an organized set of transformation versions of an object under examination."@en, "Organisierte Menge von Transformationsversionen eines untersuchten Objektes"@de .
 
 tc:EvolutionTreeTrunk
