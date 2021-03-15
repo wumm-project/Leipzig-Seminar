@@ -610,8 +610,24 @@ tc:StructuralAnalogyMethod
 
 tc:PatentCircumvention
     od:subConceptOf tc:ProblemTypesInModernEngineering ;
+    od:hasSubConcept tc:JuridicalMethod, tc:InventiveMethod, tc:JuridicalInventiveMethod ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Patent circumvention"@en, "Patentumgehung"@de .
+
+tc:JuridicalMethod
+    od:subConceptOf tc:PatentCircumvention ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Juridical method"@en, "Juristische Methode"@de .
+
+tc:InventiveMethod
+    od:subConceptOf tc:PatentCircumvention ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Inventive Method"@en, "Erfinderische Methode"@de .
+
+tc:JuridicalInventiveMethod
+    od:subConceptOf tc:PatentCircumvention ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Juridical-inventive method"@en, "Juristisch erfinderische Methode"@de .
 
 tc:Prediction
     od:hasSubConcept tc:QuantitativePrediction, tc:QuantitativePrediction ;
