@@ -1,0 +1,383 @@
+% Einfache LaTeX-Vorlage für Texte
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{ls}
+\usepackage[main=english,russian]{babel}
+
+\newenvironment{code}{\tt \begin{tabbing}
+\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
+{\end{tabbing}}
+\def\dq{{\char34}}
+
+\parindent0pt
+\parskip4pt
+
+\author{Immanuel Thoke}
+
+\title{Modelling TRIZ Flow Analysis with RDF}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+    \section{Abbreviations}
+    FAM - Flow Analysis Model
+
+    LETS - Laws of Evolution of Technical Systems
+
+    MINT - german acronym for Mathematik, Informatik, Naturwissenschaft und Technik
+
+    TOP - TRIZ Ontology Project
+
+    TRIZ - russian acronym for \foreignlanguage{russian}{теория решения изобретательских задач}, see TIPS
+
+    TIPS - Theory of Inventive Problem Solving 
+
+    RDF - Resource Description Framework 
+
+    WUMM - Widersprüche Und Management-Methoden
+
+    ZRTS - russian acronym for \foreignlanguage{russian}{Комплекс законов и тенденций развития технических систем}, see LETS
+
+    \section{Introduction}
+
+    \section{Aim of the work}
+
+    The aim of this paper is to elaborate a proposal for an ontological modelling
+    of the areas of \emph{TRIZ Flows} and \emph{TRIZ Flow Analysis} based on the
+    materials of the TRIZ Ontology Project (TOP) of the TRIZ Developer Summit
+    \cite{TOP} and further own investigations. The work fits into the activities
+    of the \emph{WUMM Project} \cite{WUMM} to accompany the TOP project and to
+    transfer it into the language of modern semantic concepts
+    \cite{WUMM-Ontology}.  The work therefore consists of two parts -- a
+    \emph{turtle file}, in which the semantic modelling is performed based on the
+    SKOS framework \cite{SKOS}, and \emph{this elaboration}, in which the
+    backgrounds and motivations of the concrete modelling decisions are detailed.
+
+    \section{Starting point} 
+
+    Flows and flow analysis play a rather peripheral role in TRIZ.  In the
+    standard reference \cite{Petrov2007} on a \emph{TRIZ Body of Knowledge} is
+    listed as item 2.5.8, but in the 7 references to the literature listed there
+    are no systematic explanations about the role of flows in TRIZ theory, but
+    only individual examples in which concrete flows (such as magnetic flow)
+    played a role in concrete modelling.  
+
+    We start from the definition of both concepts in the TOP Glossary
+    \cite{TOP-Glossary}: 
+    \begin{quote}
+        \textbf{Flow} is the directional movement in space of particles of mass of
+        matter, as well as the directional movement of energy or information. Flow
+        has dual properties: the properties of a substance of which the flow
+        consists, and the properties of a field, which is formed as a result of the
+        directional movement of particles of matter. Flows can be useful, harmful
+        and parasitic. The flow model contains static components: source, channel,
+        receiver, control system. Flow is a special case of a process in which
+        directional movement occurs in physical space.
+
+        \textbf{Flow analysis} is a method of systems analysis to establish
+        relationships in a system to flow, find resources, and determine compliance
+        with existing system requirements. The result of a flow analysis is a model
+        of the flow as is and a model of the flow to be. Flow modification
+        techniques are used to develop systems with flows and to solve inventive
+        problems in them.
+    \end{quote}
+    The use of these concepts is further included there in a single place in the
+    context of cause-effect analysis (ibid.):
+    \begin{quote}
+        Cause-effect analysis is performed: 
+    \begin{itemize}[noitemsep]
+        \item When the causes of an undesirable effect are not clear (when we cannot
+        go from an administrative contradiction to a technical one $AC\to TC$.
+        \item When it is necessary to clarify the causes of an undesirable effect
+        (to deepen the understanding of the causes of an undesirable effect, e.g.
+        after a functional or a flow analysis).
+    \end{itemize}
+    \end{quote}
+    Other sources are much more sparing in their statements on these two
+    individual terms, but list other flow-related concepts, for example in
+    \cite{Souchkov2018}:
+    \begin{itemize}[noitemsep]
+        \item Delay Zone -- A location in a flow in which the integral flow speed is
+        significantly lower than local flow speed. A Delay Zone is a typical
+        disadvantage identified by Flow Analysis. 
+        \item Flow -- A sequence of events that have the same common feature.
+        \item  Flow Analysis-- An analytical method and a tool which identifies
+        disadvantages in flows of energy, substances, and information in a technical
+        system.
+        \item  Flow Disadvantage -- A disadvantage of a technical system being
+        analyzed identified during Flow Analysis. Examples: Bottlenecks, «Gray
+        Zones», «Stagnation Zones», etc.
+        \item Flow Distribution Analysis-- A part of Flow Analysis that identifies
+        distribution of flows and their disadvantages. 
+        \item Stagnation Zone -- A part of a flow in which the flow stops temporarily
+        or permanently. A Stagnation Zone is a typical disadvantage identified by
+        Flow Analysis.
+        \item Transmission -- One of the key components (subsystems) of a Complete
+        Technical System which according to the Law of System Completeness of a
+        technical system transmits a flow of energy required to operate a working
+        unit from an engine to the working unit.
+    \end{itemize}
+
+\section{On the concept of system in the TOP modelling}
+
+A central concept in TOP modelling is the distinction between
+\begin{itemize}[noitemsep]
+\item [(1)] the system as it is,
+\item [(2)] the model of the system as it is,
+\item [(3)] the model of the system as it should be, and 
+\item [(4)] the system as it should be. 
+\end{itemize}
+The TOP glossary \cite{TOP-Glossary} explains the differences as follows
+\begin{itemize}[noitemsep]
+\item [(1)] The \emph{system as is} is a system in its original state before
+  it is analysed and transformed into a new «system as is».
+\item [(2)] The \emph{model of the system as is} is formed from the «system as
+  is» by means of various TRIZ models: component-structural and functional
+  models, su-field or ele-field models, description of contradictions or of
+  typical conflict schemes, etc. Depending on the chosen model type, the model
+  will be transformed into the «model of the system as required».
+\item [(3)] The \emph{model of the system as required} is formed from the
+  «model of the system as is» by procedures which correspond to the selected
+  model transformation method (functional, su-field, ele-field, solution of
+  the contradictions in requirements and properties, etc.). The transition is
+  performed along the line
+  \begin{center}
+    «System as is» $\to$ «Model of the system as is»\\ $\to$ «Model of the
+    system as required» $\to$ «System as required»
+  \end{center}
+  in accordance with the scheme of a TRIZ Model.
+\item [(4)] The \emph{system as required} is a system derived from the «system
+  as is» through a transformation, based on the «model of the system as
+  required».
+ \end{itemize}
+The referenced notions of \emph{TRIZ Model} and \emph{System} ar explained as
+follows:
+\begin{itemize}[noitemsep]
+\item A \emph{system} is a set of elements in relationship and connection with
+  each other, which forms a certain integrity, unity. The need to use the term
+  «system» arises when it is necessary to emphasize that something is large,
+  complex, not fully immediately understandable, yet whole, unified. In
+  contrast to the notions of «set» and «aggregate», the concept of a system
+  emphasises order, integrity, regularities of construction, functioning and
+  development. The notion of system is part of the system and functional
+  approach, and is used in the system operator.
+\item A \emph{TRIZ model} is a schematic notation of gradual transition
+  from the problem to TRIZ model of the problem, then to TRIZ model of the
+  solution and then to the solution itself; or from the system to TRIZ model
+  of the system, then to TRIZ model of the new system and then to actual
+  change of the system («system as required»). The TRIZ model includes the
+  basic components of inventive thinking: analysis, synthesis, evaluation.
+\end{itemize}
+This distinction, which is important for the planning and subsequent execution
+of the transformation of the system, is applied to all sub-concepts in the TOP
+modelling approach.  In particular, a distinction is made between «flow as
+is», «model of flow as is», «model of flow as required» and «flow as
+required».
+
+The system definition here is to be seen critically, since no distinction
+between a real-world system and its description is made, as is explained in
+more detail in \cite{Graebe2020}.  In this sense also in (1) and (4) a
+distinction has to be made between the real-world system and its description.
+Only the descriptions are accessible for modelling, hence (1) and (4) have to
+be replaced by «description of the system ...». (1) and (2) or (3) and (4)
+then differ primarily in the degree of formalisation according to the
+methodological guidelines of TRIZ.  Since the aim of modeling is not only to
+describe the solution, but also to implement it, i.e. carry out the projected
+transformation on the real-world system, a further level of description
+\begin{itemize}
+\item [(5)] the \emph{description of the system as it was realized},
+\end{itemize}
+is relevant if real-world development is also to be taken into account.
+
+Such readjustment of the basic concepts then also allows to model iterative
+system transformations, in which at the beginning of every iteration the
+difference between the «system as required in the previous step» and the
+«system as it was realized», can be analysed and based on this analysis also
+the «model of the system as required» can be transformed.
+
+This, however, requires a more precise distinction between the levels 
+\begin{itemize}[noitemsep]
+\item [(0)] of different versions of the \emph{real-world} system,
+\item [(1)] of \emph{descriptions and models} of these different versions and
+\item [(2)] the \emph{concepts, terms and notions} used in these descriptions.
+\end{itemize}
+The object of ontologisation is only level (2), in which the uniformity of the
+concepts over the different versions existing on level (1) is to be secured,
+which is reflected in the duality of concept (level (2)) and concept instance
+(level (1)).  Since RDF is relatively tolerant about not including parts of a
+concept into instances, it makes sense to make the distinctions according to
+(1)--(4) only at the instance level as a methodological property of a basic
+type \texttt{owl:Thing}, which is inherited by all subconcepts.  
+
+This was implemented in the proposed modelling as \texttt{od:hasMode}
+whose value range is an enumeration type \texttt{tc:ModeValue}.  See
+\cite{Graebe2021} for details and an example.
+
+    \section{Modelling the Flow Analysis Ontocard}
+    \subsection{Preliminaries and context}
+    This work is part of the WUMM\cite{WUMM} TOP Companion Project\cite{WUMMTOP}. 'One of the goals of the project is to transform that information[...]',
+    which has been provided by the TOP,'[...]into RDF as the machine readable standard of the Web 3.0 (also called 'Semantic Web').'\cite{WUMMTOP}. Its 
+    source code is managed in a git repository\cite{RDFData} and has been forked for developing the TRIZ Analysis Ontocard feature. The README manual
+    of the repository provides necessary preliminaries for using and continue developing the project.
+    
+    few words to RDF in general + the reference sources    
+    The Flow Analysis Ontocard
+        - some notes referring to Eckardt
+            - 
+        - mentioning the Prerequisites
+        The main part of the modelling workflow is the appropriate design how to translate the ontological structure of the given topic into the RDF scope
+        of three-word-sentences. Therefore the use of several namespaces to map each ontological aspect onto the architecture of subjects, predicates and 
+        objetcs is key to deliver a well structured RDF Model. 
+
+
+        concept of namespaces used mainly
+        ex:
+        tc:
+        od: - as 
+        skos:
+        rdfs:
+        \cite{HGGS}
+
+        To rely on proper methods of the design of software components a few small changes to the taxonomy of Eckardt's Ontology needed to be induced with
+        several layers of abstraction(which are existing prototypically but are not described explicitely) and specification of the used predicates. 
+        The description of the modelling will mainly focus on these parts, while explaining the structure of the ontology itself remains exemplarily, 
+        as it has always been specified in the quoted material.
+
+        four levels of hierarchy to distinguish descriptive modelling 
+        0
+        1
+        2
+        3
+
+        the methodological practice described in this work is mainly based at level 2, meaning the modelled objects and subjects in terms of RDF refer to 
+        the concept of classes used in object-oriented programming[SOURCE]. Therefore all properties of RDF objects described here are generic class
+        properties, which have to be instanciated separately as a RDF triplet of rdfs:type|s referring a certain object of class properties
+
+        \cite{HGGA}
+
+        select distinct ?p where {?s ?p ?o filter regex(?p, 'od')} 
+        \subsection{The Flow Model view}
+        Flow 
+        \subsection{The Flow Analysis view}
+            \subsubsection{Top Level}
+            \subsubsection{methodological view}
+        \subsection{The vertical view of Flow Instances}
+    \section{Critical review and further development}
+        \subsection{Outside view - embedding the Flow Analysis Ontocard}
+        For now this TRIZ Ontocard remains isolated from its embedded environment within the ontological hierarchy of the TOP and rules how and when to 
+        apply a flow analysis method within the main process of inventive problem solving as it is proposed by the TRIZ model. A long term goal may be,
+        that from an autonomous engineers perspective it should be possible to gain a programmatic manual how to solve a specific inventive or systemic
+        problem only with the given RDF of the TRIZ Ontology, for which it has to be serializable.
+
+        To embed the Flow Analysis Ontocard either a top down or a bottom up approach is applicable. For top down it needs to be clarified how
+        Flow Analysis as one of the Top Level Ontologies fits in the structure with the remaining parts, especially LETS, the TRIZ application areas and
+        the TRIZ Model. As it seems clear Eckardt already considered the connection to LETS and the TRIZ Model, for which these areas should be prioritized
+        in the further development.
+        
+        Further, not only in terms of ontologization, it remains unclear where exactly the methodological framework of flow
+        analysis is settled, how it can be derived or transformed from other system analysis methods, which methods from different approaches it includes
+        or where other techniques may benefit from including flow analysis methods in terms of multiperspective modelling. There are severel concepts, 
+        which use similar semantics or patterns to describe a problem, only on different levels of abstraction, especially those, which work on graph
+        like structures. First mentioned here should be the process analysis framework and additionally function analysis as they intersect on a general
+        conceptual level.
+
+        Looking at processes, functions and flows in TRIZ terminology [ADD GLOSSARY SOURCES]\cite{WebinarNotes} a flow model is a special process model, where the process is a
+        function in time between each of the components of the process. \cite{SysInno2017} In the flow analysis model a flow is also a function, though it derives not
+        as a function between components, but as an emergent property of its components properties, which do not have functional properties only, but relational
+        properties too, especially the control unit and the channel, which can not be grouped by source or receiver components bijectively in time. 
+        So it's neither a classical process model nor a function model in its strict sense, thus combines aspects of both as flow is a function in time between nodes, 
+        which combine multiple properties of different components, but with interdependet properties like ratio of flow rate and capacity. In the status
+        quo these aspects are not covered explicitely by the flow analysis model.
+
+        Further, the concept of substance field models(SFM) is closely related to the FAM. 'Analog to the function model the components are also connected
+        via a function, but in the substance field model the energy or a specific form of energy is added.' \cite{SysInno2017} Thus, the substance field model
+        matches the systemic structure of flow composition, leading to its definition as a physical quantity as a product of a field and a face. \cite{Fluss(Physik)}
+        Even more, SFM uses the terminology of useful and harmful effects, too. \cite{SysInno2017} Therefore the linkage between those methods should be generalized in the
+        future.
+
+        Next mentioned should be its connection to the root conflict analysis. As already scribed in the introduction, cause and effect analysis and the
+        identification of cause-effect-chains is a well described and established concept in TRIZ. As many rules of flow analysis and its techniques to
+        change flows obviously imply a root conflict analysis, there is no ontological relation between these concepts and should be made explicit. 
+        
+        Yet, there are several other concepts in TRIZ that can be exploited using the flow analysis. Generally speaking, all models which describe 
+        progress in time and map the ability and change of motion of some potential can be analyzed using the FAM. So it maybe should considered to
+        review the concept of evolution of technical systems in terms of flow analysis, at least ontologically.
+        
+        While having focused mainly on the MATRIZ school, there exists a flow model in OTSM-TRIZ as well. Khomenko proposed a 'Problem Flow Approach',
+        which uses a more abstract concept of flow. 
+
+        
+
+        \subsection{Inside view - methodological critics}
+        Eckardts ontology of flow analysis as it is matches the basic methodological approach of TRIZ on how to change a problematic system in terms 
+        of requirement engineering. It has a descriptive flow model and categorial connections what rules are needed to construct and evaluate a 
+        flow model as it is and which have to be used to transform it into a flow model as it should be, while including some techniques how to change
+        its static components to aim for the prefered requirements. Beside that basic descriptive perspective it does not meet the need on how
+        to achieve demanded modifications of flow systems in specific cases, as it has been already noticed by Eckardt(algorithms and a matrix
+        of methods of transformation of the model as is to the model as it should be as a possible next step \cite{Eckardt2020}').
+        The proposed <<Techniques of Modification>> used by Eckardt for this transformation are based on the work of Lyubomirsky. While Eckardt established
+        his categories of techniques how to increase useful flows and reduce of harmful flows by changing different static components, a more detailed analytic 
+        point of view needs to adress which problematic effects can be solved using certain techniques. Further more, we need a map which decodes what
+        properties of components can cause components to occur harmful properties, like grey zones, stagnation zones and so on. 
+        But to establish these performative aspects the descriptive flow model needs to be improved as well. 
+        Beside having properties for static components, which has already been regarded by Lyubomirsky and improved by Lebedev (like capacity or conductivity),
+        \texttt{dynamic properties of flow}, for example resonance or flow rate, have to be
+        defined to model how specific flow properties emerge out of the constellation of certain configuration of its static components and how they can be affected
+        changing them.
+
+        which change of components change which property of the flow
+        how does the change of a flow property affect certain components
+        
+        This concludes, that an additionally level of abstraction is needed to account for the interconnection of flow and its components. The question
+        is, how it can be modelled that a stagnation zone is only bad for useful flows but can be used to reduce harmful flows?
+        At this point, only singular flows are issued by the FAM, meaning that it is not clear, if a global flow system is issued or a specific local flow.
+        But it has to be considered, that synergistic effects on the one hand can cause contrary reactions on the other hand. A flow analysis therefore must 
+        take the complexity of flow networks into account. Beside extending the descriptive flow model to spotlight on the systemic causation of these problems, 
+        this is also a methodological issue. At the moment FAM focuses on methods, that emerge out of experienced based best practices in an engineering context.
+        While establishing methodological concepts, that aim for generalization of categorial problem classes,
+        they are mainly build for qualitive substance and energy flows only. Not to forget, that there are some blue prints adressing information flows, too, like
+        the problem of conversion of flows and the concept of carrier and media flows, but these remain cursory.
+        This rises the question: Which domains can be adressed by the actual model and which not? And further more, are the foundations of the TRIZ model sufficient to address complex problems in flow analysis, that cannot clearly distinct between
+        useful and harmful flows. If we look at these techniques, they try to fulfill requirements orienting on one parameter at the time.
+        But in practice, especially in a network of flows, you need to take multiple parameters into account, respectively distinguish between global and local
+        parameterization. Therefore a quantization or numerical framework is needed, like it is applicated by graph theoretical concepts and optimization theory. 
+        
+         
+
+
+
+         
+
+        How can the vocabulary be used to apply it to certain domains, especially those which doesn't seem to be intuitively compatible to the generic techniques
+        of flow modification. 
+
+\begin{thebibliography}{...}
+    \raggedright
+    \bibitem{HGGA} Gräbe, Hans-Gert. Anmerkungen...
+    \bibitem{HGGS} Gräbe, Hans-Gert. Seminararbeiten...
+    \bibitem{Eckardt2020} Eckardt, Olga. Ontologische Diagramme. Flussmodell und Flussanalyse. TRIZ Ontology Project - The Webinar 2020. 27.10.2020, 19 Uhr (UTC+3). Translated to German by Hans-Gert Gräbe, Leipzig. 
+    \bibitem{WebinarNotes}
+    \bibitem{SysInno2017} 
+    \bibitem{Graebe2020} Hans-Gert Gräbe (2020).  Die Menschen und ihre Technischen Systeme. LIFIS Online.
+        \url{doi:10.14625/graebe_20200519}.
+    \bibitem{Graebe2021} Hans-Gert Gräbe (2021).  Some remarks about the WUMM Ontology Modeling.  Manuscript, WUMM repository «Leipzig-Seminar». 
+    \bibitem{Kuryan et al. 2020} Kuryan, Andrey. Rubin, Mikhail. Shchedrin, Nikolai. Eckardt, Olga. Rubina, Natalia. TRIZ Ontology. Currect State and Perspectives. Translated to English by Hans-Gert Gräbe, Leipzig, who aknowledges the support by the free version of deepl.com. Minsk, Belarus. August 21, 2020.
+    \bibitem{Litvin et al. 2007} Litvin, Simon. Petrov, Vladimir. Rubin, Mikhail. International TRIZ Association(MA TRIZ). Frey, Victor. Altshuller Institute for TRIZ Studies. TRIZ Body of Knowledge. 2007.
+    \bibitem{Lebedev2011} Lebedev, Yuri. Classification of flows in technical systems. 2011.
+    \bibitem{Lyubomirsky2006} Lyubomirsky, Alex. Law on efficiency improvement use of substance, energy and information flows. 2006.
+    \bibitem{Petrov2007} Vladimir Petrov, Michail Rubin, Simon Litvin (2007). Fundamentals of TRIZ Theory of Inventive Problem Solving (in Russian). Reprinted in 2020. ISBN 978-5-4496-8183-6.
+    \bibitem{Petrov2019} Petrov, Vladimir. TRIZ. Theory of Inventive Problem Solving - Level 1. Springer International Publishing. Ra'anana, Israel. 2019.
+    \bibitem{Souchkov2018} Valeri Souchkov (2018).  Glossary of TRIZ and TRIZ-related terms. Version 1.2.
+        \url{https://matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}. 
+    \bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
+        \url{https://www.w3.org/TR/skos-reference/}.
+    \bibitem{TOP} The TRIZ Ontology Project (TOP) \foreignlanguage{russian}{Онтология ТРИЗ} of the TRIZ Developer Summit.
+        \url{https://triz-summit.ru/Onto_TRIZ/}.
+    \bibitem{TOP-Glossary} TRIZ 100 Glossary. A short glossary of key TRIZ concepts and terms (in Russian).
+        \url{https://triz-summit.ru/onto_triz/100/}.
+    \bibitem{WUMM} The WUMM Project. https://wumm-project.github.io/About.html. Last visited 22 February 2021.
+    \bibitem{WUMMTOP} The WUMM TOP Companion Project. https://wumm-project.github.io/Ontology. Last visited 22 February 2021.
+    \bibitem{RDFData} The RDFData git repository. https://github.com/wumm-project/RDFData.  Last visited 22 February 2021.
+    \bibitem{SPARQL} The Virtuoso SPARQL Query Editor hosted by the WUMM Project. http://wumm.uni-leipzig.de:8891/sparql. Last visited 22 February 2021. 
+\end{thebibliography}
+\end{document}

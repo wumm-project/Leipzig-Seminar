@@ -18,7 +18,7 @@
 
 # Flow 
 tc:Flow
-    a skos:Concept, od:SouchkovGlossaryEntry;
+    a skos:Concept, od:SouchkovGlossaryEntry ;
     od:WOPCategory od:Component;
     od:SouchkovCategory tc:FlowAnalysis ;
     od:SouchkovDefinition "A sequence of events that have the same common feature."@en ;
@@ -31,6 +31,58 @@ od:hasMode
     a rdfs:Property ;
     rdfs:domain tc:Flow ;
     rdfs:range tc:ModeValue .
+
+tc:ModeValue
+    a skos:Concept, od:AdditionalConcept ;
+    od:allowedValues od:FlowAsIs, od:FlowModelAsIs, od:FlowModelAsShouldBe, od:FlowAsShouldBe ;
+    od:WOPCategory od:PropertyDomain ; 
+    skos:prefLabel "Modelling mode"@en, "Modellierungsmodus"@de .
+
+tc:FlowAsIs
+    od:valueOf tc:ModeValue ;
+    skos:prefLabel "Flow, as it is"@en, "Fluss, wie er ist"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:FlowModelAsIs
+    od:valueOf tc:ModeValue ;
+    skos:prefLabel "Flow model, as it is"@en, "Flussmodell, wie es ist"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:FlowModelAsShouldBe
+    od:valueOf tc:ModeValue ;
+    skos:prefLabel "Flow model, as it should be"@en, "Flussmodell, wie es sein sollte"@de ;
+    skos:altLabel "Model of the ideal final result"@en, "Modell des idealen Endresultats"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:FlowAsShouldBe
+    od:valueOf tc:ModeValue ;
+    skos:prefLabel "Flow, as it should be"@en, "Fluss, wie er sein sollte"@de ;
+    skos:altLabel "ideal final result"@en, "Ideales Endresultat"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:DomainOntology 
+    a skos:Concept, od:AdditionalConcept ;
+    skos:related tc:ApplicationArea .
+
+od:hasDomain
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAsIs, tc:FlowAsShouldBe ;
+    rdfs:range tc:DomainOntology .
+
+od:isTranslatedInto
+    a rdfs:Property ;
+    rdfs:domain tc:FlowAsIs ;
+    rdfs:range tc:FlowModelAsIs .
+
+od:isTransformedInto
+    a rdfs:Property ;
+    rdfs:range tc:FlowModelAsIs ;
+    rdfs:domain tc:FlowModelAsShouldBe .
+
+od:isTemplatefor
+    a rdfs:Property ;
+    rdfs:range tc:FlowModelAsShouldBe ;
+    rdfs:domain tc:FlowAsShouldBe .
 
 # Flow Properties
 od:hasFlowType
@@ -303,7 +355,7 @@ od:inContext
 od:appliesRule
     a rdfs:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:FlowAnalysisRule .
+    rdfs:range tc:RulesOfFlowAnalysis .
 
 od:generatesFlowTransformation
     a rdfs:Property ;
@@ -331,15 +383,15 @@ od:hasRequirement
     rdfs:domain tc:Context ;
     rdfs:range tc:Requirement .
 
-od:proofRequirements # unverständlich, range kann nur ja oder nein sein
-    a rdfs:Property ;
-    rdfs:domain tc:Goals ;
-    rdfs:range tc:Requirements .
+# od:proofRequirements # unverständlich, range kann nur ja oder nein sein --> used in the future for transformation processing
+#     a rdfs:Property ;
+#     rdfs:domain tc:Goals ;
+#     rdfs:range tc:Requirements .
 
 od:usesTechniqueOfModification
     a rdfs:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:FlowAnalysisRule .
+    rdfs:range tc:RulesOfFlowAnalysis .
 
 od:applyChanges 
     a rdfs:Property ;
