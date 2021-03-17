@@ -17,30 +17,49 @@
     rdfs:label "Evolution Trees - an Example" ;
     owl:imports <http://opendiscovery.org/rdf/Ontologies/EvolutionTrees/> .
 
+# segmenting predicate with type "Two Parts, Many Parts etc." from Pattern
+
 # nodes of the evolution tree
 
+# Monolith
 ex:Baumstamm a ex:Boot; rdfs:label "Baumstamm"@de .
 
+# Two Parts, Many Parts
 ex:Ruderboot a ex:Boot; rdfs:label "Ruderboot"@de .
 
-ex:BootMitSegeln a ex:Boot; rdfs:label "Boot mit Segeln"@de .
+# Gas
+ex:Segelboot a ex:Boot; rdfs:label "Boot mit Segeln"@de .
 
+# Fog
 ex:Dampfboot a ex:Boot; rdfs:label "Dampfboot"@de .
 
+# Liquid
 ex:Dieselschiff a ex:Boot; rdfs:label "Boot mit Dieselantrieb"@de .
 
 ex:DuesenSchiff a ex:Boot; rdfs:label "Boot mit Jetantrieb"@de .
-
+ 
+# Field
 ex:Atomboot a ex:Boot; rdfs:label "Boot mit Atomantrieb"@de .
 
 # links of the evolution tree
 
 ex:Baumstamm ex:addPaddles ex:Ruderboot .
-
-ex:addPaddles od:usesPattern tc:NewPrinciplePattern, tc:IncreasingControllabilityPattern;
+ex:addPaddles od:usesPattern tc:NewPrinciplePattern, tc:IncreasingControllabilityPattern ;
 rdfs:label "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
 
 ex:Ruderboot ex:replacePaddleWithSail ex:Segelboot .
-
-ex:replacePaddleWithSail od:usesPattern tc:NewPrinciplePattern;
+ex:replacePaddleWithSail od:usesPattern tc:NewPrinciplePattern ;
 rdfs:label "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
+
+# es gibt Mischformen!
+ex:Segelboot ex:replaceSailWithSteamEngine ex:Dampfboot .
+ex:replaceSailWithSteamEngine od:usesPattern tc:NewPrinciplePattern ;
+rdfs:label "Die Windkraft wird durch Dampfkraft ersetzt"@de .
+
+ex:Dampfboot ex:replaceSteamEngineWithDieselEngine ex:Dieselschiff .
+ex:replaceSteamWithDieselEngine od:usesPattern tc:NewPrinciplePattern ;
+rdfs:label "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
+
+ex:Dieselschiff ex:replaceDieselEngineWithNuclearReactor ex:Atomboot .
+ex:replaceDieselEngineWithNuclearReactor od:usesPattern tc:NewPrinciplePattern ;
+rdfs:label "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .

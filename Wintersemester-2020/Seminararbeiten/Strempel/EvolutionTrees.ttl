@@ -99,11 +99,6 @@ tc:BasicEvolutionPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "The main evolution patterns of technical objects"@en, "Die Basisevolutionsmuster technischer Objekte"@de .
 
-od:transitionsTo
-    a rdfs:Property ;
-    rdfs:domain tc:EvolutionTree ;
-    rdfs:range tc:EvolutionPattern .
-
 # MonoBiPoly
 tc:MonoBiPolyPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
@@ -117,22 +112,19 @@ tc:MonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Mono-system"@en, "Monosystem"@de ;
-    skos:example "One Spanner"@en, "Ein Schraubenschlüssel"@de ;
-    od:transitionsTo tc:Bisystem .
+    skos:example "One Spanner"@en, "Ein Schraubenschlüssel"@de .
 
 tc:BiSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Bi-system"@en, "Bisystem"@de ;
-    skos:example "Two Spanners"@en, "Zwei Schraubenschlüssel"@de ;
-    od:transitionsTo tc:PolySystem .
+    skos:example "Two Spanners"@en, "Zwei Schraubenschlüssel"@de .
 
 tc:PolySystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Poly-system"@en, "Polysystem"@de ;
-    skos:example "Multiple Spanners"@en, "Mehrere Schraubenschlüssel"@de ;
-    od:transitionsTo tc:NewMonosystem .
+    skos:example "Multiple Spanners"@en, "Mehrere Schraubenschlüssel"@de .
 
 tc:NewMonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
