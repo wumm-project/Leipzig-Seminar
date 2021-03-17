@@ -112,218 +112,218 @@ ex:MechanicalTV a ex:Screen ; rdfs:label "Mechanical TV set - Trimmed Cinematogr
 ex:CrtTVSet a ex:Screen ; rdfs:label "CRT TV set - Trimmed Cinematograph"@en .
 
 # Forming an image by surface segmentation
-ex:LargePixels
-ex:MediumSizePixels
-ex:SmallPixels
+ex:LargePixels a ex:Screen ; rdfs:label ""@en .
+ex:MediumSizePixels a ex:Screen ; rdfs:label ""@en .
+ex:SmallPixels a ex:Screen ; rdfs:label ""@en .
 
 # Geometrical evolution of the screen
-ex:SphericalScreen
-ex:CylindricalScreen
-ex:FlatScreen
+ex:SphericalScreen a ex:Screen ; rdfs:label ""@en .
+ex:CylindricalScreen a ex:Screen ; rdfs:label ""@en .
+ex:FlatScreen a ex:Screen ; rdfs:label ""@en .
 
 # Segmentation of the cathode ray tube
-ex:TwoEGuns
-ex:SomeEGuns
-ex:FieldEmissionDisplay
-ex:FieldEmissionDisplayOnNanoTubes
+ex:TwoEGuns a ex:Screen ; rdfs:label ""@en .
+ex:SomeEGuns a ex:Screen ; rdfs:label ""@en .
+ex:FieldEmissionDisplay a ex:Screen ; rdfs:label ""@en .
+ex:FieldEmissionDisplayOnNanoTubes a ex:Screen ; rdfs:label ""@en .
 
 # Coordination the image with the surrounding background
-ex:ImageNotCoordinatedWithBackground
-ex:NeutralBackground
-ex:DynamicalCoordination
+ex:ImageNotCoordinatedWithBackground a ex:Screen ; rdfs:label ""@en .
+ex:NeutralBackground a ex:Screen ; rdfs:label ""@en .
+ex:DynamicalCoordination a ex:Screen ; rdfs:label ""@en .
 
 # Mono-bi-poly of color screens
-ex:BlackWhiteDisplay
-ex:16Colors
-ex:256Colors
-ex:16000000Colors
+ex:BlackWhiteDisplay a ex:Screen ; rdfs:label ""@en .
+ex:16Colors a ex:Screen ; rdfs:label ""@en .
+ex:256Colors a ex:Screen ; rdfs:label ""@en .
+ex:16000000Colors a ex:Screen ; rdfs:label ""@en .
 
 # Mono-bi-poly of pixel
-ex:WhiteActivePixel
-ex:RGBPixel
-ex:RGBWhitePixel
-ex:6ColorsPixel
-ex:SOLEDPixel
+ex:WhiteActivePixel a ex:Screen ; rdfs:label ""@en .
+ex:RGBPixel a ex:Screen ; rdfs:label ""@en .
+ex:RGBWhitePixel a ex:Screen ; rdfs:label ""@en .
+ex:6ColorsPixel a ex:Screen ; rdfs:label ""@en .
+ex:SOLEDPixel a ex:Screen ; rdfs:label ""@en .
 
 
 # next tree step
 ex:FlatDisplay a ex:Screen ; rdfs:label "Flat display - Trimmed CRT"@en .
 
 # Mono-bi-poly of flat displays
-ex:TwoDisplays
-ex:SeveralDisplays
-ex:LargeScreenComposedOfDisplays
-ex:SuperLargeScreen
+ex:TwoDisplays a ex:Screen ; rdfs:label ""@en .
+ex:SeveralDisplays a ex:Screen ; rdfs:label ""@en .
+ex:LargeScreenComposedOfDisplays a ex:Screen ; rdfs:label ""@en .
+ex:SuperLargeScreen a ex:Screen ; rdfs:label ""@en .
 
 # Mono-bi-poly of 3D display screen layers
-ex:3DDisplayWithLenses
-ex:DoubleLayer3DDisplay
-ex:Multilayer3DDisplay
-ex:MovableScreenDisplay
+ex:3DDisplayWithLenses a ex:Screen ; rdfs:label ""@en .
+ex:DoubleLayer3DDisplay a ex:Screen ; rdfs:label ""@en .
+ex:Multilayer3DDisplay a ex:Screen ; rdfs:label ""@en .
+ex:MovableScreenDisplay a ex:Screen ; rdfs:label ""@en .
 
 # 3D Display dynamization
-ex:RotatableScreen
-ex:TravellingWave
-ex:TwoIRLasers
-ex:SpecialCrystal
+ex:RotatableScreen a ex:Screen ; rdfs:label ""@en .
+ex:TravellingWave a ex:Screen ; rdfs:label ""@en .
+ex:TwoIRLasers a ex:Screen ; rdfs:label ""@en .
+ex:SpecialCrystal a ex:Screen ; rdfs:label ""@en .
 
 # point - line - surface - volume transition for the flat display
-ex:LinearDisplay
-ex:OnePointDisplay
-ex:DoublePointDisplay
-ex:MultiPointDisplay
-ex:SuperLargeScreenOnLaserDiodes
+ex:LinearDisplay a ex:Screen ; rdfs:label ""@en .
+ex:OnePointDisplay a ex:Screen ; rdfs:label ""@en .
+ex:DoublePointDisplay a ex:Screen ; rdfs:label ""@en .
+ex:MultiPointDisplay a ex:Screen ; rdfs:label ""@en .
+ex:SuperLargeScreenOnLaserDiodes a ex:Screen ; rdfs:label ""@en .
 
 # Geometrical evolution of the linear display
-ex:CurvedLinearDisplay
-ex:ComplexShapeLinearDisplay
+ex:CurvedLinearDisplay a ex:Screen ; rdfs:label ""@en .
+ex:ComplexShapeLinearDisplay a ex:Screen ; rdfs:label ""@en .
 
 # Dynamisation of the linear display
-ex:FabricMadeOfLinearDisplays
-ex:RotatingLinearDisplays
-ex:MovableObjectMadeOfLinearDisplays
+ex:FabricMadeOfLinearDisplays a ex:Screen ; rdfs:label ""@en .
+ex:RotatingLinearDisplays a ex:Screen ; rdfs:label ""@en .
+ex:MovableObjectMadeOfLinearDisplays a ex:Screen ; rdfs:label ""@en .
 
 # Expanding-Trimming of flat display systems
 
-ex:DisplayAndRadioScanner
-ex:DisplayAndVideoCamera
-ex:TouchPanel
-ex:TouchSensitiveCoating
-ex:SpeakerDisplay
-ex:ScannerDisplay
-ex:HagachiComputerDisplay
-ex:DisplayCard
+ex:DisplayAndRadioScanner a ex:Screen ; rdfs:label ""@en .
+ex:DisplayAndVideoCamera a ex:Screen ; rdfs:label ""@en .
+ex:TouchPanel a ex:Screen ; rdfs:label ""@en .
+ex:TouchSensitiveCoating a ex:Screen ; rdfs:label ""@en .
+ex:SpeakerDisplay a ex:Screen ; rdfs:label ""@en .
+ex:ScannerDisplay a ex:Screen ; rdfs:label ""@en .
+ex:HagachiComputerDisplay a ex:Screen ; rdfs:label ""@en .
+ex:DisplayCard a ex:Screen ; rdfs:label ""@en .
 
 # Dynamization of a double-screen display
 
-ex:TwoImmovableDisplays
-ex:BookDisplay
-ex:BendableDisplay
-ex:RolledDisplay
-ex:ActiveReliefDisplay
+ex:TwoImmovableDisplays a ex:Screen ; rdfs:label ""@en .
+ex:BookDisplay a ex:Screen ; rdfs:label ""@en .
+ex:BendableDisplay a ex:Screen ; rdfs:label ""@en .
+ex:RolledDisplay a ex:Screen ; rdfs:label ""@en .
+ex:ActiveReliefDisplay a ex:Screen ; rdfs:label ""@en .
 
 # Evolution of the screen surface microrelief
 
-ex:MicroJalousie
-ex:NonReflectingLayer
-ex:RealVirtualDisplay
-ex:IncreasedProvacyDisplay
+ex:MicroJalousie a ex:Screen ; rdfs:label ""@en .
+ex:NonReflectingLayer a ex:Screen ; rdfs:label ""@en .
+ex:RealVirtualDisplay a ex:Screen ; rdfs:label ""@en .
+ex:IncreasedProvacyDisplay a ex:Screen ; rdfs:label ""@en .
 
 # Mono-bi-poly of mobile phone displays
 
-ex:OneDisplay
-ex:FlatAndPointDisplays
-ex:TwoFlatDisplaysAndPointDisplay
-ex:TwoSidedDisplay
+ex:OneDisplay a ex:Screen ; rdfs:label ""@en .
+ex:FlatAndPointDisplays a ex:Screen ; rdfs:label ""@en .
+ex:TwoFlatDisplaysAndPointDisplay a ex:Screen ; rdfs:label ""@en .
+ex:TwoSidedDisplay a ex:Screen ; rdfs:label ""@en .
 
 # Display dynamization
 
-ex:ImmovableDisplay
-ex:PartiallyMovableDisplay
-ex:CylindricalHinge
-ex:TwoHinges
-ex:SphericalHinge
-ex:IsolatedDisplay
+ex:ImmovableDisplay a ex:Screen ; rdfs:label ""@en .
+ex:PartiallyMovableDisplay a ex:Screen ; rdfs:label ""@en .
+ex:CylindricalHinge a ex:Screen ; rdfs:label ""@en .
+ex:TwoHinges a ex:Screen ; rdfs:label ""@en .
+ex:SphericalHinge a ex:Screen ; rdfs:label ""@en .
+ex:IsolatedDisplay a ex:Screen ; rdfs:label ""@en .
 
 ### segmentation
 ## Many parts
 
 # Image compounded of moving elements
-ex:ImageOfMovingParts
-ex:MovingCord
-ex:SeveralMovingCords
+ex:ImageOfMovingParts a ex:Screen ; rdfs:label ""@en .
+ex:MovingCord a ex:Screen ; rdfs:label ""@en .
+ex:SeveralMovingCords a ex:Screen ; rdfs:label ""@en .
 
 # Mono-bi-poly of colors of electronic paper
 
-ex:BlackWhiteElectronicPaper
-ex:ColorElectronicPaper
+ex:BlackWhiteElectronicPaper a ex:Screen ; rdfs:label ""@en .
+ex:ColorElectronicPaper a ex:Screen ; rdfs:label ""@en .
 
 # MATChEM for needle-type tactile display
 
-ex:NeedleDisplay
-ex:NeedleDisplayWithLocalSound
-ex:ColorDisplayForBlind
-ex:DisplayWithOdor
-ex:ColorDisplayWithActiveBasRelief
-ex:MagneticGuide
+ex:NeedleDisplay a ex:Screen ; rdfs:label ""@en .
+ex:NeedleDisplayWithLocalSound a ex:Screen ; rdfs:label ""@en .
+ex:ColorDisplayForBlind a ex:Screen ; rdfs:label ""@en .
+ex:DisplayWithOdor a ex:Screen ; rdfs:label ""@en .
+ex:ColorDisplayWithActiveBasRelief a ex:Screen ; rdfs:label ""@en .
+ex:MagneticGuide a ex:Screen ; rdfs:label ""@en .
 
 ## Sand
 
 # Sand
-ex:SandDisplay
+ex:SandDisplay a ex:Screen ; rdfs:label ""@en .
 
 ## Liquid
 
 # Dynamization of the liquid display
 
-ex:LiquidBalls
-ex:ElectrowettingEffect
-ex:Ferrofluid
-ex:RainbowEffectLiquid
+ex:LiquidBalls a ex:Screen ; rdfs:label ""@en .
+ex:ElectrowettingEffect a ex:Screen ; rdfs:label ""@en .
+ex:Ferrofluid a ex:Screen ; rdfs:label ""@en .
+ex:RainbowEffectLiquid a ex:Screen ; rdfs:label ""@en .
 
 # Segmentation of image-producing elements
 
-ex:ElectronicInk
-ex:LiquidCrystalDisplay
+ex:ElectronicInk a ex:Screen ; rdfs:label ""@en .
+ex:LiquidCrystalDisplay a ex:Screen ; rdfs:label ""@en .
 
 # Segmentation of the distributed light source
 
-ex:ContinuousLightSource
-ex:SingularLightEmittingDiodes
-ex:OnePixelOneDiode
+ex:ContinuousLightSource a ex:Screen ; rdfs:label ""@en .
+ex:SingularLightEmittingDiodes a ex:Screen ; rdfs:label ""@en .
+ex:OnePixelOneDiode a ex:Screen ; rdfs:label ""@en .
 
 ## Foam
 
 # Segmentation of the bubble display control elements
 
-ex:BubbleScreen
-ex:UpperAndLowerElectromagnets
-ex:SideElectromagnets
-ex:BackElectromagnet
-ex:PartiallySegmentedElectromagnets
-ex:SegmentedElectromagnets
+ex:BubbleScreen a ex:Screen ; rdfs:label ""@en .
+ex:UpperAndLowerElectromagnets a ex:Screen ; rdfs:label ""@en .
+ex:SideElectromagnets a ex:Screen ; rdfs:label ""@en .
+ex:BackElectromagnet a ex:Screen ; rdfs:label ""@en .
+ex:PartiallySegmentedElectromagnets a ex:Screen ; rdfs:label ""@en .
+ex:SegmentedElectromagnets a ex:Screen ; rdfs:label ""@en .
 
 ## Aerosol
 
 # Geometrical evolution of the foggy screen
 
-ex:FogScreen
-ex:CloudyScreen
-ex:LaserShow
+ex:FogScreen a ex:Screen ; rdfs:label ""@en .
+ex:CloudyScreen a ex:Screen ; rdfs:label ""@en .
+ex:LaserShow a ex:Screen ; rdfs:label ""@en .
 
 ## Gas
 
 # Image activation in a gas medium
 
-ex:AircraftTrail
-ex:Firework
-ex:ImageInTheAir
+ex:AircraftTrail a ex:Screen ; rdfs:label ""@en .
+ex:Firework a ex:Screen ; rdfs:label ""@en .
+ex:ImageInTheAir a ex:Screen ; rdfs:label ""@en .
 
 ## Plasma
 
 # Combining a plasma panel with a different type of display
 
-ex:PDP
-ex:PlasmaPanelWithFilter
-ex:CommonElectrodes
-ex:NanopowderInsideCell
+ex:PDP a ex:Screen ; rdfs:label ""@en .
+ex:PlasmaPanelWithFilter a ex:Screen ; rdfs:label ""@en .
+ex:CommonElectrodes a ex:Screen ; rdfs:label ""@en .
+ex:NanopowderInsideCell a ex:Screen ; rdfs:label ""@en .
 
 ## Field
 
 # Trimming a light image
-ex:ShadowPlay
-ex:Miniprojector
-ex:ProjectionTVSet
+ex:ShadowPlay a ex:Screen ; rdfs:label ""@en .
+ex:Miniprojector a ex:Screen ; rdfs:label ""@en .
+ex:ProjectionTVSet a ex:Screen ; rdfs:label ""@en .
 
-ex:LEP
-ex:OLED
-ex:Iridigm
+ex:LEP a ex:Screen ; rdfs:label ""@en .
+ex:OLED a ex:Screen ; rdfs:label ""@en .
+ex:Iridigm a ex:Screen ; rdfs:label ""@en .
 
 ## Ideal object
 
 # Trimming the display to the ideal
 
-ex:MiniDisplay
-ex:EyeGlassesDisplay
-ex:ProjectorOntoRetina
-ex:GeneratingImageInConsciousness
+ex:MiniDisplay a ex:Screen ; rdfs:label ""@en .
+ex:EyeGlassesDisplay a ex:Screen ; rdfs:label ""@en . 
+ex:ProjectorOntoRetina a ex:Screen ; rdfs:label ""@en .
+ex:GeneratingImageInConsciousness a ex:Screen ; rdfs:label ""@en .
