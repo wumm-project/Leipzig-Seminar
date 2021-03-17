@@ -64,9 +64,9 @@ rdfs:label "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
 
 
 # Mono-bi-poly of image
-ex:OneImage
-ex:StereoImage
-ex:ChangeableImage
+ex:OneImage a ex:Screen ; rdfs:label ""@en .
+ex:StereoImage a ex:Screen ; rdfs:label ""@en .
+ex:ChangeableImage a ex:Screen ; rdfs:label ""@en .
 
 # Evolution Tree of Screen
 
