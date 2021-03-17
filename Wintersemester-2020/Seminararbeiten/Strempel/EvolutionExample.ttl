@@ -43,23 +43,26 @@ ex:Atomboot a ex:Boot; rdfs:label "Boot mit Atomantrieb"@de .
 
 # links of the evolution tree
 
+# Ein Monolith (Baumstamm) wird in zwei (Ruder und Rumpf) oder mehrere Teile aufgespalten
 ex:Baumstamm ex:addPaddles ex:Ruderboot .
-ex:addPaddles od:usesPattern tc:NewPrinciplePattern, tc:IncreasingControllabilityPattern ;
+ex:addPaddles od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:TwoParts ;
 rdfs:label "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
 
+# Gas
 ex:Ruderboot ex:replacePaddleWithSail ex:Segelboot .
-ex:replacePaddleWithSail od:usesPattern tc:NewPrinciplePattern ;
+ex:replacePaddleWithSail od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Fog ;
 rdfs:label "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
 
 # es gibt Mischformen!
 ex:Segelboot ex:replaceSailWithSteamEngine ex:Dampfboot .
-ex:replaceSailWithSteamEngine od:usesPattern tc:NewPrinciplePattern ;
+ex:replaceSailWithSteamEngine od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Fog ;
 rdfs:label "Die Windkraft wird durch Dampfkraft ersetzt"@de .
 
+# es gibt sehr sehr viele Entwicklungsformen von Dampfkesseln/Boilern
 ex:Dampfboot ex:replaceSteamEngineWithDieselEngine ex:Dieselschiff .
-ex:replaceSteamWithDieselEngine od:usesPattern tc:NewPrinciplePattern ;
+ex:replaceSteamWithDieselEngine od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Liquid ;
 rdfs:label "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
 
 ex:Dieselschiff ex:replaceDieselEngineWithNuclearReactor ex:Atomboot .
-ex:replaceDieselEngineWithNuclearReactor od:usesPattern tc:NewPrinciplePattern ;
+ex:replaceDieselEngineWithNuclearReactor od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:IdealObject ;
 rdfs:label "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
