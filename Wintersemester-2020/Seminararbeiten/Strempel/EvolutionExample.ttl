@@ -66,3 +66,264 @@ rdfs:label "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
 ex:Dieselschiff ex:replaceDieselEngineWithNuclearReactor ex:Atomboot .
 ex:replaceDieselEngineWithNuclearReactor od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:IdealObject ;
 rdfs:label "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
+
+
+# Mono-bi-poly of image
+ex:OneImage
+ex:StereoImage
+ex:ChangeableImage
+
+# Evolution Tree of Screen
+
+ex:Cinematograph a ex:Screen ; rdfs:label "Cinematograph"@en .
+
+# Image expansion
+ex:ImageOnly a ex:Screen ; rdfs:label "Image only"@en .
+ex:ImageSound a ex:Screen ; rdfs:label "Image and sound"@en .
+ex:ImageSoundSmell a ex:Screen ; rdfs:label "Image, sound and smell"@en .
+ex:ImageSoundSmellOther a ex:Screen ; rdfs:label "Image, sound, smell and other actions"@en .
+
+# Mono-Bi-Poly of accompanying sound
+ex:OneLoudspeaker a ex:Screen ; rdfs:label "One loudspeaker"@en .
+ex:StereophonicSystem a ex:Screen ; rdfs:label "Stereophonic system "@en .
+ex:QuadrophonicSystem a ex:Screen ; rdfs:label "Quadrophonic system"@en .
+ex:SpatialSoundSystem a ex:Screen ; rdfs:label "Spatial sound system"@en .
+
+# Geometrical ecolution of the screen
+ex:FlatScreen a ex:Screen ; rdfs:label "Flat screen"@en .
+ex:CylindricalScreen a ex:Screen ; rdfs:label "Cylindrical screen"@en .
+ex:SphericalScreen a ex:Screen ; rdfs:label "Spherical screen"@en .
+
+# Complicating the screen surface mircorelief
+ex:SmoothScreen a ex:Screen ; rdfs:label "Smooth screen"@en .
+ex:ScreenWithHoles a ex:Screen ; rdfs:label "Screen with holes"@en .
+ex:SurfaceWithMicoPyramids a ex:Screen ; rdfs:label "Surface with mirco pyramids"@en .
+ex:SurfaceWithReflectiveLayer a ex:Screen ; rdfs:label "Surface with reflective layer"@en .
+
+# Screen dynamisaion
+ex:ImmovableScreen a ex:Screen ; rdfs:label "Immovable screen"@en .
+ex:MovableSpectatorsChairs a ex:Screen ; rdfs:label "Movable spectators chairs"@en .
+ex:BendableScreen a ex:Screen ; rdfs:label "Bendable screen"@en .
+ex:BendableByPartsScreen a ex:Screen ; rdfs:label "Bendable by parts screen"@en .
+ex:ReliefScreen a ex:Screen ; rdfs:label "Relief screen"@en .
+
+# next tree step
+ex:MechanicalTV a ex:Screen ; rdfs:label "Mechanical TV set - Trimmed Cinematograph"@en .
+ex:CrtTVSet a ex:Screen ; rdfs:label "CRT TV set - Trimmed Cinematograph"@en .
+
+# Forming an image by surface segmentation
+ex:LargePixels
+ex:MediumSizePixels
+ex:SmallPixels
+
+# Geometrical evolution of the screen
+ex:SphericalScreen
+ex:CylindricalScreen
+ex:FlatScreen
+
+# Segmentation of the cathode ray tube
+ex:TwoEGuns
+ex:SomeEGuns
+ex:FieldEmissionDisplay
+ex:FieldEmissionDisplayOnNanoTubes
+
+# Coordination the image with the surrounding background
+ex:ImageNotCoordinatedWithBackground
+ex:NeutralBackground
+ex:DynamicalCoordination
+
+# Mono-bi-poly of color screens
+ex:BlackWhiteDisplay
+ex:16Colors
+ex:256Colors
+ex:16000000Colors
+
+# Mono-bi-poly of pixel
+ex:WhiteActivePixel
+ex:RGBPixel
+ex:RGBWhitePixel
+ex:6ColorsPixel
+ex:SOLEDPixel
+
+
+# next tree step
+ex:FlatDisplay a ex:Screen ; rdfs:label "Flat display - Trimmed CRT"@en .
+
+# Mono-bi-poly of flat displays
+ex:TwoDisplays
+ex:SeveralDisplays
+ex:LargeScreenComposedOfDisplays
+ex:SuperLargeScreen
+
+# Mono-bi-poly of 3D display screen layers
+ex:3DDisplayWithLenses
+ex:DoubleLayer3DDisplay
+ex:Multilayer3DDisplay
+ex:MovableScreenDisplay
+
+# 3D Display dynamization
+ex:RotatableScreen
+ex:TravellingWave
+ex:TwoIRLasers
+ex:SpecialCrystal
+
+# point - line - surface - volume transition for the flat display
+ex:LinearDisplay
+ex:OnePointDisplay
+ex:DoublePointDisplay
+ex:MultiPointDisplay
+ex:SuperLargeScreenOnLaserDiodes
+
+# Geometrical evolution of the linear display
+ex:CurvedLinearDisplay
+ex:ComplexShapeLinearDisplay
+
+# Dynamisation of the linear display
+ex:FabricMadeOfLinearDisplays
+ex:RotatingLinearDisplays
+ex:MovableObjectMadeOfLinearDisplays
+
+# Expanding-Trimming of flat display systems
+
+ex:DisplayAndRadioScanner
+ex:DisplayAndVideoCamera
+ex:TouchPanel
+ex:TouchSensitiveCoating
+ex:SpeakerDisplay
+ex:ScannerDisplay
+ex:HagachiComputerDisplay
+ex:DisplayCard
+
+# Dynamization of a double-screen display
+
+ex:TwoImmovableDisplays
+ex:BookDisplay
+ex:BendableDisplay
+ex:RolledDisplay
+ex:ActiveReliefDisplay
+
+# Evolution of the screen surface microrelief
+
+ex:MicroJalousie
+ex:NonReflectingLayer
+ex:RealVirtualDisplay
+ex:IncreasedProvacyDisplay
+
+# Mono-bi-poly of mobile phone displays
+
+ex:OneDisplay
+ex:FlatAndPointDisplays
+ex:TwoFlatDisplaysAndPointDisplay
+ex:TwoSidedDisplay
+
+# Display dynamization
+
+ex:ImmovableDisplay
+ex:PartiallyMovableDisplay
+ex:CylindricalHinge
+ex:TwoHinges
+ex:SphericalHinge
+ex:IsolatedDisplay
+
+### segmentation
+## Many parts
+
+# Image compounded of moving elements
+ex:ImageOfMovingParts
+ex:MovingCord
+ex:SeveralMovingCords
+
+# Mono-bi-poly of colors of electronic paper
+
+ex:BlackWhiteElectronicPaper
+ex:ColorElectronicPaper
+
+# MATChEM for needle-type tactile display
+
+ex:NeedleDisplay
+ex:NeedleDisplayWithLocalSound
+ex:ColorDisplayForBlind
+ex:DisplayWithOdor
+ex:ColorDisplayWithActiveBasRelief
+ex:MagneticGuide
+
+## Sand
+
+# Sand
+ex:SandDisplay
+
+## Liquid
+
+# Dynamization of the liquid display
+
+ex:LiquidBalls
+ex:ElectrowettingEffect
+ex:Ferrofluid
+ex:RainbowEffectLiquid
+
+# Segmentation of image-producing elements
+
+ex:ElectronicInk
+ex:LiquidCrystalDisplay
+
+# Segmentation of the distributed light source
+
+ex:ContinuousLightSource
+ex:SingularLightEmittingDiodes
+ex:OnePixelOneDiode
+
+## Foam
+
+# Segmentation of the bubble display control elements
+
+ex:BubbleScreen
+ex:UpperAndLowerElectromagnets
+ex:SideElectromagnets
+ex:BackElectromagnet
+ex:PartiallySegmentedElectromagnets
+ex:SegmentedElectromagnets
+
+## Aerosol
+
+# Geometrical evolution of the foggy screen
+
+ex:FogScreen
+ex:CloudyScreen
+ex:LaserShow
+
+## Gas
+
+# Image activation in a gas medium
+
+ex:AircraftTrail
+ex:Firework
+ex:ImageInTheAir
+
+## Plasma
+
+# Combining a plasma panel with a different type of display
+
+ex:PDP
+ex:PlasmaPanelWithFilter
+ex:CommonElectrodes
+ex:NanopowderInsideCell
+
+## Field
+
+# Trimming a light image
+ex:ShadowPlay
+ex:Miniprojector
+ex:ProjectionTVSet
+
+ex:LEP
+ex:OLED
+ex:Iridigm
+
+## Ideal object
+
+# Trimming the display to the ideal
+
+ex:MiniDisplay
+ex:EyeGlassesDisplay
+ex:ProjectorOntoRetina
+ex:GeneratingImageInConsciousness
