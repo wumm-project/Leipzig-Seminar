@@ -201,7 +201,7 @@ tc:CompleteSystem
 # tc:Gas?
 tc:SegmentationPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
-    od:hasSubConcept tc:Monolith, tc:TwoParts, tc:ManyParts, tc:Granules, tc:Powder, tc:Paste, tc:Liquid, tc:Foam, tc:Fog, tc:Plasma, tc:Field, tc:Vacuum, tc:IdealObject ;
+    od:hasSubConcept tc:Monolith, tc:TwoParts, tc:ManyParts, tc:Granules, tc:Powder, tc:Paste, tc:Liquid, tc:Foam, tc:Fog, tc:Gas, tc:Plasma, tc:Field, tc:Vacuum, tc:IdealObject ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
     skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de ;
@@ -252,6 +252,11 @@ tc:Fog
     od:subConceptOf tc:SegmentationPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Fog"@en, "Nebel"@de .
+
+tc:Gas
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Gas"@en, "Gas"@de .
 
 tc:Plasma
     od:subConceptOf tc:SegmentationPattern ;
