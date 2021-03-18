@@ -251,7 +251,8 @@ tc:Foam
 tc:Fog
     od:subConceptOf tc:SegmentationPattern ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Fog"@en, "Nebel"@de .
+    skos:prefLabel "Fog"@en, "Nebel"@de ;
+    skos:altLabel "Aerosol"@en, "Aerosol"@de .
 
 tc:Gas
     od:subConceptOf tc:SegmentationPattern ;
