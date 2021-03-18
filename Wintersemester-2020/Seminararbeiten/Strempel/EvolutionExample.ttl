@@ -17,56 +17,87 @@
     rdfs:label "Evolution Trees - an Example" ;
     owl:imports <http://opendiscovery.org/rdf/Ontologies/EvolutionTrees/> .
 
+ex:Boot
+    a tc:SpecificEvolutionTree ;
+    rdfs:label "Specific evolution tree of the power source of the ships propulsion"@en ;
 
-# Monolith
-ex:Baumstamm a ex:Boot; rdfs:label "Baumstamm"@de .
+ex:Baumstamm 
+    a ex:Boot; 
+    rdfs:label "Baumstamm"@de .
 
-# Two Parts, Many Parts
-ex:Ruderboot a ex:Boot; rdfs:label "Ruderboot"@de .
+ex:Ruderboot 
+    a ex:Boot; rdfs:label 
+    "Ruderboot"@de .
 
-# Gas
-ex:Segelboot a ex:Boot; rdfs:label "Boot mit Segeln"@de .
+ex:Segelboot 
+    a ex:Boot;
+    rdfs:label "Boot mit Segeln"@de .
 
-# Gas
-ex:Dampfboot a ex:Boot; rdfs:label "Dampfboot"@de .
+ex:Dampfboot 
+    a ex:Boot; 
+    rdfs:label "Dampfboot"@de .
 
-# Liquid
-ex:Dieselschiff a ex:Boot; rdfs:label "Boot mit Dieselantrieb"@de .
+ex:Dieselschiff 
+    a ex:Boot;
+    rdfs:label "Boot mit Dieselantrieb"@de .
 
 # ex:DuesenSchiff a ex:Boot; rdfs:label "Boot mit Jetantrieb"@de .
  
-# Field
-ex:Atomboot a ex:Boot; rdfs:label "Boot mit Atomantrieb"@de .
+ex:Atomboot 
+    a ex:Boot; 
+    rdfs:label "Boot mit Atomantrieb"@de .
 
 # links of the evolution tree
 
-# Ein Monolith (Baumstamm) wird in zwei (Ruder und Rumpf) oder mehrere Teile aufgespalten
 ex:Baumstamm ex:addPaddles ex:Ruderboot .
-ex:addPaddles od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:TwoParts ;
-rdfs:label "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
+ex:addPaddles 
+    od:usesPattern tc:NewPrinciplePattern, tc:SpecificEvolutionPattern, tc:SegmentationPattern, tc:TwoParts ;
+    rdfs:label "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
 
 ex:Ruderboot ex:replacePaddleWithSail ex:Segelboot .
-ex:replacePaddleWithSail od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Fog ;
-rdfs:label "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
+ex:replacePaddleWithSail 
+    od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Gas ;
+    rdfs:label "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
 
 ex:Segelboot ex:replaceSailWithSteamEngine ex:Dampfboot .
-ex:replaceSailWithSteamEngine od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Gas ;
-rdfs:label "Die Windkraft wird durch Dampfkraft ersetzt"@de .
+ex:replaceSailWithSteamEngine 
+    od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Gas ;
+    rdfs:label "Die Windkraft wird durch Dampfkraft ersetzt"@de .
 
-# es gibt sehr sehr viele Entwicklungsformen von Dampfkesseln/Boilern
 ex:Dampfboot ex:replaceSteamEngineWithDieselEngine ex:Dieselschiff .
-ex:replaceSteamWithDieselEngine od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Liquid ;
-rdfs:label "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
+ex:replaceSteamWithDieselEngine 
+    od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Liquid ;
+    rdfs:label "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
 
 ex:Dieselschiff ex:replaceDieselEngineWithNuclearReactor ex:Atomboot .
-ex:replaceDieselEngineWithNuclearReactor od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Field ;
-rdfs:label "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
+ex:replaceDieselEngineWithNuclearReactor 
+    od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Field ;
+    rdfs:label "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
 
+
+# specific evolution tree of screen
+
+ex:Screen
+    a tc:SpecificEvolutionTree ;
+    rdfs:label "Specific evolution tree of the screen"@en ;
+# elementary function
 
 # Mono-bi-poly of image
-ex:OneImage a ex:Screen ; rdfs:label ""@en .
-ex:StereoImage a ex:Screen ; rdfs:label ""@en .
-ex:ChangeableImage a ex:Screen ; rdfs:label ""@en .
+ex:OneImage 
+    a ex:Screen ; 
+    ex:viewTwoPicturesThroughNontransparentScreen ex:StereoImage ;
+    rdfs:label ""@en .
+ex:viewTwoPicturesThroughNontransparentScreen 
+    od:usesPattern tc:NewPrinciplePattern, tc:MonoBiPolyPattern, tc:BiSystem ;
+    rdfs:label ""@en ;
+
+ex:StereoImage 
+    a ex:Screen ; 
+    rdfs:label ""@en .
+
+ex:ChangeableImage 
+    a ex:Screen ; 
+    rdfs:label ""@en .
 
 # Evolution Tree of Screen
 
