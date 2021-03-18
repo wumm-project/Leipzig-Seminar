@@ -47,31 +47,56 @@ ex:Atomboot
     a ex:Boot; 
     rdfs:label "Boot mit Atomantrieb"@de .
 
+
+ex:SchwimmendeMatraze
+ex:VieleRuderer
+ex:MilitaerRuderboot
+ex:SportRuderboot
+ex:FrachtRuderboot
+ex:FreizeitRuderboot
+
+ex:Frachtsegler
+ex:BootMitVielenSegeln
+ex:FrachtSegelschiffe
+ex:MilitaerSegelschiffe
+ex:SportSegeljacht
+ex:FreizeitSegeljacht
+
+ex:Frachtschiff
+ex:Touristenschiff
+ex:MilitaerDampfschiff
+
+ex:MilitaerUBoot
+ex:PersonalUnterwasserJet
+ex:ForschungsUBoot
+ex:ForschungsSchiff
+
+
 # links of the evolution tree
 
 ex:Baumstamm ex:addPaddles ex:Ruderboot .
 ex:addPaddles 
-    od:usesPattern tc:NewPrinciplePattern, tc:SpecificEvolutionPattern, tc:SegmentationPattern, tc:TwoParts ;
+    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:TwoParts ;
     rdfs:label "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
 
 ex:Ruderboot ex:replacePaddleWithSail ex:Segelboot .
 ex:replacePaddleWithSail 
-    od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Gas ;
+    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:Gas ;
     rdfs:label "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
 
 ex:Segelboot ex:replaceSailWithSteamEngine ex:Dampfboot .
 ex:replaceSailWithSteamEngine 
-    od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Gas ;
+    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:Gas ;
     rdfs:label "Die Windkraft wird durch Dampfkraft ersetzt"@de .
 
 ex:Dampfboot ex:replaceSteamEngineWithDieselEngine ex:Dieselschiff .
 ex:replaceSteamWithDieselEngine 
-    od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Liquid ;
+    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:Liquid ;
     rdfs:label "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
 
 ex:Dieselschiff ex:replaceDieselEngineWithNuclearReactor ex:Atomboot .
 ex:replaceDieselEngineWithNuclearReactor 
-    od:usesPattern tc:NewPrinciplePattern, tc:SegmentationPattern, tc:Field ;
+    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:Field ;
     rdfs:label "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
 
 
@@ -88,7 +113,7 @@ ex:OneImage
     ex:viewTwoPicturesThroughNontransparentScreen ex:StereoImage ;
     rdfs:label ""@en .
 ex:viewTwoPicturesThroughNontransparentScreen 
-    od:usesPattern tc:NewPrinciplePattern, tc:MonoBiPolyPattern, tc:BiSystem ;
+    od:usesPattern tc:MonoBiPolyPattern, tc:BiSystem ;
     rdfs:label ""@en ;
 
 ex:StereoImage 
