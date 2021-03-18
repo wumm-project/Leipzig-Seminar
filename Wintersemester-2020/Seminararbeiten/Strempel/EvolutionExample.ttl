@@ -14,367 +14,367 @@
     cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
     a owl:Ontology ;
     rdfs:comment "from (Koltze/Souchkov 2018: Fig. 4.72)";
-    rdfs:label "Evolution Trees - an Example" ;
+    skos:prefLabel "Evolution Trees - an Example" ;
     owl:imports <http://opendiscovery.org/rdf/Ontologies/EvolutionTrees/> .
 
 ex:Boot
     a tc:SpecificEvolutionTree ;
-    rdfs:label "Specific evolution tree of the power source of the ships propulsion"@en ;
+    skos:definition "Specific evolution tree of the power source of the ships propulsion"@en ;
 
 ex:Baumstamm 
     a ex:Boot; 
-    rdfs:label "Baumstamm"@de .
+    skos:prefLabel "Baumstamm"@de .
 
 ex:Ruderboot 
-    a ex:Boot; rdfs:label 
+    a ex:Boot; skos:prefLabel 
     "Ruderboot"@de .
 
 ex:Segelboot 
     a ex:Boot;
-    rdfs:label "Boot mit Segeln"@de .
+    skos:prefLabel "Boot mit Segeln"@de .
 
 ex:Dampfboot 
     a ex:Boot; 
-    rdfs:label "Dampfboot"@de .
+    skos:prefLabel "Dampfboot"@de .
 
 ex:Dieselschiff 
     a ex:Boot;
-    rdfs:label "Boot mit Dieselantrieb"@de .
+    skos:prefLabel "Boot mit Dieselantrieb"@de .
 
-# ex:DuesenSchiff a ex:Boot; rdfs:label "Boot mit Jetantrieb"@de .
+# ex:DuesenSchiff a ex:Boot; skos:prefLabel "Boot mit Jetantrieb"@de .
  
 ex:Atomboot 
     a ex:Boot; 
-    rdfs:label "Boot mit Atomantrieb"@de .
+    skos:prefLabel "Boot mit Atomantrieb"@de .
 
 
-ex:SchwimmendeMatraze
-ex:VieleRuderer
-ex:MilitaerRuderboot
-ex:SportRuderboot
-ex:FrachtRuderboot
-ex:FreizeitRuderboot
+#ex:SchwimmendeMatraze
+#ex:VieleRuderer
+#ex:MilitaerRuderboot
+#ex:SportRuderboot
+#ex:FrachtRuderboot
+#ex:FreizeitRuderboot
 
-ex:Frachtsegler
-ex:BootMitVielenSegeln
-ex:FrachtSegelschiffe
-ex:MilitaerSegelschiffe
-ex:SportSegeljacht
-ex:FreizeitSegeljacht
+#ex:Frachtsegler
+#ex:BootMitVielenSegeln
+#ex:FrachtSegelschiffe
+#ex:MilitaerSegelschiffe
+#ex:SportSegeljacht
+#ex:FreizeitSegeljacht
 
-ex:Frachtschiff
-ex:Touristenschiff
-ex:MilitaerDampfschiff
+#ex:Frachtschiff
+#ex:Touristenschiff
+#ex:MilitaerDampfschiff
 
-ex:MilitaerUBoot
-ex:PersonalUnterwasserJet
-ex:ForschungsUBoot
-ex:ForschungsSchiff
+#ex:MilitaerUBoot
+#ex:PersonalUnterwasserJet
+#ex:ForschungsUBoot
+#ex:ForschungsSchiff
 
 
 # links of the evolution tree
 
 ex:Baumstamm ex:addPaddles ex:Ruderboot .
 ex:addPaddles 
-    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:TwoParts ;
-    rdfs:label "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
+    od:usesPattern tc:SegmentationPattern, tc:TwoParts ;
+    skos:definition "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
 
 ex:Ruderboot ex:replacePaddleWithSail ex:Segelboot .
 ex:replacePaddleWithSail 
-    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:Gas ;
-    rdfs:label "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
+    od:usesPattern tc:SegmentationPattern, tc:Gas ;
+    skos:definition "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
 
 ex:Segelboot ex:replaceSailWithSteamEngine ex:Dampfboot .
 ex:replaceSailWithSteamEngine 
-    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:Gas ;
-    rdfs:label "Die Windkraft wird durch Dampfkraft ersetzt"@de .
+    od:usesPattern tc:SegmentationPattern, tc:Gas ;
+    skos:definition "Die Windkraft wird durch Dampfkraft ersetzt"@de .
 
 ex:Dampfboot ex:replaceSteamEngineWithDieselEngine ex:Dieselschiff .
 ex:replaceSteamWithDieselEngine 
-    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:Liquid ;
-    rdfs:label "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
+    od:usesPattern tc:SegmentationPattern, tc:Liquid ;
+    skos:definition "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
 
 ex:Dieselschiff ex:replaceDieselEngineWithNuclearReactor ex:Atomboot .
 ex:replaceDieselEngineWithNuclearReactor 
-    od:usesPattern tc:EvolutionTreeTrunk, tc:SegmentationPattern, tc:Field ;
-    rdfs:label "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
+    od:usesPattern tc:SegmentationPattern, tc:Field ;
+    skos:definition "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
 
 
 # specific evolution tree of screen
 
 ex:Screen
     a tc:SpecificEvolutionTree ;
-    rdfs:label "Specific evolution tree of the screen"@en ;
+    skos:prefLabel "Specific evolution tree of the screen"@en ;
 # elementary function
 
 # Mono-bi-poly of image
 ex:OneImage 
     a ex:Screen ; 
     ex:viewTwoPicturesThroughNontransparentScreen ex:StereoImage ;
-    rdfs:label ""@en .
+    skos:prefLabel ""@en .
 ex:viewTwoPicturesThroughNontransparentScreen 
     od:usesPattern tc:MonoBiPolyPattern, tc:BiSystem ;
-    rdfs:label ""@en ;
+    skos:prefLabel ""@en ;
 
 ex:StereoImage 
     a ex:Screen ; 
-    rdfs:label ""@en .
+    skos:prefLabel ""@en .
 
 ex:ChangeableImage 
     a ex:Screen ; 
-    rdfs:label ""@en .
+    skos:prefLabel ""@en .
 
 # Evolution Tree of Screen
 
-ex:Cinematograph a ex:Screen ; rdfs:label "Cinematograph"@en .
+ex:Cinematograph a ex:Screen ; skos:prefLabel "Cinematograph"@en .
 
 # Image expansion
-ex:ImageOnly a ex:Screen ; rdfs:label "Image only"@en .
-ex:ImageSound a ex:Screen ; rdfs:label "Image and sound"@en .
-ex:ImageSoundSmell a ex:Screen ; rdfs:label "Image, sound and smell"@en .
-ex:ImageSoundSmellOther a ex:Screen ; rdfs:label "Image, sound, smell and other actions"@en .
+ex:ImageOnly a ex:Screen ; skos:prefLabel "Image only"@en .
+ex:ImageSound a ex:Screen ; skos:prefLabel "Image and sound"@en .
+ex:ImageSoundSmell a ex:Screen ; skos:prefLabel "Image, sound and smell"@en .
+ex:ImageSoundSmellOther a ex:Screen ; skos:prefLabel "Image, sound, smell and other actions"@en .
 
 # Mono-Bi-Poly of accompanying sound
-ex:OneLoudspeaker a ex:Screen ; rdfs:label "One loudspeaker"@en .
-ex:StereophonicSystem a ex:Screen ; rdfs:label "Stereophonic system "@en .
-ex:QuadrophonicSystem a ex:Screen ; rdfs:label "Quadrophonic system"@en .
-ex:SpatialSoundSystem a ex:Screen ; rdfs:label "Spatial sound system"@en .
+ex:OneLoudspeaker a ex:Screen ; skos:prefLabel "One loudspeaker"@en .
+ex:StereophonicSystem a ex:Screen ; skos:prefLabel "Stereophonic system "@en .
+ex:QuadrophonicSystem a ex:Screen ; skos:prefLabel "Quadrophonic system"@en .
+ex:SpatialSoundSystem a ex:Screen ; skos:prefLabel "Spatial sound system"@en .
 
 # Geometrical ecolution of the screen
-ex:FlatScreen a ex:Screen ; rdfs:label "Flat screen"@en .
-ex:CylindricalScreen a ex:Screen ; rdfs:label "Cylindrical screen"@en .
-ex:SphericalScreen a ex:Screen ; rdfs:label "Spherical screen"@en .
+ex:FlatScreen a ex:Screen ; skos:prefLabel "Flat screen"@en .
+ex:CylindricalScreen a ex:Screen ; skos:prefLabel "Cylindrical screen"@en .
+ex:SphericalScreen a ex:Screen ; skos:prefLabel "Spherical screen"@en .
 
 # Complicating the screen surface mircorelief
-ex:SmoothScreen a ex:Screen ; rdfs:label "Smooth screen"@en .
-ex:ScreenWithHoles a ex:Screen ; rdfs:label "Screen with holes"@en .
-ex:SurfaceWithMicoPyramids a ex:Screen ; rdfs:label "Surface with mirco pyramids"@en .
-ex:SurfaceWithReflectiveLayer a ex:Screen ; rdfs:label "Surface with reflective layer"@en .
+ex:SmoothScreen a ex:Screen ; skos:prefLabel "Smooth screen"@en .
+ex:ScreenWithHoles a ex:Screen ; skos:prefLabel "Screen with holes"@en .
+ex:SurfaceWithMicoPyramids a ex:Screen ; skos:prefLabel "Surface with mirco pyramids"@en .
+ex:SurfaceWithReflectiveLayer a ex:Screen ; skos:prefLabel "Surface with reflective layer"@en .
 
 # Screen dynamisaion
-ex:ImmovableScreen a ex:Screen ; rdfs:label "Immovable screen"@en .
-ex:MovableSpectatorsChairs a ex:Screen ; rdfs:label "Movable spectators chairs"@en .
-ex:BendableScreen a ex:Screen ; rdfs:label "Bendable screen"@en .
-ex:BendableByPartsScreen a ex:Screen ; rdfs:label "Bendable by parts screen"@en .
-ex:ReliefScreen a ex:Screen ; rdfs:label "Relief screen"@en .
+ex:ImmovableScreen a ex:Screen ; skos:prefLabel "Immovable screen"@en .
+ex:MovableSpectatorsChairs a ex:Screen ; skos:prefLabel "Movable spectators chairs"@en .
+ex:BendableScreen a ex:Screen ; skos:prefLabel "Bendable screen"@en .
+ex:BendableByPartsScreen a ex:Screen ; skos:prefLabel "Bendable by parts screen"@en .
+ex:ReliefScreen a ex:Screen ; skos:prefLabel "Relief screen"@en .
 
 # next tree step
-ex:MechanicalTV a ex:Screen ; rdfs:label "Mechanical TV set - Trimmed Cinematograph"@en .
-ex:CrtTVSet a ex:Screen ; rdfs:label "CRT TV set - Trimmed Cinematograph"@en .
+ex:MechanicalTV a ex:Screen ; skos:prefLabel "Mechanical TV set - Trimmed Cinematograph"@en .
+ex:CrtTVSet a ex:Screen ; skos:prefLabel "CRT TV set - Trimmed Cinematograph"@en .
 
 # Forming an image by surface segmentation
-ex:LargePixels a ex:Screen ; rdfs:label "Large pixels"@en .
-ex:MediumSizePixels a ex:Screen ; rdfs:label "Meidum size pixels"@en .
-ex:SmallPixels a ex:Screen ; rdfs:label "Small pixels"@en .
+ex:LargePixels a ex:Screen ; skos:prefLabel "Large pixels"@en .
+ex:MediumSizePixels a ex:Screen ; skos:prefLabel "Meidum size pixels"@en .
+ex:SmallPixels a ex:Screen ; skos:prefLabel "Small pixels"@en .
 
 # Geometrical evolution of the screen
-ex:SphericalScreen a ex:Screen ; rdfs:label "Spherical screen"@en .
-ex:CylindricalScreen a ex:Screen ; rdfs:label "Cylindrical screen"@en .
-ex:FlatScreen a ex:Screen ; rdfs:label "Flat screen"@en .
+ex:SphericalScreen a ex:Screen ; skos:prefLabel "Spherical screen"@en .
+ex:CylindricalScreen a ex:Screen ; skos:prefLabel "Cylindrical screen"@en .
+ex:FlatScreen a ex:Screen ; skos:prefLabel "Flat screen"@en .
 
 # Segmentation of the cathode ray tube
-ex:TwoEGuns a ex:Screen ; rdfs:label "Two E-guns"@en .
-ex:SomeEGuns a ex:Screen ; rdfs:label "Some E-guns"@en .
-ex:FieldEmissionDisplay a ex:Screen ; rdfs:label "Field emission display"@en .
-ex:FieldEmissionDisplayOnNanoTubes a ex:Screen ; rdfs:label "Field emission display on nano tubes"@en .
+ex:TwoEGuns a ex:Screen ; skos:prefLabel "Two E-guns"@en .
+ex:SomeEGuns a ex:Screen ; skos:prefLabel "Some E-guns"@en .
+ex:FieldEmissionDisplay a ex:Screen ; skos:prefLabel "Field emission display"@en .
+ex:FieldEmissionDisplayOnNanoTubes a ex:Screen ; skos:prefLabel "Field emission display on nano tubes"@en .
 
 # Coordination the image with the surrounding background
-ex:ImageNotCoordinatedWithBackground a ex:Screen ; rdfs:label "Image that is not coordinated with the background"@en .
-ex:NeutralBackground a ex:Screen ; rdfs:label "Neutral background"@en .
-ex:DynamicalCoordination a ex:Screen ; rdfs:label "Dynamical Coordination"@en .
+ex:ImageNotCoordinatedWithBackground a ex:Screen ; skos:prefLabel "Image that is not coordinated with the background"@en .
+ex:NeutralBackground a ex:Screen ; skos:prefLabel "Neutral background"@en .
+ex:DynamicalCoordination a ex:Screen ; skos:prefLabel "Dynamical Coordination"@en .
 
 # Mono-bi-poly of color screens
-ex:BlackWhiteDisplay a ex:Screen ; rdfs:label "Black and white display"@en .
-ex:16Colors a ex:Screen ; rdfs:label "16 color display"@en .
-ex:256Colors a ex:Screen ; rdfs:label "256 color display"@en .
-ex:16000000Colors a ex:Screen ; rdfs:label "16 million color display"@en .
+ex:BlackWhiteDisplay a ex:Screen ; skos:prefLabel "Black and white display"@en .
+ex:16Colors a ex:Screen ; skos:prefLabel "16 color display"@en .
+ex:256Colors a ex:Screen ; skos:prefLabel "256 color display"@en .
+ex:16000000Colors a ex:Screen ; skos:prefLabel "16 million color display"@en .
 
 # Mono-bi-poly of pixel
-ex:WhiteActivePixel a ex:Screen ; rdfs:label "White active pixel"@en .
-ex:RGBPixel a ex:Screen ; rdfs:label "RGB pixel"@en .
-ex:RGBWhitePixel a ex:Screen ; rdfs:label "RGB pixel with a white element"@en .
-ex:6ColorsPixel a ex:Screen ; rdfs:label "6 color pixel"@en .
-ex:SOLEDPixel a ex:Screen ; rdfs:label "SOLED pixel"@en .
+ex:WhiteActivePixel a ex:Screen ; skos:prefLabel "White active pixel"@en .
+ex:RGBPixel a ex:Screen ; skos:prefLabel "RGB pixel"@en .
+ex:RGBWhitePixel a ex:Screen ; skos:prefLabel "RGB pixel with a white element"@en .
+ex:6ColorsPixel a ex:Screen ; skos:prefLabel "6 color pixel"@en .
+ex:SOLEDPixel a ex:Screen ; skos:prefLabel "SOLED pixel"@en .
 
 
 # next tree step
-ex:FlatDisplay a ex:Screen ; rdfs:label "Flat display - Trimmed CRT"@en .
+ex:FlatDisplay a ex:Screen ; skos:prefLabel "Flat display - Trimmed CRT"@en .
 
 # Mono-bi-poly of flat displays
-ex:TwoDisplays a ex:Screen ; rdfs:label "Two displays"@en .
-ex:SeveralDisplays a ex:Screen ; rdfs:label "Several displays connected with each other"@en .
-ex:LargeScreenComposedOfDisplays a ex:Screen ; rdfs:label "Large screen composed of displays"@en .
-ex:SuperLargeScreen a ex:Screen ; rdfs:label "Super large screen composed of displays"@en .
+ex:TwoDisplays a ex:Screen ; skos:prefLabel "Two displays"@en .
+ex:SeveralDisplays a ex:Screen ; skos:prefLabel "Several displays connected with each other"@en .
+ex:LargeScreenComposedOfDisplays a ex:Screen ; skos:prefLabel "Large screen composed of displays"@en .
+ex:SuperLargeScreen a ex:Screen ; skos:prefLabel "Super large screen composed of displays"@en .
 
 # Mono-bi-poly of 3D display screen layers
-ex:3DDisplayWithLenses a ex:Screen ; rdfs:label "3D display with lenses"@en .
-ex:DoubleLayer3DDisplay a ex:Screen ; rdfs:label "Double layer 3D display"@en .
-ex:Multilayer3DDisplay a ex:Screen ; rdfs:label "Multilayer 3D display"@en .
-ex:MovableScreenDisplay a ex:Screen ; rdfs:label "Movable screen display"@en .
+ex:3DDisplayWithLenses a ex:Screen ; skos:prefLabel "3D display with lenses"@en .
+ex:DoubleLayer3DDisplay a ex:Screen ; skos:prefLabel "Double layer 3D display"@en .
+ex:Multilayer3DDisplay a ex:Screen ; skos:prefLabel "Multilayer 3D display"@en .
+ex:MovableScreenDisplay a ex:Screen ; skos:prefLabel "Movable screen display"@en .
 
 # 3D Display dynamization
-ex:RotatableScreen a ex:Screen ; rdfs:label "Rotatable screen"@en .
-ex:TravellingWave a ex:Screen ; rdfs:label "Travelling wave"@en .
-ex:TwoIRLasers a ex:Screen ; rdfs:label "Two IR lasers"@en .
-ex:SpecialCrystal a ex:Screen ; rdfs:label "Special crystal"@en .
+ex:RotatableScreen a ex:Screen ; skos:prefLabel "Rotatable screen"@en .
+ex:TravellingWave a ex:Screen ; skos:prefLabel "Travelling wave"@en .
+ex:TwoIRLasers a ex:Screen ; skos:prefLabel "Two IR lasers"@en .
+ex:SpecialCrystal a ex:Screen ; skos:prefLabel "Special crystal"@en .
 
 # point - line - surface - volume transition for the flat display
-ex:LinearDisplay a ex:Screen ; rdfs:label "Linear display"@en .
-ex:OnePointDisplay a ex:Screen ; rdfs:label "One point display"@en .
-ex:DoublePointDisplay a ex:Screen ; rdfs:label "Double point display"@en .
-ex:MultiPointDisplay a ex:Screen ; rdfs:label "Multi point display"@en .
-ex:SuperLargeScreenOnLaserDiodes a ex:Screen ; rdfs:label "Super large screen on laser diodes"@en .
+ex:LinearDisplay a ex:Screen ; skos:prefLabel "Linear display"@en .
+ex:OnePointDisplay a ex:Screen ; skos:prefLabel "One point display"@en .
+ex:DoublePointDisplay a ex:Screen ; skos:prefLabel "Double point display"@en .
+ex:MultiPointDisplay a ex:Screen ; skos:prefLabel "Multi point display"@en .
+ex:SuperLargeScreenOnLaserDiodes a ex:Screen ; skos:prefLabel "Super large screen on laser diodes"@en .
 
 # Geometrical evolution of the linear display
-ex:CurvedLinearDisplay a ex:Screen ; rdfs:label "Curved linear display"@en .
-ex:ComplexShapeLinearDisplay a ex:Screen ; rdfs:label "Complex shape linear display"@en .
+ex:CurvedLinearDisplay a ex:Screen ; skos:prefLabel "Curved linear display"@en .
+ex:ComplexShapeLinearDisplay a ex:Screen ; skos:prefLabel "Complex shape linear display"@en .
 
 # Dynamisation of the linear display
-ex:FabricMadeOfLinearDisplays a ex:Screen ; rdfs:label "Fabric made of linear displays"@en .
-ex:RotatingLinearDisplays a ex:Screen ; rdfs:label "Rotating linear displays"@en .
-ex:MovableObjectMadeOfLinearDisplays a ex:Screen ; rdfs:label "Movable object made of linear displays"@en .
+ex:FabricMadeOfLinearDisplays a ex:Screen ; skos:prefLabel "Fabric made of linear displays"@en .
+ex:RotatingLinearDisplays a ex:Screen ; skos:prefLabel "Rotating linear displays"@en .
+ex:MovableObjectMadeOfLinearDisplays a ex:Screen ; skos:prefLabel "Movable object made of linear displays"@en .
 
 # Expanding-Trimming of flat display systems
 
-ex:DisplayAndRadioScanner a ex:Screen ; rdfs:label "Display and radio scanner"@en .
-ex:DisplayAndVideoCamera a ex:Screen ; rdfs:label "Display and video camera"@en .
-ex:TouchPanel a ex:Screen ; rdfs:label "Touch panel"@en .
-ex:TouchSensitiveCoating a ex:Screen ; rdfs:label "Touch sensitive coating"@en .
-ex:SpeakerDisplay a ex:Screen ; rdfs:label "Speaker display"@en .
-ex:ScannerDisplay a ex:Screen ; rdfs:label "Scanner display"@en .
-ex:HagachiComputerDisplay a ex:Screen ; rdfs:label "Hagachi computer-display"@en .
-ex:DisplayCard a ex:Screen ; rdfs:label "Display card"@en .
+ex:DisplayAndRadioScanner a ex:Screen ; skos:prefLabel "Display and radio scanner"@en .
+ex:DisplayAndVideoCamera a ex:Screen ; skos:prefLabel "Display and video camera"@en .
+ex:TouchPanel a ex:Screen ; skos:prefLabel "Touch panel"@en .
+ex:TouchSensitiveCoating a ex:Screen ; skos:prefLabel "Touch sensitive coating"@en .
+ex:SpeakerDisplay a ex:Screen ; skos:prefLabel "Speaker display"@en .
+ex:ScannerDisplay a ex:Screen ; skos:prefLabel "Scanner display"@en .
+ex:HagachiComputerDisplay a ex:Screen ; skos:prefLabel "Hagachi computer-display"@en .
+ex:DisplayCard a ex:Screen ; skos:prefLabel "Display card"@en .
 
 # Dynamization of a double-screen display
 
-ex:TwoImmovableDisplays a ex:Screen ; rdfs:label "Two immovable displays"@en .
-ex:BookDisplay a ex:Screen ; rdfs:label "Book display"@en .
-ex:BendableDisplay a ex:Screen ; rdfs:label "Bendable display"@en .
-ex:RolledDisplay a ex:Screen ; rdfs:label "Rolled display"@en .
-ex:ActiveReliefDisplay a ex:Screen ; rdfs:label "Active relief display"@en .
+ex:TwoImmovableDisplays a ex:Screen ; skos:prefLabel "Two immovable displays"@en .
+ex:BookDisplay a ex:Screen ; skos:prefLabel "Book display"@en .
+ex:BendableDisplay a ex:Screen ; skos:prefLabel "Bendable display"@en .
+ex:RolledDisplay a ex:Screen ; skos:prefLabel "Rolled display"@en .
+ex:ActiveReliefDisplay a ex:Screen ; skos:prefLabel "Active relief display"@en .
 
 # Evolution of the screen surface microrelief
 
-ex:MicroJalousie a ex:Screen ; rdfs:label "Micro jalousie"@en .
-ex:NonReflectingLayer a ex:Screen ; rdfs:label "Non-reflecting layer"@en .
-ex:RealVirtualDisplay a ex:Screen ; rdfs:label "Real-virtual display"@en .
-ex:IncreasedPrivacyDisplay a ex:Screen ; rdfs:label "Increased privacy display"@en .
+ex:MicroJalousie a ex:Screen ; skos:prefLabel "Micro jalousie"@en .
+ex:NonReflectingLayer a ex:Screen ; skos:prefLabel "Non-reflecting layer"@en .
+ex:RealVirtualDisplay a ex:Screen ; skos:prefLabel "Real-virtual display"@en .
+ex:IncreasedPrivacyDisplay a ex:Screen ; skos:prefLabel "Increased privacy display"@en .
 
 # Mono-bi-poly of mobile phone displays
 
-ex:OneDisplay a ex:Screen ; rdfs:label "One display"@en .
-ex:FlatAndPointDisplays a ex:Screen ; rdfs:label "Flat and point displays"@en .
-ex:TwoFlatDisplaysAndPointDisplay a ex:Screen ; rdfs:label "Two flat displays and one point display"@en .
-ex:TwoSidedDisplay a ex:Screen ; rdfs:label "Two-sided display"@en .
+ex:OneDisplay a ex:Screen ; skos:prefLabel "One display"@en .
+ex:FlatAndPointDisplays a ex:Screen ; skos:prefLabel "Flat and point displays"@en .
+ex:TwoFlatDisplaysAndPointDisplay a ex:Screen ; skos:prefLabel "Two flat displays and one point display"@en .
+ex:TwoSidedDisplay a ex:Screen ; skos:prefLabel "Two-sided display"@en .
 
 # Display dynamization
 
-ex:ImmovableDisplay a ex:Screen ; rdfs:label "Immovable display"@en .
-ex:PartiallyMovableDisplay a ex:Screen ; rdfs:label "Partially movable display"@en .
-ex:CylindricalHinge a ex:Screen ; rdfs:label "Cylindrical hinge"@en .
-ex:TwoHinges a ex:Screen ; rdfs:label "Two hinges"@en .
-ex:SphericalHinge a ex:Screen ; rdfs:label "Spherical hinge"@en .
-ex:IsolatedDisplay a ex:Screen ; rdfs:label "Isolated display"@en .
+ex:ImmovableDisplay a ex:Screen ; skos:prefLabel "Immovable display"@en .
+ex:PartiallyMovableDisplay a ex:Screen ; skos:prefLabel "Partially movable display"@en .
+ex:CylindricalHinge a ex:Screen ; skos:prefLabel "Cylindrical hinge"@en .
+ex:TwoHinges a ex:Screen ; skos:prefLabel "Two hinges"@en .
+ex:SphericalHinge a ex:Screen ; skos:prefLabel "Spherical hinge"@en .
+ex:IsolatedDisplay a ex:Screen ; skos:prefLabel "Isolated display"@en .
 
 ### segmentation
 ## Many parts
 
 # Image compounded of moving elements
-ex:ImageOfMovingParts a ex:Screen ; rdfs:label "Image composed of moving parts"@en .
-ex:MovingCord a ex:Screen ; rdfs:label "Moving cord"@en .
-ex:SeveralMovingCords a ex:Screen ; rdfs:label "Several moving cords"@en .
+ex:ImageOfMovingParts a ex:Screen ; skos:prefLabel "Image composed of moving parts"@en .
+ex:MovingCord a ex:Screen ; skos:prefLabel "Moving cord"@en .
+ex:SeveralMovingCords a ex:Screen ; skos:prefLabel "Several moving cords"@en .
 
 # Mono-bi-poly of colors of electronic paper
 
-ex:BlackWhiteElectronicPaper a ex:Screen ; rdfs:label "Black-and-white electronic paper"@en .
-ex:ColorElectronicPaper a ex:Screen ; rdfs:label "Color electronic paper"@en .
+ex:BlackWhiteElectronicPaper a ex:Screen ; skos:prefLabel "Black-and-white electronic paper"@en .
+ex:ColorElectronicPaper a ex:Screen ; skos:prefLabel "Color electronic paper"@en .
 
 # MATChEM for needle-type tactile display
 
-ex:NeedleDisplay a ex:Screen ; rdfs:label "Needle display"@en .
-ex:NeedleDisplayWithLocalSound a ex:Screen ; rdfs:label "Needle display with local sound"@en .
-ex:ColorDisplayForBlind a ex:Screen ; rdfs:label "<Color> display for the blind"@en .
-ex:DisplayWithOdor a ex:Screen ; rdfs:label "Display with odor"@en .
-ex:ColorDisplayWithActiveBasRelief a ex:Screen ; rdfs:label "Color display with active bas-relief"@en .
-ex:MagneticGuide a ex:Screen ; rdfs:label "Magnetic Guide"@en .
+ex:NeedleDisplay a ex:Screen ; skos:prefLabel "Needle display"@en .
+ex:NeedleDisplayWithLocalSound a ex:Screen ; skos:prefLabel "Needle display with local sound"@en .
+ex:ColorDisplayForBlind a ex:Screen ; skos:prefLabel "<Color> display for the blind"@en .
+ex:DisplayWithOdor a ex:Screen ; skos:prefLabel "Display with odor"@en .
+ex:ColorDisplayWithActiveBasRelief a ex:Screen ; skos:prefLabel "Color display with active bas-relief"@en .
+ex:MagneticGuide a ex:Screen ; skos:prefLabel "Magnetic Guide"@en .
 
 ## Sand
 
 # Sand
-ex:SandDisplay a ex:Screen ; rdfs:label "Sand display"@en .
+ex:SandDisplay a ex:Screen ; skos:prefLabel "Sand display"@en .
 
 ## Liquid
 
 # Dynamization of the liquid display
 
-ex:LiquidBalls a ex:Screen ; rdfs:label "Liquid balls"@en .
-ex:ElectrowettingEffect a ex:Screen ; rdfs:label "Electrowetting effect"@en .
-ex:Ferrofluid a ex:Screen ; rdfs:label "Ferrofluid"@en .
-ex:RainbowEffectLiquid a ex:Screen ; rdfs:label "Rainbow effect liquid"@en .
+ex:LiquidBalls a ex:Screen ; skos:prefLabel "Liquid balls"@en .
+ex:ElectrowettingEffect a ex:Screen ; skos:prefLabel "Electrowetting effect"@en .
+ex:Ferrofluid a ex:Screen ; skos:prefLabel "Ferrofluid"@en .
+ex:RainbowEffectLiquid a ex:Screen ; skos:prefLabel "Rainbow effect liquid"@en .
 
 # Segmentation of image-producing elements
 
-ex:ElectronicInk a ex:Screen ; rdfs:label "Electronic ink"@en .
-ex:LiquidCrystalDisplay a ex:Screen ; rdfs:label "Liquid crystal display"@en .
+ex:ElectronicInk a ex:Screen ; skos:prefLabel "Electronic ink"@en .
+ex:LiquidCrystalDisplay a ex:Screen ; skos:prefLabel "Liquid crystal display"@en .
 
 # Segmentation of the distributed light source
 
-ex:ContinuousLightSource a ex:Screen ; rdfs:label "Continuous light source"@en .
-ex:SingularLightEmittingDiodes a ex:Screen ; rdfs:label "Singular light emitting diodes"@en .
-ex:OnePixelOneDiode a ex:Screen ; rdfs:label "One pixel - one diode"@en .
+ex:ContinuousLightSource a ex:Screen ; skos:prefLabel "Continuous light source"@en .
+ex:SingularLightEmittingDiodes a ex:Screen ; skos:prefLabel "Singular light emitting diodes"@en .
+ex:OnePixelOneDiode a ex:Screen ; skos:prefLabel "One pixel - one diode"@en .
 
 ## Foam
 
 # Segmentation of the bubble display control elements
 
-ex:BubbleScreen a ex:Screen ; rdfs:label "Bubble screen"@en .
-ex:UpperAndLowerElectromagnets a ex:Screen ; rdfs:label "Add upper and lower electromagnets"@en .
-ex:SideElectromagnets a ex:Screen ; rdfs:label "Add side electromagnets"@en .
-ex:BackElectromagnet a ex:Screen ; rdfs:label "Add back electromagnet"@en .
-ex:PartiallySegmentedElectromagnets a ex:Screen ; rdfs:label "Partially segmented electromagnets"@en .
-ex:SegmentedElectromagnets a ex:Screen ; rdfs:label "Segmented electromagnets"@en .
+ex:BubbleScreen a ex:Screen ; skos:prefLabel "Bubble screen"@en .
+ex:UpperAndLowerElectromagnets a ex:Screen ; skos:prefLabel "Add upper and lower electromagnets"@en .
+ex:SideElectromagnets a ex:Screen ; skos:prefLabel "Add side electromagnets"@en .
+ex:BackElectromagnet a ex:Screen ; skos:prefLabel "Add back electromagnet"@en .
+ex:PartiallySegmentedElectromagnets a ex:Screen ; skos:prefLabel "Partially segmented electromagnets"@en .
+ex:SegmentedElectromagnets a ex:Screen ; skos:prefLabel "Segmented electromagnets"@en .
 
 ## Aerosol
 
 # Geometrical evolution of the foggy screen
 
-ex:FogScreen a ex:Screen ; rdfs:label "Fog screen"@en .
-ex:CloudyScreen a ex:Screen ; rdfs:label "Cloudy screen"@en .
-ex:LaserShow a ex:Screen ; rdfs:label "Laser show"@en .
+ex:FogScreen a ex:Screen ; skos:prefLabel "Fog screen"@en .
+ex:CloudyScreen a ex:Screen ; skos:prefLabel "Cloudy screen"@en .
+ex:LaserShow a ex:Screen ; skos:prefLabel "Laser show"@en .
 
 ## Gas
 
 # Image activation in a gas medium
 
-ex:AircraftTrail a ex:Screen ; rdfs:label "Aircraft trail"@en .
-ex:Firework a ex:Screen ; rdfs:label "Firework"@en .
-ex:ImageInTheAir a ex:Screen ; rdfs:label "Image in the air"@en .
+ex:AircraftTrail a ex:Screen ; skos:prefLabel "Aircraft trail"@en .
+ex:Firework a ex:Screen ; skos:prefLabel "Firework"@en .
+ex:ImageInTheAir a ex:Screen ; skos:prefLabel "Image in the air"@en .
 
 ## Plasma
 
 # Combining a plasma panel with a different type of display
 
-ex:PDP a ex:Screen ; rdfs:label "PDP"@en .
-ex:PlasmaPanelWithFilter a ex:Screen ; rdfs:label "Plasma panel with LC-filter"@en .
-ex:CommonElectrodes a ex:Screen ; rdfs:label "Common electrodes"@en .
-ex:NanopowderInsideCell a ex:Screen ; rdfs:label "Nanopowder inside cell"@en .
+ex:PDP a ex:Screen ; skos:prefLabel "PDP"@en .
+ex:PlasmaPanelWithFilter a ex:Screen ; skos:prefLabel "Plasma panel with LC-filter"@en .
+ex:CommonElectrodes a ex:Screen ; skos:prefLabel "Common electrodes"@en .
+ex:NanopowderInsideCell a ex:Screen ; skos:prefLabel "Nanopowder inside cell"@en .
 
 ## Field
 
 # Trimming a light image
-ex:ShadowPlay a ex:Screen ; rdfs:label "Shadow play"@en .
-ex:Miniprojector a ex:Screen ; rdfs:label "Miniprojector"@en .
-ex:ProjectionTVSet a ex:Screen ; rdfs:label "Projection TV set"@en .
+ex:ShadowPlay a ex:Screen ; skos:prefLabel "Shadow play"@en .
+ex:Miniprojector a ex:Screen ; skos:prefLabel "Miniprojector"@en .
+ex:ProjectionTVSet a ex:Screen ; skos:prefLabel "Projection TV set"@en .
 
-ex:LEP a ex:Screen ; rdfs:label "LEP"@en .
-ex:OLED a ex:Screen ; rdfs:label "OLED"@en .
-ex:Iridigm a ex:Screen ; rdfs:label "Iridigm"@en .
+ex:LEP a ex:Screen ; skos:prefLabel "LEP"@en .
+ex:OLED a ex:Screen ; skos:prefLabel "OLED"@en .
+ex:Iridigm a ex:Screen ; skos:prefLabel "Iridigm"@en .
 
 ## Ideal object
 
 # Trimming the display to the ideal
 
-ex:MiniDisplay a ex:Screen ; rdfs:label "Mini display"@en .
-ex:EyeGlassesDisplay a ex:Screen ; rdfs:label "Eye glasses display"@en . 
-ex:ProjectorOntoRetina a ex:Screen ; rdfs:label "Projector onto retina"@en .
-ex:GeneratingImageInConsciousness a ex:Screen ; rdfs:label "Generating image in our consciousness"@en .
+ex:MiniDisplay a ex:Screen ; skos:prefLabel "Mini display"@en .
+ex:EyeGlassesDisplay a ex:Screen ; skos:prefLabel "Eye glasses display"@en . 
+ex:ProjectorOntoRetina a ex:Screen ; skos:prefLabel "Projector onto retina"@en .
+ex:GeneratingImageInConsciousness a ex:Screen ; skos:prefLabel "Generating image in our consciousness"@en .
