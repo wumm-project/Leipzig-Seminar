@@ -216,7 +216,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.01.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:WeightOfMovingObject ;
 	od:recommendedPrinciple odq:PreferredAction, odq:Dynamization, odq:InverseAction, odq:Coupling ;
 	a od:MatrixEntry .
@@ -504,7 +504,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.02.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:WeightOfStationaryObject ;
 	od:recommendedPrinciple odq:Separation, odq:InverseAction, odq:Mediator, odq:LocalQuality ;
 	a od:MatrixEntry .
@@ -792,7 +792,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.03.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:LengthAngleOfMovingObject ;
 	od:recommendedPrinciple odq:Feedback, odq:ReplacementOfMechanicalSchemes, odq:TransitionToAnotherDimension, odq:LocalQuality ;
 	a od:MatrixEntry .
@@ -1080,7 +1080,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.04.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:LengthAngleOfStationaryObject ;
 	od:recommendedPrinciple odq:Segmentation, odq:Nesting, odq:TransitionToAnotherDimension, odq:LocalQuality, odq:UsePorousMaterials ;
 	a od:MatrixEntry .
@@ -1368,7 +1368,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.05.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:AreaOfMovingObject ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:LocalQuality, odq:TransitionToAnotherDimension, odq:PreferredAction ;
 	a od:MatrixEntry .
@@ -1656,7 +1656,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.06.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:AreaOfStationaryObject ;
 	od:recommendedPrinciple odq:Mediator, odq:Separation, odq:TransitionToAnotherDimension, odq:Coupling ;
 	a od:MatrixEntry .
@@ -1944,7 +1944,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.07.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:VolumeOfMovingObject ;
 	od:recommendedPrinciple odq:InverseAction, odq:Dynamization, odq:Universality, odq:PreferredAction ;
 	a od:MatrixEntry .
@@ -2232,7 +2232,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.08.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:VolumeOfStationaryObject ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:Mediator, odq:Nesting, odq:Segmentation, odq:TransitionToAnotherDimension ;
 	a od:MatrixEntry .
@@ -2520,7 +2520,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.09.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Shape ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:LocalQuality, odq:UsePorousMaterials, odq:PreferredAction ;
 	a od:MatrixEntry .
@@ -2808,7 +2808,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.10.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:AmountOfSubstance ;
 	od:recommendedPrinciple odq:ChangePhysicalOrChemicalParameters, odq:Separation, odq:Mediator, odq:InverseAction ;
 	a od:MatrixEntry .
@@ -3096,7 +3096,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:AmountOfInformation ;
 	od:recommendedPrinciple odq:Universality, odq:SelfService, odq:PreferredAction, odq:Mediator ;
 	a od:MatrixEntry .
@@ -3384,7 +3384,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.12.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:DurationOfActionOfMovingObject ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:ChangePhysicalOrChemicalParameters, odq:Mediator, odq:LocalQuality, odq:Nesting ;
 	a od:MatrixEntry .
@@ -3672,7 +3672,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.13.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:DurationOfActionOfStationaryObject ;
 	od:recommendedPrinciple odq:PreferredAction, odq:Mediator, odq:TransitionToAnotherDimension, odq:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
@@ -3960,7 +3960,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.14.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Speed ;
 	od:recommendedPrinciple odq:Nesting, odq:PeriodicEffect, odq:Universality, odq:Mediator, odq:LocalQuality, odq:Separation ;
 	a od:MatrixEntry .
@@ -4248,7 +4248,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.15.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:ForceTorque ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:Coupling, odq:Universality, odq:SelfService, odq:Mediator ;
 	a od:MatrixEntry .
@@ -4536,7 +4536,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.16.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:EnergyUsedByMovingObject ;
 	od:recommendedPrinciple odq:PreferredAction, odq:Mediator, odq:ReplacementOfMechanicalSchemes, odq:Segmentation ;
 	a od:MatrixEntry .
@@ -4824,7 +4824,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.17.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:EnergyUsedByStationaryObject ;
 	od:recommendedPrinciple odq:Mediator, odq:LocalQuality, odq:ChangePhysicalOrChemicalParameters, odq:Equipotentiality ;
 	a od:MatrixEntry .
@@ -5112,7 +5112,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Power ;
 	od:recommendedPrinciple odq:Mediator, odq:ReplacementOfMechanicalSchemes, odq:Dynamization, odq:InverseAction ;
 	a od:MatrixEntry .
@@ -5400,7 +5400,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.19.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:StressPressure ;
 	od:recommendedPrinciple odq:SelfService, odq:PreferredAction, odq:Universality, odq:ReplacementOfMechanicalSchemes, odq:Asymmetry ;
 	a od:MatrixEntry .
@@ -5688,7 +5688,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.20.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Strength ;
 	od:recommendedPrinciple odq:Universality, odq:Equipotentiality, odq:ReplacementOfMechanicalSchemes, odq:InverseAction ;
 	a od:MatrixEntry .
@@ -5976,7 +5976,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.21.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Stability ;
 	od:recommendedPrinciple odq:Segmentation, odq:Universality, odq:InverseAction, odq:Separation, odq:PreferredAction ;
 	a od:MatrixEntry .
@@ -6264,7 +6264,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.22.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Temperature ;
 	od:recommendedPrinciple odq:Mediator, odq:Separation, odq:InverseAction, odq:FlexibleCoversOrThinFilms ;
 	a od:MatrixEntry .
@@ -6552,7 +6552,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.23.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:IlluminationIntensity ;
 	od:recommendedPrinciple odq:ChangeColorAndTransparency, odq:ChangePhysicalOrChemicalParameters, odq:Segmentation, odq:InverseAction, odq:Universality ;
 	a od:MatrixEntry .
@@ -6840,7 +6840,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.24.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:FunctionEfficiency ;
 	od:recommendedPrinciple odq:Segmentation, odq:Asymmetry, odq:SphericalShape, odq:Nesting, odq:Separation, odq:Mediator ;
 	a od:MatrixEntry .
@@ -7128,7 +7128,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.25.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:LossOfSubstance ;
 	od:recommendedPrinciple odq:EliminationAndRegenerationOfParts, odq:Separation, odq:Homogeneity, odq:Mediator ;
 	a od:MatrixEntry .
@@ -7416,7 +7416,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.26.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:LossOfTime ;
 	od:recommendedPrinciple odq:TransitionToAnotherDimension, odq:PreferredAction, odq:ReplacementOfMechanicalSchemes, odq:Separation ;
 	a od:MatrixEntry .
@@ -7704,7 +7704,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.27.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:LossOfEnergy ;
 	od:recommendedPrinciple odq:RushingThrough, odq:ChangePhysicalOrChemicalParameters, odq:Equipotentiality, odq:InverseAction ;
 	a od:MatrixEntry .
@@ -7992,7 +7992,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.28.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:LossOfInformation ;
 	od:recommendedPrinciple odq:Separation, odq:Mediator, odq:ApplyThermalExpansion, odq:Asymmetry, odq:Segmentation ;
 	a od:MatrixEntry .
@@ -8280,7 +8280,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.29.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Noise ;
 	od:recommendedPrinciple odq:Separation, odq:ChangePhysicalOrChemicalParameters, odq:EarlyCounteraction, odq:TransitionToAnotherDimension, odq:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
@@ -8568,7 +8568,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.30.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:HarmfulEmissions ;
 	od:recommendedPrinciple odq:Separation, odq:ChangePhysicalOrChemicalParameters, odq:PartialOrExcessiveEffect, odq:PeriodicEffect ;
 	a od:MatrixEntry .
@@ -8856,7 +8856,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.31.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:OtherHarmfulEffectsGeneratedBySystem ;
 	od:recommendedPrinciple odq:Coupling, odq:TransitionToAnotherDimension, odq:Segmentation, odq:ApplyPneumaticOrHydraulicConstructions, odq:Feedback ;
 	a od:MatrixEntry .
@@ -9144,7 +9144,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.32.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:AdaptabilityVersatility ;
 	od:recommendedPrinciple odq:Segmentation, odq:Coupling, odq:LocalQuality, odq:ReplacementOfMechanicalSchemes, odq:Separation ;
 	a od:MatrixEntry .
@@ -9241,289 +9241,289 @@ od:MatrixEntry
 
 <http://opendiscovery.org/rdf/Matrix/E.33.01>
 	od:decreasingParameter odr:WeightOfMovingObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Segmentation, odq:Countermass, odq:Dynamization, odq:ReplacementOfMechanicalSchemes, odq:Copying ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.02>
 	od:decreasingParameter odr:WeightOfStationaryObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Segmentation, odq:ReplacementOfMechanicalSchemes, odq:Dynamization, odq:Copying ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.03>
 	od:decreasingParameter odr:LengthAngleOfMovingObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Mediator, odq:Asymmetry, odq:ReplacementOfMechanicalSchemes, odq:TransitionToAnotherDimension ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.04>
 	od:decreasingParameter odr:LengthAngleOfStationaryObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Mediator, odq:ReplacementOfMechanicalSchemes, odq:TransitionToAnotherDimension, odq:Asymmetry, odq:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.05>
 	od:decreasingParameter odr:AreaOfMovingObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:TransitionToAnotherDimension, odq:InverseAction, odq:Segmentation, odq:Asymmetry ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.06>
 	od:decreasingParameter odr:AreaOfStationaryObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:InverseAction, odq:TransitionToAnotherDimension, odq:Segmentation, odq:Asymmetry ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.07>
 	od:decreasingParameter odr:VolumeOfMovingObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:Mediator, odq:ReplacementOfMechanicalSchemes, odq:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.08>
 	od:decreasingParameter odr:VolumeOfStationaryObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:Copying, odq:Mediator, odq:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.09>
 	od:decreasingParameter odr:Shape ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:InverseAction, odq:ReplacementOfMechanicalSchemes, odq:Nesting, odq:Mediator ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.10>
 	od:decreasingParameter odr:AmountOfSubstance ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:UsePorousMaterials, odq:Separation, odq:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.11>
 	od:decreasingParameter odr:AmountOfInformation ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:PreferredAction, odq:Mediator, odq:LocalQuality, odq:Separation, odq:ApplyThermalExpansion ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.12>
 	od:decreasingParameter odr:DurationOfActionOfMovingObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:PreferredAction, odq:Nesting, odq:Coupling, odq:ApplyCompositeMaterials ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.13>
 	od:decreasingParameter odr:DurationOfActionOfStationaryObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:PreferredAction, odq:Nesting, odq:Coupling, odq:ApplyCompositeMaterials, odq:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.14>
 	od:decreasingParameter odr:Speed ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Segmentation, odq:Separation, odq:PreferredAction, odq:Universality, odq:Coupling, odq:Asymmetry ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.15>
 	od:decreasingParameter odr:ForceTorque ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Universality, odq:Mediator, odq:ApplyPneumaticOrHydraulicConstructions, odq:Equipotentiality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.16>
 	od:decreasingParameter odr:EnergyUsedByMovingObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ApplyPneumaticOrHydraulicConstructions, odq:ReplacementOfMechanicalSchemes, odq:Equipotentiality, odq:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.17>
 	od:decreasingParameter odr:EnergyUsedByStationaryObject ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:Mediator, odq:SelfService, odq:PeriodicEffect ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.18>
 	od:decreasingParameter odr:Power ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Universality, odq:ApplyPneumaticOrHydraulicConstructions, odq:SelfService, odq:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.19>
 	od:decreasingParameter odr:StressPressure ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Mediator, odq:ApplyCompositeMaterials, odq:LocalQuality, odq:Equipotentiality, odq:EarlyCounteraction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.20>
 	od:decreasingParameter odr:Strength ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:ChangePhysicalOrChemicalParameters, odq:ApplyPneumaticOrHydraulicConstructions, odq:FlexibleCoversOrThinFilms ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.21>
 	od:decreasingParameter odr:Stability ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ChangePhysicalOrChemicalParameters, odq:Mediator, odq:Homogeneity, odq:InexpensiveShortLifeObject ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.22>
 	od:decreasingParameter odr:Temperature ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:RushingThrough, odq:UseInertMedium, odq:ChangePhysicalOrChemicalParameters, odq:EarlyCounteraction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.23>
 	od:decreasingParameter odr:IlluminationIntensity ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:SelfService, odq:ReplacementOfMechanicalSchemes, odq:Separation, odq:Universality, odq:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.24>
 	od:decreasingParameter odr:FunctionEfficiency ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Equipotentiality, odq:LocalQuality, odq:PeriodicEffect, odq:ApplyThermalExpansion ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.25>
 	od:decreasingParameter odr:LossOfSubstance ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:InverseAction, odq:LocalQuality, odq:TransitionToAnotherDimension, odq:TransformationOfHarmfulIntoUseful ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.26>
 	od:decreasingParameter odr:LossOfTime ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:PreferredAction, odq:InverseAction, odq:SelfService ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.27>
 	od:decreasingParameter odr:LossOfEnergy ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:InverseAction, odq:EarlyCounteraction, odq:Equipotentiality, odq:Coupling ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.28>
 	od:decreasingParameter odr:LossOfInformation ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Coupling, odq:Separation, odq:Nesting, odq:Mediator, odq:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.29>
 	od:decreasingParameter odr:Noise ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:PreferredAction, odq:Mediator, odq:ApplyThermalExpansion ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.30>
 	od:decreasingParameter odr:HarmfulEmissions ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Mediator, odq:ChangePhysicalOrChemicalParameters, odq:Equipotentiality, odq:Segmentation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.31>
 	od:decreasingParameter odr:OtherHarmfulEffectsGeneratedBySystem ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:LocalQuality, odq:PreliminaryAction, odq:ChangeColorAndTransparency, odq:Homogeneity ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.32>
 	od:decreasingParameter odr:AdaptabilityVersatility ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:PreferredAction, odq:Mediator, odq:Universality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:NoPrinciple ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.34>
 	od:decreasingParameter odr:TrainabilityOperabilityControllability ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:PreferredAction, odq:SelfService, odq:Separation, odq:TransformationOfHarmfulIntoUseful ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.35>
 	od:decreasingParameter odr:ReliabilityRobustness ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:EarlyCounteraction, odq:ChangePhysicalOrChemicalParameters, odq:Mediator, odq:PreferredAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.36>
 	od:decreasingParameter odr:Repairability ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:PreferredAction, odq:TransitionToAnotherDimension, odq:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.37>
 	od:decreasingParameter odr:Security ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Mediator, odq:PreferredAction, odq:ReplacementOfMechanicalSchemes, odq:SelfService ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.38>
 	od:decreasingParameter odr:SafetyVulnerability ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:TransitionToAnotherDimension, odq:ChangePhysicalOrChemicalParameters, odq:EarlyCounteraction, odq:LocalQuality, odq:UsePorousMaterials ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.39>
 	od:decreasingParameter odr:AestheticsAppearance ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:Nesting, odq:InverseAction, odq:TransitionToAnotherDimension ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.40>
 	od:decreasingParameter odr:OtherHarmfulEffectsActingOnSystem ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Segmentation, odq:Asymmetry, odq:ChangePhysicalOrChemicalParameters, odq:Equipotentiality, odq:Mediator ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.41>
 	od:decreasingParameter odr:Manufacturability ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:PartialOrExcessiveEffect, odq:TransitionToAnotherDimension, odq:FlexibleCoversOrThinFilms ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.42>
 	od:decreasingParameter odr:ManufacturePrecisioinConsistency ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:Separation, odq:PreferredAction, odq:EarlyCounteraction, odq:ChangePhysicalOrChemicalParameters, odq:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.43>
 	od:decreasingParameter odr:Automation ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:PreferredAction, odq:TransitionToAnotherDimension, odq:PartialOrExcessiveEffect, odq:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.44>
 	od:decreasingParameter odr:Productivity ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:LocalQuality, odq:TransitionToAnotherDimension, odq:SphericalShape, odq:PreferredAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.45>
 	od:decreasingParameter odr:SystemComplexity ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:Mediator, odq:InverseAction, odq:Equipotentiality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.46>
 	od:decreasingParameter odr:ControlComplexity ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:PreferredAction, odq:Separation, odq:SelfService, odq:Coupling ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.47>
 	od:decreasingParameter odr:AbilityToDetectMeasure ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:SelfService, odq:PreferredAction, odq:ApplyThermalExpansion, odq:TransitionToAnotherDimension ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.48>
 	od:decreasingParameter odr:MeasurementPrecision ;
-	od:increasingParameter odr:Compatitbility/Connectability ;
+	od:increasingParameter odr:CompatitbilityConnectability ;
 	od:recommendedPrinciple odq:SelfService, odq:ApplyThermalExpansion, odq:TransitionToAnotherDimension, odq:Asymmetry ;
 	a od:MatrixEntry .
 
@@ -9720,7 +9720,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.34.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:TrainabilityOperabilityControllability ;
 	od:recommendedPrinciple odq:SelfService, odq:Segmentation, odq:Mediator, odq:Universality ;
 	a od:MatrixEntry .
@@ -10008,7 +10008,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.35.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:ReliabilityRobustness ;
 	od:recommendedPrinciple odq:Segmentation, odq:SelfService, odq:PreferredAction, odq:LocalQuality, odq:Coupling ;
 	a od:MatrixEntry .
@@ -10296,7 +10296,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.36.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Repairability ;
 	od:recommendedPrinciple odq:Separation, odq:PreferredAction, odq:InverseAction, odq:Asymmetry ;
 	a od:MatrixEntry .
@@ -10584,7 +10584,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.37.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Security ;
 	od:recommendedPrinciple odq:Dynamization, odq:TransitionToAnotherDimension, odq:Mediator, odq:Asymmetry, odq:Universality ;
 	a od:MatrixEntry .
@@ -10872,7 +10872,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.38.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:SafetyVulnerability ;
 	od:recommendedPrinciple odq:Mediator, odq:ReplacementOfMechanicalSchemes, odq:Separation, odq:InverseAction, odq:Universality ;
 	a od:MatrixEntry .
@@ -11160,7 +11160,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.39.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:AestheticsAppearance ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:Coupling, odq:TransitionToAnotherDimension, odq:LocalQuality ;
 	a od:MatrixEntry .
@@ -11448,7 +11448,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.40.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:OtherHarmfulEffectsActingOnSystem ;
 	od:recommendedPrinciple odq:TransitionToAnotherDimension, odq:Mediator, odq:Separation, odq:Coupling, odq:Nesting ;
 	a od:MatrixEntry .
@@ -11736,7 +11736,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.41.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Manufacturability ;
 	od:recommendedPrinciple odq:ReplacementOfMechanicalSchemes, odq:LocalQuality, odq:Universality, odq:Separation, odq:InverseAction ;
 	a od:MatrixEntry .
@@ -12024,7 +12024,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.42.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:ManufacturePrecisioinConsistency ;
 	od:recommendedPrinciple odq:InverseAction, odq:Asymmetry, odq:EarlyCounteraction, odq:ReplacementOfMechanicalSchemes, odq:Dynamization ;
 	a od:MatrixEntry .
@@ -12312,7 +12312,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.43.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Automation ;
 	od:recommendedPrinciple odq:Universality, odq:InverseAction, odq:Separation, odq:LocalQuality, odq:TransitionToAnotherDimension ;
 	a od:MatrixEntry .
@@ -12600,7 +12600,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.44.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:Productivity ;
 	od:recommendedPrinciple odq:PreferredAction, odq:Separation, odq:InverseAction, odq:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
@@ -12888,7 +12888,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.45.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:SystemComplexity ;
 	od:recommendedPrinciple odq:Universality, odq:ReplacementOfMechanicalSchemes, odq:InverseAction, odq:ChangePhysicalOrChemicalParameters ;
 	a od:MatrixEntry .
@@ -13176,7 +13176,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.46.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:ControlComplexity ;
 	od:recommendedPrinciple odq:Universality, odq:PreferredAction, odq:InverseAction, odq:Segmentation ;
 	a od:MatrixEntry .
@@ -13464,7 +13464,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.47.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:AbilityToDetectMeasure ;
 	od:recommendedPrinciple odq:SelfService, odq:Segmentation, odq:InverseAction, odq:Dynamization ;
 	a od:MatrixEntry .
@@ -13752,7 +13752,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.48.33>
-	od:decreasingParameter odr:Compatitbility/Connectability ;
+	od:decreasingParameter odr:CompatitbilityConnectability ;
 	od:increasingParameter odr:MeasurementPrecision ;
 	od:recommendedPrinciple odq:Separation, odq:Universality, odq:PreferredAction, odq:Dynamization, odq:PeriodicEffect ;
 	a od:MatrixEntry .
