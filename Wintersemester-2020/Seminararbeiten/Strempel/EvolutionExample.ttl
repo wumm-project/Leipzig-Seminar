@@ -20,10 +20,10 @@
 ex:Boat
     a tc:SpecificEvolutionTree ;
     skos:prefLabel "Boat"@en, "Boot"@de ;
-    skos:definition "Specific evolution tree of the power source of the ships propulsion"@en ;
+    skos:definition "Specific evolution tree of the power source of the ships propulsion"@en .
 
-ex:TreeTrunk
-    a ex:Boat ; 
+ex:TreeTrunk 
+    a ex:Boat ;
     skos:prefLabel "Tree trunk"@en, "Baumstamm"@de .
 
 ex:Rowboat 
@@ -110,7 +110,7 @@ ex:replaceDieselEngineWithNuclearReactor
 
 ex:Screen
     a tc:SpecificEvolutionTree ;
-    skos:prefLabel "Specific evolution tree of the screen"@en ;
+    skos:prefLabel "Specific evolution tree of the screen"@en .
 # elementary function
 
 # makes modelling easier
@@ -137,7 +137,7 @@ ex:obtainSinglePictureFromTwo
     a rdf:Property, skos:Concept ;
     od:usesPattern tc:MonoBiPolyPattern, tc:BiSystem ;
     skos:prefLabel "obtain a single picture from two pictures"@en ;
-    skos:definition "View two pictures through non-transparent screen"@en ;
+    skos:definition "View two pictures through non-transparent screen"@en .
 ex:sequeceOfDrawings
     a rdf:Property, skos:Concept ;
     od:usesPattern tc:MonoBiPolyPattern, tc:PolySystem ;
@@ -177,16 +177,16 @@ ex:ImageSoundSmellOther
 
 ex:addSound
     a rdf:Property, skos:Concept ;
-    od:usesPattern tc:MonoBiPolyPattern tc:BiSystem ;
+    od:usesPattern tc:MonoBiPolyPattern, tc:BiSystem ;
     skos:prefLabel "Add sound"@en .
 ex:addSmell
     a rdf:Property, skos:Concept ;
-    od:usesPattern tc:MonoBiPolyPattern tc:PolySystem ;
+    od:usesPattern tc:MonoBiPolyPattern, tc:PolySystem ;
     skos:prefLabel "Add smell"@en .
 ex:addOtherSpecialEffects
     a rdf:Property, skos:Concept ;
-    od:usesPattern tc:MonoBiPolyPattern tc:PolySystem ;
-    skos:prefLabel "Add other special effects"@en tc:PolySystem ;
+    od:usesPattern tc:MonoBiPolyPattern, tc:PolySystem ;
+    skos:prefLabel "Add other special effects"@en ;
     skos:definition "Add other special effects like wind"@en .
 
 # Mono-Bi-Poly of accompanying sound
@@ -310,7 +310,7 @@ ex:MechanicalTVSet
     skos:prefLabel "Mechanical TV set - Trimmed Cinematograph"@en .
 ex:CrtTVSet 
     a ex:Screen ;
-    ex:transitionsTo ex:LargePixels, ex:SphericalScreen, ex:ImageNotCoordinatedWithBackground, ex:BlackWhiteDisplay, wx:WhiteActivePixel ;
+    ex:transitionsTo ex:LargePixels, ex:SphericalScreen, ex:ImageNotCoordinatedWithBackground, ex:BlackWhiteDisplay, ex:WhiteActivePixel ;
     ex:decreaseDisplayThickness ex:FlatScreen ;
     skos:prefLabel "CRT TV set - Trimmed Cinematograph"@en .
 
@@ -387,7 +387,7 @@ ex:ImageNotCoordinatedWithBackground
     skos:prefLabel "Image that is not coordinated with the background"@en .
 ex:NeutralBackground 
     a ex:Screen ; 
-    ex:synchroniseWithSurroundings ex:DynamicalCoordination
+    ex:synchroniseWithSurroundings ex:DynamicalCoordination ;
     skos:prefLabel "Neutral background"@en .
 ex:DynamicalCoordinationWithBackground
     a ex:Screen ; 
@@ -431,11 +431,11 @@ ex:WhiteActivePixel
     skos:prefLabel "White active pixel"@en .
 ex:RGBPixel 
     a ex:Screen ; 
-    ex:segmentPixeltoAddColor ex:RGBWhitePixel
+    ex:segmentPixeltoAddColor ex:RGBWhitePixel ;
     skos:prefLabel "RGB pixel"@en .
 ex:RGBWhitePixel 
     a ex:Screen ; 
-    ex:segmentPixeltoAddColor ex:6ColorsPixel
+    ex:segmentPixeltoAddColor ex:6ColorsPixel ;
     skos:prefLabel "RGB pixel with a white element"@en .
 ex:6ColorsPixel 
     a ex:Screen ;
@@ -458,6 +458,8 @@ ex:useStackedLightReflectingLayers
 # next tree step
 ex:FlatDisplay 
     a ex:Screen ;
+    ex:addScreens ex:TwoDisplays ;
+    ex:useBandLikeLenses ex:3DDisplayWithLenses ;
     skos:prefLabel "Flat display - Trimmed CRT"@en .
 
 ex:decreaseDisplayThickness
@@ -469,13 +471,15 @@ ex:decreaseDisplayThickness
 # Mono-bi-poly of flat displays
 ex:TwoDisplays 
     a ex:Screen ;
-    ex:TwoDisplays ex:ad
+    ex:addScreens ex:Several ; 
     skos:prefLabel "Two displays"@en .
 ex:SeveralDisplays 
     a ex:Screen ; 
+    ex:addScreens ex:LargeScreenComposedOfDisplays ;
     skos:prefLabel "Several displays connected with each other"@en .
 ex:LargeScreenComposedOfDisplays 
     a ex:Screen ; 
+    ex:addScreens ex:SuperLargeScreen ;
     skos:prefLabel "Large screen composed of displays"@en .
 ex:SuperLargeScreen 
     a ex:Screen ; 
@@ -487,10 +491,32 @@ ex:addScreens
     skos:prefLabel "Add one or multiple screens"@en .
 
 # Mono-bi-poly of 3D display screen layers
-ex:3DDisplayWithLenses a ex:Screen ; skos:prefLabel "3D display with lenses"@en .
-ex:DoubleLayer3DDisplay a ex:Screen ; skos:prefLabel "Double layer 3D display"@en .
-ex:Multilayer3DDisplay a ex:Screen ; skos:prefLabel "Multilayer 3D display"@en .
-ex:MovableScreenDisplay a ex:Screen ; skos:prefLabel "Movable screen display"@en .
+ex:3DDisplayWithLenses 
+    a ex:Screen ; 
+    ex:addPixelLayer ex:DoubleLayer3DDisplay ;
+    skos:prefLabel "3D display with lenses"@en .
+ex:DoubleLayer3DDisplay 
+    a ex:Screen ; 
+    ex:addPixelLayer ex:Multilayer3DDisplay ;
+    skos:prefLabel "Double layer 3D display"@en .
+ex:Multilayer3DDisplay 
+    a ex:Screen ; 
+    ex:makeMovableScreen ex:MovableScreenDisplay ;
+    skos:prefLabel "Multilayer 3D display"@en .
+ex:MovableScreenDisplay 
+    a ex:Screen ; 
+    skos:prefLabel "Movable screen display"@en .
+
+ex:useBandLikeLenses
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:MonoBiPolyPattern ;
+    skos:prefLabel "Use band like lenses"@en .
+ex:addPixelLayer
+    a rdf:Property, skos:Concept ;
+    od:usesPattern "Add one or multiple layers of pixels"@en .
+ex:makeMovableScreen
+    a rdf:Property, skos:Concept ;
+    od:usesPattern "Make the screen movable" .
 
 # 3D Display dynamization
 ex:RotatableScreen a ex:Screen ; skos:prefLabel "Rotatable screen"@en .

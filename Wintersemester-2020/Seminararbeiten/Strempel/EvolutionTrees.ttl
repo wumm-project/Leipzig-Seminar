@@ -7,8 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix od: <http://opendiscovery.org/rdf/Model#> .
 @prefix tc: <http://opendiscovery.org/rdf/Concept/> .
-@prefix odp: <http://opendiscovery.org/rdf/Person/> .
-@prefix odq: <http://opendiscovery.org/rdf/Principle/> .
+@prefix tc: <http://opendiscovery.org/rdf/Principle/> .
 
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -17,7 +16,7 @@
 <http://opendiscovery.org/rdf/BIB/Book/9781539892182>
     dc:language "en"^^dcterms:RFC4646 ;
     dc:publisher "Independently published"@en ;
-    dcterms:creator odp:Shpakovsky_NA ;
+    dcterms:creator tc:Shpakovsky_NA ;
     dcterms:issued "2016"^^dcterms:W3CDTF ;
     dcterms:title "Tree of Technology Evolution"@en ;
     dcterms:abstract """multiline abstract""" ;
@@ -106,7 +105,7 @@ tc:MonoBiPolyPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "The Mono-bi-poly transition"@en, "Mono-bi-poly Transition"@de ;
     skos:example "Spanner"@en, "Schraubenschlüssel"@de ;
-    skos:broader odq:Copying, tc:TransitiontoMacroLevel .
+    skos:broader tc:Copying, tc:TransitiontoMacroLevel .
 
 tc:MonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
@@ -139,7 +138,7 @@ tc:TrimmingPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de ;
     skos:example "Jablochkoff candle"@en, "Jablotschkowsche Kerze"@de ;
-    skos:broader odq:Separation, tc:Trimming .
+    skos:broader tc:Separation, tc:Trimming .
 # Initial system, Removing a single Object, Removing several objects, Maximally trimmed system, Ideal object
 
 tc:InitialSystem
@@ -204,7 +203,7 @@ tc:SegmentationPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
     skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de ;
-    skos:broader odq:Segmentation, tc:TrendofTransitiontoMicrolevel .
+    skos:broader tc:Segmentation, tc:TrendofTransitiontoMicrolevel .
 # Monolith, Two parts, Many parts, Granules, Powder, Paste, Liquid, Foam, Fog, Plasma, Field, Vacuum, Ideal object
 
 tc:Monolith
@@ -343,7 +342,7 @@ tc:GeometricalEvolutionPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Geometrical Evolution"@en, "Geometrische Evolution"@de ;
     skos:example "Evolution of the computer mouse shape"@en, "Evolution der Computermausform"@de ;
-    skos:broader odq:BallSimilarity .
+    skos:broader tc:BallSimilarity .
 # Prism, Cylinder, Sphere, Compilcated 3D structure
 # Flat surface, Cylindrical surface, Spherical surface, Combined surface
 # Straight line, Line curved in one direction, Line curved in two directions, Complicated line
@@ -421,7 +420,7 @@ tc:DynamizationPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Dynamization"@en, "Dynamisierung"@de ;
     skos:example "Dynamization of the toothbrush head/handle mount"@en, "Dynamisierung der Zahnbürstenkopf-/Griffhalterung"@de ;
-    skos:broader odq:Dynamization .
+    skos:broader tc:Dynamization .
 # Tight coupling, One hinge, Several hinges, Spherical hinges
 # Flexible couplings, Parts coupled by field, Uncoupled parts
 
@@ -467,7 +466,7 @@ tc:IncreasingControllabilityPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing controllability"@en, "Erhöhung der Kontrollierbarkeit"@de ;
     skos:example "trailer train wheels"@en, "Anhängerzugräder"@de ;
-    skos:broader odq:Mediator .
+    skos:broader tc:Mediator .
 # Manual control, Semi-automatic control, Automatic control
 
 tc:ManualControl
@@ -492,7 +491,7 @@ tc:IncreasingActionCoordinationPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing of action coordination"@en, "Erhöhung der Koordination der Aktionen"@de ;
     skos:example "gear-boxes"@en, "Getriebe"@de ;
-    skos:broader odq:Coupling, odq:Feedback .
+    skos:broader tc:Coupling, tc:Feedback .
 # Uncoordinated actions, Partially coordinated actions, Coordinated actions, Actions performed during intervals
 
 tc:UncoordinatedActions
@@ -549,7 +548,7 @@ tc:ElementaryFunction
 
 # tc:MainFunction
 # tc:AuxilliaryFunction
-# -> odq:Conversely 
+# -> tc:Conversely 
 
 tc:MorphologicalBox  # MorphologicalTables, Problems
     a skos:Concept, od:AdditionalConcept ;
