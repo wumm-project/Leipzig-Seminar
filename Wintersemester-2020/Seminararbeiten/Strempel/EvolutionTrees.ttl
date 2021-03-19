@@ -198,7 +198,6 @@ tc:CompleteSystem
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Complete system"@en, "Komplettes System"@de .
 
-# tc:Gas?
 tc:SegmentationPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
     od:hasSubConcept tc:Monolith, tc:TwoParts, tc:ManyParts, tc:Granules, tc:Powder, tc:Paste, tc:Liquid, tc:Foam, tc:Fog, tc:Gas, tc:Plasma, tc:Field, tc:Vacuum, tc:IdealObject ;
