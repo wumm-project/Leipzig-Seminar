@@ -107,6 +107,8 @@ ex:replaceDieselEngineWithNuclearReactor
 
 
 # specific evolution tree of screen
+# TODO remove screen/display from names, only use either screen or display
+# ex:addScreens -> ex:addScreen
 
 ex:Screen
     a tc:SpecificEvolutionTree ;
@@ -458,8 +460,13 @@ ex:useStackedLightReflectingLayers
 # next tree step
 ex:FlatDisplay 
     a ex:Screen ;
-    ex:addScreens ex:TwoDisplays ;
+    ex:addScreens ex:TwoDisplays, ex:TwoImmovableDisplays ;
     ex:useBandLikeLenses ex:3DDisplayWithLenses ;
+    ex:makeRotatableScreen ex:RotatableScreen ;
+    ex:useLinearDisplay ex:LinearDisplay ;
+    ex:addRadioScanner ex:DisplayAndRadioScanner ;
+    ex:addMicroJalousie ex:MicroJalousie ;
+    ex:transitionsTo ex:OneDisplay, ex:ImmovableDisplay ;
     skos:prefLabel "Flat display - Trimmed CRT"@en .
 
 ex:decreaseDisplayThickness
@@ -513,87 +520,352 @@ ex:useBandLikeLenses
     skos:prefLabel "Use band like lenses"@en .
 ex:addPixelLayer
     a rdf:Property, skos:Concept ;
-    od:usesPattern "Add one or multiple layers of pixels"@en .
+    od:usesPattern tc:MonoBiPolyPattern ;
+    skos:prefLabel "Add one or multiple layers of pixels"@en .
 ex:makeMovableScreen
     a rdf:Property, skos:Concept ;
-    od:usesPattern "Make the screen movable" .
+    od:usesPattern tc:MonoBiPolyPattern ;
+    skos:prefLabel "Make the screen movable"@en .
 
 # 3D Display dynamization
-ex:RotatableScreen a ex:Screen ; skos:prefLabel "Rotatable screen"@en .
-ex:TravellingWave a ex:Screen ; skos:prefLabel "Travelling wave"@en .
-ex:TwoIRLasers a ex:Screen ; skos:prefLabel "Two IR lasers"@en .
-ex:SpecialCrystal a ex:Screen ; skos:prefLabel "Special crystal"@en .
+ex:RotatableScreen 
+    a ex:Screen ; 
+    ex:makeTravelingWaveScreen ex:TravellingWaveScreen ;
+    skos:prefLabel "Rotatable screen"@en .
+ex:TravellingWaveScreen
+    a ex:Screen ; 
+    ex:useIRLasers ex:TwoIRLasers ;
+    skos:prefLabel "Travelling wave"@en .
+ex:TwoIRLasers 
+    a ex:Screen ;
+    ex:useSpecialCrystal ex:SpecialCrystalDisplay ;
+    skos:prefLabel "Two IR lasers"@en .
+ex:SpecialCrystalDisplay
+    a ex:Screen ; 
+    skos:prefLabel "Special crystal"@en .
+
+ex:makeRotatableScreen
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Make the screen rotatable"@en .
+ex:makeTravelingWaveScreen
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Make the screen flexible to be moved by a travelling wave"@en .
+ex:useIRLasers
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Use two infra-red lasers"@en .
+ex:useSpecialCrystal
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Use a special crystal that controlled the interaction of molecules"@en .
 
 # point - line - surface - volume transition for the flat display
-ex:LinearDisplay a ex:Screen ; skos:prefLabel "Linear display"@en .
-ex:OnePointDisplay a ex:Screen ; skos:prefLabel "One point display"@en .
-ex:DoublePointDisplay a ex:Screen ; skos:prefLabel "Double point display"@en .
-ex:MultiPointDisplay a ex:Screen ; skos:prefLabel "Multi point display"@en .
-ex:SuperLargeScreenOnLaserDiodes a ex:Screen ; skos:prefLabel "Super large screen on laser diodes"@en .
+ex:LinearDisplay 
+    a ex:Screen ; 
+    ex:useSingleSourceOfLight ex:OnePointDisplay ;
+    ex:curveDisplay ex:CurvedLinearDisplay ;
+    skos:prefLabel "Linear display"@en .
+ex:OnePointDisplay 
+    a ex:Screen ;
+    ex:addLightSource ex:DoublePointDisplay ;
+    skos:prefLabel "One point display"@en .
+
+ex:useLinearDisplay
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:GeometricalEvolutionPattern, tc:ComplicatedLine ;
+    skos:prefLabel "Use a linear shape display"@en .
+ex:useSingleSourceOfLight
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:GeometricalEvolutionPattern, tc:Point ;
+    skos:prefLabel "use only a single source of light"@en .
+
+# Mono-bi-Poly of point displays
+ex:DoublePointDisplay 
+    a ex:Screen ; 
+    ex:addLightSource ex:MultiPointDisplay ;
+    skos:prefLabel "Double point display"@en .
+ex:MultiPointDisplay 
+    a ex:Screen ; 
+    ex:addLightSource ex:SuperLargeScreenOnLaserDiodes ;
+    skos:prefLabel "Multi point display"@en .
+ex:SuperLargeScreenOnLaserDiodes 
+    a ex:Screen ; skos:prefLabel "Super large screen on laser diodes"@en .
+
+ex:addLightSource
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:MonoBiPolyPattern, tc:BiSystem, tc:PolySystem ;
+    skos:prefLabel "add one or more light sources"@en .
 
 # Geometrical evolution of the linear display
-ex:CurvedLinearDisplay a ex:Screen ; skos:prefLabel "Curved linear display"@en .
-ex:ComplexShapeLinearDisplay a ex:Screen ; skos:prefLabel "Complex shape linear display"@en .
+ex:CurvedLinearDisplay 
+    a ex:Screen ; 
+    ex:curveDisplay ex:ComplexShapeLinearDisplay
+    skos:prefLabel "Curved linear display"@en .
+ex:ComplexShapeLinearDisplay 
+    a ex:Screen ; 
+    ex:makeFabricOfLinearDisplays ex:FabricMadeOfLinearDisplays ;
+    skos:prefLabel "Complex shape linear display"@en .
+
+ex:curveDisplay
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:GeometricalEvolutionPattern, tc:LineCurvedOneDirection, tc:ComplicatedLine ;
+    skos:prefLabel "curve display to get a curved or more complicated display"@en .
 
 # Dynamisation of the linear display
-ex:FabricMadeOfLinearDisplays a ex:Screen ; skos:prefLabel "Fabric made of linear displays"@en .
-ex:RotatingLinearDisplays a ex:Screen ; skos:prefLabel "Rotating linear displays"@en .
-ex:MovableObjectMadeOfLinearDisplays a ex:Screen ; skos:prefLabel "Movable object made of linear displays"@en .
+ex:FabricMadeOfLinearDisplays 
+    a ex:Screen ; 
+    ex:makeRotatableScreen ex:RotatingLinearDisplays ;
+    skos:prefLabel "Fabric made of linear displays"@en .
+ex:RotatingLinearDisplays 
+    a ex:Screen ; 
+    ex:makeMovableScreen ex:MovableObjectMadeOfLinearDisplays ;
+    skos:prefLabel "Rotating linear displays"@en .
+ex:MovableObjectMadeOfLinearDisplays 
+    a ex:Screen ; 
+    skos:prefLabel "Movable object made of linear displays"@en .
+
+ex:makeFabricOfLinearDisplays
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "make fabric out of linear displays"@en .
 
 # Expanding-Trimming of flat display systems
 
-ex:DisplayAndRadioScanner a ex:Screen ; skos:prefLabel "Display and radio scanner"@en .
-ex:DisplayAndVideoCamera a ex:Screen ; skos:prefLabel "Display and video camera"@en .
-ex:TouchPanel a ex:Screen ; skos:prefLabel "Touch panel"@en .
-ex:TouchSensitiveCoating a ex:Screen ; skos:prefLabel "Touch sensitive coating"@en .
-ex:SpeakerDisplay a ex:Screen ; skos:prefLabel "Speaker display"@en .
-ex:ScannerDisplay a ex:Screen ; skos:prefLabel "Scanner display"@en .
-ex:HagachiComputerDisplay a ex:Screen ; skos:prefLabel "Hagachi computer-display"@en .
-ex:DisplayCard a ex:Screen ; skos:prefLabel "Display card"@en .
+ex:DisplayAndRadioScanner 
+    a ex:Screen ; 
+    ex:addVideoCamera ex:DisplayAndVideoCamera ;
+    skos:prefLabel "Display and radio scanner"@en .
+ex:DisplayAndVideoCamera 
+    a ex:Screen ; 
+    ex:addTouchPanel ex:TouchPanel ;
+    skos:prefLabel "Display and video camera"@en .
+ex:TouchPanel 
+    a ex:Screen ; 
+    ex:addTouchSensitiveCoating ex:TouchSensitiveDisplay ;
+    skos:prefLabel "Touch panel"@en .
+ex:TouchSensitiveDisplay
+    a ex:Screen ; 
+    ex:addLoudspeaker ex:SpeakerDisplay ;
+    skos:prefLabel "Touch sensitive coating"@en .
+ex:SpeakerDisplay 
+    a ex:Screen ; 
+    ex:addScanner ex:ScannerDisplay ;
+    skos:prefLabel "Speaker display"@en .
+ex:ScannerDisplay 
+    a ex:Screen ; 
+    ex:addComputer ex:HagachiComputerDisplay ;
+    skos:prefLabel "Scanner display"@en .
+ex:HagachiComputerDisplay 
+    a ex:Screen ; 
+    ex:miniaturizeComputer ex:DisplayCard ;
+    skos:prefLabel "Hagachi computer-display"@en .
+ex:DisplayCard 
+    a ex:Screen ; 
+    skos:prefLabel "Display card"@en ;
+    skos:definition "Mini-display with build in microship".
+
+ex:addRadioScanner
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add a radio scanner" .
+ex:addVideoCamera
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add a video camera" .
+ex:addTouchPanel
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add a touch panel" .
+ex:addTouchSensitiveCoating
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add touch-sensitive coating" .
+ex:addScanner
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add scanner" .
+ex:addComputer
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add processing capacity" .
+ex:miniaturizeComputer
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Miniaturize computer" .
 
 # Dynamization of a double-screen display
 
-ex:TwoImmovableDisplays a ex:Screen ; skos:prefLabel "Two immovable displays"@en .
-ex:BookDisplay a ex:Screen ; skos:prefLabel "Book display"@en .
-ex:BendableDisplay a ex:Screen ; skos:prefLabel "Bendable display"@en .
-ex:RolledDisplay a ex:Screen ; skos:prefLabel "Rolled display"@en .
-ex:ActiveReliefDisplay a ex:Screen ; skos:prefLabel "Active relief display"@en .
+ex:TwoImmovableDisplays 
+    a ex:Screen ; 
+    ex:addFlexibleLink ex:BookDisplay ;
+    skos:prefLabel "Two immovable displays"@en .
+ex:BookDisplay 
+    a ex:Screen ; 
+    ex:makeBendableScreen ex:BendableDisplay ;
+    skos:prefLabel "Book display"@en .
+ex:BendableDisplay 
+    a ex:Screen ; 
+    ex:makeRollable ex:RolledDisplay ;
+    skos:prefLabel "Bendable display"@en .
+ex:RolledDisplay 
+    a ex:Screen ; 
+    ex:addActiveRelief ex:ActiveReliefDisplay ;
+    skos:prefLabel "Rolled display"@en .
+ex:ActiveReliefDisplay 
+    a ex:Screen ; 
+    skos:prefLabel "Active relief display"@en .
+
+ex:addFlexibleLink
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:DynamizationPattern ;
+    skos:prefLabel "Add a flexible link"@en .
+ex:makeRollable
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:DynamizationPattern ;
+    skos:prefLabel "Make object rollable"@en .
+ex:addActiveRelief
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:DynamizationPattern ;
+    skos:prefLabel "Add active relief"@en .
 
 # Evolution of the screen surface microrelief
 
-ex:MicroJalousie a ex:Screen ; skos:prefLabel "Micro jalousie"@en .
-ex:NonReflectingLayer a ex:Screen ; skos:prefLabel "Non-reflecting layer"@en .
-ex:RealVirtualDisplay a ex:Screen ; skos:prefLabel "Real-virtual display"@en .
-ex:IncreasedPrivacyDisplay a ex:Screen ; skos:prefLabel "Increased privacy display"@en .
+ex:MicroJalousie 
+    a ex:Screen ; 
+    ex:addNonReflectingLayer ex:NonReflectingLayer ;
+    skos:prefLabel "Micro jalousie"@en .
+ex:NonReflectingLayer 
+    a ex:Screen ; 
+    ex:addAugmentedReality ex:RealVirtualDisplay ;
+    skos:prefLabel "Non-reflecting layer"@en .
+ex:RealVirtualDisplay 
+    a ex:Screen ; 
+    ex:addPolarizationFilter ex:IncreasedPrivacyDisplay ;
+    skos:prefLabel "Real-virtual display"@en .
+ex:IncreasedPrivacyDisplay 
+    a ex:Screen ; 
+    skos:prefLabel "Increased privacy display"@en .
+
+ex:addMicroJalousie
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:SurfacePropertyEvolutionPattern ;
+    skos:prefLabel "Add a micro jalousie"@en ;
+    skos:definition "Protrusions create a special filter for monitors designed for providing safety of private infromation"@en .
+ex:addNonReflectingLayer
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:SurfacePropertyEvolutionPattern ;
+    skos:prefLabel "Add non-reflexting layer"@en ;
+ex:addAugmentedReality
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:SurfacePropertyEvolutionPattern ;
+    skos:prefLabel "Add augmented reality"@en ;
+ex:addPolarizationFilter
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:SurfacePropertyEvolutionPattern ;
+    skos:prefLabel "Add polarization filter for privacy protection"@en ;
 
 # Mono-bi-poly of mobile phone displays
 
-ex:OneDisplay a ex:Screen ; skos:prefLabel "One display"@en .
-ex:FlatAndPointDisplays a ex:Screen ; skos:prefLabel "Flat and point displays"@en .
-ex:TwoFlatDisplaysAndPointDisplay a ex:Screen ; skos:prefLabel "Two flat displays and one point display"@en .
-ex:TwoSidedDisplay a ex:Screen ; skos:prefLabel "Two-sided display"@en .
+ex:OneDisplay 
+    a ex:Screen ; 
+    ex:addPointDisplay ex:FlatAndPointDisplays ;
+    skos:prefLabel "One display"@en .
+ex:FlatAndPointDisplays 
+    a ex:Screen ; 
+    ex:addScreens ex:TwoFlatDisplaysAndPointDisplay ;
+    skos:prefLabel "Flat and point displays"@en .
+ex:TwoFlatDisplaysAndPointDisplay 
+    a ex:Screen ;
+    ex:useTwoSidedDisplay ex:TwoSidedDisplay ;
+    skos:prefLabel "Two flat displays and one point display"@en .
+ex:TwoSidedDisplay 
+    a ex:Screen ; 
+    skos:prefLabel "Two-sided display"@en .
+
+ex:addPointDisplay
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:MonoBiPolyPattern ;
+    skos:prefLabel "Add a point display"@en .
+ex:useTwoSidedDisplay
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:MonoBiPolyPattern ;
+    skos:prefLabel "Use a two sided display"@en .
 
 # Display dynamization
 
-ex:ImmovableDisplay a ex:Screen ; skos:prefLabel "Immovable display"@en .
-ex:PartiallyMovableDisplay a ex:Screen ; skos:prefLabel "Partially movable display"@en .
-ex:CylindricalHinge a ex:Screen ; skos:prefLabel "Cylindrical hinge"@en .
-ex:TwoHinges a ex:Screen ; skos:prefLabel "Two hinges"@en .
-ex:SphericalHinge a ex:Screen ; skos:prefLabel "Spherical hinge"@en .
-ex:IsolatedDisplay a ex:Screen ; skos:prefLabel "Isolated display"@en .
+ex:ImmovableDisplay 
+    a ex:Screen ; 
+    ex:seperateParts ex:PartiallyMovableDisplay ;
+    skos:prefLabel "Immovable display"@en .
+ex:PartiallyMovableDisplay 
+    a ex:Screen ; 
+    ex:addCylindricalHinge ex:CylindricalHinge ;
+    skos:prefLabel "Partially movable display"@en .
+ex:CylindricalHinge 
+    a ex:Screen ; 
+    ex:addCylindricalHinge ex:CylindricalHinge ;
+    skos:prefLabel "Cylindrical hinge"@en .
+ex:TwoHinges 
+    a ex:Screen ; 
+    ex:addSphericalHinge ex:SphericalHinge ;
+    skos:prefLabel "Two hinges"@en .
+ex:SphericalHinge 
+    a ex:Screen ; 
+    ex:isolateParts ex:IsolatedDisplay ;
+    skos:prefLabel "Spherical hinge"@en .
+ex:IsolatedDisplay 
+    a ex:Screen ; 
+    skos:prefLabel "Isolated display"@en .
 
+ex:seperateParts
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Seperate parts"@en .
+ex:addCylindricalHinge
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Add a cylindrical hinge"@en .
+ex:addSphericalHinge
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Add spherical hinge"@en .
+ex:isolateParts
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Isolate parts"@en .
+
+# needs glueing together
 ### segmentation
 ## Many parts
 
 # Image compounded of moving elements
-ex:ImageOfMovingParts a ex:Screen ; skos:prefLabel "Image composed of moving parts"@en .
-ex:MovingCord a ex:Screen ; skos:prefLabel "Moving cord"@en .
-ex:SeveralMovingCords a ex:Screen ; skos:prefLabel "Several moving cords"@en .
+ex:ImageOfMovingParts 
+    a ex:Screen ; 
+    ex:addMovingCord ex:MovingCord ;
+    skos:prefLabel "Image composed of moving parts"@en .
+ex:MovingCord 
+    a ex:Screen ; 
+    ex:addMovingCord ex:SeveralMovingCords ;
+    skos:prefLabel "Moving cord"@en .
+ex:SeveralMovingCords 
+    a ex:Screen ; 
+    skos:prefLabel "Several moving cords"@en .
+
+ex:addMovingCord
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:MonoBiPolyPattern ;
+    skos:prefLabel "Add moving cord"@en .
 
 # Mono-bi-poly of colors of electronic paper
 
-ex:BlackWhiteElectronicPaper a ex:Screen ; skos:prefLabel "Black-and-white electronic paper"@en .
-ex:ColorElectronicPaper a ex:Screen ; skos:prefLabel "Color electronic paper"@en .
+ex:BlackWhiteElectronicPaper 
+    a ex:Screen ; 
+    skos:prefLabel "Black-and-white electronic paper"@en .
+ex:ColorElectronicPaper 
+    a ex:Screen ; 
+    skos:prefLabel "Color electronic paper"@en .
 
 # MATChEM for needle-type tactile display
 

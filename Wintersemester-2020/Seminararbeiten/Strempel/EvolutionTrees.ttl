@@ -406,7 +406,7 @@ tc:LineCurvedTwoDirections
 tc:ComplicatedLine
     od:subConceptOf tc:GeometricalEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Complicated line"@en, "KOmplexe Linie"@de .
+    skos:prefLabel "Complicated line"@en, "Komplexe Linie"@de .
 
 tc:Point
     od:subConceptOf tc:GeometricalEvolutionPattern ;
