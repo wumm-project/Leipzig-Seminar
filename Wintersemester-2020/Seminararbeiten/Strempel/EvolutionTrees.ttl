@@ -99,11 +99,6 @@ tc:BasicEvolutionPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "The main evolution patterns of technical objects"@en, "Die Basisevolutionsmuster technischer Objekte"@de .
 
-od:transitionsTo
-    a rdfs:Property ;
-    rdfs:domain tc:EvolutionTree ;
-    rdfs:range tc:EvolutionPattern .
-
 # MonoBiPoly
 tc:MonoBiPolyPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
@@ -117,22 +112,19 @@ tc:MonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Mono-system"@en, "Monosystem"@de ;
-    skos:example "One Spanner"@en, "Ein Schraubenschlüssel"@de ;
-    od:transitionsTo tc:Bisystem .
+    skos:example "One Spanner"@en, "Ein Schraubenschlüssel"@de .
 
 tc:BiSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Bi-system"@en, "Bisystem"@de ;
-    skos:example "Two Spanners"@en, "Zwei Schraubenschlüssel"@de ;
-    od:transitionsTo tc:PolySystem .
+    skos:example "Two Spanners"@en, "Zwei Schraubenschlüssel"@de .
 
 tc:PolySystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Poly-system"@en, "Polysystem"@de ;
-    skos:example "Multiple Spanners"@en, "Mehrere Schraubenschlüssel"@de ;
-    od:transitionsTo tc:NewMonosystem .
+    skos:example "Multiple Spanners"@en, "Mehrere Schraubenschlüssel"@de .
 
 tc:NewMonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
@@ -156,29 +148,29 @@ tc:InitialSystem
     skos:prefLabel "Initial system"@en, "Initiales System"@de .
 
 tc:RemovingSingleObject
-    od:subConceptOf tc:TrimmingPattern ;
+    od:subConceptOf tc:TrimmingPattern, tc:ExpandingTrimmingPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Removing a single object"@en, "Entfernen eines einzelnen Objektes"@de .
 
 tc:RemovingSeveralObjects
-    od:subConceptOf tc:TrimmingPattern ;
+    od:subConceptOf tc:TrimmingPattern, tc:ExpandingTrimmingPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Removing several object"@en, "Entfernen mehrerer Objekte"@de .
 
 tc:MaximallyTrimmedSystem
-    od:subConceptOf tc:TrimmingPattern ;
+    od:subConceptOf tc:TrimmingPattern, tc:ExpandingTrimmingPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Maximally trimmed system"@en, "Maximal getrimmtes System"@de .
 
 tc:IdealObject
-    od:subConceptOf tc:TrimmingPattern ;
+    od:subConceptOf tc:TrimmingPattern, tc:ExpandingTrimmingPattern, tc:SegmentationPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Ideal object"@en, "Ideales Object"@de .
 
 # ExpandingTrimming
 tc:ExpandingTrimmingPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
-    od:hasSubConcept tc:FunctionalNucleus, tc:IntroducingAdditionalObject, tc:IntroducingSeveralAdditionalObjects, tc:CompleteSystem ;
+    od:hasSubConcept tc:FunctionalNucleus, tc:IntroducingAdditionalObject, tc:IntroducingSeveralAdditionalObjects, tc:CompleteSystem , tc:InitialSystem, tc:RemovingSingleObject, tc:RemovingSeveralObjects, tc:MaximallyTrimmedSystem, tc:IdealObject;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Expanding - Trimming a System"@en, "Expandieren und Trimmen eines Systems"@de ;
     skos:example "car body"@en, "Auto"@de ;
@@ -208,13 +200,12 @@ tc:CompleteSystem
 
 tc:SegmentationPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
-    od:hasSubConcept tc:Monolith, tc:TwoParts, tc:ManyParts, tc:Granules, tc:Powder, tc:Paste, tc:Liquid, tc:Foam, tc:Fog, tc:Plasma, tc:Vacuum ;
+    od:hasSubConcept tc:Monolith, tc:TwoParts, tc:ManyParts, tc:Granules, tc:Powder, tc:Paste, tc:Liquid, tc:Foam, tc:Fog, tc:Gas, tc:Plasma, tc:Field, tc:Vacuum, tc:IdealObject ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
     skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de ;
     skos:broader odq:Segmentation, tc:TrendofTransitiontoMicrolevel .
 # Monolith, Two parts, Many parts, Granules, Powder, Paste, Liquid, Foam, Fog, Plasma, Field, Vacuum, Ideal object
-# Field?, Ideal object?
 
 tc:Monolith
     od:subConceptOf tc:SegmentationPattern ;
@@ -259,14 +250,23 @@ tc:Foam
 tc:Fog
     od:subConceptOf tc:SegmentationPattern ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Fog"@en, "Nebel"@de .
+    skos:prefLabel "Fog"@en, "Nebel"@de ;
+    skos:altLabel "Aerosol"@en, "Aerosol"@de .
+
+tc:Gas
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Gas"@en, "Gas"@de .
 
 tc:Plasma
     od:subConceptOf tc:SegmentationPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Plasma"@en, "Plasma"@de .
 
-# tc:Field
+tc:Field
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Field"@en, "Feld"@de .
 
 tc:Vacuum
     od:subConceptOf tc:SegmentationPattern ;

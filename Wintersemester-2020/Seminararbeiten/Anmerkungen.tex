@@ -11,7 +11,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{March 8,  2021}
+\date{March 15,  2021}
 
 \begin{document}
 \maketitle
@@ -311,7 +311,7 @@ distinguished.
 
 \subsection{The TOP concept of a system}
 
-A central concept in TOP modelling is the distinction between
+A central concept in TOP modelling is the distinction between the stages of 
 \begin{itemize}[noitemsep]
 \item [(1)] the system as it is,
 \item [(2)] the TRIZ model of the system as it is,
@@ -360,30 +360,30 @@ follows:
   change of the system («system as required»). The TRIZ model includes the
   basic components of inventive thinking: analysis, synthesis, evaluation.
 \end{itemize}
-This distinction, which is important for the planning and subsequent execution
-of the transformation of the system, is applied to all sub-concepts in the TOP
-modelling approach.  
+This distinction of modelling stages, which is important for the planning and
+subsequent execution of the transformation of the system, is applied to all
+sub-concepts in the TOP modelling approach.
 
 As already explained above, the difference between the «system as it is» (1)
 and the «TRIZ model of the system as it is» (2) cannot refer to the real-world
 system itself, since it is accessible to (verbal) transformations only via its
 description form and thus its modelling. At this point, a reference to the
 hill model is more likely to be assumed, in which, in the sense of \cite{TT},
-where one has to progress from the problem description and model (1) to the
-TRIZ task model (2), further to the TRIZ solution model (3) and finally to a
-description of the solution to be implemented in reality (4). (1) and (4)
-refer to the variety of domain-specific modellings and ontologies, which have
-little to do with TRIZ and a TRIZ ontology beyond the methodological
-dimension.  On the contrary, in the context of the transition $(1) \to (2)$,
-domain-specific approaches must be \emph{translated} into suitable TRIZ
-concepts.  The same applies to the retransition $(3) \to (4)$. Hence
-content-related TRIZ concepts concentrate on phases (2) and (3) and
-methodological TRIZ concepts on the transitions $(1) \to (2)$, $(2) \to (3)$
-and $(3) \to (4)$. Hence the transition $(1) \to (2)$ itself contains two
-steps -- a readjustment $(1) \to (1')$ of the domain-specific model to prepare
-it for application of TRIZ concepts and the application $(1') \to (2)$ of
-these concepts, as it is separated, e.g. in the TRIZ application concept of
-the TRIZ Trainer \cite{TT}. 
+where one has to progress from the problem description and model (1) -- rather
+than from the «system» -- to the TRIZ task model (2), further to the TRIZ
+solution model (3) and finally to a description of the solution to be
+implemented in reality (4). (1) and (4) refer to the variety of
+domain-specific modellings and ontologies, which have little to do with TRIZ
+and a TRIZ ontology beyond the methodological dimension.  On the contrary, in
+the context of the transition $(1) \to (2)$, domain-specific approaches must
+be \emph{translated} into suitable TRIZ concepts.  The same applies to the
+retransition $(3) \to (4)$. Hence content-related TRIZ concepts concentrate on
+phases (2) and (3) and methodological TRIZ concepts on the transitions $(1)
+\to (2)$, $(2) \to (3)$ and $(3) \to (4)$. Hence the transition $(1) \to (2)$
+itself contains two steps -- a readjustment $(1) \to (1')$ of the
+domain-specific model to prepare it for application of TRIZ concepts and the
+application $(1') \to (2)$ of these concepts, as it is separated, e.g. in the
+TRIZ application concept of the TRIZ Trainer \cite{TT}.
 
 \subsection{Modelling Systems and TRIZ Models}
 
@@ -399,13 +399,19 @@ distinction only becomes relevant at the level of modelling concrete systems,
 alone the verbal means for distinguishing these purposes must be provided at
 the ontology level. The WOP approach takes a different route here and models
 this connection not through subconcepts, but as a predicate
-\texttt{od:hasMode}.  This also makes it easy to extend the
+\texttt{od:belongsTo} with value from the \texttt{tc:StageValue} range
+\begin{quote}\tt
+  tc:System, tc:Model, tc:SystemAsIs, tc:SystemAsRequired,\\ tc:ModelAsIs,
+  tc:ModelAsRequired
+\end{quote}
+to assign to a concept \emph{instance} of a concrete modelling one of the
+modelling stages as discussed above.  This also makes it easy to extend the
 \texttt{rdfs:range} of this property if, for example, further system versions
 are to be included in the modelling of a special system in the context of an
 application of the system operator.
 
 This significantly reduces the number of concepts to be distinguished, which
-is also indicated by reasons of homogeneity, since the different versions of
+is also indicated by reasons of homogeneity, since the different stages of
 this system model must be structurally similar in order to be able to capture
 structural continuities within its development, and thus must be modelled by a
 single uniform concept.
@@ -414,7 +420,7 @@ For this purpose, the WOP approach distinguishes (at the moment) the concept
 categories \texttt{od:Component} for describing the \emph{structural}
 organisation of a system and its parts, and \texttt{od:PropertyDomain} for
 describing the structure of \emph{property domains} of a system and its
-parts.  Both are used as values of the preodicate \texttt{od:WOPCategory},
+parts.  Both are used as values of the predicate \texttt{od:WOPCategory},
 following a modelling approach of categories of V. Souchkov in his glossary. 
 
 \section{Typical modelling situations}
@@ -439,14 +445,14 @@ table).
 \emph{Example:}  Colour (red, green, yellow, blue).
 
 \begin{code}
-  ex:MeiersCar od:hasColour tc:green . \\[4pt]
+  ex:MeiersCar a ex:Car; od:hasColour tc:green . \\[4pt]
     
   od:hasColour a rdfs:Property;\\
-    \>rdfs:domain tc:Car;\\
+    \>rdfs:domain ex:Car;\\
     \>rdfs:range tc:Colour .\\[4pt]
 
   tc:Colour a skos:Concept, od:AdditionalConcept ;\\
-  \>skos:prefLabel {\dq}Color{\dq}@en, {\dq}Farbe{\dq}@de ;\\
+  \>skos:prefLabel {\dq}Colour{\dq}@en, {\dq}Farbe{\dq}@de ;\\
   \>od:WOPCategory od:PropertyDomain ;\\
   \>od:allowedValues tc:red, tc:green, tc:yellow, tc:blue .\\[4pt]
 
