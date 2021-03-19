@@ -347,14 +347,15 @@ od:applyChanges
     rdfs:domain tc:FlowTransformation ;
     rdfs:range tc:Flow .
 
+tc:Context
+    od:hasSubConcept tc:Goal, tc:Requirement ;
+    skos:prefLabel "context"@en, "Kontext"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
 tc:Goal
     od:subConceptOf tc:Context ;
     skos:prefLabel "goals"@en, "Ziele"@de ;
     od:EckardtDefinition "descriptive and perfomative frame of the flow analysis" ;
-    a skos:Concept, od:AdditionalConcept .
-
-tc:Context
-    skos:prefLabel "context"@en, "Kontext"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:Requirement
@@ -381,22 +382,22 @@ tc:ReduceParasiticFlow
 od:applyRulesofConstruction
     a rdfs:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:FlowModelAsIs .
+    rdfs:range tc:ModelAsIs .
 
 od:applyRulesofEvaluation
     a rdfs:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:FlowModelAsIs .
+    rdfs:range tc:ModelAsIs .
 
 od:applyRulesofConstructionOfInconformRequirements
     a rdfs:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:FlowModelAsShouldBe .
+    rdfs:range tc:ModelAsRequired .
 
 od:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems
     a rdfs:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:FlowModelAsShouldBe .
+    rdfs:range tc:ModelAsRequired .
 
 od:detects
     a rdfs:Property ;
@@ -409,12 +410,12 @@ tc:RulesOfFlowAnalysis
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstruction
-    od:forms tc:FlowModelAsIs ;
+    od:forms tc:ModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfEvaluation
-    od:issuedAt tc:FlowModelAsIs ;
+    od:issuedAt tc:ModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     a skos:Concept, od:AdditionalConcept .
 
@@ -428,24 +429,9 @@ tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems
 
 ## Techniques of modification
 
-# od:improves
-#    a rdfs:Property ;
-#    rdfs:domain tc:FlowModelAsShouldBe ;
-#    rdfs:range tc:StaticFlowComponent .
-#
-# od:setsup
-#    a rdfs:Property ;
-#    rdfs:domain  ;
-#    rdfs:range  .
-#
-# od:removes
-#    a rdfs:Property ;
-#    rdfs:domain tc:FlowModelAsShouldBe ;
-#    rdfs:range tc:FlowDisadvantage .
-
 tc:TechniquesOfModification
-    od:issuedAt tc:FlowModelAsIs ;
-    od:forms tc:FlowModelAsShouldBe ;
+    od:issuedAt tc:ModelAsIs ;
+    od:forms tc:ModelAsRequired ;
     od:hasSubConcept tc:ModificationOfReceiver, tc:ModificationOfSource, tc:ModificationOfChannel, tc:ModificationOfControlUnit ;
     a skos:Concept, od:AdditionalConcept .
 
