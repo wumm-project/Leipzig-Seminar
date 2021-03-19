@@ -11,7 +11,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{March 15,  2021}
+\date{March 19,  2021}
 
 \begin{document}
 \maketitle
@@ -503,6 +503,50 @@ tc:Pump\\
     \>a skos:Concept, od:AdditionalConcept .
 \end{code}
 
+\subsection{Classification of transformations}
+
+The concept of \emph{transformation} is one of the central TRIZ concepts and
+means that a real-world system or parts of it is transformed from a «system as
+it is» into a «system as required» according to predefined principles oriented
+at an \emph{ideal end result} (IER). As explained above in more detail, the
+expected outcome of the planned transformation (of the «system as required»)
+is to be distinguished from the real outcome of the execution of the
+transformation (of the «system as it became»), which gives rise to the
+execution of further transformations, iterative transformation approaches and
+more elaborated transformation concepts such as versions of system
+generations.  The concept of transfomation is central to such further
+elaborations, which, however, are beyond the scope of our current ontological
+modelling.
+
+A transformation is associated with a change of state of the system under
+investigation and thus occurs at level 1 -- the modelling of the real-world
+system -- as an RDF predicate. The transformation pattern applied here are
+concepts on level 2 of the modelling -- the ontological modelling -- and
+describe the RDF predicate more precisely. In this ontology modelling, the RDF
+predicate appears as RDF subject to which the corresponding transformation
+patterns are assigned.
+
+This is demonstrated by an example from \cite[Fig. 4.20]{Koltze2017}, in which
+the evolutionary lines of boats are described.  Here the transformation from a
+tree trunk to a row boat is explained. 
+\begin{code}
+  ex:TreeTrunk ex:addPaddles ex:Rowboat .\\[4pt]
+
+  ex:addPaddles a rdf:Property, skos:Concept;\\
+  \>od:usesPattern tc:NewPrinciplePattern,
+  tc:IncreasingControllabilityPattern;  \\
+  \> skos:note {\dq}{\dq}{\dq}The non-controllable floating tree trunk on the
+  river is \\\>\>provided with oars with which the boat can be propelled by
+  muscle power \\\>\> and also steered{\dq}{\dq}{\dq}@en .
+\end{code}
+The RDF statements are part of a (level 1) description of the real world
+evolution process of boats and use (in the second sentence) the (level 2) TRIZ
+development pattern \texttt{tc:NewPrinciplePattern} and
+\texttt{tc:IncreasingControllabilityPattern} that are bound to the level 1
+predicate \texttt{ex:addPaddles} (being a concept not of TRIZ but of the
+special evolution process) by the level 3 predicate \texttt{od:usesPattern} (a
+concept of TRIZ methodology).
+
 \begin{thebibliography}{xxx}
   \raggedright
 \bibitem{GSA} Altshuller Web Site. Basic TRIZ terms.
@@ -514,12 +558,19 @@ tc:Pump\\
   Proceedings of the TRIZ Future Conference 2020, p. 399-410.  An enlarged
   German version is available as
   \url{http://dx.doi.org/10.14625/graebe_20200519}. 
+\bibitem{Koltze2017} Karl Koltze, Valeri Souchkov (2017).  Systematische
+  Innovationsmethoden (in German).  Hanser, Munich. ISBN 978-3-446-45127-8.
 \bibitem{TOP2019} Andrej Kuryan, Valeri Souchkov, Dmitri Kucharavy. Towards
   ontology of TRIZ. Proceedings of TRIZ Developers Summit 2019 Conference,
   Minsk, 2019.  \url{https://wumm-project.github.io/Ontology.html}
 \bibitem{TOP2020} Andrej Kuryan, Michail Rubin, Nikolaj Shchedrin, Olga
   Eckardt, Natalja Rubina.  TRIZ Ontology. Current State and Perspectives. TDS
   2020 (in Russian).  \url{https://wumm-project.github.io/Ontology.html}
+\bibitem{TBK2007} Simon Litvin, Vladimir Petrov, Michail Rubin (2007). TRIZ
+  Body of Knowledge. \\ \url{https://triz-summit.ru/en/203941}.
+\bibitem{TBK2012} Simon Litvin, Vladimir Petrov, Michail Rubin, Victor Fey
+  (2012). TRIZ Body of
+  Knowledge. \\ \url{https://matriz.org/wp-content/uploads/2012/07/TRIZ-Body-of-Knowledge-final.pdf}
 \bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
   \url{https://www.w3.org/TR/skos-reference/}.  
 \bibitem{SKOS-Primer} SKOS Simple Knowledge Organization System Primer.
@@ -527,11 +578,6 @@ tc:Pump\\
 \bibitem{Souchkov2018} Valeri Souchkov. Glossary of TRIZ and TRIZ-related
   terms, version 1.2.  The International TRIZ Association, MATRIZ
   2018.\\ \url{https://matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}
-\bibitem{TBK2007} Simon Litvin, Vladimir Petrov, Michail Rubin (2007). TRIZ
-  Body of Knowledge. \\ \url{https://triz-summit.ru/en/203941}.
-\bibitem{TBK2012} Simon Litvin, Vladimir Petrov, Michail Rubin, Victor Fey
-  (2012). TRIZ Body of
-  Knowledge. \\ \url{https://matriz.org/wp-content/uploads/2012/07/TRIZ-Body-of-Knowledge-final.pdf}
 \bibitem{TT} Nikolai Shpakovski et al. The TRIZ Trainer.
   \url{https://triztrainer.ru}, \url{https://triz-trainer.com},
 \bibitem{TOP-Glossary} TRIZ 100 Glossary. A short glossary of key TRIZ
