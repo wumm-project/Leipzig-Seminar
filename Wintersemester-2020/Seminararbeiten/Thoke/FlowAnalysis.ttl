@@ -235,13 +235,14 @@ tc:Source
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Source"@en, "Quelle"@de .
 
-tc:EnergySource
+tc:Current
     od:subConceptOf tc:Source ;
     od:WOPCategory od:Component ; 
-    a skos:Concept, od:SouchkovGlossaryEntry ;
-    skos:prefLabel "Energy source"@en, "Energiequelle"@de .
+    a skos:Concept, od:AdditionalConcept ;
+    skos:related tc:EnergySource ;
+    skos:prefLabel "source of the current"@en, "Stromquelle"@de .
 
-tc:SourceOfPotential
+tc:Potential
     od:subConceptOf tc:Source, od:Component ;
     od:WOPCategory od:Component ; 
     a skos:Concept, od:AdditionalConcept ;
