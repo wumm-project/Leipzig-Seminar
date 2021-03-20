@@ -119,6 +119,9 @@ ex:Screen
 ex:transitionsTo 
     a rdf:Property, skos:Concept ;
     skos:prefLabel "Transition without changing the object"@en .
+ex:segmentation
+    a rdf:Property, skos:Concept ;
+    skos:prefLabel "Segment the object"@en .
 
 # Mono-bi-poly of image
 ex:OneImage 
@@ -467,6 +470,7 @@ ex:FlatDisplay
     ex:addRadioScanner ex:DisplayAndRadioScanner ;
     ex:addMicroJalousie ex:MicroJalousie ;
     ex:transitionsTo ex:OneDisplay, ex:ImmovableDisplay ;
+    ex:segmentation ex:ManyPartsDisplay ;
     skos:prefLabel "Flat display - Trimmed CRT"@en .
 
 ex:decreaseDisplayThickness
@@ -601,7 +605,7 @@ ex:addLightSource
 # Geometrical evolution of the linear display
 ex:CurvedLinearDisplay 
     a ex:Screen ; 
-    ex:curveDisplay ex:ComplexShapeLinearDisplay
+    ex:curveDisplay ex:ComplexShapeLinearDisplay ;
     skos:prefLabel "Curved linear display"@en .
 ex:ComplexShapeLinearDisplay 
     a ex:Screen ; 
@@ -756,15 +760,15 @@ ex:addMicroJalousie
 ex:addNonReflectingLayer
     a rdf:Property, skos:Concept ;
     od:usesPattern ex:SurfacePropertyEvolutionPattern ;
-    skos:prefLabel "Add non-reflexting layer"@en ;
+    skos:prefLabel "Add non-reflexting layer"@en .
 ex:addAugmentedReality
     a rdf:Property, skos:Concept ;
     od:usesPattern ex:SurfacePropertyEvolutionPattern ;
-    skos:prefLabel "Add augmented reality"@en ;
+    skos:prefLabel "Add augmented reality"@en .
 ex:addPolarizationFilter
     a rdf:Property, skos:Concept ;
     od:usesPattern ex:SurfacePropertyEvolutionPattern ;
-    skos:prefLabel "Add polarization filter for privacy protection"@en ;
+    skos:prefLabel "Add polarization filter for privacy protection"@en .
 
 # Mono-bi-poly of mobile phone displays
 
@@ -838,6 +842,13 @@ ex:isolateParts
 
 # needs glueing together
 ### segmentation
+
+ex:ManyPartsDisplay
+    a ex:Screen ;
+    ex:transitionsTo ex:ImageOfMovingParts, ex:BlackWhiteElectronicPaper, ex:NeedleDisplay ;
+    ex:segmentation ex:SandDisplay ;
+    skos:prefLabel "Many parts display"@en .
+
 ## Many parts
 
 # Image compounded of moving elements
@@ -884,9 +895,18 @@ ex:MagneticGuide a ex:Screen ; skos:prefLabel "Magnetic Guide"@en .
 
 # Sand
 
-ex:SandDisplay a ex:Screen ; skos:prefLabel "Sand display"@en .
+ex:SandDisplay 
+    a ex:Screen ;
+    ex:segmentation ex:LiquidDisplay ; 
+    skos:prefLabel "Sand display"@en .
 
 ## Liquid
+
+ex:LiquidDisplay
+    a ex:Screen ;
+    ex:transitionsTo ex:LiquidBalls, ex:ElectronicInk ;
+    ex:segmentation ex:FoamDisplay ;
+    skos:prefLabel "Liquid display"@en .
 
 # Dynamization of the liquid display
 
@@ -918,7 +938,7 @@ ex:useElectroWettingEffect
 ex:useMagneticFieldAndFerrofluid
     a rdf:Property, skos:Concept ;
     od:usesPattern tc:DynamizationPattern ;
-    skos:prefLabel "Use a magnetic field and ferrofluid"@en 
+    skos:prefLabel "Use a magnetic field and ferrofluid"@en .
 ex:useRainbowEffect
     a rdf:Property, skos:Concept ;
     od:usesPattern tc:DynamizationPattern ;
@@ -960,6 +980,12 @@ ex:useDiode
 
 ## Foam
 
+ex:FoamDisplay
+    a ex:Screen ;
+    ex:transitionsTo ex:BubbleScreen ;
+    ex:segmentation ex:AerosolDisplay ;
+    skos:prefLabel "Foam display"@en .
+
 # Segmentation of the bubble display control elements
 
 ex:BubbleScreen 
@@ -993,6 +1019,12 @@ ex:addElectromagnet
 
 ## Aerosol
 
+ex:AerosolDisplay
+    a ex:Screen ;
+    ex:transitionsTo ex:FogScreen ;
+    ex:segmentation ex:GasDisplay ;
+    skos:prefLabel "Aerosol display"@en .
+
 # Geometrical evolution of the foggy screen
 
 ex:FogScreen 
@@ -1010,13 +1042,19 @@ ex:LaserShow
 ex:useClouds
     a rdf:Property, skos:Concept ;
     od:usesPattern tc:GeometricalEvolutionPattern ;
-    skos:prefLabel "Use Clouds" ;
+    skos:prefLabel "Use Clouds"@en .
 ex:useLaser
     a rdf:Property, skos:Concept ;
     od:usesPattern tc:GeometricalEvolutionPattern ;
-    skos:prefLabel "Use Laser" ;
+    skos:prefLabel "Use Laser"@en .
 
 ## Gas
+
+ex:GasDisplay
+    a ex:Screen ;
+    ex:transitionsTo ex:AircraftTrail ;
+    ex:segmentation ex:PlasmaDisplay ;
+    skos:prefLabel "Gas display"@en .
 
 # Image activation in a gas medium
 
@@ -1051,6 +1089,12 @@ ex:projectImagineInAir
 
 ## Plasma
 
+ex:PlasmaDisplay
+    a ex:Screen ;
+    ex:transitionsTo ex:PDP ;
+    ex:segmentation ex:FieldDisplay ;
+    skos:prefLabel "Plasma display"@en .
+
 # Combining a plasma panel with a different type of display
 
 ex:PDP 
@@ -1084,6 +1128,12 @@ ex:useNanopowderInsideCell
 
 ## Field
 
+ex:FieldDisplay 
+    a ex:Screen ;
+    ex:transitionsTo ex:ShadowPlay, ex:LEP ;
+    ex:segmentation ex:IdealDisplay ;
+    skos:prefLabel "Field display" .
+
 # Trimming a light image
 ex:ShadowPlay 
     a ex:Screen ;
@@ -1109,7 +1159,7 @@ ex:LEP
     skos:prefLabel "LEP"@en .
 ex:OLED 
     a ex:Screen ; 
-    ex:trimLightEmittingElements edx:OLED ;
+    ex:trimLightEmittingElements ex:OLED ;
     skos:prefLabel "OLED"@en .
 ex:Iridigm 
     a ex:Screen ; 
@@ -1121,6 +1171,11 @@ ex:trimLightEmittingElements
     skos:prefLabel "Trimming of light-emitting elements"@en .
 
 ## Ideal object
+
+ex:IdealDisplay
+    a ex:Screen ;
+    ex:transitionsTo ex:MiniDisplay ;
+    skos:prefLabel "The ideal display" .
 
 # Trimming the display to the ideal
 
