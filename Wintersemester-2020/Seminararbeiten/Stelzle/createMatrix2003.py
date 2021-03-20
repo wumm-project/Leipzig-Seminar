@@ -76,20 +76,20 @@ def build_matrix_ttl(matrix: list, principle_lookup: dict, parameter_lookup: dic
     for row in range(0, len(matrix)):
 
         parameter_row = row + 1
-        increasing_parameter = "od:increasingParameter odr:" + parameter_lookup[str(parameter_row)] + " ;"
+        increasing_parameter = "od:increasingParameter tc:" + parameter_lookup[str(parameter_row)] + " ;"
         for column in range(0, len(matrix[row])):
             ttl_entry = ""
             parameter_column = column + 1
-            decreasing_parameter = "od:decreasingParameter odr:" + parameter_lookup[str(parameter_column)] + " ;"
+            decreasing_parameter = "od:decreasingParameter tc:" + parameter_lookup[str(parameter_column)] + " ;"
             recommended_principles = "od:recommendedPrinciple "
             splitted_principle = matrix[row][column].split('-')
             for principle in range(0, len(splitted_principle)):
                 if splitted_principle[principle] == '':
-                    recommended_principles += "odq:NoPrinciple"
+                    recommended_principles += "tc:NoPrinciple"
                 elif principle == len(splitted_principle) - 1:
-                    recommended_principles += "odq:" + principle_lookup[splitted_principle[principle]]
+                    recommended_principles += "tc:" + principle_lookup[splitted_principle[principle]]
                 else:
-                    recommended_principles += "odq:" + principle_lookup[splitted_principle[principle]] + ", "
+                    recommended_principles += "tc:" + principle_lookup[splitted_principle[principle]] + ", "
             recommended_principles += " ;"
 
             ttl_entry += entry_prefix + "." + prefix_zero(parameter_row) + "." + prefix_zero(
