@@ -862,12 +862,14 @@ ex:addMovingCord
 
 ex:BlackWhiteElectronicPaper 
     a ex:Screen ; 
+    ex:increaseColorDepth ex:ColorElectronicPaper ;
     skos:prefLabel "Black-and-white electronic paper"@en .
 ex:ColorElectronicPaper 
     a ex:Screen ; 
     skos:prefLabel "Color electronic paper"@en .
 
 # MATChEM for needle-type tactile display
+# Mechanical, acoustic, thermal, chemical, electric, magnetic field
 
 ex:NeedleDisplay a ex:Screen ; skos:prefLabel "Needle display"@en .
 ex:NeedleDisplayWithLocalSound a ex:Screen ; skos:prefLabel "Needle display with local sound"@en .
@@ -876,83 +878,269 @@ ex:DisplayWithOdor a ex:Screen ; skos:prefLabel "Display with odor"@en .
 ex:ColorDisplayWithActiveBasRelief a ex:Screen ; skos:prefLabel "Color display with active bas-relief"@en .
 ex:MagneticGuide a ex:Screen ; skos:prefLabel "Magnetic Guide"@en .
 
+# ex:MATChEMPattern
+
 ## Sand
 
 # Sand
+
 ex:SandDisplay a ex:Screen ; skos:prefLabel "Sand display"@en .
 
 ## Liquid
 
 # Dynamization of the liquid display
 
-ex:LiquidBalls a ex:Screen ; skos:prefLabel "Liquid balls"@en .
-ex:ElectrowettingEffect a ex:Screen ; skos:prefLabel "Electrowetting effect"@en .
-ex:Ferrofluid a ex:Screen ; skos:prefLabel "Ferrofluid"@en .
-ex:RainbowEffectLiquid a ex:Screen ; skos:prefLabel "Rainbow effect liquid"@en .
+# ex:useLiquidWithHighSurfaceTension
+ex:LiquidBalls 
+    a ex:Screen ; 
+    ex:useLiquidWithHighSurfaceTension ex:ElectrowettingEffect ;
+    skos:prefLabel "Liquid balls"@en .
+ex:ElectrowettingEffect 
+    a ex:Screen ; 
+    ex:useMagneticFieldAndFerrofluid ex:Ferrofluid ;
+    skos:prefLabel "Electrowetting effect"@en .
+ex:Ferrofluid 
+    a ex:Screen ; 
+    ex:useRainbowEffect ex:RainbowEffectLiquid ;
+    skos:prefLabel "Ferrofluid"@en .
+ex:RainbowEffectLiquid 
+    a ex:Screen ; 
+    skos:prefLabel "Rainbow effect liquid"@en .
+
+ex:useLiquidWithHighSurfaceTension
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Use a liquid with high surface tension to form balls of different sizes"@en .
+ex:useElectroWettingEffect
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Use the electro wetting effect"@en .
+ex:useMagneticFieldAndFerrofluid
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Use a magnetic field and ferrofluid"@en 
+ex:useRainbowEffect
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:DynamizationPattern ;
+    skos:prefLabel "Use the rainbow effect"@en .
 
 # Segmentation of image-producing elements
 
-ex:ElectronicInk a ex:Screen ; skos:prefLabel "Electronic ink"@en .
-ex:LiquidCrystalDisplay a ex:Screen ; skos:prefLabel "Liquid crystal display"@en .
+ex:ElectronicInk 
+    a ex:Screen ; 
+    ex:segmentationOfImageProducingElements ex:LiquidCrystalDisplay ;
+    skos:prefLabel "Electronic ink"@en .
+ex:LiquidCrystalDisplay 
+    a ex:Screen ; 
+    skos:prefLabel "Liquid crystal display"@en .
+
+ex:segmentationOfImageProducingElements
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern ;
+    skos:prefLabel "Segmentation of image-producing elements"@en .
 
 # Segmentation of the distributed light source
 
-ex:ContinuousLightSource a ex:Screen ; skos:prefLabel "Continuous light source"@en .
-ex:SingularLightEmittingDiodes a ex:Screen ; skos:prefLabel "Singular light emitting diodes"@en .
-ex:OnePixelOneDiode a ex:Screen ; skos:prefLabel "One pixel - one diode"@en .
+ex:ContinuousLightSource 
+    a ex:Screen ; 
+    ex:useDiode ex:SingularLightEmittingDiodes ;
+    skos:prefLabel "Continuous light source"@en .
+ex:SingularLightEmittingDiodes 
+    a ex:Screen ; 
+    ex:useDiode ex:OnePixelOneDiode ;
+    skos:prefLabel "Singular light emitting diodes"@en .
+ex:OnePixelOneDiode 
+    a ex:Screen ; 
+    skos:prefLabel "One pixel - one diode"@en .
+
+ex:useDiode
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern ;
+    skos:prefLabel "Use diode as a singular light emitter"@en .
 
 ## Foam
 
 # Segmentation of the bubble display control elements
 
-ex:BubbleScreen a ex:Screen ; skos:prefLabel "Bubble screen"@en .
-ex:UpperAndLowerElectromagnets a ex:Screen ; skos:prefLabel "Add upper and lower electromagnets"@en .
-ex:SideElectromagnets a ex:Screen ; skos:prefLabel "Add side electromagnets"@en .
-ex:BackElectromagnet a ex:Screen ; skos:prefLabel "Add back electromagnet"@en .
-ex:PartiallySegmentedElectromagnets a ex:Screen ; skos:prefLabel "Partially segmented electromagnets"@en .
-ex:SegmentedElectromagnets a ex:Screen ; skos:prefLabel "Segmented electromagnets"@en .
+ex:BubbleScreen 
+    a ex:Screen ; 
+    ex:addElectromagnet ex:UpperAndLowerElectromagnets ;
+    skos:prefLabel "Bubble screen"@en .
+ex:UpperAndLowerElectromagnets 
+    a ex:Screen ; 
+    ex:addElectromagnet ex:SideElectromagnets ;
+    skos:prefLabel "Add upper and lower electromagnets"@en .
+ex:SideElectromagnets 
+    a ex:Screen ; 
+    ex:addElectromagnet ex:BackElectromagnet ;
+    skos:prefLabel "Add side electromagnets"@en .
+ex:BackElectromagnet 
+    a ex:Screen ; 
+    ex:addElectromagnet ex:PartiallySegmentedElectromagnets ;
+    skos:prefLabel "Add back electromagnet"@en .
+ex:PartiallySegmentedElectromagnets 
+    a ex:Screen ; 
+    ex:addElectromagnet ex:SegmentedElectromagnets ;
+    skos:prefLabel "Partially segmented electromagnets"@en .
+ex:SegmentedElectromagnets 
+    a ex:Screen ; 
+    skos:prefLabel "Segmented electromagnets"@en .
+
+ex:addElectromagnet
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern ;
+    skos:prefLabel "Add am electromagnet"@en .
 
 ## Aerosol
 
 # Geometrical evolution of the foggy screen
 
-ex:FogScreen a ex:Screen ; skos:prefLabel "Fog screen"@en .
-ex:CloudyScreen a ex:Screen ; skos:prefLabel "Cloudy screen"@en .
-ex:LaserShow a ex:Screen ; skos:prefLabel "Laser show"@en .
+ex:FogScreen 
+    a ex:Screen ;
+    ex:useClouds ex:CloudyScreen ; 
+    skos:prefLabel "Fog screen"@en .
+ex:CloudyScreen 
+    a ex:Screen ;
+    ex:useLaser ex:LaserShow ; 
+    skos:prefLabel "Cloudy screen"@en .
+ex:LaserShow 
+    a ex:Screen ; 
+    skos:prefLabel "Laser show"@en .
+
+ex:useClouds
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:GeometricalEvolutionPattern ;
+    skos:prefLabel "Use Clouds" ;
+ex:useLaser
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:GeometricalEvolutionPattern ;
+    skos:prefLabel "Use Laser" ;
 
 ## Gas
 
 # Image activation in a gas medium
 
-ex:AircraftTrail a ex:Screen ; skos:prefLabel "Aircraft trail"@en .
-ex:Firework a ex:Screen ; skos:prefLabel "Firework"@en .
-ex:ImageInTheAir a ex:Screen ; skos:prefLabel "Image in the air"@en .
+ex:AircraftTrail 
+    a ex:Screen ; 
+    ex:useFirework ex:Firework ;
+    skos:prefLabel "Aircraft trail"@en .
+ex:Firework 
+    a ex:Screen ;
+    ex:projectImagineInAir ex:ImageInTheAir ;
+    skos:prefLabel "Firework"@en .
+ex:ImageInTheAir 
+    a ex:Screen ; 
+    skos:prefLabel "Image in the air"@en .
+
+ex:ImageActivationInGasMedium
+    a tc:SpecificEvolutionPattern ;
+    skos:prefLabel "Specific evolution pattern of image activation in a gas medium" .
+
+ex:useContrails
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:ImageActivationInGasMedium ;
+    skos:prefLabel "Use contrails"@en .
+ex:useFirework
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:ImageActivationInGasMedium ;
+    skos:prefLabel "Use firework"@en .
+ex:projectImagineInAir
+    a rdf:Property, skos:Concept ;
+    od:usesPattern ex:ImageActivationInGasMedium ;
+    skos:prefLabel "Project image into the air"@en .
 
 ## Plasma
 
 # Combining a plasma panel with a different type of display
 
-ex:PDP a ex:Screen ; skos:prefLabel "PDP"@en .
-ex:PlasmaPanelWithFilter a ex:Screen ; skos:prefLabel "Plasma panel with LC-filter"@en .
-ex:CommonElectrodes a ex:Screen ; skos:prefLabel "Common electrodes"@en .
-ex:NanopowderInsideCell a ex:Screen ; skos:prefLabel "Nanopowder inside cell"@en .
+ex:PDP 
+    a ex:Screen ; 
+    ex:addLightFilter ex:PlasmaPanelWithFilter ;
+    skos:prefLabel "PDP"@en .
+ex:PlasmaPanelWithFilter 
+    a ex:Screen ; 
+    ex:useCommonElectrodes ex:CommonElectrodes ;
+    skos:prefLabel "Plasma panel with LC-filter"@en .
+ex:CommonElectrodes 
+    a ex:Screen ; 
+    ex:useNanopowderInsideCell ex:NanopowderInsideCell ;
+    skos:prefLabel "Common electrodes"@en .
+ex:NanopowderInsideCell 
+    a ex:Screen ; 
+    skos:prefLabel "Nanopowder inside cell"@en .
+
+ex:addLightFilter
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add a light filter"@en .
+ex:useCommonElectrodes
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Use common electrodes"@en .
+ex:useNanopowderInsideCell
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Use nanopowder inside the cell"@en .
 
 ## Field
 
 # Trimming a light image
-ex:ShadowPlay a ex:Screen ; skos:prefLabel "Shadow play"@en .
-ex:Miniprojector a ex:Screen ; skos:prefLabel "Miniprojector"@en .
-ex:ProjectionTVSet a ex:Screen ; skos:prefLabel "Projection TV set"@en .
+ex:ShadowPlay 
+    a ex:Screen ;
+    ex:trimLightImage ex:Miniprojector ;
+    skos:prefLabel "Shadow play"@en .
+ex:Miniprojector 
+    a ex:Screen ;
+    ex:trimLightImage ex:ProjectionTVSet ; 
+    skos:prefLabel "Miniprojector"@en .
+ex:ProjectionTVSet 
+    a ex:Screen ; 
+    skos:prefLabel "Projection TV set"@en .
 
-ex:LEP a ex:Screen ; skos:prefLabel "LEP"@en .
-ex:OLED a ex:Screen ; skos:prefLabel "OLED"@en .
-ex:Iridigm a ex:Screen ; skos:prefLabel "Iridigm"@en .
+ex:trimLightImage
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:TrimmingPattern ;
+    skos:prefLabel "Trimming a light image"@en .
+
+# Trimming of light-emitting elements
+ex:LEP 
+    a ex:Screen ; 
+    ex:trimLightEmittingElements ex:OLED ;
+    skos:prefLabel "LEP"@en .
+ex:OLED 
+    a ex:Screen ; 
+    ex:trimLightEmittingElements edx:OLED ;
+    skos:prefLabel "OLED"@en .
+ex:Iridigm 
+    a ex:Screen ; 
+    skos:prefLabel "Iridigm"@en .
+
+ex:trimLightEmittingElements
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:TrimmingPattern ;
+    skos:prefLabel "Trimming of light-emitting elements"@en .
 
 ## Ideal object
 
 # Trimming the display to the ideal
 
-ex:MiniDisplay a ex:Screen ; skos:prefLabel "Mini display"@en .
-ex:EyeGlassesDisplay a ex:Screen ; skos:prefLabel "Eye glasses display"@en . 
-ex:ProjectorOntoRetina a ex:Screen ; skos:prefLabel "Projector onto retina"@en .
-ex:GeneratingImageInConsciousness a ex:Screen ; skos:prefLabel "Generating image in our consciousness"@en .
+ex:MiniDisplay 
+    a ex:Screen ; 
+    ex:trimDisplayToIdealObject ex:EyeGlassesDisplay ;
+    skos:prefLabel "Mini display"@en .
+ex:EyeGlassesDisplay 
+    a ex:Screen ; 
+    ex:trimDisplayToIdealObject ex:ProjectorOntoRetina ;
+    skos:prefLabel "Eye glasses display"@en . 
+ex:ProjectorOntoRetina 
+    a ex:Screen ; 
+    ex:trimDisplayToIdealObject ex:GeneratingImageInConsciousness ;
+    skos:prefLabel "Projector onto the retina"@en .
+ex:GeneratingImageInConsciousness 
+    a ex:Screen ; 
+    skos:prefLabel "Generating image in our consciousness - Ideal Display"@en .
+
+ex:trimDisplayToIdealObject
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:TrimmingPattern ;
+    skos:prefLabel "Trimming the display to the ideal"@en .
