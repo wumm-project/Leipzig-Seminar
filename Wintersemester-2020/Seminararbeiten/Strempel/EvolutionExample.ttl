@@ -19,6 +19,7 @@
 
 ex:Boat
     a tc:SpecificEvolutionTree ;
+    ex:transitionsTo ex:TreeTrunk ;
     skos:prefLabel "Boat"@en, "Boot"@de ;
     skos:definition "Specific evolution tree of the power source of the ships propulsion"@en .
 
