@@ -883,14 +883,34 @@ ex:ColorElectronicPaper
 # MATChEM for needle-type tactile display
 # Mechanical, acoustic, thermal, chemical, electric, magnetic field
 
-ex:NeedleDisplay a ex:Screen ; skos:prefLabel "Needle display"@en .
-ex:NeedleDisplayWithLocalSound a ex:Screen ; skos:prefLabel "Needle display with local sound"@en .
-ex:ColorDisplayForBlind a ex:Screen ; skos:prefLabel "<Color> display for the blind"@en .
-ex:DisplayWithOdor a ex:Screen ; skos:prefLabel "Display with odor"@en .
-ex:ColorDisplayWithActiveBasRelief a ex:Screen ; skos:prefLabel "Color display with active bas-relief"@en .
-ex:MagneticGuide a ex:Screen ; skos:prefLabel "Magnetic Guide"@en .
+ex:NeedleDisplay 
+    a ex:Screen ;
+    ex:useMATChEMOperator ex:NeedleDisplayWithLocalSound ;
+    skos:prefLabel "Needle display"@en .
+ex:NeedleDisplayWithLocalSound 
+    a ex:Screen ; 
+    ex:useMATChEMOperator ex:ColorDisplayForBlind ;
+    skos:prefLabel "Needle display with local sound"@en .
+ex:ColorDisplayForBlind 
+    a ex:Screen ; 
+    ex:useMATChEMOperator ex:DisplayWithOdor ;
+    skos:prefLabel "<Color> display for the blind"@en .
+ex:DisplayWithOdor 
+    a ex:Screen ; 
+    ex:useMATChEMOperator ex:ColorDisplayWithActiveBasRelief ;
+    skos:prefLabel "Display with odor"@en .
+ex:ColorDisplayWithActiveBasRelief 
+    a ex:Screen ; 
+    ex:useMATChEMOperator ex:MagneticGuide ;
+    skos:prefLabel "Color display with active bas-relief"@en .
+ex:MagneticGuide 
+    a ex:Screen ; 
+    skos:prefLabel "Magnetic Guide"@en .
 
-# ex:MATChEMPattern
+ex:useMATChEMOperator
+    a rdf:Property, skos:Concept ;
+    skos:prefLabel "Use MATChEM (field introduction) operator"@en ;
+    skos:definition "Transformation via field type: Mechanical - Acoustic - Thermal - Chemical - Electric - Magnetic"@en .
 
 ## Sand
 
