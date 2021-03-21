@@ -366,15 +366,18 @@ tc:Requirement
 
 tc:IncreaseUsefulFlow
     od:subConceptOf tc:Requirement ;
+    skos:prefLabel "increase useful flow"@en, "nützlichen Fluss verbessern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:ReduceHarmfulFlow
     od:subConceptOf tc:Requirement ;
     od:hasSubConcept tc:ReduceParasiticFlow ;
+    skos:prefLabel "reduce harmful flow"@en, "schädlichen Fluss reduzieren"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:ReduceParasiticFlow
     od:subConceptOf tc:ReduceHarmfulFlow, tc:Requirement ;
+    skos:prefLabel "reduce parasitic flow"@en, "parasitären Fluss reduzieren"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ##Rules of Flow Analysis
@@ -407,24 +410,29 @@ od:detects
 tc:RulesOfFlowAnalysis
     a skos:Concept, od:AdditionalConcept ;
     od:hasSubConcept tc:RulesOfEvaluation, tc:RulesOfConstruction, tc:RulesOfConstructionOfInconformRequirements, tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems ;
+    skos:prefLabel "rules of flow analysis"@en, "Regeln der Flussanalyse"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstruction
     od:forms tc:ModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
+    skos:prefLabel "rules of construction"@en, "Modellbauregeln"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfEvaluation
     od:issuedAt tc:ModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
+    skos:prefLabel "rules of evaluation"@en, "Modellbewertungsregeln"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstructionOfInconformRequirements
     od:subConceptOf tc:RulesOfFlowAnalysis ;
+    skos:prefLabel "rules of construction of inconform requirements"@en, "Modellbauregeln zur Lösung von Widersprüchen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems
     od:subConceptOf tc:RulesOfFlowAnalysis ;
+    skos:prefLabel "rules to apply Laws of Development of Technical Systems"@en, "Anwendungsregeln entsprechend der Gesetze der Entwicklung Technischer Systeme"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ## Techniques of modification
@@ -433,164 +441,207 @@ tc:TechniquesOfModification
     od:issuedAt tc:ModelAsIs ;
     od:forms tc:ModelAsRequired ;
     od:hasSubConcept tc:ModificationOfReceiver, tc:ModificationOfSource, tc:ModificationOfChannel, tc:ModificationOfControlUnit ;
+    skos:prefLabel "techniques of modification"@en, "Techniken zur Modifikation"@de ;
+    skos:altLabel "techniques of transformation"@en, "Techniken zur Transformation"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ##
 tc:ModificationOfControlUnit
     od:subConceptOf tc:TechniquesOfModification ;
+    skos:prefLabel "modification of the control unit"@en, "Modifikation des Steuerungssystems"@de ;
+    skos:altLabel "transformation of the control unit"@en, "Transformation des Steuerungssystems"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ##
 tc:ModificationOfReceiver
     od:subConceptOf tc:TechniquesOfModification ;
     od:hasSubConcept tc:fortifyWorkspace, tc:improveAdmission, tc:impairAdmission ;
+    skos:prefLabel "modification of the receiver"@en, "Modifikation des Empfängers"@de ;
+    skos:altLabel "transformation of the receiver"@en, "Transformation des Empfängers"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:fortifyWorkspace
     od:subConceptOf tc:ModificationOfReceiver, tc:IncreaseUsefulFlow, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "fortify workspace"@en, "Arbeitsbereich anreichern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:improveAdmission
     od:subConceptOf tc:ModificationOfReceiver, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "improve admission of the receiver"@en, "Aufnahme des Empfängers verbessern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:impairAdmission
     od:subConceptOf tc:ModificationOfReceiver, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "impair admission of the receiver"@en, "Aufnahme des Empfängers verschlechtern"@de ;
     a skos:Concept, od:AdditionalConcept .
 ##
 
 tc:ModificationOfSource
     od:subConceptOf tc:TechniquesOfModification ;
     od:hasSubConcept tc:improveRelativeCharacteristica, tc:ModulationOfFlow, tc:addUsefulProperties, tc:exploitGradient, tc:reuseFlow, tc:useAdditionalFlow, tc:exploitResonance, tc:reduceIntensity, tc:avoidFlow, tc:distributeFlowEquallyInTime, tc:turnHarmfulFlowIntoUsefulFlow, tc:compensateWithSecondFlow, tc:overlayWithAntiFlow, tc:annihilateWithSelf, tc:avoidResonance ;
+    skos:prefLabel "modification of the source"@en, "Modifikation der Quelle"@de ;
+    skos:altLabel "transformation of the source"@en, "Transformation des Quelle"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ## affect harmful flow  by upgrading source##
 tc:impairRelativeCharacteristica
     od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "impair relative characteristica of flow"@en, "relative Charakteristika des Flusses verschlechtern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:avoidFlow
     od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "avoid harmful flow"@en, "schädlichen Fluss vermeiden"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:distributeFlowEquallyInTime
     od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "distribute flow equally in time"@en, "Fluss gleichmäßig in der Zeit verteilen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:turnHarmfulFlowIntoUsefulFlow
     od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "turn harmful flow into useful flow"@en, "schädlichen in nützlichen Fluss verwandeln"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:compensateWithSecondFlow
     od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "use second flow to compensate harmful effect of the first one"@en, "Zweiten Fluss zur Kompensation der schädlichen Wirkung des ersten Flusses nutzen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:overlayWithAntiFlow
     od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "overlay with anti flow"@en, "Fluss und Antifluss überlagern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:annihilateWithSelf
     od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "annihilate flow with itself"@en, "Fluss durch Überlagerung mit sich selbst beseitigen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:avoidResonance
     od:subConceptOf tc:ModificationOfSource, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "avoid resonance"@en, "Resonanz vermeiden"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ## affect useful flow  by upgrading source##
 tc:improveRelativeCharacteristica
     od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "improve relative characteristica of flow"@en, "relative Charakteristika des Flusses verbessern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:ModulationOfFlow
     od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "modulation of flow rhythm"@en, "Modulation des Flusses(einschließlich Übergang zum Impulsbetrieb)"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:addUsefulProperties
     od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "add useful properties"@en, "nützliche Eigenschaften hinzufügen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:exploitGradient
     od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "exploit gradient"@en, "Gradienten ausnutzen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:reuseFlow
     od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "reuse of flow"@en, "Fluss wiederverwenden"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:useAdditionalFlow
     od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "use additional flow"@en, "zusätzlichen Fluss benutzen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:exploitResonance
     od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "exploit resonance"@en, "Resonanz ausnutzen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
-tc:reduceIntensity
+tc:optimizeIntensity
     od:subConceptOf tc:ModificationOfSource, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "reduce or optimize intensity"@en, "Intensität reduzieren bzw. optimieren"@de ;
     a skos:Concept, od:AdditionalConcept .
 ##
 
 tc:ModificationOfChannel
     od:subConceptOf tc:TechniquesOfModification ;
     od:hasSubConcept tc:removeBottleNeck, tc:removeDeadZone, tc:removeGreyZone ,tc:changeFlowMedium, tc:outsourceFlow, tc:reduceAmountOfTransformations, tc:improvePermeability, tc:reduceLength, tc:ModificationOfControlUnit, tc:combineUsefulFlows, tc:channelFlow, tc:implementBottleNeck, tc:implementDeadZone, tc:reducePermeability, tc:extendLength ;
+    skos:prefLabel "modification of the channel"@en, "Modifikation des Kanals"@de ;
+    skos:altLabel "transformation of the channel"@en, "Transformation des Kanals"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ## affect useful flow by upgrading channel##
 tc:removeBottleNeck
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "remove bottle neck"@en, "Flaschenhals entfernen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:removeDeadZone
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "remove dead zone"@en, "tote Zone entfernen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:removeGreyZone
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "remove grey zone"@en, "graue Zone entfernen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:changeFlowMedium
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "change medium/carrier of the flow"@en, "Veränderung des Flussmediums (Träger des Flusses)"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:outsourceFlow
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "outsource flow (into the supersystem)"@en, "Fluss ins Obersystem auslagern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:reduceAmountOfTransformations
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "reduce amount of transformations"@en, "Anzahl Transformationen verringern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:improvePermeability
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "improve permeability (of single parts of the channel)"@en, "Durchlässigkeit einzelner Teile des Kanals verbessern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:reduceLength
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "reduce length of the channel"@en, "Kanal verkürzen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:combineUsefulFlows
     od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ;
+    skos:prefLabel "combine useful flows in one channel"@en, "mehrere nützliche Flüsse in einem Kanal zusammenführen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ## affect harmful flow by upgrading channel##
 tc:channelFlow
     od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "channel flow"@en, "Fluss kanalisieren"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:implementBottleNeck
     od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "implement bottle neck"@en, "Flaschenhals einbauen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:implementDeadZone
     od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "implement dead zone"@en, "tote Zone einbauen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:reducePermeability
     od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "reduce permeability (of single parts of the channel)"@en, "Durchlässigkeit einzelner Teile des Kanals verschlechtern"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:extendLength
     od:subConceptOf tc:ModificationOfChannel, tc:ReduceHarmfulFlow ;
+    skos:prefLabel "extend length of the channel"@en, "Kanal verlängern"@de ;
     a skos:Concept, od:AdditionalConcept .
 ##
