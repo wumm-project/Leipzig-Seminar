@@ -130,13 +130,13 @@ tc:UsefulFlow
 tc:HarmfulFlow
     od:valueOf tc:FlowFunctionality ;
     skos:prefLabel "harmful flow"@en, "Schädlicher Fluss"@de ;
-    od:LebedevDefinition "are the flows performing harmful function (and not having main useful function), which are predetermined by the action principle of a system"
+    od:LebedevDefinition "are the flows performing harmful function (and not having main useful function), which are predetermined by the action principle of a system" ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:ParasiticFlow
     od:valueOf tc:FlowFunctionality ;
     skos:prefLabel "parasitic flow"@en, "Parasitärer Fluss"@de ;
-    od:LebedevDefinition "are also flows performing harmful function (and not having main useful function), but which are NOT predetermined by the action principle of a system"
+    od:LebedevDefinition "are also flows performing harmful function (and not having main useful function), but which are NOT predetermined by the action principle of a system" ;
     a skos:Concept, od:AdditionalConcept .
 
 ##Defect of Flow
