@@ -11,7 +11,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{March 19,  2021}
+\date{March 21,  2021}
 
 \begin{document}
 \maketitle
@@ -69,8 +69,19 @@ complex queries to the dataset.
 
 This technical basis is the starting point for remodelling parts of the TOP
 outcome in the course of a \emph{WUMM TRIZ Ontology Companion Project} (WOP)
-\cite{WOP}. In addition to our own modelling (so far the TRIZ Principles, the
-TRIZ Inventive Standards and the TRIZ Business Standards), the \emph{Top Level
+\cite{WOP}.  This project accompanies the TOP activities in order
+\begin{enumerate}[noitemsep]
+\item to carry out a remodelling according to semantic standards,
+\item to enhance the material multilingually and
+\item to build an LOD\footnote{LOD is the abbreviation for \emph{Linked Open
+    Data}, a world of interlinked data and «worlds of concepts» steadily
+  growing during the last 15 years. See \url{https://lod-cloud.net/}.  }
+  infrastructure on this basis,
+\end{enumerate}
+and thus to improve the basis for the necessary social coordination processes.
+
+In addition to our own modelling (so far of the TRIZ Principles, the TRIZ
+Inventive Standards and the TRIZ Business Standards), the \emph{Top Level
   Ontology} and the division into \emph{Ontomaps} are available in this
 format. The work on a \emph{thesaurus} as well as the presentation of
 different approaches to a common glossary is actively accompanied. In the WOP
@@ -84,20 +95,266 @@ additional contributions of the WOP approach.
 The aim of this paper is to explain the basic modelling and semantic
 assumptions, concepts and settings of the WOP approach in more detail. 
 
+\section{Modelling a TRIZ ontology}
+
+\subsection{TRIZ and the World of (Technical) Systems}
+
+All TRIZ concepts revolve around the central notion of a \emph{system}, its
+planning, creation, operation, maintenance, further development, etc.
+Following the widely accepted understanding of that concept in the TRIZ
+community, TOP defines
+\begin{quote}
+  A \emph{system} is a set of elements in relationship and connection with
+  each other, which forms a certain integrity, unity. The need to use the term
+  «system» arises when it is necessary to emphasize that something is large,
+  complex, not fully immediately understandable, yet whole, unified. In
+  contrast to the notions of «set» and «aggregate», the concept of a system
+  emphasises order, integrity, regularities of construction, functioning and
+  development. The notion of system is part of the system and functional
+  approach, and is used in the system operator.
+\end{quote}
+Usually, however, the definition of a system refers to the concept of a
+\emph{component}, as in Souchkov's glossary \cite{Souchkov2018}:
+\begin{quote}
+  \emph{Technical System:} A number of components (material objects) that were
+  consciously combined to a system by establishing specific interactions
+  between the components. A technical system is designed, developed,
+  manufactured, and assigned to perform a controllable main useful function or
+  a number of functions within a particular context. A technical system can
+  include subsystems which can be considered as separate technical systems.
+
+  \emph{Component:} A material object (substance, field, or substance-field
+  combination) that constitutes a part of a technical system or its
+  supersystem.  A component might represent both a single object and a group
+  of objects.
+\end{quote}
+We thus conclude that a system is essentially a collection of components that
+interact in a specific way to produce the characteristic functionalities of
+the system.  The subsystems referred to as components provide own functions
+for this, but the functionalities of the system do not result from a simple
+addition of the component functions, but as an emergent system property from
+their interaction. For the modelling of systems, their structural organisation
+(the «machine» in the sense of \cite{TT}) and their workflow organisation
+(«how the machine works», ibid.)  are equally important.  The systemic
+approach is thus self-similar and fractal; the terms «system» and «component»
+are largely used synonymously depending on the respective \emph{modelling
+  focus}.
+
+In TRIZ, an \emph{engineering problem} is always conceptualised as the design
+of a new system or the improvement of an existing one. We regard the design of
+a new system as a special case of further development, since in this case,
+concepts of a model of the «system as it is» do exist, how vague they may be.
+
+The delimitation of meaningful systems as modelling units has many facets and
+points of view, see for example \cite[section 8]{Szyperski2002}. In the TRIZ
+concepts, a certain functional completeness plays a major role in this
+delimitation, even if a defined throughput of energy, material and information
+is required for its operation.  For a system, its \emph{design} and
+\emph{operation} have to be distinguished, as explained in more detail in
+\cite{Graebe2020}. This also applies to \emph{components} of a system.  In the
+white-box analysis of a system, its components are considered as working
+black-boxes, which are characterised in the design dimension by a
+\emph{specification of their functionality} and in the operation dimension by
+the \emph{guaranteed specification compliant operation}, provided that the
+operating conditions (in particular the throughput of material, energy and
+information required for its operation) are ensured within the system. The
+description of these operating conditions is part of the specification, which
+thus consists of an input and an output part (also referred to as import and
+export interfaces).
+
+The components thus constitute a \emph{world of technical systems} in the
+sense of the explanations in \cite{Graebe2020}, to which we refer for further
+details of this conceptualisation.
+
+\subsection{Abstraction Levels of Modelling}
+
+An ontology is about «modelling of models», because the clarification of terms
+and concepts aimed at with an ontology is intended to be practically used in
+real-world modelling contexts.  This «modelling of models» references a
+typical engineering context, in which the \emph{modelling} of systems plays a
+central role and serves as basis of further planned action (including project
+planning, implementation, operation, maintenance, further development of the
+system).
+
+In this process, \emph{several levels of abstraction} are to be distinguished.
+\begin{itemize}[noitemsep]
+\item [0.] The level of the \emph{real-world system} to which the engineering
+  task refers. This level is only \emph{practically} accessible. The model to
+  be developed at level 1 must be appropriate to cover all problems arising in
+  the process of development and use of the system and express the inherent
+  contradictoriness of the system.
+
+  This contradictory nature of the system can be formulated only in language
+  form, i.e. on the model level and \emph{applying} the concepts available
+  there.  These concepts must therefore not only be able to describe the
+  system itself, but also cover a description of the necessary aspects of its
+  operation.
+\item[1.] The level of \emph{modelling the real-world system}. In the
+  modelling of a real-world system with its "core and cross-cutting concerns"
+  (as known from Software Engineering), the worlds of several conceptual
+  systems often come together. In addition to the methodological dimension of
+  a TRIZ ontology, these are regularly the conceptual world of a technical
+  ontology and possibly other conceptual worlds such as a company-internal
+  compliance etc.
+
+  The ontologies provide the language means, concepts (RDF subjects) and
+  properties (RDF predicates), which are to be \emph{applied} at this level.
+  This level is also the \emph{level of methodological practice}.
+\item[2.] The \emph{level of the meta-model} as the actual (TRIZ) ontology
+  level on which the systemic concepts are \emph{defined}. This definition is
+  processed \emph{applying} the methodological concepts whose linguistic means
+  are made available on meta-level 2.
+\item [3.] The \emph{modelling meta-level 2} at which the methodological
+  concepts are defined.
+\end{itemize}
+
+\subsection{The TOP Concept of a System}
+
+A central concept in TOP modelling is the distinction between the stages of 
+\begin{itemize}[noitemsep]
+\item [(1)] the system as it is,
+\item [(2)] the TRIZ model of the system as it is,
+\item [(3)] the TRIZ model of the system as required, and 
+\item [(4)] the system as required. 
+\end{itemize}
+The TOP glossary \cite{TOP-Glossary} explains the differences as follows
+\begin{itemize}[noitemsep]
+\item [(1)] The \emph{system as is} is a system in its original state before
+  it is analysed and transformed into a new «system as is».
+\item [(2)] The \emph{TRIZ model of the system as is} is formed from the
+  «system as is» by means of various TRIZ models: component-structural and
+  functional models, su-field or ele-field models, description of
+  contradictions or of typical conflict schemes, etc. Depending on the chosen
+  model type, the model will be transformed into the «TRIZ model of the system
+  as required».
+\item [(3)] The \emph{TRIZ model of the system as required} is formed from the
+  «TRIZ model of the system as is» by procedures which correspond to the
+  selected model transformation method (functional, su-field, ele-field,
+  solution of the contradictions in requirements and properties, etc.). The
+  transition is performed along the line
+  \begin{center}
+    «System as is» $\to$ «TRIZ model of the system as is»\\ $\to$ «TRIZ model
+    of the system as required» $\to$ «System as required»
+  \end{center}
+  in accordance with the scheme of a TRIZ Model.
+\item [(4)] The \emph{system as required} is a system derived from the «system
+  as is» through a transformation, based on the «model of the system as
+  required».
+ \end{itemize}
+It is clear that "system" here can only mean a \emph{model of the system} in
+which, in addition to the ontology of the TRIZ methodology, a domain-specific
+ontology plays a central role, because a system is only accessible in
+descriptive terms via its model, as the schematisation in Figure~1 also
+suggests.
+\begin{center}
+  \includegraphics[width=.6\textwidth]{Rubin.jpeg}\\
+  Figure 1. Visualisation of the TOP TRIZ model.
+  \url{https://triz-summit.ru/onto_triz/mod}
+\end{center}
+What is a \emph{TRIZ model} as defined in the TOP project?  This notion ist
+explained in \cite{TOP-Glossary} as follows:
+\begin{quote}
+  A \emph{TRIZ model} is a schematic notation of a gradual transition from the
+  problem to TRIZ model of the problem, then to TRIZ model of the solution and
+  then to the solution itself; or from the system to TRIZ model of the system,
+  then to TRIZ model of the new system and then to actual change of the system
+  («system as required»). The TRIZ model includes the basic components of
+  inventive thinking: analysis, synthesis, evaluation.
+\end{quote}
+In contrast to the above explanations, here a TRIZ model is understood as the
+totality of the four model stages described above, including the modelling
+process itself. However, these four stages all refer to level 1 models of a
+real-world system; no distinction is made between application of concepts from
+level 2 of a \emph{TRIZ ontology of tools} (present at level 1 as concept
+instances) and level 3 of a \emph{TRIZ ontology of methods} (present at level
+1 only in a methodological-processual way).
+
+What is the core of the three transitions between the model stages?  The
+modelling of any system starts with the modelling of the «system as it is» on
+the basis of domain-specific concepts. If the modelling is done on the
+methodological basis of TRIZ principles, the domain-specific system of
+concepts must be enriched with TRIZ methodological concepts such as main
+useful function, conflicting pairs, operative zone and operative time, etc.,
+in order to prepare the extraction of abstract TRIZ patterns as «TRIZ model of
+the system as it is» (TRIZ task model) according to the hill model. This part
+of the TRIZ ontology concerns thus only \emph{one} aspect of the modelling of
+the real-world system. On the other hand, the \emph{application} of TRIZ
+concepts in such a real-world modelling requires that the domain-specific
+concepts are compatible with the requirements of TRIZ modelling. However, the
+real-world modelling has a similar relationship of the specific to the general
+of a domain-specific ontology as to a TRIZ ontology. Thus, the two ontologies
+stand in a relationship of mutual complementation of the modelling languages
+in the special modelling application.
+
+It is clear, however, that the «model of the system as it is» (MSI) enriched
+with elements of a domain-specific ontology, the abstract «TRIZ model of the
+system as it is» (TSI) extracted from it, the resulting «TRIZ model of the
+system as required» (TRIZ solution model, TSO) and finally the «model of the
+system as required» (MSO), which is again enriched in a domain-specific way,
+call up largely the same language constructs from the point of view of a TRIZ
+ontology and are thus four instances of the real-world system model, which are
+related as follows:
+\begin{itemize}[noitemsep]
+\item \textbf{MSI $\to$ TSI:} Consolidation and refinement of TRIZ-relevant
+  concepts in the MSI.
+\item \textbf{TSI $\to$ TSO:} Description of an abstract transformation and
+  execution of the parts of the transformation that are possible at this
+  level, i.e. without interaction with the domain-specific modelling.
+\item \textbf{TSO $\to$ MSO:} Detailing of the model, completion and execution
+  of the domain-specific part of the transformation.
+\end{itemize}
+For the Level 2 ontology (it answers the question "Which TRIZ tools are
+available and how do they relate to each other?"), the distinction between
+these four system models is therefore not relevant. Corresponding language
+tools are only needed at level 3, when it comes to the terminology of the
+\emph{application} of the TRIZ methodology itself.
+
+Concerning the balance between the new and the old, as suggested by relevant
+methodologies for the further development of conceptual systems, we see the
+need to clearly distinguish between these two levels of ontologisation and
+limit our ontological modelling to level 2.
+
 \section{Basics of the WUMM Ontology Project}
 
-The WUMM ontology project accompanies the TOP activities in order 
-\begin{enumerate}[noitemsep]
-\item to carry out a remodelling according to semantic standards,
-\item to enhance the material multilingually and
-\item to build an LOD\footnote{LOD is the abbreviation for \emph{Linked Open
-    Data}, a world of interlinked data and «worlds of concepts» steadily
-  growing during the last 15 years. See \url{https://lod-cloud.net/}.  }
-  infrastructure on this basis,
-\end{enumerate}
-and thus to improve the basis for the necessary social coordination processes.
+\subsection{SKOS Basics}
 
-For this purpose, the SKOS ontology \cite{SKOS} is used with the concepts (K)
+The SKOS ontology allows to express concepts and their relations in a
+lightweight way. The class \texttt{skos:Concept} and the predicates
+\texttt{skos:narrower}, \texttt{skos:broader} and \texttt{skos:related} are
+used for this purpose. The first two predicates describe hierarchical
+relationships between concepts\footnote{From the SKOS Primer
+  \cite{SKOS-Primer}: «The subject of a \texttt{skos:broader} statement is the
+  more specific concept involved in the assertion and its object is the more
+  generic one», i.e. \texttt{A skos:broader B} expresses that A is a
+  subconcept of B.  \texttt{skos:narrower} is the inverse property to
+  \texttt{skos:broader}.}, the third is used for non-hierarchical
+relationships.
+
+Relationships between concepts can be of very different structure.
+Hierarchical relationships, for example, can model (transitive) subconcept
+relationships in taxonomies as well as whole-part relationships, which are
+inherently non-transitive when concepts of different qualities are related.
+Both types of conceptualisation have an intentional as well as an extensional
+aspect -- the new units of meaning, especially their emergent properties, can
+neither be adequately described by mere enumeration of their subconcepts nor
+by the «legitimate interpretation of sense» of the purposes of their
+constitution in the sense of \cite{BergerLuckmann}. In the SKOS primer
+\cite{SKOS-Primer} these modelling aspects are described in more detail,
+especially the modelling of class-instance and whole-part relationships. We
+follow the recommendation in \cite[Sect 4.7]{SKOS-Primer} and introduce
+subpredicates of the generic SKOS predicates listed above for different
+modelling contexts. More detailed modelling rules for such contexts are
+described and discussed below.
+
+Since this project is about modelling a unified space of TRIZ concepts,
+further SKOS aggregation concepts such as \texttt{skos:ConceptScheme},
+\texttt{skos:Collection}, \texttt{skos:OrderedCollection} etc. are not used.
+The aggregation of different concepts in collections (assignment to TRIZ
+generations \cite[Table 1]{TOP2020} or in concept classes \texttt{Basic},
+\texttt{Model}, \texttt{Rule} and \texttt{TermGroup} \cite[Fig. 4]{TOP2020})
+is realised via special predicates.
+
+We use the SKOS ontology \cite{SKOS} with the concepts (K)
 \begin{itemize}[noitemsep]
 \item \texttt{skos:Concept}, \texttt{skos:prefLabel}, \texttt{skos:altLabel}
   -- concept naming
@@ -185,243 +442,39 @@ RDF triples in which this concept occurs as a subject or object. Further links
 in this representation can be used to navigate in the entire RDF graph (more
 precisely: in its respective connected component).
 
-\section{Modelling a TRIZ ontology}
+\subsection{Modelling Systems and TOP TRIZ Models}
 
-\subsection{SKOS basics}
+Since TOP system models in (1) and (4) come with additional modelling
+information based on a great variety of domain-specific ontologies the TRIZ
+ontology is an add-on only and (domain-specific) ontology integration
+engineering approaches are required anyway. It is thus justified to
+concentrate solely on the concerns of modelling the TRIZ-relevant aspects in
+all four modelling stages.
 
-The SKOS ontology allows to express concepts and their relations in a
-lightweight way. The class \texttt{skos:Concept} and the predicates
-\texttt{skos:narrower}, \texttt{skos:broader} and \texttt{skos:related} are
-used for this purpose. The first two predicates describe hierarchical
-relationships between concepts\footnote{From the SKOS Primer
-  \cite{SKOS-Primer}: «The subject of a \texttt{skos:broader} statement is the
-  more specific concept involved in the assertion and its object is the more
-  generic one», i.e. \texttt{A skos:broader B} expresses that A is a
-  subconcept of B.  \texttt{skos:narrower} is the inverse property to
-  \texttt{skos:broader}.}, the third is used for non-hierarchical
-relationships.
-
-Relationships between concepts can be of very different structure.
-Hierarchical relationships, for example, can model (transitive) subconcept
-relationships in taxonomies as well as whole-part relationships, which are
-inherently non-transitive when concepts of different qualities are related.
-Both types of conceptualisation have an intentional as well as an extensional
-aspect -- the new units of meaning, especially their emergent properties, can
-neither be adequately described by mere enumeration of their subconcepts nor
-by the «legitimate interpretation of sense» of the purposes of their
-constitution in the sense of \cite{BergerLuckmann}. In the SKOS primer
-\cite{SKOS-Primer} these modelling aspects are described in more detail,
-especially the modelling of class-instance and whole-part relationships. We
-follow the recommendation in \cite[Sect 4.7]{SKOS-Primer} and introduce
-subpredicates of the generic SKOS predicates listed above for different
-modelling contexts. More detailed modelling rules for such contexts are
-described and discussed below.
-
-Since this project is about modelling a unified space of TRIZ concepts,
-further SKOS aggregation concepts such as \texttt{skos:ConceptScheme},
-\texttt{skos:Collection}, \texttt{skos:OrderedCollection} etc. are not used.
-The aggregation of different concepts in collections (assignment to TRIZ
-generations \cite[Table 1]{TOP2020} or in concept classes \texttt{Basic},
-\texttt{Model}, \texttt{Rule} and \texttt{TermGroup} \cite[Fig. 4]{TOP2020})
-is realised via special predicates.
-
-\subsection{TRIZ ontology basics}
-
-All TRIZ concepts revolve around the central notion of a \emph{system}, its
-planning, creation, operation, maintenance, further development, etc.
-Following the widely accepted understanding of that concept in the TRIZ
-community, a system is essentially a collection of components that interact in
-a specific way to produce the characteristic functionalities of the system.
-The subsystems referred to as \emph{components} provide own functions for
-this, but the functionalities of the system do not result from a simple
-addition of the component functions, but as an emergent system property from
-their interaction. For the modelling of systems, their structural organisation
-(the «machine» in the sense of \cite{TT}) and their workflow organisation
-(«how the machine works», ibid.)  are equally important.
-
-The systemic approach is thus self-similar and fractal; the terms «system» and
-«component» are largely used synonymously depending on the respective
-\emph{modelling focus}.  From a modelling perspective, \emph{components} are
-regarded as black boxes whose functioning in the description dimension is
-given by their \emph{specification}, and in the execution dimension by their
-\emph{guaranteed specification compliant operation}, provided that the
-operating conditions (in particular the throughput of material, energy and
-information required for its operation) are ensured within the infrastructure
-(environment). The components thus constitute a \emph{world of technical
-  systems} in the sense of the explanations in \cite{Graebe2020}, to which we
-refer for further details of this conceptualisation.
-
-In this understanding, \emph{systems} are components that are considered as
-white box under the \emph{given modelling focus} in order to project, create,
-improve or change their implementation. The latter is summarised under the
-aspect of \emph{system transformation} in order to transform a «system as it
-is» into a «system as required». The well-known hill schema implies that in
-this procedure ultimately four versions of the description of the system are
-to be considered in parallel, see below. If one further understands the
-development of a system as a result of such transformations, then a fifth
-version of the system description
-\begin{itemize}
-\item[5.] The system as it was realized
-\end{itemize}
-must be taken into account in order to adequately describe the contradiction
-between plan and reality and thus to understand system development as an
-iterative \emph{transformation of transformations}.
-
-Such readjustment allows to model iterative system transformations, in which
-at the beginning of every iteration the difference between the «system as
-required in the previous step» and the «system as it was realized», can be
-analysed and based on this analysis also the «model of the system as required»
-can be transformed.
-
-\subsection{Abstraction levels of modelling}
-
-An ontology is about «modelling of models», because the clarification of terms
-and concepts aimed at with an ontology is intended to be practically used in
-real-world modelling contexts.  This «modelling of models» references a
-typical engineering context, in which the \emph{modelling} of systems plays a
-central role and serves as basis of further planned action (including project
-planning, implementation, operation, maintenance, further development of the
-system).
-
-In this process, \emph{several levels of abstraction} are to be
-distinguished. 
-\begin{itemize}[noitemsep]
-\item [0.] The level of the \emph{real world system} to which the engineering
-  task refers. This level is only \emph{practically} accessible. The model to
-  be developed at level 1 must be appropriate to cover all problems arising in
-  the process of development and use of the system and express the inherent
-  contradictoriness of the system.
-
-  This contradictory nature of the system can be formulated only in language
-  form, i.e. on the model level and \emph{applying} the concepts available
-  there.  These concepts must therefore not only be able to describe the
-  system itself, but also cover a description of the necessary aspects of its
-  operation.
-\item[1.] The \emph{level of modelling} the system. The ontology provides the
-  language means, concepts (RDF subjects) and properties (RDF predicates),
-  which are to be \emph{applied} at this level. This level is also the
-  \emph{level of methodological practice}.
-\item[2.] The \emph{level of the meta-model} as the actual ontology level on
-  which the systemic concepts are \emph{defined}. This definition is processed
-  \emph{applying} the methodological concepts whose linguistic means are made
-  available on meta-level 2.
-\item [3.] The \emph{modelling meta-level 2} at which the methodological
-  concepts are defined.
-\end{itemize}
-
-\subsection{The TOP concept of a system}
-
-A central concept in TOP modelling is the distinction between the stages of 
-\begin{itemize}[noitemsep]
-\item [(1)] the system as it is,
-\item [(2)] the TRIZ model of the system as it is,
-\item [(3)] the TRIZ model of the system as required, and 
-\item [(4)] the system as required. 
-\end{itemize}
-The TOP glossary \cite{TOP-Glossary} explains the differences as follows
-\begin{itemize}[noitemsep]
-\item [(1)] The \emph{system as is} is a system in its original state before
-  it is analysed and transformed into a new «system as is».
-\item [(2)] The \emph{TRIZ model of the system as is} is formed from the
-  «system as is» by means of various TRIZ models: component-structural and
-  functional models, su-field or ele-field models, description of
-  contradictions or of typical conflict schemes, etc. Depending on the chosen
-  model type, the model will be transformed into the «TRIZ model of the system
-  as required».
-\item [(3)] The \emph{TRIZ model of the system as required} is formed from the
-  «TRIZ model of the system as is» by procedures which correspond to the
-  selected model transformation method (functional, su-field, ele-field,
-  solution of the contradictions in requirements and properties, etc.). The
-  transition is performed along the line
-  \begin{center}
-    «System as is» $\to$ «TRIZ model of the system as is»\\ $\to$ «TRIZ model
-    of the system as required» $\to$ «System as required»
-  \end{center}
-  in accordance with the scheme of a TRIZ Model.
-\item [(4)] The \emph{system as required} is a system derived from the «system
-  as is» through a transformation, based on the «model of the system as
-  required».
- \end{itemize}
-The referenced notions of \emph{TRIZ Model} and \emph{System} ar explained as
-follows:
-\begin{itemize}[noitemsep]
-\item A \emph{system} is a set of elements in relationship and connection with
-  each other, which forms a certain integrity, unity. The need to use the term
-  «system» arises when it is necessary to emphasize that something is large,
-  complex, not fully immediately understandable, yet whole, unified. In
-  contrast to the notions of «set» and «aggregate», the concept of a system
-  emphasises order, integrity, regularities of construction, functioning and
-  development. The notion of system is part of the system and functional
-  approach, and is used in the system operator.
-\item A \emph{TRIZ model} is a schematic notation of gradual transition
-  from the problem to TRIZ model of the problem, then to TRIZ model of the
-  solution and then to the solution itself; or from the system to TRIZ model
-  of the system, then to TRIZ model of the new system and then to actual
-  change of the system («system as required»). The TRIZ model includes the
-  basic components of inventive thinking: analysis, synthesis, evaluation.
-\end{itemize}
-This distinction of modelling stages, which is important for the planning and
-subsequent execution of the transformation of the system, is applied to all
-sub-concepts in the TOP modelling approach.
-
-As already explained above, the difference between the «system as it is» (1)
-and the «TRIZ model of the system as it is» (2) cannot refer to the real-world
-system itself, since it is accessible to (verbal) transformations only via its
-description form and thus its modelling. At this point, a reference to the
-hill model is more likely to be assumed, in which, in the sense of \cite{TT},
-where one has to progress from the problem description and model (1) -- rather
-than from the «system» -- to the TRIZ task model (2), further to the TRIZ
-solution model (3) and finally to a description of the solution to be
-implemented in reality (4). (1) and (4) refer to the variety of
-domain-specific modellings and ontologies, which have little to do with TRIZ
-and a TRIZ ontology beyond the methodological dimension.  On the contrary, in
-the context of the transition $(1) \to (2)$, domain-specific approaches must
-be \emph{translated} into suitable TRIZ concepts.  The same applies to the
-retransition $(3) \to (4)$. Hence content-related TRIZ concepts concentrate on
-phases (2) and (3) and methodological TRIZ concepts on the transitions $(1)
-\to (2)$, $(2) \to (3)$ and $(3) \to (4)$. Hence the transition $(1) \to (2)$
-itself contains two steps -- a readjustment $(1) \to (1')$ of the
-domain-specific model to prepare it for application of TRIZ concepts and the
-application $(1') \to (2)$ of these concepts, as it is separated, e.g. in the
-TRIZ application concept of the TRIZ Trainer \cite{TT}.
-
-\subsection{Modelling Systems and TRIZ Models}
-
-Since system models in (1) and (4) come with additional modelling information
-based on a great variety of domain-specific ontologies the TRIZ ontology is an
-add-on only and (domain-specific) ontology integration engineering approaches
-are required anyway. It is thus justified to concentrate solely on the
-concerns of modelling the TRIZ-relevant aspects in all four modes.
-
-In the TOP approach, the distinction of these modes is consistently introduced
-for all system-relevant concepts at the level of subconcepts. Since this
-distinction only becomes relevant at the level of modelling concrete systems,
-alone the verbal means for distinguishing these purposes must be provided at
-the ontology level. The WOP approach takes a different route here and models
-this connection not through subconcepts, but as a predicate
-\texttt{od:belongsTo} with value from the \texttt{tc:StageValue} range
-\begin{quote}\tt
-  tc:System, tc:Model, tc:SystemAsIs, tc:SystemAsRequired,\\ tc:ModelAsIs,
-  tc:ModelAsRequired
-\end{quote}
-to assign to a concept \emph{instance} of a concrete modelling one of the
+In the TOP approach, the distinction of these modelling stages is consistently
+introduced for all system-relevant concepts at the level of subconcepts.
+However, since the transition from one modelling stage to the next is carried
+out jointly for all concepts related to the system, it is sufficient to assign
+the modelling stage to the respective model of the system as a property.
+Separate sub-concepts at all levels, as introduced in TOP modelling, are not
+necessary, since the stage can be inferred via the model of the system in
+which a concept is "built in". Hence the WOP approach takes a different route
+here and models this connection as a predicate \texttt{od:belongsTo} with
+value from the \texttt{tc:StageValue} range
+\begin{center}\tt
+  tc:SystemAsIs, tc:SystemAsRequired, tc:ModelAsIs, tc:ModelAsRequired
+\end{center}
+to assign to a concept \emph{instance} in a real-world modelling one of the
 modelling stages as discussed above.  This also makes it easy to extend the
-\texttt{rdfs:range} of this property if, for example, further system versions
-are to be included in the modelling of a special system in the context of an
-application of the system operator.
+\texttt{rdfs:range} of this property if, for example, stages of earlier or
+later system versions are to be included in the modelling of a special system
+in the context of an application of the system operator.
 
 This significantly reduces the number of concepts to be distinguished, which
 is also indicated by reasons of homogeneity, since the different stages of
 this system model must be structurally similar in order to be able to capture
 structural continuities within its development, and thus must be modelled by a
 single uniform concept.
-
-For this purpose, the WOP approach distinguishes (at the moment) the concept
-categories \texttt{od:Component} for describing the \emph{structural}
-organisation of a system and its parts, and \texttt{od:PropertyDomain} for
-describing the structure of \emph{property domains} of a system and its
-parts.  Both are used as values of the predicate \texttt{od:WOPCategory},
-following a modelling approach of categories of V. Souchkov in his glossary. 
 
 \section{Typical modelling situations}
 
@@ -539,13 +592,22 @@ tree trunk to a row boat is explained.
   river is \\\>\>provided with oars with which the boat can be propelled by
   muscle power \\\>\> and also steered{\dq}{\dq}{\dq}@en .
 \end{code}
-The RDF statements are part of a (level 1) description of the real world
+The RDF statements are part of a (level 1) description of the real-world
 evolution process of boats and use (in the second sentence) the (level 2) TRIZ
 development pattern \texttt{tc:NewPrinciplePattern} and
 \texttt{tc:IncreasingControllabilityPattern} that are bound to the level 1
 predicate \texttt{ex:addPaddles} (being a concept not of TRIZ but of the
 special evolution process) by the level 3 predicate \texttt{od:usesPattern} (a
 concept of TRIZ methodology).
+
+\subsection{Concept Categories}
+
+The WOP approach distinguishes (at the moment) the concept categories
+\texttt{od:Component} for describing the \emph{structural} organisation of a
+system and its parts, and \texttt{od:PropertyDomain} for describing the
+structure of \emph{property domains} of a system and its parts.  Both are used
+as values of the predicate \texttt{od:WOPCategory}, following a modelling
+approach of categories of V. Souchkov in his glossary.
 
 \begin{thebibliography}{xxx}
   \raggedright
@@ -579,7 +641,9 @@ concept of TRIZ methodology).
   terms, version 1.2.  The International TRIZ Association, MATRIZ
   2018.\\ \url{https://matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}
 \bibitem{TT} Nikolai Shpakovski et al. The TRIZ Trainer.
-  \url{https://triztrainer.ru}, \url{https://triz-trainer.com},
+  \url{https://triztrainer.ru}, \url{https://triz-trainer.com}.
+\bibitem{Szyperski2002} Clemens Szyperski (2002). Component Software: Beyond
+  Object-Oriented Programming. ISBN: 978-0-321-75302-1.
 \bibitem{TOP-Glossary} TRIZ 100 Glossary. A short glossary of key TRIZ
   concepts and terms (in Russian).
   \url{https://triz-summit.ru/onto_triz/100/}.
