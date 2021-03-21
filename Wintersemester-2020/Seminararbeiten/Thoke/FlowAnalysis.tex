@@ -60,7 +60,21 @@
     listed as item 2.5.8, but in the 7 references to the literature listed there
     are no systematic explanations about the role of flows in TRIZ theory, but
     only individual examples in which concrete flows (such as magnetic flow)
-    played a role in concrete modelling.  
+    played a role in concrete modelling.
+
+    The most comprehensive source on issues of TRIZ modelling of flows and
+    methodological issues of flow analysis is the thesis \cite{Lebedyev2015} by
+    Yuri Lebedyev, which he submitted in 2015 under the supervision of S.A. 
+    Logvinov for graduation as TRIZ Master. Since the thesis is only available in
+    Russian, only the author's English summary was evaluated.
+
+    Such a limitation is justified, since the aim of this seminar paper is not to
+    completely cover the TRIZ theory of flow analysis, but only to identify its
+    essential concepts and describe their connection with modern semantic RDF
+    means based on the SKOS ontology. The basis for this is above all the
+    presentation of Olga Eckardt in the webinar of the TOP project in October 2020
+    \cite{Eckardt2020}, in which basic approaches of the Lebedyev's work have
+    obviously been incorporated.
 
     We start from the definition of both concepts in the TOP Glossary
     \cite{TOP-Glossary}: 
@@ -118,100 +132,106 @@
         unit from an engine to the working unit.
     \end{itemize}
 
-\section{On the concept of system in the TOP modelling}
+    \section{The Conceptualisations}
 
-A central concept in TOP modelling is the distinction between
-\begin{itemize}[noitemsep]
-\item [(1)] the system as it is,
-\item [(2)] the model of the system as it is,
-\item [(3)] the model of the system as it should be, and 
-\item [(4)] the system as it should be. 
-\end{itemize}
-The TOP glossary \cite{TOP-Glossary} explains the differences as follows
-\begin{itemize}[noitemsep]
-\item [(1)] The \emph{system as is} is a system in its original state before
-  it is analysed and transformed into a new «system as is».
-\item [(2)] The \emph{model of the system as is} is formed from the «system as
-  is» by means of various TRIZ models: component-structural and functional
-  models, su-field or ele-field models, description of contradictions or of
-  typical conflict schemes, etc. Depending on the chosen model type, the model
-  will be transformed into the «model of the system as required».
-\item [(3)] The \emph{model of the system as required} is formed from the
-  «model of the system as is» by procedures which correspond to the selected
-  model transformation method (functional, su-field, ele-field, solution of
-  the contradictions in requirements and properties, etc.). The transition is
-  performed along the line
-  \begin{center}
-    «System as is» $\to$ «Model of the system as is»\\ $\to$ «Model of the
-    system as required» $\to$ «System as required»
-  \end{center}
-  in accordance with the scheme of a TRIZ Model.
-\item [(4)] The \emph{system as required} is a system derived from the «system
-  as is» through a transformation, based on the «model of the system as
-  required».
- \end{itemize}
-The referenced notions of \emph{TRIZ Model} and \emph{System} ar explained as
-follows:
-\begin{itemize}[noitemsep]
-\item A \emph{system} is a set of elements in relationship and connection with
-  each other, which forms a certain integrity, unity. The need to use the term
-  «system» arises when it is necessary to emphasize that something is large,
-  complex, not fully immediately understandable, yet whole, unified. In
-  contrast to the notions of «set» and «aggregate», the concept of a system
-  emphasises order, integrity, regularities of construction, functioning and
-  development. The notion of system is part of the system and functional
-  approach, and is used in the system operator.
-\item A \emph{TRIZ model} is a schematic notation of gradual transition
-  from the problem to TRIZ model of the problem, then to TRIZ model of the
-  solution and then to the solution itself; or from the system to TRIZ model
-  of the system, then to TRIZ model of the new system and then to actual
-  change of the system («system as required»). The TRIZ model includes the
-  basic components of inventive thinking: analysis, synthesis, evaluation.
-\end{itemize}
-This distinction, which is important for the planning and subsequent execution
-of the transformation of the system, is applied to all sub-concepts in the TOP
-modelling approach.  In particular, a distinction is made between «flow as
-is», «model of flow as is», «model of flow as required» and «flow as
-required».
+    The conceptualisations to be developed follow the basic assumptions and
+    positings, that are elaborated in more detail in \cite{Graebe2021}. In
+    particular, the following namespace prefixes are used:
+    \begin{itemize}[noitemsep]
+    \item \texttt{ex:} -- the namespace of a special system to be modelled. 
+    \item \texttt{tc:} -- the namespace of the TRIZ concepts (RDF subjects).
+    \item \texttt{od:} -- the namespace of WUMM's own concepts (RDF predicates,
+    general concepts).
+    \item \texttt{skos:} -- the Simple Knowledge Organization System Namespace (mainly for labelling).
+    \item \texttt{foaf} -- the namespace of Friend of a Friend to describe real world objects.
+    \item \texttt{rdfs:} -- the namespace of RDF Schema (RDF properties and their domains).
+    \item \texttt{cc:} -- the namespace of the Creative Commons License (to address copy left approach).
+    \item \texttt{owl:} -- the namespace of the Web Ontology Language (to address web ontology conventions).
+    \end{itemize}
 
-The system definition here is to be seen critically, since no distinction
-between a real-world system and its description is made, as is explained in
-more detail in \cite{Graebe2020}.  In this sense also in (1) and (4) a
-distinction has to be made between the real-world system and its description.
-Only the descriptions are accessible for modelling, hence (1) and (4) have to
-be replaced by «description of the system ...». (1) and (2) or (3) and (4)
-then differ primarily in the degree of formalisation according to the
-methodological guidelines of TRIZ.  Since the aim of modeling is not only to
-describe the solution, but also to implement it, i.e. carry out the projected
-transformation on the real-world system, a further level of description
-\begin{itemize}
-\item [(5)] the \emph{description of the system as it was realized},
-\end{itemize}
-is relevant if real-world development is also to be taken into account.
+    \subsection{\texttt{tc:Flow}}
 
-Such readjustment of the basic concepts then also allows to model iterative
-system transformations, in which at the beginning of every iteration the
-difference between the «system as required in the previous step» and the
-«system as it was realized», can be analysed and based on this analysis also
-the «model of the system as required» can be transformed.
+    A flow is a component within a system and hence modeled as subconcept of
+    \texttt{od:Component}.  It has several properties that are modeled along the
+    rules for a morphological table, i.e. defining a PropertyDomain and a list of
+    allowed values as listed below.
 
-This, however, requires a more precise distinction between the levels 
-\begin{itemize}[noitemsep]
-\item [(0)] of different versions of the \emph{real-world} system,
-\item [(1)] of \emph{descriptions and models} of these different versions and
-\item [(2)] the \emph{concepts, terms and notions} used in these descriptions.
-\end{itemize}
-The object of ontologisation is only level (2), in which the uniformity of the
-concepts over the different versions existing on level (1) is to be secured,
-which is reflected in the duality of concept (level (2)) and concept instance
-(level (1)).  Since RDF is relatively tolerant about not including parts of a
-concept into instances, it makes sense to make the distinctions according to
-(1)--(4) only at the instance level as a methodological property of a basic
-type \texttt{owl:Thing}, which is inherited by all subconcepts.  
+    \HGG{Alle Subjekt-URIs beginnen mit einem Großbuchstaben.  Alle Subjekte
+    sollten Singular sein, da eine Plural suggerierende Auflistung \texttt{A
+        od:does B, C, D} in drei Drei-Wort-Sätze mit dreimal Singular aufgelöst
+    wird.}
 
-This was implemented in the proposed modelling as \texttt{od:hasMode}
-whose value range is an enumeration type \texttt{tc:ModeValue}.  See
-\cite{Graebe2021} for details and an example.
+    As in Souchkov's Glossary we use URIs as 
+    \begin{center}\tt
+    tc:HarmfulAction, tc:HarmfulFunction, tc:HarmfulInteraction,
+    tc:HarmfulMachine
+    \end{center}
+    that combine the property and the subject of the property except for
+    \texttt{tc:FlowSubstance}.
+
+    \begin{center}
+    \begin{tabular}{|c|c|}\hline
+        Property & PropertyDomain \\\hline
+        od:hasMode & tc:ModeValue \\
+        od:hasFlowType & tc:FlowType  \\
+        od:hasFlowSubstance & tc:FlowSubstance  \\
+        od:hasFlowFunctionality & tc:FlowFunctionality  \\
+        od:hasFlowDefect & tc:FlowDefect  \\
+        od:hasFlowSource & tc:FlowSource  \\
+        od:hasMethodOfDescription & tc:MethodOfDescription \\\hline 
+    \end{tabular}
+    \end{center}
+
+    \begin{center}
+    \begin{tabular}{|l|p{10cm}|}\hline
+        PropertyDomain & PropertyValues \\\hline
+        tc:ModeValue & tc:System, tc:Model, tc:SystemAsIs, tc:SystemAsRequired,
+        tc:ModelAsIs, tc:ModelAsRequired \\
+        tc:FlowType & tc:ComplexFlow, tc:DiscreteFlow, tc:ContinuousFlow \\
+        tc:FlowSubstance & tc:Information, tc:Energy, tc:Substance \\
+        tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow  \\
+        tc:FlowDefect & tc:InsufficientFlow, tc:ExcessiveFlow,
+        tc:BadControllableFlow, tc:AbsentFlow \\ 
+        tc:FlowSource & tc:ExternalSource, tc:InternalSource  \\
+        tc:MethodOfDescription & tc:TextDescription, tc:ParametricDescription,
+        tc:GraphicDescription \\\hline 
+    \end{tabular}
+    \end{center}
+
+    \subsection{Subconcepts of \texttt{tc:Flow}}
+
+    A flow consists of several parts (source, channel, receiver, control unit)
+    that are components by their own and hence modeled with the predicate
+    \texttt{od:subConceptOf}. For the moment they are attached to the flow with a
+    single predicate \texttt{od:hasStaticFlowComponent}.
+
+    \HGG{Ist es sinnvoll, mit Blick auf das Konzept eines „minimal arbeitsfähigen
+    Flusses“, der alle Teile (source, channel, receiver, control unit) enthalten
+    muss, hier das Prädikat weiter zu differenzieren?}
+
+    \subsection{\texttt{tc:FlowAnalysis}}
+
+    A flow analysis is an analytic process concerned with a certain \emph{flow}
+    (model) in a certain context.  The \emph{context} encapsulates all information
+    about the exact conditions of the analysis (Goals, Requirements, Description
+    Method).
+
+    The goal of a functional analysis is to create a plan for a flow
+    transformation based on the \emph{flow analysis rules} that can be applied to
+    the flow and improves it in the given context. Hence the target of a flow
+    analysis is a special document in a (yet hypothetic) Flow Transformation
+    Description Language.
+
+    The ontological representation of such a process is extremely difficult and is
+    not considered here. The ontology of the flow analysis is restricted to the
+    description of the \emph{formative elements of the analysis} and the creation
+    of a manually generated \emph{FlowTransformation} document.
+
+    \HGG{Ich denke, diese Einschränkung sollte gemacht werden. Es wäre weiter zu
+    klären, ob \texttt{od:hasDescriptionMethod} sowohl einen Fluss als auch eine
+    Flussanalyse als \texttt{rdfs:domain} hat. In Ermangelung einer besseren Idee
+    habe ich einer \texttt{tc:FlowTransformation} den Typ \texttt{foaf:Document}
+    zugeordnet. }
 
     \section{Modelling the Flow Analysis Ontocard}
     \subsection{Preliminaries and context}
