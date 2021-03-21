@@ -11,7 +11,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{March 8,  2021}
+\date{March 19,  2021}
 
 \begin{document}
 \maketitle
@@ -311,7 +311,7 @@ distinguished.
 
 \subsection{The TOP concept of a system}
 
-A central concept in TOP modelling is the distinction between
+A central concept in TOP modelling is the distinction between the stages of 
 \begin{itemize}[noitemsep]
 \item [(1)] the system as it is,
 \item [(2)] the TRIZ model of the system as it is,
@@ -360,30 +360,30 @@ follows:
   change of the system («system as required»). The TRIZ model includes the
   basic components of inventive thinking: analysis, synthesis, evaluation.
 \end{itemize}
-This distinction, which is important for the planning and subsequent execution
-of the transformation of the system, is applied to all sub-concepts in the TOP
-modelling approach.  
+This distinction of modelling stages, which is important for the planning and
+subsequent execution of the transformation of the system, is applied to all
+sub-concepts in the TOP modelling approach.
 
 As already explained above, the difference between the «system as it is» (1)
 and the «TRIZ model of the system as it is» (2) cannot refer to the real-world
 system itself, since it is accessible to (verbal) transformations only via its
 description form and thus its modelling. At this point, a reference to the
 hill model is more likely to be assumed, in which, in the sense of \cite{TT},
-where one has to progress from the problem description and model (1) to the
-TRIZ task model (2), further to the TRIZ solution model (3) and finally to a
-description of the solution to be implemented in reality (4). (1) and (4)
-refer to the variety of domain-specific modellings and ontologies, which have
-little to do with TRIZ and a TRIZ ontology beyond the methodological
-dimension.  On the contrary, in the context of the transition $(1) \to (2)$,
-domain-specific approaches must be \emph{translated} into suitable TRIZ
-concepts.  The same applies to the retransition $(3) \to (4)$. Hence
-content-related TRIZ concepts concentrate on phases (2) and (3) and
-methodological TRIZ concepts on the transitions $(1) \to (2)$, $(2) \to (3)$
-and $(3) \to (4)$. Hence the transition $(1) \to (2)$ itself contains two
-steps -- a readjustment $(1) \to (1')$ of the domain-specific model to prepare
-it for application of TRIZ concepts and the application $(1') \to (2)$ of
-these concepts, as it is separated, e.g. in the TRIZ application concept of
-the TRIZ Trainer \cite{TT}. 
+where one has to progress from the problem description and model (1) -- rather
+than from the «system» -- to the TRIZ task model (2), further to the TRIZ
+solution model (3) and finally to a description of the solution to be
+implemented in reality (4). (1) and (4) refer to the variety of
+domain-specific modellings and ontologies, which have little to do with TRIZ
+and a TRIZ ontology beyond the methodological dimension.  On the contrary, in
+the context of the transition $(1) \to (2)$, domain-specific approaches must
+be \emph{translated} into suitable TRIZ concepts.  The same applies to the
+retransition $(3) \to (4)$. Hence content-related TRIZ concepts concentrate on
+phases (2) and (3) and methodological TRIZ concepts on the transitions $(1)
+\to (2)$, $(2) \to (3)$ and $(3) \to (4)$. Hence the transition $(1) \to (2)$
+itself contains two steps -- a readjustment $(1) \to (1')$ of the
+domain-specific model to prepare it for application of TRIZ concepts and the
+application $(1') \to (2)$ of these concepts, as it is separated, e.g. in the
+TRIZ application concept of the TRIZ Trainer \cite{TT}.
 
 \subsection{Modelling Systems and TRIZ Models}
 
@@ -399,13 +399,19 @@ distinction only becomes relevant at the level of modelling concrete systems,
 alone the verbal means for distinguishing these purposes must be provided at
 the ontology level. The WOP approach takes a different route here and models
 this connection not through subconcepts, but as a predicate
-\texttt{od:hasMode}.  This also makes it easy to extend the
+\texttt{od:belongsTo} with value from the \texttt{tc:StageValue} range
+\begin{quote}\tt
+  tc:System, tc:Model, tc:SystemAsIs, tc:SystemAsRequired,\\ tc:ModelAsIs,
+  tc:ModelAsRequired
+\end{quote}
+to assign to a concept \emph{instance} of a concrete modelling one of the
+modelling stages as discussed above.  This also makes it easy to extend the
 \texttt{rdfs:range} of this property if, for example, further system versions
 are to be included in the modelling of a special system in the context of an
 application of the system operator.
 
 This significantly reduces the number of concepts to be distinguished, which
-is also indicated by reasons of homogeneity, since the different versions of
+is also indicated by reasons of homogeneity, since the different stages of
 this system model must be structurally similar in order to be able to capture
 structural continuities within its development, and thus must be modelled by a
 single uniform concept.
@@ -414,7 +420,7 @@ For this purpose, the WOP approach distinguishes (at the moment) the concept
 categories \texttt{od:Component} for describing the \emph{structural}
 organisation of a system and its parts, and \texttt{od:PropertyDomain} for
 describing the structure of \emph{property domains} of a system and its
-parts.  Both are used as values of the preodicate \texttt{od:WOPCategory},
+parts.  Both are used as values of the predicate \texttt{od:WOPCategory},
 following a modelling approach of categories of V. Souchkov in his glossary. 
 
 \section{Typical modelling situations}
@@ -439,14 +445,14 @@ table).
 \emph{Example:}  Colour (red, green, yellow, blue).
 
 \begin{code}
-  ex:MeiersCar od:hasColour tc:green . \\[4pt]
+  ex:MeiersCar a ex:Car; od:hasColour tc:green . \\[4pt]
     
   od:hasColour a rdfs:Property;\\
-    \>rdfs:domain tc:Car;\\
+    \>rdfs:domain ex:Car;\\
     \>rdfs:range tc:Colour .\\[4pt]
 
   tc:Colour a skos:Concept, od:AdditionalConcept ;\\
-  \>skos:prefLabel {\dq}Color{\dq}@en, {\dq}Farbe{\dq}@de ;\\
+  \>skos:prefLabel {\dq}Colour{\dq}@en, {\dq}Farbe{\dq}@de ;\\
   \>od:WOPCategory od:PropertyDomain ;\\
   \>od:allowedValues tc:red, tc:green, tc:yellow, tc:blue .\\[4pt]
 
@@ -497,6 +503,50 @@ tc:Pump\\
     \>a skos:Concept, od:AdditionalConcept .
 \end{code}
 
+\subsection{Classification of transformations}
+
+The concept of \emph{transformation} is one of the central TRIZ concepts and
+means that a real-world system or parts of it is transformed from a «system as
+it is» into a «system as required» according to predefined principles oriented
+at an \emph{ideal end result} (IER). As explained above in more detail, the
+expected outcome of the planned transformation (of the «system as required»)
+is to be distinguished from the real outcome of the execution of the
+transformation (of the «system as it became»), which gives rise to the
+execution of further transformations, iterative transformation approaches and
+more elaborated transformation concepts such as versions of system
+generations.  The concept of transfomation is central to such further
+elaborations, which, however, are beyond the scope of our current ontological
+modelling.
+
+A transformation is associated with a change of state of the system under
+investigation and thus occurs at level 1 -- the modelling of the real-world
+system -- as an RDF predicate. The transformation pattern applied here are
+concepts on level 2 of the modelling -- the ontological modelling -- and
+describe the RDF predicate more precisely. In this ontology modelling, the RDF
+predicate appears as RDF subject to which the corresponding transformation
+patterns are assigned.
+
+This is demonstrated by an example from \cite[Fig. 4.20]{Koltze2017}, in which
+the evolutionary lines of boats are described.  Here the transformation from a
+tree trunk to a row boat is explained. 
+\begin{code}
+  ex:TreeTrunk ex:addPaddles ex:Rowboat .\\[4pt]
+
+  ex:addPaddles a rdf:Property, skos:Concept;\\
+  \>od:usesPattern tc:NewPrinciplePattern,
+  tc:IncreasingControllabilityPattern;  \\
+  \> skos:note {\dq}{\dq}{\dq}The non-controllable floating tree trunk on the
+  river is \\\>\>provided with oars with which the boat can be propelled by
+  muscle power \\\>\> and also steered{\dq}{\dq}{\dq}@en .
+\end{code}
+The RDF statements are part of a (level 1) description of the real world
+evolution process of boats and use (in the second sentence) the (level 2) TRIZ
+development pattern \texttt{tc:NewPrinciplePattern} and
+\texttt{tc:IncreasingControllabilityPattern} that are bound to the level 1
+predicate \texttt{ex:addPaddles} (being a concept not of TRIZ but of the
+special evolution process) by the level 3 predicate \texttt{od:usesPattern} (a
+concept of TRIZ methodology).
+
 \begin{thebibliography}{xxx}
   \raggedright
 \bibitem{GSA} Altshuller Web Site. Basic TRIZ terms.
@@ -508,12 +558,19 @@ tc:Pump\\
   Proceedings of the TRIZ Future Conference 2020, p. 399-410.  An enlarged
   German version is available as
   \url{http://dx.doi.org/10.14625/graebe_20200519}. 
+\bibitem{Koltze2017} Karl Koltze, Valeri Souchkov (2017).  Systematische
+  Innovationsmethoden (in German).  Hanser, Munich. ISBN 978-3-446-45127-8.
 \bibitem{TOP2019} Andrej Kuryan, Valeri Souchkov, Dmitri Kucharavy. Towards
   ontology of TRIZ. Proceedings of TRIZ Developers Summit 2019 Conference,
   Minsk, 2019.  \url{https://wumm-project.github.io/Ontology.html}
 \bibitem{TOP2020} Andrej Kuryan, Michail Rubin, Nikolaj Shchedrin, Olga
   Eckardt, Natalja Rubina.  TRIZ Ontology. Current State and Perspectives. TDS
   2020 (in Russian).  \url{https://wumm-project.github.io/Ontology.html}
+\bibitem{TBK2007} Simon Litvin, Vladimir Petrov, Michail Rubin (2007). TRIZ
+  Body of Knowledge. \\ \url{https://triz-summit.ru/en/203941}.
+\bibitem{TBK2012} Simon Litvin, Vladimir Petrov, Michail Rubin, Victor Fey
+  (2012). TRIZ Body of
+  Knowledge. \\ \url{https://matriz.org/wp-content/uploads/2012/07/TRIZ-Body-of-Knowledge-final.pdf}
 \bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
   \url{https://www.w3.org/TR/skos-reference/}.  
 \bibitem{SKOS-Primer} SKOS Simple Knowledge Organization System Primer.
@@ -521,11 +578,6 @@ tc:Pump\\
 \bibitem{Souchkov2018} Valeri Souchkov. Glossary of TRIZ and TRIZ-related
   terms, version 1.2.  The International TRIZ Association, MATRIZ
   2018.\\ \url{https://matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}
-\bibitem{TBK2007} Simon Litvin, Vladimir Petrov, Michail Rubin (2007). TRIZ
-  Body of Knowledge. \\ \url{https://triz-summit.ru/en/203941}.
-\bibitem{TBK2012} Simon Litvin, Vladimir Petrov, Michail Rubin, Victor Fey
-  (2012). TRIZ Body of
-  Knowledge. \\ \url{https://matriz.org/wp-content/uploads/2012/07/TRIZ-Body-of-Knowledge-final.pdf}
 \bibitem{TT} Nikolai Shpakovski et al. The TRIZ Trainer.
   \url{https://triztrainer.ru}, \url{https://triz-trainer.com},
 \bibitem{TOP-Glossary} TRIZ 100 Glossary. A short glossary of key TRIZ
