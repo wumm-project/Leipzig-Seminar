@@ -11,7 +11,7 @@
 
 \author{Hans-Gert Gr\"abe}
 
-\date{March 21,  2021}
+\date{March 22,  2021}
 
 \begin{document}
 \maketitle
@@ -43,6 +43,36 @@ essential TRIZ concepts has been identified, which are to be defined more
 precisely. The glossary \cite{Souchkov2018} by V. Souchkov in its version 1.2
 serves as basis for this work. In the meantime a first list of 100 terms
 \cite{TOP-Glossary} has been published on the TOP website.
+
+The efforts differ significantly from earlier approaches to the development of
+a TRIZ ontology \cite{Bultey2007, Bultey2015, Cavallucci2011, Dubois2007,
+  Zanni2009, Zanni2013}. In those earlier works, the focus was rather on the
+modelling of concrete TRIZ analysis steps with the aim to incorporate the
+modelling into corresponding tools, e.g. \cite{Cavallucci2011}, or even on the
+modelling of processual elements in flow charts, e.g. \cite{Bultey2015}.
+
+The basis for these and the more recent modelling in the TOP project is the
+OWL ontology. However, the formal descriptions of logical relationships that
+are possible with it -- such as limits for the cardinality of attribute values
+of a predicate, which are required to implement of a web interface -- are
+expressed in more recent developments of the Semantic Web on the basis of
+SHACL, the inference possibilities of OWL that go beyond this are hardly used
+in practice, since OWL-Full leads in sufficient generality to provably
+undecidable problems, but the modelling restrictions of weaker OWL variants do
+not meet the requirements of real-world modelling even of \emph{structural}
+relationships in TRIZ.
+
+Our approach therefore returns to modelling based on RDF and consistently
+relies on the SKOS ontology as a lightweight framework for modelling
+structural relationships in conceptual systems. On this basis we model
+\emph{structural} aspects and relationships between TRIZ concepts and tools.
+\emph{Processual} relationships as in \cite{Bultey2015} or questions of an
+implementation of web interfaces as in \cite{Cavallucci2011} are initially not
+covered, although especially for the second question comprehensive experience
+from other application areas with the use of SHACL is available. Such a
+restriction seems reasonable to us in view of general insights into the
+development of conceptual systems \cite{Vygotsky1934} for a first stage of
+ontological modelling.
 
 The main disadvantage of the TOP approach so far is the inconsistent use of
 semantic means. Such means are used in the background and in the internal
@@ -613,9 +643,26 @@ approach of categories of V. Souchkov in his glossary.
   \raggedright
 \bibitem{GSA} Altshuller Web Site. Basic TRIZ terms.
   \url{https://www.altshuller.ru/thesaur/thesaur.asp}
-\bibitem{BergerLuckmann} Peter L. Berger,Thomas Luckmann. The Social
+\bibitem{BergerLuckmann} Peter L. Berger, Thomas Luckmann. The Social
   Construction of Reality: A Treatise in the Sociology of Knowledge. Anchor
   Books, 1966. ISBN 978-0-385-05898-8.
+\bibitem{Bultey2007} Alexis Bultey, F. de Bertrand de Beuvron, Fran\c{c}ois
+  Rousselot (2007). A substance-field ontology to support the TRIZ thinking
+  approach. International Journal of Computer Applications in Technology 30
+  (1), pp. 113-124.  \url{https://doi.org/10.1504/IJCAT.2007.015702}.
+\bibitem{Bultey2015} Alexis Bultey, Wei Yan, Cécilia Zanni (2015). A Proposal
+  of a Systematic and Consistent Substance-field Analysis. Procedia
+  Engineering 131, pp. 701-710.
+  \url{https://doi.org/10.1016/j.proeng.2015.12.357}.
+\bibitem{Cavallucci2011} Denis Cavallucci, Fran\c{c}ois Rousselot, Cécilia
+  Zanni (2011). An ontology for TRIZ. Proc. TRIZ Future Conference 2009.
+  Procedia Engineering 9, 251–260.
+  \url{https://doi.org/10.1016/j.proeng.2011.03.116}.
+\bibitem{Dubois2007} Sébastien Dubois, Philippe Lutz, Fran\c{c}ois Rousselot,
+  Gérard Vieux (2007).  A model for problem representation at various generic
+  levels to assist inventive design. International Journal of Computer
+  Applications in Technology 30 (1), pp. 105-112.
+  \url{https://doi.org/10.1504/IJCAT.2007.015701}.
 \bibitem{Graebe2020} Hans-Gert Gr\"abe. Human and their technical systems.  In
   Proceedings of the TRIZ Future Conference 2020, p. 399-410.  An enlarged
   German version is available as
@@ -650,6 +697,8 @@ approach of categories of V. Souchkov in his glossary.
 \bibitem{VDI} VDI-Norm 4521 Blatt 1. Erfinderisches Problemlösen mit TRIZ --
   Grundlagen und Begriffe (Inventive problem solving with TRIZ -- Basics and
   terminology). April 2016.
+\bibitem{Vygotsky1934} Lev S. Vygotsky (1934). Denken und Sprechen.
+  Akademie-Verlag, Berlin 1964.
 \bibitem{WUMM-github} The WUMM github repositories.
   \url{https://github.com/wumm-project}. 
 \bibitem{WUMM-pages} The github pages of the WUMM Project.
@@ -662,6 +711,18 @@ approach of categories of V. Souchkov in his glossary.
   \url{http://wumm.uni-leipzig.de:8891/sparql}.
 \bibitem{WOP} The WUMM TOP Companion Project.
   \url{https://wumm-project.github.io/Ontology.html}
+\bibitem{Zanni2009} Cécilia Zanni-Merk, Fran\c{c}ois Rousselot, Denis
+  Cavallucci (2009). An Ontological Basis for Inventive Design. Computers in
+  Industry, 60 (8), pp. 563-574.
+\bibitem{Zanni2013} Cécilia Zanni-Merk, Fran\c{c}ois de Bertrand de Beuvron,
+  Fran\c{c}ois Rousselot, Wei Yan (2013). A formal ontology for a generalized
+  inventive design methodology.  Applied Ontology, 8 (4), pp. 231-273.
+  \url{https://doi.org/10.3233/AO-140128}.
 \end{thebibliography}
+
+
+   
+   
+    
 
 \end{document}
