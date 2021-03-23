@@ -7,8 +7,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix od: <http://opendiscovery.org/rdf/Model#> .
 @prefix tc: <http://opendiscovery.org/rdf/Concept/> .
-@prefix odp: <http://opendiscovery.org/rdf/Person/> .
-@prefix odq: <http://opendiscovery.org/rdf/Principle/> .
+@prefix tc: <http://opendiscovery.org/rdf/Principle/> .
 
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
@@ -17,7 +16,7 @@
 <http://opendiscovery.org/rdf/BIB/Book/9781539892182>
     dc:language "en"^^dcterms:RFC4646 ;
     dc:publisher "Independently published"@en ;
-    dcterms:creator odp:Shpakovsky_NA ;
+    dcterms:creator tc:Shpakovsky_NA ;
     dcterms:issued "2016"^^dcterms:W3CDTF ;
     dcterms:title "Tree of Technology Evolution"@en ;
     dcterms:abstract """multiline abstract""" ;
@@ -106,7 +105,7 @@ tc:MonoBiPolyPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "The Mono-bi-poly transition"@en, "Mono-bi-poly Transition"@de ;
     skos:example "Spanner"@en, "Schraubenschlüssel"@de ;
-    skos:broader odq:Copying, tc:TransitiontoMacroLevel .
+    skos:broader tc:Copying, tc:TransitiontoMacroLevel .
 
 tc:MonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
@@ -139,7 +138,7 @@ tc:TrimmingPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de ;
     skos:example "Jablochkoff candle"@en, "Jablotschkowsche Kerze"@de ;
-    skos:broader odq:Separation, tc:Trimming .
+    skos:broader tc:Separation, tc:Trimming .
 # Initial system, Removing a single Object, Removing several objects, Maximally trimmed system, Ideal object
 
 tc:InitialSystem
@@ -204,7 +203,7 @@ tc:SegmentationPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
     skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de ;
-    skos:broader odq:Segmentation, tc:TrendofTransitiontoMicrolevel .
+    skos:broader tc:Segmentation, tc:TrendofTransitiontoMicrolevel .
 # Monolith, Two parts, Many parts, Granules, Powder, Paste, Liquid, Foam, Fog, Plasma, Field, Vacuum, Ideal object
 
 tc:Monolith
@@ -343,7 +342,7 @@ tc:GeometricalEvolutionPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Geometrical Evolution"@en, "Geometrische Evolution"@de ;
     skos:example "Evolution of the computer mouse shape"@en, "Evolution der Computermausform"@de ;
-    skos:broader odq:BallSimilarity .
+    skos:broader tc:BallSimilarity .
 # Prism, Cylinder, Sphere, Compilcated 3D structure
 # Flat surface, Cylindrical surface, Spherical surface, Combined surface
 # Straight line, Line curved in one direction, Line curved in two directions, Complicated line
@@ -407,7 +406,7 @@ tc:LineCurvedTwoDirections
 tc:ComplicatedLine
     od:subConceptOf tc:GeometricalEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Complicated line"@en, "KOmplexe Linie"@de .
+    skos:prefLabel "Complicated line"@en, "Komplexe Linie"@de .
 
 tc:Point
     od:subConceptOf tc:GeometricalEvolutionPattern ;
@@ -421,7 +420,7 @@ tc:DynamizationPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Dynamization"@en, "Dynamisierung"@de ;
     skos:example "Dynamization of the toothbrush head/handle mount"@en, "Dynamisierung der Zahnbürstenkopf-/Griffhalterung"@de ;
-    skos:broader odq:Dynamization .
+    skos:broader tc:Dynamization .
 # Tight coupling, One hinge, Several hinges, Spherical hinges
 # Flexible couplings, Parts coupled by field, Uncoupled parts
 
@@ -467,7 +466,7 @@ tc:IncreasingControllabilityPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing controllability"@en, "Erhöhung der Kontrollierbarkeit"@de ;
     skos:example "trailer train wheels"@en, "Anhängerzugräder"@de ;
-    skos:broader odq:Mediator .
+    skos:broader tc:Mediator .
 # Manual control, Semi-automatic control, Automatic control
 
 tc:ManualControl
@@ -492,7 +491,7 @@ tc:IncreasingActionCoordinationPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing of action coordination"@en, "Erhöhung der Koordination der Aktionen"@de ;
     skos:example "gear-boxes"@en, "Getriebe"@de ;
-    skos:broader odq:Coupling, odq:Feedback .
+    skos:broader tc:Coupling, tc:Feedback .
 # Uncoordinated actions, Partially coordinated actions, Coordinated actions, Actions performed during intervals
 
 tc:UncoordinatedActions
@@ -549,7 +548,7 @@ tc:ElementaryFunction
 
 # tc:MainFunction
 # tc:AuxilliaryFunction
-# -> odq:Conversely 
+# -> tc:Conversely 
 
 tc:MorphologicalBox  # MorphologicalTables, Problems
     a skos:Concept, od:AdditionalConcept ;
@@ -569,11 +568,42 @@ tc:EvolutionTreeTrunk
 tc:SpecificEvolutionPattern
     od:subConceptOf tc:EvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Specific evolution Patterns for an observed object"@en, ""@de .
+    skos:prefLabel "Specific evolution Patterns for an observed object"@en, "Spezifisches Evolutionsmuster"@de .
 
 # tc:ConstructionOfNewEvolutionTrees
 
 # Using Evolution Trees for practical purposes
+
+tc:BasicPrinciplesOfWorkingWithTheEvolutionTree
+    od:hasSubConcept tc:SequenceOfOperationsDuringInformationSearch, tc:ComparingTheEvolutionTreesOfBasicAndRealObject, tc:ComparingTheBasicAndSpecificEvolutionTreeOfRealObject ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Basic principles of working with the evolution tree"@en, "Grundlegende Prinzipien "@de .
+
+tc:SequenceOfOperationsDuringInformationSearch
+    od:subConceptOf tc:BasicPrinciplesOfWorkingWithTheEvolutionTree ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Sequence of operations during information search"@en, "Algorithmus der Informationssuche"@de .
+
+tc:ComparingTheEvolutionTreesOfBasicAndRealObject
+    od:subConceptOf tc:BasicPrinciplesOfWorkingWithTheEvolutionTree ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Comparing the evolution trees of a basic and real object"@en, "Vergleich der Evolutionsbäume eines abstrakten und realen Objektes"@de .
+
+tc:ComparingTheBasicAndSpecificEvolutionTreeOfRealObject
+    od:subConceptOf tc:BasicPrinciplesOfWorkingWithTheEvolutionTree ;
+    od:hasSubConcept tc:SearchingForOmittedTransformationVersions, tc:ExtendingUncompletedEvolutionPatterns ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Comparing the basic and specific Evolution Trees of a real object"@en, "Vergleich des grundlegenden und spezifischen Evolutionsbaumes eines realen Objektes"@de .
+
+tc:SearchingForOmittedTransformationVersions
+    od:subConceptOf tc:ComparingTheBasicAndSpecificEvolutionTreeOfRealObject ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Searching for omitted transformation versions of an object and filling blank boxes on the basic Evolution Tree"@en, "Suche nach ausgelassenen Transformationsversionen und Füllen der Lücken am grundlegenden Evolutionsbaum"@de .
+
+tc:ExtendingUncompletedEvolutionPatterns
+    od:subConceptOf tc:ComparingTheBasicAndSpecificEvolutionTreeOfRealObject ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Extending uncompleted evolution patterns to their logical end"@en, "Erweiterung unvollständiger Evolutionsmuster zu ihrem logischen Ende"@de .
 
 tc:InformationFieldSearch
     od:hasSubConcept tc:FrontalSearch, tc:StructuralSearch ;
@@ -593,8 +623,10 @@ tc:StructuralSearch
     skos:definition "Determine in advance where the required information is concentrated using the versions of the basic evolution tree"@en, "Im Voraus ermitteln wo die benötigte Information konzentriert ist"@de ;
     skos:broader tc:BasicEvolutionTrees .
 
-
-# tc:PreliminaryConceptSpectrum
+tc:ExpandPreliminaryConceptSpectrum
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Expanding the spectrum of preliminary concepts"@en, "Erweiterung des Spektrums der Vorkonzepte"@de ;
+    skos:definition "The purpose of using the Evolution Tree for problem solving is maximally expanding the spectrum of proposed concepts and providing material for the analysis of alternative ways of solving a given problem."@en, "Der Zweck der Verwendung des Evolutionsbaums zur Problemlösung ist die maximale Erweiterung des Spektrums der vorgeschlagenen Konzepte und die Bereitstellung von Material für die Analyse alternativer Wege zur Lösung eines gegebenen Problems."@de .
 
 # A holder is a tool and a part is an object. They perform the function «Holding an object». Such a structure may be part of many technical systems (Fig. 6.19).
 
@@ -633,6 +665,7 @@ tc:Prediction
     od:hasSubConcept tc:QuantitativePrediction, tc:QuantitativePrediction ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Prediction of the evolution of technical systems"@en, "Vorhersage der Evolution technischer Systeme"@de ;
+    skos:altLabel "Forecast"@en, "Prognose"@de ;
     skos:broader tc:EvolutionForecast .
 
 tc:QuantitativePrediction
@@ -644,14 +677,3 @@ tc:QuantitativePrediction
     od:subConceptOf tc:Prediction ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Qualitative Prediction"@en, "Qualitative Vorhersage"@de .
-
-# Evolution Screen of the Tree
-# ex:Screen
-#    od:subConceptOf tc:SpecificEvolutionTree ;
-#    skos:prefLabel "Specific "
-
-# maslows pyramid
-# Gesetze <-> Empfehlungen
-# transformation versioning
-# Assoziation Regeln <-> Konzepte die Regeln abdecken
-# Trimming als Sonderfall
