@@ -100,6 +100,24 @@ ex:Sailboat
     a ex:Boat ;
     ex:replaceSailWithSteamEngine ex:Steamboat ;
     skos:prefLabel "Sailboat"@en, "Boot mit Segeln"@de .
+ex:FreightSailer
+    a ex:Boat ;
+    skos:prefLabel "Freight sailer"@en, "Frachtsegler"@de .
+ex:BoatWithManySails
+    a ex:Boat ;
+    skos:prefLabel "Boat with many sails"@en, "Boot mit vielen Segeln"@de .
+ex:CargoSailingShips
+    a ex:Boat ;
+    skos:prefLabel "Cargo sailing ships"@en, "Fracht-Segelschiffe"@de .
+ex:MilitarySailingShips
+    a ex:Boat ;
+    skos:prefLabel "Military sailing ships"@en, "Militär-Segelschiffe"@de .
+ex:SportSailingYacht
+    a ex:Boat ;
+    skos:prefLabel "Sport sailing yacht"@en, "Sport-Segelyacht"@de .
+ex:RecreationalSailingYacht
+    a ex:Boat ;
+    skos:prefLabel "Recreational sailing yacht"@en, "Freizeit-Segelyacht"@de .
 
 ex:replaceSailWithSteamEngine
     a rdf:Property, skos:Concept ;
@@ -112,6 +130,12 @@ ex:Steamboat
     a ex:Boat ; 
     ex:replaceSteamEngineWithDieselEngine ex:Dieselboat ;
     skos:prefLabel "Steamboat"@en, "Dampfboot"@de .
+ex:CargoSteamShip
+    a ex:Boat ;
+    skos:prefLabel "Cargo steam ship"@en, "Frachtdampfer"@de .
+ex:TouristSteamShip
+    a ex:Boat ;
+    skos:prefLabel "Tourist steam ship"@en, "Touristen-Dampfer"@de .
 
 ex:replaceSteamEngineWithDieselEngine
     a rdf:Property, skos:Concept ;
@@ -124,6 +148,51 @@ ex:Dieselboat
     a ex:Boat ;
     ex:usePumpJetPropulsion ex:PumpJetBoat ;
     skos:prefLabel "Dieselboat"@en, "Boot mit Dieselantrieb"@de .
+ex:MilitaryUBoat
+    a ex:Boat ;
+    skos:prefLabel "Military U-Boat"@en, "Militär-U-Boot"@de .
+ex:PersonalUnderwaterJet
+    a ex:Boat ;
+    skos:prefLabel "Personal underwater jet"@en, "Personal Unterwasser-Jet"@de .
+ex:ResearchUBoat
+    a ex:Boat ;
+    skos:prefLabel "Research-U-Boat"@en, "Forschungs-U-Boot"@de .
+ex:ResearchDieselShip
+    a ex:Boat ;
+    skos:prefLabel "Research diesel ship"@en, "Diesel-Forschungsschiff"@de .
+ex:CargoDieselShip
+    a ex:Boat ;
+    skos:prefLabel "Cargo diesel ship"@en, "Diesel-Frachtschiff"@de .
+ex:DieselIcebreakerShip
+    a ex:Boat ;
+    skos:prefLabel "Diesel icebreaker ship"@en, "Diesel-Eisbrecher"@de .
+ex:DieselFerry
+    a ex:Boat ;
+    skos:prefLabel "Diesel ferry"@en, "Diesel-Fähre"@de .
+ex:DieselTanker
+    a ex:Boat ;
+    skos:prefLabel "Diesel tanker"@en, "Dieseltanker"@de .
+ex:DieselGlider
+    a ex:Boat ;
+    skos:prefLabel "Diesel glider"@en, "Dieselglider"@de .
+ex:DieselboatWithWaterHydrophoils
+    a ex:Boat ;
+    skos:prefLabel "Dieselboat with water hydrophils"@en, "Boot mit Wasser-Tragflächen"@de .
+ex:DieselTouristShip
+    a ex:Boat ;
+    skos:prefLabel "Diesel tourist ship"@en, "Diesel-Touristenshiff"@de .
+ex:DieselCruiser
+    a ex:Boat ;
+    skos:prefLabel "Diesel cruiser"@en, "Dieselkreuzer"@de .
+ex:MilitaryDieselShip
+    a ex:Boat ;
+    skos:prefLabel "Military diesel ship"@en, "Diesel-Militärschiff"@de .
+ex:DieselPatrolBoat
+    a ex:Boat ;
+    skos:prefLabel "Diesel patrol boat"@en, "Diesel-Patroullienboot"@de .
+ex:DieselTorpedoboat
+    a ex:Boat ;
+    skos:prefLabel "Diesel torpedo boat"@en, "Diesel-Torpedoboot"@de .
 
 ex:usePumpJetPropulsion
     a rdf:Property, skos:Concept ;
@@ -133,8 +202,17 @@ ex:usePumpJetPropulsion
 ex:PumpJetBoat
     a ex:Boat ;
     skos:prefLabel "Pump-jet boat"@en, "Boot mit Wasserstrahlantrieb"@de .
+ex:RocketBoat
+    a ex:Boat ;
+    skos:prefLabel "Rocket boat"@en, "Raketenboot"@de .
+ex:SportJetGlider
+    a ex:Boat ;
+    skos:prefLabel "Sport jet-glider"@en, "Sport-Jet-Glider"@de .
+ex:JetSki
+    a ex:Boat ;
+    skos:prefLabel "Jet-Ski"@en, "Jet-Ski"@de .
 
-ex:Dieselboat ex:replaceDieselEngineWithNuclearReactor ex:Atomboat .
+ex:PumpJetBoat ex:replaceDieselEngineWithNuclearReactor ex:Atomboat .
 ex:replaceDieselEngineWithNuclearReactor
     a rdf:Property, skos:Concept ;
     od:usesPattern tc:SegmentationPattern, tc:Field ;
@@ -144,7 +222,15 @@ ex:replaceDieselEngineWithNuclearReactor
 ex:Atomboat
     a ex:Boat ;
     skos:prefLabel "Atomboat"@en, "Boot mit Atomantrieb"@de .
-
+ex:AtomCargoShip
+    a ex:Boat ;
+    skos:prefLabel "Atom cargo ship"@en, "Atomgetriebenes Frachschiff"@de .
+ex:AtomUBoat
+    a ex:Boat ;
+    skos:prefLabel "Atom-U-Boat"@en, "Atomgetriebenes U-Boot"@de .
+ex:AtomIcebreaker
+    a ex:Boat ;
+    skos:prefLabel "Atom icebreaker"@en, "Atomgetriebener Eisbrecher"@de .
 
 
 #ex:Frachtsegler
