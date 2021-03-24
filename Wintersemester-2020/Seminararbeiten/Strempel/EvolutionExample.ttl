@@ -37,7 +37,8 @@ ex:TreeTrunk
     a ex:Boat ;
     ex:replaceTreeTrunkWithFloatingMattress ex:FloatingMattress ;
     ex:addPaddles ex:Rowboat ;
-    skos:prefLabel "Tree trunk"@en, "Baumstamm"@de .
+    skos:prefLabel "Tree trunk"@en, "Baumstamm"@de ;
+    skos:altLabel "No engine or power source"@en, "Kein Motor oder Energiequelle"@de .
 ex:FloatingMattress
     a ex:Boat ;
     skos:prefLabel "Floating mattress"@en, "Schwimmende Matraze"@de .
@@ -49,6 +50,7 @@ ex:addPaddles
     skos:definition "Non-steerable floating something is provided with oars, with which the boat can be propelled by muscle power and also steered"@en, "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
 ex:replaceTreeTrunkWithFloatingMattress
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Replace tree trunk with floating mattress"@en, "Baumstamm durch schwimmende Matratze ersetzen"@de .
 
 # rowboat
@@ -57,7 +59,8 @@ ex:Rowboat
     ex:addPaddles ex:BoatWithManyRowers ;
     ex:addRecreationalInstallations ex:RecreationalRowboat ;
     ex:replacePaddleWithSail ex:Sailboat ;
-    skos:prefLabel "Rowboat"@en, "Ruderboot"@de .
+    skos:prefLabel "Rowboat"@en, "Ruderboot"@de ;
+    skos:prefLabel "Manual labour as the power source"@en, "Manuelle Arbeit als Energiequelle"@de .
 ex:BoatWithManyRowers
     a ex:Boat ; 
     ex:addMilitaryInstallations ex:MilitaryRowboat ;
@@ -79,15 +82,19 @@ ex:RecreationalRowboat
 
 ex:addMilitaryInstallations
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add military installations"@en, "Militärische Anlagen hinzufügen"@de .
 ex:addSportInstallations
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add sport installations"@en, "Sportanlagen hinzufügen"@de .
 ex:addFreightRoom
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add freight room"@en, "Frachtraum hinzufügen"@de .
 ex:addRecreationalInstallations
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add recreational installations"@en, "Freizeiteinrichtungen hinzufügen"@de .
 ex:replacePaddleWithSail 
     a rdf:Property, skos:Concept ;
@@ -103,7 +110,8 @@ ex:Sailboat
     ex:addSportInstallations ex:SportSailingYacht ;
     ex:addRecreationalInstallations ex:RecreationalSailingYacht ;
     ex:replaceSailWithSteamEngine ex:Steamboat ;
-    skos:prefLabel "Sailboat"@en, "Boot mit Segeln"@de .
+    skos:prefLabel "Sailboat"@en, "Boot mit Segeln"@de ;
+    skos:altLabel "Wind as the power source"@en, "Wind als Energiequelle"@de .
 ex:FreightSailer
     a ex:Boat ;
     skos:prefLabel "Freight sailer"@en, "Frachtsegler"@de .
@@ -127,6 +135,7 @@ ex:RecreationalSailingYacht
 
 ex:addSails
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add sails"@en, "Segel hinzufügen"@de .
 ex:replaceSailWithSteamEngine
     a rdf:Property, skos:Concept ;
@@ -150,6 +159,7 @@ ex:TouristSteamShip
 
 ex:addTouristInstallations
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add installations for tourists"@en, "Anlagen für Touristen hinzufügen"@de .
 ex:replaceSteamEngineWithDieselEngine
     a rdf:Property, skos:Concept ;
@@ -225,36 +235,47 @@ ex:DieselTorpedoboat
 
 ex:usePumpJetPropulsion
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Use pump-jet propulsion"@en, "Nutze Wasserstrahlantrieb"@de .
 ex:addDiveCapabilities
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add dive capabilities"@en, "Füge Eigenschaften zum Tauchen hinzu"@de .
 ex:addResearchInstallations
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add research installations"@en, "Füge Forschunseinrichtungen hinzu"@de .
 ex:transformToPersonalUnderwaterJet
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Transform to personal underwater jet"@en, "Transformieren in einen personal Unterwasser-Jet"@de .
 ex:addIcebreakingCapabilities
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add icebreaking capabilities"@en, "Eisbrecher hinzufügen"@de .
 ex:addFerryCapabilities
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add ferry capabilities"@en, "Passagiertransportfähigkeiten hinzufügen"@de .
 ex:addTankerCapabilities
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add tanker capabilities"@en, "Umbau zum Tanker"@de .
 ex:addGlidingCapabilities
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add gliding capabilities"@en, "Elemente zum Gleiten hinzufügen"@de .
 ex:addWaterHydrophils
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Add water hydrophils"@en, "Füge Wassertragflächen hinzu"@de .
 ex:specializationForPatrol
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Specialization for patrol duty"@en, "Spezialisierung für die Patrouille"@de .
 ex:specializationForTorpedos
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Specialization for carrying torpedos"@en, "Spezialisierung für Torpedos"@de .
 
 # pumpjetboat
@@ -277,6 +298,7 @@ ex:JetSki
 
 ex:useRocketPropulsion
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
     skos:prefLabel "Use rocket propulsion"@en, "Raketenantrieb verwenden"@de .
 ex:replaceDieselEngineWithNuclearReactor
     a rdf:Property, skos:Concept ;
@@ -301,6 +323,60 @@ ex:AtomIcebreaker
     skos:prefLabel "Atom icebreaker"@en, "Atomgetriebener Eisbrecher"@de .
 
 
+# specific evolution tree of the propeller
+
+ex:AircraftPropulsionDevice
+    a tc:SpecificEvolutionTree ;
+    skos:prefLabel "Propulsion device for aircraft"@en, "Antriebsvorrichtung für Flugzeuge"@de .
+
+ex:SingleBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerBlade ex:TwoBladePropeller ;
+    skos:prefLabel "Single blade propeller"@en, "Einblatt-Propeller"@de .
+ex:TwoBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerBlade ex:MultiBladePropeller ;
+    skos:prefLabel "Two blade propeller"@en, "Zweiblatt-Propeller"@de .
+ex:MultiBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerRow ex:DoubleRowPropeller ;
+    skos:prefLabel "Multiblade propeller"@en, "Mehrblättriger Propeller"@de .
+ex:DoubleRowPropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:useReactionJet ex:ReactionJet ;
+    skos:prefLabel "Double row propeller"@en, "Zweireihiger Propeller"@de .
+ex:ReactionJet
+    a ex:AircraftPropulsionDevice ;
+    ex:useIonFlow ex:IonFlow ;
+    skos:prefLabel "Reaction jet"@en, "Reaktionsstrahl"@de .
+ex:IonFlow
+    a ex:AircraftPropulsionDevice ;
+    ex:usePhotonFlow ex:PhotonFlow ;
+    skos:prefLabel "Ion flow"@en, "Ionenfluss"@de .
+ex:PhotonFlow
+    a ex:AircraftPropulsionDevice ;
+    skos:prefLabel "Photon flow"@en, "Photonenfluss"@de .
+
+ex:addPropellerBlade
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:TwoParts, tc:ManyParts ;
+    skos:prefLabel "Add propeller blade"@en, "Propellerblatt hinzufügen"@de .
+ex:addPropellerRow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:ManyParts ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
+ex:useReactionJet
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Gas ;
+    skos:prefLabel "Use reaction jet"@en, "Reaktionsstrahl nutzen"@de .
+ex:useIonFlow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Plasma ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
+ex:usePhotonFlow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Field ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
 
 
 
@@ -1094,6 +1170,7 @@ ex:MagneticGuide
 
 ex:useMATChEMOperator
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:MATChEMOperator ;
     skos:prefLabel "Use MATChEM (field introduction) operator"@en ;
     skos:definition "Transformation via field type: Mechanical - Acoustic - Thermal - Chemical - Electric - Magnetic"@en .
 
