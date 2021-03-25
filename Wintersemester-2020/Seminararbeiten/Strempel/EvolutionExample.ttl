@@ -17,105 +17,6 @@
     skos:prefLabel "Evolution Trees - an Example" ;
     owl:imports <http://opendiscovery.org/rdf/Ontologies/EvolutionTrees/> .
 
-ex:Boat
-    a tc:SpecificEvolutionTree ;
-    ex:transitionsTo ex:TreeTrunk ;
-    skos:prefLabel "Boat"@en, "Boot"@de ;
-    skos:definition "Specific evolution tree of the power source of the ships propulsion"@en .
-
-ex:TreeTrunk 
-    a ex:Boat ;
-    skos:prefLabel "Tree trunk"@en, "Baumstamm"@de .
-
-ex:Rowboat 
-    a ex:Boat ; 
-    skos:prefLabel "Rowboat"@en, "Ruderboot"@de .
-
-ex:Sailboat 
-    a ex:Boat ;
-    skos:prefLabel "Sailboat"@en, "Boot mit Segeln"@de .
-
-ex:Steamboat
-    a ex:Boat ; 
-    skos:prefLabel "Steamboat"@en, "Dampfboot"@de .
-
-ex:Dieselboat
-    a ex:Boat ;
-    skos:prefLabel "Dieselboat"@en, "Boot mit Dieselantrieb"@de .
-
-# ex:DuesenSchiff a ex:Boot; skos:prefLabel "Boot mit Jetantrieb"@de .
- 
-ex:Atomboat
-    a ex:Boat ;
-    skos:prefLabel "Atomboat"@en, "Boot mit Atomantrieb"@de .
-
-
-#ex:SchwimmendeMatraze
-#ex:VieleRuderer
-#ex:MilitaerRuderboot
-#ex:SportRuderboot
-#ex:FrachtRuderboot
-#ex:FreizeitRuderboot
-
-#ex:Frachtsegler
-#ex:BootMitVielenSegeln
-#ex:FrachtSegelschiffe
-#ex:MilitaerSegelschiffe
-#ex:SportSegeljacht
-#ex:FreizeitSegeljacht
-
-#ex:Frachtschiff
-#ex:Touristenschiff
-#ex:MilitaerDampfschiff
-
-#ex:MilitaerUBoot
-#ex:PersonalUnterwasserJet
-#ex:ForschungsUBoot
-#ex:ForschungsSchiff
-
-
-# links of the evolution tree
-
-ex:TreeTrunk ex:addPaddles ex:Rowboat .
-ex:addPaddles 
-    a rdf:Property, skos:Concept ;
-    od:usesPattern tc:SegmentationPattern, tc:TwoParts ;
-    skos:definition "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
-
-ex:Rowboat ex:replacePaddleWithSail ex:Sailboat .
-ex:replacePaddleWithSail 
-    a rdf:Property, skos:Concept ;
-    od:usesPattern tc:SegmentationPattern, tc:Gas ;
-    skos:definition "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
-
-ex:Sailboat ex:replaceSailWithSteamEngine ex:Steamboat .
-ex:replaceSailWithSteamEngine
-    a rdf:Property, skos:Concept ;
-    od:usesPattern tc:SegmentationPattern, tc:Gas ;
-    skos:definition "Die Windkraft wird durch Dampfkraft ersetzt"@de .
-
-ex:Steamboat ex:replaceSteamEngineWithDieselEngine ex:Dieselboat .
-ex:replaceSteamEngineWithDieselEngine
-    a rdf:Property, skos:Concept ;
-    od:usesPattern tc:SegmentationPattern, tc:Liquid ;
-    skos:definition "Anstatt eines Dampfkessels wird ein Dieselmotor verwendet"@de .
-
-ex:Dieselboat ex:replaceDieselEngineWithNuclearReactor ex:Atomboat .
-ex:replaceDieselEngineWithNuclearReactor
-    a rdf:Property, skos:Concept ;
-    od:usesPattern tc:SegmentationPattern, tc:Field ;
-    skos:definition "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
-
-
-# specific evolution tree of screen
-# TODO remove screen/display from names, only use either screen or display
-# ex:addScreens -> ex:addScreen
-
-ex:Screen
-    a tc:SpecificEvolutionTree ;
-    skos:prefLabel "Specific evolution tree of the screen"@en .
-# elementary function
-
 # makes modelling easier
 ex:transitionsTo 
     a rdf:Property, skos:Concept ;
@@ -124,10 +25,370 @@ ex:segmentation
     a rdf:Property, skos:Concept ;
     skos:prefLabel "Segment the object"@en .
 
+
+# evolution tree of the boat
+ex:Boat
+    a tc:SpecificEvolutionTree ;
+    skos:prefLabel "Boat"@en, "Boot"@de ;
+    skos:definition "Specific evolution tree of the power source of the ships propulsion"@en .
+
+# tree trunk
+ex:TreeTrunk 
+    a ex:Boat ;
+    ex:replaceTreeTrunkWithFloatingMattress ex:FloatingMattress ;
+    ex:addPaddles ex:Rowboat ;
+    skos:prefLabel "Tree trunk"@en, "Baumstamm"@de ;
+    skos:altLabel "No engine or power source"@en, "Kein Motor oder Energiequelle"@de .
+ex:FloatingMattress
+    a ex:Boat ;
+    skos:prefLabel "Floating mattress"@en, "Schwimmende Matraze"@de .
+
+ex:addPaddles 
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:TwoParts ;
+    skos:prefLabel "Add paddles"@en, "Paddel hinzufügen"@de ;
+    skos:definition "Non-steerable floating something is provided with oars, with which the boat can be propelled by muscle power and also steered"@en, "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
+ex:replaceTreeTrunkWithFloatingMattress
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Replace tree trunk with floating mattress"@en, "Baumstamm durch schwimmende Matratze ersetzen"@de .
+
+# rowboat
+ex:Rowboat 
+    a ex:Boat ; 
+    ex:addPaddles ex:BoatWithManyRowers ;
+    ex:addRecreationalInstallations ex:RecreationalRowboat ;
+    ex:replacePaddleWithSail ex:Sailboat ;
+    skos:prefLabel "Rowboat"@en, "Ruderboot"@de ;
+    skos:prefLabel "Manual labour as the power source"@en, "Manuelle Arbeit als Energiequelle"@de .
+ex:BoatWithManyRowers
+    a ex:Boat ; 
+    ex:addMilitaryInstallations ex:MilitaryRowboat ;
+    ex:addSportInstallations ex:SportRowboat ;
+    ex:addFreightRoom ex:FreightRowboat ;
+    skos:prefLabel "Boat with many rowers"@en, "Boot mit vielen Ruderern"@de .
+ex:MilitaryRowboat
+    a ex:Boat ;
+    skos:prefLabel "Military rowboat"@en, "Militär-Ruderboot"@de .
+ex:SportRowboat
+    a ex:Boat ; 
+    skos:prefLabel "Sport rowboat"@en, "Sport-Ruderboot mit mehreren Ruderern"@de .
+ex:FreightRowboat
+    a ex:Boat ; 
+    skos:prefLabel "Freight rowboat"@en, "Fracht-Ruderboot"@de .
+ex:RecreationalRowboat
+    a ex:Boat ; 
+    skos:prefLabel "Recreational rowboat"@en, "Freizeit-Ruderboot"@de .
+
+ex:addMilitaryInstallations
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add military installations"@en, "Militärische Anlagen hinzufügen"@de .
+ex:addSportInstallations
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add sport installations"@en, "Sportanlagen hinzufügen"@de .
+ex:addFreightRoom
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add freight room"@en, "Frachtraum hinzufügen"@de .
+ex:addRecreationalInstallations
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add recreational installations"@en, "Freizeiteinrichtungen hinzufügen"@de .
+ex:replacePaddleWithSail 
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Gas ;
+    skos:prefLabel "Replace Paddle with sail"@en, "Paddel durch Segel ersetzen"@de ;
+    skos:definition "Rudder and thus muscle power is replaced by sails and thus wind power"@en, "Ruder und damit Muskelkraft wird durch Segel und damit Windkraft ersetzt"@de .
+
+# sailboat
+ex:Sailboat 
+    a ex:Boat ;
+    ex:addFreightRoom ex:FreightSailer ;
+    ex:addSails ex:BoatWithManySails ;
+    ex:addSportInstallations ex:SportSailingYacht ;
+    ex:addRecreationalInstallations ex:RecreationalSailingYacht ;
+    ex:replaceSailWithSteamEngine ex:Steamboat ;
+    skos:prefLabel "Sailboat"@en, "Boot mit Segeln"@de ;
+    skos:altLabel "Wind as the power source"@en, "Wind als Energiequelle"@de .
+ex:FreightSailer
+    a ex:Boat ;
+    skos:prefLabel "Freight sailer"@en, "Frachtsegler"@de .
+ex:BoatWithManySails
+    a ex:Boat ;
+    ex:addFreightRoom ex:CargoSailingShips ;
+    ex:addMilitaryInstallations ex:MilitarySailingShips ;
+    skos:prefLabel "Boat with many sails"@en, "Boot mit vielen Segeln"@de .
+ex:CargoSailingShips
+    a ex:Boat ;
+    skos:prefLabel "Cargo sailing ships"@en, "Fracht-Segelschiffe"@de .
+ex:MilitarySailingShips
+    a ex:Boat ;
+    skos:prefLabel "Military sailing ships"@en, "Militär-Segelschiffe"@de .
+ex:SportSailingYacht
+    a ex:Boat ;
+    skos:prefLabel "Sport sailing yacht"@en, "Sport-Segelyacht"@de .
+ex:RecreationalSailingYacht
+    a ex:Boat ;
+    skos:prefLabel "Recreational sailing yacht"@en, "Freizeit-Segelyacht"@de .
+
+ex:addSails
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add sails"@en, "Segel hinzufügen"@de .
+ex:replaceSailWithSteamEngine
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Gas ;
+    skos:prefLabel "Replace sail with steam engine"@en, "Segel durch Dampfmaschine ersetzen"@de ;
+    skos:definition "Wind power is replaced by steam power"@en, "Die Windkraft wird durch Dampfkraft ersetzt"@de .
+
+# steamboat
+ex:Steamboat
+    a ex:Boat ; 
+    ex:addFreightRoom ex:CargoSteamShip ;
+    ex:addTouristInstallations ex:TouristSteamShip ;
+    ex:replaceSteamEngineWithDieselEngine ex:Dieselboat ;
+    skos:prefLabel "Steamboat"@en, "Dampfboot"@de .
+ex:CargoSteamShip
+    a ex:Boat ;
+    skos:prefLabel "Cargo steam ship"@en, "Frachtdampfer"@de .
+ex:TouristSteamShip
+    a ex:Boat ;
+    skos:prefLabel "Tourist steam ship"@en, "Touristen-Dampfer"@de .
+
+ex:addTouristInstallations
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add installations for tourists"@en, "Anlagen für Touristen hinzufügen"@de .
+ex:replaceSteamEngineWithDieselEngine
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Liquid ;
+    skos:prefLabel "Replace steam engine with diesel engine"@en, "Dampfmaschine durch einen Dieselmotor ersetzen" ;
+    skos:definition "Instead of a steam engine, a diesel engine is used"@en, "Anstatt einer Dampfmaschine wird ein Dieselmotor verwendet"@de .
+
+# dieselboat
+ex:Dieselboat
+    a ex:Boat ;
+    ex:addDiveCapabilities ex:MilitaryUBoat ;
+    ex:addResearchInstallations ex:ResearchDieselShip ;
+    ex:addFreightRoom ex:CargoDieselShip ;
+    ex:addTouristInstallations ex:DieselTouristShip ;
+    ex:addMilitaryInstallations ex:MilitaryDieselShip ;
+    ex:addGlidingCapabilities ex:DieselGlider ; 
+    ex:usePumpJetPropulsion ex:PumpJetBoat ;
+    skos:prefLabel "Dieselboat"@en, "Boot mit Dieselantrieb"@de .
+ex:MilitaryUBoat
+    a ex:Boat ;
+    ex:addResearchInstallations ex:ResearchUBoat ;
+    ex:transformToPersonalUnderwaterJet ex:PersonalUnderwaterJet ;
+    skos:prefLabel "Military U-Boat"@en, "Militär-U-Boot"@de .
+ex:PersonalUnderwaterJet
+    a ex:Boat ;
+    skos:prefLabel "Personal underwater jet"@en, "Personal Unterwasser-Jet"@de .
+ex:ResearchUBoat
+    a ex:Boat ;
+    skos:prefLabel "Research-U-Boat"@en, "Forschungs-U-Boot"@de .
+ex:ResearchDieselShip
+    a ex:Boat ;
+    skos:prefLabel "Research diesel ship"@en, "Diesel-Forschungsschiff"@de .
+ex:CargoDieselShip
+    a ex:Boat ;
+    ex:addIcebreakingCapabilities ex:DieselIcebreakerShip ;
+    ex:addFerryCapabilities ex:DieselFerry ;
+    ex:addTankerCapabilities ex:DieselTanker ;
+    skos:prefLabel "Cargo diesel ship"@en, "Diesel-Frachtschiff"@de .
+ex:DieselIcebreakerShip
+    a ex:Boat ;
+    skos:prefLabel "Diesel icebreaker ship"@en, "Diesel-Eisbrecher"@de .
+ex:DieselFerry
+    a ex:Boat ;
+    skos:prefLabel "Diesel ferry"@en, "Diesel-Fähre"@de .
+ex:DieselTanker
+    a ex:Boat ;
+    skos:prefLabel "Diesel tanker"@en, "Dieseltanker"@de .
+ex:DieselGlider
+    a ex:Boat ; 
+    ex:addWaterHydrophils ex:DieselboatWithWaterHydrophoils ; 
+    skos:prefLabel "Diesel glider"@en, "Dieselglider"@de .
+ex:DieselboatWithWaterHydrophoils
+    a ex:Boat ;
+    skos:prefLabel "Dieselboat with water hydrophils"@en, "Boot mit Wasser-Tragflächen"@de .
+ex:DieselTouristShip
+    a ex:Boat ;
+    ex:addTouristInstallations ex:DieselCruiser ;
+    skos:prefLabel "Diesel tourist ship"@en, "Diesel-Touristenshiff"@de .
+ex:DieselCruiser
+    a ex:Boat ;
+    skos:prefLabel "Diesel cruiser"@en, "Dieselkreuzer"@de .
+ex:MilitaryDieselShip
+    a ex:Boat ;
+    ex:specializationForPatrol ex:DieselPatrolBoat ;
+    ex:specializationForTorpedos ex:DieselTorpedoboat ;
+    skos:prefLabel "Military diesel ship"@en, "Diesel-Militärschiff"@de .
+ex:DieselPatrolBoat
+    a ex:Boat ;
+    skos:prefLabel "Diesel patrol boat"@en, "Diesel-Patroullienboot"@de .
+ex:DieselTorpedoboat
+    a ex:Boat ;
+    skos:prefLabel "Diesel torpedo boat"@en, "Diesel-Torpedoboot"@de .
+
+ex:usePumpJetPropulsion
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Use pump-jet propulsion"@en, "Nutze Wasserstrahlantrieb"@de .
+ex:addDiveCapabilities
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add dive capabilities"@en, "Füge Eigenschaften zum Tauchen hinzu"@de .
+ex:addResearchInstallations
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add research installations"@en, "Füge Forschunseinrichtungen hinzu"@de .
+ex:transformToPersonalUnderwaterJet
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Transform to personal underwater jet"@en, "Transformieren in einen personal Unterwasser-Jet"@de .
+ex:addIcebreakingCapabilities
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add icebreaking capabilities"@en, "Eisbrecher hinzufügen"@de .
+ex:addFerryCapabilities
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add ferry capabilities"@en, "Passagiertransportfähigkeiten hinzufügen"@de .
+ex:addTankerCapabilities
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add tanker capabilities"@en, "Umbau zum Tanker"@de .
+ex:addGlidingCapabilities
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add gliding capabilities"@en, "Elemente zum Gleiten hinzufügen"@de .
+ex:addWaterHydrophils
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Add water hydrophils"@en, "Füge Wassertragflächen hinzu"@de .
+ex:specializationForPatrol
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Specialization for patrol duty"@en, "Spezialisierung für die Patrouille"@de .
+ex:specializationForTorpedos
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Specialization for carrying torpedos"@en, "Spezialisierung für Torpedos"@de .
+
+# pumpjetboat
+ex:PumpJetBoat
+    a ex:Boat ;
+    ex:useRocketPropulsion ex:RocketBoat ;
+    ex:addSportInstallations ex:SportJetGlider ;
+    ex:addRecreationalInstallations ex:SportJetGlider ;
+    ex:replaceDieselEngineWithNuclearReactor ex:Atomboat ;
+    skos:prefLabel "Pump-jet boat"@en, "Boot mit Wasserstrahlantrieb"@de .
+ex:RocketBoat
+    a ex:Boat ;
+    skos:prefLabel "Rocket boat"@en, "Raketenboot"@de .
+ex:SportJetGlider
+    a ex:Boat ;
+    skos:prefLabel "Sport jet-glider"@en, "Sport-Jet-Glider"@de .
+ex:JetSki
+    a ex:Boat ;
+    skos:prefLabel "Jet-Ski"@en, "Jet-Ski"@de .
+
+ex:useRocketPropulsion
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:ExpandingTrimmingPattern ;
+    skos:prefLabel "Use rocket propulsion"@en, "Raketenantrieb verwenden"@de .
+ex:replaceDieselEngineWithNuclearReactor
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Field ;
+    skos:definition "Ersetze den Dieselmotor durch einen Kernfissionsreaktor"@de .
+
+# atomboat
+ex:Atomboat
+    a ex:Boat ;
+    ex:addFreightRoom ex:AtomCargoShip ;
+    ex:addDiveCapabilities ex:AtomUBoat ;
+    ex:addIcebreakingCapabilities ex:AtomIcebreaker ;
+    skos:prefLabel "Atomboat"@en, "Boot mit Atomantrieb"@de .
+ex:AtomCargoShip
+    a ex:Boat ;
+    skos:prefLabel "Atom cargo ship"@en, "Atomgetriebenes Frachschiff"@de .
+ex:AtomUBoat
+    a ex:Boat ;
+    skos:prefLabel "Atom-U-Boat"@en, "Atomgetriebenes U-Boot"@de .
+ex:AtomIcebreaker
+    a ex:Boat ;
+    skos:prefLabel "Atom icebreaker"@en, "Atomgetriebener Eisbrecher"@de .
+
+
+# specific evolution tree of the propeller
+
+ex:AircraftPropulsionDevice
+    a tc:SpecificEvolutionTree ;
+    skos:prefLabel "Propulsion device for aircraft"@en, "Antriebsvorrichtung für Flugzeuge"@de .
+
+ex:SingleBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerBlade ex:TwoBladePropeller ;
+    skos:prefLabel "Single blade propeller"@en, "Einblatt-Propeller"@de .
+ex:TwoBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerBlade ex:MultiBladePropeller ;
+    skos:prefLabel "Two blade propeller"@en, "Zweiblatt-Propeller"@de .
+ex:MultiBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerRow ex:DoubleRowPropeller ;
+    skos:prefLabel "Multiblade propeller"@en, "Mehrblättriger Propeller"@de .
+ex:DoubleRowPropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:useReactionJet ex:ReactionJet ;
+    skos:prefLabel "Double row propeller"@en, "Zweireihiger Propeller"@de .
+ex:ReactionJet
+    a ex:AircraftPropulsionDevice ;
+    ex:useIonFlow ex:IonFlow ;
+    skos:prefLabel "Reaction jet"@en, "Reaktionsstrahl"@de .
+ex:IonFlow
+    a ex:AircraftPropulsionDevice ;
+    ex:usePhotonFlow ex:PhotonFlow ;
+    skos:prefLabel "Ion flow"@en, "Ionenfluss"@de .
+ex:PhotonFlow
+    a ex:AircraftPropulsionDevice ;
+    skos:prefLabel "Photon flow"@en, "Photonenfluss"@de .
+
+ex:addPropellerBlade
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:TwoParts, tc:ManyParts ;
+    skos:prefLabel "Add propeller blade"@en, "Propellerblatt hinzufügen"@de .
+ex:addPropellerRow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:ManyParts ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
+ex:useReactionJet
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Gas ;
+    skos:prefLabel "Use reaction jet"@en, "Reaktionsstrahl nutzen"@de .
+ex:useIonFlow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Plasma ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
+ex:usePhotonFlow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Field ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
+
+
+
+# specific evolution tree of screen
+ex:Screen
+    a tc:SpecificEvolutionTree ;
+    skos:prefLabel "Specific evolution tree of the screen"@en .
+
 # Mono-bi-poly of image
 ex:OneImage 
     a ex:Screen ; 
-    ex:obtainSinglePictureFromTwo  ex:StereoImage ;
+    ex:obtainSinglePictureFromTwo ex:StereoImage ;
     skos:prefLabel "One image"@en .
 ex:StereoImage 
     a ex:Screen ; 
@@ -909,6 +1170,7 @@ ex:MagneticGuide
 
 ex:useMATChEMOperator
     a rdf:Property, skos:Concept ;
+    od:usesPattern tc:MATChEMOperator ;
     skos:prefLabel "Use MATChEM (field introduction) operator"@en ;
     skos:definition "Transformation via field type: Mechanical - Acoustic - Thermal - Chemical - Electric - Magnetic"@en .
 
