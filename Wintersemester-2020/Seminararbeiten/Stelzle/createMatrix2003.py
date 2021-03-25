@@ -1,41 +1,37 @@
 import csv
 
+turtle_header = """@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix odq: <http://opendiscovery.org/rdf/Principle/> .
+@prefix odr: <http://opendiscovery.org/rdf/Parameter/> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
 
-def convert_to_csv():
-    file_reader = open("TheMatrix2003_dash.txt")
+<http://opendiscovery.org/rdf/TheMatrix-Old/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:source <http://www.i-sim.org/Altshuller_Matrix.xls>,
+    <https://www.triz-consulting.de/triz-matrix> ;
+    a owl:Ontology ;
+    rdfs:comment
+    "2019-06-24 graebe: Extracted and transformed from the source",
+    "2020-04-15 graebe: Parameters split off in a separate RDF graph",
+    "2020-04-16 graebe: namespace abbreviation, parameter and principle names fixed",
+    "todo: transform that to an RDF Cube" ;
+    owl:imports <http://opendiscovery.org/rdf/TheParameters/>; 
+    rdfs:label "TRIZ Matrix - The Old Version" .
 
-    temporary_file = open("temporary.txt", "w")
-
-    for line in file_reader:
-        if "\n" in line:
-            line = line.replace("\n", '')
-
-        if '",,"' in line:
-            line = line.replace('",,"', ',,')
-        elif '","' in line:
-            line = line.replace('","', ',')
-        elif ',"' in line:
-            line = line.replace(',"', ',')
-        elif '",' in line:
-            line = line.replace('",', ',')
-
-        if '"' in line:
-            line = line.replace(',"', '\n')
-
-        temporary_file.write(line)
-
-    temporary_file.close()
-    file_reader.close()
-
-    file_reader_2 = open("temporary.txt")
-    matrix_csv_file = open('TheMatrix2003.csv', 'w')
-
-    for line in file_reader_2:
-        if ' ' in line:
-            line = line.replace(" ", '')
-        if '""' in line:
-            line = line.replace('""', '\n')
-        matrix_csv_file.write(line)
+od:MatrixEntry
+    a owl:Class ;
+    rdfs:label "A Entry within the Matrix" .
+    
+"""
 
 
 def create_lookup(file: str):
@@ -72,6 +68,8 @@ def build_matrix_ttl(matrix: list, principle_lookup: dict, parameter_lookup: dic
 
     entry_prefix = "<http://opendiscovery.org/rdf/Matrix/E"
     matrix_entry = "a od:MatrixEntry ."
+
+    ttl_writer.write(turtle_header)
 
     for row in range(0, len(matrix)):
 
@@ -119,8 +117,6 @@ def add_newline():
 
 
 if __name__ == '__main__':
-    convert_to_csv()
-
     matrix = read_matrix()
     print_matrix(matrix)
 
