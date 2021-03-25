@@ -21,7 +21,7 @@
   Online, 19. Mai 2020.
   * <http://dx.doi.org/10.14625/graebe_20200519>
 * Karl Koltze, Valeri Souchkov (2017).  Systematische Innovationsmethoden.
-  Hanser Verlag, München. ISBN 9783446451278.
+  Hanser Verlag, München. ISBN 978-3-446-45127-8.
 * Alex Lyubomirsky, Simon Litvin, Sergei Ikovenko u.a. (2018). Trends of
   Engineering System Evolution (TESE).  TRIZ Consulting Group. ISBN
   9783000598463.

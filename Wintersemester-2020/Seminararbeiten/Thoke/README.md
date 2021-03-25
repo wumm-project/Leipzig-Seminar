@@ -28,3 +28,11 @@ weiterführenden Links in der Top Level Ontologie des WUMM-Projekts.
 Weitere Literatur:
 * Koltze, Souchkov (2018). Systematische Innovation.
 * Anmerkungen auf <https://wumm-project.github.io/2020-10-27>
+* A. Lyubomirsky (2006). "Das Gesetz zur Steigerung der Effizienz der Nutzung von Materie-, Energie- und Informationsflüssen" Bericht.
+  * https://triz-summit.ru/confer/tds-2006/203452/203525/
+* Yuri Lebedev (2011). Klassifizierung von Strömungen in technischen Systemen
+  * https://www.metodolog.ru/node/967#_Toc290760537
+* Yuri Lebedev (2015). Совершенствование инструментов потокового анализа
+  (Improving flow analysis tools).
+  * <https://triz-summit.ru/certif/master/matriz/15/302897/>
+  * Dort auch eine englische Zusammenfassung
