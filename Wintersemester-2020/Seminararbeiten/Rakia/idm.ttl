@@ -6,8 +6,9 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix od: <http://opendiscovery.org/rdf/Model#> .
 @prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+@prefix cm: <http://opendiscovery.org/rdf/C-Model/> .
 
-<http://opendiscovery.org/rdf/Ontologies/FlowConcepts/>
+<http://opendiscovery.org/rdf/Ontologies/IDMModel/>
     cc:attributionName "The Open Discovery Project" ;
     cc:attributionURL <http://opendiscovery.org> ;
     cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
@@ -246,7 +247,7 @@ cm:issubclassof a rdf:Property;
   
 cm:ispartof a rdf:Property;
   rdfs:domain cm:ActionParameter ; 
-  rdfs:range cm:Contradiction 
+  rdfs:range cm:Contradiction .
 
 ## Element Properties
 cm:ispartof a rdf:Property;
