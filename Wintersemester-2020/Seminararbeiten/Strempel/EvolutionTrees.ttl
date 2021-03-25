@@ -514,31 +514,25 @@ tc:ActionsPerformedDuringIntervals
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Actions performed during intervals"@en, "Innerhalb von Intervallen ausgeführte Aktionen"@de .
 
+tc:MATChEMOperator
+    od:subConceptOf tc:BasicEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "MATChEM operator"@en, "MATChEM-Operator"@de ;
+    skos:definition "The MATChEM operator shows the sequence of fields which may be used for system transformation. The MATChEM abbreviation is made up of the initial letters of the names of the principal field types: Mechanical, Acoustic, Thermal, Chemical, Electric, Magnetic"@en, "Der MATChEM-Operator zeigt die Reihenfolge der Felder an, die für die Systemtransformation verwendet werden können. Die Abkürzung MATChEM setzt sich aus den Anfangsbuchstaben der Namen der wichtigsten Feldtypen zusammen: Mechanisch, Akustisch, Thermisch, Chemisch, Elektrisch, Magnetisch"@de ;
+    skos:broader tc:MATChEM .
 
 tc:Recommendation
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel ""@en, ""@de ;
+    skos:prefLabel "Recommendation"@en, "Empfehlungen"@de ;
+    skos:definition "Use recommendations instead of laws"@en, "Anstatt von Gesetzen werden Empfehlungen genutzt"@de ;
     skos:narrower tc:LawsTechnicalSystemEvolution .
-
-# tc:EvolutionPatternConstructionRecommendations
-
-# rules, recommentations
-# tc:ConstructionOfNewEvolutionPatterns 
 
 tc:BasicEvolutionTrees
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Basic Evolution Trees"@en, "Grundlegender Evolutionsbäume"@de ;
     skos:definition "A Basic Evolution Tree is an organized set of evolution patterns of generalized, abstract features of technical objects"@en, "In einen Baum organisierte Menge von Evolutionsmustern von generalisierten Eigenschaften technischer Objekte"@de .
 
-# tc:EvolutionTreeConstructionRecommendations
-
-# andere TRIZ definitionen berücksichtigen
-# S. 107
-# tc:Function
-# tc:Tool
-# tc:WorkObject
 # Tool -Interaction-> WorkObject
-# tc:FunctionModel
 
 tc:ElementaryFunction
     a skos:Concept, od:AdditionalConcept ;
