@@ -35,6 +35,6 @@
 35:ChangePhysicalOrChemicalParameters
 36:ApplyPhaseTransitions
 37:ApplyThermalExpansion
-38:ApplyThermalExpansion
+38:StrongOxidants
 39:UseInertMedium
 40:ApplyCompositeMaterials

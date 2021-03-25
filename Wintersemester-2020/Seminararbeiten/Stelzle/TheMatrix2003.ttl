@@ -164,7 +164,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.01.23>
 	od:decreasingParameter tc:BrightnessOfTheLighting ;
 	od:increasingParameter tc:WeightOfTheMovingObject ;
-	od:recommendedPrinciple tc:Segmentation, tc:ChangePhysicalOrChemicalParameters, tc:ChangeColorAndTransparency, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:Segmentation, tc:ChangePhysicalOrChemicalParameters, tc:ChangeColorAndTransparency, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.01.24>
@@ -782,7 +782,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.03.30>
 	od:decreasingParameter tc:HarmfulEmissions ;
 	od:increasingParameter tc:LengthOfTheMovingObject ;
-	od:recommendedPrinciple tc:PreferredAction, tc:ChangePhysicalOrChemicalParameters, tc:ApplyThermalExpansion, tc:Nesting ;
+	od:recommendedPrinciple tc:PreferredAction, tc:ChangePhysicalOrChemicalParameters, tc:StrongOxidants, tc:Nesting ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.03.31>
@@ -1850,13 +1850,13 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.07.16>
 	od:decreasingParameter tc:EnergyUseOfTheMovingObject ;
 	od:increasingParameter tc:VolumeOfTheMovingObject ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:InverseAction, tc:PeriodicEffect, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:InverseAction, tc:PeriodicEffect, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.07.17>
 	od:decreasingParameter tc:EnergyUseOfTheFixedObject ;
 	od:increasingParameter tc:VolumeOfTheMovingObject ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:ApplyThermalExpansion, tc:Homogeneity, tc:PeriodicEffect ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:StrongOxidants, tc:Homogeneity, tc:PeriodicEffect ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.07.18>
@@ -1916,7 +1916,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.07.27>
 	od:decreasingParameter tc:LossOfEnergy ;
 	od:increasingParameter tc:VolumeOfTheMovingObject ;
-	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:Dynamization, tc:Asymmetry, tc:ApplyThermalExpansion, tc:Nesting ;
+	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:Dynamization, tc:Asymmetry, tc:StrongOxidants, tc:Nesting ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.07.28>
@@ -2114,19 +2114,19 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.08.12>
 	od:decreasingParameter tc:FunctionalTimeOfTheMovingObject ;
 	od:increasingParameter tc:VolumeOfTheStationaryObject ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:PeriodicEffect, tc:Segmentation, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:PeriodicEffect, tc:Segmentation, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.08.13>
 	od:decreasingParameter tc:FunctionalTimeOfTheStationaryObject ;
 	od:increasingParameter tc:VolumeOfTheStationaryObject ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:ApplyThermalExpansion, tc:Dynamization, tc:UsePorousMaterials ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:StrongOxidants, tc:Dynamization, tc:UsePorousMaterials ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.08.14>
 	od:decreasingParameter tc:Speed ;
 	od:increasingParameter tc:VolumeOfTheStationaryObject ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:ApplyCompositeMaterials, tc:Separation, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:ApplyCompositeMaterials, tc:Separation, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.08.15>
@@ -2666,7 +2666,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.10.08>
 	od:decreasingParameter tc:VolumeOfTheStationaryObject ;
 	od:increasingParameter tc:QuantityOfMaterial ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:Separation, tc:ApplyThermalExpansion, tc:SelfService ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:Separation, tc:StrongOxidants, tc:SelfService ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.10.09>
@@ -2762,7 +2762,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.10.24>
 	od:decreasingParameter tc:FunctionEfficiency ;
 	od:increasingParameter tc:QuantityOfMaterial ;
-	od:recommendedPrinciple tc:LocalQuality, tc:FlexibleCoversOrThinFilms, tc:Segmentation, tc:ChangePhysicalOrChemicalParameters, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:LocalQuality, tc:FlexibleCoversOrThinFilms, tc:Segmentation, tc:ChangePhysicalOrChemicalParameters, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.10.25>
@@ -3554,7 +3554,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.13.12>
 	od:decreasingParameter tc:FunctionalTimeOfTheMovingObject ;
 	od:increasingParameter tc:FunctionalTimeOfTheStationaryObject ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:Mediator, tc:ApplyThermalExpansion, tc:Asymmetry, tc:LocalQuality ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:Mediator, tc:StrongOxidants, tc:Asymmetry, tc:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.13.13>
@@ -3746,7 +3746,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.13.44>
 	od:decreasingParameter tc:Productivity ;
 	od:increasingParameter tc:FunctionalTimeOfTheStationaryObject ;
-	od:recommendedPrinciple tc:PreferredAction, tc:ApplyCompositeMaterials, tc:ApplyThermalExpansion, tc:PartialOrExcessiveEffect ;
+	od:recommendedPrinciple tc:PreferredAction, tc:ApplyCompositeMaterials, tc:StrongOxidants, tc:PartialOrExcessiveEffect ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.13.45>
@@ -3866,7 +3866,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.14.16>
 	od:decreasingParameter tc:EnergyUseOfTheMovingObject ;
 	od:increasingParameter tc:Speed ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:ReplacementOfMechanicalSchemes, tc:ApplyThermalExpansion, tc:PeriodicEffect ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:ReplacementOfMechanicalSchemes, tc:StrongOxidants, tc:PeriodicEffect ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.14.17>
@@ -4394,7 +4394,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.16.08>
 	od:decreasingParameter tc:VolumeOfTheStationaryObject ;
 	od:increasingParameter tc:EnergyUseOfTheMovingObject ;
-	od:recommendedPrinciple tc:LocalQuality, tc:SelfService, tc:EliminationAndRegenerationOfParts, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:LocalQuality, tc:SelfService, tc:EliminationAndRegenerationOfParts, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.16.09>
@@ -4928,7 +4928,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.18.01>
 	od:decreasingParameter tc:WeightOfTheMovingObject ;
 	od:increasingParameter tc:Power ;
-	od:recommendedPrinciple tc:Countermass, tc:ApplyThermalExpansion, tc:Separation, tc:SelfService, tc:UsePorousMaterials ;
+	od:recommendedPrinciple tc:Countermass, tc:StrongOxidants, tc:Separation, tc:SelfService, tc:UsePorousMaterials ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.02>
@@ -4952,19 +4952,19 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.18.05>
 	od:decreasingParameter tc:SurfaceOfTheMovingObject ;
 	od:increasingParameter tc:Power ;
-	od:recommendedPrinciple tc:PeriodicEffect, tc:ApplyThermalExpansion, tc:ChangePhysicalOrChemicalParameters, tc:Separation ;
+	od:recommendedPrinciple tc:PeriodicEffect, tc:StrongOxidants, tc:ChangePhysicalOrChemicalParameters, tc:Separation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.06>
 	od:decreasingParameter tc:SurfaceOfTheStationaryObject ;
 	od:increasingParameter tc:Power ;
-	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:PeriodicEffect, tc:ApplyThermalExpansion, tc:InverseAction ;
+	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:PeriodicEffect, tc:StrongOxidants, tc:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.07>
 	od:decreasingParameter tc:VolumeOfTheMovingObject ;
 	od:increasingParameter tc:Power ;
-	od:recommendedPrinciple tc:PeriodicEffect, tc:ApplyThermalExpansion, tc:Separation, tc:ChangePhysicalOrChemicalParameters ;
+	od:recommendedPrinciple tc:PeriodicEffect, tc:StrongOxidants, tc:Separation, tc:ChangePhysicalOrChemicalParameters ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.08>
@@ -4982,7 +4982,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.18.10>
 	od:decreasingParameter tc:QuantityOfMaterial ;
 	od:increasingParameter tc:Power ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:PeriodicEffect, tc:ApplyThermalExpansion, tc:Asymmetry, tc:LocalQuality ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:PeriodicEffect, tc:StrongOxidants, tc:Asymmetry, tc:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.11>
@@ -4994,13 +4994,13 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.18.12>
 	od:decreasingParameter tc:FunctionalTimeOfTheMovingObject ;
 	od:increasingParameter tc:Power ;
-	od:recommendedPrinciple tc:PeriodicEffect, tc:ChangePhysicalOrChemicalParameters, tc:PreferredAction, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:PeriodicEffect, tc:ChangePhysicalOrChemicalParameters, tc:PreferredAction, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.13>
 	od:decreasingParameter tc:FunctionalTimeOfTheStationaryObject ;
 	od:increasingParameter tc:Power ;
-	od:recommendedPrinciple tc:ApplyThermalExpansion, tc:ChangePhysicalOrChemicalParameters, tc:PreferredAction, tc:Asymmetry ;
+	od:recommendedPrinciple tc:StrongOxidants, tc:ChangePhysicalOrChemicalParameters, tc:PreferredAction, tc:Asymmetry ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.14>
@@ -5084,7 +5084,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.18.27>
 	od:decreasingParameter tc:LossOfEnergy ;
 	od:increasingParameter tc:Power ;
-	od:recommendedPrinciple tc:Dynamization, tc:ChangePhysicalOrChemicalParameters, tc:Segmentation, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:Dynamization, tc:ChangePhysicalOrChemicalParameters, tc:Segmentation, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.28>
@@ -6236,7 +6236,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.22.27>
 	od:decreasingParameter tc:LossOfEnergy ;
 	od:increasingParameter tc:Temperature ;
-	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:RushingThrough, tc:Mediator, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:ChangePhysicalOrChemicalParameters, tc:RushingThrough, tc:Mediator, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.22.28>
@@ -7016,7 +7016,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.25.13>
 	od:decreasingParameter tc:FunctionalTimeOfTheStationaryObject ;
 	od:increasingParameter tc:LossOfMaterial ;
-	od:recommendedPrinciple tc:Mediator, tc:Dynamization, tc:ExploitationOfMechanicalVibrations, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:Mediator, tc:Dynamization, tc:ExploitationOfMechanicalVibrations, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.25.14>
@@ -7046,7 +7046,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.25.18>
 	od:decreasingParameter tc:Power ;
 	od:increasingParameter tc:LossOfMaterial ;
-	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:ExploitationOfMechanicalVibrations, tc:ApplyThermalExpansion, tc:SelfService ;
+	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:ExploitationOfMechanicalVibrations, tc:StrongOxidants, tc:SelfService ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.25.19>
@@ -7100,7 +7100,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.25.27>
 	od:decreasingParameter tc:LossOfEnergy ;
 	od:increasingParameter tc:LossOfMaterial ;
-	od:recommendedPrinciple tc:PeriodicEffect, tc:ApplyThermalExpansion, tc:ChangePhysicalOrChemicalParameters, tc:InexpensiveShortLifeObject ;
+	od:recommendedPrinciple tc:PeriodicEffect, tc:StrongOxidants, tc:ChangePhysicalOrChemicalParameters, tc:InexpensiveShortLifeObject ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.25.28>
@@ -7322,7 +7322,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.26.16>
 	od:decreasingParameter tc:EnergyUseOfTheMovingObject ;
 	od:increasingParameter tc:LossOfTime ;
-	od:recommendedPrinciple tc:ExploitationOfMechanicalVibrations, tc:ChangePhysicalOrChemicalParameters, tc:ApplyThermalExpansion, tc:LocalQuality, tc:Asymmetry ;
+	od:recommendedPrinciple tc:ExploitationOfMechanicalVibrations, tc:ChangePhysicalOrChemicalParameters, tc:StrongOxidants, tc:LocalQuality, tc:Asymmetry ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.26.17>
@@ -7550,7 +7550,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.27.06>
 	od:decreasingParameter tc:SurfaceOfTheStationaryObject ;
 	od:increasingParameter tc:LossOfEnergy ;
-	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:SphericalShape, tc:Nesting, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:SphericalShape, tc:Nesting, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.27.07>
@@ -8618,7 +8618,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.30.40>
 	od:decreasingParameter tc:ExternalDamagingFactors ;
 	od:increasingParameter tc:HarmfulEmissions ;
-	od:recommendedPrinciple tc:Separation, tc:FlexibleCoversOrThinFilms, tc:ApplyThermalExpansion, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:Separation, tc:FlexibleCoversOrThinFilms, tc:ApplyThermalExpansion, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.30.41>
@@ -11594,7 +11594,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.41.08>
 	od:decreasingParameter tc:VolumeOfTheStationaryObject ;
 	od:increasingParameter tc:EaseOfManufacture ;
-	od:recommendedPrinciple tc:Segmentation, tc:ChangePhysicalOrChemicalParameters, tc:Dynamization, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:Segmentation, tc:ChangePhysicalOrChemicalParameters, tc:Dynamization, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.41.09>
@@ -12224,7 +12224,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.43.17>
 	od:decreasingParameter tc:EnergyUseOfTheFixedObject ;
 	od:increasingParameter tc:LevelOfAutomation ;
-	od:recommendedPrinciple tc:Segmentation, tc:Separation, tc:ChangePhysicalOrChemicalParameters, tc:InverseAction, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:Segmentation, tc:Separation, tc:ChangePhysicalOrChemicalParameters, tc:InverseAction, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.43.18>
@@ -12506,7 +12506,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.44.16>
 	od:decreasingParameter tc:EnergyUseOfTheMovingObject ;
 	od:increasingParameter tc:Productivity ;
-	od:recommendedPrinciple tc:PeriodicEffect, tc:Coupling, tc:ChangePhysicalOrChemicalParameters, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:PeriodicEffect, tc:Coupling, tc:ChangePhysicalOrChemicalParameters, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.44.17>
@@ -12518,7 +12518,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.44.18>
 	od:decreasingParameter tc:Power ;
 	od:increasingParameter tc:Productivity ;
-	od:recommendedPrinciple tc:PreferredAction, tc:ChangePhysicalOrChemicalParameters, tc:ReplacementOfMechanicalSchemes, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:PreferredAction, tc:ChangePhysicalOrChemicalParameters, tc:ReplacementOfMechanicalSchemes, tc:StrongOxidants ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.44.19>
@@ -13370,7 +13370,7 @@ od:MatrixEntry
 <http://opendiscovery.org/rdf/Matrix/E.47.16>
 	od:decreasingParameter tc:EnergyUseOfTheMovingObject ;
 	od:increasingParameter tc:ComplexityOfInspectionAndMeasurements ;
-	od:recommendedPrinciple tc:Separation, tc:ChangePhysicalOrChemicalParameters, tc:ApplyThermalExpansion, tc:ApplyThermalExpansion ;
+	od:recommendedPrinciple tc:Separation, tc:ChangePhysicalOrChemicalParameters, tc:StrongOxidants, tc:ApplyThermalExpansion ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.47.17>
