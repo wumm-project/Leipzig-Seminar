@@ -63,7 +63,7 @@ tc:ProblemTypesInModernEngineering
     3. Searching for alternative solutions for patent circumvention and protection"""@en, 
     """Problemtypen im modernen Ingenieurwesen umfassen:
     1. Lösung dringender technischer Probleme
-    2. Voerhersage der Evolution technischer Systeme
+    2. Vorhersage der Evolution technischer Systeme
     3. Patentumgehung und Schutz von eigenen Patenten durch einen Patentschirm"""@de .
 
 tc:InformationField
@@ -87,7 +87,7 @@ tc:StructuredInformationField
     1. Objektivität der Klassifikationskriterien
     2. Vollständigkeit (Vorhandensein aller sich signifikant unterscheidenden
 Versionen)
-    3. Geeigneter Generalisierungsgrad um universal für alle TS zu gelten und Transformationen eines spezifischen TS zu beschreiben
+    3. Geeigneter Generalisierungsgrad, um universal für alle TS zu gelten und Transformationen eines spezifischen TS zu beschreiben
     4. Visualisierbarkeit (Lücken erkennen zur Patentumgehung)
     5. Ausreichende Beschreibung bzw. Voraussage noch nicht existierender Versionen"""@de .
 
@@ -96,40 +96,40 @@ tc:BasicEvolutionPattern
     od:subConceptOf tc:EvolutionPattern ;
     od:hasSubConcept tc:MonoBiPolyPattern, tc:TrimmingPattern, tc:ExpandingTrimmingPattern, tc:SegmentationPattern, tc:SurfacePropertyEvolutionPattern, tc:InternalStructureEvolutionPattern, tc:GeometricalEvolutionPattern, tc:DynamizationPattern, tc:IncreasingControllabilityPattern, tc:IncreasingActionCoordinationPattern ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "The main evolution patterns of technical objects"@en, "Die Basisevolutionsmuster technischer Objekte"@de .
+    skos:prefLabel "A main evolution pattern of technical objects"@en, "Ein Basisevolutionsmuster technischer Objekte"@de .
 
 # MonoBiPoly
 tc:MonoBiPolyPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
     od:hasSubConcept tc:MonoSystem, tc:BiSystem, tc:PolySystem, tc:NewMonoSystem ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "The Mono-bi-poly transition"@en, "Mono-bi-poly Transition"@de ;
-    skos:example "Spanner"@en, "Schraubenschlüssel"@de ;
+    skos:prefLabel "The Mono-bi-poly transition pattern"@en, "Mono-bi-poly Transitionsmuster"@de ;
+    skos:example "Development of a Spanner"@en, "Entwicklung eines Maulschlüssels"@de ;
     skos:broader tc:Copying, tc:TransitiontoMacroLevel .
 
 tc:MonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Mono-system"@en, "Monosystem"@de ;
-    skos:example "One Spanner"@en, "Ein Schraubenschlüssel"@de .
+    skos:example "One Spanner"@en, "Einfacher Maulschlüssel"@de .
 
 tc:BiSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Bi-system"@en, "Bisystem"@de ;
-    skos:example "Two Spanners"@en, "Zwei Schraubenschlüssel"@de .
+    skos:example "Two Spanners"@en, "Doppelmaulschlüssel"@de .
 
 tc:PolySystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Poly-system"@en, "Polysystem"@de ;
-    skos:example "Multiple Spanners"@en, "Mehrere Schraubenschlüssel"@de .
+    skos:example "Multiple Spanners"@en, "Fahrradknochen"@de .
 
 tc:NewMonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "new mono-system"@en, "neues Monosystem"@de ;
-    skos:example "One adjustable Spanner"@en, "Ein einstellbarer Schraubenschlüssel"@de .
+    skos:example "One adjustable Spanner"@en, "Rollgabelschlüssel"@de .
 
 # Trimming
 tc:TrimmingPattern
@@ -202,7 +202,7 @@ tc:SegmentationPattern
     od:hasSubConcept tc:Monolith, tc:TwoParts, tc:ManyParts, tc:Granules, tc:Powder, tc:Paste, tc:Liquid, tc:Foam, tc:Fog, tc:Gas, tc:Plasma, tc:Field, tc:Vacuum, tc:IdealObject ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
-    skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de ;
+    skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Flugzeugantriebs"@de ;
     skos:broader tc:Segmentation, tc:TrendofTransitiontoMicrolevel .
 # Monolith, Two parts, Many parts, Granules, Powder, Paste, Liquid, Foam, Fog, Plasma, Field, Vacuum, Ideal object
 
