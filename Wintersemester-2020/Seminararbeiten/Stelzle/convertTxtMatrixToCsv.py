@@ -1,5 +1,7 @@
-def convert_to_csv():
-    file_reader = open("TheMatrix2003_dash.txt")
+import sys
+
+def convert_to_csv(file_name:str):
+    file_reader = open(file_name)
 
     temporary_file = open("temporary.txt", "w")
 
@@ -25,7 +27,7 @@ def convert_to_csv():
     file_reader.close()
 
     file_reader_2 = open("temporary.txt")
-    matrix_csv_file = open('TheMatrix2003.csv', 'w')
+    matrix_csv_file = open('createdMatrix.csv', 'w')
 
     for line in file_reader_2:
         if ' ' in line:
@@ -36,4 +38,11 @@ def convert_to_csv():
 
 
 if __name__ == "__main__":
-    convert_to_csv()
+    parameter_file_name = ""
+
+    if len(sys.argv) < 1:
+        print("No file name specified.")
+    else:
+        parameter_file_name = sys.argv[1]
+
+    convert_to_csv(parameter_file_name)

@@ -90,7 +90,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.01.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:WeightOfTheMovingObject ;
 	od:recommendedPrinciple tc:Separation, tc:Coupling, tc:Nesting, tc:Asymmetry, tc:EliminationAndRegenerationOfParts ;
 	a od:MatrixEntry .
@@ -378,7 +378,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.02.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:WeightOfTheStationaryObject ;
 	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:InverseAction, tc:Nesting, tc:Copying, tc:Separation ;
 	a od:MatrixEntry .
@@ -666,7 +666,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.03.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:LengthOfTheMovingObject ;
 	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:Segmentation, tc:PreferredAction, tc:ChangeColorAndTransparency ;
 	a od:MatrixEntry .
@@ -954,7 +954,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.04.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:LengthOfTheStationaryObject ;
 	od:recommendedPrinciple tc:Nesting, tc:TransitionToAnotherDimension, tc:Separation, tc:TransformationOfHarmfulIntoUseful, tc:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
@@ -1242,7 +1242,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.05.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:SurfaceOfTheMovingObject ;
 	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:Dynamization, tc:SphericalShape, tc:ChangeColorAndTransparency ;
 	a od:MatrixEntry .
@@ -1530,7 +1530,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.06.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:SurfaceOfTheStationaryObject ;
 	od:recommendedPrinciple tc:Copying, tc:TransitionToAnotherDimension, tc:Separation, tc:InverseAction ;
 	a od:MatrixEntry .
@@ -1818,7 +1818,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.07.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:VolumeOfTheMovingObject ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Separation, tc:ReplacementOfMechanicalSchemes, tc:Nesting ;
 	a od:MatrixEntry .
@@ -2106,7 +2106,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.08.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:VolumeOfTheStationaryObject ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Nesting, tc:Mediator, tc:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
@@ -2394,7 +2394,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.09.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Shape ;
 	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:Nesting, tc:LocalQuality, tc:ChangeColorAndTransparency, tc:Mediator ;
 	a od:MatrixEntry .
@@ -2682,7 +2682,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.10.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:QuantityOfMaterial ;
 	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:ApplyThermalExpansion, tc:Asymmetry, tc:UsePorousMaterials ;
 	a od:MatrixEntry .
@@ -2911,289 +2911,289 @@ od:MatrixEntry
 
 <http://opendiscovery.org/rdf/Matrix/E.11.01>
 	od:decreasingParameter tc:WeightOfTheMovingObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:TransitionToAnotherDimension, tc:InverseAction, tc:Nesting, tc:Segmentation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.02>
 	od:decreasingParameter tc:WeightOfTheStationaryObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:Copying, tc:ChangePhysicalOrChemicalParameters, tc:LocalQuality, tc:Separation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.03>
 	od:decreasingParameter tc:LengthOfTheMovingObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:ChangeColorAndTransparency, tc:InverseAction, tc:TransitionToAnotherDimension ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.04>
 	od:decreasingParameter tc:LengthOfTheStationaryObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:ChangeColorAndTransparency, tc:TransitionToAnotherDimension, tc:LocalQuality, tc:Separation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.05>
 	od:decreasingParameter tc:SurfaceOfTheMovingObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:TransitionToAnotherDimension, tc:ChangeColorAndTransparency, tc:Separation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.06>
 	od:decreasingParameter tc:SurfaceOfTheStationaryObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:ChangeColorAndTransparency, tc:Separation, tc:LocalQuality, tc:Mediator, tc:TransitionToAnotherDimension ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.07>
 	od:decreasingParameter tc:VolumeOfTheMovingObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:PeriodicEffect, tc:Copying, tc:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.08>
 	od:decreasingParameter tc:VolumeOfTheStationaryObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Copying, tc:ChangeColorAndTransparency, tc:LocalQuality, tc:Separation, tc:Mediator ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.09>
 	od:decreasingParameter tc:Shape ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:TransitionToAnotherDimension, tc:LocalQuality, tc:ChangeColorAndTransparency, tc:Copying ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.10>
 	od:decreasingParameter tc:QuantityOfMaterial ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:Nesting, tc:ChangeColorAndTransparency, tc:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.11>
-	od:decreasingParameter tc:QuantityofInormation ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:NoPrinciple ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.12>
 	od:decreasingParameter tc:FunctionalTimeOfTheMovingObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:LocalQuality, tc:Separation, tc:PreferredAction, tc:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.13>
 	od:decreasingParameter tc:FunctionalTimeOfTheStationaryObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:LocalQuality, tc:PreferredAction, tc:Equipotentiality, tc:Separation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.14>
 	od:decreasingParameter tc:Speed ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Nesting, tc:InverseAction, tc:ApplyThermalExpansion ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.15>
 	od:decreasingParameter tc:Force ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Copying, tc:TransitionToAnotherDimension, tc:Equipotentiality, tc:Segmentation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.16>
 	od:decreasingParameter tc:EnergyUseOfTheMovingObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:PreferredAction, tc:LocalQuality, tc:Equipotentiality, tc:Separation, tc:Universality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.17>
 	od:decreasingParameter tc:EnergyUseOfTheFixedObject ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Universality, tc:LocalQuality, tc:Separation, tc:Mediator ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.18>
 	od:decreasingParameter tc:Power ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:PreferredAction, tc:LocalQuality, tc:Separation, tc:Universality, tc:Mediator ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.19>
 	od:decreasingParameter tc:TensionOrPressure ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:TransitionToAnotherDimension, tc:Nesting, tc:Mediator, tc:Equipotentiality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.20>
 	od:decreasingParameter tc:Strength ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:TransitionToAnotherDimension, tc:Nesting, tc:Equipotentiality, tc:Segmentation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.21>
 	od:decreasingParameter tc:StabilityOfTheObjectsStructure ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Mediator, tc:ApplyThermalExpansion, tc:LocalQuality, tc:PreferredAction, tc:Separation ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.22>
 	od:decreasingParameter tc:Temperature ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:InverseAction, tc:PreferredAction, tc:PeriodicEffect ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.23>
 	od:decreasingParameter tc:BrightnessOfTheLighting ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Dynamization, tc:PeriodicEffect, tc:Asymmetry, tc:ChangeColorAndTransparency ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.24>
 	od:decreasingParameter tc:FunctionEfficiency ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:Nesting, tc:PeriodicEffect, tc:ReplacementOfMechanicalSchemes, tc:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.25>
 	od:decreasingParameter tc:LossOfMaterial ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:InverseAction, tc:Nesting, tc:ReplacementOfMechanicalSchemes, tc:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.26>
 	od:decreasingParameter tc:LossOfTime ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:Nesting, tc:LocalQuality, tc:PeriodicEffect, tc:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.27>
 	od:decreasingParameter tc:LossOfEnergy ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:PreferredAction, tc:LocalQuality, tc:Universality, tc:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.28>
 	od:decreasingParameter tc:LossOfInformation ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Dynamization, tc:PeriodicEffect, tc:Nesting, tc:ChangeColorAndTransparency, tc:Asymmetry ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.29>
 	od:decreasingParameter tc:Noise ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:LocalQuality, tc:Asymmetry, tc:Separation, tc:EarlyCounteraction, tc:ApplyThermalExpansion ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.30>
 	od:decreasingParameter tc:HarmfulEmissions ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:Separation, tc:PreferredAction, tc:Coupling, tc:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.31>
 	od:decreasingParameter tc:InternalDamagingFactors ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:PreferredAction, tc:InverseAction, tc:TransitionToAnotherDimension ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.32>
 	od:decreasingParameter tc:Adaptability ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:LocalQuality, tc:Mediator, tc:Asymmetry, tc:Segmentation, tc:ApplyPneumaticOrHydraulicConstructions ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.33>
 	od:decreasingParameter tc:CompatitbilityOrConnectability ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Universality, tc:SelfService, tc:PreferredAction, tc:Mediator ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.34>
 	od:decreasingParameter tc:EaseOfUse ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:SelfService, tc:PreferredAction, tc:TransitionToAnotherDimension, tc:Universality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.35>
 	od:decreasingParameter tc:Reliability ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Mediator, tc:InverseAction, tc:SelfService ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.36>
 	od:decreasingParameter tc:EaseOfRepair ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:SelfService, tc:Segmentation, tc:Mediator, tc:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.37>
 	od:decreasingParameter tc:Security ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:PreferredAction, tc:TransitionToAnotherDimension, tc:Mediator ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.38>
 	od:decreasingParameter tc:Vulnerability ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:ApplyThermalExpansion, tc:PreferredAction, tc:InverseAction ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.39>
 	od:decreasingParameter tc:AestheticsOrAppearance ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Nesting, tc:LocalQuality, tc:ChangeColorAndTransparency, tc:PeriodicEffect, tc:SelfService ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.40>
 	od:decreasingParameter tc:ExternalDamagingFactors ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Segmentation, tc:PreliminaryAction, tc:ReplacementOfMechanicalSchemes, tc:Dynamization ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.41>
 	od:decreasingParameter tc:EaseOfManufacture ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:SelfService, tc:InverseAction, tc:PreferredAction, tc:Segmentation, tc:Nesting ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.42>
 	od:decreasingParameter tc:PrecisionOfManufacture ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:InverseAction, tc:LocalQuality, tc:PreferredAction, tc:ApplyThermalExpansion ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.43>
 	od:decreasingParameter tc:LevelOfAutomation ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:SelfService, tc:Segmentation, tc:Universality, tc:InverseAction, tc:Copying ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.44>
 	od:decreasingParameter tc:Productivity ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:Separation, tc:SelfService, tc:PeriodicEffect, tc:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.45>
 	od:decreasingParameter tc:ComplexityOfConstruction ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:PreferredAction, tc:SelfService, tc:Coupling, tc:InverseAction, tc:LocalQuality ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.46>
 	od:decreasingParameter tc:ComplexityOfControl ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:SelfService, tc:ApplyCompositeMaterials, tc:PreferredAction, tc:LocalQuality, tc:Nesting ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.47>
 	od:decreasingParameter tc:ComplexityOfInspectionAndMeasurements ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:LocalQuality, tc:Asymmetry, tc:ApplyThermalExpansion, tc:SelfService, tc:ApplyCompositeMaterials ;
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.11.48>
 	od:decreasingParameter tc:PrecisionOfMeasurements ;
-	od:increasingParameter tc:QuantityofInormation ;
+	od:increasingParameter tc:QuantityofInformation ;
 	od:recommendedPrinciple tc:ApplyThermalExpansion, tc:LocalQuality, tc:TransitionToAnotherDimension, tc:ReplacementOfMechanicalSchemes ;
 	a od:MatrixEntry .
 
@@ -3258,7 +3258,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.12.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:FunctionalTimeOfTheMovingObject ;
 	od:recommendedPrinciple tc:Nesting, tc:Separation, tc:ChangeColorAndTransparency, tc:LocalQuality, tc:Mediator ;
 	a od:MatrixEntry .
@@ -3546,7 +3546,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.13.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:FunctionalTimeOfTheStationaryObject ;
 	od:recommendedPrinciple tc:Mediator, tc:Nesting, tc:PreferredAction, tc:SelfService ;
 	a od:MatrixEntry .
@@ -3834,7 +3834,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.14.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Speed ;
 	od:recommendedPrinciple tc:Nesting, tc:Separation, tc:PreferredAction, tc:Coupling ;
 	a od:MatrixEntry .
@@ -4122,7 +4122,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.15.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Force ;
 	od:recommendedPrinciple tc:InverseAction, tc:TransitionToAnotherDimension, tc:ApplyThermalExpansion, tc:LocalQuality, tc:Segmentation ;
 	a od:MatrixEntry .
@@ -4410,7 +4410,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.16.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:EnergyUseOfTheMovingObject ;
 	od:recommendedPrinciple tc:Nesting, tc:Separation, tc:SelfService, tc:Mediator ;
 	a od:MatrixEntry .
@@ -4698,7 +4698,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.17.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:EnergyUseOfTheFixedObject ;
 	od:recommendedPrinciple tc:Separation, tc:PeriodicEffect, tc:TransitionToAnotherDimension, tc:ContinuityOfUsefulAction ;
 	a od:MatrixEntry .
@@ -4986,7 +4986,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.18.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Power ;
 	od:recommendedPrinciple tc:PreferredAction, tc:ReplacementOfMechanicalSchemes, tc:PeriodicEffect, tc:Equipotentiality ;
 	a od:MatrixEntry .
@@ -5274,7 +5274,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.19.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:TensionOrPressure ;
 	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:Separation, tc:Copying, tc:Nesting ;
 	a od:MatrixEntry .
@@ -5562,7 +5562,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.20.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Strength ;
 	od:recommendedPrinciple tc:TransitionToAnotherDimension, tc:Separation, tc:ChangeColorAndTransparency, tc:LocalQuality ;
 	a od:MatrixEntry .
@@ -5850,7 +5850,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.21.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:StabilityOfTheObjectsStructure ;
 	od:recommendedPrinciple tc:Separation, tc:Nesting, tc:PreferredAction, tc:ChangePhysicalOrChemicalParameters ;
 	a od:MatrixEntry .
@@ -6138,7 +6138,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.22.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Temperature ;
 	od:recommendedPrinciple tc:Coupling, tc:ApplyThermalExpansion, tc:Nesting, tc:PreferredAction, tc:Copying ;
 	a od:MatrixEntry .
@@ -6426,7 +6426,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.23.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:BrightnessOfTheLighting ;
 	od:recommendedPrinciple tc:Separation, tc:Coupling, tc:PeriodicEffect, tc:ChangeColorAndTransparency ;
 	a od:MatrixEntry .
@@ -6714,7 +6714,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.24.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:FunctionEfficiency ;
 	od:recommendedPrinciple tc:Separation, tc:ApplyThermalExpansion, tc:LocalQuality, tc:TransitionToAnotherDimension, tc:Asymmetry ;
 	a od:MatrixEntry .
@@ -7002,7 +7002,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.25.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:LossOfMaterial ;
 	od:recommendedPrinciple tc:ReplacementOfMechanicalSchemes, tc:Mediator, tc:PreferredAction, tc:Segmentation ;
 	a od:MatrixEntry .
@@ -7290,7 +7290,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.26.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:LossOfTime ;
 	od:recommendedPrinciple tc:Separation, tc:LocalQuality, tc:PreferredAction, tc:SelfService ;
 	a od:MatrixEntry .
@@ -7578,7 +7578,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.27.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:LossOfEnergy ;
 	od:recommendedPrinciple tc:Separation, tc:PreferredAction, tc:Mediator, tc:SelfService ;
 	a od:MatrixEntry .
@@ -7866,7 +7866,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.28.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:LossOfInformation ;
 	od:recommendedPrinciple tc:Separation, tc:Nesting, tc:Mediator, tc:LocalQuality ;
 	a od:MatrixEntry .
@@ -8154,7 +8154,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.29.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Noise ;
 	od:recommendedPrinciple tc:LocalQuality, tc:PreferredAction, tc:Feedback, tc:UsePorousMaterials ;
 	a od:MatrixEntry .
@@ -8442,7 +8442,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.30.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:HarmfulEmissions ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Feedback, tc:ApplyThermalExpansion, tc:Segmentation ;
 	a od:MatrixEntry .
@@ -8730,7 +8730,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.31.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:InternalDamagingFactors ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Nesting, tc:ChangeColorAndTransparency, tc:Asymmetry, tc:LocalQuality ;
 	a od:MatrixEntry .
@@ -9018,7 +9018,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.32.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Adaptability ;
 	od:recommendedPrinciple tc:Separation, tc:PeriodicEffect, tc:Nesting, tc:PartialOrExcessiveEffect, tc:ApplyThermalExpansion ;
 	a od:MatrixEntry .
@@ -9306,7 +9306,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.33.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:CompatitbilityOrConnectability ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Mediator, tc:LocalQuality, tc:Separation, tc:ApplyThermalExpansion ;
 	a od:MatrixEntry .
@@ -9594,7 +9594,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.34.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:EaseOfUse ;
 	od:recommendedPrinciple tc:Segmentation, tc:Nesting, tc:Separation, tc:PreferredAction, tc:Asymmetry ;
 	a od:MatrixEntry .
@@ -9882,7 +9882,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.35.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Reliability ;
 	od:recommendedPrinciple tc:PreferredAction, tc:Mediator, tc:ChangeColorAndTransparency, tc:LocalQuality ;
 	a od:MatrixEntry .
@@ -10170,7 +10170,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.36.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:EaseOfRepair ;
 	od:recommendedPrinciple tc:Mediator, tc:EarlyCounteraction, tc:Separation, tc:ApplyThermalExpansion ;
 	a od:MatrixEntry .
@@ -10458,7 +10458,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.37.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Security ;
 	od:recommendedPrinciple tc:LocalQuality, tc:ReplacementOfMechanicalSchemes, tc:ChangeColorAndTransparency, tc:Mediator ;
 	a od:MatrixEntry .
@@ -10746,7 +10746,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.38.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Vulnerability ;
 	od:recommendedPrinciple tc:PreferredAction, tc:SelfService, tc:LocalQuality, tc:Separation, tc:Coupling ;
 	a od:MatrixEntry .
@@ -11034,7 +11034,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.39.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:AestheticsOrAppearance ;
 	od:recommendedPrinciple tc:Nesting, tc:Mediator, tc:TransitionToAnotherDimension, tc:PreferredAction ;
 	a od:MatrixEntry .
@@ -11322,7 +11322,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.40.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:ExternalDamagingFactors ;
 	od:recommendedPrinciple tc:Separation, tc:Copying, tc:LocalQuality, tc:ApplyCompositeMaterials, tc:SelfService ;
 	a od:MatrixEntry .
@@ -11610,7 +11610,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.41.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:EaseOfManufacture ;
 	od:recommendedPrinciple tc:Universality, tc:Separation, tc:PreferredAction, tc:Nesting, tc:Dynamization ;
 	a od:MatrixEntry .
@@ -11898,7 +11898,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.42.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:PrecisionOfManufacture ;
 	od:recommendedPrinciple tc:ApplyThermalExpansion, tc:LocalQuality, tc:Asymmetry, tc:ChangeColorAndTransparency, tc:InverseAction ;
 	a od:MatrixEntry .
@@ -12186,7 +12186,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.43.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:LevelOfAutomation ;
 	od:recommendedPrinciple tc:ApplyThermalExpansion, tc:Asymmetry, tc:Coupling, tc:Mediator, tc:PreferredAction ;
 	a od:MatrixEntry .
@@ -12474,7 +12474,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.44.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:Productivity ;
 	od:recommendedPrinciple tc:Separation, tc:Mediator, tc:SelfService, tc:Nesting ;
 	a od:MatrixEntry .
@@ -12762,7 +12762,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.45.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:ComplexityOfConstruction ;
 	od:recommendedPrinciple tc:SelfService, tc:Nesting, tc:Mediator, tc:InverseAction ;
 	a od:MatrixEntry .
@@ -13050,7 +13050,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.46.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:ComplexityOfControl ;
 	od:recommendedPrinciple tc:SelfService, tc:PreferredAction, tc:ApplyThermalExpansion, tc:Nesting, tc:LocalQuality ;
 	a od:MatrixEntry .
@@ -13338,7 +13338,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.47.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:ComplexityOfInspectionAndMeasurements ;
 	od:recommendedPrinciple tc:PeriodicEffect, tc:LocalQuality, tc:ChangeColorAndTransparency, tc:Nesting ;
 	a od:MatrixEntry .
@@ -13626,7 +13626,7 @@ od:MatrixEntry
 	a od:MatrixEntry .
 
 <http://opendiscovery.org/rdf/Matrix/E.48.11>
-	od:decreasingParameter tc:QuantityofInormation ;
+	od:decreasingParameter tc:QuantityofInformation ;
 	od:increasingParameter tc:PrecisionOfMeasurements ;
 	od:recommendedPrinciple tc:SelfService, tc:Separation, tc:Nesting, tc:ChangeColorAndTransparency, tc:Asymmetry, tc:LocalQuality ;
 	a od:MatrixEntry .

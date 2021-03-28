@@ -8,7 +8,7 @@
 8:VolumeOfTheStationaryObject
 9:Shape
 10:QuantityOfMaterial
-11:QuantityofInormation
+11:QuantityofInformation
 12:FunctionalTimeOfTheMovingObject
 13:FunctionalTimeOfTheStationaryObject
 14:Speed

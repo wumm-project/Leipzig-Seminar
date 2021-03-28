@@ -1,4 +1,5 @@
 import csv
+import sys
 
 turtle_header = """@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -48,9 +49,9 @@ def create_lookup(file: str):
     return lookup
 
 
-def read_matrix():
+def read_matrix(file_name:str):
     matrix = []
-    with open("TheMatrix2003.csv", newline='') as matrix_csv:
+    with open(file_name, newline='') as matrix_csv:
         reader = csv.reader(matrix_csv, delimiter=',')
         for row in reader:
             matrix.append(row)
@@ -64,7 +65,7 @@ def print_matrix(matrix: list):
 
 
 def build_matrix_ttl(matrix: list, principle_lookup: dict, parameter_lookup: dict):
-    ttl_writer = open("TheMatrix2003.ttl", "a")
+    ttl_writer = open("created_matrix.ttl", "a")
 
     entry_prefix = "<http://opendiscovery.org/rdf/Matrix/E"
     matrix_entry = "a od:MatrixEntry ."
@@ -117,7 +118,14 @@ def add_newline():
 
 
 if __name__ == '__main__':
-    matrix = read_matrix()
+    parameter_file_name = ""
+
+    if len(sys.argv) < 1:
+        print("No file name specified.")
+    else:
+        parameter_file_name = sys.argv[1]
+
+    matrix = read_matrix(parameter_file_name)
     print_matrix(matrix)
 
     principle_lookup = create_lookup('principles.txt')
