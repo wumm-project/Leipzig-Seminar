@@ -1,0 +1,120 @@
+\section{Implementation Of Tools}
+
+\subsection{Creating Turtle File}
+
+For easier and faster creation of the "Matrix 2003" a small python tool was implemented.
+This tool reads the matrix from a \textit{csv}-file and generates a \textit{turtle}-file.
+
+\subsubsection{The CSV-File}
+
+First of alle \textit{csv} file needs to be in the following syntax, because otherwise the matrix is wrongly interpreted.
+Every line in the csv file is a row in the matrix.
+Furthermore every comma seperates a column entry in a a row.
+The different entries in the matrix field are seperated by dashes.
+
+For reading the matrix the tool "tabula" was used \cite{tabula}.
+With this tool the Matrix2003 from the book "Systematische Innovation" was interpreted as a txt file.
+As this did not have the right syntax the small script, named \textit{convertTxtMatrixToCsv.py}, was created. 
+With this the matrix is converted into the right syntax, as mentioned above.
+
+\paragraph{Using The Script}
+
+Pyhton will need to be installed on the computer. 
+The command to run the script will then be:
+
+\begin{center}
+    python convertTxtMatrixToCsv.py $<$csv-file-name$>$
+\end{center}
+
+The output \textit{csv}-file will be called \textit{createdMatrix.csv}.
+The file \textit{temporary.txt} is only created for storing a the information temporary. 
+It can be deleted afterwards.
+
+\subsubsection{Creating The Matrix}
+
+The following explains the implementation of the \textit{createMatrix.py} script.
+
+The script uses two other files. 
+The first ist the \textit{principles.txt}.
+In this file alle the forty principles are written down, with their belonging number at the beginnning.
+Hence the script can map an entry index to the belonging principle name.
+
+The second file, which is also used is called \textit{parameters.txt}.
+In there are all the forty-eight parameters which represent the column and rows in the matrix.
+These names are similar to those for the Altshuller Matrix.
+The nine new parameters, which were introduced for the Matrix2003 are the following. 
+
+\begin{enumerate}[noitemsep]
+    \item QuantityOfInformation
+    \item FunctionEfficiency
+    \item Noise
+    \item HarmfulEmissions
+    \item CompatitbilityOrConnectability
+    \item Security
+    \item Vulnerability
+    \item AestheticsOrAppearance
+    \item ComplexityOfControl
+\end{enumerate}
+
+The layout for the Turtle file is the same as the layout for the "Altshuller Matrix". 
+As this makes it easier for later adjustments or improvements of the matrixes.
+
+At first the script creates the header for the Matrix2003, which is the same as in the "Altshuller Matrix".
+Then it defines the owl entry for the Matrix.
+Afterwards the script iterates over the entries in the \textit{csv} file and builds the matrix in the following way.
+
+\begin{figure}[H]
+    \centering
+    \begin{code}\tt
+        <http://opendiscovery.org/rdf/Matrix/E.06.34>\\
+        \> od:decreasingParameter tc:EaseOfUse ;\\
+        \> od:increasingParameter tc:SurfaceOfTheStationaryObject ;\\
+        \> od:recommendedPrinciple tc:PreferredAction, tc:Asymmetry, \\
+        \> \> \> tc:Mediator, tc:SelfService ;\\
+        \> a od:MatrixEntry .
+    \end{code}
+    \caption{Entry of the Matrix2003 Turtle File}
+\end{figure}
+
+\paragraph{Using The Script}
+
+For running the script python will need to be installed on the computer.
+The script can then be started with the following command:
+
+\begin{center}
+    python createMatrix.py $<$csv-file-name$>$
+\end{center}
+
+Afterwards there will be a file called \textit{created\_matrix.ttl}.
+This will be the result of the script.
+
+
+\subsection{Translating}
+
+For translating the various tags a python script was implemented, which takes a turtle files as input and adds the missing language tags.
+Therefore the script checks each line which already has a language tag. 
+Then it makes an api call with the first tag as the source language.
+It add the language tags for english, german and russian. 
+Each tag is a seperate api call.
+For translation the Google Translator is used.
+
+\paragraph{Using the Script}
+
+Python has to be installed on the computer.
+Furthermore does the script need the \textit{deep\_translator} library \cite{deep_translator}. 
+The library can be installed with the following command:
+
+\begin{center}
+    pip install deep-translator
+\end{center}
+
+Afterwards the script can be started. 
+\textit{$<$turtle-file-name$>$} specifies the file for which the missing language tags should be added.
+
+\begin{center}
+    python translateText.py $<$turtle-file-name$>$
+\end{center}
+
+This will output a file name \textit{trasnlated\_$<$turtle-file-name$>$.ttl}.
+This is the new turtle file with the added language tags.
+Furthemore all translated words or sentences will be shown in the terminal output.
