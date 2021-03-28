@@ -1,0 +1,189 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+@prefix ex: <http://example.orf/EvolutionExample/Boats/> .
+
+<http://opendiscovery.org/rdg/Ontologies/FunctionalAnalysis/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    a owl:Ontology ;
+    rdfs:label "Functional Analysis - Example" ;
+    owl:imports <http://opendiscovery.org/rdf/Ontologies/FunctionalAnalysis/> .
+
+# Systems, Components, Subsystems, Objects, Subjects, ...
+
+ex:Car
+    a tc:Component, tc:System ;
+    od:upperSystemOf ex:Motor, ex:Chassis, ex:Wheels, ex:Seats, ex:SteeringWheel ;
+    skos:prefLabel "Car"@en, "Auto"@de , "Автомобиль"@ru ;
+    skos:Definition "" .
+
+ex:Motor
+    a tc:Component, tc:Subsystem, tc:System ;
+    od:subSystemOf ex:Car ;
+    skos:prefLabel "Motor"@en, "Motor"@de , "Мотор"@ru ;
+    skos:Definition "" .
+
+ex:Chassis
+    a tc:Component, tc:Subsystem, tc:System ;
+    od:subSystemOf ex:Car ;
+    skos:prefLabel "Chassis"@en, "Fahrgestell"@de , "Шасси"@ru ;
+    skos:Definition "" .
+
+ex:Wheels
+    a tc:Component, tc:Subsystem, tc:System ;
+    od:subSystemOf ex:Car ;
+    skos:prefLabel "Wheels"@en, "Räder"@de , "Колеса"@ru ;
+    skos:Definition "" .
+
+ex:Seats
+    a tc:Component, tc:Subsystem, tc:System ;
+    od:subSystemOf ex:Car ;
+    skos:prefLabel "Seats"@en, "Sitze"@de , "Сиденья"@ru ;
+    skos:Definition "" .
+
+ex:ComfortableSeats
+    a ex:Seats ;
+    skos:prefLabel "Comfortable Seats"@en, "Komfortable Sitze"@de , "Удобные сиденья"@ru .
+
+ex:UncomfortableSeats
+    a ex:Seats ;
+    skos:prefLabel "Uncomfortable Seats"@en, "Unkomfortable Sitze"@de , "Неудобные сиденья"@ru .
+
+ex:Steeringwheel
+    a tc:Component, tc:Subsystem, tc:System ;
+    od:subSystemOf ex:Car ;
+    skos:prefLabel "Steeringwheel"@en, "Lenkrad"@de , "Руль"@ru ;
+    skos:Definition "" .
+
+ex:Air
+    a tc:Component, tc:System ;
+    skos:prefLabel "Air"@en, "Luft"@de , "Воздух"@ru ;
+    skos:Definition "" .
+
+ex:Road
+    a tc:Component, tc:System ;
+    skos:prefLabel "Road"@en, "Straße"@de , "Дорога"@ru ;
+    skos:Definition "" .
+
+ex:Inmates
+    a tc:Component, tc:System ;
+    skos:prefLabel "Inmates"@en, "Insassen"@de , "Сокамерники"@ru ;
+    skos:Definition "" .
+
+ex:Driver
+    a tc:Component, tc:System, ex:Inmates ;
+    skos:prefLabel "Driver"@en, "Fahrer"@de , "Водитель"@ru .
+
+ex:Petrol
+    a tc:Component, tc:System ;
+    skos:prefLabel "Petrol"@en, "Benzin"@de , "Бензин"@ru ;
+    skos:Definition "" .
+
+ex:Water
+    a tc:Component, tc:System ;
+    skos:prefLabel "Water"@en, "Wasser"@de , "Вода"@ru ;
+    skos:Definition "" .
+
+
+# Steering
+
+ex:Turn
+    a tc:Action ;
+    skos:prefLabel "Turn"@en, "Drehen"@de , "Очередь"@ru .
+
+ex:DriverSteeringwheel
+    a tc:Interaction ;
+    skos:prefLabel "Driver - Steering Wheel"@en, "Fahrer - Lenkrad" , "Fahrer - Lenkrad"@de , "Водитель - Рулевое колесо"@ru .
+
+ex:DriverTurnSteeringwheel
+    a tc:SubjectActionObject ;
+    skos:prefLabel "Driver - Turn - Steeringwheel"@en, "Fahrer - Drehen - Lenkrad"@de , "Водитель - Поворот - Рулевое колесо"@ru .
+
+ex:Steer
+    a tc:function ;
+    tc:Interaction ex:DriverSteeringwheel ;
+    tc:Action ex:Turn ;
+    tc:SubjectActionObject ex:DriverSteeringwheel ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    skos:prefLabel "Steer"@en, "Lenken"@de , "Рулить"@ru ;
+    skos:Definition "Drehen des Lenkrads, durch den Fahrer um die Richtung des Fahrzeuges zu ändern."@de , "Turning the steering wheel by the driver to change the direction of the vehicle."@en , "Поворот рулевого колеса водителем для изменения направления движения автомобиля."@ru .
+
+# Wheels On Road
+
+ex:Touch
+    a tc:Action ;
+    skos:prefLabel "Touch"@en, "Berühren"@de , "Трогать"@ru .
+
+ex:RoadWheels
+    a tc:Interaction ;
+    skos:prefLabel "Road - Wheels"@en, "Straße - Räder"@de , "Дорога - Колеса"@ru .
+
+ex:RoadTouchWheels
+    a tc:SubjectActionObject ;
+    skos:prefLabel "Road - Touch - Wheels"@en, "Straße - Berühren - Räder"@de , "Дорога - Сенсорный - Колеса"@ru .
+
+ex:Holds
+    a tc:Function ;
+    tc:Interaction ex:RoadWheels ;
+    tc:Action ex:Touch ;
+    tc:SubjectActionObject ex:RoadTouchWheels ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    skos:prefLabel "Holding"@en, "Halt geben"@de , "Держа"@ru ;
+    skos:Definition "Durch die Beschaffenheit der Straße finden die Räder bei Berührung halt."@de , "Due to the nature of the road, the wheels stop when they touch."@en , "Из-за характера дороги колеса останавливаются при касании."@ru .
+
+ex:RoadRubWheels
+    a tc:SubjectActionObject ;
+    skos:prefLabel "Road - Rub - Wheels"@en, "Straße - Reiben - Räder"@de , "Дорога - Руб - Колеса"@ru .
+
+ex:Rub
+    a tc:Function ;
+    tc:Interaction ex:RoadWheels; 
+    tc:Action ex:Touch ;
+    tc:SubjectActionObject ex:RoadRubWheels ;
+    tc:QualityOfFunction tc:HarmfulFunction ;
+    skos:prefLabel "Rub"@en, "Reiben"@de , "Тереть"@ru ;
+    skos:Definition "Durch die Beschaffenheit der Straßen wird bei der Berührung mit Rädern Reibung erzeugt."@de , "The nature of the roads creates friction when they come into contact with wheels."@en , "Природа дороги создает трение при контакте с колесами."@ru .
+
+
+#Sit
+
+ex:SeatsInmates
+    a tc:Interaction ;
+    skos:prefLabel "Sitze - Insassen"@de, "Seats - Inmates"@en , "Сиденья - сокамерники"@ru .
+
+ex:SeatsTouchInmates
+    a tc:SubjectActionObject ;
+    skos:prefLabel "Sitze - Berühren - Insassen"@de, "Seats - Touch - Imates"@en , "Сиденье - касание - пассажир"@ru .
+
+ex:Sit
+    a tc:Function ;
+    tc:Interaction ex:SeatsInmates ;
+    tc:Action ex:Touch ;
+    tc:SubjectActionObject ex:SeatsTouchInmates ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    skos:prefLabel "Sit"@en , "Sitzen"@den , "Сидеть"@ru ;
+    skos:Definition "Durch das Berühren der Insassen mit den Sitzen des Autos, bietet sich Ihnen die Funktion des Sitzens."@de , "By touching the occupants with the seats of the car, you have the function of sitting."@en , "Прикоснувшись к сиденьям автомобиля, вы можете сидеть."@ru .
+
+ex:UncomfortableSeatsInmates
+    a tc:Interaction ;
+    skos:prefLabel "Unkomfortable Sitze - Insassen"@de, "Uncomfortable Seats - Inmates"@en , "Неудобные сиденья - пассажиры"@ru .
+
+ex:UncomfortableSeatsTouchInmates
+    a tc:SubjectActionObject ;
+    skos:prefLabel "Uncomfortable Seats - Touch - Inmates"@en, "Unkomfortable Sitze - Berühren - Insassen"@de , "Неудобные сиденья - прикосновение - заключенные"@ru .
+
+ex:SitUncomfortable
+    a tc:Function ;
+    tc:Interaction ex:UncomfortableSeatsInmates ;
+    tc:SubjectActionObject ex:UncomfortableSeatsTouchInmates ;
+    tc:Action ex:Touch ;
+    tc:QualityOfFunction tc:FunctionDisadvantage ;
+    skos:prefLabel "Unkomfortables Sitzen"@de, "Uncomfortable Sitting"@en , "Неудобное сидение"@ru ;
+    skos:Definition "Durch das Berühren der Insassen mit den unkomfortable Sitzen des Autos, bildet sich eine nützliche Funktion mit Nachteilen, da die Insassen einerseits Sitzen können aber nur unkomfortable"@de, "By touching the occupants with the uncomfortable seats of the car, a useful function forms with disadvantages, since the occupants on the one hand can sit but only uncomfortably"@ene, "Касание пассажиров неудобными сиденьями автомобиля создает полезную функцию с недостатками, поскольку пассажиры могут неудобно сидеть только с одной стороны."@rue .

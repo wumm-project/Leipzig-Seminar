@@ -54,6 +54,4 @@ if __name__ == "__main__":
     else:
         parameter_file_name = sys.argv[1]
 
-    # acquire_token()
-
     read_turtle_file(parameter_file_name)
