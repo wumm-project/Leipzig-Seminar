@@ -58,7 +58,7 @@ ex:TreeTrunk
     skos:definition "No engine or power source"@en, "Kein Motor oder Energiequelle"@de .
 ex:FloatingMattress
     a ex:Boat ;
-    skos:prefLabel "Floating mattress"@en, "Schwimmende Matraze"@de .
+    skos:prefLabel "Floating mattress"@en, "Schwimmende Matratze"@de .
 
 ex:addPaddles 
     a rdf:Property, skos:Concept ;
@@ -66,6 +66,7 @@ ex:addPaddles
     skos:prefLabel "Add paddles"@en, "Paddel hinzufügen"@de ;
     skos:altLabel "Add Mechanical field"@en, "Füge mechanisches Feld hinzu"@de;
     skos:definition "Non-steerable floating something is provided with oars, with which the boat can be propelled by muscle power and also steered"@en, "Nicht steuerbares schwimmendes Etwas wird mit Rudern versehen, mit dem das Boot mit Muskelkraft vorangetrieben und auch gesteuert werden kann"@de .
+    
 ex:replaceTreeTrunkWithFloatingMattress
     a rdf:Property, skos:Concept ;
     od:usesPattern tc:ExpandingTrimmingPattern ;
