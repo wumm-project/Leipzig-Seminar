@@ -359,7 +359,8 @@ ex:AtomIcebreaker
 
 ex:AircraftPropulsionDevice
     a tc:SpecificEvolutionTree ;
-    skos:prefLabel "Propulsion device for aircraft"@en, "Antriebsvorrichtung für Flugzeuge"@de .
+    skos:prefLabel "Propulsion device for aircraft"@en, "Antriebsvorrichtung für Flugzeuge"@de ;
+    skos:definition "A propulsive device is what an aircraft uses to push off the surrounding space while flying"@en, "Eine Antriebsvorrichtung ist das, was ein Flugzeug benutzt, um sich während des Fluges vom umgebenden Raum abzustoßen"@de .
 
 ex:SingleBladePropeller
     a ex:AircraftPropulsionDevice ;
