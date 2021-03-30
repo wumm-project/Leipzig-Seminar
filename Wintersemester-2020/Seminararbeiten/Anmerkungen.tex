@@ -7,11 +7,11 @@
 {\end{tabbing}}
 \def\dq{{\char34}}
 
-\title{About the WUMM modelling concepts of a TRIZ ontology}
+\title{About the WUMM Modelling Concepts of a TRIZ Ontology}
 
 \author{Hans-Gert Gr\"abe}
 
-\date{March 22,  2021}
+\date{March 30,  2021}
 
 \begin{document}
 \maketitle
@@ -220,12 +220,12 @@ In this process, \emph{several levels of abstraction} are to be distinguished.
   system itself, but also cover a description of the necessary aspects of its
   operation.
 \item[1.] The level of \emph{modelling the real-world system}. In the
-  modelling of a real-world system with its "core and cross-cutting concerns"
-  (as known from Software Engineering), the worlds of several conceptual
-  systems often come together. In addition to the methodological dimension of
-  a TRIZ ontology, these are regularly the conceptual world of a technical
-  ontology and possibly other conceptual worlds such as a company-internal
-  compliance etc.
+  modelling of a real-world system with its \emph{core and cross-cutting
+    concerns} (as known from Software Engineering), the worlds of several
+  conceptual systems often come together. In addition to the methodological
+  dimension of a TRIZ ontology, these are regularly the conceptual world of a
+  technical ontology and possibly other conceptual worlds such as a
+  company-internal compliance etc.
 
   The ontologies provide the language means, concepts (RDF subjects) and
   properties (RDF predicates), which are to be \emph{applied} at this level.
@@ -271,7 +271,7 @@ The TOP glossary \cite{TOP-Glossary} explains the differences as follows
   as is» through a transformation, based on the «model of the system as
   required».
  \end{itemize}
-It is clear that "system" here can only mean a \emph{model of the system} in
+It is clear that «system» here can only mean a \emph{model of the system} in
 which, in addition to the ontology of the TRIZ methodology, a domain-specific
 ontology plays a central role, because a system is only accessible in
 descriptive terms via its model, as the schematisation in Figure~1 also
@@ -281,8 +281,25 @@ suggests.
   Figure 1. Visualisation of the TOP TRIZ model.
   \url{https://triz-summit.ru/onto_triz/mod}
 \end{center}
-What is a \emph{TRIZ model} as defined in the TOP project?  This notion ist
-explained in \cite{TOP-Glossary} as follows:
+The «TRIZ model of the system as is» emerges from this through application of
+specific-structural TRIZ concepts and instruments. How is this to be
+understood? Is the (model of the) «system as required» initially a
+domain-specific modelling that is to be enriched by an appropriate TRIZ model
+in this phase (2)? Such an understanding would contradict TRIZ modelling
+practices, which methodically are to be applied already in the creation of the
+domain model, for example with the schema of a \emph{minimal technical system}
+to be filled in as a template in the domain modelling. In the sense of the
+hill schema, in phase (2) rather the specific TRIZ structure of the modelling
+is to be determined and on this basis the domain-specific modelling from phase
+(1) is to be strengthened in a targeted manner at points to be identified
+(operative zone and operative time). This \emph{TRIZ model} as a prototypical
+abstraction of the modelling of the real-world problem at the same time
+determines the \emph{abstract TRIZ tools} to be used and thus provides the
+context for the transition to the solution model «on the top of the hill»,
+which in the end only has to be «rolled down» to the (model of the) «system as
+required». The TRIZ model is thus a \emph{context} for all four phases of
+real-world modelling.  In this way the notion of TRIZ model is also explained
+in \cite{TOP-Glossary}:
 \begin{quote}
   A \emph{TRIZ model} is a schematic notation of a gradual transition from the
   problem to TRIZ model of the problem, then to TRIZ model of the solution and
@@ -291,30 +308,29 @@ explained in \cite{TOP-Glossary} as follows:
   («system as required»). The TRIZ model includes the basic components of
   inventive thinking: analysis, synthesis, evaluation.
 \end{quote}
-In contrast to the above explanations, here a TRIZ model is understood as the
-totality of the four model stages described above, including the modelling
-process itself. However, these four stages all refer to level 1 models of a
-real-world system; no distinction is made between application of concepts from
-level 2 of a \emph{TRIZ ontology of tools} (present at level 1 as concept
-instances) and level 3 of a \emph{TRIZ ontology of methods} (present at level
-1 only in a methodological-processual way).
+Hence a \emph{TRIZ model} is the common (developing during the phases)
+abstract TRIZ context of the four model stages described above, including the
+modelling process itself.  However, these four stages all refer to level 1
+models of a real-world system; no distinction is made between application of
+concepts from level 2 of a \emph{TRIZ ontology of tools} (present at level 1
+as concept instances) and level 3 of a \emph{TRIZ ontology of methods}
+(present at level 1 only in a methodological-processual way).
 
-What is the core of the three transitions between the model stages?  The
-modelling of any system starts with the modelling of the «system as it is» on
-the basis of domain-specific concepts. If the modelling is done on the
-methodological basis of TRIZ principles, the domain-specific system of
-concepts must be enriched with TRIZ methodological concepts such as main
-useful function, conflicting pairs, operative zone and operative time, etc.,
-in order to prepare the extraction of abstract TRIZ patterns as «TRIZ model of
-the system as it is» (TRIZ task model) according to the hill model. This part
-of the TRIZ ontology concerns thus only \emph{one} aspect of the modelling of
-the real-world system. On the other hand, the \emph{application} of TRIZ
-concepts in such a real-world modelling requires that the domain-specific
-concepts are compatible with the requirements of TRIZ modelling. However, the
-real-world modelling has a similar relationship of the specific to the general
-of a domain-specific ontology as to a TRIZ ontology. Thus, the two ontologies
-stand in a relationship of mutual complementation of the modelling languages
-in the special modelling application.
+What does this mean for the scope of a TRIZ ontology? The modelling of any
+system starts with the modelling of the «system as it is» on the basis of
+domain-specific concepts. If the modelling is done on the methodological basis
+of TRIZ principles, the domain-specific system of concepts must be enriched
+with TRIZ methodological concepts such as MPV, conflicting pairs, operative
+zone and operative time, etc.  The second step requires a special abstraction
+from domain-specific concepts for the extraction of abstract TRIZ patterns as
+«TRIZ model of the system as it is» (TRIZ task model) according to the hill
+schema.  Hence the modelling of the real-world system requires that the
+domain-specific concepts are compatible with the requirements of TRIZ
+modelling.  The two ontologies present in this modelling -- the
+domain-specific and the TRIZ ontology -- have a similar relationship of the
+specific to the general and thus stand in a relationship of mutual
+complementation of the modelling languages in the special modelling
+application.
 
 It is clear, however, that the «model of the system as it is» (MSI) enriched
 with elements of a domain-specific ontology, the abstract «TRIZ model of the
@@ -322,8 +338,8 @@ system as it is» (TSI) extracted from it, the resulting «TRIZ model of the
 system as required» (TRIZ solution model, TSO) and finally the «model of the
 system as required» (MSO), which is again enriched in a domain-specific way,
 call up largely the same language constructs from the point of view of a TRIZ
-ontology and are thus four instances of the real-world system model, which are
-related as follows:
+ontology and are thus four instances of the (developing through the four
+phases) real-world system model, which are related as follows:
 \begin{itemize}[noitemsep]
 \item \textbf{MSI $\to$ TSI:} Consolidation and refinement of TRIZ-relevant
   concepts in the MSI.
@@ -333,8 +349,8 @@ related as follows:
 \item \textbf{TSO $\to$ MSO:} Detailing of the model, completion and execution
   of the domain-specific part of the transformation.
 \end{itemize}
-For the Level 2 ontology (it answers the question "Which TRIZ tools are
-available and how do they relate to each other?"), the distinction between
+For the Level 2 ontology (it answers the question «Which TRIZ tools are
+available and how do they relate to each other?»), the distinction between
 these four system models is therefore not relevant. Corresponding language
 tools are only needed at level 3, when it comes to the terminology of the
 \emph{application} of the TRIZ methodology itself.
@@ -488,7 +504,7 @@ out jointly for all concepts related to the system, it is sufficient to assign
 the modelling stage to the respective model of the system as a property.
 Separate sub-concepts at all levels, as introduced in TOP modelling, are not
 necessary, since the stage can be inferred via the model of the system in
-which a concept is "built in". Hence the WOP approach takes a different route
+which a concept is «built in». Hence the WOP approach takes a different route
 here and models this connection as a predicate \texttt{od:belongsTo} with
 value from the \texttt{tc:StageValue} range
 \begin{center}\tt
