@@ -405,15 +405,18 @@ cm:issubclassof a rdf:Property;
 # Base concepts of Collection-5
 cm:Field a skos:Concept ;
   skos:prefLabel "Field"@en .
+  od:ZanniDefinition "Immaterial entity present in a defined space exerting some force at any point in this space. It is characterized by its intensity."@en ;
 
 cm:Substance a skos:Concept ;
   skos:prefLabel "Substance"@en .
+  od:ZanniDefinition "Material entity, it may be organic and inorganic, natural or artificial. The substance can be represented as a SFM."@en ;
 
-cm:S-Field a skos:Concept ;
+cm:S-Field a skos:Concept ; 
   skos:prefLabel "S-Field"@en .
 
 cm:S-FieldModel a skos:Concept ;
   skos:prefLabel "S-Field Model"@en .
+  od:ZanniDefinition "Representation of a material system composed at least of one element."@en ;
 
 # Properties of Collection-5
 
