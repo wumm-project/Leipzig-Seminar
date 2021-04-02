@@ -285,9 +285,10 @@ system under analysis are located.
 \begin{figure}[htb]
   \centering
   \includegraphics[width=.9\linewidth]{figures/removabledisplay.png}
+  
   \caption{\small Section of the specific evolution tree of the screen
-    \cite{Shpakovsky2016}, see http://www.target-invention.com/ for the
-    complete tree}
+    \cite{Shpakovsky2016}, see \url{http://www.target-invention.com/} for
+    the complete tree}
 	\label{fig:spec_evo}
 \end{figure}
 
@@ -525,7 +526,10 @@ ex:QuadrophonicSystem \\
 \> skos:prefLabel "Quadrophonic system"@en .\\[4pt]
 ex:SpatialSoundSystem\\
 \> a ex:Screen ; \\
-\> skos:prefLabel "Spatial sound system"@en .\\[4pt]
+\> skos:prefLabel "Spatial sound system"@en .
+\end{code}
+\newpage
+\begin{code}
 ex:addLoudspeaker\\
 \> a rdf:Property, skos:Concept ;\\
 \> od:usesPattern tc:MonoBiPolyPattern, tc:BiSystem, tc:PolySystem ;\\
@@ -534,7 +538,7 @@ ex:addLoudspeaker\\
 \end{code}
 
 \begin{wrapfigure}[26]{l}{0.4\textwidth}
-  \begin{center}\vspace*{-2em}
+  \begin{center}\vspace*{-1em}
     \includegraphics[width=0.3\textwidth]{figures/segmentation.png}
   \end{center}
   \caption{\small Segmentation of the screen \cite{Shpakovsky2016}}
@@ -578,6 +582,7 @@ a rowboat uses muscle power, a sailboat the wind, a steamboat a steam machine
 and so on. As the water-jet is a means of propulsion and does not describe the
 power source, but how the power is used for propulsion (e.g. propeller, paddle
 wheel), it is misplaced on the evolution tree trunk.
+\newpage
 
 Modelling this discrepancy is done via using a different evolution pattern for
 the transition between the diesel-boat and water-jet-boat, namely the
@@ -663,14 +668,14 @@ ex:BoatMATChEMOperator\\
 \> Thermal - Steam engine\\
 \> Chemical - Diesel engine\\
 \> Electrical - Electric motor\\
-\> Atomic - Nuclear fission reactor"""@en .\\
+\> Atomic - Nuclear fission reactor"""@en .\\[4pt]
 ex:Rowboat \\
 \> a ex:Boat ; \\ 
 \> ex:addPaddles ex:BoatWithManyRowers ; \\
 \> ex:addRecreationalInstallations ex:RecreationalRowboat ; \\
 \> ex:replacePaddleWithSail ex:Sailboat ; \\
 \> skos:prefLabel "Rowboat"@en ; \\
-\> skos:definition "Manual labour as the power source"@en . \\
+\> skos:definition "Manual labour as the power source"@en . \\[4pt]
 ex:replacePaddleWithSail \\
 \> a rdf:Property, skos:Concept ; \\
 \> od:usesPattern tc:SegmentationPattern, tc:Gas ; \\
@@ -729,15 +734,11 @@ ex:AircraftPropulsionDevice \\
 \> a tc:SpecificEvolutionTree ; \\
 \> skos:prefLabel "Propulsion device for aircraft"@en ; \\
 \> skos:definition "A propulsive device is what an aircraft \\
-\>\> uses to push off the surrounding space while flying"@en .
-\end{code}
-\begin{code}\tt
+\>\> uses to push off the surrounding space while flying"@en .\\[4pt]
 ex:MultiBladePropeller \\
 \> a ex:AircraftPropulsionDevice ; \\
 \> ex:addPropellerRow ex:DoubleRowPropeller ; \\
-\> skos:prefLabel "Multiblade propeller"@en .
-\end{code}
-\begin{code}\tt
+\> skos:prefLabel "Multiblade propeller"@en .\\[4pt]
 ex:addPropellerRow \\
 \> a rdf:Property, skos:Concept ; \\
 \> od:usesPattern tc:SegmentationPattern, tc:ManyParts ; \\
@@ -748,17 +749,20 @@ ex:addPropellerRow \\
 \raggedright
 \bibitem{Altshuller1979} Genrich Altshuller (1979).  Creativity as an exact
   science (in Russian). English version: Gordon and Breach, New York 1988.
-\bibitem{Graebe2021} Hans-Gert Gr\"abe (2021). About the WUMM modelling
-  concepts of a TRIZ ontology.  \url{https://github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Anmerkungen.pdf}.
+\bibitem{Graebe2021} Hans-Gert Gr\"abe (2021). The WUMM Project on a TRIZ
+  Ontology. Basic Concepts.
+  \url{https://wumm-project.github.io/Texts/WOP-Basics.pdf}.
 \bibitem{KS} Karl Koltze, Valeri Souchkov (2017).  Systematische
   Innovationsmethoden (in German).  Hanser, Munich. ISBN 978-3-446-45127-8.
 \bibitem{TESE2018} Alex Lyubomirsky, Simon Litvin, Sergei Ikovenko et al.
   (2018). Trends of Engineering System Evolution (TESE).  TRIZ Consulting
   Group. ISBN 9783000598463.
+\bibitem{Shpakovsky2003} Nikolay Shpakovsky (2003). One of the evolution
+  trends of an aircraft propulsive device.\\
+  \url{http://www.gnrtr.com/Generator.html?pi=211&cp=3}
 \bibitem{Shpakovsky2016} Nikolay Shpakovsky (2016). Tree of Technology
   Evolution. English translation of the Russian original (Forum, Moscow
   2010).\\ \url{https://wumm-project.github.io/TTS.html}
-\bibitem{Shpakovsky2003} One of the evolution trends of an aircraft propulsive device. \url{http://www.gnrtr.com/Generator.html?pi=211&cp=3}
 \bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
   \url{https://www.w3.org/TR/skos-reference/}.  
 \bibitem{WUMM} The WUMM Project. \url{https://wumm-project.github.io/} 
