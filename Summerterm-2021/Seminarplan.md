@@ -53,6 +53,7 @@ written in English.
 * Frederick W. Taylor (1911).  The Principles of Scientific Management.
 * Peter F. Drucker (1975). The Practice of Management.
 * Henry Mintzberg (1991). Mintzberg on Management.
+* The Toyota Management system. Guiding principles and main tools.
 * MBO - Management by objectives.
 * The SMART approach
 
@@ -64,12 +65,11 @@ written in English.
 * Scientific working. Terms, conceptual systems and contextualisation.
   (Kleemann, in German) 
 
-### 20.04. Business Modelling, Business TRIZ and general management challenges
-    (Prof. Gräbe)
+### 20.04. ISO 9000, Business Modelling and Software Management (Gräbe)
 
-### 27.04. The Methodologial School of Management (Prof. Gräbe)
+### 27.04. Business TRIZ and general management challenges (Gräbe)
 
-### 04.05. First students presentation.
+### 04.05. First student's presentation.
 
 ### 11.05.
 
@@ -83,7 +83,7 @@ written in English.
 
 ### 15.06.
 
-### 22.06.
+### 22.06. Goal-Modelle und die i*-Modellierungsmethode (Laue/NN)
 
 ### 29.06.
 
