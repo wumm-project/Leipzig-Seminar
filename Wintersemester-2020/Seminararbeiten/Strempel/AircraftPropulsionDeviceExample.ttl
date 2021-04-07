@@ -1,0 +1,113 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+@prefix ex: <http://example.orf/EvolutionExample/Boats/> .
+
+<http://opendiscovery.org/rdf/Ontologies/AircraftPropulsionDeviceExample/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    a owl:Ontology ;
+    rdfs:comment "from http://www.gnrtr.com/Generator.html?pi=211&cp=3";
+    skos:prefLabel "Evolution Trees - Aircraft Propulsion Example" ;
+    owl:imports <http://opendiscovery.org/rdf/Ontologies/EvolutionTrees/> .
+
+# specific evolution tree of the aircraft propulsion device
+
+ex:AircraftPropulsionDevice
+    a tc:SpecificEvolutionTree ;
+    skos:prefLabel "Propulsion device for aircraft"@en, "Antriebsvorrichtung für Flugzeuge"@de ;
+    skos:definition "A propulsive device is what an aircraft uses to push off the surrounding space while flying"@en, "Eine Antriebsvorrichtung ist das, was ein Flugzeug benutzt, um sich während des Fluges vom umgebenden Raum abzustoßen"@de .
+
+ex:SingleBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerBlade ex:TwoBladePropeller ;
+    skos:prefLabel "Single blade propeller"@en, "Einblatt-Propeller"@de .
+ex:TwoBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerBlade ex:MultiBladePropeller ;
+    skos:prefLabel "Two blade propeller"@en, "Zweiblatt-Propeller"@de .
+ex:MultiBladePropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:addPropellerRow ex:DoubleRowPropeller ;
+    skos:prefLabel "Multiblade propeller"@en, "Mehrblättriger Propeller"@de .
+ex:DoubleRowPropeller
+    a ex:AircraftPropulsionDevice ;
+    ex:useReactionJet ex:ReactionJet ;
+    skos:prefLabel "Double row propeller"@en, "Zweireihiger Propeller"@de .
+ex:ReactionJet
+    a ex:AircraftPropulsionDevice ;
+    ex:useIonFlow ex:IonFlow ;
+    skos:prefLabel "Reaction jet"@en, "Reaktionsstrahl"@de .
+ex:IonFlow
+    a ex:AircraftPropulsionDevice ;
+    ex:usePhotonFlow ex:PhotonFlow ;
+    skos:prefLabel "Ion flow"@en, "Ionenfluss"@de .
+ex:PhotonFlow
+    a ex:AircraftPropulsionDevice ;
+    skos:prefLabel "Photon flow"@en, "Photonenfluss"@de .
+
+ex:addPropellerBlade
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:TwoParts, tc:ManyParts, tc:EvolutionTreeTrunk ;
+    skos:prefLabel "Add propeller blade"@en, "Propellerblatt hinzufügen"@de .
+ex:addPropellerRow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:ManyParts, tc:EvolutionTreeTrunk ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
+ex:useReactionJet
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Gas, tc:EvolutionTreeTrunk ;
+    skos:prefLabel "Use reaction jet"@en, "Reaktionsstrahl nutzen"@de .
+ex:useIonFlow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Plasma, tc:EvolutionTreeTrunk ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
+ex:usePhotonFlow
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:SegmentationPattern, tc:Field, tc:EvolutionTreeTrunk ;
+    skos:prefLabel "Add propeller row"@en, "Propellerreihe hinzufügen"@de .
+
+
+
+# specific evolution tree of screen
+ex:Screen
+    a tc:SpecificEvolutionTree ;
+    skos:prefLabel "Specific evolution tree of the screen"@en ;
+    skos:altLabel "Specific evolution tree of the display"@en .
+
+# Mono-bi-poly of image
+ex:OneImage 
+    a ex:Screen ; 
+    ex:obtainSinglePictureFromTwo ex:StereoImage ;
+    skos:prefLabel "One image"@en .
+ex:StereoImage 
+    a ex:Screen ; 
+    ex:sequeceOfDrawings ex:ChangeableImage ;
+    skos:prefLabel "Stereo image"@en .
+ex:ChangeableImage 
+    a ex:Screen ;
+    ex:evolutionIntoCinematograph ex:Cinematograph;
+    skos:prefLabel "Changeable image"@en .
+
+# specify Bi/Poly-System or not?
+ex:obtainSinglePictureFromTwo 
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:MonoBiPolyPattern, tc:BiSystem ;
+    skos:prefLabel "obtain a single picture from two pictures"@en ;
+    skos:definition "View two pictures through non-transparent screen"@en .
+ex:sequeceOfDrawings
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:MonoBiPolyPattern, tc:PolySystem ;
+    skos:prefLabel "Sequence of drawings"@en ;
+    skos:definition "A sequence of drawings is generally used to illustrate evolution of events in time."@en .
+ex:evolutionIntoCinematograph
+    a rdf:Property, skos:Concept ;
+    od:usesPattern tc:MonoBiPolyPattern, tc:NewMonoSystem ;
+    skos:prefLabel "Evolution into cinemmatograph"@en ;
+    skos:definition "Evolution into a higher level mono-system, a moving dynamic picture"@en .
