@@ -1,0 +1,380 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+
+<http://opendiscovery.org/rdf/TheParameters/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:source <http://www.i-sim.org/Altshuller_Matrix.xls>, <https://www.triz-consulting.de/triz-matrix> ;
+    a owl:Ontology ;
+    rdfs:comment
+    "2019-06-24 graebe: Extracted and transformed from the source",
+    "2019-07-08 graebe: english and russian language versions added",
+    "2020-04-15 graebe: Divided in Matrix and Parameters, Descriptions from Lippert-19 added" ,
+    "2020-04-16 graebe: namespace abbreviation and parameter names fixed",
+    "2021-02-27 graebe: changes to skos:";
+    rdfs:label "TRIZ Parameters from the Matrix" .
+
+od:Parameter
+    a owl:Class ;
+    rdfs:label "A TRIZ Parameter within the Matrix" .
+
+od:UpperParameter 
+    a owl:Class ;
+    rdfs:label "A TRIZ upper-parameter within the Matrix 2003" .
+
+tc:WeightOfTheMovingObject 
+    skos:definition "Gewicht des beweglichen Objekts"@de, "The mass of the object, in a gravitational field. The force that the body exerts on its support or suspension."@en ;
+    od:hasParameterNumber "01" ;
+    od:hasParameterNumberMatrix2003  "01" ;
+    a od:Parameter ;
+    skos:prefLabel "Gewicht des beweglichen Objekts"@de, "Weight of the moving object"@en, "Масса движущегося объекта"@ru .
+
+tc:WeightOfTheStationaryObject 
+    skos:definition "Gewicht des unbeweglichen Objekts"@de, "The mass of the object, in a gravitational field. The force that the body exerts on the surface on which it rests."@en ;
+    od:hasParameterNumber "02" ;
+    od:hasParameterNumberMatrix2003 "02" ;
+    a od:Parameter ;
+    skos:prefLabel "Gewicht des unbeweglichen Objekts"@de, "Weight of the stationary object"@en, "Масса недвижимого объекта"@ru .
+
+tc:LengthOfTheMovingObject 
+    skos:definition "Any one linear dimension of the moving object, not necessarily the longest."@en, "Länge des beweglichen Objekts"@de ;
+    od:hasParameterNumber "03" ;
+    od:hasParameterNumberMatrix2003 "03" ;
+    a od:Parameter ;
+    skos:prefLabel "Length of the moving object"@en, "Länge des beweglichen Objekts"@de, "Длина движущегося объекта"@ru .
+
+tc:LengthOfTheStationaryObject 
+    skos:definition "Any one linear dimension of the fixed or stationary object, not necessarily the longest."@en, "Länge des unbeweglichen Objekts"@de ;
+    od:hasParameterNumber "04" ;
+    od:hasParameterNumberMatrix2003 "04" ;
+    a od:Parameter ;
+    skos:prefLabel "Length of the stationary object"@en, "Länge des unbeweglichen Objekts"@de, "Длина недвижимого объекта"@ru .
+
+tc:SurfaceOfTheMovingObject 
+    skos:definition "Oberfläche des beweglichen Objekts"@de, "The outermost or uppermost layer of the moving object."@en ;
+    od:hasParameterNumber "05" ;
+    od:hasParameterNumberMatrix2003 "05" ;
+    a od:Parameter ;
+    skos:prefLabel "Oberfläche des beweglichen Objekts"@de, "Surface of the moving object"@en, "Площадь движущегося объекта"@ru .
+
+tc:SurfaceOfTheStationaryObject 
+    skos:definition "Oberfläche des unbeweglichen Objekts"@de, "The outermost or uppermost layer of the stationary object."@en ;
+    od:hasParameterNumber "06" ;
+    od:hasParameterNumberMatrix2003 "06" ;
+    a od:Parameter ;
+    skos:prefLabel "Oberfläche des unbeweglichen Objekts"@de, "Surface of the stationary object"@en, "Площадь недвижимого объекта"@ru .
+
+tc:VolumeOfTheMovingObject 
+    skos:definition "The cubic measure of space occupied by the moving object."@en, "Volumen des beweglichen Objekts"@de ;
+    od:hasParameterNumber "07" ;
+    od:hasParameterNumberMatrix2003 "07" ;
+    a od:Parameter ;
+    skos:prefLabel "Volume of the moving object"@en, "Volumen des beweglichen Objekts"@de, "Объем движущегося объекта"@ru .
+
+tc:VolumeOfTheStationaryObject 
+    skos:definition "The cubic measure of space occupied by the stationary object."@en, "Volumen des unbeweglichen Objekts"@de ;
+    od:hasParameterNumber "08" ;
+    od:hasParameterNumberMatrix2003 "08" ;
+    a od:Parameter ;
+    skos:prefLabel "Volume of the stationary object"@en, "Volumen des unbeweglichen Objekts"@de, "Объем недвижимого объекта"@ru .
+
+tc:Speed 
+    skos:definition "Geschwindigkeit"@de, "The rate of a process or action, or the rate of movement of an object."@en ;
+    od:hasParameterNumber "09" ;
+    od:hasParameterNumberMatrix2003 "14" ;
+    a od:Parameter ;
+    skos:prefLabel "Geschwindigkeit"@de, "Speed"@en, "Скорость"@ru .
+
+tc:Force 
+    skos:definition "Force measures the interaction between systems and is measured as the strength or energy of physical action or movement. It is any interaction that changes an object’s condition or environment."@en, "Kraft"@de ;
+    od:hasParameterNumber "10" ;
+    od:hasParameterNumberMatrix2003 "15" ;
+    a od:Parameter ;
+    skos:prefLabel "Force"@en, "Kraft"@de, "Сила"@ru .
+
+tc:TensionOrPressure 
+    skos:definition "Spannung oder Druck"@de, "Technically, force per unit area but can also be a balance between, and interplay of, opposing objects or systems."@en ;
+    od:hasParameterNumber "11" ;
+    od:hasParameterNumberMatrix2003 "19" ;
+    a od:Parameter ;
+    skos:prefLabel "Spannung oder Druck"@de, "Tension or Pressure"@en, "Напряжение или давление"@ru .
+
+tc:Shape 
+    skos:definition "Form"@de, "The external contours, form, or appearance of a system."@en ;
+    od:hasParameterNumber "12" ;
+    od:hasParameterNumberMatrix2003 "09" ;
+    a od:Parameter ;
+    skos:prefLabel "Form"@de, "Shape"@en, "Форма"@ru .
+
+tc:StabilityOfTheObjectsStructure 
+    skos:definition "Stabilität der Struktur des Objekts"@de, "The standalone nature and immobility of the system or object."@en ;
+    od:hasParameterNumber "13" ;
+    od:hasParameterNumberMatrix2003 "21" ;
+    a od:Parameter ;
+    skos:prefLabel "Stability of the object’s structure"@en, "Stabilität der Struktur des Objekts"@de, "Устойчивость композиции объекта"@ru .
+
+tc:Strength 
+    skos:definition "Festigkeit"@de, "The extent to which the object can resist changing in response to force. Resistance to breaking."@en ;
+    od:hasParameterNumber "14" ;
+    od:hasParameterNumberMatrix2003 "20" ;
+    a od:Parameter ;
+    skos:prefLabel "Festigkeit"@de, "Strength"@en, "Сила"@ru .
+
+tc:FunctionalTimeOfTheMovingObject 
+    skos:definition "Haltbarkeit des beweglichen Objekts"@de, "The time that the moving object or system can correctly perform its action. Also referred to as service life or durability."@en ;
+    od:hasParameterNumber "15" ;
+    od:hasParameterNumberMatrix2003 "12" ;
+    a od:Parameter ;
+    skos:prefLabel "Functional time of the moving object"@en, "Haltbarkeit des beweglichen Objekts"@de, "Долговечность движущегося объекта"@ru .
+
+tc:FunctionalTimeOfTheStationaryObject 
+    skos:definition "Haltbarkeit des unbeweglichen Objekts"@de, "The time that the stationary object or system can correctly perform its action. Also referred to as service life or durability."@en ;
+    od:hasParameterNumber "16" ;
+    od:hasParameterNumberMatrix2003 "13" ;
+    a od:Parameter ;
+    skos:prefLabel "Functional time of the stationary object"@en, "Haltbarkeit des unbeweglichen Objekts"@de, "Долговечность недвижимого объекта"@ru .
+
+tc:Temperature 
+    skos:definition "Temperatur"@de, "The thermal condition of the object or system. Includes other thermal parameters, such as heat capacity, that affect the rate of change of temperature."@en ;
+    od:hasParameterNumber "17" ;
+    od:hasParameterNumberMatrix2003 "22" ;
+    a od:Parameter ;
+    skos:prefLabel "Temperatur"@de, "Temperature"@en, "Температура"@ru .
+
+tc:BrightnessOfTheLighting 
+    skos:definition "Beleuchtungsverhältnisse"@de, "Illumination characteristics of the system such as brightness, intensity, and color."@en ;
+    od:hasParameterNumber "18" ;
+    od:hasParameterNumberMatrix2003 "23" ;
+    a od:Parameter ;
+    skos:prefLabel "Beleuchtungsverhältnisse"@de, "Brightness of the lighting"@en, "Видимость"@ru .
+
+tc:EnergyUseOfTheMovingObject 
+    skos:definition "Consumption of energy resource(s) in order to perform the action or function of the moving object."@en, "Energieverbrauch des beweglichen Objekts"@de ;
+    od:hasParameterNumber "19" ;
+    od:hasParameterNumberMatrix2003 "16" ;
+    a od:Parameter ;
+    skos:prefLabel "Energieverbrauch des beweglichen Objekts"@de, "Energy use of the moving object"@en, "Энергопотребление движущегося объекта"@ru .
+
+tc:EnergyUseOfTheFixedObject 
+    skos:definition "Consumption of energy resource(s) in order to perform the action or function of the stationary object."@en, "Energieverbrauch des unbeweglichen Objekts"@de ;
+    od:hasParameterNumber "20" ;
+    od:hasParameterNumberMatrix2003 "17" ;
+    a od:Parameter ;
+    skos:prefLabel "Energieverbrauch des unbeweglichen Objekts"@de, "Energy use of the fixed object"@en, "Энергопотребление недвижимого объекта"@ru .
+
+tc:Power 
+    skos:definition "Energy that is produced by mechanical, electrical, or other means. This characteristic refers to production not consumption."@en, "Leistung, Kapazität"@de ;
+    od:hasParameterNumber "21" ;
+    od:hasParameterNumberMatrix2003 "18" ;
+    a od:Parameter ;
+    skos:prefLabel "Leistung, Kapazität"@de, "Power"@en, "Производительность, производительность"@ru .
+
+tc:LossOfEnergy 
+    skos:definition "Energieverluste"@de, "The waste of energy resource(s) through the function or movement of the object or system."@en ;
+    od:hasParameterNumber "22" ;
+    od:hasParameterNumberMatrix2003 "27" ;
+    a od:Parameter ;
+    skos:prefLabel "Energieverluste"@de, "Loss of Energy"@en, "Потери энергии"@ru .
+
+tc:LossOfMaterial 
+    skos:definition "Materialverluste"@de, "Waste of a system’s materials, substances, parts, or subsystems during normal functioning."@en ;
+    od:hasParameterNumber "23" ;
+    od:hasParameterNumberMatrix2003 "25" ;
+    a od:Parameter ;
+    skos:prefLabel "Loss of material"@en, "Materialverluste"@de, "Материальные потери"@ru .
+
+tc:LossOfInformation 
+    skos:definition "Informationsverluste"@de, "Partial or complete, permanent or temporary, loss of data or access to data in or by a system. Frequently includes sensory data such as aroma, texture, etc."@en ;
+    od:hasParameterNumber "24" ;
+    od:hasParameterNumberMatrix2003 "28" ;
+    a od:Parameter ;
+    skos:prefLabel "Informationsverluste"@de, "Loss of information"@en, "Потеря информации"@ru .
+
+tc:LossOfTime 
+    skos:definition "Time taken to perform the activity or function of the system or object. Improving the loss of time means reducing the time taken for the activity."@en, "Zeitverlust"@de ;
+    od:hasParameterNumber "25" ;
+    od:hasParameterNumberMatrix2003 "26" ;
+    a od:Parameter ;
+    skos:prefLabel "Loss of time"@en, "Zeitverlust"@de, "Потери времени"@ru .
+
+tc:QuantityOfMaterial 
+    skos:definition "Materialmenge"@de, "The number or amount of a system’s materials, substances, parts, or subsystems which are altered (permanently or temporarily) or consumed (fully or partially) during normal functioning."@en ;
+    od:hasParameterNumber "26" ;
+    od:hasParameterNumberMatrix2003 "10" ;
+    a od:Parameter ;
+    skos:prefLabel "Materialmenge"@de, "Quantity of material"@en, "Количество материала"@ru .
+
+tc:Reliability 
+    skos:definition "A system’s ability to perform its intended functions in consistent, predictable ways."@en, "Zuverlässigkeit"@de ;
+    od:hasParameterNumber "27" ;
+    od:hasParameterNumberMatrix2003 "35" ;
+    a od:Parameter ;
+    skos:prefLabel "Reliability"@en, "Zuverlässigkeit"@de, "Надежность"@ru .
+
+tc:PrecisionOfMeasurements 
+    skos:definition "Messgenauigkeit"@de, "The degree to which the result of a measurement of a property of a system conforms to the correct value or a standard."@en ;
+    od:hasParameterNumber "28" ;
+    od:hasParameterNumberMatrix2003 "48" ;
+    a od:Parameter ;
+    skos:prefLabel "Messgenauigkeit"@de, "Precision of measurements"@en, "Точность измерений"@ru .
+
+tc:PrecisionOfManufacture 
+    skos:definition "Fertigungsgenauigkeit"@de, "The extent to which the actual characteristics of the system or object match the specified or required characteristics."@en ;
+    od:hasParameterNumber "29" ;
+    od:hasParameterNumberMatrix2003 "42" ;
+    a od:Parameter ;
+    skos:prefLabel "Fertigungsgenauigkeit"@de, "Precision of manufacture"@en, "Точность производства"@ru .
+
+tc:ExternalDamagingFactors 
+    skos:definition "Susceptibility of a system to externally generated (harmful) effects. A harmful effect is one that reduces the efficiency or quality of the functioning of the object or system."@en, "Von außen auf das Objekt wirkende schädliche Faktoren"@de ;
+    od:hasParameterNumber "30" ;
+    od:hasParameterNumberMatrix2003 "40" ;
+    a od:Parameter ;
+    skos:prefLabel "External damaging factors"@en, "Externe schädliche Faktoren"@de, "Вредные факторы, действующие на объект извне"@ru .
+
+tc:InternalDamagingFactors 
+    skos:definition "Harmful effects are generated by the object or system, as part of its operation."@en, "Vom Objekt selbst erzeugte schädliche Faktoren"@de ;
+    od:hasParameterNumber "31" ;
+    od:hasParameterNumberMatrix2003 "31" ;
+    a od:Parameter ;
+    skos:prefLabel "Internal damaging factors"@en, "Interne schädliche Faktoren"@de, "Вредные факторы, создаваемые самим объектом"@ru .
+
+tc:EaseOfManufacture 
+    skos:definition "Fertigungsfreundlichkeit"@de, "The degree of facility or effortlessness in manufacturing or fabricating the object/system."@en ;
+    od:hasParameterNumber "32" ;
+    od:hasParameterNumberMatrix2003 "41" ;
+    a od:Parameter ;
+    skos:prefLabel "Ease of manufacture"@en, "Fertigungsfreundlichkeit"@de, "Удобство изготовления"@ru .
+
+tc:EaseOfUse 
+    skos:definition "Bedienkomfort"@de, "Simple, easy to understand and perform or utilize; accessible."@en ;
+    od:hasParameterNumber "33" ;
+    od:hasParameterNumberMatrix2003 "34" ;
+    a od:Parameter ;
+    skos:prefLabel "Bedienkomfort"@de, "Ease of Use"@en, "Простота использования"@ru .
+
+tc:EaseOfRepair 
+    skos:definition "Instandsetzungsfreundlichkeit"@de, "The degree of facility or effortlessness in the mending or fixing of the system. Encompasses convenience as well as time to repair faults, failures, or defects."@en ;
+    od:hasParameterNumber "34" ;
+    od:hasParameterNumberMatrix2003 "36" ;
+    a od:Parameter ;
+    skos:prefLabel "Ease of repair"@en, "Instandsetzungsfreundlichkeit"@de, "Удобство обслуживания"@ru .
+
+tc:Adaptability 
+    skos:definition "Adaptionsfähigkeit, Universalität"@de, "The extent to which a system/object is appropriate for all situations or positively responds to external changes."@en ;
+    od:hasParameterNumber "35" ;
+    od:hasParameterNumberMatrix2003 "32" ;
+    a od:Parameter ;
+    skos:prefLabel "Adaptability, Universality"@en, "Adaptionsfähigkeit, Universalität"@de, "Адаптивность, универсальность"@ru .
+
+tc:ComplexityOfConstruction 
+    skos:definition "Kompliziertheit der Struktur"@de, "The number and diversity of elements and element interrelationships comprising a system. Human interaction increases complexity."@en ;
+    od:hasParameterNumber "36" ;
+    od:hasParameterNumberMatrix2003 "45" ;
+    a od:Parameter ;
+    skos:prefLabel "Complexity of construction"@en, "Kompliziertheit der Struktur"@de, "Сложность структуры"@ru .
+
+tc:ComplexityOfInspectionAndMeasurements 
+    skos:definition "Demonstrated by measuring or monitoring systems that are complex, costly, require much time and labor to set up and use, or that have complex relationships between components or components that interfere with each other. Can also be indicated by the increasing cost of measuring to a satisfactory error."@en, "Kompliziertheit der Kontrolle und Messung"@de ;
+    od:hasParameterNumber "37" ;
+    od:hasParameterNumberMatrix2003 "47" ;
+    a od:Parameter ;
+    skos:prefLabel "Complexity of inspection and measurements"@en, "Kompliziertheit der Kontrolle und Messung"@de, "Сложность контроля и измерений"@ru .
+
+tc:LevelOfAutomation 
+    skos:definition "Automatisierungsgrad"@de, "The extent to which a system or object performs its functions without human assistance. At the highest level of operation, the system or object can determine what is needed, adapt to that need, and monitor its function."@en ;
+    od:hasParameterNumber "38" ;
+    od:hasParameterNumberMatrix2003 "43" ;
+    a od:Parameter ;
+    skos:prefLabel "Automatisierungsgrad"@de, "Level of automation"@en, "Уровень автоматизации"@ru .
+
+tc:Productivity 
+    skos:definition "Produktivität"@de, "The output of a system per unit time or per unit of input. The effectiveness of productive effort."@en ;
+    od:hasParameterNumber "39" ;
+    od:hasParameterNumberMatrix2003 "44" ;
+    a od:Parameter ;
+    skos:prefLabel "Productivity"@en, "Produktivität"@de, "Производительность"@ru .
+
+tc:QuantityofInformation
+    od:hasParameterNumberMatrix2003 "11" ;
+    a od:Parameter ;
+    skos:prefLabel "Quantity Of Information"@en .
+
+tc:FunctionEfficiency
+    od:hasParameterNumberMatrix2003 "24" ;
+    a od:Parameter ;
+    skos:prefLabel "Function Efficiency"@en .
+
+tc:Noise
+    od:hasParameterNumberMatrix2003 "29" ;
+    a od:Parameter ;
+    skos:prefLabel "Noise"@en .
+
+tc:HarmfulEmissions
+    od:hasParameterNumberMatrix2003 "30" ;
+    a od:Parameter ;
+    skos:prefLabel "Harmful Emissions"@en .
+
+tc:CompatitbilityOrConnectability
+    od:hasParameterNumberMatrix2003 "33" ;
+    a od:Parameter ;
+    skos:prefLabel "Compatitbility Or Connectability"@en .
+
+tc:Security
+    od:hasParameterNumberMatrix2003 "37" ;
+    a od:Parameter ;
+    skos:prefLabel "Security"@en .
+
+tc:Vulnerability
+    od:hasParameterNumberMatrix2003 "38" ;
+    a od:Parameter ;
+    skos:prefLabel "Vulnerability"@en .
+
+tc:AestheticsOrAppearance
+    od:hasParameterNumberMatrix2003 "39" ;
+    a od:Parameter ;
+    skos:prefLabel "AestheticsOrAppearance"@en .
+
+tc:ComplexityOfControl
+    od:hasParameterNumberMatrix2003 "46" ;
+    a od:Parameter ;
+    skos:prefLabel "Complexity Of Control"@en .
+
+
+tc:PhysicalParameters
+    od:hasParameterNumberMatrix2003 "01" ;
+    a od:UpperParameter ;
+    skos:prefLabel "Physical Parameters"@en .
+
+tc:Performance
+    od:hasParameterNumberMatrix2003 "02" ;
+    a od:UpperParameter ;
+    skos:prefLabel "Performance"@en .
+
+tc:Efficiency
+    od:hasParameterNumberMatrix2003 "03" ;
+    a od:UpperParameter ;
+    skos:prefLabel "Efficiency"@en .
+
+tc:Non-Functionality
+    od:hasParameterNumberMatrix2003 "04" ;
+    a od:UpperParameter ;
+    skos:prefLabel "Non-Functionality"@en .
+
+tc:AssemblyCost
+    od:hasParameterNumberMatrix2003 "05" ;
+    a od:UpperParameter ;
+    skos:prefLabel "Assembly Cost"@en .
+
+tc:Measurement
+    od:hasParameterNumberMatrix2003 "06" ;
+    a od:UpperParameter ;
+    skos:prefLabel "Measurement"@en .
