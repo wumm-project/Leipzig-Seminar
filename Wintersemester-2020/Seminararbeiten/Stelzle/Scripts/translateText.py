@@ -12,10 +12,14 @@ def read_turtle_file(file_name: str):
 
     for line in content:
         if "@" in line and "@prefix" not in line:
-            if "@de" and "@en" and "@ru" not in line:
+            if "@de" not in line or "@en" not in line or "@ru" not in line:
                 quote_split = line.split('"')
                 first_word = quote_split[1]
                 first_language = ""
+
+                if not first_word:
+                    print('Empty Value!')
+                    continue
 
                 if "@de" in quote_split[2]:
                     first_language = "de"
