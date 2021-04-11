@@ -3,10 +3,12 @@
 
 \usepackage{float}
 \usetikzlibrary{shapes}
+\usepackage{xcolor}
 
 \usepackage[main=english]{babel}
 
 \newcommand{\HGG}[1]{\begin{quote}\textbf{Anmerkung HGG:} #1\end{quote}}
+\newcommand{\todo}{{\color{red}\textbf{ToDo}}}
 
 \newenvironment{code}{\tt \begin{tabbing}
 \hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
@@ -22,143 +24,16 @@
 \begin{document}
 \maketitle
 
-\section{Aim of the work}
+\tableofcontents
 
-The aim of this paper is to elaborate a proposal for an ontological modelling
-of the areas of \emph{TRIZ Functional Analysis} based on the approaches
-in \cite{KS}, \cite{WebinarFunctionAnalysis}, \cite{SouchkovGlossary} and further own investigations.
-The work fits into the activities of the \emph{WUMM Ontology Project}
-\cite{WUMM} to model core TRIZ concepts using modern semantic web means.  The
-work consists of two parts -- a \emph{turtle file}, in which the semantic
-modelling is performed based on the SKOS framework \cite{SKOS}, and \emph{this
-  elaboration}, in which the backgrounds and motivations of the concrete
-modelling decisions are detailed.
-
-The paper is structured in the following way. 
-In section \ref{sec:starting_point} the information sources are mentioned and further explained.
-In the following section the conceptualisation will be shortly explained.
-In the next section \ref{sec:functional_analysis} the Functional Analysis as described in \cite{KS} will be summarized.
-The next section introduces Pyhton tools which have been implemented to make the \textit{turtle}-file creation easier.
-Following it will be shown how and why the \textit{turtle}-file has been created.
-Extending the last semester will be some example implementations of the \textit{turtle}-file for Functional Analysis in section \ref{sec:examples}.
-In the last section a conclusion about the paper wil be given.
-
-\section{Starting point} 
-\label{sec:starting_point}
-
-The starting point for the building the ontolog for Functional Analysis is going to be the book \textit{Systematische Innovationsmethoden} \cite{KS}.
-The definitions, demenstrations and explanations will be used to implement the ontology.
-
-Other definitions for Functional Analyis will be picked from \cite{SouchkovGlossary}. 
-As this is a great summary of many TRIZ related terms.
-
-These two information sources and the following more detailed explained Webinar from Nikolai Shchedrin are the starting point in building the ontology for Functional Analysis.
-
-
-\subsection{Webinar of Nikolai Shchedrin}
-
-Furthemore Nikolai Shchedrin made a talk about building an ontology for \textit{Function} and \textit{Function Analysis} \cite{WebinarFunctionAnalysis}.
-He presented some insights on how to structure the ontolgy.
-
-\subsubsection{Function Classification}
-
-First he introduced, that there should a be a new classification for the functions. 
-There should be three types: 
-
-\begin{enumerate}[noitemsep]
-	\item Function of the subsystem
-	\item Function of the upper system
-	\item Function of the surrounding objects
-\end{enumerate}
-
-This will be implemented in the ontology. 
-
-\subsubsection{Model Of A Function}
-
-Furthermore he introduced the \textit{Model of a function}.
-With this a function is further described. 
-Not only does it show the Action and the two components which interact, but it furthermore shows the parameter, the type of the function and the degree of execution.
-
-The \textit{Functional Model} is a graph representation of the system which is analyzed. 
-Every node in the graph is a component or a subsystem of the system. 
-The functions are represented by edges. 
-This will be further explained in \ref{subsec:functional_model}.
-
-The \textit{Model of a function} can be helpful for building the \textit{Functional Model}.
-
-\subsubsection{Objectives Of A System}
-
-As explaind from Nikolai Shchedrin the objective of a system can be divided into three objectives.
-
-\begin{enumerate}[noitemsep]
-	\item Primary Objective
-	\item Secondary Objective
-	\item Auxiliary Objective
-\end{enumerate}
-
-The Primary Objective is the objective, which the system was build for. 
-
-Secondary Objects of the system are functionalities which are offered by the system, but for which it was not mainly built.
-
-And the Auxiliary Objectives fulfill the purpose to get the Primary Objective to work.
-
-\subsubsection{Primary Function}
-
-Furthermore a function can be classified in one of these three functions.
-
-\begin{enumerate}[noitemsep]
-	\item Primary Function
-	\item Core Function
-	\item Auxiliary Function
-\end{enumerate}
-
-The Primary Function is Primary Objective and its technical execution. 
-
-The Core Function represents a function, which directly helps executing the Primary Function.
-
-The Auxiliary Functions describe the set of functions which help run other subsystems.
-
-\section{The Conceptualisations}
-
-The conceptualisations to be developed follow the basic assumptions and
-positings that are elaborated in more detail in \cite{Graebe2021}. In
-particular, the following namespace prefixes are used:
-\begin{itemize}[noitemsep]
-  \item \texttt{ex:} -- the namespace of a special system to be modelled. 
-  \item \texttt{tc:} -- the namespace of the TRIZ concepts (RDF subjects).
-  \item \texttt{od:} -- the namespace of WUMM's own concepts (RDF predicates, 
-  	general concepts). 
-\end{itemize}
-
-The central task is to model the functions and all belonging parameters which are use to describe these.
-In the examples it is shown that with the ontology it is going to be possible to build functions for the Functional Analysis, which can then be further investigated with one of the \textit{Matrixes} and the \textit{40 Principles}.
-
-A function in a concrete example should then look like this.
-\begin{code}\tt
-ex:Steer \\
-\> a tc:function \\
-\> tc:Interaction ex:DriverSteeringwheel ; \\
-\> tc:Action ex:Turn ; \\
-\> tc:SubjectActionObject ex:DriverSteeringwheel ; \\
-\> tc:QualityOfFunction tc:UsefulFunction ; \\
-\> skos:prefLabel "Steer"@en, "Lenken"@de ; \\
-\> skos:Definition "Drehen des Lenkrads, \\
-\> \> \> durch den Fahrer um die Richtung des Fahrzeuges zu ändern."@de .
-\end{code}
-
-
-
-\include{functional_analysis.tex}
-\include{python_implementation.tex}
-
-\section{Creating And Modeling the Turtle-File}
-\label{sec:turtle_file}
-
-\section{Example For Functional Analysis}
-\label{sec:examples}
-
-\section{Conclusion}
-\label{sec:conclusion}
+\include{01_aimOfWork}
+\include{02_startingPoint}
+\include{03_conceptualisations}
+\include{04_functionalAnalysis}
+\include{05_pythonImplementation}
+\include{06_creatingTurtleFile}
+\include{07_exampleTurtleFile}
+\include{08_conclusion}
 
 
 \begin{thebibliography}{xxx}

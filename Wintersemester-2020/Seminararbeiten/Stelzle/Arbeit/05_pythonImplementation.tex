@@ -19,7 +19,7 @@ With this the matrix is converted into the right syntax, as mentioned above.
 
 \paragraph{Using The Script}
 
-Pyhton will need to be installed on the computer. 
+Python will need to be installed on the computer. 
 The command to run the script will then be:
 
 \begin{center}
@@ -27,22 +27,28 @@ The command to run the script will then be:
 \end{center}
 
 The output \textit{csv}-file will be called \textit{createdMatrix.csv}.
-The file \textit{temporary.txt} is only created for storing a the information temporary. 
+The file \textit{temporary.txt} is only created for storing the information temporary. 
 It can be deleted afterwards.
 
 \subsubsection{Creating The Matrix}
+\label{subsubsec:creating_matrix}
 
 The following explains the implementation of the \textit{createMatrix.py} script.
 
-The script uses two other files. 
-The first ist the \textit{principles.txt}.
-In this file alle the forty principles are written down, with their belonging number at the beginnning.
+The script uses three other files. 
+The first is the \textit{principles.txt}.
+In this file all the forty principles are written down, with their belonging number at the beginning.
 Hence the script can map an entry index to the belonging principle name.
 
 The second file, which is also used is called \textit{parameters.txt}.
 In there are all the forty-eight parameters which represent the column and rows in the matrix.
 These names are similar to those for the Altshuller Matrix.
 The nine new parameters, which were introduced for the Matrix2003 are the following. 
+
+As this matrix introduced upper-parameters, a third file for these is needed.
+This has been called \textit{upperParameters.txt}.
+The upper-parameters are linked by writing the upper-parameter number with a dot before the parameters in the \textit{parameters.txt}.
+The python script then handles the rest.
 
 \begin{enumerate}[noitemsep]
     \item QuantityOfInformation
@@ -57,7 +63,7 @@ The nine new parameters, which were introduced for the Matrix2003 are the follow
 \end{enumerate}
 
 The layout for the Turtle file is the same as the layout for the "Altshuller Matrix". 
-As this makes it easier for later adjustments or improvements of the matrixes.
+As this makes it easier for later adjustments or improvements of the matrices.
 
 At first the script creates the header for the Matrix2003, which is the same as in the "Altshuller Matrix".
 Then it defines the owl entry for the Matrix.
@@ -67,7 +73,9 @@ Afterwards the script iterates over the entries in the \textit{csv} file and bui
     \centering
     \begin{code}\tt
         <http://opendiscovery.org/rdf/Matrix/E.06.34>\\
+        \> od:upperDecreasingParameter tc:Non-Functionality ;\\
         \> od:decreasingParameter tc:EaseOfUse ;\\
+        \> od:upperIncreasingParameter tc:Physical Parameters ;\\
         \> od:increasingParameter tc:SurfaceOfTheStationaryObject ;\\
         \> od:recommendedPrinciple tc:PreferredAction, tc:Asymmetry, \\
         \> \> \> tc:Mediator, tc:SelfService ;\\
@@ -94,8 +102,8 @@ This will be the result of the script.
 For translating the various tags a python script was implemented, which takes a turtle files as input and adds the missing language tags.
 Therefore the script checks each line which already has a language tag. 
 Then it makes an api call with the first tag as the source language.
-It add the language tags for english, german and russian. 
-Each tag is a seperate api call.
+It adds the language tags for English, German and Russian. 
+Each tag is a separate api call.
 For translation the Google Translator is used.
 
 \paragraph{Using the Script}
@@ -115,6 +123,6 @@ Afterwards the script can be started.
     python translateText.py $<$turtle-file-name$>$
 \end{center}
 
-This will output a file name \textit{trasnlated\_$<$turtle-file-name$>$.ttl}.
+This will output a file name \textit{translated\_$<$turtle-file-name$>$.ttl}.
 This is the new turtle file with the added language tags.
-Furthemore all translated words or sentences will be shown in the terminal output.
+Furthermore all translated words or sentences will be shown in the terminal output.
