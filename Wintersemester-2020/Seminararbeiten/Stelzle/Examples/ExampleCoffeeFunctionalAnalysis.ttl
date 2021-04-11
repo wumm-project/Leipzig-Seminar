@@ -20,11 +20,11 @@
 
 ex:Coffee
     a tc:Component ;
-    skos:prefLabel "Coffee"@en, "Kaffee"@de .
+    skos:prefLabel "Coffee"@en, "Kaffee"@de , "Кофе"@ru .
 
 ex:Cup
     a tc:Component ;
-    skos:prefLabel "Cup"@en, "Tasse"@de .
+    skos:prefLabel "Cup"@en, "Tasse"@de , "чашка"@ru .
 
 
 
@@ -32,15 +32,15 @@ ex:Cup
 
 ex:Hold
     a tc:Action ;
-    skos:prefLabel "Hold"@en, "Füllen"@de .
+    skos:prefLabel "Hold"@en, "Füllen"@de , "Держать"@ru .
 
 ex:Rest
     a tc:Action ;
-    skos:prefLabel "Rest"@en, "Hängen bleiben"@de .
+    skos:prefLabel "Rest"@en, "Hängen bleiben"@de , "Отдых"@ru .
 
 ex:Energydifference
     a tc:Action ;
-    skos:prefLabel "Energy Difference"@en, "Energieveränderung"@de .
+    skos:prefLabel "Energy Difference"@en, "Energieveränderung"@de , "Разница в энергии"@ru .
 
 
 
@@ -48,19 +48,20 @@ ex:Energydifference
 
 ex:CupCoffee
     a tc:Interaction ;
-    skos:prefLabel "Cup - Coffee"@en, "Tasse - Kaffee"@de .
+    tc:Component ex:Cup, ex:Coffee ;
+    skos:prefLabel "Cup - Coffee"@en, "Tasse - Kaffee"@de , "Чашка - Кофе"@ru .
 
 ex:CupHoldCoffee
     a tc:SubjectActionObject ;
-    skos:prefLabel "Cup - Hold - Coffee"@en, "Tasse - Hält - Kaffee"@de .
+    tc:Action ex:Hold ; 
+    tc:Interaction ex:CupCoffee ;
+    skos:prefLabel "Cup - Hold - Coffee"@en, "Tasse - Hält - Kaffee"@de , "Чашка - Держать - Кофе"@ru .
 
 ex:HoldCoffee
     a tc:Function; 
-    tc:Action ex:Hold ; 
-    tc:Interaction ex:CupCoffee ;
     ex:SubjectActionObject ex:CupHoldCoffee ;
     tc:QualityOfFunction tc:UsefulFunction ;
-    skos:prefLabel "Hold"@en, "Hält"@de .
+    skos:prefLabel "Hold"@en, "Hält"@de , "Держать"@ru .
 
 
 
@@ -68,27 +69,27 @@ ex:HoldCoffee
 
 ex:CupEnergydifferenceCoffee
     a tc:SubjectActionObject ;
-    skos:prefLabel "Cup - Energy Difference - Coffee"@en, "Tasse - Energieveränderung - Kaffee"@de .
+    tc:Action ex:Energydifference ;
+    tc:Interaction ex:CupCoffee ;
+    skos:prefLabel "Cup - Energy Difference - Coffee"@en, "Tasse - Energieveränderung - Kaffee"@de , "Чашка - Разница в энергии - Кофе"@ru .
 
 ex:Cool
     a tc:Function ;
-    tc:Action ex:Energydifference ;
-    tc:Interaction ex:CupCoffee ;
     tc:SubjectActionObject ex:CupEnergydifferenceCoffee ;
     tc:QualityOfFunction tc:HarmfulFunction ;
-    skos:prefLabel "Cool"@en, "Kühlt"@de .
+    skos:prefLabel "Cool"@en, "Kühlt"@de , "Прохладный"@ru .
 
 
 # Kaffee - Verschmutzt - Tasse
 
 ex:CoffeeRestCup
     a tc:SubjectActionObject ;
-    skos:prefLabel "Coffee - Rest - Cup"@en, "Kaffee - Hängen bleiben - Tasse"@de .
+    tc:Action ex:Rest ;
+    tc:Interaction ex:CupCoffee ;
+    skos:prefLabel "Coffee - Rest - Cup"@en, "Kaffee - Hängen bleiben - Tasse"@de , "Кофе - Остальное - Чашка"@ru .
 
 ex:Pollute
     a tc:Function ;
-    tc:Action ex:Rest ;
-    tc:Interaction ex:CupCoffee ;
     tc:SubjectActionObject ex:CoffeeRestCup ;
     tc:QualityOfFunction tc:HarmfulFunction ;
-    skos:prefLabel "Pollute"@en, "Verschmutzt"@de .
+    skos:prefLabel "Pollute"@en, "Verschmutzt"@de, "Загрязнение"@rue .

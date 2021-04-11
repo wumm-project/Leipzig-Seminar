@@ -13,7 +13,7 @@
     cc:attributionURL <http://opendiscovery.org> ;
     cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
     a owl:Ontology ;
-    rdfs:label "Functional Analysis - Example" ;
+    rdfs:label "Functional Analysis - Example Car" ;
     owl:imports <http://opendiscovery.org/rdf/Ontologies/FunctionalAnalysis/> .
 
 # Systems, Components, Subsystems, Objects, Subjects, ...
@@ -100,6 +100,7 @@ ex:Turn
 
 ex:DriverSteeringwheel
     a tc:Interaction ;
+    tc:Component ex:Driver, ex:SteeringWheel ;
     skos:prefLabel "Driver - Steering Wheel"@en, "Fahrer - Lenkrad" , "Fahrer - Lenkrad"@de , "Водитель - Рулевое колесо"@ru .
 
 ex:DriverTurnSteeringwheel
@@ -108,9 +109,7 @@ ex:DriverTurnSteeringwheel
 
 ex:Steer
     a tc:function ;
-    tc:Interaction ex:DriverSteeringwheel ;
-    tc:Action ex:Turn ;
-    tc:SubjectActionObject ex:DriverSteeringwheel ;
+    tc:SubjectActionObject ex:DriverTurnSteeringwheel ;
     tc:QualityOfFunction tc:UsefulFunction ;
     skos:prefLabel "Steer"@en, "Lenken"@de , "Рулить"@ru ;
     skos:Definition "Drehen des Lenkrads, durch den Fahrer um die Richtung des Fahrzeuges zu ändern."@de , "Turning the steering wheel by the driver to change the direction of the vehicle."@en , "Поворот рулевого колеса водителем для изменения направления движения автомобиля."@ru .
@@ -123,16 +122,17 @@ ex:Touch
 
 ex:RoadWheels
     a tc:Interaction ;
+    tc:Component ex:Road, ex:Wheels ;
     skos:prefLabel "Road - Wheels"@en, "Straße - Räder"@de , "Дорога - Колеса"@ru .
 
 ex:RoadTouchWheels
     a tc:SubjectActionObject ;
+    tc:Interaction ex:RoadWheels ;
+    tc:Action ex:Touch ;
     skos:prefLabel "Road - Touch - Wheels"@en, "Straße - Berühren - Räder"@de , "Дорога - Сенсорный - Колеса"@ru .
 
 ex:Holds
     a tc:Function ;
-    tc:Interaction ex:RoadWheels ;
-    tc:Action ex:Touch ;
     tc:SubjectActionObject ex:RoadTouchWheels ;
     tc:QualityOfFunction tc:UsefulFunction ;
     skos:prefLabel "Holding"@en, "Halt geben"@de , "Держа"@ru ;
@@ -140,12 +140,12 @@ ex:Holds
 
 ex:RoadRubWheels
     a tc:SubjectActionObject ;
+    tc:Interaction ex:RoadWheels; 
+    tc:Action ex:Touch ;
     skos:prefLabel "Road - Rub - Wheels"@en, "Straße - Reiben - Räder"@de , "Дорога - Руб - Колеса"@ru .
 
 ex:Rub
     a tc:Function ;
-    tc:Interaction ex:RoadWheels; 
-    tc:Action ex:Touch ;
     tc:SubjectActionObject ex:RoadRubWheels ;
     tc:QualityOfFunction tc:HarmfulFunction ;
     skos:prefLabel "Rub"@en, "Reiben"@de , "Тереть"@ru ;
@@ -156,34 +156,59 @@ ex:Rub
 
 ex:SeatsInmates
     a tc:Interaction ;
+    tc:Component ex:Seats, ex:Inmates ;
     skos:prefLabel "Sitze - Insassen"@de, "Seats - Inmates"@en , "Сиденья - сокамерники"@ru .
 
-ex:SeatsTouchInmates
+ex:InmatesTouchSeats
     a tc:SubjectActionObject ;
-    skos:prefLabel "Sitze - Berühren - Insassen"@de, "Seats - Touch - Imates"@en , "Сиденье - касание - пассажир"@ru .
+    tc:Interaction ex:SeatsInmates ;
+    tc:Action ex:Touch ;
+    skos:prefLabel "Insassen - Berühren - Sitze"@de, "Imates - Touch - Seats"@en , "Пассажиры - Прикосновение - Сиденья"@ru .
 
 ex:Sit
     a tc:Function ;
-    tc:Interaction ex:SeatsInmates ;
-    tc:Action ex:Touch ;
-    tc:SubjectActionObject ex:SeatsTouchInmates ;
+    tc:SubjectActionObject ex:InmatesTouchSeats ;
     tc:QualityOfFunction tc:UsefulFunction ;
     skos:prefLabel "Sit"@en , "Sitzen"@den , "Сидеть"@ru ;
     skos:Definition "Durch das Berühren der Insassen mit den Sitzen des Autos, bietet sich Ihnen die Funktion des Sitzens."@de , "By touching the occupants with the seats of the car, you have the function of sitting."@en , "Прикоснувшись к сиденьям автомобиля, вы можете сидеть."@ru .
 
+
 ex:UncomfortableSeatsInmates
     a tc:Interaction ;
+    tc:Component ex:UncomfortableSeats, ex:Inmates ;
     skos:prefLabel "Unkomfortable Sitze - Insassen"@de, "Uncomfortable Seats - Inmates"@en , "Неудобные сиденья - пассажиры"@ru .
 
-ex:UncomfortableSeatsTouchInmates
+ex:InmatesTouchUncomfortableSeats
     a tc:SubjectActionObject ;
-    skos:prefLabel "Uncomfortable Seats - Touch - Inmates"@en, "Unkomfortable Sitze - Berühren - Insassen"@de , "Неудобные сиденья - прикосновение - заключенные"@ru .
+    tc:Action ex:Touch ;
+    tc:Interaction ex:UncomfortableSeatsInmates ;
+    skos:prefLabel "Inmates - Touch - Uncomfortable Seats"@en, "Insassen - Berühren - Unkomfortable Sitze"@de , "Заключенные - прикосновение - неудобные сиденья"@ru .
 
 ex:SitUncomfortable
     a tc:Function ;
-    tc:Interaction ex:UncomfortableSeatsInmates ;
-    tc:SubjectActionObject ex:UncomfortableSeatsTouchInmates ;
-    tc:Action ex:Touch ;
+    tc:SubjectActionObject ex:InmatesTouchUncomfortableSeats ;
     tc:QualityOfFunction tc:FunctionDisadvantage ;
     skos:prefLabel "Unkomfortables Sitzen"@de, "Uncomfortable Sitting"@en , "Неудобное сидение"@ru ;
     skos:Definition "Durch das Berühren der Insassen mit den unkomfortable Sitzen des Autos, bildet sich eine nützliche Funktion mit Nachteilen, da die Insassen einerseits Sitzen können aber nur unkomfortable"@de, "By touching the occupants with the uncomfortable seats of the car, a useful function forms with disadvantages, since the occupants on the one hand can sit but only uncomfortably"@ene, "Касание пассажиров неудобными сиденьями автомобиля создает полезную функцию с недостатками, поскольку пассажиры могут неудобно сидеть только с одной стороны."@rue .
+
+ex:SitUncomfortableParameter
+    a od:functionWithMatrixParameter ;
+    tc:Function ex:SitUncomfortable ;
+    od:findDecreasingUpperParameter tc:Efficiency ;
+    od:findDecreasingParameter tc:Noise ;
+    od:findIncreasingUpperParameter tc:Non-Functionality ;
+    od:findIncreasingParameter tc:EaseOfUse ;
+    skos:prefLabel "Function Sit Uncomfortable With Parameters"@en , "Funktion Mit Parametern unangenehm sitzen"@de , "Функция неудобно сидеть с параметрами"@ru .
+
+ex:MatrixEntryForSitUncomfortableParameter
+    a od:MatrixEntryByFunctionParameter ;
+    od:functionWithMatrixParameter ex:SitUncomfortableParameter ;
+    skos:prefLabel "Chosen Matrix Entry For Function Sit Uncomfortable"@en , "Ausgewählter Matrixeintrag für Funktion Unbequem sitzen"@de , "Выбранная матрица для функции Сидеть неудобно"@ru ;
+    od:ChosenMatrix "The Matrix 2003" ;
+    od:MatrixEntry "<http://opendiscovery.org/rdf/Matrix/E.34.29>".
+
+ex:PrincipleForMatrixEntrySitUncomfortable
+    a od:PrincipleByMatrixEntryByFunctionParameter ;
+    od:MatrixEntryByFunctionParameter ex:MatrixEntryForSitUncomfortableParameter ;
+    skos:prefLabel "Chosen Principle To Optimize Function Sit Uncomfortable"@en , "Gewähltes Prinzip zur Optimierung der Funktion Unbequem sitzen"@de , "Избранный принцип оптимизации функции Сидеть неудобно"@ru ;
+    od:Principle tc:ChangePhysicalOrChemicalParameters .
