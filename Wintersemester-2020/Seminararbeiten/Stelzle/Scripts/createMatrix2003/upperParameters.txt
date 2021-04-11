@@ -1,0 +1,6 @@
+1:PhysicalParameters
+2:Performance
+3:Efficiency
+4:Non-Functionality
+5:AssemblyCost
+6:Measurement

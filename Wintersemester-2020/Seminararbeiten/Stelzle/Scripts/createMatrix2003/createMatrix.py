@@ -20,11 +20,6 @@ turtle_header = """@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
     dcterms:source <http://www.i-sim.org/Altshuller_Matrix.xls>,
     <https://www.triz-consulting.de/triz-matrix> ;
     a owl:Ontology ;
-    rdfs:comment
-    "2019-06-24 graebe: Extracted and transformed from the source",
-    "2020-04-15 graebe: Parameters split off in a separate RDF graph",
-    "2020-04-16 graebe: namespace abbreviation, parameter and principle names fixed",
-    "todo: transform that to an RDF Cube" ;
     owl:imports <http://opendiscovery.org/rdf/TheParameters/>; 
     rdfs:label "TRIZ Matrix - The Old Version" .
 
@@ -49,7 +44,25 @@ def create_lookup(file: str):
     return lookup
 
 
-def read_matrix(file_name:str):
+def create_two_paramter_lookup(file: str, second_parameter: dict):
+    file_reader = open(file)
+    lookup = {}
+
+    for line in file_reader:
+        if "\n" in line:
+            line = line.replace("\n", "")
+        line_dict = {}
+        splitted_by_name_line = line.split(":")
+        splitted_parameter_line = splitted_by_name_line[0].split(".")
+        if splitted_parameter_line[1] not in lookup.keys():
+            line_dict['second_parameter'] = second_parameter[splitted_parameter_line[0]]
+            line_dict['name'] = splitted_by_name_line[1]
+            lookup[splitted_parameter_line[1]] = line_dict
+
+    return lookup
+
+
+def read_matrix(file_name: str):
     matrix = []
     with open(file_name, newline='') as matrix_csv:
         reader = csv.reader(matrix_csv, delimiter=',')
@@ -64,7 +77,7 @@ def print_matrix(matrix: list):
         print(entry)
 
 
-def build_matrix_ttl(matrix: list, principle_lookup: dict, parameter_lookup: dict):
+def build_matrix_ttl(matrix: list, principle_lookup: dict, two_parameter_lookup: dict):
     ttl_writer = open("created_matrix.ttl", "a")
 
     entry_prefix = "<http://opendiscovery.org/rdf/Matrix/E"
@@ -75,11 +88,15 @@ def build_matrix_ttl(matrix: list, principle_lookup: dict, parameter_lookup: dic
     for row in range(0, len(matrix)):
 
         parameter_row = row + 1
-        increasing_parameter = "od:increasingParameter tc:" + parameter_lookup[str(parameter_row)] + " ;"
+        increasing_dict = two_parameter_lookup[str(parameter_row)]
+        upper_increasing_parameter = "od:upperIncreasingParameter tc:" + increasing_dict["second_parameter"] + " ;"
+        increasing_parameter = "od:increasingParameter tc:" + increasing_dict["name"] + " ;"
         for column in range(0, len(matrix[row])):
             ttl_entry = ""
             parameter_column = column + 1
-            decreasing_parameter = "od:decreasingParameter tc:" + parameter_lookup[str(parameter_column)] + " ;"
+            decreasing_dict = two_parameter_lookup[str(parameter_column)]
+            upper_decreasing_parameter = "od:upperDecreasingParameter tc:" + decreasing_dict["second_parameter"] + " ;"
+            decreasing_parameter = "od:decreasingParameter tc:" + decreasing_dict["name"] + " ;"
             recommended_principles = "od:recommendedPrinciple "
             splitted_principle = matrix[row][column].split('-')
             for principle in range(0, len(splitted_principle)):
@@ -93,7 +110,9 @@ def build_matrix_ttl(matrix: list, principle_lookup: dict, parameter_lookup: dic
 
             ttl_entry += entry_prefix + "." + prefix_zero(parameter_row) + "." + prefix_zero(
                 parameter_column) + ">" + add_newline()
+            ttl_entry += add_tab() + upper_decreasing_parameter + add_newline()
             ttl_entry += add_tab() + decreasing_parameter + add_newline()
+            ttl_entry += add_tab() + upper_increasing_parameter + add_newline()
             ttl_entry += add_tab() + increasing_parameter + add_newline()
             ttl_entry += add_tab() + recommended_principles + add_newline()
             ttl_entry += add_tab() + matrix_entry + add_newline()
@@ -131,7 +150,10 @@ if __name__ == '__main__':
     principle_lookup = create_lookup('principles.txt')
     print(principle_lookup)
 
-    parameter_lookup = create_lookup('parameters.txt')
+    upper_parameter_lookup = create_lookup('upperParameters.txt')
+    print(upper_parameter_lookup)
+
+    parameter_lookup = create_two_paramter_lookup('parameters.txt', upper_parameter_lookup)
     print(parameter_lookup)
 
     build_matrix_ttl(matrix, principle_lookup, parameter_lookup)
