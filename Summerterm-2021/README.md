@@ -3,8 +3,8 @@
 * lecture: th/do 11:15-12:45 
 * Seminar: tu/di 9:15-10:45 
 
-Both take place synchronously online in the BBB room
-<https://conf.informatik.uni-leipzig.de/b/gra-fgy-6fw>.
+Both take place synchronously online in the BBB room BIS.SIM
+<https://meet.uni-leipzig.de/b/gra-w2c-fhz-qnp>.
 
 ## Conception
 
@@ -34,6 +34,8 @@ particular
 * The Co-operative Action approach
 * Other management approaches that focus on social interactions. 
 
+__[More detailed information](2021-04-13/README.md) on the course concept.__
+
 ## Potential 
 
 Thinking in terms of contradictions and modelling (initially) contradictory
@@ -51,7 +53,7 @@ teaching programme.
 > that the effects of the change in mentality are growing rather than fading
 > away.
 
-Quelle: <http://www.trizminsk.org/d/Khomenko_Heritage(EN).pdf> (Folie 21)
+Source: <http://www.trizminsk.org/d/Khomenko_Heritage(EN).pdf> (Slide 21)
 
 ## Challenges to such a theoretical approach
 
