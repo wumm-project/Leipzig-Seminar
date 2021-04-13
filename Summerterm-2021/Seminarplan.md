@@ -56,14 +56,16 @@ written in English.
 * The Toyota Management system. Guiding principles and main tools.
 * MBO - Management by objectives.
 * The SMART approach
+* Goal-Modelle und die i*-Modellierungsmethode
+* Process and Enterprise Maturity Model - Michael Hammer
+* Business Process Maturity Model (BPMM) by Bill Curtis and John Alden
+* The “Business Process Definition Metamodel” (BPDM)
 
 ## Seminar schedule
 
-### 13.04. 
+### [13.04.](2021-04-13) 
 * Kick-off of the seminar. Introduction to the seminar topic. Discussion of
-  the seminar plan. (Gräbe, in German)
-* Scientific working. Terms, conceptual systems and contextualisation.
-  (Kleemann, in German) 
+  the seminar plan. (Gräbe)
 
 ### 20.04. ISO 9000, Business Modelling and Software Management (Gräbe)
 
@@ -83,7 +85,7 @@ written in English.
 
 ### 15.06.
 
-### 22.06. Goal-Modelle und die i*-Modellierungsmethode (Laue/NN)
+### 22.06.
 
 ### 29.06.
 
