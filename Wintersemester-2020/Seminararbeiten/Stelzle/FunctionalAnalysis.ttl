@@ -1,0 +1,475 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+
+<http://opendiscovery.org/rdg/Ontologies/FunctionalAnalysis/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    a owl:Ontology ;
+    rdfs:label "WUMM TRIZ Ontology - Functional Analysis" ;
+    owl:imports <http://opendiscovery.org/rdf/TheParameters/> ;
+    owl:imports <http://opendiscovery.org/rdf/TheMatrix2003/> ; 
+    owl:imports <http://opendiscovery.org/rdf/Matrix1985/> ;
+    owl:imports <http://opendiscovery.org/rdf/Principles/>;
+    owl:imports <http://opendiscovery.org/rdf/Ontologies/TopLevel/> .
+
+#1
+
+od:ListOfComponents
+    a skos:Concept, od:AdditionalConcept ;
+    od:subConceptOf tc:FunctionalAnalysis ;
+    od:hasSubConcept tc:ComponentAnalysis ;
+    rdfs:domain tc:System ;
+    rdfs:range tc:ComponentModel ;
+    skos:prefLabel "List of Components"@en, "Liste von Komponenten"@de , "Список компонентов"@ru ;
+    skos:Definition "Erster Schritt der Funktionalen Analyse. Hierbei wird eine Liste an Komponenten des Systems sowie an Komponenten des Ober-Systems, die mit dem System interagieren, erstellt"@de , "First step of the functional analysis. A list of components of the system as well as components of the parent system that interact with the system is created"@en , "Первый шаг функционального анализа. Создается список компонентов системы, а также компонентов родительской системы, которые взаимодействуют с системой."@ru ;
+    skos:example "Kaffeetasse, Kaffee, Löffel, Untertasse"@de , "Coffee cup, coffee, spoon, saucer"@en , "Кофейная чашка, кофе, ложка, блюдце"@ru .
+
+tc:System
+    a skos:Concept ;
+    skos:prefLabel "System"@en , "System"@de , "Система"@ru .
+
+tc:Subsystem
+    a skos:Concept ;
+    skos:prefLabel "Subsystem"@en, "Subsystem"@de , "Подсистема"@ru ;
+    od:SouchkovDefinition "A component or a set of interacting components limited by specific borders that belong to a technical system. Both a separate material object and a larger system's part combining several components (material objects) can be regarded as a subsystem."@en , "Eine Komponente oder eine Reihe interagierender Komponenten, die durch bestimmte Grenzen eines technischen Systems begrenzt sind. Sowohl ein separates Materialobjekt als auch ein größerer Systemteil, der mehrere Komponenten (Materialobjekte) kombiniert, können als Subsystem betrachtet werden."@de , "Компонент или набор взаимодействующих компонентов, ограниченных определенными границами, которые принадлежат технической системе. Как отдельный материальный объект, так и более крупная часть системы, объединяющая несколько компонентов (материальные объекты), могут рассматриваться как подсистема."@ru ;
+    skos:Definition "Eine Komponente des Systems (Subsystem), die für die Erfüllung der Anforderung verantwortlich ist. Kann auch ein ganzes System sein."@de , "A component of the system (subsystem) that is responsible for fulfilling the requirement. Can also be a whole system."@en , "Компонент системы (подсистема), отвечающий за выполнение требования. Также может быть целая система."@ru .
+
+tc:Uppersytem
+    a skos:Concept ;
+    skos:prefLabel "Uppersystem"@en, "Obersystem"@de , "Верхняя система"@ru .
+
+od:hasSubsystem
+    a rdfs:property ;
+    rdfs:domain tc:System ;
+    rdfs:range tc:Subsystem ;
+    skos:Definition "Stellt die Beziehung eines Komponenten als System zu einem ander Komponenten als Subsystem dar."@de , "Represents the relationship of one component as a system to another component as a subsystem."@en , "Представляет отношение одного компонента как системы к другому компоненту как подсистеме."@ru .
+
+od:hasUpperSystem
+    a rdfs:property ;
+    rdfs:domain tc:System ;
+    rdfs:range tc:Uppersystem ;
+    skos:prefLabel "Upper System"@en, "Obersystem"@de , "Верхняя система"@ru ;
+    skos:Definition "Stellt die Beziehung eines Objekts (Komponenten) mit seinen Obersystem dar."@de , "Represents the relationship of an object (components) with its superordinate system."@en , "Представляет отношения объекта (компонентов) с его вышестоящей системой."@ru .
+
+od:hasComponent
+    a rdfs:property ;
+    rdfs:domain tc:System ;
+    rdfs:range tc:Component .
+
+od:hasSystem
+    a rdfs:property ;
+    rdfs:domain tc:Component ;
+    rdfs:range tc:System .
+
+tc:PrimaryObjective
+    a skos:Concept ;
+    skos:prefLabel "Primary Objective"@en, "Hauptziel"@de , "Основная цель"@ru .
+
+tc:SecondaryObjective
+    a skos:Concept ;
+    skos:prefLabel "Secondary Objective"@en, "Nebenziel"@de , "Вторичная цель"@ru .
+
+tc:AuxiliaryObjective
+    a skos:Concept ;
+    skos:prefLabel "Auxiliary Objective"@en, "Hilfsziel"@de, "Вспомогательная цель"@rue .
+
+od:hasPrimaryObjective
+    rdfs:domain tc:System ;
+    rdfs:range tc:PrimaryObjective ;
+    skos:prefLabel "has Primary Objective"@en, "hat Hauptziel"@de , "имеет основную цель"@ru .
+
+od:hasSecondaryObjective
+    rdfs:domain tc:System ;
+    rdfs:range tc:SecondaryObjective ;
+    skos:prefLabel "has Secondary Objective"@en, "hat Nebenziel"@de , "имеет вторичную цель"@ru .
+
+od:hasAuxiliaryObjective
+    rdfs:domain tc:System ;
+    rdfs:range tc:AuxiliaryObjective ;
+    skos:prefLabel "has Auxiliary Objective"@en, "hat Hilfsziel"@de , "имеет вспомогательную цель"@ru .
+
+#Component 
+
+tc:Component
+    a skos:Concept ;
+    od:valueOf tc:Interaction ;
+    skos:prefLabel "Component"@en, "Komponente"@de , "Компонент"@ru ;
+    skos:altLabel "Object"@en, "Objekt"@de , "Объект"@ru ;
+    skos:Definition "Jedes System kann dargestellt werden als eine Anzahl von Objekten (Komponenten) die miteinander interagieren. Der Begriff „Objekt“ wird dabei recht weit gefasst, ein Objekt kann materieller oder immaterieller Natur sein."@de , "Any system can be represented as a number of objects (components) that interact with each other. The term “object” is taken quite broadly, an object can be material or immaterial in nature."@en , "Любую систему можно представить как набор взаимодействующих друг с другом объектов (компонентов). Термин «объект» используется довольно широко, объект может быть материальным или нематериальным по своей природе."@ru .
+
+tc:ComponentModel
+    a skos:Concept ;
+    od:subConceptOf tc:FunctionModel ;
+    od:SouchkovDefinition "A model of a technical system and its supersystem in Function Analysis which consists of function carriers and objects of functions."@en , "Ein Modell eines technischen Systems und seines Supersystems in der Funktionsanalyse, das aus Funktionsträgern und Funktionsobjekten besteht."@de , "Модель технической системы и ее надсистемы в функциональном анализе, которая состоит из функциональных носителей и объектов функций."@ru ;
+    skos:prefLabel "Component Modell"@en, "Компонентная модель."@ru , "Komponentenmodell"@de .
+
+tc:ComponentAnalysis
+    a skos:Concept ;
+    od:subConceptOf od:ListOfComponents ;
+    od:SouchkovDefinition "A step in Function Analysis that identifies components of a technical system being analyzed and its supersystem."@en , "Ein Schritt in der Funktionsanalyse, der Komponenten eines zu analysierenden technischen Systems und seines Supersystems identifiziert."@de , "Этап функционального анализа, который определяет компоненты анализируемой технической системы и ее надсистему."@ru ;
+    rdfs:domain tc:System ;
+    rdfs:range tc:ComponentModel ;
+    skos:prefLabel "Component Analysis"@en, "Компонентный Анализ"@ru , "Komponentenanalyse"@de ;
+    skos:altLabel "Component and Structural Analysis"@en , "Komponenten- und Strukturanalyse"@de , "Компонентный и структурный анализ"@ru .
+
+
+#2 
+
+od:ListOfInteractions
+    a skos:Concept, od:AdditionalConcept ;
+    od:subConceptOf tc:FunctionalAnalysis ;
+    rdfs:domain tc:System ;
+    rdfs:range tc:InteractionAnalysis ;
+    skos:prefLabel "Liste an Interaktionen"@de, "List of Interactions"@en , "Список взаимодействий"@ru ;
+    skos:Definition "Zweiter Schritt der Funktionalen Analyse. Hierbei werden die verschiedenen Komponenten aus Schritt 1, die miteinander interagieren, in Verbindung gebracht"@de , "Second step of the functional analysis. Here, the various components from step 1 that interact with each other are brought into connection"@en , "Второй шаг функционального анализа. Здесь различные компоненты из шага 1, которые взаимодействуют друг с другом, соединены между собой."@ru .
+
+tc:Interaction
+    a skos:Concept ;
+    od:valueOf tc:Function ;
+    od:allowedValues tc:Component ;
+    skos:prefLabel "Interaction"@en , "Interaktion"@de , "Взаимодействие"@ru ;
+    skos:Definition "A type of a relationship between two components either in a technical system or in the technical system and its supersystem."@en , "Eine Art Beziehung zwischen zwei Komponenten entweder in einem technischen System oder im technischen System und seinem Supersystem."@de , "Тип взаимосвязи между двумя компонентами технической системы или технической системы и ее надсистемы."@ru .
+
+od:hasInteraction
+    a rdfs:property ;
+    rdfs:domain tc:Component ;
+    rdfs:range tc:Component .
+
+# Interaction Analysis
+
+tc:InteractionAnalysis
+    a skos:Concept ;
+    rdfs:domain tc:System ;
+    rdfs:range tc:InteractionMatrix ;
+    od:subConceptOf od:ListOfInteractions ;
+    od:SouchkovDefinition "A part of Function Analysis that identifies interactions between components included in a Component Model."@en , "Ein Teil der Funktionsanalyse, der Interaktionen zwischen Komponenten identifiziert, die in einem Komponentenmodell enthalten sind."@de , "Часть функционального анализа, которая определяет взаимодействия между компонентами, включенными в модель компонентов."@ru ;
+    skos:prefLabel "Interaction Analysis"@en, "Анализ взаимодействий"@ru , "Interaktionsanalyse"@de ;
+    skos:altLabel "Structure Analysis"@en , "Strukturanalyse"@de , "Структурный анализ"@ru ;
+    skos:altLabel "Funtion Analysis of the Process"@en, "Funktionsanalyse des Prozesses"@de , "Функциональный анализ процесса"@ru ;
+    skos:altLabel "Prozessanalyse"@de , "Process analysis"@en , "Анализ процесса"@ru ;
+    skos:example: "Der Prozess der Kaffeeherstellung wird von den Komponenten der Kaffeemaschine technisch realisiert."@de , "The coffee production process is technically implemented by the components of the coffee machine."@en , "Технически процесс приготовления кофе осуществляется компонентами кофемашины."@ru .
+
+tc:InteractionMatrix
+    a skos:Concept ;
+    skos:prefLabel "Interaction Matrix"@en , "Interaktionsmatrix"@de , "Матрица взаимодействия"@ru ;
+    od:SouchkovDefinition "A matrix that identifies present or potentially possible interactions both between components of a technical system and between the components of the technical system and components of its supersystem."@en , "Eine Matrix, die vorhandene oder möglicherweise mögliche Wechselwirkungen sowohl zwischen Komponenten eines technischen Systems als auch zwischen den Komponenten des technischen Systems und den Komponenten seines Supersystems identifiziert."@de , "Матрица, которая идентифицирует существующие или потенциально возможные взаимодействия как между компонентами технической системы, так и между компонентами технической системы и компонентами ее надсистемы."@ru .
+
+#3
+
+od:FunctionForComponents
+    a skos:Concept, od:AdditionalConcept ;
+    od:subConceptOf tc:FunctionalAnalysis ;
+    rdfs:domain tc:Component ;
+    rdfs:range tc:Function ;
+    skos:prefLabel "Funktionen, die von Komponenten ausgehen"@de , "Functions that originate from components"@en , "Функции, происходящие из компонентов"@ru ;
+    skos:Definition "Dritter Schritt der Funktionalen Analyse. Festlegung der jeweiligen Funktionen, die von Komponenten ausgehen, die an einer Interaktion beteiligt sind. Es können mehrere Funktionen in einer Inter­aktion bestehen."@de , "Third step of the functional analysis. Definition of the respective functions that emanate from components that are involved in an interaction. There can be several functions in one interaction."@en , "Третий шаг функционального анализа. Определение соответствующих функций, исходящих от компонентов, участвующих во взаимодействии. В одном взаимодействии может быть несколько функций."@ru ;
+    skos:example "Kaffeetasse hält Kaffee, Kaffeetasse kühlt Kaffee, Kaffee haftet an Kaffeetasse"@de , "Coffee cup holds coffee, coffee cup cools coffee, coffee sticks to coffee cup"@en , "Кофейная чашка держит кофе, кофейная чашка охлаждает кофе, кофейные палочки к кофейной чашке"@ru .
+
+tc:Action
+    a skos:Concept ;
+    od:valueOf tc:Interaction ;
+    skos:prefLabel "Action"@en, "Aktion"@de , "Действие"@ru .
+
+od:hasAction
+    a rdfs:property ;
+    rdfs:domain tc:Interaction ;
+    rdfs:range tc:Action .
+
+
+# ModelOfFunction
+
+tc:ModelOfFunction
+    a skos:Concept ;
+    od:allowedValues tc:Component, tc:Action, tc:Parameter, tc:TypeOfFunction, tc:DegereeOfExecution ;
+    skos:Definition "Das Modell einer Funktion stellt die zwei Komponenten dar, welche mit der Aktion interagieren. Zudem werden noch Parameter, Funktionstyp und Grad der Ausführung dazu angegeben."@de , "The model of a function represents the two components that interact with the action. In addition, parameters, function type and degree of execution are also specified."@en , "Модель функции представляет два компонента, которые взаимодействуют с действием. Кроме того, также указываются параметры, тип функции и степень выполнения."@ru ;
+    skos:prefLabel "Model of a function"@en, "Modell einer Funktion"@de , "Модель функции"@ru .
+
+tc:Parameter
+    a skos:Concept ;
+    skos:prefLabel "Parameter"@en, "Parameter"@de , "Параметр"@ru .
+
+tc:DegereeOfExecution
+    a skos:Concept ;
+    skos:prefLabel "Degree of execution"@en, "Grad der Ausfürhung"@de , "Степень исполнения"@ru .
+
+od:hasParameter
+    a rdfs:property ;
+    rdfs:domain tc:Function ;
+    rdfs:rangge tc:Function .
+
+od:hasDegreeOfExecution
+    a rdfs:property ;
+    rdfs:domain tc:Function ;
+    rdfs:range tc:Function .
+
+
+# Function
+
+tc:Function
+    a skos:Concept ;
+    od:allowedValues tc:SubjectActionObject ;
+    od:subConceptOf tc:FunctionalAnalysis ;
+    od:hasSubConcept tc:QualityOfFunction ;
+    od:SouchkovDefinition "Specification of an action performed by a material object (Function Carrier) that results in a change or preservation of a value of an attribute of another material object (Object of the Function)."@en , "Angabe einer Aktion, die von einem Materialobjekt (Funktionsträger) ausgeführt wird und zu einer Änderung oder Beibehaltung eines Werts eines Attributs eines anderen Materialobjekts (Objekt der Funktion) führt."@de , "Спецификация действия, выполняемого материальным объектом (Носителем функции), которое приводит к изменению или сохранению значения атрибута другого материального объекта (Объект функции)."@ru ;
+    skos:prefLabel "Функция"@ru, "Funktion"@de, "Function"@en .
+
+# Type Of Function
+
+od:hasFunctionType
+    a rdfs:property ;
+    rdfs:domain tc:Function ;
+    rdfs:range tc:TypeOfFunction .
+
+tc:TypeOfFunction
+    a skos:Concept ;
+    od:allowedValues tc:FunctionOfSubsystem, tc:FunctionOfUpperSystem, tc:FunctionOfSurroundingObjects ;
+    skos:prefLabel "Typ der Funktion"@de, "Type of Function"@en , "Тип функции"@ru .
+
+tc:FunctionOfSubsystem
+    a skos:Concept ;
+    skos:prefLabel "Function of the subsystem"@en, "Funktion des Teilsystems"@de , "Функция подсистемы"@ru .
+
+tc:FunctionOfUpperSystem
+    a skos:Concept ;
+    skos:prefLabel "Function of the upper system"@en, "Funktion des Obersystems"@de , "Функция верхней системы"@ru .
+
+tc:FunctionOfSurroundingObjects
+    a skos:Concept ;
+    skos:prefLabel "Function of the surrounding objects"@en, "Funktion des Umgebungsobjekts"@de , "Функция окружающих предметов"@ru .
+
+# Main Function
+
+tc:MainFunction
+    a skos:Concept ;
+    od:subConceptOf tc:Function ;
+    od:SouchkovDefinition "A primary function for which a technical system is assigned. Main Function realizes a purpose of the technical system with respect to its supersystem."@en , "Eine Hauptfunktion, für die ein technisches System zugewiesen ist. Die Hauptfunktion verwirklicht einen Zweck des technischen Systems in Bezug auf sein Supersystem."@de , "Основная функция, для которой назначена техническая система. Основная функция реализует назначение технической системы по отношению к ее надсистеме."@ru ;
+    skos:prefLabel "Main Function"@en, "Основная функция"@ru, "Hauptfunktion"@de ;
+    skos:altLabel "Prime Function"@en, "Primäre Funktion"@de , "Основная функция"@ru ;
+    skos:example "Das Wäsche waschen mittels einer Waschmaschine"@de, "The washing of the laundry, done by a waschingmachine"@en  , "Стирка одежды в стиральной машине"@ru .
+
+tc:CoreFunction
+    a skos:Concept ;
+    od:subConceptOf tc:Function ;
+    skos:Definition "Funktionen von seperaten Teilen des technischen Systems helfen direkt die Hauptfunktion auszuführen"@de , "Functions of separate parts of the technical system help to carry out the main function directly"@en , "Функции отдельных частей технической системы помогают напрямую выполнять основную функцию"@ru ;
+    skos:prefLabel "Core Function"@en, "Kernfunktion"@de , "Основная функция"@ru ;
+    skos:example "Umwälzen der Wäsche in einer Waschmaschine"@de, "Cirulating the laundry in a washingmachine"@en , "Переворачивание белья в стиральной машине"@ru .
+
+tc:AuxiliaryFunction
+    a skos:Concept ;
+    od:subConceptOf tc:Function ;
+    od:SouchkovDefinition "A useful function provided with respect to a component which can be considered as a subsystem or a component of a higher-system level."@en , "Eine nützliche Funktion in Bezug auf eine Komponente, die als Subsystem oder als Komponente einer höheren Systemebene betrachtet werden kann."@de , "Полезная функция, предоставляемая по отношению к компоненту, который можно рассматривать как подсистему или компонент более высокого уровня системы."@ru ;
+    skos:prefLabel "Auxiliary Function"@en, "Вспомогательная функция"@ru, "Hilfsfunktion"@de ;
+    skos:example "Bewegen der Waschtrommel (durch einen Elektromotor)"@de, "Moving the washing machine drum (by an electormotor)"@en , "Перемещение стирального барабана (электродвигателем)"@ru .
+
+
+#4 
+
+od:DirectionOfFunction
+    a skos:Concept, od:AdditionalConcept ;
+    od:subConceptOf tc:FunctionalAnalysis, tc:SubjectActionObject ;
+    rdfs:domain tc:Function ;
+    rdfs:range tc:SubjectActionObject ;
+    skos:prefLabel "Direction of the Function"@en, "Richtung der Funktion"@de , "Направление функции"@ru ;
+    skos:Definition "Vierter Schritt der Funktionalen Analyse. Festlegung der Richtung der Funktionen gemäß Werkzeug - Aktion - Produkt."@de , "Fourth step of the functional analysis. Definition of the direction of the functions according to tool - action - product."@en , "Четвертый шаг функционального анализа. Определение направления функций в зависимости от инструмента - действия - продукта."@ru .
+
+tc:FunctionCarrier
+    a skos:Concept ;
+    od:subConceptOf tc:SubjectActionObject ;
+    od:SouchkovDefinition "A material object that performs (delivers) a function. Can be either a substance, or a field, or a combination of both."@en , "Ein materielles Objekt, das eine Funktion ausführt (liefert). Kann entweder eine Substanz oder ein Feld oder eine Kombination aus beiden sein."@de , "Материальный объект, который выполняет (выполняет) функцию. Может быть веществом, полем или их комбинацией."@ru ;
+    skos:prefLabel "Function Carrier"@en, "Носитель функции"@ru, "Subjekt"@de .
+
+od:hasFunctionCarrier
+    a rdfs:property ;
+    rdfs:domain tc:ObjectOfFunction ;
+    rdfs:range tc:FunctionCarrier .
+
+tc:ObjectOfFunction
+    a skos:Concept ;
+    od:subConceptOf tc:SubjectActionObject ;
+    od:SouchkovDefinition "A material object, whose value of a certain attribute is changed as a result of performing a function targeted at the material object."@en , "Ein Materialobjekt, dessen Wert eines bestimmten Attributs durch Ausführen einer auf das Materialobjekt gerichteten Funktion geändert wird."@de , "Материальный объект, значение определенного атрибута которого изменяется в результате выполнения функции, нацеленной на материальный объект."@ru ;
+    skos:prefLabel "Object of Function"@en, "Объект функции"@ru, "Objekt"@de .
+
+od:hasObject
+    a rdfs:property ;
+    rdfs:domain tc:FunctionCarrier ;
+    rdfs:range tc:ObjectOfFunction .
+
+od:hasDirection
+    a rdfs:property ;
+    rdfs:domain tc:Action ;
+    rdfs:range tc:SubjectActionObject ;
+    skos:prefLabel "Action has a direction"@en, "Aktion hat eine Richtung"@de , "Действие имеет направление"@ru .
+
+tc:SubjectActionObject
+    a skos:Concept ;
+    od:subConceptOf tc:FunctionModeling ;
+    od:hasSubConcept tc:FunctionCarrier, tc:ObjectOfFunction, tc:Predicate, tc:DirectionOfFunction ;
+    od:SouchkovDefinition "A triad which identifies a Function Carrier, its specific Function, and Target Object."@en , "Eine Triade, die einen Funktionsträger, seine spezifische Funktion und ein Zielobjekt identifiziert."@de , "Триада, которая идентифицирует функциональный носитель, его конкретную функцию и целевой объект."@ru ;
+    skos:prefLabel "Subject - Action - Object"@en, "Субъект - Действие - Объект"@ru, "Subjekt - Prädikat - Objekt"@de ;
+    skos:altLabel "Werkzeug - Aktion - Produkt"@de , "Tool - action - product"@en , "Инструмент - действие - продукт"@ru .
+
+#5 
+
+od:DefiningQualityOfFunction
+    a skos:Concept, od:AdditionalConcept ;
+    od:subConceptOf tc:FunctionalAnalysis, tc:QualityOfFunction ;
+    rdfs:domain tc:Function ;
+    rdfs:range tc:QualityOfFunction ;
+    skos:prefLabel "Festlegen der Qualität der Funktion"@de, "Defining the Quality of the Function"@en , "Определите качество функции"@ru ;
+    skos:Definition "Fünfter und letzter Schritt der Funktionalen Analyse. Festlegung der Qualität der Funktion (nützlich, schädlich, unzureichend, exzessiv)."@de , "Fifth and final step of the functional analysis. Definition of the quality of the function (useful, harmful, inadequate, excessive)."@en , "Пятый и последний этап функционального анализа. Определение качества функции (полезная, вредная, неадекватная, чрезмерная)."@ru ;
+    skos:example "Kaffeetasse hält Kaffee (nützlich)."@de , "Coffee cup holds coffee (useful)."@en , "Кофейная чашка вмещает кофе (полезно)."@ru ;
+    skos:example "Kaffeetasse kühlt Kaffee (schädlich)."@de , "Coffee cup cools coffee (harmful)."@en , "Чашка кофе охлаждает кофе (вредно)."@ru .
+
+
+# Quality Of Function
+
+tc:QualityOfFunction
+    a skos:Concept ;
+    skos:prefLabel "Quality of Function"@en, "Qualität der Funktion"@de , "Качество работы"@ru ;
+    od:allowedValues tc:CoreFunction, tc:MissingFunction, tc:RedundantFunction, tc:BadControllableFunction, tc:AdditionalFunction, tc:AuxiliaryFunction, tc:BasicFunction, tc:ExcessiveFunction, tc:HarmfulFunction, tc:IdealFunction, tc:InsufficientFunction, tc:MainFunction, tc:NeutralFunction, tc:ProvidingFunction, tc:TechnicalFunction, tc:UsefulFunction, tc:TransportFunction .
+
+tc:HarmfulFunction
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction, tc:FunctionDisadvantage ;
+    od:SouchkovDefinition "A physical action performed by an object that results in inacceptable change or inacceptable preservation of value of an attribute (parameter) or a state of another material object."@en , "Eine physische Aktion, die von einem Objekt ausgeführt wird und zu einer inakzeptablen Änderung oder inakzeptablen Werterhaltung eines Attributs (Parameters) oder eines Zustands eines anderen materiellen Objekts führt."@de , "Физическое действие, выполняемое объектом, которое приводит к недопустимому изменению или недопустимому сохранению значения атрибута (параметра) или состояния другого материального объекта."@ru ;
+    skos:prefLabel "Harmful Function"@en, "Вредная функция"@ru, "Schädliche Funktion"@de .
+
+tc:InsufficientFunction
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction, tc:HarmfulFunction, tc:UsefulFunctionDisadvantage ;
+    od:SouchkovDefinition "A physical action performed by an object - function carrier that results in a positive change or preservation of a value of a attribute of an object of the function but the action is performed with fewer degree of performance than required."@en , "Eine physikalische Aktion, die von einem Objekt - Funktionsträger ausgeführt wird und zu einer positiven Änderung oder Beibehaltung eines Werts eines Attributs eines Objekts der Funktion führt, die Aktion jedoch mit weniger Leistung als erforderlich ausgeführt wird."@de , "Физическое действие, выполняемое объектом - носителем функции, которое приводит к положительному изменению или сохранению значения атрибута объекта функции, но действие выполняется с меньшей степенью производительности, чем требуется."@ru ;
+    skos:prefLabel "Insufficient Function"@en, "Недостаточная функция"@ru, "Unzureichende Funktione"@de .
+
+tc:RedundantFunction
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction, tc:FunctionDisadvantage, tc:UsefulFunctionDisadvantage ;
+    skos:prefLabel "Redundant Function"@en, "Redundante Funktion"@de , "Резервная функция"@ru .
+
+tc:BadControllableFunction
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction, tc:FunctionDisadvantage, tc:BadControllableFunction ;
+    skos:prefLabel "Bad controllable Function"@en, "Schlecht steuerbare Funktion"@de , "Плохая управляемая функция"@ru .
+
+tc:MissingFunction
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction, tc:MissingFunction ;
+    skos:prefLabel "Missing Function"@en, "Fehlende Funktione"@de , "Отсутствующая функция"@ru .
+
+tc:ExcessiveFunction
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction ;
+    od:SouchkovDefinition "A physical action performed by an object that results in a positive change or preservation of a value of a parameter or a state of an object of the function but the action is performed with too much effort or with the use of non-optimal amount of resources."@en , "Eine physische Aktion, die von einem Objekt ausgeführt wird und zu einer positiven Änderung oder Beibehaltung eines Werts eines Parameters oder eines Zustands eines Objekts der Funktion führt, die Aktion jedoch mit zu viel Aufwand oder unter Verwendung einer nicht optimalen Menge an Ressourcen ausgeführt wird ."@de , "Физическое действие, выполняемое объектом, которое приводит к положительному изменению или сохранению значения параметра или состояния объекта функции, но действие выполняется с чрезмерными усилиями или с использованием неоптимального количества ресурсов. ."@ru ;
+    skos:prefLabel "ExcessiveFunction"@en, "Избыточная функция"@ru, "Exzessive Funktion"@de .
+
+tc:UsefulFunction
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction ;
+    od:SouchkovDefinition "A physical action performed by an object - function carrier that results in a positive (required) change or preservation of a value of a parameter or a state of an object of the function."@en , "Eine physikalische Aktion, die von einem Objekt - Funktionsträger ausgeführt wird und zu einer positiven (erforderlichen) Änderung oder Beibehaltung eines Werts eines Parameters oder eines Zustands eines Objekts der Funktion führt."@de , "Физическое действие, выполняемое объектом - носителем функции, результатом которого является положительное (обязательное) изменение или сохранение значения параметра или состояния объекта функции."@ru ;
+    skos:prefLabel "Useful Function"@en, "Полезная функция"@ru, "Nützliche Funktion"@de .
+
+tc:UsefulFunctionDisadvantage
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction ;
+    od:hasSubConcept tc:RedundantFunction, tc:InsufficientFunction, tc:BadControllableFunction, tc:MissingFunction ;
+    skos:prefLabel "Nützliche Funktion mit Nachteilen"@de , "Useful function with disadvantages"@en , "Полезная функция с недостатками"@ru .
+
+tc:FunctionDisadvantage
+    a skos:Concept ;
+    od:subConceptOf tc:QualityOfFunction ;
+    od:hasSubConcept tc:RedundantFunction, tc:BadControllableFunction, tc:HarmfulFunction ;
+    od:SouchkovDefinition "A drawback of a technical system identified during Function Modeling. These drawbacks include harmful functions, as well as inadequately (i.e., excessively or insufficiently) performed useful functions."@en , "Ein Nachteil eines technischen Systems, das während der Funktionsmodellierung identifiziert wurde. Diese Nachteile umfassen schädliche Funktionen sowie unzureichend (d. H. Übermäßig oder unzureichend) ausgeführte nützliche Funktionen."@de , "Недостаток технической системы, выявленный при функциональном моделировании. К этим недостаткам относятся вредные функции, а также неадекватно (то есть чрезмерно или недостаточно) выполняемые полезные функции."@ru ;
+    od:prefLabel "Function Disadvantage"@en, "Функциональный недостаток"@ru , "Funktionsnachteil"@de .
+
+# Function Model
+
+tc:FunctionModel
+    a skos:Concept ;
+    od:hasSubConcept tc:FunctionModeling, tc:ComponentModel ;
+    od:allowedValues tc:FunctionModeling ;
+    od:SouchkovDefinition "A model of a technical system resulting from Function Analysis that identifies and describes functional relationships between by the components of the System and its Supersystem. Functions representing the functional relationships are characterized by category (useful, harmful, neutral), quality of performance (insufficient, excessive), cost level (insignificant, acceptable and unacceptable) and cost of corresponding components."@en , "Ein Modell eines technischen Systems, das aus der Funktionsanalyse resultiert und funktionale Beziehungen zwischen den Komponenten des Systems und seinem Supersystem identifiziert und beschreibt. Funktionen, die die funktionalen Beziehungen darstellen, werden durch Kategorie (nützlich, schädlich, neutral), Leistungsqualität (unzureichend, übermäßig), Kostenniveau (unbedeutend, akzeptabel und inakzeptabel) und Kosten der entsprechenden Komponenten charakterisiert."@de , "Модель технической системы, полученная в результате функционального анализа, которая идентифицирует и описывает функциональные отношения между компонентами Системы и ее надсистемой. Функции, представляющие функциональные взаимосвязи, характеризуются категорией (полезные, вредные, нейтральные), качеством выполнения (недостаточное, чрезмерное), уровнем затрат (незначительный, приемлемый и неприемлемый) и стоимостью соответствующих компонентов."@ru ;
+    skos:prefLabel "Function Model"@en, "Функциональная модель"@ru, "Funktionales Modell"@de .
+
+tc:FunctionModeling
+    a skos:Concept ;
+    od:subConceptOf tc:FunctionModel ;
+    od:hasSubConcept tc:SubjectActionObject ;
+    od:SouchkovDefinition "A part of Function Analysis which defines a process and rules for building a Function Model."@en , "Ein Teil der Funktionsanalyse, der einen Prozess und Regeln zum Erstellen eines Funktionsmodells definiert."@de , "Часть функционального анализа, которая определяет процесс и правила построения функциональной модели."@ru ;
+    skos:prefLabel "Function Modeling"@en, "Функциональное моделирование"@ru , "Funktionsmodellierung"@de .
+
+# Process
+
+tc:Process
+    a skos:Concept ;
+    skos:Definition "Ein Prozess ist die Gesamtheit von aufeinander folgender Vorgängen in einem System, durch die Materie, Energie oder auch Information umgeformt, transportiert oder auch gespeichert wird."@de , "A process is the entirety of successive processes in a system through which matter, energy or information is transformed, transported or even stored."@en , "Процесс - это совокупность последовательных процессов в системе, посредством которых материя, энергия или информация трансформируются, транспортируются или даже хранятся."@ru ;
+    skos:prefLabel "Process"@en, "Prozess"@de , "Процесс"@ru ;
+    skos:altLabel "technical System"@en, "technisches System"@de , "техническая система"@ru .
+
+# Applying Principle On A Function
+
+od:findDecreasingUpperParameter
+    a rdfs:property ;
+    skos:prefLabel "Find Decreasing Upper-Parameter For Function"@en , "Finden Sie abnehmende obere Parameter für die Funktion"@de , "Найти убывающий верхний параметр функции"@ru ;
+    rdfs:domain tc:Function ;
+    rdfs:range tc:Parameter .
+
+od:findDecreasingParameter
+    a rdfs:property ;
+    skos:prefLabel "Find Decreasing Parameter For Function"@en , "Suchen Sie nach abnehmenden Parametern für die Funktion"@de , "Найти убывающий параметр для функции"@ru ;
+    rdfs:domain tc:Function ;
+    rdfs:range tc:Parameter .
+
+od:findInecreasingUpperParameter
+    a rdfs:property ;
+    skos:prefLabel "Find Increasing Upper-Parameter For Function"@en , "Finden Sie den zunehmenden oberen Parameter für die Funktion"@de , "Найти возрастающий верхний параметр функции"@ru ;
+    rdfs:domain tc:Function ;
+    rdfs:range tc:Parameter .
+
+od:findIncreasingParameter
+    a rdfs:property ;
+    skos:prefLabel "Find Increasing Parameter For Function"@en , "Finden Sie den zunehmenden Parameter für die Funktion"@de , "Найти возрастающий параметр для функции"@ru ;
+    rdfs:domain tc:Function ;
+    rdfs:range tc:Parameter .
+
+od:functionWithMatrixParameter
+    a skos:Concept, od:AdditionalConcept ;
+    od:allowedValues tc:Function, od:findDecreasingUpperParameter, od:findDecreasingParameter, od:findInecreasingUpperParameter, od:findIncreasingParameter ;
+    skos:prefLabel "Function Analyed By Parameters"@en , "Durch Parameter analysierte Funktion"@de , "Функция анализируется по параметрам"@ru .
+
+od:ChooseMatrixEntryByFunction
+    a skos:Concept, od:AdditionalConcept ;
+    od:allowedValues od:increasingParameter, od:decreasingParameter, tc:Function ;
+    rdfs:domain od:functionWithMatrixParameter ;
+    rdfs:range od:MatrixEntryByFunctionParameter ;
+    skos:Definition "Hierbei wird der passende Matrixeintrag (Altshuller Matrix, Matrix2003) zu der Funktion ausgewählt um die Qualität der Funktion zu steigern."@de , "The appropriate matrix entry (Altshuller Matrix, Matrix2003) is selected for the function in order to increase the quality of the function."@en , "Соответствующий элемент матрицы (матрица Альтшуллера, Matrix2003) для функции выбирается, чтобы повысить качество функции."@ru ;
+    skos:prefLabel "Zuordnen Funktion zu Matrixeintrag."@de , "Assign function to matrix entry."@en , "Назначьте функцию записи матрицы."@ru .
+
+od:ChosenMatrix
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Chosen Matrix"@en , "Gewählte Matrix"@de , "Выбранная матрица"@ru .
+
+od:MatrixEntryByFunctionParameterHence
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Matrix Entry By Chosen Parameters To A Function"@en , "Matrixeingabe nach ausgewählten Parametern für eine Funktion"@de , "Ввод матрицы по выбранным параметрам в функцию"@ru ;
+    od:allowedValues od:functionWithMatrixParameter, od:ChosenMatrix ;
+    od:valueOf od:MatrixEntry .
+
+od:ChoosePrincipleFromMatrixEntry
+    a skos:Concept, od:AdditionalConcept ;
+    od:allowedValues od:MatrixEntry , tc:Function ;
+    rdfs:domain od:MatrixEntryByFunctionParameter ;
+    rdfs:range od:PrincipleByMatrixEntryByFunctionParameter ;
+    skos:Definition "Hierbei wird nach Festlegen des passenden Matrixeintrages eines der Prinzipien ausgewählt."@de , "After determining the appropriate matrix entry, one of the principles is selected."@en , "После определения соответствующей записи матрицы выбирается один из принципов."@ru ;
+    skos:prefLabel "Auswählen eines Prinzips von einem Matrixeintrag"@de , "Selecting a principle from a matrix entry"@en , "Выбор принципа из записи матрицы"@ru .
+
+od:PrincipleByMatrixEntryByFunctionParameter
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Principle By Matrix Entry And Function"@en , "Prinzip nach Matrixeintrag und Funktion"@de , "Принцип по входу в матрицу и функции"@ru ;
+    od:allowedValues od:MatrixEntryByFunctionParameter ;
+    od:valueOf od:Principle .

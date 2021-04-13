@@ -1,0 +1,104 @@
+\section{Functional Analysis}
+\label{sec:functional_analysis}
+
+In this section a summary about the terms and definitions explained in \cite{KS} will be given. 
+This is going to help explain in the following sections, why the \textit{turtle}-file was modeled in that way.
+
+\subsection{Concept}
+
+In Functional Analysis the idea is to represent a system by various functions.
+This representation helps in organizing and structuring the system.
+To tackle the optimization problem a more precise look is taken at the non-useful and contradictory functions in the system. 
+
+The two main objectives of Functional Analysis in TRIZ are formulated in the following.
+
+\begin{enumerate}
+    \item Recognizing Of Problems \newline
+        Hereby the objective is to find as many as possible non-useful or contradictory functions in the system.
+    \item Trimming Of Components \newline
+        To optimize the system some components have to be redesigned. 
+        During this process the functionality of the component must not be changed.  
+\end{enumerate}
+
+
+
+With these two main objectives there are five tasks to handle in Functional Analysis.
+
+\begin{enumerate}[noitemsep]
+	\item Recognizing Interactions Between Objects
+	\item Recognizing Problems Within The System
+	\item Formulating Open Problems
+	\item Innovative Redesign
+	\item Optimizing Systems By Trimming
+	\item Bypassing Patents
+\end{enumerate}
+
+
+\subsection{Quality Of A Function}
+
+To further analyze the functions it is recommended to give each function a level of quality.
+This quality of a function makes it easier to find problems within the system.
+
+Accorind to the book there are five different quality levels.
+
+\begin{enumerate}
+    \item Useful Function: \newline
+        A function works as intended and the result is only positive.
+    \item Useful, But Insufficient Function \newline
+        A function has a positive impact but the result is not satisfieing.
+    \item Useful, But Bad Controllable Function \newline
+        A function with a positive impact but is not satisfieing as the result cannot be controlled.
+        Hence it is wrongly timed.
+    \item Useful, But Excessive Function \newline
+        A function with a positive impact but a bigger result than necessary.
+    \item Harmful Function \newline
+        A function which has a negative impact.
+\end{enumerate}
+
+More precise definitions can be found in the book \cite{KS} or in the Glossary of Souchkov \cite{SouchkovGlossary}.
+As both of these are merged into the \textit{turtle}-file the defintions can now also be found there.
+
+Nikolai Shchedrin mentioned also a new function quality in his web-seminar. 
+This is called \textit{Useful Function With Disadvanteges}.
+As mentioned on the website \cite{ShchedrinUsefulFunctionDisadvantage} this class includes Redundant Functions, Insufficient Functions, Bad Controllable Functions and Missing Functions.
+
+As there is no source mentining the Definition of a Redundant Function and a Missing Function, these will be interpreted in the following way.
+
+\begin{enumerate}
+    \item Redundant Function: \newline
+        A function with a positive result, which is implemented a second time in the system.
+    \item Missing Function: \newline
+        A useful function which is not implemented in the system and therefore missing.
+\end{enumerate}
+
+\subsection{Functional Model}
+\label{subsec:functional_model}
+
+The Functional Model structures the function and the components in the system.
+In the book the following steps are recommended when building a Functional Model. 
+It is also mentioned that steps two to four can be made in one step.
+
+\begin{enumerate}[noitemsep]
+	\item Making A List Of Components
+	\item Determine Interactions
+	\item Linking Functions To Components (Subject)
+	\item Determining The Direction Of Function (Arrow)
+	\item Define The Quality Of The Function
+\end{enumerate}
+
+With this a graph-like structure is built. 
+Every node in this graph represents a component or subsystem within the system.
+An edge represents a function. 
+Different styles and forms of an edge represent the quality of the function.
+
+For easier reading and analyzing the Functional Model, it is possible to group components according to self-defined properties.
+
+\subsection{Positive And Negative Aspects}
+
+Using the Functional Analysis helps you to fully understand the system you are working with.
+Furthermore you can exchange knowledge between colleagues and clarify misunderstandings.
+
+A Functional Analysis makes also sense, when no problem is known.
+This is good if you want to improve your system without knowing specific complications.
+
+A negative attitude of the Functional Analysis, is that only known systems can be analyzed.
