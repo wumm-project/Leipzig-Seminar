@@ -40,6 +40,8 @@ keine Seminarleistung erwartet, das TRIZ-Praktikum ist kostenpflichtig.
 
 ## Plan of the course (in English)
 
+See also [the Slides](Slides.pdf).
+
 ### Modelling Sustainable Systems and Semantic Web
 
 The Semantic Web extends the Web in order to make data easier to exchange
