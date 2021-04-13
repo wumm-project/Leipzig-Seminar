@@ -63,9 +63,9 @@ written in English.
 
 ## Seminar schedule
 
-### [13.04.](2021-04-13) 
-* Kick-off of the seminar. Introduction to the seminar topic. Discussion of
-  the seminar plan. (Gräbe)
+### [13.04.](2021-04-13) Kick-off Meeting
+* Introduction to the seminar topic. Discussion of the seminar plan. (Gräbe)
+* [Slides](2021-04-13/Slides.pdf)
 
 ### 20.04. ISO 9000, Business Modelling and Software Management (Gräbe)
 
