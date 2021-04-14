@@ -37,11 +37,16 @@ __Learning Objective:__ The concept of technology as a unit of
 * institutionalised procedures (state of the art) and
 * private processual skills
 
+__Slides:__
+* [Introduction](Intro.pdf)
+* [Technology](Technik.pdf)
+
 ## April 22: Technical Systems
 
 __Literature__:
-* Hans-Gert Gräbe (2020). Die Menschen und ihre Technischen Systeme. LIFIS
-  Online, 19. Mai 2020.
+
+* Hans-Gert Gräbe (2020). People and their technical systems (in German).
+  LIFIS Online, 19. Mai 2020.
   * <http://dx.doi.org/10.14625/graebe_20200519>
   
 __Learning Objectives:__
@@ -55,8 +60,8 @@ __Learning Objectives:__
 ## April 29: Modelling contradictory requirements in TRIZ
 
 __Literature__:
-* Hans-Gert Gräbe (2020). Zur Methodik des TRIZ-Trainers. 
-  * [TRIZ-Methodik.pdf](../../Material/TRIZ-Methodik.pdf)
+* Hans-Gert Gräbe (2021): Solving problems with TRIZ and AIPS-2015.
+  <https://wumm-project.github.io/Texts/Graebe-2021a-en.pdf> 
 * (Kuryan, Kucharavy 2018), starting with slide 31.
 * (Cascini 2012)
 
@@ -68,9 +73,8 @@ __Additional Reading__:
 __Learning Objectives__:
 * TRIZ's basic approach to conflicting requirements.
 * Concrete and abstract. The TRIZ Hill Scheme
-* Contextualisation of requirements situations 
-* Determining the purpose and PUF (primary useful function) of a technical
-  system
+* Contextualisation of requirements situations
+* Determining the purpose and MUF (main useful function) of a technical system
 * Structural and processual organisation of a system
 * Useful and harmful effects, operative zone and operative time of
   conflicting system properties
@@ -85,12 +89,13 @@ __Additional Reading__:
 * Ludwig von Bertalanffy (1950). An outline of General System Theory, The
   British Journal for the Philosophy of Science, Volume I.2, 134–165.
   * <https://doi.org/10.1093/bjps/I.2.134>
-* Hans-Gert Gräbe (2012). Wie geht Fortschritt? LIFIS Online, 12.11.2012.
+* Hans-Gert Gräbe (2012). What is progress? (in German). LIFIS Online,
+  12.11.2012.
   * <https://www.leibniz-institut.de/archiv/graebe_12_11_12.pdf>
-* Erich Jantsch (1992). Die Selbstorganisation des Universums. Hanser,
-  München.
-* Ilya Prigogine, Isabelle Stengers (1993). Das Pardox der Zeit. Piper,
-  München, Kap. 3-5.
+* Erich Jantsch (1992). The self-organisation of the universe. (in German).
+  Hanser, Munich.  
+* Ilya Prigogine, Isabelle Stengers (1984). Order out of Chaos: Man's new
+  dialogue with nature. ISBN 0-00-654115-1.
 
 __Learning Objectives__:
 * Development of a system. Ideal line and real line of development.
@@ -107,19 +112,17 @@ __Literature__:
 * Frank W. Geels, Johan Schot (2007). Typology of Sociotechnical Transition
   Pathways. In: Research Policy 36 (2007), 399–417.
   * <https://doi.org/10.1016/j.respol.2007.01.003> 
-* Hans-Gert Gräbe (2020). TRIZ und Transformationen sozio-technischer und
-  sozio-ökologischer Systeme. LIFIS Online, 27.06.2020.
+* Hans-Gert Gräbe (2020). TRIZ and transformations of socio-technical and
+  socio-ecological systems. (in German). LIFIS Online, 27.06.2020.
   * <http://dx.doi.org/10.14625/graebe_20200627>
 * C.S. Holling (2000). Understanding the Complexity of Economic, Ecological,
   and Social Systems. In: Ecosystems (2001) 4, 390–405.
   * <https://www.esf.edu/cue/documents/Holling_Complexity-EconEcol-SocialSys_2001.pdf>
   
 __Additional Reading__:
-* Mike Davis (2009).  Wer wird die Arche bauen? Das Gebot utopischen Denkens
-  im Zeitalter der Katastrophen.  In: Das Ende des Kasino-Kapitalismus?
-  Globalisierung und Krise. Blätter Verlagsges., Berlin, S. 267-285. ISBN
-  3980492559.
-* Hans-Gert Gräbe (2012). Wie geht Fortschritt? LIFIS Online, 12.11.2012.
+* Mike Davis (2010).   Who will build the ark? New Left Review 61, 2010.
+* Hans-Gert Gräbe (2012). What is progress? (in German) LIFIS Online,
+  12.11.2012.
   * <http://www.leibniz-institut.de/archiv/graebe_12_11_12.pdf>
 * Rainer Thiel (2000). Die Allmählichkeit der Revolution. Blick in sieben
   Wissenschaften.  LIT-Verlag, Münster. ISBN 9783825849457.
