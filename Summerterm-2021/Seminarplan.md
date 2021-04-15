@@ -47,14 +47,12 @@ written in English.
   Available as e-book at UB Leipzig
   <https://ebookcentral.proquest.com/lib/leip/detail.action?docID=3339201>
 
-## Seminar themes:
-* Russell Ackoff. System thinking and management.
+## Offene Seminar themes:
 * Russell Ackoff. Interactive planning.
 * Frederick W. Taylor (1911).  The Principles of Scientific Management.
 * Peter F. Drucker (1975). The Practice of Management.
 * Henry Mintzberg (1991). Mintzberg on Management.
 * The Toyota Management system. Guiding principles and main tools.
-* MBO - Management by objectives.
 * The SMART approach
 * Goal-Modelle und die i*-Modellierungsmethode
 * Process and Enterprise Maturity Model - Michael Hammer
@@ -73,9 +71,9 @@ written in English.
 
 ### 04.05. First student's presentation.
 
-### 11.05.
+### 11.05. Russell Ackoff. System thinking and management. (Jannis de Riz)
 
-### 18.05.
+### 18.05. MBO - Management by objectives. (Franziska Görg)
 
 ### 25.05.
 
@@ -85,7 +83,7 @@ written in English.
 
 ### 15.06.
 
-### 22.06.
+### 22.06.  The Toyota Management system. Guiding principles and main tools. (Toni Pfeiffer)
 
 ### 29.06.
 
@@ -95,6 +93,4 @@ written in English.
 
 ### 20.07.
 
-### Optional 23.07. [Interdisciplinary
-    Discussion](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/LeipzigerGespraeche/2021-07-23)
-    "Systems, Processes, and their Management".
+### Optional 23.07. [Interdisciplinary Discussion](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/LeipzigerGespraeche/2021-07-23) "Systems, Processes, and their Management".
