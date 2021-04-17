@@ -6,6 +6,8 @@ written in English.
 
 ## Literatur
 
+* Peter F. Drucker (1975). The Practice of Management.
+
 * Charles Goodwin (2018). Co-operative Action.  Cambridge University Press.
   ISBN 978-1-108-71477-8.
   
@@ -29,6 +31,8 @@ written in English.
 * Maximilian Krug (2019). Review: Charles Goodwin (2018).
   Co-Operative Action (in German). Forum Qualitative Sozialforschung, 20(1),
   1-7.  <https://doi.org/10.17169/fqs-20.1.3197>.
+
+* Henry Mintzberg (1991). Mintzberg on Management.
   
 * Georgi P. Shchedrovitsky (1981). Principles and General Scheme of the
   Methodological Organization of System-Structural Research and Development.
@@ -37,6 +41,8 @@ written in English.
 * Valeri Souchkov (2010).  TRIZ and Systematic Business Model Innovation.  In:
   Proceedings TRIZ Future Conference 2010, Bergamo, Italy.  Available at
   ResearchGate.
+
+* Frederick W. Taylor (1911).  The Principles of Scientific Management.
 
 * Vladimir I. Vernadsky (1936-38): Scientific Thought as a Planetary
   Phenomenon.  <https://wumm-project.github.io/Texts/Vernadsky1938-en.pdf>
@@ -51,7 +57,6 @@ written in English.
 * Russell Ackoff. Interactive planning.
 * Frederick W. Taylor (1911).  The Principles of Scientific Management.
 * Peter F. Drucker (1975). The Practice of Management.
-* Henry Mintzberg (1991). Mintzberg on Management.
 * The Toyota Management system. Guiding principles and main tools.
 * The SMART approach
 * Goal-Modelle und die i*-Modellierungsmethode
@@ -81,7 +86,7 @@ written in English.
 
 ### 08.06.
 
-### 15.06.
+### 15.06. Mintzberg on Management. (Felix Walter)
 
 ### 22.06.  The Toyota Management system. Guiding principles and main tools. (Toni Pfeiffer)
 
