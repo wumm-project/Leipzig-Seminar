@@ -1,0 +1,204 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ls}
+\usepackage[english]{babel}
+
+\title{ISO 9000, Business Modelling and Software Management}  
+
+\author{Hans-Gert Gr\"abe}
+
+\date{18 April 2021}
+
+\begin{document}
+\maketitle
+
+\section{Once more about the goal of the seminar}
+
+Systematic innovation methodologies such as TRIZ are essentially based on a
+better understanding of the development dynamics of corresponding (technical
+and non-technical) systems.  The results are rooted in engineering experience
+from structured processes of planning, implementation and operation of
+technical systems. Increasingly, cooperative interdisciplinary collaboration
+matters rather than the one brilliant mind that commands thousand hands. The
+socio-technical character of contradictions is thereby intensified and opens
+up new dimensions of contradiction management.
+
+Today, managers face similar challenges when it comes to placing
+decision-making processes on a systematic basis, aligning the processes under
+control with long term goals, and also achieving the targeted goal corridors.
+It turns out that many engineering experiences on structured procedures in
+contradictory requirement situations can be transferred to this area, which
+has been investigated within the topic "TRIZ and Business" for 20 years.
+
+Nevertheless, experiences and approaches to theories of systematic management
+are based more broadly and also have much longer historical traditions.
+\emph{In the seminar}, we want to study this field more closely, with special
+attention to cooperative approaches in interdisciplinary contexts.
+
+\section{Systematic Management Basics}
+
+"\emph{Systematic management} is an approach to management that focuses on the
+management process rather than on the final outcome. The goals to this
+approach to management were:
+\begin{itemize}[noitemsep]
+\item To create specific processes and procedures to be used in job task
+  completion.
+\item To ensure that organizational operations were economical.
+\item To ensure that staffing was adequate for the needs of the organization.
+\item To maintain suitable inventory so that the demands of consumers could be
+  met.
+\item To establish organizational controls." \cite{Hill2015}
+\end{itemize}
+These points require a \emph{planned} approach, which requires a
+\emph{linguistically formulated picture} of the process landscape as a
+suitably explicit form of description.
+
+This linguistically formulated image -- the \emph{plan} -- is in
+\emph{contradictory tension} with the processes actually taking place: On the
+one hand, it has a controlling effect on these practices, on the other hand,
+those practices partially resist this control.\enlargethispage{1em}
+
+This difference must be fed back to the planning process as an
+\emph{evaluation of experienced results} in order to limit the divergence
+between plan and reality.
+
+Relating planning and experience dimension is only possible on a linguistic
+level and requires a \emph{system of notions} to accompany the practical
+real-world development by a discursive process (as \emph{practice of
+  thinking}).
+
+This system of concepts is more stable than the real-world practices, but it
+is not static -- it develops together with the practices.
+
+These basic considerations are about \emph{processes} and \emph{procedures}
+within an \emph{organization}.
+
+\section{Organizations}
+
+What is an organization? Wikipedia distinguises between formal aud informal
+organizations. 
+
+\paragraph{Formal organizations.}
+"An organization that is established as a \emph{means for achieving defined
+  objectives} has been referred to as a formal organization. Its design
+specifies how \emph{goals are subdivided and reflected} in subdivisions of the
+organization. Divisions, departments, sections, positions, jobs, and tasks
+make up this work structure. Thus, the formal organization is expected to
+\emph{behave impersonally} in regard to relationships with clients or with its
+members. [...] A \emph{bureaucratic structure} forms the basis for the
+appointment of heads or chiefs of administrative subdivisions in the
+organization and endows them with the authority attached to their position."
+(Wikipedia, my emphasis)
+
+\paragraph{Informal organizations.}
+"[...] The informal organization expresses the personal objectives and goals
+of the individual membership. Their objectives and goals may or may not
+coincide with those of the formal organization. [...]" (Wikipedia)
+
+The further explanations in Wikipedia remain weak and contradictory.
+Structure-building processes and especially shared conceptual systems also
+develop in informal organisations, with exciting new structuring processes
+of co-operative action taking place that are of particular interest to us in
+the seminar. Wikipedia is a reflection of the weakness of the conceptual basis
+in this field.
+
+Also ORG -- the \emph{organisation ontology of the W3C} \cite{vocab-org} --
+considers \texttt{org:OrganizationalUnit}, \texttt{org:FormalOrganization} and
+\texttt{org:OrganizationalCollaboration} as subconcepts of the concept
+\texttt{org:Organization} but does not mention informal organisations.  In
+their definition an organization
+\begin{quote}
+  represents a collection of people organized together into a community or
+  other social, commercial or political structure. The group has some common
+  purpose or reason for existence which goes beyond the set of people
+  belonging to it and can act as an Agent. Organizations are often
+  decomposable into hierarchical structures.~\cite{vocab-org}
+\end{quote}
+
+While in the Wikipedia definition positions, jobs and tasks are mentioned, but
+beyond bureaucracy no people, in this definition an organisation is a
+"community of people". However, it has a goal that does not result from the
+set of goals of the people involved, but is an emergent function of the
+organization -- the whole is more than the sum of its parts in the sense that
+relational synergy effects are of special importance in such an organization.
+
+This corresponds closely with the \emph{system concept in TRIZ}:
+\begin{quote}
+  A system (lat. greek "system", "composed", a whole consisting of parts;
+  connection) is a set of elements that are interconnected and interact with
+  each other, forming a unified whole that possesses properties that are not
+  already contained in the constituent elements considered individually.
+  \cite{Petrov2020}
+
+  A \emph{system} is a set of elements that are in relationship and connection
+  with each other and that constitute a well defined unity, an integrity. The
+  necessity of the use of the term "system" occurs when it is required to
+  emphasize that something is large, complex, immediately not wholly
+  comprehensible, but at the same time a unified whole. Unlike the notions
+  "set" or "aggregate", the concept of a system emphasizes the ordering, the
+  integrity, the regularity of construction, functioning and development.
+  \cite{TOP}
+\end{quote}
+
+\section{Organizations as Socio-Technical Systems}
+
+Ian Sommerville \cite{Sommerville2015} also starts with the concept of a
+system and moves from there to the concept of \emph{organisation}.
+\begin{quote}
+  A system is a meaningful set of interconnected components that work together
+  to achieve a specific goal.  \cite{Sommerville2015}
+\end{quote}
+Right after that comes a distinction between technical and socio-technical
+systems:
+
+\paragraph{Technical computer-based systems}
+are systems that contain hardware and software components, but not procedures
+and processes. ... Individuals and organisations use technical systems for
+specific purposes, but knowledge of that purpose is not part of the system.
+For example, the word processor I use does not know that I am using it to
+write a book.
+
+\paragraph{Socio-technical systems}
+contain one or more technical systems, but beyond that -- and this is crucial
+-- the knowledge of how the system should be used to achieve a broader
+purpose.  This means that these systems have \emph{defined work processes},
+\emph{human operators} as integral part of the system, are \emph{governed by
+  organisational policies} and are \emph{affected by external constraints}
+such as national laws and regulations.
+
+Essential characteristics of socio-technical systems:
+\begin{enumerate}
+\item They have special properties that affect the system as a whole, and are
+  not related to individual parts of the system. These special properties
+  depend on the system components and the relationships between them. Because
+  of this complexity, the system-specific properties can only be evaluated
+  when the system is composed.
+\item They are often not deterministic. The behaviour of the system depends on
+  the human operators and on other people who do not always react in the same
+  way. Also, the operation of the system can change the system itself.
+\item The extent to which the system supports organisational goals depends not
+  only on the system itself. It also depends on the \emph{stability of the
+    goals}, the relationships and \emph{conflicts between organisational
+    goals}, and how people in the organisation \emph{interpret those goals}.
+\end{enumerate}
+
+
+\begin{thebibliography}{xxx}
+
+\bibitem{Hill2015} Rebekiah Hill (2015).  Systematic Management: Theory,
+  Overview.\\{\small
+  \url{https://study.com/academy/lesson/systematic-management-theory-lesson-quiz.html}}
+\bibitem{vocab-org} The Organization Ontology (2014).\\  W3C Recommendation.
+  \url{https://www.w3.org/TR/vocab-org}.
+\bibitem{Petrov2020} Vladimir Petrov (2020). Laws and patterns of systems
+  development (in Russian). ISBN 978-5-0051-5728-7.
+\bibitem{Sommerville2015} Ian Sommerville (2015). Software Engineering.
+  Chapter 19 „Systems Engineering“.
+
+  Slide stack available at Sildeshare\\{\small
+  \url{https://www.slideshare.net/software-engineering-book/ch19-systems-engineering}   }
+\bibitem{TOP} The TRIZ Ontology Project.
+  \url{https://wumm-project.github.io/Ontology.html}.
+\end{thebibliography}
+
+\end{document}
+

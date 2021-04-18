@@ -9,7 +9,11 @@ Das Kursangebot im Master Informatik besteht aus
   9-11 Uhr,
 * dem Online-Praktikum zur TRIZ-Methodik.
 
-Vorlesung und Seminar finden in englischer Sprache statt.
+Folien und Handouts zu Vorlesung und Seminar sind in englischer Sprache, da
+international Interesse an der Verfolgung unserer Debatten geäußert wurde.  Im
+Gegensatz zu einer ersten Planung werden aber die Vorlesung und auch die
+meisten Seminardiskussionen in deutsch stattfinden. Ausnahmen imSeminar sind
+möglch.
 
 __Alle drei Bestandteile__ können als __10 LP Vertiefungsmodul__ 10-202-2309
 "Semantic Web" angerechnet werden. Prüfungsvorleistung sind ein Vortrag im
