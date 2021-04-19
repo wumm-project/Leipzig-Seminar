@@ -137,6 +137,7 @@ tc:ParasiticFlow
     od:valueOf tc:FlowFunctionality ;
     skos:prefLabel "parasitic flow"@en, "Parasitärer Fluss"@de ;
     od:LebedevDefinition "are also flows performing harmful function (and not having main useful function), but which are NOT predetermined by the action principle of a system" ;
+    skos:note "formation of a parasitic flow is always a sign of a contradiction" ;
     a skos:Concept, od:AdditionalConcept .
 
 ##Defect of Flow
@@ -194,6 +195,7 @@ tc:StaticFlowComponent
     od:WOPCategory od:Component ; 
     skos:prefLabel "static components of the flow"@en, "statische Flusskomponenten"@de ;
     skos:altLabel "source flow system components"@en, "Flusskanalsystem"@de ;
+    skos:note "Lebedev noted, that static components are located in space; These static components always accompany any flow passing in a a system. Similarly to function model, each of these components (with exception of the channel) can be missing in explicit form or can be located in the supersystem." ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:ControlUnit
@@ -434,6 +436,7 @@ tc:RulesOfConstructionOfInconformRequirements
 tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules to apply Laws of Development of Technical Systems"@en, "Anwendungsregeln entsprechend der Gesetze der Entwicklung Technischer Systeme"@de ;
+    skos:note "the Laws of Development of Technical Systems are the theoretical base for the analysis of obtained models" ;
     a skos:Concept, od:AdditionalConcept .
 
 ## Techniques of modification
