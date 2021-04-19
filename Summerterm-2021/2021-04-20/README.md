@@ -2,7 +2,7 @@
 
 ## Short Announcement
 
-* __Theme:__  ISO 9000, Business Modelling and Software Management
+* __Theme:__  System Management, Organizations, Systems. Basic Notions
 * __Presenter:__ Hans-Gert Gräbe
 
 
@@ -25,5 +25,8 @@ outstanding mental and organisational skills of individual managers.
 ## Material
 
 * [Handout](Handout.pdf) 
+* [Slides](Slides.pdf) 
 * Ian Sommerville (2015). Software Engineering.
   <https://www.slideshare.net/software-engineering-book/ch19-systems-engineering>
+* Hans-Gert Gräbe (2020). TRIZ and Systemic Transitions.
+  <https://hg-graebe.de/EigeneTexte/sys-20-en.pdf>

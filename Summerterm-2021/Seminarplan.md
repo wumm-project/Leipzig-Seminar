@@ -70,17 +70,19 @@ written in English.
 * Introduction to the seminar topic. Discussion of the seminar plan. (Gräbe)
 * [Slides](2021-04-13/Slides.pdf)
 
-### 20.04. ISO 9000, Business Modelling and Software Management (Gräbe)
+### [20.04.](2021-04-20) System Management, Organizations, Systems. General Management Challenges (Gräbe) 
+* [Handout](2021-04-20/Handout.pdf)
+* [Slides](2021-04-20/Slides.pdf)
 
-### 27.04. Business TRIZ and general management challenges (Gräbe)
+### 27.04. ISO 9000, Business Modelling and Business TRIZ (Gräbe)
 
-### 04.05. First student's presentation.
+### 04.05. 
 
 ### 11.05. Russell Ackoff. System thinking and management. (Jannis de Riz)
 
 ### 18.05. MBO - Management by objectives. (Franziska Görg)
 
-### 25.05.
+### 25.05. Business Process Definition Metamodel - BPDM (Bjarne Dasenbrook)
 
 ### 01.06.
 

@@ -2,11 +2,18 @@
 \usepackage{ls}
 \usepackage[english]{babel}
 
-\title{ISO 9000, Business Modelling and Software Management}  
+\title{System Management, Organizations, Systems. General Management
+  Challenges}  
+
+\newcommand{\Merksatz}[1]{
+  \begin{center}
+    \fbox{\fboxsep12pt \fbox{\parbox{.9\textwidth}{\textbf{Remember:} #1}}}
+  \end{center}
+}
 
 \author{Hans-Gert Gr\"abe}
 
-\date{18 April 2021}
+\date{19 April 2021}
 
 \begin{document}
 \maketitle
@@ -15,12 +22,12 @@
 
 Systematic innovation methodologies such as TRIZ are essentially based on a
 better understanding of the development dynamics of corresponding (technical
-and non-technical) systems.  The results are rooted in engineering experience
-from structured processes of planning, implementation and operation of
-technical systems. Increasingly, cooperative interdisciplinary collaboration
-matters rather than the one brilliant mind that commands thousand hands. The
-socio-technical character of contradictions is thereby intensified and opens
-up new dimensions of contradiction management.
+and non-technical) \emph{systems}.  The results are rooted in engineering
+experience from structured processes of planning, implementation and operation
+of technical systems. Increasingly, cooperative interdisciplinary
+collaboration matters rather than the one brilliant mind that commands
+thousand hands. The \emph{socio-technical character} of contradictions is
+thereby intensified and opens up new dimensions of contradiction management.
 
 Today, managers face similar challenges when it comes to placing
 decision-making processes on a systematic basis, aligning the processes under
@@ -48,26 +55,29 @@ approach to management were:
   met.
 \item To establish organizational controls." \cite{Hill2015}
 \end{itemize}
-These points require a \emph{planned} approach, which requires a
-\emph{linguistically formulated picture} of the process landscape as a
-suitably explicit form of description.
+These points require a \emph{planned} approach, based on a \emph{conceptual
+  understanding} of the process landscape in an appropriate explicit form of
+description and \emph{intelligible actions}.
 
-This linguistically formulated image -- the \emph{plan} -- is in
+The formulated intelligible actions -- the \emph{plan} -- is in
 \emph{contradictory tension} with the processes actually taking place: On the
 one hand, it has a controlling effect on these practices, on the other hand,
 those practices partially resist this control.\enlargethispage{1em}
 
 This difference must be fed back to the planning process as an
-\emph{evaluation of experienced results} in order to limit the divergence
-between plan and reality.
+\emph{evaluation of experienced results} in order to keep also the divergence
+between plan and reality under control.
 
-Relating planning and experience dimension is only possible on a linguistic
+Relating planning and experience dimension is only possible on a language
 level and requires a \emph{system of notions} to accompany the practical
 real-world development by a discursive process (as \emph{practice of
   thinking}).
 
 This system of concepts is more stable than the real-world practices, but it
 is not static -- it develops together with the practices.
+
+\Merksatz{\emph{World} is \emph{reality for us} and thus reality in the
+  process of conceptual grasping.}
 
 These basic considerations are about \emph{processes} and \emph{procedures}
 within an \emph{organization}.
@@ -89,6 +99,9 @@ appointment of heads or chiefs of administrative subdivisions in the
 organization and endows them with the authority attached to their position."
 (Wikipedia, my emphasis)
 
+See about the "impersonality" also the "automaton" in the quote by Marx in my
+first lecture.
+
 \paragraph{Informal organizations.}
 "[...] The informal organization expresses the personal objectives and goals
 of the individual membership. Their objectives and goals may or may not
@@ -96,15 +109,15 @@ coincide with those of the formal organization. [...]" (Wikipedia)
 
 The further explanations in Wikipedia remain weak and contradictory.
 Structure-building processes and especially shared conceptual systems also
-develop in informal organisations, with exciting new structuring processes
+develop in informal organizations, with exciting new structuring processes
 of co-operative action taking place that are of particular interest to us in
 the seminar. Wikipedia is a reflection of the weakness of the conceptual basis
 in this field.
 
-Also ORG -- the \emph{organisation ontology of the W3C} \cite{vocab-org} --
+Also ORG -- the \emph{organization ontology of the W3C} \cite{vocab-org} --
 considers \texttt{org:OrganizationalUnit}, \texttt{org:FormalOrganization} and
 \texttt{org:OrganizationalCollaboration} as subconcepts of the concept
-\texttt{org:Organization} but does not mention informal organisations.  In
+\texttt{org:Organization} but does not mention informal organizations.  In
 their definition an organization
 \begin{quote}
   represents a collection of people organized together into a community or
@@ -114,8 +127,37 @@ their definition an organization
   decomposable into hierarchical structures.~\cite{vocab-org}
 \end{quote}
 
+\texttt{org:Organization} is related to \texttt{foaf:Agent}, 
+\begin{quote}\raggedright
+  ... the class of agents; things that do stuff. A well known sub-class is
+  \texttt{foaf:Person}, representing people. Other kinds of agents include
+  \texttt{foaf:Organization} and \texttt{foaf:Group}. \cite{foaf}
+\end{quote}
+
+A \texttt{foaf:Group}
+\begin{quote}
+  ... represents a collection of individual agents (and may itself play the
+  role of a Agent, i.e. something that can perform actions).
+
+  This concept is intentionally quite broad, covering informal and ad-hoc
+  groups, long-lived communities, organizational groups within a workplace,
+  etc. ...
+  
+  While a Group has the characteristics of a Agent, it is also associated with
+  a number of other Agents (typically people) who constitute the Group, its
+  members. ...  The basic mechanism for saying that someone is to use the
+  member property of the Group to indicate the agents that are members of the
+  group.
+\end{quote}
+The terms Agent and Group thus introduce self-similar concepts of structures
+that are \emph{capable of action}. This corresponds to the legal construction
+of a \emph{juridical subject} in the sense of the Civil Code (BGB) if
+\emph{responsibility for the consequences of action} is added.  
+
+\section{Organizations as Socio-Technical Systems}
+
 While in the Wikipedia definition positions, jobs and tasks are mentioned, but
-beyond bureaucracy no people, in this definition an organisation is a
+beyond bureaucracy no people, in this definition an organization is a
 "community of people". However, it has a goal that does not result from the
 set of goals of the people involved, but is an emergent function of the
 organization -- the whole is more than the sum of its parts in the sense that
@@ -139,10 +181,8 @@ This corresponds closely with the \emph{system concept in TRIZ}:
   \cite{TOP}
 \end{quote}
 
-\section{Organizations as Socio-Technical Systems}
-
 Ian Sommerville \cite{Sommerville2015} also starts with the concept of a
-system and moves from there to the concept of \emph{organisation}.
+system and moves from there to the concept of \emph{organization}.
 \begin{quote}
   A system is a meaningful set of interconnected components that work together
   to achieve a specific goal.  \cite{Sommerville2015}
@@ -152,7 +192,7 @@ systems:
 
 \paragraph{Technical computer-based systems}
 are systems that contain hardware and software components, but not procedures
-and processes. ... Individuals and organisations use technical systems for
+and processes. ... Individuals and organizations use technical systems for
 specific purposes, but knowledge of that purpose is not part of the system.
 For example, the word processor I use does not know that I am using it to
 write a book.
@@ -162,7 +202,7 @@ contain one or more technical systems, but beyond that -- and this is crucial
 -- the knowledge of how the system should be used to achieve a broader
 purpose.  This means that these systems have \emph{defined work processes},
 \emph{human operators} as integral part of the system, are \emph{governed by
-  organisational policies} and are \emph{affected by external constraints}
+  organizational policies} and are \emph{affected by external constraints}
 such as national laws and regulations.
 
 Essential characteristics of socio-technical systems:
@@ -175,15 +215,152 @@ Essential characteristics of socio-technical systems:
 \item They are often not deterministic. The behaviour of the system depends on
   the human operators and on other people who do not always react in the same
   way. Also, the operation of the system can change the system itself.
-\item The extent to which the system supports organisational goals depends not
+\item The extent to which the system supports organizational goals depends not
   only on the system itself. It also depends on the \emph{stability of the
-    goals}, the relationships and \emph{conflicts between organisational
-    goals}, and how people in the organisation \emph{interpret those goals}.
+    goals}, the relationships and \emph{conflicts between organizational
+    goals}, and how people in the organization \emph{interpret those goals}.
 \end{enumerate}
 
+In this context, there is a clear shift 
+\begin{center}
+  on the scale of controllability to movement according to intrinsic laws,
+\end{center}
+which in \textbf{socio-economic systems} with a large number of stakeholders
+or even \textbf{socio-ecological systems} shifts further in the direction of
+movement according to intrinsic laws ("natural processes").
+
+Here, however, the TRIZ principle 25 \emph{Exploit Self-Service Processes}
+becomes significant, which counts as the mastery of engineering.  It claims
+that the best solution of a task is reached if the aspired goals are realised
+"by themselves".
+
+However, this means making the "natural" movement in systems according to
+their own laws accessible to the unified expertise in terms of description.
+
+\section{Systems and components}
+
+From \cite{Graebe2020}
+
+Operation and use of technical systems is a central element of today world
+changing human practices. For this purpose planned and coordinated action
+along a division of labour is necessary, because exploiting the benefit of a
+system requires its operation. Conversely, it makes little sense to operate a
+system that is not being used. Closely related to this distinction between
+definition and call of a function, well known from computer science, is the
+distinction between design time and runtime, that is even more important in
+the real-world use of technical systems based on the division of labour –
+during design time, the principal cooperative interaction is planned, during
+the runtime the plan is executed. For technical systems one has to distinguish
+the descriptive forms, interpersonally communicated as justified expectations,
+and the enforcement forms, interpersonally communicated as experienced
+results.
+
+In addition to the description and enforcement dimension, for technical
+systems the aspect of reuse also plays a major role. This applies, at least on
+the artifact level, but not to larger technical systems – these are unique
+specimen, even though assembled using standardized components. Also the
+majority of computer scientists is concerned with the creation of such unique
+specimens, because the IT systems that control such plants are also unique. In
+this work we concentrate especially on such large technical systems and their
+parallels to design issues of socio-ecological systems.
+
+The special features of a technical system are therefore mainly in the area of
+interplay of components, where one has also to distinguish between the
+description form (modeling) and the enforcement form (operation in the context
+of the various large-scale technical systems). While in the planning and
+modeling phase there still remains open much freedom for changes, the
+enforcement form is characterized by significantly higher
+inflexibility. Although here too the world is more complicated than getting
+caught up in a dichotomy like this – who dares to change a plan which has
+already been approved by the high chiefs – we are working with such a concept
+of „reduction“ in the following.
+
+This brings together essential elements to serve as basis for a concept of a
+technical system, which in a planning and real-world context is four times
+overloaded:
+\begin{itemize}
+\item[1.] as a real-world unique specimen (e.g. as a product, even if the
+  unique specimen is a service),
+\item[2.] as a description of this real-world unique specimen (e.g. in the
+  form of a special product configuration)
+\end{itemize}
+and for components produced in larger quantities also
+\begin{itemize}
+\item[3.] as description of the design of the system template (product design)
+  and
+\item[4.] as description and operation of the delivery and operating
+  structures of the real-world unique specimen systems produced from this
+  template (as plans of production, quality assurance, delivery, operation and
+  maintenance).
+\end{itemize}
+Technical Systems in such a context are systems whose design and use are
+influenced by cooperatively acting people on the basis of the division of
+labour, whereby existing technical systems are normatively characterized at
+description level by a specification of its interfaces and at enforcement
+level by their guaranteed specification-compliant operation.
+
+The same applies to the description form of «natural» systems, which are also
+modeled in a structured way as systems of systems – as systems consisting of
+components, which in turn are modeled as systems, whose functioning (both in a
+functional and operational sense) are presupposed for the currently considered
+system level.
+
+The (more general) concept of a system in such a concept has the epistemic
+function of (functional) «reduction to the essential». This reduction takes
+place in the following three dimensions
+\begin{itemize}
+\item [(1)] External demarcation of the system against an environment,
+  reduction of these relationships to input/output relations and guaranteed
+  throughput.
+\item [(2)] Internal demarcation of the system by combining subareas as
+  components, whose functioning is reduced to a «behavioral control» via
+  input/output relations.
+\item [(3)] Reduction of the relations in the system itself to «causally
+  significant» relationships.
+\end{itemize}
+It is further stated there that such a reductive description service rests on
+preexisting (explicit or implicit) description services in three dimensions:
+\begin{itemize}
+\item [(1)] An at least vague idea about the (working) input/output services of
+  the environment.
+\item [(2)] A clear idea of the inner function of the components (beyond the
+  pure specification).
+\item [(3)] An at least vague idea about causalities in the system itself,
+  i.e. one that precedes the detailed modeling, an already existing idea of
+  causality in the given context.
+\end{itemize}
+(1) and (2) can in turn be developed in systems theory approaches to describe
+the «environment» and the components (as subsystems), with which the
+description of coevolutionary scenarios in turn becomes important for
+deepening the understanding of (3).
+
+\section{Systems and resources}
+
+One final thought, not yet elaborated here: the lofty approach at the
+beginning of these remarks, that it is more about „the management processes
+rather than the final outcome", is of course only half the truth (a well-known
+sentence of a former Chancellor).  When it comes to \emph{reliability} in
+collaboration, the specification-compliant outcome of a system (as a black
+box) is in the foreground, and the way how this was achieved is minor
+important.
+
+In a network of systems where one relies on the other, this form of
+reliability plays a major role, since a prerequisite for a system to function
+in accordance with its specification is not only its internal organisation,
+but also that the system's operating conditions are met, which manifests
+itself as structured access to the resources required for the work in the form
+of a specific throughput of material, energy and information.
 
 \begin{thebibliography}{xxx}
 
+\bibitem{foaf} FOAF Vocabulary Specification (2014).\\ W3C Recommendation.
+  \url{http://xmlns.com/foaf/spec/}.
+\bibitem{Graebe2020} Hans-Gert Gräbe (2020). Men and their technical systems
+  (in German).\\ LIFIS Online, 19 May 2020.
+  \url{https://doi.org/10.14625/graebe_20200519}.
+
+  A shorter English version is available at\\
+  \url{https://hg-graebe.de/EigeneTexte/sys-20-en.pdf}
 \bibitem{Hill2015} Rebekiah Hill (2015).  Systematic Management: Theory,
   Overview.\\{\small
   \url{https://study.com/academy/lesson/systematic-management-theory-lesson-quiz.html}}
