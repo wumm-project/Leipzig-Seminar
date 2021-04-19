@@ -47,6 +47,11 @@ od:hasFlowFunctionality
     rdfs:domain tc:Flow ;
     rdfs:range tc:FlowFunctionality .
 
+od:hasFlowDelegation
+    a rdf:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:FlowDelegation .
+
 od:hasFlowDefect
     a rdf:Property ;
     rdfs:domain tc:Flow ;
@@ -77,11 +82,6 @@ tc:FlowType
     skos:prefLabel "Type of flow"@en, "Flussart"@de ;
     skos:altLabel "Art der Strömung"@de .
 
- tc:ComplexFlow
-    od:valueOf tc:FlowType ;
-    skos:prefLabel "complex flow"@en, "Komplexer Fluss"@de ;
-    a skos:Concept, od:AdditionalConcept .
-
  tc:DiscreteFlow
     od:valueOf tc:FlowType ;
     skos:prefLabel "discrete flow"@en, "Diskreteer Fluss"@de ;
@@ -90,6 +90,29 @@ tc:FlowType
  tc:ContinuousFlow
     od:valueOf tc:FlowType ;
     skos:prefLabel "continuous flow"@en, "Kontinuierlicher Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+ tc:ComplexFlow
+    od:valueOf tc:FlowType ;
+    skos:prefLabel "complex flow"@en, "Komplexer Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:FlowDelegation
+    od:allowedValues tc:OpenFlow, tc:ClosedFlow ;
+    a skos:Concept, od:AdditionalConcept ;
+    od:WOPCategory od:PropertyDomain ; 
+    skos:prefLabel "delegation of flow"@en, "Flussdelegierung"@de .
+
+tc:OpenFlow
+    od:valueOf tc:FlowDelegation ;
+    od:LebedevDefinition "open threads are either those that are discarded into the superystem after use, or those that are dissipated altogether." ;
+    skos:prefLabel "open flow"@en, "offener Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:ClosedFlow
+    od:valueOf tc:FlowDelegation ;
+    od:LebedevDefinition "Closed Threads are defined as threads that are returned to their source of reuse." ;
+    skos:prefLabel "closed flow"@en, "geschlossener Fluss"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ## substance of flows
@@ -120,6 +143,7 @@ tc:FlowFunctionality
     od:allowedValues tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow ;
     a skos:Concept, od:AdditionalConcept ;
     od:WOPCategory od:PropertyDomain ; 
+    od:LebedevDefinition "A function stream is a stream, that actually performs a function other than that of the carrier stream." ;
     skos:prefLabel "Functionality of the flow"@en, "Funktionalität des Flusses"@de .
 
 tc:UsefulFlow
@@ -139,6 +163,13 @@ tc:ParasiticFlow
     od:LebedevDefinition "are also flows performing harmful function (and not having main useful function), but which are NOT predetermined by the action principle of a system" ;
     skos:note "formation of a parasitic flow is always a sign of a contradiction" ;
     a skos:Concept, od:AdditionalConcept .
+
+tc:CarrierFlow
+    od:valueOf tc:FlowFunctionality ;
+    od:LebedevDefinition "A carrier stream is a stream intended (performing the function of) transporting some other stream." ;
+    skos:prefLabel "carrier flow"@en, "Trägerfluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
 
 ##Defect of Flow
 tc:FlowDefect
@@ -177,13 +208,17 @@ tc:FlowSource
 tc:ExternalSource
     od:valueOf tc:FlowSource ;
     od:LebedevDefinition "externally, defined by the supersystem" ;
-    skos:prefLabel "external surce"@en, "Externe Quelle"@de ;
+    skos:prefLabel "external source"@en, "Externe Quelle"@de ;
+    skos:altLabel "primary source"@en, "Primäre Quelle"@de ;
+    skos:note "Lebedev 2015 uses the tc:FlowSource od:allowedValues' skos:altLabels as naming. Due this can be misleading we've prefered the older naming scheme here" ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:InternalSource
     od:valueOf tc:FlowSource ;
     od:LebedevDefinition "A flow, that emerged within the system as a result of a working body performing some useful function." ;
     skos:prefLabel "internal source"@en, "Interne Quelle"@de ;
+    skos:altLabel "secondary source"@en, "Sekundäre Quelle"@de ;
+    skos:note "Lebedev 2015 uses the tc:FlowSource od:allowedValues' skos:altLabels as naming. Due this can be misleading we've prefered the older naming scheme here" ;
     a skos:Concept, od:AdditionalConcept .
 
 #list of special flows with own definition
