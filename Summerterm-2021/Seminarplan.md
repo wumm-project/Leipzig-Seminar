@@ -55,14 +55,13 @@ written in English.
 
 ## Offene Seminar themes:
 * Russell Ackoff. Interactive planning.
-* Frederick W. Taylor (1911).  The Principles of Scientific Management.
 * Peter F. Drucker (1975). The Practice of Management.
 * The Toyota Management system. Guiding principles and main tools.
-* The SMART approach
 * Goal-Modelle und die i*-Modellierungsmethode
 * Process and Enterprise Maturity Model - Michael Hammer
 * Business Process Maturity Model (BPMM) by Bill Curtis and John Alden
 * The “Business Process Definition Metamodel” (BPDM)
+* Anton Kozhemyako. Contradictory Business Processes and Schematization.
 
 ## Seminar schedule
 
@@ -76,23 +75,23 @@ written in English.
 
 ### 27.04. ISO 9000, Business Modelling and Business TRIZ (Gräbe)
 
-### 04.05. 
+### 04.05. Management by incentives (Veronika Heuten)
 
-### 11.05. Russell Ackoff. System thinking and management. (Jannis de Riz)
+### 11.05. Russell Ackoff. System thinking and management (Jannis de Riz)
 
-### 18.05. MBO - Management by objectives. (Franziska Görg)
+### 18.05. MBO - Management by objectives (Franziska Görg)
 
 ### 25.05. Business Process Definition Metamodel - BPDM (Bjarne Dasenbrook)
 
-### 01.06.
+### 01.06. The SMART approach (Axel Schuster)
 
-### 08.06.
+### 08.06. NN (Marie Windhorst)
 
-### 15.06. Mintzberg on Management. (Felix Walter)
+### 15.06. Mintzberg on Management (Felix Walter)
 
-### 22.06.  The Toyota Management system. Guiding principles and main tools. (Toni Pfeiffer)
+### 22.06. The Toyota Management system (Toni Pfeiffer)
 
-### 29.06.
+### 29.06. Taylor's Principles of Scientific Management (Stefan Grote)
 
 ### 06.07.
 
