@@ -57,6 +57,9 @@ __Learning Objectives:__
 * Infrastructural embedding of technical systems in the "world of technical
   systems".
 
+__Slides:__
+* [Technology](TechnicalSystems.pdf)
+
 ## April 29: Modelling contradictory requirements in TRIZ
 
 __Literature__:

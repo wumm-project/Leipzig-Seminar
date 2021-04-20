@@ -1,0 +1,352 @@
+\documentclass{beamer}
+\usepackage{lsfolien}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\myfootline{System Modelling and Semantic Web -- Spring 2021}{Hans-Gert Gräbe}
+
+\newcommand{\ueberschrift}[1]{\begin{center}\bf #1\end{center}}
+
+\title{Modelling Sustainable Systems\\ and Semantic Web\\[6pt]
+  About the Notion of a Technical System
+  \vskip1em}
+
+\subtitle{Lecture in the Module 10-202-2309\\ for Master Computer Science}
+
+\author{Prof. Dr. Hans-Gert Gräbe\\
+\url{http://www.informatik.uni-leipzig.de/~graebe}}
+
+\date{April 2021}
+\begin{document}
+
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}}
+
+\section{Basics}
+\begin{frame}{Technical Systems in TRIZ}
+
+„... a \emph{number of components} combined to a system by establishing
+  \emph{specific interactions} between the components ... assigned to
+  \emph{perform a controllable main useful function} ... within a particular
+  context.“ (Glossary V. Souchkov) \vskip1em
+
+A system is a set of elements ... that form a \emph{unified whole} that has
+\emph{properties} that only emerge from the \emph{interaction} of the parts
+(\emph{emergence} of the main useful function). (V. Petrov, 2020) \vskip1em
+
+Significance of the system operator in TRIZ, non-triviality of the anti-system
+(N. Feygenson, 2020)
+\end{frame}
+
+\begin{frame}{Basics}
+Despite its importance, the definition of the concept remains vague.\vskip1em
+  
+How can the concept of a \emph{Technical System} (TS) be sharpened?\vskip1em
+  
+\begin{itemize}
+\item [1.] Which aspects should be considered?
+\item [2.] Four dimensions of the concept of a TS.
+\item [3.] Technical Systems as Black Boxes.
+\end{itemize}
+\end{frame}
+\begin{frame}{Aspects}
+  \begin{block}{Differentiation between design time and runtime}
+    \begin{itemize}
+    \item During design time, the basic collaborative work is \emph{planned}.
+    \item During runtime this \emph{plan is executed}.
+    \end{itemize}
+  \end{block}
+  \begin{block}{This requires to distiguish between interpersonal} 
+    \begin{itemize}
+    \item forms of description that are communicated as \emph{justified
+      expectations}, and
+    \item embodiments, which \emph{experienced results} stand in a
+      contradictory relation to the justified expectations.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{Aspects}
+  \begin{block}{Aspect of Reuse}
+    \begin{itemize}
+    \item This does not apply to most large TS -- they are \emph{unique
+      specimen}, even if they are assembled from standard components.
+    \item Most computer specialists also create such \emph{unique specimen},
+      because the IT systems that control the operation of such large TS are
+      also unique.
+    \item The same applies to government agencies, organzations, etc.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{Aspects}
+  \begin{block}{Clear distinction between the professions}
+    \begin{itemize}
+    \item of Mechanical Engineering and Industrial Plant Engineering as well
+      as
+    \item the Supplier (specialist) and Master Builder (generalist) of such
+      unique specimen.
+    \end{itemize}
+  \end{block}\vskip2em
+  \begin{alertblock}{Thesis 1:}    
+    The speciality of a technical system mainly lies in the \emph{interaction
+      of its components} in a world of technical systems.
+
+    \emph{Purposes} embed this relationality in human practices. 
+\end{alertblock}
+\end{frame}
+\begin{frame}{First Approximation}
+  \begin{block}{The four dimensions of the notion of a \emph{Technial System}}.
+    \begin{itemize}
+    \item [1.] The real-world unique specimen.
+    \item [2.] The description of this real-world unique specimen.
+    \end{itemize}
+    For components that are manufactured in a larger number, additionally
+    \begin{itemize}
+    \item [3.] The description of the design of the system template.
+    \item [4.] The description and functioning of delivery, assembly and
+      operation of the real-world unique specimen that were produced according
+      to this template (e.g. production plan, quality assurance plan, delivery
+      plan, plans for operation, maintenance and service).
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{First Approximation}
+  \ueberschrift{TS as Black Box}
+
+The basis of the concept is the \emph{notion of an Open System} from the more
+general Theory of Dynamical Systems.\vskip1em
+
+  Existing TS are normatively characterized 
+  \begin{itemize}
+  \item at the level of description through the \emph{specification of its
+    interfaces} and
+  \item on the level of embodiment through \emph{guaranteed functioning
+    according to this specification}.
+  \end{itemize}\vskip1em
+
+A TS consists of components, which in turn are TS, their
+specification-compliant functioning is assumed.\vskip1em
+
+\end{frame}
+\begin{frame}{Role of the concept of a TS}
+  
+The concept of a TS has an epistemic function of (functional) "reduction to
+the essential".\vskip1em
+
+Human practice is inseparably built into the concept of TS because the
+concepts "essential", "guaranteed" and "functioning" can only be filled with
+meaning from these practices.\vskip1em
+
+This makes the widespread in TRIZ distinction between technical and
+socio-technical systems problematic.
+\end{frame}
+  
+\section{The Concept of a TS}
+\begin{frame}{TS as White Box}
+  \begin{itemize}
+  \item [1.] Definition of the concept of a TS.
+  \item [2.]  TS and the world of technical systems.
+  \end{itemize}\vskip2em
+  \begin{block}{The core of a technical system is ... }
+    ... the description of concrete processes by reducing them to the
+    essential with the goal of their practical application.
+  \end{block}
+\end{frame}
+\begin{frame}{TS as White Box}
+  \begin{block}{The reduction to the essential ... }
+    ... focuses on the following three dimensions:
+    \begin{itemize}
+    \item[(1)] Delimitation of the TS from the outside against an
+      \emph{environment}, reduction of this relationships to input/output
+      relations and guaranteed throughput (Purpose and ability to work).
+    \item[(2)] Delimitation of the TS from the inside by grouping parts as
+      \emph{components}, reducing their functioning on a "behavior control"
+      via their interfaces.
+    \item[(3)] Reduction of the relationships in the TS itself to
+      \emph{causally essential} ones.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{TS as White Box}
+  \begin{block}{The TS in the World of Technical Systems}
+    The description of a TS is only possible based on descriptions of other
+    (explicitly or implicitly given) TS. The description is preceded ...
+    \begin{itemize}
+    \item[(1)] ... by a vague idea of the (working) input/output
+      characteristics of the environment.
+    \item [(2)] ... by a clear understanding how the components work beyond
+      their pure specification.
+    \item [(3)] ... by a vague idea of cause and effect relationships in the
+      system itself, that precedes the detailed modeling.
+    \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{TS as White Box}
+  The concept is based on the availability of existing TS, which are present
+  in (2) as components and in (3) as neighboring systems. \vskip1em
+
+  Engineering practices thus take place in a \emph{World of Technical
+    Systems}.\vskip1em
+
+  Other systems -- components or neighboring systems -- are present in the
+  description of a TS only by their specifications. \vskip1em
+
+  A prerequisite for the smooth operation of a TS is therefore the guaranteed
+  specification-compliant functioning of the corresponding infrastructure.
+\end{frame}
+\section{Components}
+\begin{frame}{Components}
+  \begin{itemize}
+  \item [1.] The concept of a component according to Szyperski.
+  \item [2.] Core concern, cross cutting concern.
+  \item [3.] Components as functional connections.
+  \item [4.] Components as function-object relationships between independent
+    third parties.
+  \item [5.] Components and infrastructure.
+  \item [6.] Norms and Standards.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{The World of Components}
+  \begin{block}{The concept of a component according to Szyperski}
+    What is a component?
+
+    Szyperski gives a simple answer: "Components are for composition".
+  \end{block}\vskip2em
+
+  TS are assembled from existing components. Components can be purchased from
+  third parties or developed in-house.
+\end{frame}
+
+\begin{frame}{The World of Components}
+
+  \begin{block}{core concern, cross cutting concerns}
+    Szyperski divides the world of component manufacturing (i.e. TS) in two
+    partial worlds -- "design for component" and "design from component".
+  \end{block}\vskip1em
+
+  The first world is the world of component developers, that develop special
+  component functions for business applications -- "core concern", this
+  corresponds to the MUF -- as \emph{core system function}.\vskip1em
+\end{frame}
+
+\begin{frame}{The World of Components}
+
+In addition to this core function, the operation of the component requires
+\emph{supporting functions} (logging, data security, access control, printer
+control, etc. -- "cross cutting concerns") that are based on the use of
+\emph{established concepts} (description dimension) and services from other,
+already \emph{prefabricated components} (application dimension), that
+implement \emph{other technical principles} in other systems.\vskip1em
+
+\begin{alertblock}{Thesis 2:} 
+  In this sense, real-world components are always \emph{bundles of
+    functionality} that bundle procedural knowledge from \emph{several} areas.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{The World of Components}
+
+The \emph{component developer} must master all such description forms of
+functions of supporting components, at least on the abstraction level of their
+specifications to build useful components.\vskip1em
+
+The second world is the world of \emph{component assemblers}. They assemble
+(following a pre-existing plan) the system from existing components, develop
+or modify additional support functions ("glue code"), integrate and test the
+complete system before releasing it to the customer.
+\end{frame}
+
+\section{Standardization}
+\begin{frame}{Modularization and standardization}
+
+This approach of division of labor between component developers and component
+assemblers in the field of software engineering is also extensively used in
+other engineering areas.\vskip1em
+
+\emph{Modular systems} are widely used and allow the standardization of the
+design of the unique real-world technical systems.\vskip1em
+\end{frame}
+
+\begin{frame}{Components and Frameworks}
+
+This requires to connect the \emph{application logic} of the component as
+"core concern" with the \emph{logic of infrastructural networking} as "cross
+cutting concerns".\vskip1em
+
+\begin{alertblock}{Thesis 3:} 
+  The infrastructure logic is usually part of the \emph{component framework}
+  that can only be used effectively if it is \emph{jointly owned by the actors
+    of an entire area of technology}.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Standardization and Trends of TS Evolution}
+
+Application logic and infrastructure logic are orthogonal to each other, which
+means that the trends \emph{4.2 of increasing completeness of a system} and
+\emph{4.4 of migration to the supersystem} practically counteract to each
+other in the development of a TS. \vskip1em
+
+\begin{alertblock}{Thesis 4:} 
+  An improvement in the understanding of the \emph{infrastructure
+    requirements} of interacting components (transition to the supersystem) as
+  description form leads to a \emph{reduction of the level of requirements on
+    the completeness} of individual components.
+\end{alertblock}
+\end{frame}
+
+\begin{frame}{Standardization and Economies of Scale}
+
+Standardization opens up the prospect of economies of scale for standard
+components. Economies of scale lead to lower costs per unit and thus shift the
+leading role of competition from competition for the \emph{better technical
+  solution} to the competition for its \emph{cheaper economic manufacturing}.
+\vskip1em
+
+This means that the S-curve switches at the top of mature technical solutions
+(including standardization) in the phase of general availability \emph{to
+  another mode} in which the reduction of the economic cost of the
+availability "state of the art" takes over as guiding function of further
+development.
+\end{frame}
+
+\begin{frame}{Standardization and Economies of Scale}
+
+\begin{alertblock}{Theseis 5:} 
+  The technical "trend 4.1 of increasing (technical) value" changes on the
+  third stage of the development on the S-curve to an economic "trend of
+  decreasing (economic) value".
+\end{alertblock}\vskip1em
+
+Or, in economic terms: a demand-driven market turns into a supply-driven
+market. The same (mature) use value has ever lower exchange value.
+\end{frame}
+
+\section{Conclusions}
+\begin{frame}{Conclusions}
+  \begin{alertblock}{Thesis 6:} 
+    In the TRIZ theory of TS evolution a better distinction between young and
+    mature technologies is required.
+  \end{alertblock}\vskip1em
+  \begin{block}{In mature technologies ... } 
+    \begin{itemize}
+    \item TS are \emph{bundles of technical principles},
+    \item which in the descriptive form have the goal of \emph{unity in
+      diversity} (think globally),
+    \item from which in the practice form the \emph{diversity in real-world
+      local application contexts} (act locally) has to be restored.
+  \end{itemize}
+  \end{block}
+\end{frame}
+\begin{frame}{Conclusions}
+  \begin{alertblock}{Thesis 7:} 
+    The directed graph of \emph{realized purposes} is the core of
+    relationality in the world of technical systems.\vskip1em
+
+    This graph is a global socio-technical artifact and is evolving in the
+    contradictionality of description forms and execution forms.
+  \end{alertblock}
+\end{frame}
+\end{document}
