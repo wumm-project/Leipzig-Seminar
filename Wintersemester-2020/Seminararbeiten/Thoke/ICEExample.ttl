@@ -1,0 +1,231 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+@prefix ex: <http://example.orf/FlowAnalysisExample/ICE> .
+
+# examples for flows
+
+# The flows are petrol, air, exhaust, cooling air, etc.
+
+# The channels are the petrol supply pipe, air supply pipe, cooling air pipe, exhaust pipe, etc.
+
+# The source of the exhaust gas is the combustion chamber.
+
+# The cooling air product is the heat exchanger, etc.
+
+# The main useful flows are (based on the ICE principle)
+  # the flow of petrol,
+  # the air flow into the engine.
+
+# Auxiliary useful streams are:
+  # the flow of all sorts of additives in petrol, the flow of oil in the engine, 
+  # the flow of coolant.
+
+# The external useful streams are both the main streams mentioned (petrol and 
+# oxidiser) and the additive stream in the petrol.
+
+# The internal usable flows are: oil flow, combustion product flow in the cylinder, 
+# part of the heat flow, coolant flow.
+
+# External harmful flows are various types of contaminants in the petrol and air, and air 
+# nitrogen.
+
+# Secondary harmful flows:
+#  The flow of carbon dioxide and vapour produced by the combustion of petrol.
+
+# Parasitic flows:
+  #Nitrogen oxides and carbon monoxide flux
+  #Flow of petrol additives decomposition products
+  #Contaminant flow in the oil
+
+# The "horse-rider" division:
+  #Cooling air (or liquid) is the typical carrier ("horse")
+  # The flow of heat (cold) is a typical feature ('rider'), which is actually what makes 
+#it easy to change the carrier.
+
+# The gasoline additive flow is a functional flow in relation to the gasoline flow. The 
+# gasoline itself is the carrier of the additive flow (being at the same time an important 
+# functional flow!)
+# Closed-loop flows: engine oil flow, coolant flow, contaminant flow in the oil.
+
+ex:InternalCombustionEngine
+    a tc:Flow ;
+    od:hasFlowType tc:ComplexFlow ;
+    od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, ex:Cooling, ex:Exhaust ;
+    od:hasFlowFunctionality tc:CarrierFlow ;
+    od:hasFlowDelegation tc:OpenFlow ;
+    od:hasFlowSource tc:InternalSource ;
+    od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket .
+
+# We operate on two different system levels here. Therefore what's an tc:FlowSubstance on the second level is a tc:Flow on the first Level
+# Further, as you can see, most of the tc:StaticFlowComponents use to take place as different components depending on their role in each subsystem
+
+ex:Fuel
+  a tc:Flow ;
+  od:hasFlowType tc:DiscreteFlow ;
+  od:hasFlowSubstance tc:Substance ;
+  od:hasFlowFunctionality tc:UsefulFlow ;
+  od:hasFlowDelegation tc:ClosedFlow ;
+  od:hasFlowSource tc:InternalSource ;
+  od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank, ex:FuelSuppylPipe, ex:CombustionChamber .
+
+ex:IntakeValve
+  a tc:Valve .
+
+ex:FuelPump
+  a tc:Pump .
+
+ex:FuelTank
+  a tc:Current .
+
+ex:CombustionChamber
+  a tc:Receiver .
+
+ex:FuelSuppylPipe
+  a tc:Channel .
+
+ex:Air
+  a tc:Flow ;
+  od:hasFlowType tc:DiscreteFlow ;
+  od:hasFlowSubstance tc:Substance ;
+  od:hasFlowFunctionality tc:UsefulFlow ;
+  od:hasFlowDelegation tc:OpenFlow ;
+  od:hasFlowSource tc:ExternalSource ;
+  od:hasStaticFlowComponent ex:IntakeValve, ex:AirSupplyPipe, ex:Atmosphere, ex:Compressor, ex:CombustionChamber .
+
+ex:AirSupplyPipe
+  a tc:Channel .
+
+ex:Atmosphere
+  a tc:Current .
+
+ex:Compressor
+  a tc:Pump .
+
+ex:IntakeValve
+  a tc:Valve .
+
+ex:AirFuelMixture
+  a tc:Flow ;
+  od:hasFlowType tc:ContinuousFlow ;
+  od:hasFlowSubstance tc:Substance ;
+  od:hasFlowFunctionality tc:UsefulFlow;
+  od:hasFlowDelegation tc:OpenFlow ;
+  od:hasFlowSource tc:ExternalSource ;
+  od:hasStaticFlowComponent ex:IntakeValve, ex:CombustionChamber, ex:SparkPlug, ex:Piston .
+
+ex:IntakeValve
+  a tc:Potential .
+
+ex:CombustionChamber
+  a tc:Channel .
+
+ex:SparkPlug
+  a tc:Receiver .
+
+ex:Piston
+  a tc:Pump .
+
+ex:Heat
+  a tc:Flow ;
+  od:hasFlowType tc:ContinuousFlow ;
+  od:hasFlowSubstance tc:Energy ;
+  od:hasFlowFunctionality tc:UsefulFlow, tc:HarmfulFlow ;
+  od:hasFlowDelegation tc:OpenFlow ;
+  od:hasFlowSource tc:InternalSource ;
+  od:hasStaticFlowComponent ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston .
+
+ex:SparkPlug
+  a tc:Potential .
+
+ex:Cylinder 
+  a tc:Valve .
+
+ex:Piston
+  a tc:Receiver .
+
+ex:Work
+  a tc:Flow ;
+  od:hasFlowType tc:ContinuousFlow ;
+  od:hasFlowSubstance tc:Energy, tc:Substance, tc:Information .
+  od:hasFlowFunctionality tc:UsefulFlow ;
+  od:hasFlowDelegation tc:ClosedFlow ;
+  od:hasFlowSource tc:InternalSource ;
+  od:hasStaticFlowComponent ex:Cylinder, ex:Piston, ex:ConnectionRod, ex:InternalCombustionEngine .
+
+ex:Cylinder
+  a tc:Channel . 
+
+ex:Piston
+  a tc:Current .
+
+ex:ConnectionRod
+  a tc:Receiver .
+
+ex:InternalCombustionEngine
+  a tc:ControlUnit .
+
+ex:Transmission
+  a tc:Flow ;
+  od:hasFlowType tc:ContinousFlow ;
+  od:hasFlowSubstance tc:Substance, tc:Information ;
+  od:hasFlowFunctionality tc:UsefulFlow ;
+  od:hasFlowDelegation tc:ClosedFlow ;
+  od:hasFlowSource tc:InternalSource ;
+  od:hasStaticFlowComponent ex:Piston, ex:ConnectionRod, ex:Crankshaft .
+
+ex:Piston
+  a tc:Potential .
+
+ex:ConnectionRod
+  a tc:Channel, tc:ControlUnit .
+
+ex:Crankshaft
+  a tc:Receiver .
+
+ex:Cooling
+  a tc:Flow ;
+  od:hasFlowType tc:ContinuousFlow ;
+  od:hasFlowSubstance tc:Energy ;
+  od:hasFlowFunctionality tc:UsefulFlow, tc:HarmfulFlow ;
+  od:hasFlowDelegation tc:OpenFlow ;
+  od:hasFlowSource tc:InternalSource, tc:ExternalSource ;
+  od:hasStaticFlowComponent ex:CoolingTank, ex:CoolingWaterJacket, ex:InternalCombustionEngine, ex:CoolingPump .
+
+ex:CoolingTank
+  a tc:Current .
+
+ex:CoolingWaterJacket
+  a tc:Channel .
+
+ex:InternalCombustionEngine
+  a tc:Receiver
+
+ex:CoolingPump
+  a tc:Pump .
+
+ex:Exhaust
+  a tc:Flow ;
+  od:hasFlowType tc:DiscreteFlow ;
+  od:hasFlowSubstance tc:Substance ;
+  od:hasFlowFunctionality tc:HarmfulFlow ;
+  od:hasFlowDelegation tc:OpenFlow ;
+  od:hasFlowSource tc:InternalSource ;
+  od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, ex:Atmosphere, ex:ExhaustValve .
+
+ex:CombustionChamber
+  a tc:Potential .
+
+ex:ExhaustPipe
+  a tc:Channel .
+
+ex:Atmosphere
+  a tc:Receiver .
+
+ex:ExhaustValve
+  a tc:Valve .
