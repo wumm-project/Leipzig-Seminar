@@ -53,14 +53,14 @@
 # functional flow!)
 # Closed-loop flows: engine oil flow, coolant flow, contaminant flow in the oil.
 
-ex:InternalCombustionEngine
+ex:BasicInternalCombustionEngine
     a tc:Flow ;
     od:hasFlowType tc:ComplexFlow ;
     od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, ex:Cooling, ex:Exhaust ;
     od:hasFlowFunctionality tc:CarrierFlow ;
     od:hasFlowDelegation tc:OpenFlow ;
     od:hasFlowSource tc:InternalSource ;
-    od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket .
+    od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket .
 
 # We operate on two different system levels here. Therefore what's an tc:FlowSubstance on the second level is a tc:Flow on the first Level
 # Further, as you can see, most of the tc:StaticFlowComponents use to take place as different components depending on their role in each subsystem
@@ -175,7 +175,7 @@ ex:Transmission
   od:hasFlowType tc:ContinousFlow ;
   od:hasFlowSubstance tc:Substance, tc:Information ;
   od:hasFlowFunctionality tc:UsefulFlow ;
-  od:hasFlowDelegation tc:ClosedFlow ;
+  od:hasFlowDelegation ex:ClopenedFlow ;
   od:hasFlowSource tc:InternalSource ;
   od:hasStaticFlowComponent ex:Piston, ex:ConnectionRod, ex:Crankshaft .
 
@@ -229,3 +229,6 @@ ex:Atmosphere
 
 ex:ExhaustValve
   a tc:Valve .
+
+# use techniques to extend basic model
+# move on with starting engine
