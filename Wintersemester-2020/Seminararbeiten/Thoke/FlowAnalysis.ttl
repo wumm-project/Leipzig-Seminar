@@ -339,14 +339,14 @@ od:inContext
     rdfs:domain tc:FlowAnalysis ;
     rdfs:range tc:Context .
 
-od:appliesRule
+od:followsRules
     a rdf:Property ;
     rdfs:domain tc:FlowAnalysis ;
     rdfs:range tc:RulesOfFlowAnalysis .
 
 od:generatesFlowTransformation
     a rdf:Property ;
-    rdfs:domain tc:FlowAnalysis ;
+    rdfs:domain tc:FlowAnalysis, tc:ModelAsIs, tc:ModelAsRequired ;
     rdfs:range tc:FlowTransformation .
 
 # the target of a Flow Analysis
