@@ -60,7 +60,11 @@ ex:BasicInternalCombustionEngine
     od:hasFlowFunctionality tc:CarrierFlow ;
     od:hasFlowDelegation tc:OpenFlow ;
     od:hasFlowSource tc:InternalSource ;
-    od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket .
+    od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
+    od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel .
+
+ex:ICE3DModel
+  a tc:GraphicDescription .
 
 # We operate on two different system levels here. Therefore what's an tc:FlowSubstance on the second level is a tc:Flow on the first Level
 # Further, as you can see, most of the tc:StaticFlowComponents use to take place as different components depending on their role in each subsystem
@@ -230,5 +234,86 @@ ex:Atmosphere
 ex:ExhaustValve
   a tc:Valve .
 
-# use techniques to extend basic model
-# move on with starting engine
+# Example of Flow Analysis of ICE
+ex:InnovationOfExhaustFlow
+  a tc:FlowAnalysis ;
+  od:generatesFlowTransformation ex:ExhaustionFlowTransformation ;
+  od:describesFlow ex:Exhaust ;
+  od:analysesFlow ex:Fuel, ex:Air, ex:AirFuelMixture, ex:Heat, ex:Work ;
+  od:inContext ex:PollutionRestrictions ;
+  od:hasGoal ex:SatisfactionOfPollutionRestrictions ;
+  od:hasRequirement ex:ReduceExhaustFlow, ex:PreserveWorkFlow ;
+  ex:buildICEExhaustionModel ex:ICEExhaustionModel ;
+  ex:buildICEExhaustionInnovationModel ex:ICEExhaustionInnovationModel ;
+  tc:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems ex:ICEExhaustionInnovationModel ;
+
+ex:PollutionRestrictions
+  a tc:Context .
+
+ex:SatisfactionOfPollutionRestrictions
+  a tc:Goal .
+
+ex:EvaluationOfExhaustFlow
+  a tc:RulesOfEvaluation ;
+  od:detects ex:HighDispersedExhaust .
+
+ex:Exhaust
+  od:hasFlowDefect ex:HighDispersedExhaust .
+
+ex:HighDispersedExhaust
+  a tc:ExcessiveFlow .
+
+ex:buildICEExhaustionModel
+  a rdf:Property ;
+  a od:buildModelAsIs ;
+  rdfs:domain ex:InnovationOfExhaustFlow ;
+  rdfs:range ex:ICEExhaustionModel .
+
+ex:buildICEExhaustionInnovationModel
+  a rdf:Property ;
+  a od:buildModelAsRequired ;
+  rdfs:domain ex:InnovationOfExhaustFlow ;
+  rdfs:range ex:ICEExhaustionInnovationModel .
+
+ex:ICEExhaustionModel
+  a tc:ModelAsIs ;
+  od:hasFlowType tc:ComplexFlow ;
+  od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, ex:Cooling, ex:Exhaust ;
+  od:hasFlowFunctionality tc:CarrierFlow ;
+  od:hasFlowDelegation tc:OpenFlow ;
+  od:hasFlowSource tc:InternalSource ;
+  od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
+  od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ;
+  od:generatesFlowTransformation ex:ExhaustionFlowTransformation .
+
+ex:installCatalyticConverter
+  a tc:reducePermeability .
+
+ex:addGasolineAdditive
+  a tc:compensateWithSecondFlow .
+
+ex:ICEExhaustionInnovationModel
+  a tc:ModelAsRequired ;
+  od:hasFlowType tc:ComplexFlow ;
+  od:hasFlowSubstance ex:Fuel, ex:FuelAdditive, ex:Transmission, ex:Heat, ex:Work, ex:Cooling, ex:Exhaust ;
+  od:hasFlowFunctionality tc:CarrierFlow ;
+  od:hasFlowDelegation tc:OpenFlow ;
+  od:hasFlowSource tc:InternalSource ;
+  od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
+  od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ;
+  od:generatesFlowTransformation ex:ExhaustionFlowTransformation .
+
+ex:FuelAdditive
+  a tc:Flow ;
+  od:hasFlowType tc:DiscreteFlow ;
+  od:hasFlowSubstance tc:Substance ;
+  od:hasFlowFunctionality tc:UsefulFlow ;
+  od:hasFlowDelegation tc:ClosedFlow ;
+  od:hasFlowSource tc:InternalSource ;
+  od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank, ex:FuelSuppylPipe, ex:CombustionChamber .
+
+ex:ExhausePipeWithCatalyticConverter
+  a tc:Channel .
+
+ex:ExhaustionFlowTransformation
+  a tc:FlowTransformation .
