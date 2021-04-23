@@ -420,25 +420,35 @@ tc:ReduceParasiticFlow
 
 ##Rules of Flow Analysis
 
-od:applyRulesofConstruction
+od:applyRulesOfFlowAnalysis
     a rdf:Property ;
     rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:RulesOfFlowAnalysis .
+
+od:applyRulesofConstruction
+    a rdf:Property ;
+    rdfs:domain tc:RulesOfConstruction ;
     rdfs:range tc:ModelAsIs .
 
 od:applyRulesofEvaluation
     a rdf:Property ;
-    rdfs:domain tc:FlowAnalysis ;
+    rdfs:domain tc:RulesOfEvaluation ;
     rdfs:range tc:ModelAsIs .
 
 od:applyRulesofConstructionOfInconformRequirements
     a rdf:Property ;
-    rdfs:domain tc:FlowAnalysis ;
+    rdfs:domain tc:RulesOfConstructionOfInconformRequirements ;
     rdfs:range tc:ModelAsRequired .
 
 od:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems
     a rdf:Property ;
-    rdfs:domain tc:FlowAnalysis ;
+    rdfs:domain tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems ;
     rdfs:range tc:ModelAsRequired .
+
+od:constrains 
+    a rdf:Property ;
+    rdfs:domain tc:RulesOfConstruction, tc:RulesOfConstructionOfInconformRequirements ;
+    rdfs:range tc:ModelAsIs .
 
 od:detects
     a rdf:Property ;
@@ -452,7 +462,7 @@ tc:RulesOfFlowAnalysis
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstruction
-    od:forms tc:ModelAsIs ;
+    od:constrains tc:ModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules of construction"@en, "Modellbauregeln"@de ;
     a skos:Concept, od:AdditionalConcept .
@@ -464,11 +474,13 @@ tc:RulesOfEvaluation
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstructionOfInconformRequirements
+    od:constrains tc:ModelAsRequired ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules of construction of inconform requirements"@en, "Modellbauregeln zur Lösung von Widersprüchen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems
+    od:issuedAt tc:ModelAsRequired ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules to apply Laws of Development of Technical Systems"@en, "Anwendungsregeln entsprechend der Gesetze der Entwicklung Technischer Systeme"@de ;
     skos:note "the Laws of Development of Technical Systems are the theoretical base for the analysis of obtained models" ;
