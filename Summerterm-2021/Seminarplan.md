@@ -54,14 +54,12 @@ written in English.
   <https://ebookcentral.proquest.com/lib/leip/detail.action?docID=3339201>
 
 ## Offene Seminar themes:
-* Russell Ackoff. Interactive planning.
 * Peter F. Drucker (1975). The Practice of Management.
 * The Toyota Management system. Guiding principles and main tools.
-* Goal-Modelle und die i*-Modellierungsmethode
 * Process and Enterprise Maturity Model - Michael Hammer
 * Business Process Maturity Model (BPMM) by Bill Curtis and John Alden
-* The “Business Process Definition Metamodel” (BPDM)
 * Anton Kozhemyako. Contradictory Business Processes and Schematization.
+* Business Process Modelling und TRIZ
 
 ## Seminar schedule
 
@@ -73,7 +71,8 @@ written in English.
 * [Handout](2021-04-20/Handout.pdf)
 * [Slides](2021-04-20/Slides.pdf)
 
-### 27.04. ISO 9000, Business Modelling and Business TRIZ (Gräbe)
+### 27.04. Business Modelling Basics, ISO 9000 and CMMI 
+* [Handout](2021-04-27/Handout.pdf)
 
 ### 04.05. Management by incentives (Veronika Heuten)
 
@@ -85,7 +84,7 @@ written in English.
 
 ### 01.06. The SMART approach (Axel Schuster)
 
-### 08.06. NN (Marie Windhorst)
+### 08.06. Goal-Modelle und die i*-Modellierungsmethode (Marie Windhorst)
 
 ### 15.06. Mintzberg on Management (Felix Walter)
 
@@ -93,7 +92,7 @@ written in English.
 
 ### 29.06. Taylor's Principles of Scientific Management (Stefan Grote)
 
-### 06.07.
+### 06.07. Russell Ackoff. Interactive planning (Daniel Werner)
 
 ### 13.07.
 
