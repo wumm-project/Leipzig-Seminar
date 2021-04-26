@@ -74,25 +74,25 @@ written in English.
 ### 27.04. Business Modelling Basics, ISO 9000 and CMMI 
 * [Handout](2021-04-27/Handout.pdf)
 
-### 04.05. Management by incentives (Veronika Heuten)
+### 04.05. Management by Incentives (Veronika Heuten)
 
-### 11.05. Russell Ackoff. System thinking and management (Jannis de Riz)
+### 11.05. Russell Ackoff. System Thinking and Management (Jannis de Riz)
 
-### 18.05. MBO - Management by objectives (Franziska Görg)
+### 18.05. MBO - Management by Objectives (Franziska Görg)
 
 ### 25.05. Business Process Definition Metamodel - BPDM (Bjarne Dasenbrook)
 
-### 01.06. The SMART approach (Axel Schuster)
+### 01.06. The SMART Approach (Axel Schuster)
 
-### 08.06. Goal-Modelle und die i*-Modellierungsmethode (Marie Windhorst)
+### 08.06. Goal-Models and the i* Modelling Method (Marie Windhorst)
 
 ### 15.06. Mintzberg on Management (Felix Walter)
 
-### 22.06. The Toyota Management system (Toni Pfeiffer)
+### 22.06. The Toyota Management System (Toni Pfeiffer)
 
 ### 29.06. Taylor's Principles of Scientific Management (Stefan Grote)
 
-### 06.07. Russell Ackoff. Interactive planning (Daniel Werner)
+### 06.07. Russell Ackoff. Interactive Planning (Daniel Werner)
 
 ### 13.07.
 

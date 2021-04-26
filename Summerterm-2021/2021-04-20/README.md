@@ -5,7 +5,6 @@
 * __Theme:__  System Management, Organizations, Systems. Basic Notions
 * __Presenter:__ Hans-Gert Gräbe
 
-
 ## Abstract
 
 The handout focuses on first clarifying the basic terms "systematic

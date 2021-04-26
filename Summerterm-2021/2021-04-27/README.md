@@ -34,4 +34,6 @@ software sector.
 * [MSM] Viktor B. Khristenko, Andrei G. Reus, Alexander P. Zinchenko et al. (2014).
   Methodological School of Management. Bloomsbury Publishing.  ISBN
   978-1-4729-1029-5.
+* Ian Sommerville (2015). Software Engineering. Ch. 19
+  <https://www.slideshare.net/software-engineering-book/ch19-systems-engineering>
 
