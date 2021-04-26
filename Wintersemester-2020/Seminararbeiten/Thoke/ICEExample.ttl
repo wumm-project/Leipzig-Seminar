@@ -8,6 +8,15 @@
 @prefix tc: <http://opendiscovery.org/rdf/Concept/> .
 @prefix ex: <http://example.orf/FlowAnalysisExample/ICE> .
 
+<http://opendiscovery.org/rdf/Ontologies/FlowAnalysisExample/ICE/>
+  cc:attributName "The Open Discovery Project" ;
+  cc:attributionURL <http://opendiscovery.org> ;
+  cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+  a owl:Ontology ;
+  rdfs:comment "from Lebedev 2015 - Tool Improvement - Flow Analysis" ;
+  skos:prefLabel "Flow Analysis - Internal Combustion Engine Example" ;
+  owl:imports <http://opendiscovery.org/rdf/Ontologies/FlowAnalysis/> .
+
 ex:BasicInternalCombustionEngine
     a tc:Flow ;
     od:hasFlowType tc:ComplexFlow ;
@@ -16,10 +25,14 @@ ex:BasicInternalCombustionEngine
     od:hasFlowDelegation tc:OpenFlow ;
     od:hasFlowSource tc:InternalSource ;
     od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
-    od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel .
+    od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ;
+    skos:prefLabel "basic internal combustion engine"@en, "grundlegendes Modell eines Verbrennungsmotors"@de  ;
+    skos:note "basic construction model from wikipedia <https://en.wikipedia.org/wiki/Internal_combustion_engine>" .
 
 ex:ICE3DModel
-  a tc:GraphicDescription .
+  a tc:GraphicDescription ;
+  skos:prefLabel "Graphic Description of ICE"@en, "graphische Beschreibung des Verbrennungsmotors"@de ;
+  skos:note "generic graphical description as a 3D model how it's used in CAD systems" .
 
 # We operate on two different system levels here. Therefore what's an tc:FlowSubstance on the second level is a tc:Flow on the first Level
 # Further, as you can see, most of the tc:StaticFlowComponents use to take place as different components depending on their role in each subsystem
@@ -31,22 +44,28 @@ ex:Fuel
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation tc:ClosedFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank, ex:FuelSuppylPipe, ex:CombustionChamber .
+  od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank, ex:FuelSuppylPipe, ex:CombustionChamber ;
+  skos:prefLabel "The Fuel Flow"@en, "Der Kraftstofffluss"@de .
 
 ex:IntakeValve
-  a tc:Valve .
+  a tc:Valve ;
+  skos:prefLabel "intake valve"@en, "Einspritzventil"@de .
 
 ex:FuelPump
-  a tc:Pump .
+  a tc:Pump ;
+  skos:prefLabel "fuel pump"@en, "Kraftstoffpumpe"@de .
 
 ex:FuelTank
-  a tc:Current .
+  a tc:Current ;
+  skos:prefLabel "fuel tank"@en, "Kraftstofftank"@de .
 
 ex:CombustionChamber
-  a tc:Receiver .
+  a tc:Receiver ;
+  skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de .
 
 ex:FuelSuppylPipe
-  a tc:Channel .
+  a tc:Channel ;
+  skos:prefLabel "fuel supply pipe"@en, "Kraftstoffleitung"@de .
 
 ex:Air
   a tc:Flow ;
@@ -55,19 +74,21 @@ ex:Air
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:ExternalSource ;
-  od:hasStaticFlowComponent ex:IntakeValve, ex:AirSupplyPipe, ex:Atmosphere, ex:Compressor, ex:CombustionChamber .
+  od:hasStaticFlowComponent ex:IntakeValve, ex:AirSupplyPipe, ex:Atmosphere, ex:Compressor, ex:CombustionChamber ;
+  skos:prefLabel "the air flow"@en, "der Luftstrom"@de ;
+  skos:note "refers to the air that is needed to ignite the fuel, not external air for cooling (we use a water cooling model here)" .
 
 ex:AirSupplyPipe
-  a tc:Channel .
+  a tc:Channel ;
+  skos:prefLabel "air supply pipe"@en, "Luftleitung"@de .
 
 ex:Atmosphere
-  a tc:Current .
+  a tc:Current ;
+  skos:prefLabel "atmosphere"@en, "Atmosphäre"@de .
 
 ex:Compressor
-  a tc:Pump .
-
-ex:IntakeValve
-  a tc:Valve .
+  a tc:Pump ;
+  skos:prefLabel "compressor"@en, "Kompressor"@de .
 
 ex:AirFuelMixture
   a tc:Flow ;
@@ -76,19 +97,24 @@ ex:AirFuelMixture
   od:hasFlowFunctionality tc:UsefulFlow;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:ExternalSource ;
-  od:hasStaticFlowComponent ex:IntakeValve, ex:CombustionChamber, ex:SparkPlug, ex:Piston .
+  od:hasStaticFlowComponent ex:IntakeValve, ex:CombustionChamber, ex:SparkPlug, ex:Piston ;
+  skos:prefLabel "air fuel mixture"@en, "Kraftstoff-Luft-Gemisch"@de .
 
 ex:IntakeValve
-  a tc:Potential .
+  a tc:Potential ;
+  skos:prefLabel "intake valve"@en, "Einspritzventil"@de .
 
 ex:CombustionChamber
-  a tc:Channel .
+  a tc:Channel ;
+  skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de .
 
 ex:SparkPlug
-  a tc:Receiver .
+  a tc:Receiver ;
+  skos:prefLabel "spark plug"@en, "Zündkerze"@de .
 
 ex:Piston
-  a tc:Pump .
+  a tc:Pump ;
+  skos:prefLabel "piston"@en, "Kolben"@de .
 
 ex:Heat
   a tc:Flow ;
@@ -97,16 +123,21 @@ ex:Heat
   od:hasFlowFunctionality tc:UsefulFlow, tc:HarmfulFlow ;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston .
+  od:hasStaticFlowComponent ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston ;
+  skos:prefLabel "the heat flow"@en, "thermischer Fluss"@de .
+  skos:note "the heat flow is the result of the ignition process of the air fuel mixture in the combustion chamber which powers the piston" .
 
 ex:SparkPlug
-  a tc:Potential .
+  a tc:Potential ;
+  skos:prefLabel "spark plug"@en, "Zündkerze"@de .
 
 ex:Cylinder 
-  a tc:Valve .
+  a tc:Valve ;
+  skos:prefLabel "cylinder"@en, "Zylinder"@de .
 
 ex:Piston
-  a tc:Receiver .
+  a tc:Receiver ;
+  skos:prefLabel "piston"@en, "Kolben"@de .
 
 ex:Work
   a tc:Flow ;
@@ -115,19 +146,25 @@ ex:Work
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation tc:ClosedFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:Cylinder, ex:Piston, ex:ConnectionRod, ex:InternalCombustionEngine .
+  od:hasStaticFlowComponent ex:Cylinder, ex:Piston, ex:ConnectionRod, ex:InternalCombustionEngine ;
+  skos:prefLabel "the work flow"@en, "Arbeitsfluss"@de ;
+  skos:note "basic working principle of the ICE as a result and requirement of the ignition process" .
 
 ex:Cylinder
-  a tc:Channel . 
+  a tc:Channel ;
+  skos:prefLabel "cylinder"@en, "Zylinder"@de . 
 
 ex:Piston
-  a tc:Current .
+  a tc:Current ;
+  skos:prefLabel "piston"@en, "Kolben"@de .
 
 ex:ConnectionRod
-  a tc:Receiver .
+  a tc:Receiver ;
+  skos:prefLabel "connection rod"@en, "Kolbenstange"@de .
 
 ex:InternalCombustionEngine
-  a tc:ControlUnit .
+  a tc:ControlUnit ;
+  skos:prefLabel "internal combustion engine"@en, "Verbrennungsmotor"@de .
 
 ex:Transmission
   a tc:Flow ;
@@ -136,16 +173,21 @@ ex:Transmission
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation ex:ClopenedFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:Piston, ex:ConnectionRod, ex:Crankshaft .
+  od:hasStaticFlowComponent ex:Piston, ex:ConnectionRod, ex:Crankshaft ;
+  skos:prefLabel "transmission work flow"@en, "Übersetzungsfluss"@de ;
+  skos:note "the transmission between piston, connection rod and crankshaft modelled as flow" .
 
 ex:Piston
-  a tc:Potential .
+  a tc:Potential ;
+  skos:prefLabel "piston"@en, "Kolben"@de .
 
 ex:ConnectionRod
-  a tc:Channel, tc:ControlUnit .
+  a tc:Channel, tc:ControlUnit ;
+  skos:prefLabel "connection rod"@en, "Kolbenstange"@de .
 
 ex:Crankshaft
-  a tc:Receiver .
+  a tc:Receiver ;
+  skos:prefLabel "crankshaft"@en, "Kurbelwelle"@de .
 
 ex:Cooling
   a tc:Flow ;
@@ -157,16 +199,20 @@ ex:Cooling
   od:hasStaticFlowComponent ex:CoolingTank, ex:CoolingWaterJacket, ex:InternalCombustionEngine, ex:CoolingPump .
 
 ex:CoolingTank
-  a tc:Current .
+  a tc:Current ;
+  skos:prefLabel "cooling tank"@en, "Kühltank"@de .
 
 ex:CoolingWaterJacket
-  a tc:Channel .
+  a tc:Channel ;
+  skos:prefLabel "cooling water jacket"@en, "Kühlmittelmantel"@de .
 
 ex:InternalCombustionEngine
-  a tc:Receiver
+  a tc:Receiver ;
+  skos:prefLabel "internal combustion engine"@en, "Verbrennungsmotor"@de .
 
 ex:CoolingPump
-  a tc:Pump .
+  a tc:Pump ;
+  skos:prefLabel "cooling pump"@en, "Kühlmittelpumpe"@de .
 
 ex:Exhaust
   a tc:Flow ;
@@ -175,19 +221,24 @@ ex:Exhaust
   od:hasFlowFunctionality tc:HarmfulFlow ;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, ex:Atmosphere, ex:ExhaustValve .
+  od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, ex:Atmosphere, ex:ExhaustValve ;
+  skos:prefLabel "the exhaust flow"@en, "Abgasstrom"@de .
 
 ex:CombustionChamber
-  a tc:Potential .
+  a tc:Potential ;
+  skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de .
 
 ex:ExhaustPipe
-  a tc:Channel .
+  a tc:Channel ;
+  skos:prefLabel "exhaust pipe"@en, "Auspuff"@de .
 
 ex:Atmosphere
-  a tc:Receiver .
+  a tc:Receiver ;
+  skos:prefLabel "atmosphere"@en, "Atmosphäre"@de .
 
 ex:ExhaustValve
-  a tc:Valve .
+  a tc:Valve ;
+  skos:prefLabel "exhaust valve"@en, "Abgasventil"@de .
 
 # Example of Flow Analysis of ICE
 ex:InnovationOfExhaustFlow
