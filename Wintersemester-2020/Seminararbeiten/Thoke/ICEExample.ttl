@@ -252,34 +252,41 @@ ex:InnovationOfExhaustFlow
   ex:buildICEExhaustionModel ex:ICEExhaustionModel ;
   ex:buildICEExhaustionInnovationModel ex:ICEExhaustionInnovationModel ;
   tc:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems ex:ICEExhaustionInnovationModel ;
+  skos:prefLabel "innovation of the exhaust flow"@en, "Innovation des Abgassstroms"@de .
 
 ex:PollutionRestrictions
-  a tc:Context .
+  a tc:Context ;
+  skos:prefLabel "pollution restrictions"@en, "Abgasnormen"@de .
 
 ex:SatisfactionOfPollutionRestrictions
-  a tc:Goal .
+  a tc:Goal ;
+  skos:prefLabel "statisfaction of pollution restrictions"@en, "Einhaltung der Abgasnormen"@de .
 
 ex:EvaluationOfExhaustFlow
   a tc:RulesOfEvaluation ;
-  od:detects ex:HighDispersedExhaust .
+  od:detects ex:HighDispersedExhaust ;
+  skos:prefLabel "evaluation of the exhaust flow"@en, "Evaluation des Abgassstroms"@de .
 
 ex:Exhaust
   od:hasFlowDefect ex:HighDispersedExhaust .
 
 ex:HighDispersedExhaust
-  a tc:ExcessiveFlow .
+  a tc:ExcessiveFlow ;
+  skos:prefLabel "high dispersed exhaust"@en, "Abgasstrom mit (zu) vielen Schwebstoffen"@de .
 
 ex:buildICEExhaustionModel
   a rdf:Property ;
   a od:buildModelAsIs ;
   rdfs:domain ex:InnovationOfExhaustFlow ;
-  rdfs:range ex:ICEExhaustionModel .
+  rdfs:range ex:ICEExhaustionModel ;
+  skos:prefLabel "build an ICE exhaustion model"@en, "Abgasmodell des Verbrennungsmotors bauen"@de .
 
 ex:buildICEExhaustionInnovationModel
   a rdf:Property ;
   a od:buildModelAsRequired ;
   rdfs:domain ex:InnovationOfExhaustFlow ;
-  rdfs:range ex:ICEExhaustionInnovationModel .
+  rdfs:range ex:ICEExhaustionInnovationModel ;
+  skos:prefLabel "build an ICE exhaustion innovation model"@en, "innovatives Abgasmodell des Verbrennungsmotors bauen"@de .
 
 ex:ICEExhaustionModel
   a tc:ModelAsIs ;
@@ -290,13 +297,18 @@ ex:ICEExhaustionModel
   od:hasFlowSource tc:InternalSource ;
   od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
   od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ;
-  od:generatesFlowTransformation ex:ExhaustionFlowTransformation .
+  od:generatesFlowTransformation ex:ExhaustionFlowTransformation ;
+  skos:prefLabel "ICE exhaustion model"@en, "Abgasmodell des Verbrennungsmotors"@de .
+
+# used Techniques of Modification for suitable solution
 
 ex:installCatalyticConverter
-  a tc:reducePermeability .
+  a tc:reducePermeability ;
+  skos:prefLabel "install catalytic converter"@en, "Katalysator einbauen"@de . 
 
 ex:addGasolineAdditive
-  a tc:compensateWithSecondFlow .
+  a tc:compensateWithSecondFlow ;
+  skos:prefLabel "add gasoline additive flow"@en, "Fluss für Kraftstoffzusatz hinzufügen" .
 
 ex:ICEExhaustionInnovationModel
   a tc:ModelAsRequired ;
@@ -307,7 +319,8 @@ ex:ICEExhaustionInnovationModel
   od:hasFlowSource tc:InternalSource ;
   od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
   od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ;
-  od:generatesFlowTransformation ex:ExhaustionFlowTransformation .
+  od:generatesFlowTransformation ex:ExhaustionFlowTransformation ;
+  skos:prefLabel "ICE exhaustion innovation model"@en, "innovatives Abgasmodell des Verbrennungsmotors"@de .
 
 ex:FuelAdditive
   a tc:Flow ;
@@ -316,10 +329,14 @@ ex:FuelAdditive
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation tc:ClosedFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank, ex:FuelSuppylPipe, ex:CombustionChamber .
+  od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank, ex:FuelSuppylPipe, ex:CombustionChamber ;
+  skos:prefLabel "flow of fuel additive"@en, "Fluss des Kraftstoffzusatzes"@de .
 
-ex:ExhausePipeWithCatalyticConverter
-  a tc:Channel .
+ex:ExhaustPipeWithCatalyticConverter
+  a tc:Channel ;
+  skos:prefLabel "exhaust pipe with catalytic converter"@en, "Auspuff mit Katalysator"@de .
 
 ex:ExhaustionFlowTransformation
-  a tc:FlowTransformation .
+  a tc:FlowTransformation ;
+  skos:prefLabel "document for the exhaustion flow transformation project"@en, "Dokument für das Abgasstromtransformationsprojekt"@de ;
+  skos:note "this is the final result of the flow analysis process" .
