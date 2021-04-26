@@ -8,51 +8,6 @@
 @prefix tc: <http://opendiscovery.org/rdf/Concept/> .
 @prefix ex: <http://example.orf/FlowAnalysisExample/ICE> .
 
-# examples for flows
-
-# The flows are petrol, air, exhaust, cooling air, etc.
-
-# The channels are the petrol supply pipe, air supply pipe, cooling air pipe, exhaust pipe, etc.
-
-# The source of the exhaust gas is the combustion chamber.
-
-# The cooling air product is the heat exchanger, etc.
-
-# The main useful flows are (based on the ICE principle)
-  # the flow of petrol,
-  # the air flow into the engine.
-
-# Auxiliary useful streams are:
-  # the flow of all sorts of additives in petrol, the flow of oil in the engine, 
-  # the flow of coolant.
-
-# The external useful streams are both the main streams mentioned (petrol and 
-# oxidiser) and the additive stream in the petrol.
-
-# The internal usable flows are: oil flow, combustion product flow in the cylinder, 
-# part of the heat flow, coolant flow.
-
-# External harmful flows are various types of contaminants in the petrol and air, and air 
-# nitrogen.
-
-# Secondary harmful flows:
-#  The flow of carbon dioxide and vapour produced by the combustion of petrol.
-
-# Parasitic flows:
-  #Nitrogen oxides and carbon monoxide flux
-  #Flow of petrol additives decomposition products
-  #Contaminant flow in the oil
-
-# The "horse-rider" division:
-  #Cooling air (or liquid) is the typical carrier ("horse")
-  # The flow of heat (cold) is a typical feature ('rider'), which is actually what makes 
-#it easy to change the carrier.
-
-# The gasoline additive flow is a functional flow in relation to the gasoline flow. The 
-# gasoline itself is the carrier of the additive flow (being at the same time an important 
-# functional flow!)
-# Closed-loop flows: engine oil flow, coolant flow, contaminant flow in the oil.
-
 ex:BasicInternalCombustionEngine
     a tc:Flow ;
     od:hasFlowType tc:ComplexFlow ;
