@@ -65,8 +65,7 @@
     The most comprehensive source on issues of TRIZ modelling of flows and
     methodological issues of flow analysis is the thesis \cite{Lebedyev2015} by
     Yuri Lebedyev, which he submitted in 2015 under the supervision of S.A. 
-    Logvinov for graduation as TRIZ Master. Since the thesis is only available in
-    Russian, only the author's English summary was evaluated.
+    Logvinov for graduation as TRIZ Master.
 
     Such a limitation is justified, since the aim of this seminar paper is not to
     completely cover the TRIZ theory of flow analysis, but only to identify its
@@ -133,6 +132,40 @@
     \end{itemize}
 
     \section{The Conceptualisations}
+    Being more than just a static methodology, there have been several approaches
+    to standardize the syntaxes and semantics of the conceptual 
+    and methodological knowledge of TRIZ. With launching the TRIZ Ontology Project
+    (TOP) several main contributors of the MA TRIZ school are pushing forward this 
+    longterm goal from a very core institution of the TRIZ history.
+    In awareness of the importance to establish uniform language models within 
+    human-machine-interface environments the WUMM\cite{WUMM} TOP Companion Project\cite{WUMMTOP}
+    is pushing even further 'to transform that information[...]',
+    which has been provided by the TOP,'[...]into RDF as 
+    the machine readable standard of the Web 3.0 (also called 'Semantic Web').'\cite{WUMMTOP}.     
+    
+    'RDF is a standard model for data interchange on the Web. [...] [It] 
+    extends the linking structure of the Web to use URIs to name the relationship 
+    between things as well as the two ends of the link 
+    (this is usually referred to as a “triple”). Using this simple model, it allows 
+    structured and semi-structured data to be mixed, exposed, and shared across 
+    different applications. \cite{RDF}
+
+    Given that framework, we can map the concepts of TRIZ onto a structure which can
+    be read and processed by computers which accept hyper text protocols and link them
+    to substantial resources creating an environment to collaborate 
+    in innovative projects across the world using semantical technologies.
+    
+    To collect and manage the development the RDF source code of WUMMTOP a git repository
+    \cite{RDFData} is used and has been forked for developing the 
+    TRIZ Analysis Ontocard feature as the main goal of this work. The README manual
+    of the repository provides necessary preliminaries for using and continue developing 
+    the project.
+ 
+    The main part of the modelling workflow is the appropriate design how to translate 
+    the ontological structure of the given topic into the RDF scope of three-word-sentences. 
+    Therefore the use of several namespaces to map each ontological aspect onto the 
+    architecture of subjects, predicates and objetcs is key to deliver a well structured 
+    RDF Model. 
 
     The conceptualisations to be developed follow the basic assumptions and
     positings, that are elaborated in more detail in \cite{Graebe2021}. In
@@ -149,6 +182,26 @@
     \item \texttt{owl:} -- the namespace of the Web Ontology Language (to address web ontology conventions).
     \end{itemize}
 
+    \section{Modelling the Flow Analysis Ontocard}
+
+    To rely on proper methods of the design of software components a few small changes to the taxonomy of Eckardt's Ontology needed to be induced with
+    several layers of abstraction(which are existing prototypically but are not described explicitely) and specification of the used predicates. 
+    The description of the modelling will mainly focus on these parts, while explaining the structure of the ontology itself remains exemplarily, 
+    as it has always been specified in the quoted material.
+
+    four levels of hierarchy to distinguish descriptive modelling 
+    0
+    1
+    2
+    3
+
+    the methodological practice described in this work is mainly based at level 2, meaning the modelled objects and subjects in terms of RDF refer to 
+    the concept of classes used in object-oriented programming[SOURCE]. Therefore all properties of RDF objects described here are generic class
+    properties, which have to be instanciated separately as a RDF triplet of rdfs:type|s referring a certain object of class properties
+
+    \cite{HGGA}
+
+    select distinct ?p where {?s ?p ?o filter regex(?p, 'od')} 
     \subsection{\texttt{tc:Flow}}
 
     A flow is a component within a system and hence modeled as subconcept of
@@ -172,7 +225,7 @@
     \begin{center}
     \begin{tabular}{|c|c|}\hline
         Property & PropertyDomain \\\hline
-        od:hasMode & tc:ModeValue \\
+        od:belongsTo & tc:StageValue \\
         od:hasFlowType & tc:FlowType  \\
         od:hasFlowSubstance & tc:FlowSubstance  \\
         od:hasFlowFunctionality & tc:FlowFunctionality  \\
@@ -185,8 +238,6 @@
     \begin{center}
     \begin{tabular}{|l|p{10cm}|}\hline
         PropertyDomain & PropertyValues \\\hline
-        tc:ModeValue & tc:System, tc:Model, tc:SystemAsIs, tc:SystemAsRequired,
-        tc:ModelAsIs, tc:ModelAsRequired \\
         tc:FlowType & tc:ComplexFlow, tc:DiscreteFlow, tc:ContinuousFlow \\
         tc:FlowSubstance & tc:Information, tc:Energy, tc:Substance \\
         tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow  \\
@@ -200,27 +251,37 @@
 
     \subsection{Subconcepts of \texttt{tc:Flow}}
 
-    A flow consists of several parts (source, channel, receiver, control unit)
+    A flow consists of several physical parts (source, channel, receiver, control unit)
     that are components by their own and hence modeled with the predicate
     \texttt{od:subConceptOf}. For the moment they are attached to the flow with a
-    single predicate \texttt{od:hasStaticFlowComponent}.
+    single predicate \texttt{od:hasStaticFlowComponent}. Yet, they have several
+    subcomponents, which are listed below.
 
-    \HGG{Ist es sinnvoll, mit Blick auf das Konzept eines „minimal arbeitsfähigen
-    Flusses“, der alle Teile (source, channel, receiver, control unit) enthalten
-    muss, hier das Prädikat weiter zu differenzieren?}
+    \begin{center}
+        \begin{tabular}{|c|c|}\hline
+            Property & PropertyDomain \\\hline
+            od:hasStaticFlowComponent & tc:StaticFlowComponent \\\hline 
+        \end{tabular}
+        \end{center}
+    
+        \begin{center}
+        \begin{tabular}{|l|p{10cm}|}\hline
+            Components & SubComponents \\\hline
+            tc:ControlUnit & tc:Pump, tc:Valve \\
+            tc:Receiver & (has no subcomponents yet)
+            tc:Source & tc:Current, tc:Potential \\
+            tc:Channel & (has no subcomponents yet)\\\hline 
+        \end{tabular}
+        \end{center}
+    
 
     \subsection{\texttt{tc:FlowAnalysis}}
-
-    A flow analysis is an analytic process concerned with a certain \emph{flow}
-    (model) in a certain context.  The \emph{context} encapsulates all information
-    about the exact conditions of the analysis (Goals, Requirements, Description
-    Method).
-
-    The goal of a functional analysis is to create a plan for a flow
-    transformation based on the \emph{flow analysis rules} that can be applied to
-    the flow and improves it in the given context. Hence the target of a flow
-    analysis is a special document in a (yet hypothetic) Flow Transformation
-    Description Language.
+    Eckardt's model of flow analysis is separated into two levels of abstraction.
+    The \emph{Top Level View} contains a self descriptive methodological approach,
+    which parts of the flow analysis are relevant to carry out a flow transformation
+    process. The \emph{Technical View} describes how a transformation is prescribed
+    by its compliance rules and its LETS and how requirements are met by 
+    solving the contradictions with several {Techniqes of Modification}. 
 
     The ontological representation of such a process is extremely difficult and is
     not considered here. The ontology of the flow analysis is restricted to the
@@ -231,51 +292,58 @@
     klären, ob \texttt{od:hasDescriptionMethod} sowohl einen Fluss als auch eine
     Flussanalyse als \texttt{rdfs:domain} hat. In Ermangelung einer besseren Idee
     habe ich einer \texttt{tc:FlowTransformation} den Typ \texttt{foaf:Document}
-    zugeordnet. }
+    zugeordnet. --> siehe Mail, siehe Teil B, vll noch reflexives Prädikat hinzufügen}
 
-    \section{Modelling the Flow Analysis Ontocard}
-    \subsection{Preliminaries and context}
-    This work is part of the WUMM\cite{WUMM} TOP Companion Project\cite{WUMMTOP}. 'One of the goals of the project is to transform that information[...]',
-    which has been provided by the TOP,'[...]into RDF as the machine readable standard of the Web 3.0 (also called 'Semantic Web').'\cite{WUMMTOP}. Its 
-    source code is managed in a git repository\cite{RDFData} and has been forked for developing the TRIZ Analysis Ontocard feature. The README manual
-    of the repository provides necessary preliminaries for using and continue developing the project.
-    
-    few words to RDF in general + the reference sources    
-    The Flow Analysis Ontocard
-        - some notes referring to Eckardt
-            - 
-        - mentioning the Prerequisites
-        The main part of the modelling workflow is the appropriate design how to translate the ontological structure of the given topic into the RDF scope
-        of three-word-sentences. Therefore the use of several namespaces to map each ontological aspect onto the architecture of subjects, predicates and 
-        objetcs is key to deliver a well structured RDF Model. 
+    \subsubsection{Top Level View}
+    As the description of the flow model is a core concern of the flow analysis,
+    flow model and flow analysis are connected via the Top Level View. As already
+    described and mentioned in \cite{Graebe2021}, the flow model has several stages
+    that have to be adressed to properly enroll the process of flow transformation.
+
+    The goal of a functional analysis is to create a plan for a flow
+    transformation based on the \emph{tc:RulesOfFlowTransformation} that can be 
+    applied to the flow and improves it in the given context. Hence the target
+    of a flow analysis is a special document in a (yet hypothetic) Flow Transformation
+    Description Language.
+
+    \begin{center}
+        \begin{tabular}{|c|c|}\hline
+            Property & PropertyDomain \\\hline
+            od:describesFlow & tc:Flow \\
+            od:analysesFlow & tc:Flow \\
+            od:inContext & tc:Context \\
+            od:appliesRules & tc:RulesOfFlowTransformation \\
+            od:usesDescriptionMethod & tc:MethodOfDescription \\
+            od:generatesFlowTransformation & tc:FlowTransformation\\
+            od:applyChanges & tc:Flow \\\hline 
+        \end{tabular}
+        \end{center}
+
+    A flow analysis is an analytic process concerned with a certain \emph{flow}
+    (model) in a certain context.  The \emph{context} encapsulates all information
+    about the exact conditions of the analysis (Goals, Requirements, Description
+    Method). 
+
+    \begin{center}
+        \begin{tabular}{|c|c|}\hline
+            Concept & hasSubConcept \\\hline
+            tc:Context & tc:Goal, tc:Requirement \\
+            tc:Requirement & tc:IncreseUsefulFlow, tc:ReduceHarmfulFlow, tc:ReduceParasiticFlow \\\hline 
+        \end{tabular}
+        \end{center}
+
+    \subsubsection{Technical View}
+    The Technical View combines two central concepts how and why methods are applied
+    in TRIZ. It connects the \emph{tc:RulesOfFlowTransformation} with the 
+    \emph{ModelAsIs} and the \emph{ModelAsRequired}. It contains their rules of 
+    construction, integration of evaluation and requirements and rules when to use
+    which \emph{tc:TechniquesofModification} to establish a target transformation. 
+
+    od:usesTechniquesOfModification
 
 
-        concept of namespaces used mainly
-        ex:
-        tc:
-        od: - as 
-        skos:
-        rdfs:
-        \cite{HGGS}
 
-        To rely on proper methods of the design of software components a few small changes to the taxonomy of Eckardt's Ontology needed to be induced with
-        several layers of abstraction(which are existing prototypically but are not described explicitely) and specification of the used predicates. 
-        The description of the modelling will mainly focus on these parts, while explaining the structure of the ontology itself remains exemplarily, 
-        as it has always been specified in the quoted material.
 
-        four levels of hierarchy to distinguish descriptive modelling 
-        0
-        1
-        2
-        3
-
-        the methodological practice described in this work is mainly based at level 2, meaning the modelled objects and subjects in terms of RDF refer to 
-        the concept of classes used in object-oriented programming[SOURCE]. Therefore all properties of RDF objects described here are generic class
-        properties, which have to be instanciated separately as a RDF triplet of rdfs:type|s referring a certain object of class properties
-
-        \cite{HGGA}
-
-        select distinct ?p where {?s ?p ?o filter regex(?p, 'od')} 
         \subsection{The Flow Model view}
         Flow 
         \subsection{The Flow Analysis view}
@@ -397,6 +465,7 @@
         \url{https://triz-summit.ru/onto_triz/100/}.
     \bibitem{WUMM} The WUMM Project. https://wumm-project.github.io/About.html. Last visited 22 February 2021.
     \bibitem{WUMMTOP} The WUMM TOP Companion Project. https://wumm-project.github.io/Ontology. Last visited 22 February 2021.
+    \bibitem{RDF} The W3C Resource Description Framework (RDF). https://www.w3.org/RDF/. Last visited 27 April 2021.
     \bibitem{RDFData} The RDFData git repository. https://github.com/wumm-project/RDFData.  Last visited 22 February 2021.
     \bibitem{SPARQL} The Virtuoso SPARQL Query Editor hosted by the WUMM Project. http://wumm.uni-leipzig.de:8891/sparql. Last visited 22 February 2021. 
 \end{thebibliography}
