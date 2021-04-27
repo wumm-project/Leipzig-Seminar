@@ -47,6 +47,11 @@ od:hasFlowFunctionality
     rdfs:domain tc:Flow ;
     rdfs:range tc:FlowFunctionality .
 
+od:hasFlowDelegation
+    a rdf:Property ;
+    rdfs:domain tc:Flow ;
+    rdfs:range tc:FlowDelegation .
+
 od:hasFlowDefect
     a rdf:Property ;
     rdfs:domain tc:Flow ;
@@ -77,11 +82,6 @@ tc:FlowType
     skos:prefLabel "Type of flow"@en, "Flussart"@de ;
     skos:altLabel "Art der Strömung"@de .
 
- tc:ComplexFlow
-    od:valueOf tc:FlowType ;
-    skos:prefLabel "complex flow"@en, "Komplexer Fluss"@de ;
-    a skos:Concept, od:AdditionalConcept .
-
  tc:DiscreteFlow
     od:valueOf tc:FlowType ;
     skos:prefLabel "discrete flow"@en, "Diskreteer Fluss"@de ;
@@ -90,6 +90,29 @@ tc:FlowType
  tc:ContinuousFlow
     od:valueOf tc:FlowType ;
     skos:prefLabel "continuous flow"@en, "Kontinuierlicher Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+ tc:ComplexFlow
+    od:valueOf tc:FlowType ;
+    skos:prefLabel "complex flow"@en, "Komplexer Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:FlowDelegation
+    od:allowedValues tc:OpenFlow, tc:ClosedFlow ;
+    a skos:Concept, od:AdditionalConcept ;
+    od:WOPCategory od:PropertyDomain ; 
+    skos:prefLabel "delegation of flow"@en, "Flussdelegierung"@de .
+
+tc:OpenFlow
+    od:valueOf tc:FlowDelegation ;
+    od:LebedevDefinition "open threads are either those that are discarded into the superystem after use, or those that are dissipated altogether." ;
+    skos:prefLabel "open flow"@en, "offener Fluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
+tc:ClosedFlow
+    od:valueOf tc:FlowDelegation ;
+    od:LebedevDefinition "Closed Threads are defined as threads that are returned to their source of reuse." ;
+    skos:prefLabel "closed flow"@en, "geschlossener Fluss"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 ## substance of flows
@@ -120,6 +143,7 @@ tc:FlowFunctionality
     od:allowedValues tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow ;
     a skos:Concept, od:AdditionalConcept ;
     od:WOPCategory od:PropertyDomain ; 
+    od:LebedevDefinition "A function stream is a stream, that actually performs a function other than that of the carrier stream." ;
     skos:prefLabel "Functionality of the flow"@en, "Funktionalität des Flusses"@de .
 
 tc:UsefulFlow
@@ -137,7 +161,15 @@ tc:ParasiticFlow
     od:valueOf tc:FlowFunctionality ;
     skos:prefLabel "parasitic flow"@en, "Parasitärer Fluss"@de ;
     od:LebedevDefinition "are also flows performing harmful function (and not having main useful function), but which are NOT predetermined by the action principle of a system" ;
+    skos:note "formation of a parasitic flow is always a sign of a contradiction" ;
     a skos:Concept, od:AdditionalConcept .
+
+tc:CarrierFlow
+    od:valueOf tc:FlowFunctionality ;
+    od:LebedevDefinition "A carrier stream is a stream intended (performing the function of) transporting some other stream." ;
+    skos:prefLabel "carrier flow"@en, "Trägerfluss"@de ;
+    a skos:Concept, od:AdditionalConcept .
+
 
 ##Defect of Flow
 tc:FlowDefect
@@ -176,13 +208,17 @@ tc:FlowSource
 tc:ExternalSource
     od:valueOf tc:FlowSource ;
     od:LebedevDefinition "externally, defined by the supersystem" ;
-    skos:prefLabel "external surce"@en, "Externe Quelle"@de ;
+    skos:prefLabel "external source"@en, "Externe Quelle"@de ;
+    skos:altLabel "primary source"@en, "Primäre Quelle"@de ;
+    skos:note "Lebedev 2015 uses the tc:FlowSource od:allowedValues' skos:altLabels as naming. Due this can be misleading we've prefered the older naming scheme here" ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:InternalSource
     od:valueOf tc:FlowSource ;
     od:LebedevDefinition "A flow, that emerged within the system as a result of a working body performing some useful function." ;
     skos:prefLabel "internal source"@en, "Interne Quelle"@de ;
+    skos:altLabel "secondary source"@en, "Sekundäre Quelle"@de ;
+    skos:note "Lebedev 2015 uses the tc:FlowSource od:allowedValues' skos:altLabels as naming. Due this can be misleading we've prefered the older naming scheme here" ;
     a skos:Concept, od:AdditionalConcept .
 
 #list of special flows with own definition
@@ -194,6 +230,7 @@ tc:StaticFlowComponent
     od:WOPCategory od:Component ; 
     skos:prefLabel "static components of the flow"@en, "statische Flusskomponenten"@de ;
     skos:altLabel "source flow system components"@en, "Flusskanalsystem"@de ;
+    skos:note "Lebedev noted, that static components are located in space; These static components always accompany any flow passing in a a system. Similarly to function model, each of these components (with exception of the channel) can be missing in explicit form or can be located in the supersystem." ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:ControlUnit
@@ -302,14 +339,14 @@ od:inContext
     rdfs:domain tc:FlowAnalysis ;
     rdfs:range tc:Context .
 
-od:appliesRule
+od:followsRules
     a rdf:Property ;
     rdfs:domain tc:FlowAnalysis ;
     rdfs:range tc:RulesOfFlowAnalysis .
 
 od:generatesFlowTransformation
     a rdf:Property ;
-    rdfs:domain tc:FlowAnalysis ;
+    rdfs:domain tc:FlowAnalysis, tc:ModelAsIs, tc:ModelAsRequired ;
     rdfs:range tc:FlowTransformation .
 
 # the target of a Flow Analysis
@@ -383,24 +420,34 @@ tc:ReduceParasiticFlow
 
 ##Rules of Flow Analysis
 
-od:applyRulesofConstruction
+od:buildModelAsIs
     a rdf:Property ;
     rdfs:domain tc:FlowAnalysis ;
     rdfs:range tc:ModelAsIs .
 
-od:applyRulesofEvaluation
-    a rdf:Property ;
-    rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:ModelAsIs .
-
-od:applyRulesofConstructionOfInconformRequirements
+od:buildModelAsRequired
     a rdf:Property ;
     rdfs:domain tc:FlowAnalysis ;
     rdfs:range tc:ModelAsRequired .
 
+od:applyRulesofConstruction
+    a rdf:Property ;
+    rdfs:domain tc:RulesOfConstruction ;
+    rdfs:range tc:ModelAsIs .
+
+od:applyRulesofEvaluation
+    a rdf:Property ;
+    rdfs:domain tc:RulesOfEvaluation ;
+    rdfs:range tc:ModelAsIs .
+
+od:applyRulesofConstructionOfInconformRequirements
+    a rdf:Property ;
+    rdfs:domain tc:RulesOfConstructionOfInconformRequirements ;
+    rdfs:range tc:ModelAsRequired .
+
 od:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems
     a rdf:Property ;
-    rdfs:domain tc:FlowAnalysis ;
+    rdfs:domain tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems ;
     rdfs:range tc:ModelAsRequired .
 
 od:detects
@@ -415,25 +462,28 @@ tc:RulesOfFlowAnalysis
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstruction
-    od:forms tc:ModelAsIs ;
+    od:applyRulesofConstruction tc:ModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules of construction"@en, "Modellbauregeln"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfEvaluation
-    od:issuedAt tc:ModelAsIs ;
+    od:applyRulesofEvaluation tc:ModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules of evaluation"@en, "Modellbewertungsregeln"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstructionOfInconformRequirements
+    od:applyRulesofConstructionOfInconformRequirements tc:ModelAsRequired ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules of construction of inconform requirements"@en, "Modellbauregeln zur Lösung von Widersprüchen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems
+    od:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems tc:ModelAsRequired ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules to apply Laws of Development of Technical Systems"@en, "Anwendungsregeln entsprechend der Gesetze der Entwicklung Technischer Systeme"@de ;
+    skos:note "the Laws of Development of Technical Systems are the theoretical base for the analysis of obtained models" ;
     a skos:Concept, od:AdditionalConcept .
 
 ## Techniques of modification
