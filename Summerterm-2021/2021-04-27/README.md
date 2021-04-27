@@ -101,10 +101,10 @@ software sector.
     development are usually anchored in strategic management, but even here
     they are structured differently than in the bootstrap of the organisation,
     since even in the strategic decisions the (real existing) laws of
-    self-movement of the respective organisation play a decisive role, which
+    self-propulsion of the respective organisation play a decisive role, which
     in the bootstrap, due to lack of the real existence of the organisation as
     a "living system", can only be addressed in its potentiality. With the
-    "living" organisation, the controll loop between justified expectations
+    "living" organisation, the control loop between justified expectations
     and experienced results also comes into play, which clearly changes the
     situation.
 
