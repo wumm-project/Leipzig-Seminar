@@ -82,6 +82,9 @@ __Learning Objectives__:
 * Useful and harmful effects, operative zone and operative time of
   conflicting system properties
 
+__Slides:__
+* [Modelling contradictory requirements](Slides-20210429.pdf)
+
 ## May 06: Modelling Natural Systems and the Theory of Open Systems
 
 __Literature__:
