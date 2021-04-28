@@ -151,9 +151,9 @@
     different applications. \cite{RDF}
 
     Given that framework, we can map the concepts of TRIZ onto a structure which can
-    be read and processed by computers which accept hyper text protocols and link them
+    be read and processed by computers that accept hyper text protocols and link them
     to substantial resources creating an environment to collaborate 
-    in innovative projects across the world using semantical technologies.
+    in innovative projects across the world using semantic technologies.
     
     To collect and manage the development the RDF source code of WUMMTOP a git repository
     \cite{RDFData} is used and has been forked for developing the 
@@ -182,38 +182,6 @@
     \item \texttt{owl:} -- the namespace of the Web Ontology Language (to address web ontology conventions).
     \end{itemize}
 
-    \section{Modelling the Flow Analysis Ontocard}
-
-    To rely on proper methods of the design of software components a few small changes to the taxonomy of Eckardt's Ontology needed to be induced with
-    several layers of abstraction(which are existing prototypically but are not described explicitely) and specification of the used predicates. 
-    The description of the modelling will mainly focus on these parts, while explaining the structure of the ontology itself remains exemplarily, 
-    as it has always been specified in the quoted material.
-
-    four levels of hierarchy to distinguish descriptive modelling 
-    0
-    1
-    2
-    3
-
-    the methodological practice described in this work is mainly based at level 2, meaning the modelled objects and subjects in terms of RDF refer to 
-    the concept of classes used in object-oriented programming[SOURCE]. Therefore all properties of RDF objects described here are generic class
-    properties, which have to be instanciated separately as a RDF triplet of rdfs:type|s referring a certain object of class properties
-
-    \cite{HGGA}
-
-    select distinct ?p where {?s ?p ?o filter regex(?p, 'od')} 
-    \subsection{\texttt{tc:Flow}}
-
-    A flow is a component within a system and hence modeled as subconcept of
-    \texttt{od:Component}.  It has several properties that are modeled along the
-    rules for a morphological table, i.e. defining a PropertyDomain and a list of
-    allowed values as listed below.
-
-    \HGG{Alle Subjekt-URIs beginnen mit einem Großbuchstaben.  Alle Subjekte
-    sollten Singular sein, da eine Plural suggerierende Auflistung \texttt{A
-        od:does B, C, D} in drei Drei-Wort-Sätze mit dreimal Singular aufgelöst
-    wird.}
-
     As in Souchkov's Glossary we use URIs as 
     \begin{center}\tt
     tc:HarmfulAction, tc:HarmfulFunction, tc:HarmfulInteraction,
@@ -221,6 +189,69 @@
     \end{center}
     that combine the property and the subject of the property except for
     \texttt{tc:FlowSubstance}.
+
+    As you can see, the WUMM project introduced the \texttt{od:} namespace to
+    extend the given ontological base of the TOP by its own concepts and 
+    provide needed explicit definitions of certain abstract models, which
+    are yet unclarified.
+
+    To see which predicates are used in the \texttt{od:} namespace, you can
+    use the provided SPARQL Query Editor endpoint \cite{SPARQL} and query
+
+        select distinct ?p where {?s ?p ?o FILTER regex(?p, 'od')}
+    
+    \section{Modelling the Flow Analysis Ontocard}
+    Flow Analysis, as a rather niche method in TRIZ is grounded by two
+    major contributions: While Lyubomirsky \cite{Lyubomirsky2006} started
+    with the introduction of a broad set of methods to fix certain
+    problems assigned to flow as a functional magnitude, Lebedev 
+    \cite{Lebedev2011} \cite{Lebedyev2015} catched up on it and developed a 
+    systematic approach of analysis of flows based on the well known principles
+    of TRIZ. Finally Eckardt \cite{Eckardt2020} started to adopt this work
+    integrating it as a part in the TOP.
+
+    As mentioned before and to rely on proper methods of the design of 
+    software components a few small changes to the taxonomy of Eckardt's 
+    ontology needed to be induced with several layers of abstraction 
+    (which are existing prototypically but are not described explicitely) and 
+    specification of the used predicates. The description of the modelling 
+    will mainly focus on these parts, while explaining the structure of the 
+    ontology itself remains exemplarily, as it has always been specified in 
+    the quoted material.
+
+    four levels of hierarchy to distinguish descriptive modelling 
+    0
+    1
+    2
+    3
+
+    the methodological practice described in this work is mainly based at 
+    level 2, meaning the modelled objects and subjects in terms of RDF refer to 
+    the concept of classes used in object-oriented programming[SOURCE]. 
+    Therefore all properties of RDF objects described here are generic class
+    properties, which have to be instanciated separately as a RDF triplet of 
+    rdfs:type|s referring a certain object of class properties
+
+    \cite{HGGA}
+
+    The Flow Analysis Model can be separated in two parts. The 
+    \emph{Flow Model} refers to the descriptive and functional properties
+    of a flow, its (static) components as abstract or concrete real world 
+    objects, that define its properties and description methods, like
+    textual or graphical representations. The \emph{Flow Analysis (Model)}
+    describes the given context of a flow analysis, e.g. its requirements,
+    rules that derive from general TRIZ principles or the LETS, which form
+    an overall solution process containing methods how to solve problems using 
+    specific flow innovation methods. 
+
+    \subsection{\texttt{tc:Flow}}
+
+    A flow is, on the one hand, a component within a system but on the other 
+    hand can describe a system as a dynamic entity in the flow of time. The 
+    descriptive and functional properties are modeled along the rules for a 
+    morphological table, i.e. defining a PropertyDomain and a list of allowed 
+    values, modelled with \texttt{od:allowedValues}, respective \texttt{valueOf} 
+    as listed below.
 
     \begin{center}
     \begin{tabular}{|c|c|}\hline
@@ -249,13 +280,42 @@
     \end{tabular}
     \end{center}
 
+    Here you can see the triples associated with the flow subject:
+    \begin{code}\tt
+    tc:Flow \\
+    \> a skos:Concept, od:SouchkovGlossaryEntry ; \\
+    \> od:WOPCategory od:Component; \\
+    \> od:SouchkovCategory tc:FlowAnalysis ; \\
+    \> od:SouchkovDefinition "A sequence of events that have the same common 
+    feature."@en ; \\
+    \> od:LebedevDefinition "motion of material, energetic or informational 
+    objects within a system" ; \\
+    \> skos:prefLabel "Flow"@en, "Fluss"@de, "Поток"@ru ; \\
+    \> skos:altLabel "Stream"@en, "Strom"@de . \\
+    \end{code}
+
+    # choose \\emph xor \\texttt after reviewing 
+    \emph{tc:StageValue} refers to the general concept of \emph{tc:ModeValue}s 
+    we'll see in action in the example, which is introduced later on. It defines
+    different models of flows, which are used along the flow analysis 
+    transformation process. \texttt{od:Component} with its predicate
+    \texttt{od:WOPCategory} defines whether a component of the analyzed system
+    is covered or with \texttt{od:PropertyDomain} properties of the flow as a
+    systematic approach is described. Each subject, that refers to a TRIZ 
+    concept has a \texttt{skos:Concept}, as well as a 
+    \texttt{od:AdditionalConcept}. Beside that we clarify if a subject is defined
+    by a certain author, like \texttt{od:LebedevDefinition} or 
+    \texttt{od:SouchkovDefinition}. The \texttt{od:SouchkovCategory} refers to a
+    specific categorial object defined by the
+    \texttt{<http://opendiscovery.org/rdf/Ontologies/Souchkov-Glossary/>}.
+
     \subsection{Subconcepts of \texttt{tc:Flow}}
 
-    A flow consists of several physical parts (source, channel, receiver, control unit)
-    that are components by their own and hence modeled with the predicate
-    \texttt{od:subConceptOf}. For the moment they are attached to the flow with a
-    single predicate \texttt{od:hasStaticFlowComponent}. Yet, they have several
-    subcomponents, which are listed below.
+    A flow consists of several physical parts (source, channel, receiver, 
+    control unit) that are components by their own and hence modeled with the 
+    predicate \texttt{od:subConceptOf}. For the moment they are attached to the
+    flow with a single predicate \texttt{od:hasStaticFlowComponent}. Yet, they 
+    have several subcomponents, which are listed below.
 
     \begin{center}
         \begin{tabular}{|c|c|}\hline
@@ -439,19 +499,27 @@
         How can the vocabulary be used to apply it to certain domains, especially those which doesn't seem to be intuitively compatible to the generic techniques
         of flow modification. 
 
+
+        hard to define flows of flows
+
+        flow analysis doesn't show the transformation as a process
+
+        the definition of static component remains unflexible when 
+
 \begin{thebibliography}{...}
     \raggedright
-    \bibitem{HGGA} Gräbe, Hans-Gert. Anmerkungen...
-    \bibitem{HGGS} Gräbe, Hans-Gert. Seminararbeiten...
     \bibitem{Eckardt2020} Eckardt, Olga. Ontologische Diagramme. Flussmodell und Flussanalyse. TRIZ Ontology Project - The Webinar 2020. 27.10.2020, 19 Uhr (UTC+3). Translated to German by Hans-Gert Gräbe, Leipzig. 
     \bibitem{WebinarNotes}
     \bibitem{SysInno2017} 
     \bibitem{Graebe2020} Hans-Gert Gräbe (2020).  Die Menschen und ihre Technischen Systeme. LIFIS Online.
         \url{doi:10.14625/graebe_20200519}.
-    \bibitem{Graebe2021} Hans-Gert Gräbe (2021).  Some remarks about the WUMM Ontology Modeling.  Manuscript, WUMM repository «Leipzig-Seminar». 
+    \bibitem{Graebe2021} Hans-Gert Gr\"abe (2021). About the WUMM modelling concepts of a TRIZ ontology.
+        \url{https://github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Anmerkungen.pdf}.
     \bibitem{Kuryan et al. 2020} Kuryan, Andrey. Rubin, Mikhail. Shchedrin, Nikolai. Eckardt, Olga. Rubina, Natalia. TRIZ Ontology. Currect State and Perspectives. Translated to English by Hans-Gert Gräbe, Leipzig, who aknowledges the support by the free version of deepl.com. Minsk, Belarus. August 21, 2020.
     \bibitem{Litvin et al. 2007} Litvin, Simon. Petrov, Vladimir. Rubin, Mikhail. International TRIZ Association(MA TRIZ). Frey, Victor. Altshuller Institute for TRIZ Studies. TRIZ Body of Knowledge. 2007.
     \bibitem{Lebedev2011} Lebedev, Yuri. Classification of flows in technical systems. 2011.
+    \bibitem{Lebedyev2015} Yuri Lebedyev (2015). Tool improvement Flow Analysis. (Russian original translated with DeepL.com)
+      \url{https://github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Thoke/Lebedev-2015-en.pdf}.
     \bibitem{Lyubomirsky2006} Lyubomirsky, Alex. Law on efficiency improvement use of substance, energy and information flows. 2006.
     \bibitem{Petrov2007} Vladimir Petrov, Michail Rubin, Simon Litvin (2007). Fundamentals of TRIZ Theory of Inventive Problem Solving (in Russian). Reprinted in 2020. ISBN 978-5-4496-8183-6.
     \bibitem{Petrov2019} Petrov, Vladimir. TRIZ. Theory of Inventive Problem Solving - Level 1. Springer International Publishing. Ra'anana, Israel. 2019.
