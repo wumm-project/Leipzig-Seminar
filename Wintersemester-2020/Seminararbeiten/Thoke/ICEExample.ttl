@@ -18,7 +18,7 @@
   owl:imports <http://opendiscovery.org/rdf/Ontologies/FlowAnalysis/> .
 
 ex:BasicInternalCombustionEngine
-    a tc:Flow ;
+    a tc:Flow, tc:SystemAsIs ;
     od:hasFlowType tc:ComplexFlow ;
     od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, ex:Cooling, ex:Exhaust ;
     od:hasFlowFunctionality tc:CarrierFlow ;
@@ -349,7 +349,7 @@ ex:buildICEExhaustionInnovationModel
   skos:prefLabel "build an ICE exhaustion innovation model"@en, "innovatives Abgasmodell des Verbrennungsmotors bauen"@de .
 
 ex:ICEExhaustionModel
-  a tc:ModelAsIs ;
+  a tc:Flow, tc:ModelAsIs ;
   od:hasFlowType tc:ComplexFlow ;
   od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, ex:Cooling, ex:Exhaust ;
   od:hasFlowFunctionality tc:CarrierFlow ;
@@ -371,7 +371,7 @@ ex:addGasolineAdditive
   skos:prefLabel "add gasoline additive flow"@en, "Fluss für Kraftstoffzusatz hinzufügen" .
 
 ex:ICEExhaustionInnovationModel
-  a tc:ModelAsRequired ;
+  a tc:Flow, tc:ModelAsRequired ;
   od:hasFlowType tc:ComplexFlow ;
   od:hasFlowSubstance ex:Fuel, ex:FuelAdditive, ex:Transmission, ex:Heat, ex:Work, ex:Cooling, ex:Exhaust ;
   od:hasFlowFunctionality tc:CarrierFlow ;
