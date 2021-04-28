@@ -251,7 +251,10 @@
     descriptive and functional properties are modeled along the rules for a 
     morphological table, i.e. defining a PropertyDomain and a list of allowed 
     values, modelled with \texttt{od:allowedValues}, respective \texttt{valueOf} 
-    as listed below.
+    as listed below. The model of Eckardt is slightly extended to cover the 
+    full model used by Lebedev. That is \texttt{tc:FlowDelegation} and the
+    \emph{Carrier Flow Model}, which is basically obligatory to model the flow 
+    of flows and modeled here as a special type of \texttt{tc:FlowFunctionality}.
 
     \begin{center}
     \begin{tabular}{|c|c|}\hline
@@ -270,8 +273,10 @@
     \begin{tabular}{|l|p{10cm}|}\hline
         PropertyDomain & PropertyValues \\\hline
         tc:FlowType & tc:ComplexFlow, tc:DiscreteFlow, tc:ContinuousFlow \\
+        tc:FlowDelegation & tc:OpenFlow, tc:ClosedFlow \\
         tc:FlowSubstance & tc:Information, tc:Energy, tc:Substance \\
-        tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow  \\
+        tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow,
+        tc:CarrierFlow  \\
         tc:FlowDefect & tc:InsufficientFlow, tc:ExcessiveFlow,
         tc:BadControllableFlow, tc:AbsentFlow \\ 
         tc:FlowSource & tc:ExternalSource, tc:InternalSource  \\
