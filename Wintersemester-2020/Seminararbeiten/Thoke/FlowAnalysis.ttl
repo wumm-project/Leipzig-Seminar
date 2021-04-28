@@ -346,7 +346,7 @@ od:followsRules
 
 od:generatesFlowTransformation
     a rdf:Property ;
-    rdfs:domain tc:FlowAnalysis, tc:ModelAsIs, tc:ModelAsRequired ;
+    rdfs:domain tc:FlowAnalysis, ex:FlowModelAsIs, ex:FlowModelAsRequired ;
     rdfs:range tc:FlowTransformation .
 
 # the target of a Flow Analysis
@@ -423,12 +423,12 @@ tc:ReduceParasiticFlow
 od:buildModelAsIs
     a rdf:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:ModelAsIs .
+    rdfs:range ex:FlowModelAsIs .
 
 od:buildModelAsRequired
     a rdf:Property ;
     rdfs:domain tc:FlowAnalysis ;
-    rdfs:range tc:ModelAsRequired .
+    rdfs:range ex:FlowModelAsRequired .
 
 od:applyRulesofConstruction
     a rdf:Property ;
@@ -462,25 +462,25 @@ tc:RulesOfFlowAnalysis
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstruction
-    od:applyRulesofConstruction tc:ModelAsIs ;
+    od:applyRulesofConstruction ex:FlowModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules of construction"@en, "Modellbauregeln"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfEvaluation
-    od:applyRulesofEvaluation tc:ModelAsIs ;
+    od:applyRulesofEvaluation ex:FlowModelAsIs ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules of evaluation"@en, "Modellbewertungsregeln"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfConstructionOfInconformRequirements
-    od:applyRulesofConstructionOfInconformRequirements tc:ModelAsRequired ;
+    od:applyRulesofConstructionOfInconformRequirements ex:FlowModelAsRequired ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules of construction of inconform requirements"@en, "Modellbauregeln zur Lösung von Widersprüchen"@de ;
     a skos:Concept, od:AdditionalConcept .
 
 tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems
-    od:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems tc:ModelAsRequired ;
+    od:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems ex:FlowModelAsRequired ;
     od:subConceptOf tc:RulesOfFlowAnalysis ;
     skos:prefLabel "rules to apply Laws of Development of Technical Systems"@en, "Anwendungsregeln entsprechend der Gesetze der Entwicklung Technischer Systeme"@de ;
     skos:note "the Laws of Development of Technical Systems are the theoretical base for the analysis of obtained models" ;
