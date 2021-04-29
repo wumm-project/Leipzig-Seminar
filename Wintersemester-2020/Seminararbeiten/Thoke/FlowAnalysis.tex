@@ -353,41 +353,36 @@
     description of the \emph{formative elements of the analysis} and the creation
     of a manually generated \emph{FlowTransformation} document.
 
-    \HGG{Ich denke, diese Einschränkung sollte gemacht werden. Es wäre weiter zu
-    klären, ob \texttt{od:hasDescriptionMethod} sowohl einen Fluss als auch eine
-    Flussanalyse als \texttt{rdfs:domain} hat. In Ermangelung einer besseren Idee
-    habe ich einer \texttt{tc:FlowTransformation} den Typ \texttt{foaf:Document}
-    zugeordnet. --> siehe Mail, siehe Teil B, vll noch reflexives Prädikat hinzufügen}
-
     \subsubsection{Top Level View}
-    As the description of the flow model is a core concern of the flow analysis,
-    flow model and flow analysis are connected via the Top Level View. As already
-    described and mentioned in \cite{Graebe2021}, the flow model has several stages
-    that have to be adressed to properly enroll the process of flow transformation.
-
-    The goal of a functional analysis is to create a plan for a flow
-    transformation based on the \emph{tc:RulesOfFlowTransformation} that can be 
-    applied to the flow and improves it in the given context. Hence the target
-    of a flow analysis is a special document in a (yet hypothetic) Flow Transformation
-    Description Language.
+    A Flow Analysis is an methodological process. Its \emph{Top Level View}
+    conncects the given context and a set of rules that define procedural policies
+    to create a project plan, the \texttt{tc:FlowTransformation} (a 
+    \texttt{foaf:Document}) in a yet hypothetic Flow Transformation Description
+    Language) with the defined \texttt{tc:Flow} model in several stages to define 
+    steps of evolution of the technical system and how to process them to accomplish
+    the desired transformative action.
 
     \begin{center}
         \begin{tabular}{|c|c|}\hline
-            Property & PropertyDomain \\\hline
+            Property & PropertyRange \\\hline
             od:describesFlow & tc:Flow \\
             od:analysesFlow & tc:Flow \\
             od:inContext & tc:Context \\
-            od:appliesRules & tc:RulesOfFlowTransformation \\
-            od:usesDescriptionMethod & tc:MethodOfDescription \\
-            od:generatesFlowTransformation & tc:FlowTransformation\\
+            od:followsRules & tc:RulesOfFlowTransformation \\
+            od:usesDescriptionMethods & tc:Flow, ex:FlowModelAsIs, 
+            ex:FlowModelAsRequired, tc:FlowTransformatio \\
+            od:generatesFlowTransformation & tc:FlowTransformation \\
             od:applyChanges & tc:Flow \\\hline 
         \end{tabular}
         \end{center}
+    
+    While these properties usually operate from the Domain of 
+    \texttt{tc:FlowAnalysis}, with \texttt{od:applyChanges} all approaches of
+    the Flow Analysis are finally gathered in the \texttt{tc:FlowTransformation} 
+    and can be applied to the real system (level 0).
 
-    A flow analysis is an analytic process concerned with a certain \emph{flow}
-    (model) in a certain context.  The \emph{context} encapsulates all information
-    about the exact conditions of the analysis (Goals, Requirements, Description
-    Method). 
+    \texttt{tc:Context} encapsulates all information about the exact conditions
+    of the analysis and thus are modelled as \texttt{od:subConceptOf}
 
     \begin{center}
         \begin{tabular}{|c|c|}\hline
@@ -401,7 +396,7 @@
     The Technical View combines two central concepts how and why methods are applied
     in TRIZ. It connects the \emph{tc:RulesOfFlowTransformation} with the 
     \emph{ModelAsIs} and the \emph{ModelAsRequired}. It contains their rules of 
-    construction, integration of evaluation and requirements and rules when to use
+    construction, integration of evaluation, their requirements and rules when to use
     which \emph{tc:TechniquesofModification} to establish a target transformation. 
 
     od:usesTechniquesOfModification
