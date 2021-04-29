@@ -357,8 +357,8 @@ tc:FlowTransformation
 
 od:usesDescriptionMethod
     a rdf:Property ;
-    rdfs:domain tc:Context ;
-    rdfs:range tc:MethodOfDescription .
+    rdfs:domain tc:FlowAnalysis ;
+    rdfs:range tc:Flow, ex:FlowModelAsIs, ex:FlowModelAsRequired, tc:FlowTransformation .
 
 od:hasGoal
     a rdf:Property ;
@@ -369,11 +369,6 @@ od:hasRequirement
     a rdf:Property ;
     rdfs:domain tc:Context ;
     rdfs:range tc:Requirement .
-
-# od:proofRequirements # unverständlich, range kann nur ja oder nein sein --> used in the future for transformation processing
-#     a rdf:Property ;
-#     rdfs:domain tc:Goals ;
-#     rdfs:range tc:Requirements .
 
 od:usesTechniqueOfModification
     a rdf:Property ;
