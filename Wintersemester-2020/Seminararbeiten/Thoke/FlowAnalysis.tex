@@ -412,9 +412,47 @@
     how the evaluated contradictions in the \texttt{ex:FlowModelAsIs} can
     be resolved via the knwon LETS to develop a \texttt{ex:FlowModelAsRequired}.
     
-    The \texttt{tc:TechniquesofModification} is this set of methods that are 
-    derived from certain LETS or so called trends occuring in technical systems 
-    that prescribe certain proceedings.[source]
+    The \texttt{tc:TechniquesofModification} is the last core piece of this 
+    ontologization of Flow Analysis. It's a set of methods that are derived 
+    from certain LETS or so called trends occuring in technical systems 
+    that prescribe certain proceedings.[source] \emph{They} are 
+    \texttt{od:issuedAt} the \texttt{tc:ModelAsIs} to solve a certain
+    \texttt{tc:FlowDefect}. Each of these methods are modeled as
+    \texttt{od:subConceptOf tc:TechniquesofModification} and are categorized
+    by the static components they're intended to change. Additionally,
+    they're categorized by the overall requirement set in context. For example:
+
+    \begin{code}\tt
+        tc:TechniquesOfModification \\
+        \> od:issuedAt tc:ModelAsIs ; \\
+        \> od:forms tc:ModelAsRequired ; \\
+        \> od:hasSubConcept tc:ModificationOfReceiver, tc:ModificationOfSource, 
+        tc:ModificationOfChannel, tc:ModificationOfControlUnit ; \\
+        \> skos:prefLabel "techniques of modification"@en, "Techniken zur 
+        Modifikation"@de ; \\
+        \> skos:altLabel "techniques of transformation"@en, "Techniken zur 
+        Transformation"@de ; \\
+        \> a skos:Concept, od:AdditionalConcept . \\
+        \\
+        tc:ModificationOfChannel \\
+        \> od:subConceptOf tc:TechniquesOfModification ; \\
+        \> od:hasSubConcept tc:removeBottleNeck, tc:removeDeadZone, 
+        tc:removeGreyZone ,tc:changeFlowMedium, tc:outsourceFlow, 
+        tc:reduceAmountOfTransformations, tc:improvePermeability, 
+        tc:reduceLength, tc:ModificationOfControlUnit, tc:combineUsefulFlows, 
+        tc:channelFlow, tc:implementBottleNeck, tc:implementDeadZone, 
+        tc:reducePermeability, tc:extendLength ; \\
+        \> skos:prefLabel "modification of the channel"@en, "Modifikation des 
+        Kanals"@de ; \\
+        \> skos:altLabel "transformation of the channel"@en, "Transformation 
+        des Kanals"@de ; \\
+        \> a skos:Concept, od:AdditionalConcept . \\
+        \\
+        tc:removeBottleNeck \\
+        \> od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ; \\
+        \> skos:prefLabel "remove bottle neck"@en, "Flaschenhals entfernen"@de ; \\
+        \> a skos:Concept, od:AdditionalConcept . \\
+        \end{code}
 
     \section{Critical review and further development}
         \subsection{Outside view - embedding the Flow Analysis Ontocard}
