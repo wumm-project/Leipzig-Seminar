@@ -19,8 +19,11 @@
 \begin{document}
     \maketitle
     \tableofcontents
+    \newpage
     \section{Abbreviations}
     FAM - Flow Analysis Model
+
+    ICE - internal combustion engine
 
     LETS - Laws of Evolution of Technical Systems
 
@@ -38,7 +41,7 @@
 
     ZRTS - russian acronym for \foreignlanguage{russian}{Комплекс законов и тенденций развития технических систем}, see LETS
 
-    \section{Introduction}
+    \newpage
 
     \section{Aim of the work}
 
@@ -312,7 +315,7 @@
     by a certain author, like \texttt{od:LebedevDefinition} or 
     \texttt{od:SouchkovDefinition}. The \texttt{od:SouchkovCategory} refers to a
     specific categorial object defined by the
-    \texttt{<http://opendiscovery.org/rdf/Ontologies/Souchkov-Glossary/>}.
+    \texttt{<http:\\opendiscovery.org/rdf/Ontologies/Souchkov-Glossary/>}.
 
     \subsection{Subconcepts of \texttt{tc:Flow}}
 
@@ -426,33 +429,252 @@
         tc:TechniquesOfModification \\
         \> od:issuedAt tc:ModelAsIs ; \\
         \> od:forms tc:ModelAsRequired ; \\
-        \> od:hasSubConcept tc:ModificationOfReceiver, tc:ModificationOfSource, 
-        tc:ModificationOfChannel, tc:ModificationOfControlUnit ; \\
-        \> skos:prefLabel "techniques of modification"@en, "Techniken zur 
-        Modifikation"@de ; \\
-        \> skos:altLabel "techniques of transformation"@en, "Techniken zur 
-        Transformation"@de ; \\
+        \> od:hasSubConcept tc:ModificationOfReceiver, tc:ModificationOfSource, \\
+        \> tc:ModificationOfChannel, tc:ModificationOfControlUnit ; \\
+        \> skos:prefLabel "techniques of modification"@en, "Techniken zur  \\
+        \> Modifikation"@de ; \\
+        \> skos:altLabel "techniques of transformation"@en, "Techniken zur \\
+        \> Transformation"@de ; \\
         \> a skos:Concept, od:AdditionalConcept . \\
         \\
-        tc:ModificationOfChannel \\
+        \\
+        \> tc:ModificationOfChannel \\
         \> od:subConceptOf tc:TechniquesOfModification ; \\
-        \> od:hasSubConcept tc:removeBottleNeck, tc:removeDeadZone, 
-        tc:removeGreyZone ,tc:changeFlowMedium, tc:outsourceFlow, 
-        tc:reduceAmountOfTransformations, tc:improvePermeability, 
-        tc:reduceLength, tc:ModificationOfControlUnit, tc:combineUsefulFlows, 
-        tc:channelFlow, tc:implementBottleNeck, tc:implementDeadZone, 
-        tc:reducePermeability, tc:extendLength ; \\
-        \> skos:prefLabel "modification of the channel"@en, "Modifikation des 
-        Kanals"@de ; \\
-        \> skos:altLabel "transformation of the channel"@en, "Transformation 
-        des Kanals"@de ; \\
+        \> od:hasSubConcept tc:removeBottleNeck, tc:removeDeadZone,  \\
+        \> tc:removeGreyZone ,tc:changeFlowMedium, tc:outsourceFlow,  \\
+        \> tc:reduceAmountOfTransformations, tc:improvePermeability,  \\
+        \> tc:reduceLength, tc:ModificationOfControlUnit, tc:combineUsefulFlows,  \\
+        \> tc:channelFlow, tc:implementBottleNeck, tc:implementDeadZone,  \\
+        \> tc:reducePermeability, tc:extendLength ; \\
+        \> skos:prefLabel "modification of the channel"@en, "Modifikation des  \\
+        \> Kanals"@de ; \\
+        \> skos:altLabel "transformation of the channel"@en, "Transformation  \\
+        \> des Kanals"@de ; \\
         \> a skos:Concept, od:AdditionalConcept . \\
         \\
-        tc:removeBottleNeck \\
+        \> tc:removeBottleNeck \\
         \> od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ; \\
         \> skos:prefLabel "remove bottle neck"@en, "Flaschenhals entfernen"@de ; \\
         \> a skos:Concept, od:AdditionalConcept . \\
         \end{code}
+
+    \section{Example for Flow Analysis}
+    \subsection{Model of an Internal Combustion Engine}
+
+    To illustrate how this machine readable ontology can be used to model real
+    world problems, we introduce an example on how to improve the exhaust
+    flow of an internal combustion engine (ICE), which have been proposed by 
+    Lebedev \cite{Lebedyev2015}. We show how the flow model is implemented,
+    address some weaknesses that occured using the given Ontocard and 
+    translating it into RDF and show how the Flow Analysis is applicated.
+
+    We used \emph{Wikipedia}[source!] to adjust the given example and meet the
+    typical terminology. You will see, that the granularity stays on the level
+    of the generality of the used terms. This is an important property of 
+    ontological modelling. You can go up and down that ladder as the used
+    analytical methods and vocabulary allow you to. In the example this can be
+    seen in the specific categorizations and assignments to each level of 
+    abstraction (see 6.), which change when you enter the terminology of
+    an ICE or are abstracted, when only the general categories of the 
+    flow analysis concepts are met. This depends a lot on the given context,
+    which is why there is yet no general solution when to use which level of 
+    abstraction is sufficient. Intuitively, the more the problem is located
+    in specific components, that refer to a special context in that domain,
+    the more concrete the terminology needs to get.
+
+    First we show you the basic model of an ICE:
+    \begin{code}\tt
+        ex:BasicInternalCombustionEngine \\
+        \> a tc:Flow ; \\
+        \> od:hasFlowType tc:ComplexFlow ; \\
+        \> od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, \\
+        \> ex:Cooling, ex:Exhaust ; \\
+        \> od:hasFlowFunctionality tc:CarrierFlow ; \\
+        \> od:hasFlowDelegation tc:OpenFlow ; \\
+        \> od:hasFlowSource tc:InternalSource ; \\
+        \> od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, \\
+        \> ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, \\
+        \> ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, \\
+        \> ex:CoolingWaterJacket ; \\
+        \> od:hasMethodOfDescription tc:ParametricDescription, \\
+        \> ex:ICE3DModel ; \\
+        \> skos:prefLabel "basic internal combustion engine"@en, \\
+        \> "grundlegendes Modell eines Verbrennungsmotors"@de  ; \\
+        \> skos:note "basic construction model from wikipedia \\
+        \> <https:\\en.wikipedia.org/wiki/Internal\_combustion\_engine>" . \\
+    \end{code}
+
+    Here you can see some decisions on abstraction and ascertainment. We've
+    focused on concrete descriptions of \texttt{tc:FlowSubstance} and
+    \texttt{tc:StaticFlowComponent}s as they are sufficient to show the 
+    problems of an exhaust flow and how to model an easy improvement.
+
+    Thus, the ICE is already a complex machine, where you have at least
+    two interdependent system levels, i. e. a flow of flows. But the given 
+    Ontocard doesn't define rules how systems of systems, respectively flows 
+    of flows, are modelled, because the Flow Model lacks a model of self 
+    description. Thats why this modelling is still experimentally. Therefore we
+    made some assumptions:
+    - What's an \texttt{tc:FlowSubstance} on the second level is a 
+    \texttt{tc:Flow} on the first level
+    - The \texttt{tc:FlowFunctionality} of a second order flow is always a 
+    \texttt{tc:CarrierFlow} \footnote{see chapter 7 in Lebedyev2015 
+    \cite{Lebedyev2015} }
+
+    So let's have a look at the \texttt{ex:Exhaust} flow:
+    \begin{code}\tt
+        ex:Exhaust \\
+        \> a tc:Flow ; \\
+        \> od:hasFlowType tc:DiscreteFlow ; \\
+        \> od:hasFlowSubstance tc:Substance ; \\
+        \> od:hasFlowFunctionality tc:HarmfulFlow ; \\
+        \> od:hasFlowDelegation tc:OpenFlow ; \\
+        \> od:hasFlowSource tc:InternalSource ; \\
+        \> od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, \\
+        \> ex:Atmosphere, ex:ExhaustValve ; \\
+        \> skos:prefLabel "the exhaust flow"@en, "Abgasstrom"@de . \\
+    \end{code}
+
+    \texttt{ex:Exhaust} is a \texttt{tc:HarmfulFlow} with several static 
+    components. These components are not exclusive for the exhaust flow.
+    They're used in other flow systems as different flow components. For
+    example the \texttt{ex:CombustionChamber}, here modelled as
+    \texttt{a tc:Potential}, is \texttt{a tc:Channel} in the system of the
+    \texttt{tc:Heat} flow. To inherit context sensitivity to these 
+    subjects, we use \texttt{od:specialCase}: \cite{RDFC}
+    
+    \begin{code}
+    ex:CombustionChamber \\
+    \> od:specialCase ex:Heat ; \\
+    \> a tc:Channel ; \\
+    \> skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de . \\
+    \\
+    ex:CombustionChamber \\
+    \> od:specialCase ex:Exhaust ; \\
+    \> a tc:Potential ; \\
+    \> skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de . \\
+    \end{code}
+
+    \subsection{Improvement of the ExhaustFlow}
+    We now have a model of a \emph{system as is}, which can be used for
+    improvement. As already mentioned, we want to describe the process 
+    of exhaust flow innovation. Given the context of tc:PollutionRestrictions, 
+    we define the goal ex:SatisfactionOfPollutionRestrictions with the 
+    requirements to reduce the exhaust flow while the work flow needs to be 
+    preserved as good as possible (ex:InnovationOfExhaustFlow od:hasRequirement 
+    ex:ReduceExhaustFlow, ex:PreserveWorkFlow). We define a specific
+    \texttt{foaf:Document} to hold all information about the innovation
+    project, describe which flows need to be described and analyzed,
+    following a \emph{ModelAsIs}, as well as a \emph{ModelAsRequired},
+    (called ex:ICEExhaustionModel and ex:buildICEExhaustionInnovationModel).
+
+    \begin{code}
+    ex:InnovationOfExhaustFlow \\
+    \> a tc:FlowAnalysis ; \\
+    \> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
+    \> od:describesFlow ex:Exhaust, ex:ICEExhaustionModel,  \\
+    \> ex:ICEExhaustionInnovationModel ; \\
+    \> od:analysesFlow ex:Exhaust, ex:Fuel, ex:Air, ex:AirFuelMixture, ex:Heat, \\
+    \> ex:Work ; \\
+    \> od:inContext ex:PollutionRestrictions ; \\
+    \> od:hasGoal ex:SatisfactionOfPollutionRestrictions ; \\
+    \> od:hasRequirement ex:ReduceExhaustFlow, ex:PreserveWorkFlow ; \\
+    \> ex:buildICEExhaustionModel ex:ICEExhaustionModel ; \\
+    \> ex:buildICEExhaustionInnovationModel ex:ICEExhaustionInnovationModel ; \\
+    \> tc:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems  \\
+    \> ex:ICEExhaustionInnovationModel ; \\
+    \> skos:prefLabel "innovation of the exhaust flow"@en, "Innovation des  \\
+    \> Abgassstroms"@de . \\
+    \end{code}
+
+    Using the tc:RulesofEvalution we can define an ex:EvaluationOfExhaustFlow, that
+    detetcs a tc:FlowDefect which needs to be fixed, which can be found in the 
+    \texttt{ex:buildICEExhaustionModel}:
+
+    \begin{code}    
+    ex:EvaluationOfExhaustFlow \\
+    \> a tc:RulesOfEvaluation ; \\
+    \> od:detects ex:HighDispersedExhaust ; \\
+    \> skos:prefLabel "evaluation of the exhaust flow"@en, "Evaluation des  \\
+    \> Abgassstroms"@de . \\
+    \\
+    ex:HighDispersedExhaust \\
+    \> a tc:ExcessiveFlow ; \\
+    \> skos:prefLabel "high dispersed exhaust"@en, "Abgasstrom mit (zu) vielen  \\
+    \> Schwebstoffen"@de . \\
+    \\
+    ex:ICEExhaustionModel \\
+    \> a tc:Flow, tc:ModelAsIs ; \\
+    \> od:hasFlowType tc:ComplexFlow ; \\
+    \> od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work,  \\
+    \> ex:Cooling, ex:Exhaust ; \\
+    \> od:hasFlowFunctionality tc:CarrierFlow ; \\
+    \> od:hasFlowDefect ex:HighDispersedExhaust ; \\
+    \> od:hasFlowDelegation tc:OpenFlow ; \\
+    \> od:hasFlowSource tc:InternalSource ; \\
+    \> od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft,  \\
+    \> ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug,  \\
+    \> ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve,  \\
+    \> ex:CoolingWaterJacket ; \\
+    \> od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ; \\
+    \> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
+    \> skos:prefLabel "ICE exhaustion model"@en, "Abgasmodell des Verbrennungsmotors"@de . \\
+    \end{code}
+
+    Using these informations, certain tc:TechniquesOfModification can be applied to fix the
+    tc:FlowDefect and fullfill the set tc:Requirements, 
+    \begin{code}
+    ex:installCatalyticConverter \\
+    \> a tc:reducePermeability ; \\
+    \> skos:prefLabel "install catalytic converter"@en, "Katalysator  \\
+    \> einbauen"@de .  \\
+    \\
+    ex:addGasolineAdditive \\
+    \> a tc:compensateWithSecondFlow ; \\
+    \> skos:prefLabel "add gasoline additive flow"@en, "Fluss für  \\
+    \> Kraftstoffzusatz hinzufügen" . \\
+    \end{code}
+    
+    leading to an additional flow ex:FuelAdditive and upgraded channel component of the 
+    ex:Exhaust flow,
+    \begin{code}tt
+    ex:FuelAdditive \\
+    \> a tc:Flow ; \\
+    \> od:hasFlowType tc:DiscreteFlow ; \\
+    \> od:hasFlowSubstance tc:Substance ; \\
+    \> od:hasFlowFunctionality tc:UsefulFlow ; \\
+    \> od:hasFlowDelegation tc:ClosedFlow ; \\
+    \> od:hasFlowSource tc:InternalSource ; \\
+    \> od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank,  \\
+    \> ex:FuelSuppylPipe, ex:CombustionChamber ; \\
+    \> skos:prefLabel "flow of fuel additive"@en, "Fluss des  \\
+    Kraftstoffzusatzes"@de . \\
+    \\
+    ex:ExhaustPipeWithCatalyticConverter \\
+    \> a tc:Channel ; \\
+    \> skos:prefLabel "exhaust pipe with catalytic converter"@en, "Auspuff mit  \\
+    \> Katalysator"@de . \\
+    \end{code}
+    
+    resulting in the final \emph{ModelAsRequired} ex:buildICEExhaustionInnovationModel
+    \begin{code}
+    ex:ICEExhaustionInnovationModel \\
+    \> a tc:Flow, tc:ModelAsRequired ; \\
+    \> od:hasFlowType tc:ComplexFlow ; \\
+    \> od:hasFlowSubstance ex:Fuel, ex:FuelAdditive, ex:Transmission, ex:Heat,  \\
+    \> ex:Work, ex:Cooling, ex:Exhaust ; \\
+    \> od:hasFlowFunctionality tc:CarrierFlow ; \\
+    \> od:hasFlowDelegation tc:OpenFlow ; \\
+    \> od:hasFlowSource tc:InternalSource ; \\
+    \> od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft,  \\
+    \> ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug,  \\
+    \> ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, \\
+    \> ex:CoolingWaterJacket ; \\
+    \> od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ; \\
+    \> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
+    \> skos:prefLabel "ICE exhaustion innovation model"@en, "innovatives  \\
+    \> Abgasmodell des Verbrennungsmotors"@de . \\
+    \end{code}
 
     \section{Critical review and further development}
         \subsection{Outside view - embedding the Flow Analysis Ontocard}
@@ -532,7 +754,7 @@
         This rises the question: Which domains can be adressed by the actual model and which not? And further more, are the foundations of the TRIZ model sufficient to address complex problems in flow analysis, that cannot clearly distinct between
         useful and harmful flows. If we look at these techniques, they try to fulfill requirements orienting on one parameter at the time.
         But in practice, especially in a network of flows, you need to take multiple parameters into account, respectively distinguish between global and local
-        parameterization. Therefore a quantization or numerical framework is needed, like it is applicated by graph theoretical concepts and optimization theory. 
+        parameterization. Therefore a quantization or numerical framework is needed, like it is applied by graph theoretical concepts and optimization theory. 
         
          
 
@@ -558,27 +780,29 @@
     \bibitem{Graebe2020} Hans-Gert Gräbe (2020).  Die Menschen und ihre Technischen Systeme. LIFIS Online.
         \url{doi:10.14625/graebe_20200519}.
     \bibitem{Graebe2021} Hans-Gert Gr\"abe (2021). About the WUMM modelling concepts of a TRIZ ontology.
-        \url{https://github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Anmerkungen.pdf}.
+        \url{https:\\github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Anmerkungen.pdf}.
     \bibitem{Kuryan et al. 2020} Kuryan, Andrey. Rubin, Mikhail. Shchedrin, Nikolai. Eckardt, Olga. Rubina, Natalia. TRIZ Ontology. Currect State and Perspectives. Translated to English by Hans-Gert Gräbe, Leipzig, who aknowledges the support by the free version of deepl.com. Minsk, Belarus. August 21, 2020.
     \bibitem{Litvin et al. 2007} Litvin, Simon. Petrov, Vladimir. Rubin, Mikhail. International TRIZ Association(MA TRIZ). Frey, Victor. Altshuller Institute for TRIZ Studies. TRIZ Body of Knowledge. 2007.
     \bibitem{Lebedev2011} Lebedev, Yuri. Classification of flows in technical systems. 2011.
     \bibitem{Lebedyev2015} Yuri Lebedyev (2015). Tool improvement Flow Analysis. (Russian original translated with DeepL.com)
-      \url{https://github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Thoke/Lebedev-2015-en.pdf}.
+      \url{https:\\github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Thoke/Lebedev-2015-en.pdf}.
     \bibitem{Lyubomirsky2006} Lyubomirsky, Alex. Law on efficiency improvement use of substance, energy and information flows. 2006.
     \bibitem{Petrov2007} Vladimir Petrov, Michail Rubin, Simon Litvin (2007). Fundamentals of TRIZ Theory of Inventive Problem Solving (in Russian). Reprinted in 2020. ISBN 978-5-4496-8183-6.
     \bibitem{Petrov2019} Petrov, Vladimir. TRIZ. Theory of Inventive Problem Solving - Level 1. Springer International Publishing. Ra'anana, Israel. 2019.
     \bibitem{Souchkov2018} Valeri Souchkov (2018).  Glossary of TRIZ and TRIZ-related terms. Version 1.2.
-        \url{https://matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}. 
+        \url{https:\\matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}. 
     \bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
-        \url{https://www.w3.org/TR/skos-reference/}.
+        \url{https:\\www.w3.org/TR/skos-reference/}.
     \bibitem{TOP} The TRIZ Ontology Project (TOP) \foreignlanguage{russian}{Онтология ТРИЗ} of the TRIZ Developer Summit.
-        \url{https://triz-summit.ru/Onto_TRIZ/}.
+        \url{https:\\triz-summit.ru/Onto_TRIZ/}.
     \bibitem{TOP-Glossary} TRIZ 100 Glossary. A short glossary of key TRIZ concepts and terms (in Russian).
-        \url{https://triz-summit.ru/onto_triz/100/}.
-    \bibitem{WUMM} The WUMM Project. https://wumm-project.github.io/About.html. Last visited 22 February 2021.
-    \bibitem{WUMMTOP} The WUMM TOP Companion Project. https://wumm-project.github.io/Ontology. Last visited 22 February 2021.
-    \bibitem{RDF} The W3C Resource Description Framework (RDF). https://www.w3.org/RDF/. Last visited 27 April 2021.
-    \bibitem{RDFData} The RDFData git repository. https://github.com/wumm-project/RDFData.  Last visited 22 February 2021.
-    \bibitem{SPARQL} The Virtuoso SPARQL Query Editor hosted by the WUMM Project. http://wumm.uni-leipzig.de:8891/sparql. Last visited 22 February 2021. 
+        \url{https:\\triz-summit.ru/onto_triz/100/}.
+    \bibitem{WUMM} The WUMM Project. https:\\wumm-project.github.io/About.html. Last visited 22 February 2021.
+    \bibitem{WUMMTOP} The WUMM TOP Companion Project. https:\\wumm-project.github.io/Ontology. Last visited 22 February 2021.
+    \bibitem{RDF} The W3C Resource Description Framework (RDF). https:\\www.w3.org/RDF/. Last visited 27 April 2021.
+    \bibitem{RDFC} RDFwithContext. A proposal . 
+        \url{https:\\www.w3.org/2011/rdf-wg/wiki/RDFwithContexts}. Last visited 02 May 2021.
+    \bibitem{RDFData} The RDFData git repository. https:\\github.com/wumm-project/RDFData.  Last visited 22 February 2021.
+    \bibitem{SPARQL} The Virtuoso SPARQL Query Editor hosted by the WUMM Project. http:\\wumm.uni-leipzig.de:8891/sparql. Last visited 22 February 2021. 
 \end{thebibliography}
 \end{document}
