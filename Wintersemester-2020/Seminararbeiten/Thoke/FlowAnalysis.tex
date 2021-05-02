@@ -399,17 +399,23 @@
     construction, integration of evaluation, their requirements and rules when to use
     which \emph{tc:TechniquesofModification} to establish a target transformation. 
 
-    od:usesTechniquesOfModification
+    With \texttt{od:buildModelAsIs} and \texttt{od:buildModelAsRequired} we define the
+    predicates to describe the process how specific instances of a \emph{Flow Model}
+    are built to define starting and desired target point of the flow transformation.
+    Here, the \texttt{tc:RulesOfFlowTransformation} are attached, that build a
+    framework of design directives, not only how the models are developed but also
+    how these models are connected to establish a valid solution out of the issued
+    circumstances of flow analysis. While \texttt{tc:RulesOfConstruction} and
+    \texttt{tc:RulesofEvalution} refer to a certain \texttt{ex:FlowModelAsIs}, 
+    the \texttt{tc:RulesOfConstructionOfInconformRequirements} and the
+    \texttt{tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems} describe
+    how the evaluated contradictions in the \texttt{ex:FlowModelAsIs} can
+    be resolved via the knwon LETS to develop a \texttt{ex:FlowModelAsRequired}.
+    
+    The \texttt{tc:TechniquesofModification} is this set of methods that are 
+    derived from certain LETS or so called trends occuring in technical systems 
+    that prescribe certain proceedings.[source]
 
-
-
-
-        \subsection{The Flow Model view}
-        Flow 
-        \subsection{The Flow Analysis view}
-            \subsubsection{Top Level}
-            \subsubsection{methodological view}
-        \subsection{The vertical view of Flow Instances}
     \section{Critical review and further development}
         \subsection{Outside view - embedding the Flow Analysis Ontocard}
         For now this TRIZ Ontocard remains isolated from its embedded environment within the ontological hierarchy of the TOP and rules how and when to 
