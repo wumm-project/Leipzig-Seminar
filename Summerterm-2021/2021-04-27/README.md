@@ -31,6 +31,7 @@ software sector.
 ## Material
 
 * [Handout](Handout.pdf) 
+* [Slides](Slides.pdf) 
 * [MSM] Viktor B. Khristenko, Andrei G. Reus, Alexander P. Zinchenko et al. (2014).
   Methodological School of Management. Bloomsbury Publishing.  ISBN
   978-1-4729-1029-5.
