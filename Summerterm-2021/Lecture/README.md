@@ -89,7 +89,7 @@ __Slides:__
 
 __Literature__:
 * Hans-Gert Gräbe (2020).  On the concept of system in the Theory of Dynamical
-  Systems. See the listing of web sites at [TDS.md](TDS.md) (to do).
+  Systems. See the listing of web sites at [TDS.md](TDS.md).
   
 __Additional Reading__:
 * Ludwig von Bertalanffy (1950). An outline of General System Theory, The
@@ -110,7 +110,10 @@ __Learning Objectives__:
 * Simple description, complex execution. Deterministic chaos.
 * Systems and "environment". Immersive and submersive concept of a system.
 
-## May 20: Sustainability and development cycles of systems
+__Slides:__
+* [System development](SystemDevelopment.pdf)
+
+## May 20: Sustainability and Development Cycles of Systems
 
 __Literature__:
 * Hans-Gert Gräbe (2020).  On the concept of system in the Theory of Dynamical
