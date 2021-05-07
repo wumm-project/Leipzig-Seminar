@@ -1,0 +1,136 @@
+% third part of TRIZ-Modelling after OTSM-TRIZ Slides
+\documentclass{beamer}
+\usepackage{lsfolien}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\myfootline{System Modelling and Semantic Web -- Spring 2021}{Hans-Gert Gräbe}
+
+\title{Modelling Sustainable Systems\\ and Semantic Web\\[6pt]
+  About the Notion of a Technical System
+  \vskip1em}
+
+\subtitle{Lecture in the Module 10-202-2309\\ for Master Computer Science}
+
+\author{Prof. Dr. Hans-Gert Gräbe\\
+\url{http://www.informatik.uni-leipzig.de/~graebe}}
+
+\date{April 2021}
+\begin{document}
+
+\section{Basics}
+\begin{frame}{TRIZ and ARIZ}
+
+TRIZ is not just a theory, but proposes a precise algorithmic procedure as a
+methodology to be applied.
+
+There exist several variants of this algorithm ARIZ (Algorithm for the
+Solution of Inventive Problems), the "official" one is ARIZ-85C, which is
+based on a version published by Altschuller in 1985. Others (D. Zobel) see
+little progress compared to ARIZ-77 (a version published by Altschuller in
+1977) and recommend this somewhat simpler approach.
+
+We use AIPS-2015 (Algorithm for the Correction of Problematic Situations), a
+version in the tradition of OTSM-TRIZ, which is also used in the Minsk
+TRIZ-Trainer.
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- the First Stage of the Solution Process}
+  
+The first stage of the solution process provides an accurate model of the
+"system as it is" that needs to be transformed to solve the problem. This
+phase consists of three steps
+\begin{itemize}
+\item [(A)] Contextualise the problem. The system as a black box.
+\item [(B)] Analyse and model the structural and procedural organisation of
+  the "system as it is" -- the "machine" in the terminology of the
+  TRIZ-Trainer.
+\item [(C)] Identify and localise the central contradiction, determine the
+  operational zone and operational time, i.e. where and when the contradiction
+  occurs, and establish possible hypotheses about the causes of the conflict.
+\end{itemize}
+From these hypotheses a task is formulated, which in the second stage is
+analysed in more detail.
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- the First Stage of the Solution Process}
+
+First section "Clarification of the circumstances":
+\begin{itemize}
+\item [1.] Identify the system to be examined as a black box and give it a
+  "speaking name", from which the semantics of the system can already be
+  roughly understood -- what is the "useful product"?
+\item [2.] Identify the \emph{main useful function} (MUF) of the system.
+
+  Investigate, if necessary, what \emph{purpose} the system serves in the
+  supersystem and, if applicable, determine the throughput required to operate
+  the system (input required from the upper system for the functioning of the
+  system).
+\item [3.] Formulate the existing problem, which prevents the specification
+  compliant behaviour of the system in the supersystem -- the "undesired
+  effect". 
+\end{itemize}
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- the First Stage of the Solution Process}
+  
+Second section "Conflict in the system": 
+\begin{itemize}
+\item[4.] Determine the components of the machine (the structural organisation
+  of the system) as well as its mode of operation (the procedural organisation
+  of the system).  Often it is sufficient to focus on one of the two
+  questions.
+
+  Follow the general structure pattern "energy source, engine, transmission,
+  tool, action, object being processed, useful product plus control".
+  
+  It is important to describe the main useful function (MUF) of the system,
+  even if the problem is located in one of its components, because the
+  resources used in the system are grouped around the MUF.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- the First Stage of the Solution Process}
+  
+\begin{itemize}
+\item [5.] This MUF is in some relation to the "effect that cannot be
+  completed without problems".
+
+  This effect, as well as its relationship to the MUF, is now to be determined
+  more precisely as the core of the conflict to be resolved.
+
+  In this analysis, in particular the place and time of the conflict must be
+  determined more precisely in order to prepare for possible later separation
+  by time or place as one of the basic methods of resolution.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{TRIZ-Trainer -- the First Stage of the Solution Proces}
+  
+Third section "Formulation of a hypothesis": 
+\begin{itemize}
+\item Through a more detailed analysis of the "causes of conflict", one or
+  several hypotheses of general nature are formulated, what measures in the
+  sense of the \emph{Ideal Final Result} would solve the problem.
+  
+  One of these approaches is formulated in more detail as a "task" for the
+  second stage of the solution process in order to work on it with suitable
+  TRIZ tools.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Ideal Final Result}
+  
+The \textbf{ideal final result} (IFR) describes the "system as required" as
+\emph{target} of the transformation, without initially caring whether the
+formulated result can be realised in practice. In the further solution
+process, the obstacles to be overcome on the way to the IFR are identified
+and, based on the TRIZ methodology, strategies are developed how to overcome
+these obstacles in practice.
+
+The IFR is one of the basic concepts of TRIZ. The IFR is an orientation in the
+sense of a "concrete utopia", which essentially determines the target corridor
+on which the further solution process concentrates in its second stage.
+\end{frame}
+
+\end{document}

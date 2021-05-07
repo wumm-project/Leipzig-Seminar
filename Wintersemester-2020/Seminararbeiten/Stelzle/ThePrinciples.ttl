@@ -1,0 +1,759 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+
+<http://opendiscovery.org/rdf/ThePrinciples/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    dcterms:source <http://triz-online.de/index.php?id=5593> ;
+    a owl:Ontology ;
+    rdfs:comment
+    "2019-01-10 graebe: Extracted and transformed from triz-online",
+    "2019-10-05 graebe: A first raw translation to Russian and English added",
+    "2020-01-12 graebe: Adjustment of the German terms with (Koltze/Souchkov 2017)",
+    "2020-04-16 graebe: namespace abbreviation and principle names fixed",
+    "2020-07-12 graebe: od:hasRecommendation split off, Altshuller73 Ids added" ,
+    "2021-02-27 graebe: Lippert-2019 Glossary added, URIs translated to namespace tc:" ;
+    rdfs:label "TRIZ Database - The 40 Principles" .
+
+od:Principle
+    a owl:Class ;
+    rdfs:label "A TRIZ Principle"@en, "Ein TRIZ Prinzip"@de, "ТРИЗ приём"@ru .
+
+tc:Asymmetry
+    od:LippertGlossaryNote "Asymmetry is the process of transitioning from isotropic to anisotropic or vice-versa. That is, a property invariant with respect to direction of measurement will transition to a property that differs according to the direction of measurement."@en, "In computer and systems science, customization could result in this type of change."@en, "In manufacturing, asymmetry in parts reduces errors in assembly [39]. This exemplifies changing the shape of the object or system to suit external asymmetries."@en, "Making something asymmetrical can be challenging, but it is accomplished in many solutions such as dynamic load balancing and resource allocation."@en, "Since engineers seem to have an unconscious bias towards symmetrical design [4], changing symmetry will often result in new innovation."@en ;
+    od:hasAltshuller73Id "04" ;
+    od:hasAltshuller84Id "04" ;
+    od:Matrix2003Id "04" ;
+    od:hasRecommendation tc:Asymmetry_1, tc:Asymmetry_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of asymmetry"@en, "Prinzip der Asymmetrie"@de, "Приём асимметрии"@ru .
+
+tc:Asymmetry_1
+    od:description "Gehe von einer symmetrischen Form des Objektes zu einer asymmetrischen über."@de, "Move from a symmetrical shape of the object to an asymmetric one."@en, "От симметричной формы объекта необходимо перейти к асимметричной."@ru ;
+    a od:Recommendation .
+
+tc:Asymmetry_2
+    od:description "Erhöhe den Grad der Asymmetrie, wenn das Objekt bereits asymmetrisch ist."@de, "Increase the degree of asymmetry if the object is already asymmetric."@en, "Степень асимметрии должна быть увеличена, если объект уже асимметричен."@ru ;
+    a od:Recommendation .
+
+tc:ChangeColorAndTransparency
+    od:LippertGlossaryNote "A change in color of a system can enhance value or make it easier to detect change."@en, "As well, objects (or the environment) can be made translucent with this principle."@en, "Graphical user interfaces for computers make excellent use of this principle."@en, "In nature at least, the ability to change color can insure survival [8]."@en, "It can also be used to improve measurement or improve visibility."@en, "State change or status can easily be represented by alteration of color, translucency, and or size."@en ;
+    od:hasAltshuller73Id "32" ;
+    od:hasAltshuller84Id "32" ;
+    od:Matrix2003Id "32" ;
+    od:hasRecommendation tc:ChangeColorAndTransparency_1, tc:ChangeColorAndTransparency_2, tc:ChangeColorAndTransparency_3, tc:ChangeColorAndTransparency_4 ;
+    a od:Principle ;
+    skos:prefLabel "Color and transparency change principle"@en, "Prinzip der Veränderung von Farbe und Transparenz"@de, "Приём изменения окраски и прозрачности"@ru .
+
+tc:ChangeColorAndTransparency_1
+    od:description "For observing poorly visible objects or processes, use coloring additives."@en, "Nutze färbende Zuschläge zur Beobachtung schlecht sichtbarer Objekte oder Prozesse."@de, "Для наблюдения плохо видимых предметов или процессов используйте красящие добавки."@ru ;
+    a od:Recommendation .
+
+tc:ChangeColorAndTransparency_2
+    od:description "Change the degree of transparency of the object or the surrounding medium."@en, "Verändere den Grad der Durchsichtigkeit des Objektes oder des umgebenden Mediums."@de, "Степень прозрачности объекта или окружающей среды должна быть изменена."@ru ;
+    a od:Recommendation .
+
+tc:ChangeColorAndTransparency_3
+    od:description "Change the color of the object or the surrounding medium."@en, "Verändere die Farbe des Objektes oder des umgebenden Mediums."@de, "Цвет объекта или окружающей среды должны быть изменены."@ru ;
+    a od:Recommendation .
+
+tc:ChangeColorAndTransparency_4
+    od:description "If such conditions are already applied, use flourescent material."@en, "Wenn solche Bedingungen bereits angewandt werden, setze Leuchtstoffe ein."@de, "Если такие условия уже применяются, используйте люминофоры."@ru ;
+    a od:Recommendation .
+
+tc:ChangePhysicalOrChemicalParameters
+    od:hasAltshuller73Id "35" ;
+    od:hasAltshuller84Id "35" ;
+    od:Matrix2003Id "35" ;
+    od:hasRecommendation tc:ChangePhysicalOrChemicalParameters_1, tc:ChangePhysicalOrChemicalParameters_2 ;
+    a od:Principle ;
+    skos:prefLabel "Aggregatzustände und deren Übergänge beherrschen"@de, "Principle of changing the physical or chemical parameters of an object"@en, "Prinzip der Veränderung der physikalischen oder chemischen Parameter eines Objekts"@de, "Приём изменения физико-химических параметров объекта"@ru .
+
+tc:ChangePhysicalOrChemicalParameters_1
+    od:description "Hierzu gehören nicht nur einfache Übergänge, z.B. vom festen in den flüssigen Zustand, sondern auch die Übergänge in „Pseudo- oder Quasizustände“, z.B. Quasiflüssigkeiten, und Zwischenzustände, z.B. die Verwendung elastischer Festkörper."@de, "This includes not only simple transitions, e.g. from the solid to the liquid state, but also transitions into pseudo or quasi states, e.g. the quasi-liquid, and intermediate states, e.g. the use of elastic solid body."@en, "К ним относятся не только простые переходы, например, из твердого состояния в жидкое, но также переходы в псевдо или квазизначные состояния, например, квазижидкость, и в промежуточные состояния, например, использование упругого твердого тела."@ru ;
+    a od:Recommendation .
+
+tc:ChangePhysicalOrChemicalParameters_2
+    od:description "Changing the parameters of an object concerns not only substances, but also fields"@en, "Das Ändern der Parameter eines Objekts betrifft nicht nur Substanzen, sondern auch Felder"@de, "Изменение параметров объекта касается не только вещест, но и полей"@ru ;
+    a od:Recommendation .
+
+tc:CompositeMaterials
+    od:hasAltshuller84Id "40" ;
+    od:Matrix2003Id "40" ;
+    od:hasRecommendation tc:CompositeMaterials_1 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of the application of composite materials"@en, "Prinzip der Verwendung von Verbundstoffen"@de, "Приём применения составных материалов"@ru ;
+    od:LippertGlossaryNote "In systems engineering, the use of commodity hardware from a variety of sources to create a system creates a composite."@en, "It is the replacement of homogeneous materials with composites."@en, "Such a replacement often results in layering."@en, "The emerging process of mash-ups in the digital domain is an implementation of this principle."@en, "This principle is the opposite of homogeneity."@en .
+
+tc:CompositeMaterials_1
+    od:description "Convert simple substances into composite ones."@en, "Gehe von einfachen Stoffen zu zusammengesetzten Stoffen über."@de, "Однородные вещества должны быть заменены составными."@ru ;
+    a od:Recommendation .
+
+tc:Consolidation
+    od:LippertGlossaryNote "By consolidating homogeneous objects, processes, or objects destined for contiguous operations, a more precise workflow can result."@en, "Consolidation can create desirable, new or unique properties or outcomes."@en, "Consolidation is the bringing together of functions, characteristics, parts of a system, or even separate systems into a relationship."@en, "These principles can be extended into data flows and other material and energy flows within a system."@en, "This is demonstrated in the world of computer systems through synchronized processes, parallelization, and integration."@en, "While consolidation implies colocation, it can also be done by making time homogeneous or making operations contiguous."@en ;
+    a od:Principle ;
+    skos:prefLabel "Consolidation"@en .
+
+tc:ContinuityOfUsefulAction
+    od:LippertGlossaryNote "A system with continuous, useful action should remain that way after being updated."@en, "Hardware implementations provide continuous action by avoiding system restarts and by employing continuous refreshing and failover."@en, "Having a constant, continuous flow can eliminate system idleness and sometimes intermediate actions. This principle avoids starting and stopping an action as well as the elimination of nondynamic parts of a flow. It leads to balanced utilization and is also a part of lean manufacturing."@en, "In computer science, continuity of useful action can be extrapolated to the adage “don’t fix what isn’t broken” with regards to upgrading systems."@en, "On the other hand, the continuous action might not be of the system, but of the user of the system which would be the case with software."@en ;
+    od:hasAltshuller73Id "20" ;
+    od:hasAltshuller84Id "20" ;
+    od:Matrix2003Id "20" ;
+    od:hasRecommendation tc:ContinuityOfUsefulAction_1, tc:ContinuityOfUsefulAction_2 ;
+    a od:Principle ;
+    skos:altLabel "Uninterrupted Useful Action"@en ;
+    skos:prefLabel "Principle of continuity of the useful action"@en, "Prinzip der Kontinuität der nützlichen Wirkung"@de, "Приём непрерывности полезного действия"@ru .
+
+tc:ContinuityOfUsefulAction_1
+    od:description "Die Funktion soll kontinuierlich erfolgen (alle Teile des Objektes sollen ständig mit gleichmäßiger Belastung arbeiten)."@de, "The function should be continuous (all parts of the object should constantly work with equal load)."@en, "Функция должна быть непрерывной (все части объекта должны постоянно работать с одинаковой нагрузкой)."@ru ;
+    a od:Recommendation .
+
+tc:ContinuityOfUsefulAction_2
+    od:description "Prevent idle times and interruptions."@en, "Vermeide Leerläufe und Unterbrechungen."@de, "Холостой ход и прерывания следует избегать."@ru ;
+    a od:Recommendation .
+
+tc:Copying
+    od:LippertGlossaryNote "A copy is a replica of something that is used when the original itself is too valuable to be used."@en, "Computer emulators implement this principle by providing a copy of an operating system or environment."@en, "Computer viruses create multiple copies to achieve a broader distribution than would be possible without it."@en, "Copies can be abstractions, images, dimensional models, or simulations."@en, "For example, approximately 10% of the Vatican library holdings have been digitized so that scholars may “examine” minute details on computer generated images of the originals. (According to the Vatican librarian, the ability to magnify any area of the digitized image has revealed an amazing quantity of information for scholars who would not otherwise be allowed to handle the original materials.)"@en, "Utilizing a copy can allow adjustments in scale and material."@en ;
+    od:hasAltshuller73Id "26" ;
+    od:hasAltshuller84Id "26" ;
+    od:Matrix2003Id "26" ;
+    od:hasRecommendation tc:Copying_1, tc:Copying_2 ;
+    a od:Principle ;
+    skos:prefLabel "Arbeit mit Modellen"@de, "Prinzip des Kopierens"@de, "principle of copying"@en, "принцип копирования"@ru .
+
+tc:Copying_1
+    od:description "Use simplified and cheap copies instead of an inaccessible, complicated, costly, difficult to handle or breakable object."@en, "Verwende vereinfachte und billige Kopien anstelle eines unzugänglichen, komplizierten, kostspieligen, schlecht handhabbaren oder zerbrechlichen Objektes."@de, "Вместо недоступного, сложного, дорогостоящего, сложного в обращении или хрупкого объекта следует использовать упрощенные и дешевые копии."@ru ;
+    a od:Recommendation .
+
+tc:Copying_2
+    od:description "Ersetze das Objekt oder das System von Objekten durch optische Kopien (Abbildungen)."@de, "Replace the object or system of objects by optical copies (illustrations)."@en, "Объект или система объектов должны быть заменены оптическими копиями (иллюстрациями)."@ru ;
+    a od:Recommendation .
+
+tc:Countermass
+    od:LippertGlossaryNote "Floating is enabled by weight being countered by hydrodynamic forces; flying is enabled by aerodynamic lift."@en, "In systems engineering, this principle is manifest in distributed architectures where a more uniform distribution of resources is evident."@en, "Other environmental forces that require balancing in digital systems include power, space, cooling, bandwidth constraints, and network latency."@en, "The act of counterbalancing is compensation, or opposition, to bring into balance an environmental force."@en, "The encouragement with this principle is to examine the environment to find existing opposing forces that can be applied."@en, "This can be achieved through a more uniform distribution, or it can be achieved by use of a contrary action or force to alleviate an effect."@en ;
+    od:hasAltshuller73Id "08" ;
+    od:hasAltshuller84Id "08" ;
+    od:Matrix2003Id "08" ;
+    od:hasRecommendation tc:Countermass_1, tc:Countermass_2 ;
+    a od:Principle ;
+    skos:altLabel "Counterbalance (Counter-Weight)"@en ;
+    skos:prefLabel "Principle of the countermass"@en, "Prinzip des Gegengewichts"@de, "Приём противовеса"@ru .
+
+tc:Countermass_1
+    od:description "Compensate the weight of the object by coupling it with another object that has bearing capacity."@en, "Kompensiere das Gewicht des Objektes durch die Kopplung mit einem anderen Objekt, das Tragkraft besitzt."@de, "Вес объекта должен быть компенсирован путем соединения его с другим объектом, который обладает несущей способностью."@ru ;
+    a od:Recommendation .
+
+tc:Countermass_2
+    od:description "Compensate the weight of the object by interaction with a medium."@en, "Kompensiere das Gewicht des Objektes durch Wechselwirkung mit einem Medium."@de, "Вес объекта должен быть компенсирован взаимодействием со средой."@ru ;
+    a od:Recommendation .
+
+tc:Coupling
+    od:hasAltshuller73Id "05" ;
+    od:hasAltshuller84Id "05" ;
+    od:Matrix2003Id "05" ;
+    od:hasRecommendation tc:Coupling_1 ;
+    a od:Principle ;
+    skos:prefLabel "Kombination"@de, "Principle of coupling"@en, "Prinzip der Kopplung"@de, "Приём объединения"@ru .
+
+tc:Coupling_1
+    od:description "Couple similar or coordinating systems or operations."@en, "Kopple gleichartige oder zu koordinierende Systeme oder Operationen."@de, "Подобные или координирующие системы или операции должны быть объединены."@ru ;
+    a od:Recommendation .
+
+tc:Dynamization
+    od:LippertGlossaryNote "Computers have enabled a great deal of dynamism by moving print to digital media."@en, "Dynamic scaling is one property of the principle of timesharing found in cloud computing."@en, "It is also possible to divide the object into parts that can change their position relative to one another."@en, "It is also possible to make similar changes in the environment as opposed to the object."@en, "Most recently, programs utilize dynamic load libraries and have dynamic cache, dynamic menus, and dynamic scaling."@en, "One means of implementing this principle is to make the stationary and moveable dimensions interchangeable."@en, "The focus is to change characteristics of the object or environment to achieve optimal performance or action."@en, "This principle focuses on change and adaptability. A system, state, or property is made ephemeral, temporary, moveable, adaptive, flexible, or changeable."@en ;
+    od:hasAltshuller73Id "15" ;
+    od:hasAltshuller84Id "15" ;
+    od:Matrix2003Id "15" ;
+    od:hasRecommendation tc:Dynamization_1, tc:Dynamization_2, tc:Dynamization_3 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of dynamization"@en, "Prinzip der Dynamisierung"@de, "Prinzip der ständigen Anpassung"@de, "Приём динамичности"@ru .
+
+tc:Dynamization_1
+    od:description "Falls das Objekt insgesamt unbeweglich ist, gestalte es beweglich (verstellbar)."@de, "If the object as a whole is immobile, make it movable (adjustable)."@en, "Если объект в целом неподвижен, он должен стать подвижным (регулируемым)."@ru ;
+    a od:Recommendation .
+
+tc:Dynamization_2
+    od:description "Brake down the object into parts that can be displaced or shifted."@en, "Zerlege das Objekt in Teile, die sich zueinander verstellen oder verschieben lassen."@de, "Объект разбить на части, которые могут быть смещены или сдвинуты."@ru ;
+    a od:Recommendation .
+
+tc:Dynamization_3
+    od:description "Change the characteristics of the object (or the surrounding medium) to be optimal in each work step (adaptation)."@en, "Verändere die Kennwerte des Objektes (oder des umgebenden Mediums) so, dass sie in jeder Arbeitsetappe optimal sind (Anpassung)."@de, "Характеристики объекта (или окружающей среды) должны меняться, чтобы быть оптимальными на каждом этапе работы (адаптация)."@ru ;
+    a od:Recommendation .
+
+tc:EarlyCounteraction
+    od:LippertGlossaryNote "Counteraction can apply equally to functions, events, and conditions."@en, "Critical to this principal is the recognition that every system has some capacity for unreliability which cannot be eliminated."@en, "Cushioning the system in advance is a means to deal with types of unreliability that cannot be eliminated."@en, "Error-handling routines are programmed into systems anticipating user and system errors."@en, "Fail-overs are designed into systems as protection from component failure."@en, "In digital systems that includes uninterruptible power supplies to cushion against loss of power in critical systems, scheduled backups to safeguard data, timed"@en, "In systems engineering, determining what might go wrong is the foundation for risk management and for potential failure modes analysis."@en, "Preliminary counteraction involves determining what might go wrong in advance and taking a counter action to eliminate, reduce, or prevent the occurrence of the undesirable effect."@en, "RAID storage divides and duplicates information stored on a computer disk because of the assumption that there will be failures on the disk."@en, "Several solutions seen in risk mitigation are applications of this principle."@en, "These analyses examine known failures, invent failures to expose weak points in a design, expose potentially dangerous conditions, and show the effect of (unanticipated) human interaction and exposure of the system to different sources of energy."@en, "These steps are all examples of preliminary counteraction."@en, "Throttling is a mechanism that can control a flow which could overwhelm the receiving system."@en, "releases to prevent blocking in resource access, as well as input handlers that eliminate error [40]."@en ;
+    od:hasAltshuller73Id "09" ;
+    od:hasAltshuller84Id "09" ;
+    od:Matrix2003Id "09" ;
+    od:hasRecommendation tc:EarlyCounteraction_1 ;
+    a od:Principle ;
+    skos:altLabel "Cushion in Advance"@en, "Preliminary Counteraction"@en, "Prinzip der Vorspannung"@de ;
+    skos:prefLabel "Principle of early counteraction"@en, "Prinzip der vorherigen Gegenwirkung"@de, "Приём предварительного противодействия"@ru .
+
+tc:EarlyCounteraction_1
+    od:description "If a certain effect is to be achieved according to the conditions of the task, first generate the counteraction."@en, "Wenn gemäß den Bedingungen der Aufgabe eine bestimmte Wirkung erzielt werden soll, erzeuge vorher die Gegenwirkung."@de, "Чтобы в соответствии с условиями задачи достигать определенный эффект, сначала должно быть создано противодействие."@ru ;
+    a od:Recommendation .
+
+tc:EarlyCounteraction_2
+    od:description "Erzeuge im Objekt vorab eine Gegenwirkung, die der unzulässigen oder unerwünschten Wirkung entgegengesetzt ist (Prinzip der Vorspannung)."@de, "Заранее придать объекту напряжения, противоположные недопустимым или нежелательным рабочим напряжениям."@ru ;
+    a od:Recommendation .
+
+tc:EliminationAndRegenerationOfParts
+    od:LippertGlossaryNote "An example of rejecting is a biodegradable packaging material."@en, "In computer programming, the process of garbage collection is a regeneration of computer memory."@en, "In databases, a transaction rollback implements both parts of this principle."@en, "In network communications, packet headers are handled according to this principle."@en, "Regeneration is the repair or restoration of a part so that it might be reused."@en, "Rejecting is removing, discarding, dissolving, or evaporating, a part of an object or system that is no longer needed."@en ;
+    od:hasAltshuller73Id "34" ;
+    od:hasAltshuller84Id "34" ;
+    od:Matrix2003Id "34" ;
+    od:hasRecommendation tc:EliminationAndRegenerationOfParts_1, tc:EliminationAndRegenerationOfParts_2 ;
+    a od:Principle ;
+    skos:altLabel "Discard and Renewal of Parts"@en, "Rejecting and Regeneration of Parts"@en ;
+    skos:prefLabel "Ballast abwerfen"@de, "Principle of elimination and regeneration of parts"@en, "Prinzip der Beseitigung und Regenerierung von Teilen"@de, "Приём отброса и регенерации частей"@ru .
+
+tc:EliminationAndRegenerationOfParts_1
+    od:description "Part of an object that has served its purpose or has become unusable is eliminated (dissolved, vaporized, or the like) or converted immediately during the operation."@en, "Teile eines Objektes, die ihren Zweck erfüllt haben oder unbrauchbar geworden ist, werden beseitigt (aufgelöst, verdampft o. ä.) oder unmittelbar im Arbeitsgang umgewandelt."@de, "Часть объекта, которая выполнила свою задачу или стала непригодной для использования, устраняется (растворяется, испаряется и т. п.) или преобразуется непосредственно во время операции."@ru ;
+    a od:Recommendation .
+
+tc:EliminationAndRegenerationOfParts_2
+    od:description "Restore used parts of an object immediately during the operation."@en, "Stelle verbrauchte Teile eines Objektes unmittelbar im Arbeitsgang wieder her."@de, "Отработанные части объекта восстанавливаются непосредственно во время операции."@ru ;
+    a od:Recommendation .
+
+tc:Equipotentiality
+    od:LippertGlossaryNote "Digital systems have a few analogies to this principle."@en, "Load balancing can help enforce that uniformity."@en, "Networks are established to enable different pathways between nodes which then help to establish a uniform potential."@en, "The environment, the structure of the object and the system can all be used in implementing this principle."@en, "The goal of this principal is to conduct the process spending a minimum amount of energy on auxiliary actions or functions."@en, """There are three concepts that make up this principle and they can be used in combination or separately: 
+* create associations with the system to support equal potential.
+* create uniform potential to achieve a system benefit.
+* establish contiguous relationships and associations."""@en, "This is an integral part of lean manufacturing: eliminating undesirable or wasteful action."@en, "Ultimately, the condition of the work is changed so that it will not require unnecessary movement such as lifting and lowering."@en, "Within a computer, memory swapping helps create uniformity in the access of information."@en ;
+    od:hasAltshuller73Id "12" ;
+    od:hasAltshuller84Id "12" ;
+    od:Matrix2003Id "12" ;
+    od:hasRecommendation tc:Equipotentiality_1 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of Equipotentiality"@en, "Prinzip der Äquipotenzialität"@de, "Äquipotentieller Transport"@de, "Приём эквипотенциальности"@ru .
+
+tc:Equipotentiality_1
+    od:description "Change the working conditions in such a way that the object can work with a constant energy potential, and has not to be raised or lowered."@en, "Verändere die Arbeitsbedingungen so, dass das Objekt mit konstantem Energiepotenzial arbeiten kann, z.B. nicht angehoben oder herabgelassen werden muss."@de, "Рабочие условия должны быть изменены таким образом, чтобы объект мог работать с постоянным энергетическим потенциалом, его не нужно поднимать или опускать."@ru ;
+    a od:Recommendation .
+
+tc:Feedback
+    od:LippertGlossaryNote "A common application of this principle is a gas pump nozzle which senses the increasing pressure inside the tank to stop the flow of gasoline."@en, "Feedback is some output of a system that is used as a control mechanism for that system."@en, "If a system is already using feedback, the frequency or amplitude of the feedback can be altered, or new sources of feedback can be sought."@en, "In systems engineering, feedback is used as an improvement driver and incremental development of systems relies heavily on feedback."@en, "This output can be a useful or a harmful output."@en ;
+    od:hasAltshuller84Id "23" ;
+    od:Matrix2003Id "23" ;
+    od:hasRecommendation tc:Feedback_1, tc:Feedback_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of feedback"@en, "Prinzip der Rückkopplung"@de, "Приём обратной связи"@ru .
+
+tc:Feedback_1
+    od:description "Führe eine Rückkopplung ein."@de, "Insert feedback."@en, "Вставить обратную связь."@ru ;
+    a od:Recommendation .
+
+tc:Feedback_2
+    od:description "Falls eine Rückkopplung vorhanden ist, verändere diese."@de, "If there is feedback, change it."@en, "Если есть обратная связь, измените её."@ru ;
+    a od:Recommendation .
+
+tc:FlexibleCoversOrThinFilms
+    od:LippertGlossaryNote "Flexible membranes, covers, or thin films can replace traditional materials and isolate components, objects, or systems from their environment."@en, "Graphical user interfaces are another example where the separation is between the “guts” of a program and the end user."@en, "In computer systems, middleware can be considered a thin film that separates the algorithms and display from the databases."@en, "These membranes can be layered to achieve the protection desired."@en, "Wrappers (for functions or data) can also be considered as thin films or flexible membranes."@en ;
+    od:hasAltshuller73Id "30" ;
+    od:hasAltshuller84Id "30" ;
+    od:Matrix2003Id "30" ;
+    od:hasRecommendation tc:FlexibleCoversOrThinFilms_1, tc:FlexibleCoversOrThinFilms_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of using flexible covers or thin films"@en, "Prinzip der Anwendung biegsamer Hüllen oder dünner Folien"@de, "Приём использования гибких оболочек или тонких плёнок"@ru .
+
+tc:FlexibleCoversOrThinFilms_1
+    od:description "Use flexible cover or thin films instead of the usual constructions."@en, "Verwende biegsame Hüllen und dünne Folien statt der üblichen Konstruktionen."@de, "Вместо обычных конструкций должны использоваться гибкие оболочки и тонкие плёнки."@ru ;
+    a od:Recommendation .
+
+tc:FlexibleCoversOrThinFilms_2
+    od:description "Isolate the object from the surrounding medium by means of flexible envelopes and thin foil."@en, "Isoliere das Objekt mit Hilfe biegsamer Hüllen und dünner Folie vom umgebenden Medium."@de, "Объект должен быть изолирован от окружающей среды с помощью гибких оболочек и тонкой плёнки."@ru ;
+    a od:Recommendation .
+
+tc:Homogeneity
+    od:LippertGlossaryNote "Creating homogeneity eliminates translation and transposition."@en, "Homogeneity states that if two or more objects or substances interact, they should consist of the same material, energy, or information."@en, "In information science, this principle can be implemented through abstraction, and can also refer to the creation of a unified data model."@en, "In systems design, homogeneity is achieved by having all the components provided by the same source thereby eliminating the need for integration."@en, "In the digital domain, this principle can be implemented by combining functions that access the same data into a single application."@en, "Marginal homogeneity can also be employed where there are inconsequential differences between the objects or substances."@en, "These interactions can be through action, features, functions or objects."@en ;
+    od:hasAltshuller73Id "33" ;
+    od:hasAltshuller84Id "33" ;
+    od:Matrix2003Id "33" ;
+    od:hasRecommendation tc:Homogeneity_1 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of homogeneity"@en, "Prinzip der Gleichartigkeit (Homogenität)"@de, "Приём однородности"@ru .
+
+tc:Homogeneity_1
+    od:description "Fertige Objekte, die mit dem gegebenen Objekt zusammenwirken, aus demselben Werkstoff oder einem Werkstoff mit annähernd gleichen Eigenschaften."@de, "Make objects that interact with the given object of the same material or a material with approximately the same characteristics."@en, "Объекты, взаимодействующие с данным объектом, должны быть изготовлены из того же материала или материала с примерно такими же характеристиками."@ru ;
+    a od:Recommendation .
+
+tc:InertMedium
+    od:hasAltshuller84Id "39" ;
+    od:Matrix2003Id "39" ;
+    od:hasRecommendation tc:InertMedium_1, tc:InertMedium_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of using an inert medium"@en, "Prinzip der Verwendung eines inerten Mediums"@de, "Приём применения инертной среды"@ru .
+
+tc:InertMedium_1
+    od:description "Ersetze das übliche Medium durch ein reaktionsträgeres."@de, "Replace the usual medium by a less responsive one."@en, "Обычную среду заменить на более инертную."@ru ;
+    a od:Recommendation .
+
+tc:InertMedium_2
+    od:description "Carry out the process in a vacuum."@en, "Führe den Prozess im Vakuum durch."@de, "Процесс должен проводиться в вакууме."@ru ;
+    a od:Recommendation .
+
+tc:InexpensiveShortLifeObject
+    od:LippertGlossaryNote "A common example is that of temporary staffing or computer timesharing."@en, "Cheaper, simpler, or more disposable objects can be used to reduce cost, to increase convenience and to improve the service life of an object."@en, "Disposability often requires a change from complication to simplicity or the replacement of a high cost material with something of lower cost."@en, "Implementing this principle requires a tradeoff of one or more properties."@en, "System and software engineering uses this principle in the development of prototypes that can help improve the actual system being created."@en ;
+    od:hasAltshuller73Id "27" ;
+    od:hasAltshuller84Id "27" ;
+    od:Matrix2003Id "27" ;
+    od:hasRecommendation tc:InexpensiveShortLifeObject_1 ;
+    a od:Principle ;
+    skos:altLabel "Inexpensive Short-Life Object (Disposable)"@en ;
+    skos:prefLabel "Principle of inexpensive short-life object instead of expensive longevity"@en, "Prinzip der billigen Kurzlebigkeit anstelle teurer Langlebigkeit"@de, "Приём дешёвой недолговечности вместо дорогой долговечности"@ru .
+
+tc:InexpensiveShortLifeObject_1
+    od:description "Ersetze ein teures Objekt durch ein Sortiment billiger Objekte, wobei auf einige Qualitätseigenschaften, z. B. Langlebigkeit, verzichtet wird."@de, "Replace the expensive object by a range of cheap objects, with some quality features, such as longevity, being dispensed."@en, "Дорогой объект должен быть заменен рядом дешевых объектов, с некоторыми уступками к качественным характеристикам, таким как долговечность."@ru ;
+    a od:Recommendation .
+
+tc:InverseAction
+    od:LippertGlossaryNote "A common manifestation of this principle is a treadmill where the walking person does not advance but instead the “ground” does so."@en, "For example, a moveable part may be made stationary or vice versa; or the object can be turned upside down or inside out."@en, "For example, action vs. no action is not the same as action vs. antiaction."@en, "In computer systems, sorting is approached in this fashion in databases where the indices can be inverted for faster search time."@en, "It is important to understand that there are two possibilities for reverse — one where there is nothing, and one where the opposite is taken."@en, "This principle is focused on thinking of the opposite. In place of a direct action, the opposite action is implemented."@en ;
+    od:hasAltshuller73Id "13" ;
+    od:hasAltshuller84Id "13" ;
+    od:Matrix2003Id "13" ;
+    od:hasRecommendation tc:InverseAction_1, tc:InverseAction_2, tc:InverseAction_3 ;
+    a od:Principle ;
+    skos:altLabel "Inversion"@de ;
+    skos:prefLabel "Principle of inverse action"@en, "Prinzip der Funktionsumkehr (Inversion)"@de, "Приём Наоборот"@ru .
+
+tc:InverseAction_1
+    od:description "Erziele statt der Wirkung, die durch die Bedingungen der Aufgabe vorgeschrieben wird, die umgekehrte Wirkung."@de, "Instead of the effect prescribed by the conditions of the task, achieve the reverse effect."@en, "Вместо эффекта, предписанного условиями задачи, достигается обратный эффект."@ru ;
+    a od:Recommendation .
+
+tc:InverseAction_2
+    od:description "Put the object upside down or reverse it."@en, "Stelle das Objekt auf den Kopf bzw. kehre es um."@de, "Перевернуть объект вверх ногами или другим способом наоборот."@ru ;
+    a od:Recommendation .
+
+tc:InverseAction_3
+    od:description "Gestalte den beweglichen Teil des Objektes oder des umgebenden Mediums unbeweglich, und den unbeweglichen beweglich."@de, "Make the moving part of the object or the surrounding medium immobile, and the immovable movable."@en, "Сделай движущуюся часть объекта или окружающую среду неподвижной, а неподвижную - подвижной."@ru ;
+    a od:Recommendation .
+
+tc:LocalQuality
+    od:LippertGlossaryNote "Another recent transition from a homogeneous structure to a heterogeneous one is in the development of distributed computing platforms such as the cloud."@en, "Changing the characteristics of something in a specific area (location) to gain the desired functionality will, in turn, increase the quality in that area."@en, "Improving local quality can improve efficiency."@en, "In the mechanical world, this type of specialization may be exemplified by a pencil with an eraser at one end. To achieve optimum function, each part must be placed in conditions that favor it."@en, "Local quality can also be achieved by having different parts of an object carry out different functions. Also referred to as specialization, this is observed in service-oriented architecture (SOA)."@en, "Optimum functions can be achieved by varying interactions over time for various characteristics of the system."@en, "Such improvement can result from the transition of a homogeneous to a heterogeneous structure for the object or its environment. This may result in the use of a gradient as that being created to produce multistate memory [38] which can replace binary memory for computer systems."@en, "Systems engineering is working to achieve local quality of systems through localization techniques. One such system that has automated this principle is self-positioning solar panels that can track the movement of the sun and reposition to optimize their energy producing ability."@en ;
+    od:hasAltshuller73Id "03" ;
+    od:hasAltshuller84Id "03" ;
+    od:Matrix2003Id "03" ;
+    od:hasRecommendation tc:LocalQuality_1, tc:LocalQuality_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of Local Quality"@en, "Prinzip der örtlichen Qualität"@de, "Schaffen optimaler Bedingungen"@de, "Приём местного качества"@ru .
+
+tc:LocalQuality_1
+    od:description "Every part of the object should be under conditions that are most conducive to its work."@en, "Für jedes Teil des Objektes sind solche Bedingungen zu sichern, die seiner Arbeit am zuträglichsten sind."@de, "Каждая часть объекта должна находиться в условиях, наиболее благоприятных для его работы."@ru ;
+    a od:Recommendation .
+
+tc:LocalQuality_2
+    od:description "Gehe von der homogenen Struktur des Objektes oder des umgebenden Mediums zu einer inhomogenen Struktur über."@de, "Transform the homogeneous structure of the object or the surrounding medium into an inhomogeneous structure."@en, "Однородная структура объекта или окружающей среды должна быть преобразована в неоднородную."@ru ;
+    a od:Recommendation .
+
+tc:MechanicalVibrations
+    od:LippertGlossaryNote "Full and complete utilization of the electromagnetic spectrum also utilizes this principle."@en, "Mechanical vibration requires understanding that a stable system is not always best and recognizes that there is a place for controlled instability or variation."@en, "Scheduling, queue handling, and randomness in systems demonstrate this principle."@en, "This principle is concerned with the use of vibration or oscillation to involve a regular, periodic variation in value about a mean."@en ;
+    od:hasAltshuller84Id "18" ;
+    od:Matrix2003Id "18" ;
+    od:hasRecommendation tc:MechanicalVibrations_1, tc:MechanicalVibrations_2, tc:MechanicalVibrations_3, tc:MechanicalVibrations_4, tc:MechanicalVibrations_5 ;
+    a od:Principle ;
+    skos:altLabel "Mechanical Oscillations"@en ;
+    skos:prefLabel "Principle of exploitation of mechanical vibrations"@en, "Prinzip der Ausnutzung mechanischer Schwingungen"@de, "Приём использования механических колебаний"@ru .
+
+tc:MechanicalVibrations_1
+    od:description "Use piezovibrators instead of mechanical ones."@en, "Verwende Piezovibratoren statt mechanischer Vibratoren."@de, "Вместо механических вибраторов должны использоваться пьезовибраторы."@ru ;
+    a od:Recommendation .
+
+tc:MechanicalVibrations_2
+    od:description "Nutze Ultraschallschwingungen in Verbindung mit elektromagnetischen Feldern."@de, "Use ultrasonic vibrations in conjunction with electromagnetic fields."@en, "Используйте ультразвуковые колебания в сочетании с электромагнитными полями."@ru ;
+    a od:Recommendation .
+
+tc:MechanicalVibrations_3
+    od:description "Versetze das Objekt in Schwingungen."@de, "Vibrate the object."@en, "Объект должен вибрировать."@ru ;
+    a od:Recommendation .
+
+tc:MechanicalVibrations_4
+    od:description "Exploit the eigen frequency."@en, "Nutze die Eigenfrequenz aus."@de, "Собственная частота должна эксплуатироваться."@ru ;
+    a od:Recommendation .
+
+tc:MechanicalVibrations_5
+    od:description "Falls eine solche Bewegung bereits vorliegt, erhöhe ihre Frequenz bis hin zur Ultaschallfrequenz."@de, "If such a movement already exists, increase its frequency, up to the ultrasonic frequency."@en, "Если такое движение уже существует, его частота должна быть увеличена до ультразвуковой."@ru ;
+    a od:Recommendation .
+
+tc:Mediator
+    od:LippertGlossaryNote "A mediator negotiates a temporary link between incompatible parties, functions, or conditions."@en, "Dedicated devices such as print servers also serve as mediators between computers and a printer and routers serve as mediators on a network."@en, "In system and software engineering, interface engineering accomplishes mediation using wrappers, mappings, and middleware."@en, "It uses an intermediate carrier, a blocker or a process, and any of these can easily be removed once the link is no longer needed."@en, "Mediators exist at interfaces, and they can manifest themselves in many ways."@en ;
+    od:hasAltshuller84Id "24" ;
+    od:Matrix2003Id "24" ;
+    od:hasRecommendation tc:Mediator_1, tc:Mediator_2 ;
+    a od:Principle ;
+    skos:prefLabel "Prinzip des Vermittlers"@de, "principle of the mediator"@en, "принцип посредника"@ru .
+
+tc:Mediator_1
+    od:description "Binde das Objekt an ein anderes leicht zu entfernendes Objekt."@de, "Connect the object to another easily removable object."@en, "Объект должен быть связан с другим легко удаляемым объектом."@ru ;
+    a od:Recommendation .
+
+tc:Mediator_2
+    od:description "Nutze ein Zwischenobjekt, das die Wirkung überträgt, weitergibt oder auf sich nimmt."@de, "Use an intermediate object that transmits or absorbs the effect."@en, "Используйте промежуточный объект, который передает или поглощает эффект."@ru ;
+    a od:Recommendation .
+
+tc:Nesting
+    od:LippertGlossaryNote "Another perspective of nesting is that of an object passing through a void in another object, such as is common in a camera’s zoom lens."@en, "In computer network communication, the use of tunneling is an example of this type of nesting."@en, "In computer science, this is most commonly referred to as encapsulation, in which data and functions are protected from “outside” influence."@en, "In computer systems, nesting of objects is manifest in programming through multiple layers of abstraction and inheritance as well as programming in layered computer network architecture such as the OSI model."@en, "Modulation, where a message signal is conveyed inside another signal that can be physically transmitted, is a type of nesting. "@en, "Nesting is the quality of being made to fit closely, to fit together, or to fit one inside of another."@en, "Nesting optimizes space utilization and can be used to protect objects. Subassemblies can exhibit this quality."@en, "Steganography, the hiding of information within digital images, can also be considered a special form of matrioshka."@en, "These wrappers allow ease of movement of information through a system that might reject the native form. Such wrappers are common in digital communications."@en, "Wrappers are another common artifact of computer data processing systems."@en ;
+    od:hasAltshuller73Id "07" ;
+    od:hasAltshuller84Id "07" ;
+    od:Matrix2003Id "07" ;
+    od:hasRecommendation tc:Nesting_1, tc:Nesting_2 ;
+    a od:Principle ;
+    skos:altLabel "Nested dolls"@en ;
+    skos:prefLabel "Principle of nesting (matryoshka)"@en, "Prinzip der Integration (Matrjoschka-Prinzip)"@de, "Приём вложенности («матрёшки»)"@ru .
+
+tc:Nesting_1
+    od:description "Bringe ein Objekt im Inneren eines anderen unter, das sich wiederum im Inneren eines dritten befindet."@de, "Place an object inside another, which in turn is inside a third."@en, "Объект размещается внутри другого, который, в свою очередь, находится внутри третьего."@ru ;
+    a od:Recommendation .
+
+tc:Nesting_2
+    od:description "An object passes through or fills the cavity of another object."@en, "Ein Objekt durchläuft oder füllt den Hohlraum eines anderen Objektes."@de, "Объект проходит через или заполняет полость другого объекта."@ru ;
+    a od:Recommendation .
+
+tc:NoPrinciple
+    a od:Principle ;
+    skos:prefLabel "Keine Empfehlung in der Matrix."@de, "No recommendation within the matrix."@en, "Нет рекомендаций в матрице."@ru .
+
+tc:PartialOrExcessEffect
+    od:LippertGlossaryNote "Approximations and estimations are examples of partial action."@en, "Excessive action results when more actions than are required are taken and the results are dealt with."@en, "Partial action results when fewer actions or less of an action is taken than would be required, and the results are dealt with."@en, "Perturbation analysis utilizes excessive action to change the state of a system."@en, "The use of a different form, or a combination, of energy can be used in this principle."@en, "This principle deals with cases where 100% action is difficult or impossible to perform."@en ;
+    skos:altLabel "Partial or Excessive Effect or Action"@en .
+
+tc:PartialOrExcessiveEffect
+    od:hasAltshuller73Id "16" ;
+    od:hasAltshuller84Id "16" ;
+    od:Matrix2003Id "16" ;
+    od:hasRecommendation tc:PartialOrExcessiveEffect_1 ;
+    a od:Principle ;
+    skos:altLabel "Prinzip der nicht vollständigen Lösung"@de ;
+    skos:prefLabel "Principle of partial or excessive effect"@en, "Prinzip der partiellen oder überschüssigen Wirkung"@de, "Приём частичного или избыточного действия"@ru .
+
+tc:PartialOrExcessiveEffect_1
+    od:description "If 100% of the required effect is difficult to achieve, then achieve a little less or a little bit more."@en, "Wenn 100% des erforderlichen Effekts schwer zu erzielen sind, erziele „ein bisschen weniger“ oder „ein bisschen mehr“."@de, "Если 100% требуемого эффекта трудно достичь, то достичь немного меньше или немного больше."@ru ;
+    a od:Recommendation .
+
+tc:PeriodicAction
+    od:LippertGlossaryNote "Additionally, both uniform and random patterns can be applied to the frequency and amplitude to alter the periodicity of the action."@en, "Continuous actions can be made periodic by changing how the action is done."@en, "In computer screens, the refresh frequency can be altered to suit the viewer’s requirements."@en, "In transmission of images, layers of the image are transmitted through bursts of data transmission providing an increasingly sharper image."@en, "Some major examples of this principle are: burst-mode transmissions, batch processing, and image projection."@en, "Variation can be introduced by changing the frequency or amplitude of the periodic action."@en ;
+    od:hasAltshuller73Id "19" ;
+    od:hasAltshuller84Id "19" ;
+    od:Matrix2003Id "19" ;
+    od:hasRecommendation tc:PeriodicAction_1, tc:PeriodicAction_2, tc:PeriodicAction_3 ;
+    a od:Principle ;
+    skos:altLabel "Prinzip der Impuls-Arbeitsweise"@de ;
+    skos:prefLabel "Principle of periodic action"@en, "Prinzip der periodischen Wirkung"@de, "Приём периодического действия"@ru .
+
+tc:PeriodicAction_1
+    od:description "Exploit the pauses between the pulses for another effect."@en, "Nutze die Pausen zwischen den Impulsen für eine andere Wirkung aus."@de, "Паузы между импульсами должны использоваться для другого эффекта."@ru ;
+    a od:Recommendation .
+
+tc:PeriodicAction_2
+    od:description "From the continuous action go over to a periodic one (impulse action)."@en, "Gehe von einer kontinuierlichen Wirkung zu einer periodischen (Impulswirkung) über."@de, "Перейти от непрерывного действия к периодическому (импульсное действие)."@ru ;
+    a od:Recommendation .
+
+tc:PeriodicAction_3
+    od:description "If the effect is already periodic, change the periodicity."@en, "Wenn die Wirkung bereits periodisch erfolgt, ändere die Periodizität."@de, "Если эффект уже периодический, периодичность должна быть изменена."@ru ;
+    a od:Recommendation .
+
+tc:PhaseTransition
+    od:LippertGlossaryNote "A change from physical to digital can also be considered a phase transition and is exemplified by the transition from postal mail to electronic mail."@en, "Materials that change phase (gas to liquid, liquid to solid, solid to gas) can be used to implement an effect on an object or system."@en, "Phase transitions are accommodated by alteration of other properties of the material, alterations which include volume changes and altered heat capacity which can be captured for benefit to the system."@en ;
+    od:hasAltshuller84Id "36" ;
+    od:Matrix2003Id "36" ;
+    od:hasRecommendation tc:PhaseTransition_1 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of applying phase transitions"@en, "Prinzip der Anwendung von Phasenübergängen"@de, "Приём применения фазовых переходов"@ru .
+
+tc:PhaseTransition_1
+    od:description "Exploit phenomena occurring during phase transitions, e.g. change in volume, evolution or absorption of heat, etc."@en, "Nutze bei Phasenübergängen auftretenden Erscheinungen, z. B. Volumenänderung, Wärmeentwicklung oder -absorption usw."@de, "Использовать явления, возникающие во время фазовых переходов, например, изменение объема, выделение или поглощение тепла и т. д."@ru ;
+    a od:Recommendation .
+
+tc:PneumaticOrHydraulicConstructions
+    od:LippertGlossaryNote "Data and information can be compressed for more rapid transmission."@en, "Packing materials utilize this principle in the form of adjustable air bags and moldable forms."@en, "System properties that can be considered for replacement include compressibility, flow, turbulence, springiness, and energy absorption."@en, "The energy absorption property of water is superior to that of air, and water has replaced air to cool microelectronics especially in large computers and data centers [10]."@en, "This principle replaces a solid part of an object with gas or liquid (air or water commonly)."@en ;
+    od:hasAltshuller73Id "29" ;
+    od:hasAltshuller84Id "29" ;
+    od:Matrix2003Id "29" ;
+    od:hasRecommendation tc:PneumaticOrHydraulicConstructions_1 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of the application of pneumatic or hydraulic constructions"@en, "Prinzip der Anwendung pneumatischer oder hydraulischer Konstruktionen"@de, "Приём применения пневмо- и гидросооружений"@ru .
+
+tc:PneumaticOrHydraulicConstructions_1
+    od:description "Ersetze schwere Teile des Objektes durch gasförmige oder flüssige, wie aufgeblasene oder mit Flüssigkeit gefüllte Teile, Luftkissen, hydrostatische oder hydroreaktive Teile."@de, "Replace heavy parts of the object by gaseous or liquid parts, such as inflated or liquid-filled parts, air cushions, hydrostatic or hydroreactive parts."@en, "Вместо тяжелых частей объекта введите газообразные или жидкие части, такие как надутые или заполненные жидкостью части, воздушные подушки, гидростатические или гидрореактивные части."@ru ;
+    a od:Recommendation .
+
+tc:PorousMaterials
+    od:LippertGlossaryNote "In digital transmissions, protocols often contain “reserved” fields that are unused (or empty) space."@en, "In the physical construction of a system, empty space is left for room to expand the system."@en, "It should not be limited just to materials as it can be applied equally as well to space, time, fields, functions, and information."@en, "Materials (gasses, solids, and liquids) can be made more porous by creating voids. Such voids change the condition of the materials and increase their surface area."@en, "This principle can be utilized to increase air flow or achieve filtering."@en ;
+    od:hasAltshuller84Id "31" ;
+    od:Matrix2003Id "31" ;
+    od:hasRecommendation tc:PorousMaterials_1, tc:PorousMaterials_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of using porous materials"@en, "Prinzip der Verwendung poröser Werkstoffe"@de, "Приём использования пористых материалов"@ru .
+
+tc:PorousMaterials_1
+    od:description "Führe das Objekt porös aus, oder benutze zusätzlich poröse Elemente (Einsatzstücke, Überzüge usw.)."@de, "The object should be porous, or additional porous elements (inserts, coatings, etc.) should be used."@en, "Объект должен быть пористым, или следует использовать дополнительные пористые элементы (вставки, покрытия и т. д.)."@ru ;
+    a od:Recommendation .
+
+tc:PorousMaterials_2
+    od:description "If the object is already porous, fill the pores with a suitable substance."@en, "Wenn das Objekt bereits porös ausgeführt ist, fülle die Poren mit einem geeigneten Stoff."@de, "Если объект уже пористый, заполните поры подходящим веществом."@ru ;
+    a od:Recommendation .
+
+tc:PreferredAction
+    od:hasAltshuller73Id "10" ;
+    od:hasAltshuller84Id "10" ;
+    od:Matrix2003Id "10" ;
+    od:hasRecommendation tc:PreferredAction_1, tc:PreferredAction_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of the preferred action"@en, "Prinzip der vorherigen Wirkung"@de, "Vorfertigung"@de, "Приём предварительного действия (заранее выполненное действие)"@ru .
+
+tc:PreferredAction_1
+    od:description "Bereite die Objekte vorab so vor, dass sie ohne Zeitverlust vom geeignetsten Ort aus wirken können."@de, "Prepare the objects in advance in such a way that they can work without delay at the most suitable place."@en, "Объекты сначала должны быть настроены таким образом, чтобы они могли работать без задержки из наиболее подходящего места."@ru ;
+    a od:Recommendation .
+
+tc:PreferredAction_2
+    od:description "Achieve the required effect beforehand (completely or partially)."@en, "Erziele die erforderliche Wirkung vorab (vollständig oder auch teilweise)."@de, "Требуемый эффект должен быть достигнут заранее (полностью или частично)."@ru ;
+    a od:Recommendation .
+
+tc:PreliminaryAction
+    od:LippertGlossaryNote "In computer systems, preliminary action can be implemented as preprocessing, prefetching, and caching of information. Another means of implementation is to place an object in a position that is in advance of the object’s need, so it can go into action from the most convenient location. Preliminary action is a critical part of lean manufacturing and process improvement and applies to any process that uses materials or information."@en, "One way to implement this principle is by performing required changes to an object completely or partially in advance. This is an anticipatory application; as such, it is preventative maintenance."@en, "Preliminary action can be used to increase performance and safety, as well as to support correct actions and outcomes."@en, "The principle of preliminary action refers to the performance of an action earlier in time than the occurrence of another event."@en, "This principle should not be confused with preliminary counteraction that requires an opposing action."@en ;
+    od:hasAltshuller73Id "11" ;
+    od:hasAltshuller84Id "11" ;
+    od:Matrix2003Id "11" ;
+    od:hasRecommendation tc:PreliminaryAction_1, tc:PreliminaryAction_2 ;
+    a od:Principle ;
+    skos:altLabel "Vorbeugen"@de, "prevention"@en ;
+    skos:prefLabel "Preliminary Action"@en, "Principle of preliminary action"@en, "Prinzip der Prävention"@de, "Приём заранее подложенной подушки"@ru .
+
+tc:PreliminaryAction_1
+    od:description "Compensate the relatively low reliability of the object by means previously provided."@en, "Kompensiere die relativ geringe Zuverlässigkeit des Objektes durch vorher bereitgestellte Hilfsmittel."@de, "Относительно низкая надежность объекта компенсируется ранее предоставленными средствами."@ru ;
+    a od:Recommendation .
+
+tc:PreliminaryAction_2
+    od:description "A device is foreseen for performing rescue and other emergency actions."@en, "Sieh eine Einrichtung zur Durchführung von Rettungs- und anderen Notfallmaßnahmen vor."@de, "Заранее предусматривается устройство для выполнения спасательных и других аваририйных действий."@ru ;
+    a od:Recommendation .
+
+tc:ReplacementOfMechanicalSchemes
+    od:LippertGlossaryNote "A good example of an implementation of this principle is the development of voice recognition capabilities that are replacing the keyboard as an interface to a computer."@en, "In systems where there is a human in the loop, the mechanical system can be replaced with a sensory system."@en, "The replacement of mechanical systems with digital systems, such as the replacement of the punched paper tape reader with a computer file system, has been taking place for many years."@en, "These substitutions change or replace the principle of operation."@en, "This principle deals with the substitution of interactions, devices, mechanisms, and systems with physical fields or other forms, actions, and states."@en ;
+    od:hasAltshuller84Id "28" ;
+    od:Matrix2003Id "28" ;
+    od:hasRecommendation tc:ReplacementOfMechanicalSchemes_1, tc:ReplacementOfMechanicalSchemes_2, tc:ReplacementOfMechanicalSchemes_3 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of the replacement of mechanical schemes"@en, "Prinzip des Austauschs mechanischer Wirkschemata"@de, "Приём замены механической схемы"@ru .
+
+tc:ReplacementOfMechanicalSchemes_1
+    od:description "Nutze die Felder in Kombination mit Ferromagnetteilchen."@de, "Use the fields in combination with ferromagnetic particles."@en, "Использовать поля в сочетании с ферромагнитными частицами."@ru ;
+    a od:Recommendation .
+
+tc:ReplacementOfMechanicalSchemes_2
+    od:description "Exploit electric, magnetic or electromagnetic fields for an interaction with the object."@en, "Nutze elektrische, magnetische bzw. elektromagnetische Felder für eine Wechselwirkung mit dem Objekt."@de, "Использовать электрические, магнитные или электромагнитные поля для взаимодействия с объектом."@ru ;
+    a od:Recommendation .
+
+tc:ReplacementOfMechanicalSchemes_3
+    od:description "Change from immovable fields to moving ones, from constant fields to changing ones, from structureless to structured fields."@en, "Gehe von unbeweglichen Feldern zu bewegten über, von konstanten zu veränderlichen, von strukturlosen zu strukturierten Feldern."@de, "Переходить от неподвижных полей к движущимся, от постоянных к меняющимся, от бесструктурных к структурированным полям."@ru ;
+    a od:Recommendation .
+
+tc:RushingThrough
+    od:LippertGlossaryNote "The speed of the action can be increased to reduce or eliminate the bad effects."@en, "There is no analogy to this in the digital systems domain."@en, "This is why running over hot coals does less damage to the soles of the feet than walking over them would."@en, "This principle is useful when overcoming something that goes wrong at one given speed."@en ;
+    od:hasAltshuller73Id "21" ;
+    od:hasAltshuller84Id "21" ;
+    od:Matrix2003Id "21" ;
+    od:hasRecommendation tc:RushingThrough_1 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of rushing through"@en, "Prinzip des Durcheilens"@de, "Приём проскока"@ru .
+
+tc:RushingThrough_1
+    od:description "Der Prozess oder einzelne seiner Etappen, z.B. schädliche oder gefährliche, werden mit hoher Geschwindigkeit durchlaufen."@de, "The process or any of its stages, such as harmful or dangerous, are done at high speed."@en, "Процесс или любые его стадии, как вредные или опасные, должны проходить на большой скорости."@ru ;
+    a od:Recommendation .
+
+tc:Segmentation
+    od:LippertGlossaryNote "A third approach applies when an object is already segmented and requires increasing the degree of segmentation. In systems engineering, this is manifest by the definition of increasing levels of sub system definition."@en, "Dividing an object into independent parts results in segmentation."@en, "Division of a means of transport into smaller and smaller independent parts (used to improve air flow) is an innovation that has been applied in improving the cooling of electronics [36]."@en, "In addition, segmentation can alter system properties and introduce new properties."@en, "In keeping with the true sense of division of parts, the application of segmentation to programming is done by object-oriented methods, or functional modularity. This type of segmentation is used in systems engineering to achieve decoupling between systems, to implement service-oriented architecture (SOA), and to develop a work breakdown structure."@en, "In software systems, this segmentation has been proposed to be the division into intelligent agents [18]."@en, "Isolation of the harmful properties into an individual segment allows such properties to be considered independently of the rest of the system."@en, "Making an object sectional — easy to take apart and put together — was an innovation which resulted in “ready to assemble” furniture. When applied to software and systems, this approach invokes the principles of modular design."@en, "Segmentation has already been implemented within computer systems in transitioning from mainframes to personal computers."@en, "Segmentation is the process of dividing a system into parts. Such a division permits the isolation of system properties."@en, "The divisions applied can be real or artificial, psychological, or physical."@en ;
+    od:hasAltshuller73Id "01" ;
+    od:hasAltshuller84Id "01" ;
+    od:Matrix2003Id "01" ;
+    od:hasRecommendation tc:Segmentation_1, tc:Segmentation_2, tc:Segmentation_3 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of decomposition or segmentation"@en, "Prinzip der Zerlegung bzw. Segmentierung"@de, "Приём дробления"@ru .
+
+tc:Segmentation_1
+    od:description "Divide the object into independent, equal parts."@en, "Zerlege das Objekt in unabhängige, gleiche Teile."@de, "Объект должен быть разделен на независимые равные части."@ru ;
+    a od:Recommendation .
+
+tc:Segmentation_2
+    od:description "Führe das Objekt zerlegbar aus."@de, "Make the object to be dismantled."@en, "Объект должен быть разложен."@ru ;
+    a od:Recommendation .
+
+tc:Segmentation_3
+    od:description "Erhöhe den Grad der Zerlegung des Objektes."@de, "Increase the degree of decomposition of the object."@en, "Степень разложения объекта должна быть увеличена."@ru ;
+    a od:Recommendation .
+
+tc:SelfService
+    od:LippertGlossaryNote "A common computer example is the automated spelling and grammar checking (in a word processor) which is executed while the user is typing."@en, "Automatic detection and treatment for viruses and worms is also a type of self-service performed by a computer."@en, "Computer viruses and worms are a special case of self-service through self-replication."@en, "It can overlap with feedback for timing and often makes use of excess or wasted material and energy."@en, "One common application of self-service is a self-healing cutting surface."@en, "Programs self-service through autoupdating, and clocks can self-synchronize."@en, "The object services itself, repairs itself, or carries out supplementary useful actions."@en, "The self-service can be the result of physical, chemical, geometric, spatial, or temporal arrangement of actions or objects."@en, "This principle refers to the ability of an object or system to process related functions in conjunction with its primary function."@en ;
+    od:hasAltshuller73Id "25" ;
+    od:hasAltshuller84Id "25" ;
+    od:Matrix2003Id "25" ;
+    od:hasRecommendation tc:SelfService_1, tc:SelfService_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of self-service"@en, "Prinzip der Selbstbedienung"@de, "Von-Selbst-Arbeitsweise"@de, "Приём самообслуживания"@ru .
+
+tc:SelfService_1
+    od:description "Nutze Abprodukte, z. B. Energie und Stoff."@de, "Use waste products, e.g. energy and material."@en, "Использовать отходы, например, энергия и вещество."@ru ;
+    a od:Recommendation .
+
+tc:SelfService_2
+    od:description "Das Objekt bedient sich selbst oder führt Hilfs- und Reparaturmaßnahmen selbst aus."@de, "The object should be self-serving and carry out auxiliary and repair work itself."@en, "Объект должен быть самообслуживаемым и сам выполнять вспомогательные и ремонтные работы."@ru ;
+    a od:Recommendation .
+
+tc:Separation
+    od:LippertGlossaryNote "Extracting only the necessary part or property from an object is exemplified by the isolation of a signal from a noisy transmission; or, in the case of computer systems, the extraction of user interface components (monitors and keyboards) from the processing unit."@en, "Extraction can enable reuse and can be formalized through the development of patterns. It implies a refinement of the system."@en, "In a computer system, extraction is represented in the identification and removal of bugs and in the correction of system failures."@en, "In a computer, the removal of heat is an extraction."@en, "In contrast to segmentation, extraction involves the removal of things from the system. Extraction requires the separation of useful or harmful parts or properties from the whole system. This allows what is needed, or conversely what is not needed, to be taken from the system. This can be achieved by extracting the cause of the undesirable property or function."@en, "In process improvement, extraction is achieved by the application of Lean principles [37]."@en, "Similarly, extraction of the disturbing part or property from an object is seen in the development of an X-ray shield that has cut-outs in the shape of the lungs to better protect the parts of the body that do not need to be exposed."@en ;
+    od:hasAltshuller73Id "02" ;
+    od:hasAltshuller84Id "02" ;
+    od:Matrix2003Id "02" ;
+    od:hasRecommendation tc:Separation_1, tc:Separation_2 ;
+    a od:Principle ;
+    skos:altLabel "Extraction"@en ;
+    skos:prefLabel "Gesonderte Behandlung"@de, "Principle of separation"@en, "Prinzip der Abtrennung"@de, "Приём вынесения"@ru .
+
+tc:Separation_1
+    od:description "Remove the disturbing part or property from the object."@en, "Trenne vom Objekt das störende Teil, die störende Eigenschaft, ab."@de, "Из объекта отделить мешающую часть с вредным свойством."@ru ;
+    a od:Recommendation .
+
+tc:Separation_2
+    od:description "Divide the object into different parts."@en, "Zerlege das Objekt in unterschiedliche Teile."@de, "Предлагается разделить объект на разные части."@ru ;
+    a od:Recommendation .
+
+tc:SphericalShape
+    od:LippertGlossaryNote "Basic structuring of networks and information also show a shift from more linear"@en, "Circular buffering also demonstrates this principle."@en, "Computer program processing has also gone from linear (procedural) code to nonlinear (event oriented)."@en, "Data input to computers has followed this principle and has moved from cards and linear tape to circular disks."@en, "Feedback can create a spherical path in a system."@en, "Spheroidality is achieved by replacing linear attributes with curved or spherical ones."@en, "This can be a change from linear to nonlinear, or it can be a change in a coordinate system (Cartesian to polar)."@en, "arrangements (e.g., hierarchical) to more circular ones (e.g., graphs)."@en ;
+    od:hasAltshuller73Id "14" ;
+    od:hasAltshuller84Id "14" ;
+    od:Matrix2003Id "14" ;
+    od:hasRecommendation tc:SphericalShape_1, tc:SphericalShape_2, tc:SphericalShape_3 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of the ball similarity"@en, "Prinzip der sphärischen Form"@de, "Приём сфероидальности"@ru .
+
+tc:SphericalShape_1
+    od:description "From straight contours go to curved ones, from flat surfaces go to spherical ones."@en, "Gehe von geradlinigen Konturen zu gekrümmten, von ebenen Flächen zu sphärischen über."@de, "От прямых контуров переходить к изогнутым, от плоских поверхностей к сферическим."@ru ;
+    a od:Recommendation .
+
+tc:SphericalShape_2
+    od:description "Gehe von einer geradlinigen Bewegung zur Rotation über."@de, "Move from the rectilinear motion to rotation."@en, "От прямолинейного движения переходить к вращению."@ru ;
+    a od:Recommendation .
+
+tc:SphericalShape_3
+    od:description "Use rollers, balls, spirals."@en, "Verwende Rollen, Kugeln, Spiralen."@de, "Используются ролики, шарики, спирали."@ru ;
+    a od:Recommendation .
+
+tc:StrongOxidants
+    od:LippertGlossaryNote "An example is the format in which information is held. The format can obfuscate or facilitate use and understanding of the information."@en, "Application to the digital domain requires focusing on the catalytic function."@en, "Optimization of functions can be achieved in several ways in the digital environment."@en, "The various states of oxygen can be leveraged as a catalyst for change, improving an action or function. Catalysts can be used to accelerate or decelerate an action and support optimization of functions."@en, "Visualization is another catalyst for understanding."@en ;
+    od:hasAltshuller84Id "38" ;
+    od:Matrix2003Id "38" ;
+    od:hasRecommendation tc:StrongOxidants_1, tc:StrongOxidants_2, tc:StrongOxidants_3, tc:StrongOxidants_4, tc:StrongOxidants_5 ;
+    a od:Principle ;
+    skos:altLabel "Accelerated Oxidation"@en ;
+    skos:prefLabel "Principle of the application of strong oxidants"@en, "Prinzip der Anwendung starker Oxidationsmittel"@de, "Приём применения сильных окислителей"@ru .
+
+tc:StrongOxidants_1
+    od:description "Ersetze normale atmosphärische Luft durch aktivierte."@de, "Replace normal atmospheric air by activated."@en, "Заменить нормальный атмосферный воздух активированным."@ru ;
+    a od:Recommendation .
+
+tc:StrongOxidants_2
+    od:description "Ersetze die aktivierte Luft durch Sauerstoff."@de, "Replace the activated air by oxygen."@en, "Заменить активированный воздух кислородом."@ru ;
+    a od:Recommendation .
+
+tc:StrongOxidants_3
+    od:description "Expose air or oxygen to ionizing radiation."@en, "Setze Luft oder Sauerstoff der Einwirkung ionisierender Strahlung aus."@de, "Воздух или кислород должны подвергаться воздействию ионизирующего излучения."@ru ;
+    a od:Recommendation .
+
+tc:StrongOxidants_4
+    od:description "Use ozonated oxygen."@en, "Verwende ozonierten Sauerstoff."@de, "Используйте озонированный кислород."@ru ;
+    a od:Recommendation .
+
+tc:StrongOxidants_5
+    od:description "Ersetze ozonierten oder ionisierten Sauerstoff durch Ozon."@de, "Replace ozonated or ionized oxygen with ozone."@en, "Заменить озонированный или ионизированный кислород озоном."@ru ;
+    a od:Recommendation .
+
+tc:ThermalExpansion
+    od:LippertGlossaryNote "In systems where there is a heat-induced change, the heat can be used to benefit the system, or it can be negated."@en, "The principle can be extended to other phenomena such as gravity, light, and pressure."@en, "This principle uses the conversion of heat energy into mechanical energy."@en ;
+    od:hasAltshuller84Id "37" ;
+    od:Matrix2003Id "37" ;
+    od:hasRecommendation tc:ThermalExpansion_1, tc:ThermalExpansion_2 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of application of thermal expansion"@en, "Prinzip der Anwendung von Wärmeausdehnung"@de, "Приём применения термического расширения"@ru .
+
+tc:ThermalExpansion_1
+    od:description "Exploit the thermal expansion or compression of materials."@en, "Nutze die Wärmedehnung oder -verdichtung von Werkstoffen aus."@de, "Следует использовать термическое расширение или сжатие материалов."@ru ;
+    a od:Recommendation .
+
+tc:ThermalExpansion_2
+    od:description "Nutze mehrere Werkstoffe mit unterschiedlicher Wärmedehnungszahl."@de, "Use several materials with different thermal expansion coefficients."@en, "Использовать несколько материалов с различными коэффициентами теплового расширения."@ru ;
+    a od:Recommendation .
+
+tc:TransformationOfHarmfulIntoUseful
+    od:LippertGlossaryNote "Combining two harmful factors can eliminate both; increasing the degree of harm can sometimes eliminate it completely."@en, "Often the waste can be converted into something that can be of use to another part of the object or system [41]."@en, "The conversion of harm into benefit for a system requires a change in attitude."@en, "The conversion of waste heat to power using a turbine is an example of this principle."@en, "The system must be examined for wasted materials, energy, information, functions, space, time, etc. to find the harmful factors. Once identified, they can be dealt with."@en ;
+    od:hasAltshuller73Id "22" ;
+    od:hasAltshuller84Id "22" ;
+    od:Matrix2003Id "22" ;
+    od:hasRecommendation tc:TransformationOfHarmfulIntoUseful_1, tc:TransformationOfHarmfulIntoUseful_2, tc:TransformationOfHarmfulIntoUseful_3 ;
+    a od:Principle ;
+    skos:altLabel "Transform Damage into Use"@en ;
+    skos:prefLabel "Principle of Transformation of Harmful into Useful"@en, "Prinzip der Umwandlung von Schädlichem in Nützliches"@de, "Приём превращения вредного в полезное"@ru .
+
+tc:TransformationOfHarmfulIntoUseful_1
+    od:description "Increase a harmful factor to such an extent that it ceases to be harmful."@en, "Verstärke einen schädlichen Faktor bis zu einem solchen Grade, dass er aufhört, schädlich zu sein."@de, "Вредный фактор должен быть увеличен до такой степени, пока он перестает быть вредным."@ru ;
+    a od:Recommendation .
+
+tc:TransformationOfHarmfulIntoUseful_2
+    od:description "Beseitige einen schädlichen Faktor durch Überlagerung mit anderen schädlichen Faktoren."@de, "Eliminate a harmful factor by superimposing it on other harmful factors."@en, "Вредный фактор следует устранить путем наложения его на другие вредные факторы."@ru ;
+    a od:Recommendation .
+
+tc:TransformationOfHarmfulIntoUseful_3
+    od:description "Nutze schädliche Faktoren – insbesondere die schädliche Einwirkung des Mediums – für die Erzielung eines positiven Effektes."@de, "Use harmful Factors - especially the harmful effects of the medium - for the achievement of a positive effect."@en, "Вредные факторы - особенно вредные воздействия среды - должны использоваться для достижения положительного эффекта."@ru ;
+    a od:Recommendation .
+
+tc:TransformationOfProperties
+    od:LippertGlossaryNote "In analytics, transformations such as the Fourier transform are used to decompose functions into other functions."@en, "The transformation can be to a physical state, a change in concentration or density, or a change in the degree of flexibility. Additionally, changes in geometry or configuration can be transformations."@en, "The use of parameters to dynamically customize a computer program supports this principle."@en, "Transforming or changing a property can accommodate useful benefits."@en ;
+    a od:Principle ;
+    skos:prefLabel "Transformation of Properties"@en .
+
+tc:TransitionToAnotherDimension
+    od:LippertGlossaryNote "All dimensions are considered by this principle. Vertical to horizontal, straight or perpendicular to diagonal, two dimensional to three dimensional or to four dimensional are all transitions into new dimensions."@en, "Computer memory caching can transition from a permanent (disk) to a temporary (RAM) dimension."@en, "Computer-based visualization allows transition from two dimensions to three or four and beyond into augmented and virtual reality."@en, "Disruptive technologies, developed outside of the normal technology strategy, can be in a different dimension."@en, "Format changes, such as binary to hex, can also be considered dimensional changes."@en, "These transitions can be applied multiple times and in either (or all) directions."@en, "This change in dimension allows their undetected maturation."@en ;
+    od:hasAltshuller84Id "17" ;
+    od:Matrix2003Id "17" ;
+    od:hasRecommendation tc:TransitionToAnotherDimension_1, tc:TransitionToAnotherDimension_2, tc:TransitionToAnotherDimension_3, tc:TransitionToAnotherDimension_4 ;
+    a od:Principle ;
+    skos:prefLabel "Principle of transition to another dimension"@en, "Prinzip des Übergangs in eine andere Dimension"@de, "Приём перехода в другое измерение"@ru .
+
+tc:TransitionToAnotherDimension_1
+    od:description "Instead of arrangement in only a layer arrange objects in multiple layers. "@en, "Ordne die Objekte statt in nur einer Ebene in mehreren Ebenen angeordnet."@de, "Вместо размещения только в один слой размещать объекты в нескольких слоях."@ru ;
+    a od:Recommendation .
+
+tc:TransitionToAnotherDimension_2
+    od:description "Stelle das Objekt geneigt auf."@de, "The object is inclined to be placed."@en, "Объект размещать склонным образом."@ru ;
+    a od:Recommendation .
+
+tc:TransitionToAnotherDimension_3
+    od:description "Exploit the back of the given object."@en, "Nutze die Rückseite des gegebenen Objektes aus."@de, "Использовать обратную сторону данного объекта."@ru ;
+    a od:Recommendation .
+
+tc:TransitionToAnotherDimension_4
+    od:description "Bei Schwierigkeiten der Bewegung eines Objektes längs einer Linie gehe zu zwei Dimensionen über, d.h. bewege es in einer Ebene. Analog werden Schwierigkeiten einer zweidimensionalen Bewegung von Objekten durch Übergang zum dreidimensionalen Raum beseitigt."@de, "Difficulties from object's motion on a line are eliminated when the object moves in two dimensions. Difficulties associated with the movement of objects on a plane are eliminated by the transition to three-dimensional space."@en, "Трудности, возникающие в результате привязки движения объекта к линии, устраняются, когда объект перемещается в двух измерениях, то есть в плоскости. Трудности, связанные с перемещением объектов на плоскости устраняются при переходе в трехмерное пространство."@ru ;
+    a od:Recommendation .
+
+tc:Universality
+    od:LippertGlossaryNote "Additionally, universality can refer to the same requirement or use of different objects for the same purpose or result."@en, "Allowing customization, patterns form the foundation for reuse."@en, "In systems engineering, this is manifest in localization and multifunctional resources."@en, "Objects can be adjusted by removing system elements, thereby allowing a single object to perform several different functions."@en, "Patterns are derived by the recognition of universality."@en, "This universality can refer to a feature, an action or a condition of the system over space and/or time as well as the use of an object for different purposes."@en, "To achieve this result, a system can be made more dynamic, with interchangeable elements, or the system can use adjustable features."@en, "Universality addresses making a system more uniform and more comprehensive in its function."@en ;
+    od:hasAltshuller73Id "06" ;
+    od:hasAltshuller84Id "06" ;
+    od:Matrix2003Id "06" ;
+    od:hasRecommendation tc:Universality_1 ;
+    a od:Principle ;
+    skos:prefLabel "Mehrzwecknutzung"@de, "Principle of universality"@en, "Prinzip der Universalität"@de, "Приём универсальности"@ru .
+
+tc:Universality_1
+    od:description "Das Objekt erfüllt mehrere unterschiedliche Funktionen, wodurch weitere gesonderte Objekte überflüssig werden."@de, "The object fulfills several different functions, which makes additional separate objects superfluous."@en, "Объект выполняет несколько различных функций, что делает ненужными дополнительные объекты."@ru ;
+    a od:Recommendation .
+
+tc:UseInertMedium
+    od:LippertGlossaryNote "A clean room is a good example of an inert environment."@en, "A test environment (harness) for system testing and a virtual sandbox are both examples of inert environments."@en, "An inert environment is a neutral atmosphere or environment that supports a desired function."@en, "Implementation of this principle requires first the determination of what it is which is preventing the desired function and then requires the creation of the inert environment to protect or enable that function."@en, "In operational environments, this would be the removal of extraneous electromagnetic emissions from the environment of the system."@en, "This is often achieved through shielding."@en .
+

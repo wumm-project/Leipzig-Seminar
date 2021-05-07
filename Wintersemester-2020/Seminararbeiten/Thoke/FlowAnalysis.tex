@@ -1,8 +1,9 @@
 % Einfache LaTeX-Vorlage für Texte
 \documentclass[a4paper,11pt]{article}
-
 \usepackage{ls}
 \usepackage[main=english,russian]{babel}
+
+\newcommand{\HGG}[1]{\begin{quote}\textbf{Anmerkung HGG:} #1\end{quote}}
 
 \newenvironment{code}{\tt \begin{tabbing}
 \hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
@@ -51,7 +52,7 @@
     \cite{TOP} and further own investigations. The work fits into the activities
     of the \emph{WUMM Project} \cite{WUMM} to accompany the TOP project and to
     transfer it into the language of modern semantic concepts
-    \cite{WUMM-Ontology}.  The work therefore consists of two parts -- a
+    \cite{WUMMTOP}.  The work therefore consists of two parts -- a
     \emph{turtle file}, in which the semantic modelling is performed based on the
     SKOS framework \cite{SKOS}, and \emph{this elaboration}, in which the
     backgrounds and motivations of the concrete modelling decisions are detailed.
@@ -66,7 +67,7 @@
     played a role in concrete modelling.
 
     The most comprehensive source on issues of TRIZ modelling of flows and
-    methodological issues of flow analysis is the thesis \cite{Lebedyev2015} by
+    methodological issues of flow analysis is the thesis \cite{Lebedyev2011} by
     Yuri Lebedyev, which he submitted in 2015 under the supervision of S.A. 
     Logvinov for graduation as TRIZ Master.
 
@@ -759,7 +760,7 @@
         point of view needs to adress which problematic effects can be solved using certain techniques. Further more, we need a map which decodes what
         properties of components can cause components to occur harmful properties, like grey zones, stagnation zones and so on. 
         But to establish these performative aspects the descriptive flow model needs to be improved as well. 
-        Beside having properties for static components, which has already been regarded by Lyubomirsky and improved by Lebedev (like capacity or conductivity),
+        Beside having properties for static components, which has already been regarded by Lyubomirsky and improved by Lebedyev (like capacity or conductivity),
         \texttt{dynamic properties of flow}, for example resonance or flow rate, have to be
         defined to model how specific flow properties emerge out of the constellation of certain configuration of its static components and how they can be affected
         changing them.
