@@ -44,7 +44,7 @@ ex:Fuel
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation tc:ClosedFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank, ex:FuelSupplyPipe, ex:CombustionChamber ;
+  od:hasStaticFlowComponent ex:IntakeValve, ex:InletCamshaft, ex:FuelPump, ex:FuelTank, ex:FuelSupplyPipe, ex:CombustionChamber ;
   skos:prefLabel "The Fuel Flow"@en, "Der Kraftstofffluss"@de .
 
 ex:InletCamshaft
@@ -84,7 +84,7 @@ ex:Air
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:ExternalSource ;
-  od:hasStaticFlowComponent ex:IntakeValve, ex:AirSupplyPipe, ex:Atmosphere, ex:Compressor, ex:CombustionChamber ;
+  od:hasStaticFlowComponent ex:IntakeValve, ex:InletCamshaft, ex:AirSupplyPipe, ex:Atmosphere, ex:Compressor, ex:CombustionChamber ;
   skos:prefLabel "the air flow"@en, "der Luftstrom"@de ;
   skos:note "refers to the air that is needed to ignite the fuel, not external air for cooling (we use a water cooling model here)" .
 
@@ -108,6 +108,11 @@ ex:Compressor
   a tc:Pump ;
   skos:prefLabel "compressor"@en, "Kompressor"@de .
 
+ex:InletCamshaft
+  od:specialCase ex:Air, ex:InternalCombustionEngine ;
+  a tc:ControlUnit ;
+  skos:prefLabel "inlet camshaft"@en, "Einlassnockenwelle"@de .
+
 ex:IntakeValve
   od:specialCase ex:Air, ex:InternalCombustionEngine ;
   a tc:Valve ;
@@ -120,13 +125,23 @@ ex:AirFuelMixture
   od:hasFlowFunctionality tc:UsefulFlow;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:ExternalSource ;
-  od:hasStaticFlowComponent ex:IntakeValve, ex:ExhaustValve, ex:CombustionChamber, ex:SparkPlug, ex:Piston ;
+  od:hasStaticFlowComponent ex:IntakeValve, ex:InletCamshaft, ex:ExhaustValve, ex:ExhaustCamshaft, ex:CombustionChamber, ex:SparkPlug, ex:Piston ;
   skos:prefLabel "air fuel mixture"@en, "Kraftstoff-Luft-Gemisch"@de .
+
+ex:InletCamshaft
+  od:specialCase ex:AirFuelMixture, ex:InternalCombustionEngine ;
+  a tc:ControlUnit ;
+  skos:prefLabel "inlet camshaft"@en, "Einlassnockenwelle"@de .
 
 ex:IntakeValve
   od:specialCase ex:AirFuelMixture, ex:InternalCombustionEngine ;
   a tc:Potential, tc:Valve ;
   skos:prefLabel "intake valve"@en, "Einspritzventil"@de .
+
+ex:ExhaustCamshaft
+  od:specialCase ex:AirFuelMixture, ex:InternalCombustionEngine ;
+  a tc:ControlUnit ;
+  skos:prefLabel "exhaust camshaft"@en, "Auslassnockenwelle"@de .
 
 ex:ExhaustValve
   od:specialCase ex:AirFuelMixture, ex:InternalCombustionEngine ;
@@ -155,7 +170,7 @@ ex:Heat
   od:hasFlowFunctionality tc:UsefulFlow, tc:HarmfulFlow ;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:CombustionChamber, ex:SparkPlug, ex:IntakeValve, ex:ExhaustValve, ex:Cylinder, ex:Piston ;
+  od:hasStaticFlowComponent ex:CombustionChamber, ex:SparkPlug, ex:IntakeValve, ex:InletCamshaft, ex:ExhaustValve, ex:ExhaustCamshaft, ex:Cylinder, ex:Piston ;
   skos:prefLabel "the heat flow"@en, "thermischer Fluss"@de .
   skos:note "the heat flow is the result of the ignition process of the air fuel mixture in the combustion chamber which powers the piston" .
 
@@ -169,10 +184,20 @@ ex:CombustionChamber
   a tc:Channel ;
   skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de .
 
+ex:InletCamshaft
+  od:specialCase ex:Heat, ex:InternalCombustionEngine ;
+  a tc:ControlUnit ;
+  skos:prefLabel "inlet camshaft"@en, "Einlassnockenwelle"@de .
+
 ex:IntakeValve
   od:specialCase ex:Heat, ex:InternalCombustionEngine ;
   a tc:Potential, tc:Valve ;
   skos:prefLabel "intake valve"@en, "Einspritzventil"@de .
+
+ex:ExhaustCamshaft
+  od:specialCase ex:Heat, ex:InternalCombustionEngine ;
+  a tc:ControlUnit ;
+  skos:prefLabel "exhaust camshaft"@en, "Auslassnockenwelle"@de .
 
 ex:ExhaustValve
   od:specialCase ex:Heat, ex:InternalCombustionEngine ;
@@ -282,7 +307,7 @@ ex:Exhaust
   od:hasFlowFunctionality tc:HarmfulFlow ;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, ex:Atmosphere, ex:ExhaustValve ;
+  od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, ex:Atmosphere, ex:ExhaustValve, ex:ExhaustCamshaft ;
   skos:prefLabel "the exhaust flow"@en, "Abgasstrom"@de .
 
 ex:CombustionChamber
@@ -393,7 +418,7 @@ ex:FuelAdditive
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation tc:ClosedFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank, ex:FuelSupplyPipe, ex:CombustionChamber ;
+  od:hasStaticFlowComponent ex:IntakeValve, ex:InletCamshaft, ex:FuelAdditivePump, ex:FuelAdditiveTank, ex:FuelAdditiveSupplyPipe, ex:CombustionChamber ;
   skos:prefLabel "flow of fuel additive"@en, "Fluss des Kraftstoffzusatzes"@de .
 
 ex:InletCamshaft
