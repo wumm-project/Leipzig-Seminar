@@ -1,0 +1,370 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+@prefix ex: <http://example.orf/EvolutionExample/Boats/> .
+
+<http://opendiscovery.org/rdg/Ontologies/FunctionalAnalysis/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    a owl:Ontology ;
+    rdfs:label "Functional Analysis - Example Mechanical Computermouse" ;
+    owl:imports <http://opendiscovery.org/rdf/Ontologies/FunctionalAnalysis/> .
+
+# Components
+
+ex:MechanicalComputermouse
+    a tc:System ;
+    skos:prefLabel "Mechanical Computermouse"@en, "Mechanische Computermaus"@de , "Механическая компьютерная мышь"@ru .
+
+ex:Hand
+    a tc:Component ;
+    skos:prefLabel "Hand"@en, "Hand"@de , "Рука"@ru .
+
+ex:Case
+    a tc:Component ;
+    skos:prefLabel "Case"@en, "Gehäuse"@de , "Дело"@ru .
+
+ex:Tabletop
+    a tc:Component ;
+    skos:prefLabel "Tabletop"@en, "Tischplatte"@de , "Стол"@ru .
+
+ex:Rubberball
+    a tc:Component ;
+    skos:prefLabel "Rubberball"@en, "Gummikugel"@de , "Резиновый мяч"@ru .
+
+ex:Dust
+    a tc:Component ;
+    skos:prefLabel "Dust"@en, "Staub"@de , "Пыль"@ru .
+
+ex:Ecnodingdisk
+    a tc:Component ;
+    skos:prefLabel "Encoding Disk"@en, "Lochscheibe"@de , "Кодирующий диск"@ru .
+
+ex:Lightbarrier
+    a tc:Component ;
+    skos:prefLabel "Light Barrier"@en, "Lichtschranke"@de , "Световой барьер"@ru .
+
+ex:Signal
+    a tc:Component ;
+    skos:prefLabel "Signal"@en, "Signal"@de , "Сигнал"@ru .
+
+ex:Cable
+    a tc:Component ;
+    skos:prefLabel "Cable"@en, "Kabel"@de , "Кабель"@ru .
+    
+ex:Cursor
+    a tc:Component ;
+    skos:prefLabel "Cursor"@en, "Mauszeiger"@de , "Курсор"@ru .
+
+ex:Pressureroll
+    a tc:Component ;
+    skos:prefLabel "Pressure Roll"@en, "Andruckrolle"@de , "Прижимной ролик"@ru .
+
+
+
+# Actions
+
+ex:Move
+    a tc:Action ;
+    skos:prefLabel "Move"@en, "Bewegen"@de , "Двигаться"@ru .
+
+ex:Roll
+    a tc:Action ;
+    skos:prefLabel "Roll"@en, "Rollt"@de , "Рулон"@ru .
+    
+ex:Catch
+    a tc:Action ;
+    skos:prefLabel "Catch"@en, "Fangen"@de , "Ловить"@ru .
+
+ex:Stick
+    a tc:Action ;
+    skos:prefLabel "Stick"@en, "Klebt"@de , "Палка"@ru .
+
+ex:Block
+    a tc:Action ;
+    skos:prefLabel "Block"@en, "Blockieren"@de , "Блокировать"@ru .
+
+ex:Flow
+    a tc:Aciton ;
+    skos:prefLabel "Flow"@en, "Fließen"@de , "Поток"@ru .
+
+ex:Solidify
+    a tc:Action ;
+    skos:prefLabel "Solidify"@en, "Festigt"@de , "Затвердеть"@ru .
+
+
+
+# Andruckrolle - positioniert - Gummikugel
+
+ex:PressurerollRubberball
+    a tc:Interaction ;
+    tc:Component ex:Pressureroll, ex:Rubberball ;
+    skos:prefLabel "Pressure Roll - Rubberball"@en, "Andruckrolle - Gummikugel"@de , "Прижимной ролик - Rubberball"@ru .
+
+ex:PressurerollSolidifyRubberball
+    a tc:SubjectActionObject ;
+    tc:Action ex:Solidify ;
+    tc:Interaction ex:PressurerollRubberball ;
+    skos:prefLabel "Pressureroll - Solidify - Rubberball"@en, "Andruckrolle - Festigt - Gummikugel"@de , "Нажимной валок - Затвердеть - Резиновый шарик"@ru .
+
+ex:Position
+    a tc:Function ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    tc:SubjectActionObject ex:PressurerollSolidifyRubberball ;
+    skos:prefLabel "Position"@en, "Positioniert"@de , "Должность"@ru .
+
+
+
+# Signal - führt - Mauszeiger
+
+ex:SignalCursor
+    a tc:Interaction ;
+    tc:Component ex:Signal, ex:Cursor ;
+    skos:prefLabel "Signal - Cursor"@en, "Signal - Mauszeiger"@de , "Сигнал - Курсор"@ru .
+
+ex:SignalMoveCursor
+    a tc:SubjectActionObject ;
+    tc:Action ex:Move ;
+    tc:Interaction ex:SignalCursor ;
+    skos:prefLabel "Signal - Move - Cursor"@en, "Signal - Bewegen - Mauszeiger"@de , "Сигнал - Перемещение - Курсор"@ru .
+
+ex:Guide
+    a tc:Function ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    tc:SubjectActionObject ex:SignalMoveCursor ;
+    skos:prefLabel "Guide"@en, "Führt"@de , "Гид"@ru .
+
+
+
+# Kabel - leitet - Signal
+
+ex:CableSignal
+    a tc:Interaction ;
+    tc:Component ex:Cable, ex:Signal ;
+    skos:prefLabel "Cable - Signal"@en, "Kabel - Signal"@de , "Кабель - сигнал"@ru .
+
+ex:CableFlowSignal
+    a tc:SubjectActionObject ;
+    tc:Action ex:Flow ;
+    tc:Interaction ex:CableSignal ;
+    skos:prefLabel "Cable - Flow - Signal"@en, "Kabel - Fließt - Signal"@de , "Кабель - поток - сигнал"@ru .
+
+ex:Direct
+    a tc:Function ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    tc:SubjectActionObject ex:CableFlowSignal ;
+    skos:prefLabel "Direct"@en, "Leitet"@de , "Прямой"@ru .
+
+
+
+# Lichtschranke - erzeugt - Signal
+
+ex:LightbarrierSignal
+    a tc:Interaction ;
+    tc:Component ex:Lightbarrier, ex:Signal ;
+    skos:prefLabel "Lichtschranke - Signal"@de, "Light Barrier - Signal"@en, "Сигнал светового барьера"@ru . 
+
+ex:LightbarrierFlowSignal
+    a tc:SubjectActionObject ;
+    tc:Action ex:Flow ;
+    tc:Interaction ex:LightbarrierSignal ;
+    skos:prefLabel "Light Barrier - Flow - Signal"@en, "Lichtschranke - Fließt - Signal"@de , "Световой барьер - Поток - Сигнал"@ru .
+
+ex:Produce
+    a tc:Function ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    tc:SubjectActionObject ex:LightbarrierFlowSignal ;
+    skos:prefLabel "Produce"@en, "Erzeugt"@de , "Производить"@ru .
+
+
+
+# Lochscheibe - schaltet - Lichtschranke
+
+ex:EncodingdiskLightbarrier
+    a tc:Interaction ;
+    tc:Component ex:Ecnodingdisk, ex:Lightbarrier ;
+    skos:prefLabel "Encoding Disk - Light Barrier"@en, "Lochscheibe - Lichtschranke"@de , "Кодирующий диск - световой барьер"@ru .
+
+ex:EncodingdiskBlockLightbarrier
+    a tc:SubjectActionObject ;
+    tc:Action ex:Block ;
+    tc:Interaction ex:EncodingdiskLightbarrier ;
+    skos:prefLabel "Encoding Disk - Block - Light Barrier"@en, "Lochscheibe - Blockiert - Lichtschranke"@de , "Кодирующий диск - блок - световой барьер"@ru .
+
+ex:Switch
+    a tc:Function ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    tc:SubjectActionObject ex:EncodingdiskBlockLightbarrier ;
+    skos:prefLabel "Switch"@en, "Schaltet"@de , "Выключатель"@ru .
+
+
+
+# Gummikugel - dreht - Lochscheibe
+
+ex:RubberballEncodingdisk
+    a tc:Interaction ;
+    tc:Component ex:Rubberball, ex:Ecnodingdisk ;
+    skos:prefLabel "Rubberball - Encoding Disk"@en, "Gummikugel - Lochscheibe"@de , "Rubberball - кодирующий диск"@ru .
+
+ex:RubberballMoveEncodingdisk
+    a tc:SubjectActionObject ;
+    tc:Action ex:Move ;
+    tc:Interaction ex:RubberballEncodingdisk ;
+    skos:prefLabel "Rubberball - Move - Encoding Disk"@en, "Gummikugel - Bewegt - Lochscheibe"@de , "Rubberball - Move - кодирующий диск"@ru .
+
+ex:TurnEncodingdisk
+    a tc:Function ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    tc:SubjectActionObject ex:RubberballEncodingdisk ;
+    skos:prefLabel "Turn"@en, "Dreht"@de , "Повернуть"@ru .
+
+
+
+# Staub - verschmutzt - Gummikugel 
+
+ex:DustRubberball
+    a tc:Interaction ;
+    tc:Component ex:Dust, ex:Rubberball ;
+    skos:prefLabel "Staub - Gummikugel"@en, "Dust - Rubberball"@en , "Staub - Gummikugel"@de , "Штауб - Гуммикугель"@ru .
+
+ex:DustStickRubberball
+    a tc:SubjectActionObject ;
+    tc:Action ex:Stick ;
+    tc:Interaction ex:DustRubberball ;
+    skos:prefLabel "Dust - Stick - Rubberball"@en, "Staub - Klebt - Gummikugel"@de , "Пыль - Палка - Резиновый шарик"@ru .
+
+ex:Pollutes
+    a tc:Function ;
+    tc:QualityOfFunction tc:HarmfulFunction ;
+    tc:SubjectActionObject ex:DustStickRubberball ;
+    skos:prefLabel "Pollutes"@en, "Verschmutzt"@de , "Загрязняющие вещества"@ru .
+
+
+# Gehäuse - sammelt - Staub
+
+ex:CaseDust
+    a tc:Interaction ;
+    tc:Component ex:Case, ex:Dust ;
+    skos:prefLabel "Case - Dust"@en, "Gehäuse - Staub"@de , "Корпус - Пыль"@ru .
+
+ex:CaseCatchDust
+    a tc:SubjectActionObject ;
+    tc:Action ex:Catch ;
+    tc:Interaction ex:CaseDust ;
+    skos:prefLabel "Case - Catch -Dust"@en, "Gehäuse - Fangen - Staub"@de , "Кейс - Улов - Пыль"@ru .
+
+ex:Gather
+    a tc:Function ;
+    tc:QualityOfFunction tc:HarmfulFunction ;
+    tc:SubjectActionObject ex:CaseCatchDust ;
+    skos:prefLabel "Gather"@en, "Sammelt"@de , "Собирать"@ru .
+
+
+
+# Tischplatte - rollt - Gummikugel
+
+ex:TabletopRubberball
+    a tc:Interaction ;
+    tc:Component ex:Tabletop, ex:Rubberball ;
+    skos:prefLabel "Tabletop - Rubberball"@en, "Tischplatte - Gummikugel"@de , "Столешница - Rubberball"@ru .
+
+ex:TabletopRollRubberball
+    a tc:SubjectActionObject ;
+    tc:Action ex:Roll ;
+    tc:Interaction ex:TabletopRubberball ;
+    skos:prefLabel "Tabletop - Roll - Rubberball"@en, "Tischplatte - Rollt - Gummikugel"@de , "Столешница - Рулон - Резиновый мяч"@ru .
+
+ex:RollRubberball
+    a tc:Function ;
+    tc:QualityOfFunction tc:BadControllableFunction ;
+    tc:SubjectActionObject ex:TabletopRollRubberball ;
+    skos:prefLabel "Roll"@en, "Rollt"@de , "Рулон"@ru .
+
+
+
+# Gehäuse - verschiebt - Gummikugel
+
+ex:CaseRubberball
+    a tc:Interaction ;
+    tc:Component ex:Case, ex:Rubberball ;
+    skos:prefLabel "Case - Rubberball"@en, "Gehäuse - Gummikugel"@de , "Корпус - Rubberball"@ru .
+
+ex:CaseMoveRubberball
+    a tc:SubjectActionObject ;
+    tc:Action ex:Move ;
+    tc:Interaction ex:CaseRubberball ;
+    skos:prefLabel "Case - Move - Rubberball"@en, "Gehäuse - Bewegt -Gummikugel"@de , "Кейс - Движение - Резиновый мяч"@ru .
+
+ex:RelocatesRubberball
+    a tc:Funciton ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    tc:SubjectActionObject ex:CaseMoveRubberball ;
+    skos:prefLabel "Verschiebt"@de, "Relocates"@en , "Движется"@ru .
+
+
+
+# Gehäuse - verkratzt - Tischplatte
+
+ex:CaseTabletop
+    a tc:Interaction ;
+    tc:Component ex:Case, ex:Tabletop ;
+    skos:prefLabel "Gehäuse - Tischplatte"@de, "Case - Tabletop"@en , "Корпус - столешница"@ru .
+
+ex:CaseMoveTabletop
+    a tc:SubjectActionObject ;
+    tc:Action ex:Move ;
+    tc:Interaction ex:CaseTabletop ;
+    skos:prefLabel "Gehäuse - Move - Tischplatte"@de, "Case - Bewegt - Tabletop"@en , "Корпус - Move - столешница"@ru .
+
+ex:Scratches
+    a tc:Function ;
+    skos:prefLabel "Scratches"@en, "Verkratzt"@de , "Царапины"@ru ;
+    tc:SubjectActionObject ex:CaseMoveRubberball ;
+    tc:QualityOfFunction tc:HarmfulFunction .
+
+ex:ScratchesParameter
+    a od:functionWithMatrixParameter ;
+    tc:Function ex:Scratches ;
+    od:findDecreasingUpperParameter tc:Efficiency ;
+    od:findDecreasingParameter tc:LossOfMaterial ;
+    od:findIncreasingUpperParameter tc:Performance ;
+    od:findIncreasingParameter tc:Power ;
+    skos:prefLabel "Function Scratches With Parameters"@en , "Funktionskratzer mit Parametern"@de , "Функция царапает с параметрами"@ru .
+
+ex:MatrixEntryForScratchesParameter
+    a od:MatrixEntryByFunctionParameter ;
+    skos:prefLabel "Chosen Matrix Entry For Function Scratches"@en , "Ausgewählter Matrixeintrag für Funktionskratzer"@de , "Выбранная матричная запись для функциональных царапин"@ru ;
+    od:functionWithMatrixParameter ex:ScratchesParameter ;
+    od:ChosenMatrix "The Matrix 2003" ;
+    od:MatrixEntry "<http://opendiscovery.org/rdf/Matrix/E.18.25>" .
+
+ex:PrincipleForMatrixEntryScratches
+    a od:PrincipleByMatrixEntryByFunctionParameter ;
+    skos:prefLabel "Chosen Principle To Optimize Function Scratches"@en , "Gewähltes Prinzip zur Optimierung von Funktionskratzern"@de , "Выбранный принцип для оптимизации функции царапин"@ru ;
+    od:MatrixEntryByFunctionParameter ex:MatrixEntryForScratchesParameter ;
+    od:Principle tc:FlexibleCoversOrThinFilms .
+
+# Hand - Verschiebt - Gehäuse
+
+ex:HandCase
+    a tc:Interaction ;
+    tc:Component ex:Hand, ex:Case ;
+    skos:prefLabel "Hand - Case"@en, "Hand - Gehäuse"@de , "Рука - Дело"@ru .
+
+ex:HandMoveCase
+    a tc:SubjectActionObject ;
+    tc:Interaction ex:HandCase ;
+    tc:Action ex:Move ;
+    skos:prefLabel "Hand - Move - Case"@en, "Hand - Bewegt - Gehäuse"@de , "Рука - Движение - Чехол"@ru .
+
+ex:RelocatesCase
+    a tc:Function ;
+    tc:SubjectActionObject ex:HandMoveCase ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    skos:prefLabel "Relocate"@en, "Verschieben"@de , "Переместить"@ru .

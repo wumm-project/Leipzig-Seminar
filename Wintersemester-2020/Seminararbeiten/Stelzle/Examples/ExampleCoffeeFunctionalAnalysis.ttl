@@ -1,0 +1,95 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+@prefix ex: <http://example.orf/EvolutionExample/Boats/> .
+
+<http://opendiscovery.org/rdg/Ontologies/FunctionalAnalysis/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+    a owl:Ontology ;
+    rdfs:label "Functional Analysis - Example Coffee" ;
+    owl:imports <http://opendiscovery.org/rdf/Ontologies/FunctionalAnalysis/> .
+
+# Components
+
+ex:Coffee
+    a tc:Component ;
+    skos:prefLabel "Coffee"@en, "Kaffee"@de , "Кофе"@ru .
+
+ex:Cup
+    a tc:Component ;
+    skos:prefLabel "Cup"@en, "Tasse"@de , "чашка"@ru .
+
+
+
+# Actions
+
+ex:Hold
+    a tc:Action ;
+    skos:prefLabel "Hold"@en, "Füllen"@de , "Держать"@ru .
+
+ex:Rest
+    a tc:Action ;
+    skos:prefLabel "Rest"@en, "Hängen bleiben"@de , "Отдых"@ru .
+
+ex:Energydifference
+    a tc:Action ;
+    skos:prefLabel "Energy Difference"@en, "Energieveränderung"@de , "Разница в энергии"@ru .
+
+
+
+# Tasse - Hält - Kaffee
+
+ex:CupCoffee
+    a tc:Interaction ;
+    tc:Component ex:Cup, ex:Coffee ;
+    skos:prefLabel "Cup - Coffee"@en, "Tasse - Kaffee"@de , "Чашка - Кофе"@ru .
+
+ex:CupHoldCoffee
+    a tc:SubjectActionObject ;
+    tc:Action ex:Hold ; 
+    tc:Interaction ex:CupCoffee ;
+    skos:prefLabel "Cup - Hold - Coffee"@en, "Tasse - Hält - Kaffee"@de , "Чашка - Держать - Кофе"@ru .
+
+ex:HoldCoffee
+    a tc:Function; 
+    ex:SubjectActionObject ex:CupHoldCoffee ;
+    tc:QualityOfFunction tc:UsefulFunction ;
+    skos:prefLabel "Hold"@en, "Hält"@de , "Держать"@ru .
+
+
+
+# Tasse - kühlt - Kaffee
+
+ex:CupEnergydifferenceCoffee
+    a tc:SubjectActionObject ;
+    tc:Action ex:Energydifference ;
+    tc:Interaction ex:CupCoffee ;
+    skos:prefLabel "Cup - Energy Difference - Coffee"@en, "Tasse - Energieveränderung - Kaffee"@de , "Чашка - Разница в энергии - Кофе"@ru .
+
+ex:Cool
+    a tc:Function ;
+    tc:SubjectActionObject ex:CupEnergydifferenceCoffee ;
+    tc:QualityOfFunction tc:HarmfulFunction ;
+    skos:prefLabel "Cool"@en, "Kühlt"@de , "Прохладный"@ru .
+
+
+# Kaffee - Verschmutzt - Tasse
+
+ex:CoffeeRestCup
+    a tc:SubjectActionObject ;
+    tc:Action ex:Rest ;
+    tc:Interaction ex:CupCoffee ;
+    skos:prefLabel "Coffee - Rest - Cup"@en, "Kaffee - Hängen bleiben - Tasse"@de , "Кофе - Остальное - Чашка"@ru .
+
+ex:Pollute
+    a tc:Function ;
+    tc:SubjectActionObject ex:CoffeeRestCup ;
+    tc:QualityOfFunction tc:HarmfulFunction ;
+    skos:prefLabel "Pollute"@en, "Verschmutzt"@de, "Загрязнение"@rue .

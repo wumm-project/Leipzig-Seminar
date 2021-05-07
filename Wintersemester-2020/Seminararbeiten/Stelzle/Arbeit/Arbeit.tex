@@ -1,0 +1,65 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{ls}
+
+\usepackage{float}
+\usetikzlibrary{shapes}
+\usepackage{xcolor}
+
+\usepackage[main=english]{babel}
+
+\newcommand{\HGG}[1]{\begin{quote}\textbf{Anmerkung HGG:} #1\end{quote}}
+\newcommand{\todo}{{\color{red}\textbf{ToDo}}}
+
+\newenvironment{code}{\tt \begin{tabbing}
+\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
+{\end{tabbing}}
+\def\dq{{\char34}}
+
+\title{A Proposal for Modelling TRIZ Functional Analysis}
+
+\author{Tarek Stelzle}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\include{01_aimOfWork}
+\include{02_startingPoint}
+\include{03_conceptualisations}
+\include{04_functionalAnalysis}
+\include{05_pythonImplementation}
+\include{06_creatingTurtleFile}
+\include{07_exampleTurtleFile}
+\include{08_conclusion}
+
+
+\begin{thebibliography}{xxx}
+\raggedright
+\bibitem{Altshuller1979} Genrich Altshuller (1979).  Creativity as an exact
+  science (in Russian). English version: Gordon and Breach, New York 1988.
+\bibitem{Graebe2021} Hans-Gert Gr\"abe (2021). About the WUMM modelling
+  concepts of a TRIZ ontology.  \url{https://github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Anmerkungen.pdf}.
+\bibitem{KS} Karl Koltze, Valeri Souchkov (2017).  Systematische
+  Innovationsmethoden (in German).  Hanser, Munich. ISBN 978-3-446-45127-8.
+\bibitem{TESE2018} Alex Lyubomirsky, Simon Litvin, Sergei Ikovenko et al.
+  (2018). Trends of Engineering System Evolution (TESE).  TRIZ Consulting
+  Group. ISBN 9783000598463.
+\bibitem{Shpakovsky2016} Nikolay Shpakovsky (2016). Tree of Technology
+  Evolution. English translation of the Russian original (Forum, Moscow
+  2010).\\ \url{https://wumm-project.github.io/TTS.html}
+\bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
+  \url{https://www.w3.org/TR/skos-reference/}.  
+\bibitem{WUMM} The WUMM Project. \url{https://wumm-project.github.io/} 
+\bibitem{Matrix2003} Matrix2003: \url{https://triz-journal.com/wp-content/uploads/2018/04/Screen-Shot-2018-04-30-at-15.20.25.png}.
+\bibitem{tabula} tabulapdf: \url{https://github.com/tabulapdf/tabula}.
+\bibitem{deep_translator} Deep Translator: \url{https://pypi.org/project/deep-translator/}.
+\bibitem{WebinarFunctionAnalysis} Nikolai Shchedrin (2020). Webinare des TRIZ-Ontologie-Projekts "Funktion" und "Funktionsanalyse".
+\bibitem{SouchkovGlossary} Valeri Souchkov (2018). GLOSSARY OF TRIZ AND TRIZ-RELATED TERMS .
+\bibitem{ShchedrinUsefulFunctionDisadvantage} Nikolai Shchedrin (2020). \url{https://triz-summit.ru/onto_triz/mod/metod/triz/fa/model_fa/func_syst_model/func/func_type/disadv_f/}.
+\end{thebibliography}
+
+\end{document}
+
