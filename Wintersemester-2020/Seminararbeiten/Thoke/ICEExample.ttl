@@ -171,7 +171,7 @@ ex:Heat
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:InternalSource ;
   od:hasStaticFlowComponent ex:CombustionChamber, ex:SparkPlug, ex:IntakeValve, ex:InletCamshaft, ex:ExhaustValve, ex:ExhaustCamshaft, ex:Cylinder, ex:Piston ;
-  skos:prefLabel "the heat flow"@en, "thermischer Fluss"@de .
+  skos:prefLabel "the heat flow"@en, "thermischer Fluss"@de ;
   skos:note "the heat flow is the result of the ignition process of the air fuel mixture in the combustion chamber which powers the piston" .
 
 ex:SparkPlug
@@ -217,7 +217,7 @@ ex:Piston
 ex:Work
   a tc:Flow ;
   od:hasFlowType tc:ContinuousFlow ;
-  od:hasFlowSubstance tc:Energy, tc:Substance, tc:Information .
+  od:hasFlowSubstance tc:Energy, tc:Substance, tc:Information ;
   od:hasFlowFunctionality tc:UsefulFlow ;
   od:hasFlowDelegation tc:ClosedFlow ;
   od:hasFlowSource tc:InternalSource ;
