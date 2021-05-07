@@ -24,7 +24,7 @@ ex:BasicInternalCombustionEngine
     od:hasFlowFunctionality tc:CarrierFlow ;
     od:hasFlowDelegation tc:OpenFlow ;
     od:hasFlowSource tc:InternalSource ;
-    od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
+    od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, ex:FuelSupplyPipe, ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, ex:InletCamshaft, ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston, ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve, ex:ExhaustPipe ;
     od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ;
     skos:prefLabel "basic internal combustion engine"@en, "grundlegendes Modell eines Verbrennungsmotors"@de  ;
     skos:note "basic construction model from wikipedia <https://en.wikipedia.org/wiki/Internal_combustion_engine>" .
@@ -304,8 +304,8 @@ ex:ExhaustValve
 ex:InnovationOfExhaustFlow
   a tc:FlowAnalysis ;
   od:generatesFlowTransformation ex:ExhaustionFlowTransformation ;
-  od:describesFlow ex:Exhaust ;
-  od:analysesFlow ex:Fuel, ex:Air, ex:AirFuelMixture, ex:Heat, ex:Work ;
+  od:describesFlow ex:Exhaust, ex:ICEExhaustionModel, ex:ICEExhaustionInnovationModel ;
+  od:analysesFlow ex:Exhaust, ex:Fuel, ex:Air, ex:AirFuelMixture, ex:Heat, ex:Work ;
   od:inContext ex:PollutionRestrictions ;
   od:hasGoal ex:SatisfactionOfPollutionRestrictions ;
   od:hasRequirement ex:ReduceExhaustFlow, ex:PreserveWorkFlow ;
@@ -326,9 +326,6 @@ ex:EvaluationOfExhaustFlow
   a tc:RulesOfEvaluation ;
   od:detects ex:HighDispersedExhaust ;
   skos:prefLabel "evaluation of the exhaust flow"@en, "Evaluation des Abgassstroms"@de .
-
-ex:Exhaust
-  od:hasFlowDefect ex:HighDispersedExhaust .
 
 ex:HighDispersedExhaust
   a tc:ExcessiveFlow ;
@@ -353,9 +350,10 @@ ex:ICEExhaustionModel
   od:hasFlowType tc:ComplexFlow ;
   od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, ex:Cooling, ex:Exhaust ;
   od:hasFlowFunctionality tc:CarrierFlow ;
+  od:hasFlowDefect ex:HighDispersedExhaust ;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
+  od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, ex:FuelSupplyPipe, ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, ex:InletCamshaft, ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston, ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve, ex:ExhaustPipe ;
   od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ;
   od:generatesFlowTransformation ex:ExhaustionFlowTransformation ;
   skos:prefLabel "ICE exhaustion model"@en, "Abgasmodell des Verbrennungsmotors"@de .
@@ -377,7 +375,7 @@ ex:ICEExhaustionInnovationModel
   od:hasFlowFunctionality tc:CarrierFlow ;
   od:hasFlowDelegation tc:OpenFlow ;
   od:hasFlowSource tc:InternalSource ;
-  od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, ex:CoolingWaterJacket ;
+  od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, ex:FuelSupplyPipe, ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, ex:InletCamshaft, ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston, ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve, ex:ExhaustPipeWithCatalyticConverter ;
   od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ;
   od:generatesFlowTransformation ex:ExhaustionFlowTransformation ;
   skos:prefLabel "ICE exhaustion innovation model"@en, "innovatives Abgasmodell des Verbrennungsmotors"@de .
@@ -394,6 +392,7 @@ ex:FuelAdditive
 
 ex:ExhaustPipeWithCatalyticConverter
   a tc:Channel ;
+  od:specialCase ex:Exhaust ;
   skos:prefLabel "exhaust pipe with catalytic converter"@en, "Auspuff mit Katalysator"@de .
 
 ex:ExhaustionFlowTransformation
