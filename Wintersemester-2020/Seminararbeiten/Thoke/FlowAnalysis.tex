@@ -28,7 +28,7 @@
 
     LETS - Laws of Evolution of Technical Systems
 
-    MINT - german acronym for Mathematik, Informatik, Naturwissenschaft und 
+    MINT - german acronym for Mathematik, Informatik, Naturwissenschaft und Technik
     
     SFM - substance field model
 
@@ -71,7 +71,7 @@
     played a role in concrete modelling.
 
     The most comprehensive source on issues of TRIZ modelling of flows and
-    methodological issues of flow analysis is the thesis \cite{Lebedyev2011} by
+    methodological issues of flow analysis is the thesis \cite{Lebedyev2015} by
     Yuri Lebedyev, which he submitted in 2015 under the supervision of S.A. 
     Logvinov for graduation as TRIZ Master.
 
@@ -248,11 +248,11 @@
         \item[3.] The \emph{modelling meta-level 2} at which the methodological
         concepts are defined \cite{Graebe2021} 
         \footnote{see source for more details.} 
-    \end{quote}
+    \end{itemize}
 
 
     The methodological practice described in this work is mainly based at 
-    level 2, meaning the modelled objects and subjects in terms of RDF refer to 
+    level 2, meaning the modelled objects and subjects in terms of RDF refer to
     the concept of classes used in object-oriented programming. 
     Therefore all properties of RDF objects described here are generic class
     properties, which have to be instanciated separately as a RDF triplet of 
@@ -299,13 +299,13 @@
         tc:FlowType & tc:ComplexFlow, tc:DiscreteFlow, tc:ContinuousFlow \\
         tc:FlowDelegation & tc:OpenFlow, tc:ClosedFlow \\
         tc:FlowSubstance & tc:Information, tc:Energy, tc:Substance \\
-        tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow,
-        tc:CarrierFlow  \\
-        tc:FlowDefect & tc:InsufficientFlow, tc:ExcessiveFlow,
-        tc:BadControllableFlow, tc:AbsentFlow \\ 
+        tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow, \\
+        & tc:CarrierFlow \\
+        tc:FlowDefect & tc:InsufficientFlow, tc:ExcessiveFlow, \\
+        & tc:BadControllableFlow, tc:AbsentFlow \\ 
         tc:FlowSource & tc:ExternalSource, tc:InternalSource  \\
-        tc:MethodOfDescription & tc:TextDescription, tc:ParametricDescription,
-        tc:GraphicDescription \\\hline 
+        tc:MethodOfDescription & tc:TextDescription, tc:ParametricDescription, \\
+        & tc:GraphicDescription \\\hline 
     \end{tabular}
     \end{center}
 
@@ -332,7 +332,7 @@
     systematic approach is described. Each subject, that refers to a TRIZ 
     concept has a \texttt{skos:Concept}, as well as a 
     \texttt{od:AdditionalConcept}. Beside that we clarify if a subject is defined
-    by a certain author, like \texttt{od:LebedevDefinition} or 
+    by a certain author, like \texttt{od:LebedevDefinition} or \newline
     \texttt{od:SouchkovDefinition}. The \texttt{od:SouchkovCategory} refers to a
     specific categorial object defined by the
     \texttt{<http:\\opendiscovery.org/rdf/Ontologies/Souchkov-Glossary/>}.
@@ -716,7 +716,7 @@
     \> Abgasmodell des Verbrennungsmotors"@de . \\
     \end{code}
     \newpage
-    \section{Conclusions, critical review and further development}
+    \section{Conclusion, critical review and further development}
         \subsection{Outside view - embedding the Flow Analysis Ontocard}
         For now this TRIZ Ontocard remains mostly isolated from its embedded 
         environment within the ontological hierarchy of the TOP and rules 
