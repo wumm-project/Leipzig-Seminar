@@ -509,10 +509,13 @@
         \> od:hasFlowFunctionality tc:CarrierFlow ; \\
         \> od:hasFlowDelegation tc:OpenFlow ; \\
         \> od:hasFlowSource tc:InternalSource ; \\
-        \> od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft, \\
-        \> ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug, \\
-        \> ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, \\
-        \> ex:CoolingWaterJacket ; \\
+        \> od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, \\
+        \> ex:FuelSupplyPipe, ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe,\\
+        \> ex:CoolingTank, ex:CoolingPump, ex:CoolingWaterJacket, \\
+        \> ex:IntakeValve, ex:InletCamshaft, ex:CombustionChamber, \\
+        \> ex:SparkPlug, ex:Cylinder, ex:Piston, ex:ConnectionRod, \\
+        \> ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve, 
+        \> ex:ExhaustPipe ; \\
         \> od:hasMethodOfDescription tc:ParametricDescription, \\
         \> ex:ICE3DModel ; \\
         \> skos:prefLabel "basic internal combustion engine"@en, \\
@@ -548,7 +551,7 @@
         \> od:hasFlowDelegation tc:OpenFlow ; \\
         \> od:hasFlowSource tc:InternalSource ; \\
         \> od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, \\
-        \> ex:Atmosphere, ex:ExhaustValve ; \\
+        \> ex:Atmosphere, ex:ExhaustValve, ex:ExhaustCamshaft ; \\
         \> skos:prefLabel "the exhaust flow"@en, "Abgasstrom"@de . \\
     \end{code}
 
@@ -562,12 +565,12 @@
     
     \begin{code}
     ex:CombustionChamber \\
-    \> od:specialCase ex:Heat ; \\
+    \> od:specialCase ex:Heat, ex:InternalCombustionEngine ; \\
     \> a tc:Channel ; \\
     \> skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de . \\
     \\
     ex:CombustionChamber \\
-    \> od:specialCase ex:Exhaust ; \\
+    \> od:specialCase ex:Exhaust, ex:InternalCombustionEngine ; \\
     \> a tc:Potential ; \\
     \> skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de . \\
     \end{code}
@@ -634,10 +637,12 @@
     \> od:hasFlowDefect ex:HighDispersedExhaust ; \\
     \> od:hasFlowDelegation tc:OpenFlow ; \\
     \> od:hasFlowSource tc:InternalSource ; \\
-    \> od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft,  \\
-    \> ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug,  \\
-    \> ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve,  \\
-    \> ex:CoolingWaterJacket ; \\
+    \> od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, ex:FuelSupplyPipe,\\
+    \> ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, \\
+    \> ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, \\
+    \> ex:InletCamshaft, ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, \\
+    \> ex:Piston, ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, \\
+    \> ex:ExhaustValve, ex:ExhaustPipe ; \\
     \> od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ; \\
     \> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
     \> skos:prefLabel "ICE exhaustion model"@en, "Abgasmodell des Verbrennungsmotors"@de . \\
@@ -669,7 +674,9 @@
     \> od:hasFlowFunctionality tc:UsefulFlow ; \\
     \> od:hasFlowDelegation tc:ClosedFlow ; \\
     \> od:hasFlowSource tc:InternalSource ; \\
-    \> od:hasStaticFlowComponent ex:IntakeValve, ex:FuelPump, ex:FuelTank,  \\
+    \> od:hasStaticFlowComponent ex:IntakeValve, ex:InletCamshaft, \\
+    \> ex:FuelAdditivePump, ex:FuelAdditiveTank, ex:FuelAdditiveSupplyPipe, \\
+    \> ex:CombustionChamber ; \\
     \> ex:FuelSuppylPipe, ex:CombustionChamber ; \\
     \> skos:prefLabel "flow of fuel additive"@en, "Fluss des  \\
     \> Kraftstoffzusatzes"@de . \\
@@ -691,10 +698,13 @@
     \> od:hasFlowFunctionality tc:CarrierFlow ; \\
     \> od:hasFlowDelegation tc:OpenFlow ; \\
     \> od:hasFlowSource tc:InternalSource ; \\
-    \> od:hasStaticFlowComponent ex:Crankshaft, ex:ExhaustCamshaft,  \\
-    \> ex:InletCamshaft, ex:Piston, ex:ConnectionRod, ex:SparkPlug,  \\
-    \> ex:CombustionChamber, ex:IntakeValve, ex:ExhaustValve, \\
-    \> ex:CoolingWaterJacket ; \\
+    \> od:hasStaticFlowComponent ex:FuelTank, ex:FuelAdditiveTank, ex:FuelPump, \\
+    \> ex:FuelAdditivePump, ex:FuelSupplyPipe, ex:FuelAdditiveSupplyPipe, \\
+    \> ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, \\
+    \> ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, ex:InletCamshaft,\\
+    \> ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston, \\
+    \> ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve,\\
+    \> ex:ExhaustPipeWithCatalyticConverter ; \\
     \> od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ; \\
     \> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
     \> skos:prefLabel "ICE exhaustion innovation model"@en, "innovatives  \\
