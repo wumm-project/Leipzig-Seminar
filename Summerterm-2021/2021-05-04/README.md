@@ -10,7 +10,7 @@
 In the presentation, various approaches will be presented on how incentives
 can be used to achieve greater conformity between the objectives of an
 organization and that of the people involved in it. A distinction is made
-between tangible and intangible incentives, as well as incentives with an
+between material and immaterial incentives, as well as incentives with an
 emergent effect in the organization (collective agreements, working
 atmosphere, etc.), which have a uniform effect on the entire workforce, and
 incentives tailored to specific individuals in order to recognize special
@@ -45,9 +45,9 @@ management by incentives is a management instrument "of abundance".
 
 Graebe, Hans-Gert :
 
-- Reward = Incentive (is this the same). Incentives for what? Given goals are
+- Reward = Incentive (is this the same?). Incentives for what? Given goals are 
   not questioned.  Who is the subject that sets incentives?
-  - The second question (about the subject) is central for a systematic
+  - The last question (about the subject) is central for a systematic
     management theory, since incentives are (in the TRIZ terminology) a _tool_
     in the hand of the _management organ_ to stimulate role owners.
   - TRIZ minimal machine: (incentive) -> (stimulates) -> (role owner).
@@ -64,6 +64,10 @@ Graebe, Hans-Gert :
   - This deep value-theoretical question was not touched either. 
   - Jannis de Riz : Bonuses are variable salaries I would say.  And therefore
     more incentive than a fixed salary, which is paid in advance.
+    - Salary is not paid in advance but _agreed_ in advance, but the main
+      point ist that it does not depend upon the real performance of the
+      organization. By the way this is a little bit different with wages that
+      are paid per processed item and not per time.
 
 - Material incentives (company own cafeteria, kindergarden) - infrastructure
   benefits. How is infrastructure financed?
@@ -91,6 +95,9 @@ Graebe, Hans-Gert :
 - pay ratio: How is this difference in "hourly rates" to be understood
   theoretically? It is not only a problem between "manager" and "worker", but
   also with (highly paid) "experts".
+  - What's about a justification of such differences from a theoretical point
+    of view, e.g. within a labour value theory?  Marx counts "complicated
+    work" as "multiplied work", hence has a build in "pay ratio".
 
 - Geneva scheme - how this relates to the role concept? Role is separation of
   requirements and private skills, which management has to bring together
@@ -127,6 +134,6 @@ Graebe, Hans-Gert :
 
 - Kleemann : ---def: throughput through the system
   - For organizations some basic ideas in that direction (transformation of
-    "monetray energy" in "social energy") are developed in
+    "monetary energy" in "social energy") are developed in
     <https://hg-graebe.de/EigeneTexte/DAT-20-en.pdf>
 
