@@ -7,17 +7,24 @@
 
 ## Abstract
 
-tba
+The aim of the seminar is to gain a more detailed understanding of the concept
+of systems and basic approaches of Russell L. Ackoff's management theory, the
+main features of which were developed in the early 1970s.
 
 ## Material
 
-tba
+* [Handout](Handout.pdf) 
+* [Slides](Slides.pdf) 
 
-## Chat
+## Notes
 
-- Kleemann : for the discussion: the problem of transferring biological
-  categories to system considerations. secondly, the problem of purpose
-  itself: evolution is not optimisation. thirdly, pattern formation in chaotic
+tba.
+
+##  From the Chat
+
+- Kleemann : For the discussion: First, the problem of transferring biological
+  categories to system considerations. Secondly, the problem of purpose
+  itself: evolution is not optimisation. Thirdly, pattern formation in chaotic
   systems as non-goal-directed developments.
 
 - Kleemann : does such a management lead to a rather pyramidal hierarchy?
@@ -27,7 +34,7 @@ tba
 
 Graebe, Hans-Gert :
 
-- Is there a "holistic approach" or is not every "holistic" approach also
+- Is there a "holistic approach" or is every "holistic" approach also
   reductionist?
 
 - "The brain" - works like that in all cases (hearing, seeing ...), but does
