@@ -54,8 +54,6 @@ written in English.
   <https://ebookcentral.proquest.com/lib/leip/detail.action?docID=3339201>
 
 ## Offene Seminar themes:
-* Peter F. Drucker (1975). The Practice of Management.
-* The Toyota Management system. Guiding principles and main tools.
 * Process and Enterprise Maturity Model - Michael Hammer
 * Business Process Maturity Model (BPMM) by Bill Curtis and John Alden
 * Anton Kozhemyako. Contradictory Business Processes and Schematization.
@@ -80,8 +78,11 @@ written in English.
 * [Slides](2021-05-04/Slides.pdf)
 
 ### [11.05.](2021-05-11) Russell Ackoff. System Thinking and Management (Jannis de Riz)
+* [Handout](2021-05-11/Handout.pdf)
+* [Slides](2021-05-11/Slides.pdf)
 
 ### [18.05.](2021-05-18) MBO - Management by Objectives (Franziska Görg)
+* [Handout](2021-05-18/Handout.pdf)
 
 ### [25.05.](2021-05-25) Business Process Definition Metamodel - BPDM (Bjarne Dasenbrook)
 
