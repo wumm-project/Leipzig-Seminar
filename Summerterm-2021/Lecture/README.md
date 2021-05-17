@@ -112,6 +112,8 @@ __Learning Objectives__:
 
 __Slides:__
 * [System development](SystemDevelopment.pdf)
+* [TDS.md](TDS.md)
+* [Immersive and submersise system theories](ImmersiveSubmersive.pdf)
 
 ## May 20: Sustainability and Development Cycles of Systems
 
@@ -143,6 +145,11 @@ __Learning Objectives__:
 * Coevolution at micro and macro levels. "Enslavement effect"
 * Evolution of systems, boundary crossings and recontextualisations. 
 * Systemic transformation processes
+
+__Slides:__
+* [TDS.md](TDS.md)
+* [Immersive and submersive system theories](ImmersiveSubmersive.pdf)
+* [Development of systems and components](Koevolution.pdf)
 
 ## May 27: The Digital Universe. The digital transformation as techno-cultural upheaval
 
