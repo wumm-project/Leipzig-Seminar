@@ -24,7 +24,8 @@ the performance of the organization.
 
 ## Material
 
-* [Handout](Handout.pdf) 
+* [Handout](Handout.pdf)
+* [Slides](Slides.pdf) 
 
 ## Notes
 

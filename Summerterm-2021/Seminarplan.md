@@ -62,26 +62,16 @@ written in English.
 
 ### [13.04.](2021-04-13) Kick-off Meeting
 * Introduction to the seminar topic. Discussion of the seminar plan. (Gräbe)
-* [Slides](2021-04-13/Slides.pdf)
 
-### [20.04.](2021-04-20) System Management, Organizations, Systems. General Management Challenges (Gräbe) 
-* [Handout](2021-04-20/Handout.pdf)
-* [Slides](2021-04-20/Slides.pdf)
+### [20.04.](2021-04-20) System Management, Organizations, Systems. General Management Challenges (Gräbe)
 
 ### [27.04.](2021-04-27) Business Modelling Basics, ISO 9000 and CMMI 
-* [Handout](2021-04-27/Handout.pdf)
-* [Slides](2021-04-27/Slides.pdf)
 
 ### [04.05.](2021-05-04) Management by Incentives (Veronika Heuten)
-* [Handout](2021-05-04/Handout.pdf)
-* [Slides](2021-05-04/Slides.pdf)
 
 ### [11.05.](2021-05-11) Russell Ackoff. System Thinking and Management (Jannis de Riz)
-* [Handout](2021-05-11/Handout.pdf)
-* [Slides](2021-05-11/Slides.pdf)
 
 ### [18.05.](2021-05-18) MBO - Management by Objectives (Franziska Görg)
-* [Handout](2021-05-18/Handout.pdf)
 
 ### [25.05.](2021-05-25) Business Process Definition Metamodel - BPDM (Bjarne Dasenbrook)
 
