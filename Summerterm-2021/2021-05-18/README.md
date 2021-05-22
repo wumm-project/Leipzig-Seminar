@@ -146,8 +146,8 @@ Graebe, Hans-Gert:
     process; rather, the human being comes to relate more as watchman and
     regulator to the production process itself."
     ([Marx](https://thenewobjectivity.com/pdf/marx.pdf))
-  - "Macht, was ihr wollt, aber seid profitabel"
-    <https://www.grin.com/document/125561>
+  - "Macht, was ihr wollt, aber seid profitabel" (Do what you want, but be
+    profitable) <https://www.grin.com/document/125561>
 
 - Slide 3: What is the connection between management, formal organisation and
   resources?
