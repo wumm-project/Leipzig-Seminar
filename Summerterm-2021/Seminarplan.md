@@ -56,7 +56,6 @@ written in English.
 ## Offene Seminar themes:
 * Process and Enterprise Maturity Model - Michael Hammer
 * Business Process Maturity Model (BPMM) by Bill Curtis and John Alden
-* Anton Kozhemyako. Contradictory Business Processes and Schematization.
 * Business Process Modelling und TRIZ
 
 ## Seminar schedule
@@ -98,8 +97,8 @@ written in English.
 
 ### [06.07.](2021-07-06) Russell Ackoff. Interactive Planning (Daniel Werner)
 
-### 13.07.
+### [13.07.](2021-07-13) Anton Kozhemyako. Contradictory Business Processes and Schematization (Lukas Heink)
 
-### 20.07.
+### 20.07. Evaluation and lessons learnedx
 
 ### Optional 23.07. [Interdisciplinary Discussion](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/LeipzigerGespraeche/2021-07-23) "Systems, Processes, and their Management".
