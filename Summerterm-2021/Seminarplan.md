@@ -26,7 +26,7 @@ written in English.
   Dissertation for application for the degree of a TRIZ Master.
   <https://matriz.org/kozhemyako/>
 
-  An English translation is in preparation.
+  An [English translation](../Material) is in preparation.
 
 * Maximilian Krug (2019). Review: Charles Goodwin (2018).
   Co-Operative Action (in German). Forum Qualitative Sozialforschung, 20(1),
