@@ -73,7 +73,7 @@ written in English.
 
 ### [18.05.](2021-05-18) MBO - Management by Objectives (Franziska Görg)
 
-### [25.05.](2021-05-25) Business Process Definition Metamodel - BPDM (Bjarne Dasenbrook)
+### [25.05.](2021-05-25) Business Process Definition Metamodel - BPDM (B.D.)
 
 ### [01.06.](2021-06-01) The SMART Approach (Axel Schuster)
 

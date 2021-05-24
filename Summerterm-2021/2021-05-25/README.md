@@ -3,7 +3,7 @@
 ## Short Announcement
 
 * __Theme:__  Business Process Definition Metamodel &ndash; BPDM
-* __Presenter:__ Bjarne Dasenbrook
+* __Presenter:__ B.D.
 
 ## Abstract
 
