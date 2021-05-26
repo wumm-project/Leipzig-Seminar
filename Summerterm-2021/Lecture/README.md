@@ -151,7 +151,7 @@ __Slides:__
 * [Immersive and submersive system theories](ImmersiveSubmersive.pdf)
 * [Development of systems and components](Koevolution.pdf)
 
-## May 27: The Digital Universe. The digital transformation as techno-cultural upheaval
+## May 27: The Digital Universe. The Digital Transformation as Techno-Cultural Progress
 
 __Literature__:
 * Michael Schetsche: Die digitale Wissensrevolution – Netzwerkmedien,
@@ -167,6 +167,9 @@ __Learning Objectives__:
 * Concepts _digital universe_ and _digital identity_.
 * Authentication and authorisation as socio-technical processes.
 * Digital identities and roles
+
+__Slides:__
+* [Digital Space of Action](DigitalSpaceOfAction.pdf)
 
 ## June 3: Internet Basics. RDF Basics.
 

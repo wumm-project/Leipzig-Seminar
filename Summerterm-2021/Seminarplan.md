@@ -26,7 +26,7 @@ written in English.
   Dissertation for application for the degree of a TRIZ Master.
   <https://matriz.org/kozhemyako/>
 
-  An English translation is in preparation.
+  An [English translation](../Material) is in preparation.
 
 * Maximilian Krug (2019). Review: Charles Goodwin (2018).
   Co-Operative Action (in German). Forum Qualitative Sozialforschung, 20(1),
@@ -56,35 +56,24 @@ written in English.
 ## Offene Seminar themes:
 * Process and Enterprise Maturity Model - Michael Hammer
 * Business Process Maturity Model (BPMM) by Bill Curtis and John Alden
-* Anton Kozhemyako. Contradictory Business Processes and Schematization.
 * Business Process Modelling und TRIZ
 
 ## Seminar schedule
 
 ### [13.04.](2021-04-13) Kick-off Meeting
 * Introduction to the seminar topic. Discussion of the seminar plan. (Gräbe)
-* [Slides](2021-04-13/Slides.pdf)
 
-### [20.04.](2021-04-20) System Management, Organizations, Systems. General Management Challenges (Gräbe) 
-* [Handout](2021-04-20/Handout.pdf)
-* [Slides](2021-04-20/Slides.pdf)
+### [20.04.](2021-04-20) System Management, Organizations, Systems. General Management Challenges (Gräbe)
 
 ### [27.04.](2021-04-27) Business Modelling Basics, ISO 9000 and CMMI 
-* [Handout](2021-04-27/Handout.pdf)
-* [Slides](2021-04-27/Slides.pdf)
 
 ### [04.05.](2021-05-04) Management by Incentives (Veronika Heuten)
-* [Handout](2021-05-04/Handout.pdf)
-* [Slides](2021-05-04/Slides.pdf)
 
 ### [11.05.](2021-05-11) Russell Ackoff. System Thinking and Management (Jannis de Riz)
-* [Handout](2021-05-11/Handout.pdf)
-* [Slides](2021-05-11/Slides.pdf)
 
 ### [18.05.](2021-05-18) MBO - Management by Objectives (Franziska Görg)
-* [Handout](2021-05-18/Handout.pdf)
 
-### [25.05.](2021-05-25) Business Process Definition Metamodel - BPDM (Bjarne Dasenbrook)
+### [25.05.](2021-05-25) Business Process Definition Metamodel - BPDM (B.D.)
 
 ### [01.06.](2021-06-01) The SMART Approach (Axel Schuster)
 
@@ -98,8 +87,8 @@ written in English.
 
 ### [06.07.](2021-07-06) Russell Ackoff. Interactive Planning (Daniel Werner)
 
-### 13.07.
+### [13.07.](2021-07-13) Anton Kozhemyako. Contradictory Business Processes and Schematization (Lukas Heink)
 
-### 20.07.
+### 20.07. Evaluation and lessons learnedx
 
 ### Optional 23.07. [Interdisciplinary Discussion](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/LeipzigerGespraeche/2021-07-23) "Systems, Processes, and their Management".
