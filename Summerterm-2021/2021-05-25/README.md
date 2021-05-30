@@ -194,4 +194,4 @@ Daniel Werner :
     semantics defined in a sensible way (there are nice papers by Harald
     Störrle on this).
   - BPDM is a _formal standard_ 
-    <https://www.omg.org/spec/BPDM/1.0/About-BPDM/#docs-normative-machine>
+    - <https://www.omg.org/spec/BPDM/1.0/About-BPDM/#docs-normative-machine>
