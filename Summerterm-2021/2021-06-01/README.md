@@ -11,4 +11,8 @@ tba
 
 ## Material
 
-tba
+* [Handout](Handout.pdf)
+
+## Notes
+
+##  From the Chat

@@ -34,7 +34,7 @@ developing over the last 20 years. Characteristic for this development was its
 embedding in an evolving cycle between development of appropriate concepts and
 testing their practical suitability in applications in a co-operative process
 of practice.  This clearly goes beyond the sometimes speculative
-conceptualisations of Robert Ackoff or Peter Drucker.
+conceptualisations of Russell Ackoff or Peter Drucker.
 
 The result is a development and consolidation process of the terminology
 itself, which was illustrated in the presentation by means of the historical
@@ -126,7 +126,7 @@ unilluminated once more.
 
 ##  From the Chat
 
-[09:27] Kleemann : also for later: connection atom model?
+- Kleemann : also for later: connection atom model?
 
 Graebe, Hans-Gert :
 
