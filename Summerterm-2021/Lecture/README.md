@@ -165,13 +165,21 @@ __Additional Reading__:
 __Learning Objectives__:
 * World and reality. World as reality _for us_. Action.
 * Concepts _digital universe_ and _digital identity_.
+
+__Slides:__
+* [Digital Space of Action](DigitalSpaceOfAction.pdf)
+
+## June 3: Digital Space of Action.
+
+__Learning Objectives__:
+* Concepts _digital universe_ and _digital identity_.
 * Authentication and authorisation as socio-technical processes.
 * Digital identities and roles
 
 __Slides:__
 * [Digital Space of Action](DigitalSpaceOfAction.pdf)
 
-## June 3: Internet Basics. RDF Basics.
+## June 10: Internet Basics. RDF Basics.
 
 __Literature__:
 * Wikipedia
@@ -189,7 +197,7 @@ __Learning Objectives__:
 * Management of IPs and computer names
 * RDF basics: URI, namespace, subject, predicate, object.
 
-## June 10: Modelling conceptual worlds. RDF - Concepts, tools
+## June 17: Modelling conceptual worlds. RDF - Concepts, tools
 
 __Literature__:
 * Marc Zobrist (2018). Ontologien und Datenmodelle. 
@@ -199,7 +207,7 @@ __Learning Objectives__:
 * RDF concepts. RDF graphs, pattern search, SPARQL query language.
 * RDF Tools. RDF Stores, SPARQL Endpoints
 
-## June 17: The Linked Open Data Cloud. Conceptual worlds and the Giant Global Graph
+## June 24: The Linked Open Data Cloud. Conceptual worlds and the Giant Global Graph
 
 __Literature__:
 * Open Data Support (2013). Trainingsmodul 1.3 Einführung
@@ -212,7 +220,7 @@ __Learning Objectives__:
 * Importance of shared conceptual worlds for well-ordered cohabitation
 * Fiction as a form of abbreviated speaking about a social normality
 
-## June 24: Storytelling, conceptualisation, information and language
+## July 1: Storytelling, conceptualisation, information and language
 
 __Literature__:
 * Helmut Klemm (2003). Ein großes Elend. Informatik-Spektrum 26, S. 267–273. 
@@ -235,7 +243,7 @@ __Learning Objectives__:
 * Storytelling and action
 * Information and language
 
-## July 1: Knowledge and action
+## July 8: Knowledge and action
 
 __Literature__:
 * Berger, Luckmann (1969/1994): The Social Construction of Reality.  In
@@ -249,7 +257,7 @@ __Learning Objectives__:
 * Cooperative practices and their development
 * Conditions of possibility of action in civil society 
 
-## July 8: Cooperative action and digital transformation
+## July 15: Cooperative action and digital transformation
 
 __Learning Objectives__:
 
@@ -258,13 +266,11 @@ __Learning Objectives__:
   transformation
 * Conditionalities and necessity of Open Culture
 
-## July 15: Formation of an Open Culture
+## July 22: Formation of an Open Culture
 
 __Learning Objectives__:
 * Open Culture and infrastructure development
 * Services and business models under the conditions of Open Culture
-
-## July 22: Lessons learned
 
 ## July 23: Optional: Interdisziplinary Discussion
 
