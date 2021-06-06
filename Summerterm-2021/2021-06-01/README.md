@@ -2,12 +2,28 @@
 
 ## Short Announcement
 
-* __Theme:__  The SMART Approach
+* __Theme:__  The S.M.A.R.T. Approach
 * __Presenter:__ Axel Schuster
 
 ## Abstract
 
-tba
+The S.M.A.R.T. Approach is an attempt to standardize the writing of effective
+objectives, to establish a controlled workflow and therefore to ease
+management in the sense of Management by Objectives. One of the main problems
+of this approach is, that there is no standardized definition of it.
+
+The acronym of S.M.A.R.T. objectives might have occurred the first time in an
+publication of George T. Doran who claimed that most managers still don’t know
+what ”objectives are and how they can be written” and that ”characteristic of
+management excellence is a climate in which company officers and managers talk
+in terms of objectives” and therefore makes arguments for a standardized and
+effective way to write objectives. He argues that the S.M.A.R.T. Approach can
+fulfill this task and also describes requirements of an organization in form
+of salary structure and job fit to fully realize the potential of this method.
+
+Doran introduced S.M.A.R.T. as the acronym meaning Specific, Measurable,
+Assignable, Realistic, Time-Related but one of the more common ones is used in
+the form of Specific, Measurable, Achievable, Relevant, Time-Bound.
 
 ## Material
 
