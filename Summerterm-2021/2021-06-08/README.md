@@ -23,7 +23,7 @@ modelling language.
 
 ## Material
 
-* [Handout](RE.pdf)
+* [Handout](Handout.pdf)
 
 ## Notes
 
