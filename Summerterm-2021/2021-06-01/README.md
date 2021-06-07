@@ -28,6 +28,7 @@ the form of Specific, Measurable, Achievable, Relevant, Time-Bound.
 ## Material
 
 * [Handout](Handout.pdf)
+* [Slides](Slides.pdf)
 
 ## Notes
 
@@ -218,12 +219,18 @@ Graebe, Hans-Gert :
 - Daniel Werner : It sounds like a complete rationalisation of the workplace.
   How long does an employee have to perform "poorly" for once to be demoted,
   replaced or even fired? This forces an absolute meritocracy, where not even
-  acquired qualifications secure a job.
+  acquired qualifications secure a job.  
+  - This is a radical market-based view and may work on a supply-driven
+    market, but has much problems on a demand-driven market of HR ("human
+    resources").
 
 - Jannis de Riz : But if I always keep all employees, even if their skills are
   no longer needed, then at some point I risk the employment of ALL employees
   because I go bankrupt paying salaries to people that do not "support" /
-  "generate" throughput.
+  "generate" throughput.  
+  - This contradiction which resides on two different time scales has to be
+    solved.  No easy answer, depends on the "resilience" status of the
+    company.
 
 - Daniel Werner : Without a feedback loop to the SMART Objectives (which are
   set by the manager himself) and since the manager can completely withdraw
