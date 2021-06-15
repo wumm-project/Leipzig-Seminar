@@ -1,6 +1,6 @@
 # Seminar Plan for the Summer Term 2021
 
-The official seminar language will be English until otherwise stated.  The
+The official seminar language will be German until otherwise stated.  The
 seminar papers (see the [seminar concept](Seminarconcept.pdf)) have to be
 written in English.
 
@@ -53,10 +53,12 @@ written in English.
   Available as e-book at UB Leipzig
   <https://ebookcentral.proquest.com/lib/leip/detail.action?docID=3339201>
 
-## Offene Seminar themes:
+## Open Seminar themes:
 * Process and Enterprise Maturity Model - Michael Hammer
 * Business Process Maturity Model (BPMM) by Bill Curtis and John Alden
 * Business Process Modelling und TRIZ
+* Case Management Model and Notation (CMMN)
+* Decision Model and Notation (DMN)
 
 ## Seminar schedule
 
