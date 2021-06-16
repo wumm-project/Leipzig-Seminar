@@ -196,23 +196,35 @@ __Learning Objectives__:
 * The OSI 7-layer model
 * Management of IPs and computer names
 * RDF basics: URI, namespace, subject, predicate, object.
+* RDF concepts. RDF graphs, pattern search, SPARQL query language.
+* RDF Tools. RDF Stores, SPARQL Endpoints
 
-## June 17: Modelling conceptual worlds. RDF - Concepts, tools
+__Slides:__
+* [RDF Basics](RDF.pdf)
+
+## June 17: Modelling conceptual worlds and the Giant Global Graph.
 
 __Literature__:
 * Marc Zobrist (2018). Ontologien und Datenmodelle. 
   * <https://histhub.ch/ontologien-und-datenmodelle/>
-
-__Learning Objectives__:
-* RDF concepts. RDF graphs, pattern search, SPARQL query language.
-* RDF Tools. RDF Stores, SPARQL Endpoints
-
-## June 24: The Linked Open Data Cloud. Conceptual worlds and the Giant Global Graph
-
-__Literature__:
 * Open Data Support (2013). Trainingsmodul 1.3 Einführung
   in RDF & SPARQL.
   * [RDF-Einfuehrung.pdf](../../Material/RDF-Einfuehrung.pdf)
+
+
+__Learning Objectives__:
+* RDF Tools. RDF Stores, SPARQL Endpoints
+* Conceptual worlds and ontologies
+* The Linked Open Data Cloud.
+* Examples of ontologies
+* Ontologies and applications
+* Other approaches: Google's Knowledge Graph, Wolfram Alpha
+
+__Slides:__
+* [RDF Basics](RDF.pdf)
+* [Linked Open Data and Conceptual Worlds](LOD.pdf)
+
+## June 24: Conceptual worlds
 
 __Learning Objectives__:
 * Modelling of conceptual worlds as part of the modelling of technical systems. 
