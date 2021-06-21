@@ -185,11 +185,10 @@ __Literature__:
 * Wikipedia
 * Hans-Gert Gräbe, Thomas Riechert, Michael Martin (2011). OD.FMI –
   Engineering operativ-administrativer Daten für die universitäre Lehre.
-  Manuskript, eingereicht und abgelehnt bei der Delfi 2011, September 2011, TU
-  Dresden.
+  Manuskript, September 2011.
   * <http://www.informatik.uni-leipzig.de/~graebe/Texte/delfi-11.pdf>
 * Hans-Gert Gräbe (seit 2007). Das OD.FMI Projekt. 
-  * <http://www.informatik.uni-leipzig.de/~graebe/OLAT/LVPlanung/ODQuelle.html>
+  * <http://www.informatik.uni-leipzig.de/~graebe/Forschung/EEE/ODQuelle.html>
 
 __Learning Objectives__:
 * Internet Basics
@@ -202,37 +201,41 @@ __Learning Objectives__:
 __Slides:__
 * [RDF Basics](RDF.pdf)
 
-## June 17: Modelling conceptual worlds and the Giant Global Graph.
+## June 17: Modelling Conceptual Worlds.
 
 __Literature__:
 * Marc Zobrist (2018). Ontologien und Datenmodelle. 
   * <https://histhub.ch/ontologien-und-datenmodelle/>
-* Open Data Support (2013). Trainingsmodul 1.3 Einführung
-  in RDF & SPARQL.
+* Open Data Support (2013). Trainingsmodul 1.3 Einführung in RDF & SPARQL.
   * [RDF-Einfuehrung.pdf](../../Material/RDF-Einfuehrung.pdf)
-
 
 __Learning Objectives__:
 * RDF Tools. RDF Stores, SPARQL Endpoints
 * Conceptual worlds and ontologies
-* The Linked Open Data Cloud.
+* Modelling of conceptual worlds as part of the modelling of technical systems. 
+* Modelling of shared conceptual worlds as a cooperative social process
+* The Linked Open Data Cloud
 * Examples of ontologies
-* Ontologies and applications
-* Other approaches: Google's Knowledge Graph, Wolfram Alpha
 
 __Slides:__
 * [RDF Basics](RDF.pdf)
 * [Linked Open Data and Conceptual Worlds](LOD.pdf)
 
-## June 24: Conceptual worlds
+## June 24: Conceptual Worlds and the Giant Global Graph. Data and Information
 
 __Learning Objectives__:
-* Modelling of conceptual worlds as part of the modelling of technical systems. 
-* Modelling of shared conceptual worlds as a cooperative social process
+* Ontologies and applications
+* Other approaches: Google's Knowledge Graph, Wolfram Alpha
 * Importance of shared conceptual worlds for well-ordered cohabitation
 * Fiction as a form of abbreviated speaking about a social normality
+* Data and Information
+* Syntax, Semantics, Pragmatics
 
-## July 1: Storytelling, conceptualisation, information and language
+__Slides:__
+* [Linked Open Data and Conceptual Worlds](LOD.pdf)
+* [Data and Information](DatenInformationen.pdf)
+
+## July 1: Storytelling, Conceptualisation, Information and Language
 
 __Literature__:
 * Helmut Klemm (2003). Ein großes Elend. Informatik-Spektrum 26, S. 267–273. 
