@@ -45,6 +45,87 @@ organizations and their characteristics.
 
 ## Notes
 
+The aim of our seminar is to gain insights into different approaches of
+management theories and to interpret them in a system-theoretical context.
+This was outlined in more detail in the first seminar on April, 13.
+Management in this understanding is always directed towards _managing an
+organisational context_, even if this is not explicitly present in some
+management approaches.
+
+This refers especially to those approaches that identify management largely
+with management of people, such as "management by incentive". Also the concept
+of "systematic management" from the first seminar, which focuses on management
+as process, points in the direction of such an understanding of management
+that is primarily oriented towards tactical concerns. Shchedrovitsky [MSM,
+p. 66] points out that management must not be reduced to such a perspective:
+"Programme design is what management is all about.  Someone who cannot design
+development programmes cannot manage people".
+
+In the sense of our notion of technology with its three levels
+- socially available processual knowledge
+- institutionalised practical procedures
+- private procedural skills
+such approaches in fact neglect the second level of targeted organisational
+development. In the first seminar the interplay of personal development
+possibilities and organisational structuring was addressed above all by a
+reference to I. Sommerville with his version of the concept of a
+socio-technical system.  Shchedrovitsky points out that designed structuring
+processes within organisations, however, have their limits and, especially in
+the case of changing framework conditions, easily come into contradiction with
+self-movement structures of a "living organisation". The distinction between
+formal and informal organisations according to the gradual expression of such
+a designed structuring component takes up this idea. It can be assumed that
+such informal organisations, which are typical for multi-stakeholder contexts,
+are to be managed by different principles than formal organisations with their
+clear structures of authorisation and responsibility.
+
+The general connection between practical activity and conceptual reflection
+described by Shchedrovitsky in [MSM, p. 70 ff.] unfolds for management and in
+management theories on three levels:
+- The practical activity of a manager in the conceptual context of his or her
+  own experience and of a concrete organisation with little separation of the
+  concrete and the abstract,
+- the practical reflection of this action in groups of such managers in the
+  conceptual context of generalised own experience and typified organisational
+  structures with little separation of domain-specific and methodological
+  aspects (the term "group" is used here in the sense of Shchedrovitsky),
+- the academic reflection of these reflections across domain boundaries in
+  order to advance to general methodological insights.
+
+Each of these three levels is associated with a specific spatio-temporal
+dimension of a feedback loop between justified expectations and experienced
+results. This feedback is objective insofar as the evaluation of the
+experienced results is not solely individual-subjective, but - in the sense of
+[Berger/Luckmann's] "legitimate interpretations of meaning" - broken by the
+social behaviour of others. In this sense, managers and management theories
+are themselves "managed".
+
+Managers on the first level are evaluated by the extent to which their actions
+have been "successful". Managing at this level is a private procedural skill
+that can only be learned practically. However, since "success" is also
+evaluated on the conceptual standards of the second level, these conceptual
+standards must be acquired in a learning process, for which there are a large
+number of educational offers and certification structures for "management
+professionals".
+
+In the process, strange structures emerge, as described in "Mintzberg on
+Management" - an orientation structure in language form which the management
+trainees have to follow and to adapt, while those rules do not seem to apply
+to the management gurus. In any case, (not only) Mintzberg repeatedly points
+out that management rules are made to be disregarded. Good managers are
+characterised above all by the fact that they know which rules in which
+contexts are better not to apply (and are allowed not to apply them).
+
+This strange evaluative relationship of development forms between level 1 (of
+practical management) and level 2 (of systematisation of practical management
+experience) does repeat itself in the relationship of levels 2 and 3 when it
+is emphasised that most academic approaches in management theories have little
+practical relevance. The alleged ineffectiveness of level 2 and 3 approaches
+for the respective upstream level is opposed by the dense institutional
+structures in which new generations of managers are growing. This is in sharp
+contrast to Mintzberg's insistence on the purported lack of usefulness of
+advice from these training structures.
+
 ##  From the Chat
 
 Graebe, Hans-Gert :
