@@ -30,6 +30,10 @@ years ago.
 
 ## Notes
 
+
+
+##  From the Chat
+
 - Father Toyoda - what role does the generation of inventors and entrepreneurs
   around the turn of the century 1900 (as well as Werner Siemens) play in the
   formation of today's management structures?
