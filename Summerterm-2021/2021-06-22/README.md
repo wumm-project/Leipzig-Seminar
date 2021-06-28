@@ -30,13 +30,95 @@ years ago.
 
 ## Notes
 
+The Toyota Management System, like other management approaches, has its roots
+at the turn of the 20th century. Management thus appears as a specific form of
+differentiation of an industrial production process whose beginnings lie in
+the second half of the 19th century. The essential prerequisites for this were
 
+- the production-technical provision of energy sources, which in their power
+  went far beyond the previously available human and animal energy sources,
 
+- the mass production of standardised intermediate products and semi-finished
+  goods on the basis of advancing scientific and technical knowledge
+  (e.g. iron processing and steel production in the second half of the 19th
+  century),
+
+- the inventive use of these new principles of action and materials in new,
+  standardised products suitable for the mass market.
+
+This unfolding industrial mode of production was shaped in many places by new
+entrepreneurial personalities who were distinguished by both technical
+expertise and entrepreneurial skill and thus combined two essential components
+of economic success - access to generally available procedural knowledge as
+private processual skills and a feeling for market demand - which later
+diverged in the professions of engineer and manager. However, in the
+biographical literature, engineering requirements and their scientific
+foundations are in the foreground; there is no mention of special management
+techniques developed and generalised at that time.
+
+This was also the case with Toyoda senior and Henry Ford around 1900. However,
+there was the challenge for the scientific methods so successfully applied in
+the technical field also to be applied to business organisation.  The vision
+was to organise a factory to run as well and smoothly as a machine.
+
+The systemtheoretically founded principles of hierarchical composition of a
+whole as organising the functional interaction of viable components as design
+principle of technical artefacts were transferred to the organisation of
+production. However, in that situation the principles are not to be applied in
+a constructive way as in the _design_ of a machine, but as a _reorganisation_
+of an already viable business system, a "living organisation". Among all
+components of such a business system the "human" component turned out to be
+the most unwieldy and least accessible to "specification-compliant
+functioning".
+
+Major transitions in this direction in the first quarter of the 20th century
+are primarily associated with the names Frederick Taylor and Henry Ford. Ford
+went over to work at assembly lines with his car factory as early as 1913 and
+thus to a highly disaggregated form of organisation of production.
+Interestingly (according to Wikipedia), the initiative for this reorganisation
+did not come from Ford himself, but from employees of the Ford Motor Company.
+
+Fordism is also usually associated with a second insight, that the entire
+economic cycle requires not only supply but also demand with purchasing power
+in order to close the product cycle and thus also the capital cycle.  This
+requires an appropriate wage policy. In this way, labour turnover can also be
+dampened and thus important private processual skills can be kept in the
+company. Of course, this is only possible if corresponding profits are
+generated in the company, i.e. if the systemic context ensures not only the
+throughput of energy and material, but also of capital.
+
+We had already studied such management approaches several times in the
+seminar. They are repeated here to highlight similarities and contrasts with
+the Toyota system. The Toyota Motor Corporation, which started car production
+in 1936, was not only in competition with General Motors and the Ford Motor
+Company, which dominated the American car market of the time, but also in
+tension with the first emerging American management theories based mostly on
+_structural_ production-organisational approaches. Toyota, on the other hand,
+relies on a _process-oriented_ model of _networking_ systemic approaches. This
+becomes particularly visible in the principle of "just in time". The
+throughput of a _resource_ to be guaranteed in a system as a contextual
+condition is coupled to the _resource provision process_ ("the right part at
+the right time in the right amount") of another system. In this approach, the
+focus is on the networked structure of flows of interweaving processes and
+thus the coordination of cycles and clockings instead of static structures and
+a stronger orientation towards quantities. The Toyota Management System and
+the closely related Total Quality Management (TQM) approach differ
+significantly in their model-theoretical approaches to process modelling,
+which is reflected, for example, in the different guidelines ISO 9001 (for
+classical process models) and ISO 9004 (for TQM-based process models).
+
+The whole relies on the stabilisation of existing systemic processes and their
+interaction. Gradual changes are possible above all in stable environments and
+thus in a context that is today much associated today the term _resilience_.
+One question arises: How does such an approach deal with more disrutive change
+management, e.g. caused by deep technological changes as the Digital Change? 
+ 
 ##  From the Chat
 
 - Father Toyoda - what role does the generation of inventors and entrepreneurs
   around the turn of the century 1900 (as well as Werner Siemens) play in the
   formation of today's management structures?
+  - For some thoughts see the notes above.
 
 - In contrast to previous approaches, the Toyota approach focuses on
   organisational development and not only on management of people. The complex
@@ -51,8 +133,13 @@ years ago.
   different whole)?  Toyota rule 12 on developmental approach is a specific
   approach to the second problem. Hegel? Learning organisation. Subject
   formation at the level of cooperative structure?
+  - Ken Kleemann argued substantially against such parallels, since Hegel's
+    whole dialectical approach does not occur here, but the development models
+    of the Toyota Management System are essentially only applicable to linear
+    developments in stable contexts.
 
 - Just in time - interplay of resource and resource management categories.
+  - See the explanation in the notes section.
 
 - Pyramid of the four levels - to what extent do systems theory approaches
   play a role here?
@@ -65,7 +152,10 @@ years ago.
 - Elimination of waste - internally the process dimension stands above the
   structure dimension.  Shchedrovitsky criticises "classical" approaches for
   not having a clear concept of process.  TRIZ also has difficulties with the
-  concept of flows.
+  concept of flows.  
+  - The emphasis on the process dimension and a consistent discussion of its
+    interconnectedness is a distinctive feature of the Toyota Management
+    System compared to other management theories.
 
 - Pull system means a massive coupling of the parts of the whole system.  How
   does structuring work in such an approach?
