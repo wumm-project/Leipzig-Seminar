@@ -224,6 +224,8 @@ Graebe, Hans-Gert :
 - Why "a machine does not have a will of its own" if it imposes it on people?
   See also my Marx quote in the first lecture.
 
+More comments:
+
 - Jannis : accepting as a way of approaching the subject of management?
 
 - V. Heuten : I will definitely continue to think about the intuition
