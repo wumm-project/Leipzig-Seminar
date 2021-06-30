@@ -254,9 +254,12 @@ __Additional Reading__:
   * Was ist Information? Kritik einer Legende. ISBN 978-3-518-58470-5
 
 __Learning Objectives__:
-* Internet as a "world of fictions"
 * Storytelling and action
 * Information and language
+
+__Slides:__
+* [Data and Information](DatenInformationen.pdf)
+* [Information and Language](Storytelling.pdf)
 
 ## July 8: Knowledge and action
 
