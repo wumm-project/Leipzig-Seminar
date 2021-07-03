@@ -107,12 +107,30 @@ significantly in their model-theoretical approaches to process modelling,
 which is reflected, for example, in the different guidelines ISO 9001 (for
 classical process models) and ISO 9004 (for TQM-based process models).
 
-The whole relies on the stabilisation of existing systemic processes and their
-interaction. Gradual changes are possible above all in stable environments and
-thus in a context that is today much associated today the term _resilience_.
-One question arises: How does such an approach deal with more disrutive change
-management, e.g. caused by deep technological changes as the Digital Change? 
- 
+It remains open how such a process oriented coordination works beyond the
+boundaries of the company.  For example, the expansion of a worldwide digital
+shipment tracking system resulting in completely new networking possibilities
+in the area of Supply Chain Management (SCM) for just-in-time production is
+currently confronted with increasing real-world logistical problems due to
+disruptions in connection with the Corona pandemic. Forms of description and
+execution forms are in tension. However, major problems do not arise _within_
+the individual systems of logistics or production, but _at their interface_.
+Short-term real-world disruptions in the logistics chain can be communicated,
+but they influence real-world execution of longer-term planning in production,
+which in turn has impact on the distribution chain. Such problems at the
+interface of two systems - the _resource demand_ of production and the
+_resource provision_ by logistics - the disruption of coordinated rhythms -
+must be intercepted by corresponding robustness of the production organisation
+of the target system to avoid further propagation to other systems. The Toyota
+system of exhausting all productive reserves has therefore its limits.
+
+The whole relies on the stabilisation of existing systemic processes _and_ the
+stabilisation of their interaction. Gradual changes are possible above all in
+stable environments and thus in a context that is today much associated with
+the term _resilience_.  One question remains: How does such the Toyota System
+handle more disruptive change management, e.g. caused by deep technological
+changes as the Digital Change?
+
 ##  From the Chat
 
 - Father Toyoda - what role does the generation of inventors and entrepreneurs
