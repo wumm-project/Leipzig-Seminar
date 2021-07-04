@@ -7,8 +7,14 @@
 
 ## Abstract
 
-tba
+
 
 ## Material
 
+* [Handout](Handout.pdf)
+
+## Notes
+
 tba
+
+##  From the Chat

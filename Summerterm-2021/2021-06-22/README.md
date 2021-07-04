@@ -27,6 +27,7 @@ years ago.
 ## Material
 
 * [Handout](Handout.pdf)
+* [Slides](Slides.pdf)
 
 ## Notes
 
