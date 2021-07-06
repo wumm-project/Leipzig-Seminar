@@ -91,6 +91,6 @@ written in English.
 
 ### [13.07.](2021-07-13) Anton Kozhemyako. Contradictory Business Processes and Schematization (Lukas Heink)
 
-### 20.07. Evaluation and lessons learnedx
+### 20.07. Evaluation and lessons learned
 
 ### Optional 23.07. [Interdisciplinary Discussion](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/LeipzigerGespraeche/2021-07-23) "Systems, Processes, and their Management".
