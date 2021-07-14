@@ -275,6 +275,10 @@ __Learning Objectives__:
 * Cooperative practices and their development
 * Conditions of possibility of action in civil society 
 
+__Slides:__
+* [Information and Language](Storytelling.pdf)
+* [Knowledge and Action](Knowledge.pdf)
+
 ## July 15: Cooperative action and digital transformation
 
 __Learning Objectives__:
@@ -284,11 +288,20 @@ __Learning Objectives__:
   transformation
 * Conditionalities and necessity of Open Culture
 
+__Slides:__
+* [Knowledge and Action](Knowledge.pdf)
+* [Cooperative Action and Digital Change](CooperativeAction.pdf)
+
 ## July 22: Formation of an Open Culture
 
 __Learning Objectives__:
 * Open Culture and infrastructure development
 * Services and business models under the conditions of Open Culture
+
+__Slides:__
+* [Cooperative Action and Digital Change](CooperativeAction.pdf)
+* [The History of the .NET Project](DotNet.pdf)
+* [Open Culture](OpenCulture.pdf) (Additional reading) 
 
 ## July 23: Optional: Interdisziplinary Discussion
 
