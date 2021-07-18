@@ -146,8 +146,8 @@ interface.
 Inside the "grey areas", process structures are modelled as directed graphs
 from predefined building blocks. This models a white box approach, whereby it
 remains unclear to what extent structural, functional and process-related
-aspects are differentiated. In the examples given, the structuring of _goals_
-- the central notion in an i* model - is used in all three ways. It is also
+aspects are differentiated. In the examples given, the structuring of _goals_ - 
+the central notion in an i* model - is used in all three ways. It is also
 clear that the notions _task_ and _resource_ conceal further requirements (a
 task must be implemented, a resource must be provided), which are not further
 developed in the diagram. The distinction between these two types of (masked)
