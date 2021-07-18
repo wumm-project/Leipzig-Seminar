@@ -38,7 +38,7 @@ conceptualisations of Russell Ackoff or Peter Drucker.
 
 The result is a development and consolidation process of the terminology
 itself, which was illustrated in the presentation by means of the historical
-development of various BP language systems (in addition to BPMN, ?? and EPK
+development of various BP language systems (in addition to BPMN, 3LGM and EPK
 were considered).  The need of cross-concept coordination processes for
 _practical_ interoperability led to cooperate structures between the various
 groups around the different emerging standards in a _Business Process
