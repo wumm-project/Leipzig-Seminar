@@ -65,6 +65,7 @@ In the sense of our notion of technology with its three levels
 - socially available processual knowledge
 - institutionalised practical procedures
 - private procedural skills
+
 such approaches in fact neglect the second level of targeted organisational
 development. In the first seminar the interplay of personal development
 possibilities and organisational structuring was addressed above all by a
