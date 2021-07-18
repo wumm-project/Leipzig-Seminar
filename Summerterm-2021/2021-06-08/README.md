@@ -89,8 +89,8 @@ mode of the (socio-technical) supersystem.
 Embedding management action in an already _well developed systemically
 structured real-world context_ and thus in an advanced structured "living
 organisation" also makes sense under another aspect. We consider objectives,
-rules and frameworks - including the authorisation of the managers themselves
-- as _given_ existing conditions of the management action and consequently
+rules and frameworks - including the authorisation of the managers themselves - 
+as _given_ existing conditions of the management action and consequently
 fade out the analysis of their historical genesis as part of a "reduction to
 essentials".
 
