@@ -120,7 +120,7 @@ subsystem and can be used to realise useful functions. For the realisation of
 useful functions, derived resources can be used that are formed by
 transformation or combination of original resources. Universal resources are
 emptiness and periods (pauses) in time. ...".  In any of these definitions,
-_resources are given_ ...
+_resources are given as things ready for use_. Resource production is not addressed. 
 
 However, we have already seen that in the term _resource_ two processes of
 different systems are coupled - the _use_ of the provided resource and the
