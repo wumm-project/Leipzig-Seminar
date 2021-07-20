@@ -18,3 +18,15 @@ Literatur:
 * Nikolay Shpakovsky.  Tree of Technology Evolution.
 * Karl Koltze, Valeri Souchkov (2017).  Systematische Innovationsmethoden.
   Hanser Verlag, München. ISBN 978-3-446-45127-8.
+
+## Arbeit
+
+zu ergänzen.
+
+Die Ergebnisse wurden in das WUMM-Repo _RDFData_ übernommen und in einer
+Publikation <https://hg-graebe.de/EigeneTexte/TRIZfest-2021.pdf>
+
+Tom Strempel, Hans-Gert Gräbe. Semantic Web Modelling of TRIZ System Evolution
+Concepts.
+
+für die Konferenz TRIZFest-2021 eingereicht.

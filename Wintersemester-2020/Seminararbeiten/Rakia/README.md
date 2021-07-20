@@ -23,3 +23,6 @@ sein.
   Computer Applications in Technology 30 (1), pp. 113-124.
   <https://doi.org/10.1504/IJCAT.2007.015702>.
 
+## Arbeit
+
+Es wurde nicht ernsthaft an der Themenstellung gearbeitet.
