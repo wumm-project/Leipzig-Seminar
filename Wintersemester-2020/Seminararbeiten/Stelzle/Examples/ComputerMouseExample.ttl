@@ -6,9 +6,9 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 @prefix od: <http://opendiscovery.org/rdf/Model#> .
 @prefix tc: <http://opendiscovery.org/rdf/Concept/> .
-@prefix ex: <http://example.orf/EvolutionExample/Boats/> .
+@prefix ex: <http://example.org/ComputerMouseExample/> .
 
-<http://opendiscovery.org/rdg/Ontologies/FunctionalAnalysis/>
+<http://opendiscovery.org/rdg/Ontologies/Examples/ComputerMouseExample/>
     cc:attributionName "The Open Discovery Project" ;
     cc:attributionURL <http://opendiscovery.org> ;
     cc:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
@@ -42,7 +42,7 @@ ex:Dust
     a tc:Component ;
     skos:prefLabel "Dust"@en, "Staub"@de , "Пыль"@ru .
 
-ex:Ecnodingdisk
+ex:Encodingdisk
     a tc:Component ;
     skos:prefLabel "Encoding Disk"@en, "Lochscheibe"@de , "Кодирующий диск"@ru .
 

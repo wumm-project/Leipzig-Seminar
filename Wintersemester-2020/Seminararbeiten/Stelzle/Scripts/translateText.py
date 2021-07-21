@@ -1,6 +1,7 @@
 import sys
 
 from deep_translator import (GoogleTranslator)
+from rdflib import Graph
 
 
 def read_turtle_file(file_name: str):
@@ -47,6 +48,10 @@ def translate(first_word: str, first_language: str, line: str, destination_langu
 
     return line
 
+def testGraph(file_name: str):
+    g = Graph()
+    g.parse(file_name)
+    print(g.serialize(format='json-ld', indent=4))
 
 if __name__ == "__main__":
 
@@ -59,3 +64,4 @@ if __name__ == "__main__":
         parameter_file_name = sys.argv[1]
 
     read_turtle_file(parameter_file_name)
+    #testGraph(parameter_file_name)
