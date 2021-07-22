@@ -199,6 +199,7 @@ __Learning Objectives__:
 * RDF Tools. RDF Stores, SPARQL Endpoints
 
 __Slides:__
+* [Internet Basics](InternetBasics.pdf)
 * [RDF Basics](RDF.pdf)
 
 ## June 17: Modelling Conceptual Worlds.
