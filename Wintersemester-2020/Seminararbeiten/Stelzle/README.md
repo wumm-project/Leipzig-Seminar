@@ -127,12 +127,13 @@ Subsystems, Objects, Subjects, ..." undeutlich bleibt. Hier werden allerdings
 auch in der TRIZ die eigenen Definitionen in praktischen Beispielen wenig
 konsequent umgesetzt.  Insbesondere scheint es angemessen, die Begriffe
 _System_, _Komponente_ und _Funktion_ genauer zu unterscheiden und dabei eine
-infaltionäre Verwendung des Systembegriffs zu vermeiden. Siehe dazu die
+inflationäre Verwendung des Systembegriffs zu vermeiden. Siehe dazu die
 Definition "Untersystem" bei Souchkov, die einen neuen eigenen
 Modellierungkontext aufspannt (Hierarchisches Modell).  Auch ist zu bedenken,
 ob _Ressource_ als weiteres Konzept (etwa für Passagiere, Luft, Straße,
-Benzin, ... im Car-Example) erforderlich ist, mit dem Stellen einer _Kopplung
-von Systemen_ markiert werden.
+Benzin, ... im Car-Example) erforderlich ist.  Die inzwischen vorliegenden
+Erkenntnisse zeigen, dass mit diesem Konzept Stellen einer _Kopplung von
+Systemen_ markiert werden.
 
 In (Koltze/Souchkov) wird ein _System_ als Bündel von zusammenspielenden
 Funktionalitäten gesehen, die Abgrenzung des Systems erfolgt auf dieser
