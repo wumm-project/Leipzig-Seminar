@@ -1,932 +1,962 @@
 % Einfache LaTeX-Vorlage für Texte
 \documentclass[a4paper,11pt]{article}
 \usepackage{ls}
-\usepackage[main=english,russian]{babel}
-
-\newcommand{\HGG}[1]{\begin{quote}\textbf{Anmerkung HGG:} #1\end{quote}}
+\usepackage[russian,main=english]{babel}
 
 \newenvironment{code}{\tt \begin{tabbing}
 \hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip12pt\=\hskip5cm\=\hskip5cm\=\kill}
 {\end{tabbing}}
-\def\dq{{\char34}}
+
+\newcommand{\ru}[1]{\foreignlanguage{russian}{#1}}
 
 \parindent0pt
 \parskip4pt
 
 \author{Immanuel Thoke}
-
 \title{Modelling TRIZ Flow Analysis with RDF}
+\date{May 7, 2021}
 
 \begin{document}
-    \maketitle
-    \tableofcontents
-    \newpage
-    \section{Abbreviations}
-    FAM - Flow Analysis Model
-
-    ICE - internal combustion engine
-
-    LETS - Laws of Evolution of Technical Systems
-
-    MINT - german acronym for Mathematik, Informatik, Naturwissenschaft und Technik
-    
-    SFM - substance field model
-
-    STEM - acronym for science, technology, engineering and mathematics
-
-    TOP - TRIZ Ontology Project
-
-    TRIZ - russian acronym for \foreignlanguage{russian}{теория решения изобретательских задач}, see TIPS
-
-    TIPS - Theory of Inventive Problem Solving 
-
-    RDF - Resource Description Framework 
-
-    WUMM - Widersprüche Und Management-Methoden
-
-    ZRTS - russian acronym for \foreignlanguage{russian}{Комплекс законов и тенденций развития технических систем}, see LETS
-
-    \newpage
-
-    \section{Aim of the work}
-
-    The aim of this paper is to elaborate a proposal for an ontological modelling
-    of the areas of \emph{TRIZ Flows} and \emph{TRIZ Flow Analysis} based on the
-    materials of the TRIZ Ontology Project (TOP) of the TRIZ Developer Summit
-    \cite{TOP} and further own investigations. The work fits into the activities
-    of the \emph{WUMM Project} \cite{WUMM} to accompany the TOP project and to
-    transfer it into the language of modern semantic concepts
-    \cite{WUMMTOP}.  The work therefore consists of two parts -- a
-    \emph{turtle file}, in which the semantic modelling is performed based on the
-    SKOS framework \cite{SKOS}, and \emph{this elaboration}, in which the
-    backgrounds and motivations of the concrete modelling decisions are detailed.
-
-    \section{Starting point} 
-
-    Flows and flow analysis play a rather peripheral role in TRIZ.  In the
-    standard reference \cite{Petrov2007} on a \emph{TRIZ Body of Knowledge} is
-    listed as item 2.5.8, but in the 7 references to the literature listed there
-    are no systematic explanations about the role of flows in TRIZ theory, but
-    only individual examples in which concrete flows (such as magnetic flow)
-    played a role in concrete modelling.
-
-    The most comprehensive source on issues of TRIZ modelling of flows and
-    methodological issues of flow analysis is the thesis \cite{Lebedyev2015} by
-    Yuri Lebedyev, which he submitted in 2015 under the supervision of S.A. 
-    Logvinov for graduation as TRIZ Master.
-
-    Such a limitation is justified, since the aim of this seminar paper is not to
-    completely cover the TRIZ theory of flow analysis, but only to identify its
-    essential concepts and describe their connection with modern semantic RDF
-    means based on the SKOS ontology. The basis for this is above all the
-    presentation of Olga Eckardt in the webinar of the TOP project in October 2020
-    \cite{Eckardt2020}, in which basic approaches of the Lebedyev's work have
-    obviously been incorporated.
-
-    We start from the definition of both concepts in the TOP Glossary
-    \cite{TOP-Glossary}: 
-    \begin{quote}
-        \textbf{Flow} is the directional movement in space of particles of mass of
-        matter, as well as the directional movement of energy or information. Flow
-        has dual properties: the properties of a substance of which the flow
-        consists, and the properties of a field, which is formed as a result of the
-        directional movement of particles of matter. Flows can be useful, harmful
-        and parasitic. The flow model contains static components: source, channel,
-        receiver, control system. Flow is a special case of a process in which
-        directional movement occurs in physical space.
-
-        \textbf{Flow analysis} is a method of systems analysis to establish
-        relationships in a system to flow, find resources, and determine compliance
-        with existing system requirements. The result of a flow analysis is a model
-        of the flow as is and a model of the flow to be. Flow modification
-        techniques are used to develop systems with flows and to solve inventive
-        problems in them.
-    \end{quote}
-    \newpage
-    The use of these concepts is further included there in a single place in the
-    context of cause-effect analysis (ibid.):
-    \begin{quote}
-        Cause-effect analysis is performed: 
-    \begin{itemize}[noitemsep]
-        \item When the causes of an undesirable effect are not clear (when we cannot
-        go from an administrative contradiction to a technical one $AC\to TC$.
-        \item When it is necessary to clarify the causes of an undesirable effect
-        (to deepen the understanding of the causes of an undesirable effect, e.g.
-        after a functional or a flow analysis).
-    \end{itemize}
-    \end{quote}
-    Other sources are much more sparing in their statements on these two
-    individual terms, but list other flow-related concepts, for example in
-    \cite{Souchkov2018}:
-    \begin{itemize}[noitemsep]
-        \item Delay Zone -- A location in a flow in which the integral flow speed is
-        significantly lower than local flow speed. A Delay Zone is a typical
-        disadvantage identified by Flow Analysis. 
-        \item Flow -- A sequence of events that have the same common feature.
-        \item  Flow Analysis-- An analytical method and a tool which identifies
-        disadvantages in flows of energy, substances, and information in a technical
-        system.
-        \item  Flow Disadvantage -- A disadvantage of a technical system being
-        analyzed identified during Flow Analysis. Examples: Bottlenecks, «Gray
-        Zones», «Stagnation Zones», etc.
-        \item Flow Distribution Analysis-- A part of Flow Analysis that identifies
-        distribution of flows and their disadvantages. 
-        \item Stagnation Zone -- A part of a flow in which the flow stops temporarily
-        or permanently. A Stagnation Zone is a typical disadvantage identified by
-        Flow Analysis.
-        \item Transmission -- One of the key components (subsystems) of a Complete
-        Technical System which according to the Law of System Completeness of a
-        technical system transmits a flow of energy required to operate a working
-        unit from an engine to the working unit.
-    \end{itemize}
-
-    \section{The Conceptualisations}
-    Being more than just a static methodology, there have been several approaches
-    to standardize the syntaxes and semantics of the conceptual 
-    and methodological knowledge of TRIZ. With launching the TRIZ Ontology Project
-    (TOP) several main contributors of the MA TRIZ school are pushing forward this 
-    longterm goal from a very core institution of the TRIZ history.
-    In awareness of the importance to establish uniform language models within 
-    human-machine-interface environments the WUMM\cite{WUMM} TOP Companion Project\cite{WUMMTOP}
-    is pushing even further 'to transform that information[...]',
-    which has been provided by the TOP,'[...]into RDF as 
-    the machine readable standard of the Web 3.0 (also called 'Semantic Web').'\cite{WUMMTOP}.     
-    
-    'RDF is a standard model for data interchange on the Web. [...] [It] 
-    extends the linking structure of the Web to use URIs to name the relationship 
-    between things as well as the two ends of the link 
-    (this is usually referred to as a “triple”). Using this simple model, it allows 
-    structured and semi-structured data to be mixed, exposed, and shared across 
-    different applications. \cite{RDF}
-
-    Given that framework, we can map the concepts of TRIZ onto a structure which can
-    be read and processed by computers that accept hyper text protocols and link them
-    to substantial resources creating an environment to collaborate 
-    in innovative projects across the world using semantic technologies.
-    
-    To collect and manage the development of the RDF source code of WUMMTOP, a git 
-    repository \cite{RDFData} is used and has been forked for developing the 
-    TRIZ Analysis Ontocard feature as the main goal of this work. The README manual
-    of the repository provides necessary preliminaries for using and continue developing 
-    the project.
- 
-    The main part of the modelling workflow is the appropriate design how to translate 
-    the ontological structure of the given topic into the RDF scope of three-word-sentences. 
-    Therefore the use of several namespaces to map each ontological aspect onto the 
-    architecture of subjects, predicates and objetcs is key to deliver a well structured 
-    RDF Model. 
-
-    The conceptualisations to be developed follow the basic assumptions and
-    positings, that are elaborated in more detail in \cite{Graebe2021}. In
-    particular, the following namespace prefixes are used:
-    \begin{itemize}[noitemsep]
-    \item \texttt{ex:} -- the namespace of a special system to be modelled. 
-    \item \texttt{tc:} -- the namespace of the TRIZ concepts (RDF subjects).
-    \item \texttt{od:} -- the namespace of WUMM's own concepts (RDF predicates,
-    general concepts).
-    \item \texttt{skos:} -- the Simple Knowledge Organization System Namespace (mainly for labelling).
-    \item \texttt{foaf} -- the namespace of Friend of a Friend to describe real world objects.
-    \item \texttt{rdfs:} -- the namespace of RDF Schema (RDF properties and their domains).
-    \item \texttt{cc:} -- the namespace of the Creative Commons License (to address copy left approach).
-    \item \texttt{owl:} -- the namespace of the Web Ontology Language (to address web ontology conventions).
-    \end{itemize}
-
-    As in Souchkov's Glossary we use URIs as 
-    \begin{center}\tt
-    tc:HarmfulAction, tc:HarmfulFunction, tc:HarmfulInteraction,
-    tc:HarmfulMachine
-    \end{center}
-    that combine the property and the subject of the property except for
-    \texttt{tc:FlowSubstance}.
-
-    As you can see, the WUMM project introduced the \texttt{od:} namespace to
-    extend the given ontological base of the TOP by its own concepts and 
-    provide needed explicit definitions of certain abstract models, which
-    are yet unclarified.
-
-    To see which predicates are used in the \texttt{od:} namespace, you can
-    use the provided SPARQL Query Editor endpoint \cite{SPARQL} and query
-
-    \begin{code}
-        SELECT DISTINCT ?p WHERE {?s ?p ?o FILTER regex(?p, 'od')}.
-    \end{code}
-    
-    \section{Modelling the Flow Analysis Ontocard}
-    Flow Analysis, as a rather niche method in TRIZ is grounded by two
-    major contributions: While Lyubomirsky \cite{Lyubomirsky2006} started
-    with the introduction of a broad set of methods to fix certain
-    problems assigned to flow as a functional magnitude, Lebedev 
-    \cite{Lebedev2011} \cite{Lebedyev2015} catched up on it and developed a 
-    systematic approach of analysis of flows based on the well known principles
-    of TRIZ. Finally Eckardt \cite{Eckardt2020} started to adopt this work
-    integrating it as a part in the TOP.
-
-    As mentioned before and to rely on proper methods of the design of 
-    software components a few small changes to the taxonomy of Eckardt's 
-    ontology needed to be induced with several layers of abstraction 
-    (which are existing prototypically but are not described explicitely) and 
-    specification of the used predicates. The description of the modelling 
-    will mainly focus on these parts, while explaining the structure of the 
-    ontology itself remains exemplarily, as it has always been specified in 
-    the quoted material.
-
-    «An ontology is about «modelling of models», because the clarification
-    of terms and concepts aimed at with an ontology is intended to be
-    practically used in real-world modelling contexts. This «modelling of 
-    models» references a typical engineering context, in which the 
-    \emph{modelling} of systems plays a central role and serves as basis of
-    further planned action (including project planning, implementation,
-    operation maintenance, further development of the system).
-    In this process, \emph{several levels of abstraction} are to be 
-    distinguished.»\cite{Graebe2021}
-    
-    \begin{itemize}
-        \item[0.] The level of the \emph{real-world system} 
-        \item[1.] The level of \emph{modelling the real world system} 
-        \item[2.] The \emph{level of the meta-model} as the actual (TRIZ) ontology
-        on which the systemic concepts are \emph{defined} 
-        \item[3.] The \emph{modelling meta-level 2} at which the methodological
-        concepts are defined \cite{Graebe2021} 
-        \footnote{see source for more details.} 
-    \end{itemize}
-
-
-    The methodological practice described in this work is mainly based at 
-    level 2, meaning the modelled objects and subjects in terms of RDF refer to
-    the concept of classes used in object-oriented programming. 
-    Therefore all properties of RDF objects described here are generic class
-    properties, which have to be instanciated separately as a RDF triplet of 
-    rdfs:type|s referring a certain object of class properties
-
-    The Flow Analysis Model can be separated in two parts. The 
-    \emph{Flow Model} refers to the descriptive and functional properties
-    of a flow, its (static) components as abstract or concrete real world 
-    objects, that define its properties and description methods, like
-    textual or graphical representations. The \emph{Flow Analysis (Model)}
-    describes the given context of a flow analysis, e.g. its requirements,
-    rules that derive from general TRIZ principles or the LETS, which form
-    an overall solution process containing methods how to solve problems using 
-    specific flow innovation methods. 
-
-    \subsection{\texttt{tc:Flow}}
-
-    A flow is, on the one hand, a component within a system but on the other 
-    hand can describe a system as a dynamic entity in the flow of time. The 
-    descriptive and functional properties are modeled along the rules for a 
-    morphological table, i.e. defining a PropertyDomain and a list of allowed 
-    values, modelled with \texttt{od:allowedValues}, respective \texttt{valueOf} 
-    as listed below. The model of Eckardt is slightly extended to cover the 
-    full model used by Lebedev. That is \texttt{tc:FlowDelegation} and the
-    \emph{Carrier Flow Model}, which is basically obligatory to model the flow 
-    of flows and modeled here as a special type of \texttt{tc:FlowFunctionality}.
-
-    \begin{center}
-    \begin{tabular}{|c|c|}\hline
-        Property & PropertyDomain \\\hline
-        od:belongsTo & tc:StageValue \\
-        od:hasFlowType & tc:FlowType  \\
-        od:hasFlowSubstance & tc:FlowSubstance  \\
-        od:hasFlowFunctionality & tc:FlowFunctionality  \\
-        od:hasFlowDefect & tc:FlowDefect  \\
-        od:hasFlowSource & tc:FlowSource  \\
-        od:hasMethodOfDescription & tc:MethodOfDescription \\\hline 
-    \end{tabular}
-    \end{center}
-
-    \begin{center}
-    \begin{tabular}{|l|p{10cm}|}\hline
-        PropertyDomain & PropertyValues \\\hline
-        tc:FlowType & tc:ComplexFlow, tc:DiscreteFlow, tc:ContinuousFlow \\
-        tc:FlowDelegation & tc:OpenFlow, tc:ClosedFlow \\
-        tc:FlowSubstance & tc:Information, tc:Energy, tc:Substance \\
-        tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow, \\
-        & tc:CarrierFlow \\
-        tc:FlowDefect & tc:InsufficientFlow, tc:ExcessiveFlow, \\
-        & tc:BadControllableFlow, tc:AbsentFlow \\ 
-        tc:FlowSource & tc:ExternalSource, tc:InternalSource  \\
-        tc:MethodOfDescription & tc:TextDescription, tc:ParametricDescription, \\
-        & tc:GraphicDescription \\\hline 
-    \end{tabular}
-    \end{center}
-
-    Here you can see the triples associated with the flow subject:
-    \begin{code}\tt
-    tc:Flow \\
-    \> a skos:Concept, od:SouchkovGlossaryEntry ; \\
-    \> od:WOPCategory od:Component; \\
-    \> od:SouchkovCategory tc:FlowAnalysis ; \\
-    \> od:SouchkovDefinition "A sequence of events that have the same common \\
-    \> feature."@en ; \\
-    \> od:LebedevDefinition "motion of material, energetic or informational \\
-    \> objects within a system" ; \\
-    \> skos:prefLabel "Flow"@en, "Fluss"@de, "Поток"@ru ; \\
-    \> skos:altLabel "Stream"@en, "Strom"@de . \\
-    \end{code}
-
-    \texttt{tc:StageValue} refers to the general concept of \texttt{tc:ModeValue}|s 
-    we'll see in action in the example, which is introduced later on. It defines
-    different models of flows, which are used along the flow analysis 
-    transformation process. \texttt{od:Component} with its predicate
-    \texttt{od:WOPCategory} defines whether a component of the analyzed system
-    is covered or with \texttt{od:PropertyDomain} properties of the flow as a
-    systematic approach is described. Each subject, that refers to a TRIZ 
-    concept has a \texttt{skos:Concept}, as well as a 
-    \texttt{od:AdditionalConcept}. Beside that we clarify if a subject is defined
-    by a certain author, like \texttt{od:LebedevDefinition} or \newline
-    \texttt{od:SouchkovDefinition}. The \texttt{od:SouchkovCategory} refers to a
-    specific categorial object defined by the
-    \texttt{<http:\\opendiscovery.org/rdf/Ontologies/Souchkov-Glossary/>}.
-
-    \subsection{Subconcepts of \texttt{tc:Flow}}
-
-    A flow consists of several physical parts (source, channel, receiver, 
-    control unit) that are components by their own and hence modeled with the 
-    predicate \texttt{od:subConceptOf}. For the moment they are attached to the
-    flow with a single predicate \texttt{od:hasStaticFlowComponent}. Yet, they 
-    have several subcomponents, which are listed below.
-
-    \begin{center}
-        \begin{tabular}{|c|c|}\hline
-            Property & PropertyDomain \\\hline
-            od:hasStaticFlowComponent & tc:StaticFlowComponent \\\hline 
-        \end{tabular}
-        \end{center}
-    
-        \begin{center}
-        \begin{tabular}{|l|p{10cm}|}\hline
-            Components & SubComponents \\\hline
-            tc:ControlUnit & tc:Pump, tc:Valve \\
-            tc:Receiver & (has no subcomponents yet) \\
-            tc:Source & tc:Current, tc:Potential \\
-            tc:Channel & (has no subcomponents yet)\\\hline 
-        \end{tabular}
-        \end{center}
-    
-
-    \subsection{\texttt{tc:FlowAnalysis}}
-    Eckardt's model of flow analysis is separated into two levels of abstraction.
-    The \emph{Top Level View} contains a self descriptive methodological approach,
-    which parts of the flow analysis are relevant to carry out a flow transformation
-    process. The \emph{Technical View} describes how a transformation is prescribed
-    by its compliance rules and its LETS and how requirements are met by 
-    solving the contradictions with several \texttt{tc:TechniqesofModification}. 
-
-    The ontological representation of such a process is extremely difficult and is
-    not considered here. The ontology of the flow analysis is restricted to the
-    description of the \emph{formative elements of the analysis} and the creation
-    of a manually generated \emph{FlowTransformation} document.
-
-    \subsubsection{Top Level View}
-    A Flow Analysis is an methodological process. Its \emph{Top Level View}
-    conncects the given context and a set of rules, that define procedural policies
-    to create a project plan, the \texttt{tc:FlowTransformation} (a 
-    \texttt{foaf:Document}), in a yet hypothetic Flow Transformation Description
-    Language) with the defined \texttt{tc:Flow} model in several stages to define 
-    steps of evolution of the technical system and how to process them to accomplish
-    the desired transformative action.
-
-    \begin{center}
-        \begin{tabular}{|c|c|}\hline
-            Property & PropertyRange \\\hline
-            od:describesFlow & tc:Flow \\
-            od:analysesFlow & tc:Flow \\
-            od:inContext & tc:Context \\
-            od:followsRules & tc:RulesOfFlowTransformation \\
-            od:usesDescriptionMethods & tc:Flow, ex:FlowModelAsIs, \\
-            & ex:FlowModelAsRequired, tc:FlowTransformation \\
-            od:generatesFlowTransformation & tc:FlowTransformation \\
-            od:applyChanges & tc:Flow \\\hline 
-        \end{tabular}
-        \end{center}
-    
-    While these properties usually operate from the Domain of 
-    \texttt{tc:FlowAnalysis}, with \newline
-    \texttt{od:applyChanges} all approaches of the Flow Analysis are finally
-    gathered in the \newline \texttt{tc:FlowTransformation} and can be applied 
-    to the real system (level 0).
-
-    \texttt{tc:Context} encapsulates all information about the exact conditions
-    of the analysis and \newline thus are modelled as \texttt{od:subConceptOf}.
-
-    \begin{center}
-        \begin{tabular}{|c|c|}\hline
-            Concept & hasSubConcept \\\hline
-            tc:Context & tc:Goal, tc:Requirement \\
-            tc:Requirement & tc:IncreseUsefulFlow, tc:ReduceHarmfulFlow, \\
-            & tc:ReduceParasiticFlow \\\hline 
-        \end{tabular}
-        \end{center}
-
-    \subsubsection{Technical View}
-    The Technical View combines two central concepts how and why methods are applied
-    in TRIZ. It connects the \texttt{tc:RulesOfFlowTransformation} with the 
-    \emph{ModelAsIs} and the \emph{ModelAsRequired}. It contains their rules of 
-    construction, integration of evaluation, their requirements and rules when to use
-    which \texttt{tc:TechniquesofModification} to establish a target transformation. 
-
-    With \texttt{od:buildModelAsIs} and \texttt{od:buildModelAsRequired} we define the
-    predicates to describe the process how specific instances of a \emph{Flow Model}
-    are built to define starting and desired target point of the flow transformation.
-    Here, the \texttt{tc:RulesOfFlowTransformation} are attached, that build a
-    framework of design directives, not only how the models are developed but also
-    how these models are connected to establish a valid solution out of the issued
-    circumstances of flow analysis. While \texttt{tc:RulesOfConstruction} and
-    \texttt{tc:RulesofEvalution} refer to a certain \texttt{ex:FlowModelAsIs}, 
-    the \texttt{tc:RulesOfConstructionOfInconformRequirements} and the
-    \texttt{tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems} describe
-    how the evaluated contradictions in the \texttt{ex:FlowModelAsIs} can
-    be resolved via the knwon LETS to develop a \texttt{ex:FlowModelAsRequired}.
-    
-    The \texttt{tc:TechniquesofModification} is the last core piece of this 
-    ontologization of Flow Analysis. It's a set of methods that are derived 
-    from certain LETS or so called trends occuring in technical systems 
-    that prescribe certain proceedings. \cite{KoltzeSouchkov2017} \emph{They} 
-    are \texttt{od:issuedAt} the \texttt{tc:ModelAsIs} to solve a certain
-    \texttt{tc:FlowDefect}. Each of these methods are modeled as
-    \texttt{od:subConceptOf tc:TechniquesofModification} and are categorized
-    by the static components they're intended to change. Additionally,
-    they're categorized by the overall requirement set in context. For example:
-
-    \begin{code}\tt
-        tc:TechniquesOfModification \\
-        \> od:issuedAt tc:ModelAsIs ; \\
-        \> od:forms tc:ModelAsRequired ; \\
-        \> od:hasSubConcept tc:ModificationOfReceiver, tc:ModificationOfSource, \\
-        \> tc:ModificationOfChannel, tc:ModificationOfControlUnit ; \\
-        \> skos:prefLabel "techniques of modification"@en, "Techniken zur  \\
-        \> Modifikation"@de ; \\
-        \> skos:altLabel "techniques of transformation"@en, "Techniken zur \\
-        \> Transformation"@de ; \\
-        \> a skos:Concept, od:AdditionalConcept . \\
-        \\
-        \\
-        tc:ModificationOfChannel \\
-        \> od:subConceptOf tc:TechniquesOfModification ; \\
-        \> od:hasSubConcept tc:removeBottleNeck, tc:removeDeadZone,  \\
-        \> tc:removeGreyZone ,tc:changeFlowMedium, tc:outsourceFlow,  \\
-        \> tc:reduceAmountOfTransformations, tc:improvePermeability,  \\
-        \> tc:reduceLength, tc:ModificationOfControlUnit, tc:combineUsefulFlows,  \\
-        \> tc:channelFlow, tc:implementBottleNeck, tc:implementDeadZone,  \\
-        \> tc:reducePermeability, tc:extendLength ; \\
-        \> skos:prefLabel "modification of the channel"@en, "Modifikation des  \\
-        \> Kanals"@de ; \\
-        \> skos:altLabel "transformation of the channel"@en, "Transformation  \\
-        \> des Kanals"@de ; \\
-        \> a skos:Concept, od:AdditionalConcept . \\
-        \\
-        tc:removeBottleNeck \\
-        \> od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ; \\
-        \> skos:prefLabel "remove bottle neck"@en, "Flaschenhals entfernen"@de ; \\
-        \> a skos:Concept, od:AdditionalConcept . \\
-        \end{code}
-
-    \section{Example for Flow Analysis}
-    \subsection{Model of an Internal Combustion Engine}
-
-    To illustrate how this machine readable ontology can be used to model real
-    world problems, we introduce an example on how to improve the exhaust
-    flow of an internal combustion engine (ICE), which have been proposed by 
-    Lebedev \cite{Lebedyev2015}. We show how the flow model is implemented,
-    address some weaknesses that occured using the given Ontocard and 
-    translating it into RDF and show how the Flow Analysis is applicated.
-
-    We used \emph{Wikipedia}[source!] to adjust the given example and meet the
-    typical terminology. You will see, that the granularity stays on the level
-    of the generality of the used terms. This is an important property of 
-    ontological modelling. You can go up and down that ladder as the used
-    analytical methods and vocabulary allow you to. In the example this can be
-    seen in the specific categorizations and assignments to each level of 
-    abstraction (see 6.), which change when you enter the terminology of
-    an ICE or are abstracted, when only the general categories of the 
-    flow analysis concepts are met. This depends a lot on the given context,
-    which is why there is yet no general solution when to use which level of 
-    abstraction is sufficient. Intuitively, the more the problem is located
-    in specific components, that refer to a special context in that domain,
-    the more concrete the terminology needs to get.
-    \newpage
-    First we show you the basic model of an ICE:
-    \begin{code}\tt
-        ex:BasicInternalCombustionEngine \\
-        \> a tc:Flow ; \\
-        \> od:hasFlowType tc:ComplexFlow ; \\
-        \> od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, \\
-        \> ex:Cooling, ex:Exhaust ; \\
-        \> od:hasFlowFunctionality tc:CarrierFlow ; \\
-        \> od:hasFlowDelegation tc:OpenFlow ; \\
-        \> od:hasFlowSource tc:InternalSource ; \\
-        \> od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, \\
-        \> ex:FuelSupplyPipe, ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe,\\
-        \> ex:CoolingTank, ex:CoolingPump, ex:CoolingWaterJacket, \\
-        \> ex:IntakeValve, ex:InletCamshaft, ex:CombustionChamber, \\
-        \> ex:SparkPlug, ex:Cylinder, ex:Piston, ex:ConnectionRod, \\
-        \> ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve, 
-        \> ex:ExhaustPipe ; \\
-        \> od:hasMethodOfDescription tc:ParametricDescription, \\
-        \> ex:ICE3DModel ; \\
-        \> skos:prefLabel "basic internal combustion engine"@en, \\
-        \> "grundlegendes Modell eines Verbrennungsmotors"@de  ; \\
-        \> skos:note "basic construction model from wikipedia \\
-        \> <https://en.wikipedia.org/wiki/Internal\_combustion\_engine>" . \\
-    \end{code}
-
-    Here you can see some decisions on abstraction and ascertainment. We've
-    focused on concrete descriptions of \texttt{tc:FlowSubstance} and
-    \texttt{tc:StaticFlowComponent}s as they are sufficient to show the 
-    problems of an exhaust flow and how to model an easy improvement.
-
-    Thus, the ICE is already a complex machine, where you have at least
-    two interdependent system levels, i. e. a flow of flows. But the given 
-    Ontocard doesn't define rules how systems of systems, respectively flows 
-    of flows, are modelled, because the Flow Model lacks a model of self 
-    description. Thats why this modelling is still experimentally. Therefore we
-    made some assumptions:
-    - What's an \texttt{tc:FlowSubstance} on the second level is a 
-    \texttt{tc:Flow} on the first level
-    - The \texttt{tc:FlowFunctionality} of a second order flow is always a 
-    \texttt{tc:CarrierFlow} \footnote{see chapter 7 in Lebedyev2015 
-    \cite{Lebedyev2015} }
-
-    So let's have a look at the \texttt{ex:Exhaust} flow:
-    \begin{code}\tt
-        ex:Exhaust \\
-        \> a tc:Flow ; \\
-        \> od:hasFlowType tc:DiscreteFlow ; \\
-        \> od:hasFlowSubstance tc:Substance ; \\
-        \> od:hasFlowFunctionality tc:HarmfulFlow ; \\
-        \> od:hasFlowDelegation tc:OpenFlow ; \\
-        \> od:hasFlowSource tc:InternalSource ; \\
-        \> od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, \\
-        \> ex:Atmosphere, ex:ExhaustValve, ex:ExhaustCamshaft ; \\
-        \> skos:prefLabel "the exhaust flow"@en, "Abgasstrom"@de . \\
-    \end{code}
-
-    \texttt{ex:Exhaust} is a \texttt{tc:HarmfulFlow} with several static 
-    components. These components are not exclusive for the exhaust flow.
-    They're used in other flow systems as different flow components. For
-    example the \texttt{ex:CombustionChamber}, here modelled as
-    \texttt{a tc:Potential}, is \texttt{a tc:Channel} in the system of the
-    \texttt{tc:Heat} flow. To inherit context sensitivity to these 
-    subjects, we use \texttt{od:specialCase}: \cite{RDFC}
-    
-    \begin{code}
-    ex:CombustionChamber \\
-    \> od:specialCase ex:Heat, ex:InternalCombustionEngine ; \\
-    \> a tc:Channel ; \\
-    \> skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de . \\
-    \\
-    ex:CombustionChamber \\
-    \> od:specialCase ex:Exhaust, ex:InternalCombustionEngine ; \\
-    \> a tc:Potential ; \\
-    \> skos:prefLabel "combustion chamber"@en, "Verbrennungskammer"@de . \\
-    \end{code}
-
-    \subsection{Improvement of the ExhaustFlow}
-    We now have a model of a \emph{system as is}, which can be used for
-    improvement. As already mentioned, we want to describe the process 
-    of exhaust flow innovation. Given the context of 
-    \texttt{tc:PollutionRestrictions}, 
-    we define the goal \texttt{ex:SatisfactionOfPollutionRestrictions} with the
-    requirements to reduce the exhaust flow while the work flow needs to be 
-    preserved as good as possible (\texttt{ex:InnovationOfExhaustFlow} 
-    \texttt{od:hasRequirement} \texttt{ex:ReduceExhaustFlow}, 
-    \texttt{ex:PreserveWorkFlow}). We define a specific
-    \texttt{foaf:Document} to hold all information about the innovation
-    project, describe which flows need to be described and analyzed,
-    following a \emph{ModelAsIs}, as well as a \emph{ModelAsRequired},
-    (called \texttt{ex:ICEExhaustionModel} and \newline
-    \texttt{ex:buildICEExhaustionInnovationModel}).
-
-    \begin{code}
-    ex:InnovationOfExhaustFlow \\
-    \> a tc:FlowAnalysis ; \\
-    \> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
-    \> od:describesFlow ex:Exhaust, ex:ICEExhaustionModel,  \\
-    \> ex:ICEExhaustionInnovationModel ; \\
-    \> od:analysesFlow ex:Exhaust, ex:Fuel, ex:Air, ex:AirFuelMixture, ex:Heat, \\
-    \> ex:Work ; \\
-    \> od:inContext ex:PollutionRestrictions ; \\
-    \> od:hasGoal ex:SatisfactionOfPollutionRestrictions ; \\
-    \> od:hasRequirement ex:ReduceExhaustFlow, ex:PreserveWorkFlow ; \\
-    \> ex:buildICEExhaustionModel ex:ICEExhaustionModel ; \\
-    \> ex:buildICEExhaustionInnovationModel ex:ICEExhaustionInnovationModel ; \\
-    \> tc:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems  \\
-    \> ex:ICEExhaustionInnovationModel ; \\
-    \> skos:prefLabel "innovation of the exhaust flow"@en, "Innovation des  \\
-    \> Abgassstroms"@de . \\
-    \end{code}
-
-    Using the \texttt{tc:RulesofEvalution} we can define an 
-    \texttt{ex:EvaluationOfExhaustFlow}, that detetcs a 
-    \texttt{tc:FlowDefect} which needs to be fixed, which can be found in the 
-    \newline
-    \texttt{ex:buildICEExhaustionModel}:
-
-    \begin{code}    
-    ex:EvaluationOfExhaustFlow \\
-    \> a tc:RulesOfEvaluation ; \\
-    \> od:detects ex:HighDispersedExhaust ; \\
-    \> skos:prefLabel "evaluation of the exhaust flow"@en, "Evaluation des  \\
-    \> Abgassstroms"@de . \\
-    \\
-    ex:HighDispersedExhaust \\
-    \> a tc:ExcessiveFlow ; \\
-    \> skos:prefLabel "high dispersed exhaust"@en, "Abgasstrom mit (zu) vielen  \\
-    \> Schwebstoffen"@de . \\
-    \\
-    ex:ICEExhaustionModel \\
-    \> a tc:Flow, tc:ModelAsIs ; \\
-    \> od:hasFlowType tc:ComplexFlow ; \\
-    \> od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work,  \\
-    \> ex:Cooling, ex:Exhaust ; \\
-    \> od:hasFlowFunctionality tc:CarrierFlow ; \\
-    \> od:hasFlowDefect ex:HighDispersedExhaust ; \\
-    \> od:hasFlowDelegation tc:OpenFlow ; \\
-    \> od:hasFlowSource tc:InternalSource ; \\
-    \> od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, ex:FuelSupplyPipe,\\
-    \> ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, \\
-    \> ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, \\
-    \> ex:InletCamshaft, ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, \\
-    \> ex:Piston, ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, \\
-    \> ex:ExhaustValve, ex:ExhaustPipe ; \\
-    \> od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ; \\
-    \> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
-    \> skos:prefLabel "ICE exhaustion model"@en, "Abgasmodell des Verbrennungsmotors"@de . \\
-    \end{code}
-
-    Using these informations, certain \texttt{tc:TechniquesOfModification} can 
-    be applied to fix the \texttt{tc:FlowDefect} and fullfill the set 
-    \texttt{tc:Requirements},
-    
-    \begin{code}
-    ex:installCatalyticConverter \\
-    \> a tc:reducePermeability ; \\
-    \> skos:prefLabel "install catalytic converter"@en, "Katalysator  \\
-    \> einbauen"@de .  \\
-    \\
-    ex:addGasolineAdditive \\
-    \> a tc:compensateWithSecondFlow ; \\
-    \> skos:prefLabel "add gasoline additive flow"@en, "Fluss für  \\
-    \> Kraftstoffzusatz hinzufügen" . \\
-    \end{code}
-    
-    leading to an additional flow \texttt{ex:FuelAdditive} and upgraded channel
-    component of the \texttt{ex:Exhaust} flow,
-    \begin{code}
-    ex:FuelAdditive \\
-    \> a tc:Flow ; \\
-    \> od:hasFlowType tc:DiscreteFlow ; \\
-    \> od:hasFlowSubstance tc:Substance ; \\
-    \> od:hasFlowFunctionality tc:UsefulFlow ; \\
-    \> od:hasFlowDelegation tc:ClosedFlow ; \\
-    \> od:hasFlowSource tc:InternalSource ; \\
-    \> od:hasStaticFlowComponent ex:IntakeValve, ex:InletCamshaft, \\
-    \> ex:FuelAdditivePump, ex:FuelAdditiveTank, ex:FuelAdditiveSupplyPipe, \\
-    \> ex:CombustionChamber ; \\
-    \> ex:FuelSuppylPipe, ex:CombustionChamber ; \\
-    \> skos:prefLabel "flow of fuel additive"@en, "Fluss des  \\
-    \> Kraftstoffzusatzes"@de . \\
-    \\
-    ex:ExhaustPipeWithCatalyticConverter \\
-    \> a tc:Channel ; \\
-    \> skos:prefLabel "exhaust pipe with catalytic converter"@en, "Auspuff mit  \\
-    \> Katalysator"@de . \\
-    \end{code}
-    
-    resulting in the final \emph{ModelAsRequired} 
-    \texttt{ex:buildICEExhaustionInnovationModel}:
-    \begin{code}
-    ex:ICEExhaustionInnovationModel \\
-    \> a tc:Flow, tc:ModelAsRequired ; \\
-    \> od:hasFlowType tc:ComplexFlow ; \\
-    \> od:hasFlowSubstance ex:Fuel, ex:FuelAdditive, ex:Transmission, ex:Heat,  \\
-    \> ex:Work, ex:Cooling, ex:Exhaust ; \\
-    \> od:hasFlowFunctionality tc:CarrierFlow ; \\
-    \> od:hasFlowDelegation tc:OpenFlow ; \\
-    \> od:hasFlowSource tc:InternalSource ; \\
-    \> od:hasStaticFlowComponent ex:FuelTank, ex:FuelAdditiveTank, ex:FuelPump, \\
-    \> ex:FuelAdditivePump, ex:FuelSupplyPipe, ex:FuelAdditiveSupplyPipe, \\
-    \> ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, \\
-    \> ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, ex:InletCamshaft,\\
-    \> ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston, \\
-    \> ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve,\\
-    \> ex:ExhaustPipeWithCatalyticConverter ; \\
-    \> od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ; \\
-    \> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
-    \> skos:prefLabel "ICE exhaustion innovation model"@en, "innovatives  \\
-    \> Abgasmodell des Verbrennungsmotors"@de . \\
-    \end{code}
-    \newpage
-    \section{Conclusion, critical review and further development}
-        \subsection{Outside view - embedding the Flow Analysis Ontocard}
-        For now this TRIZ Ontocard remains mostly isolated from its embedded 
-        environment within the ontological hierarchy of the TOP and rules 
-        how and when to apply a flow analysis method within the main process 
-        of inventive problem solving as it is proposed by the TRIZ model. A 
-        long term goal may be, that from an autonomous engineers perspective it
-        should be possible to gain a programmatic manual how to solve a 
-        specific inventive or systemic problem only with the given RDF of the 
-        TRIZ Ontology, for which it has to be serializable.
-
-        To embed the Flow Analysis Ontocard either a top down or a bottom up 
-        approach is applicable. For top down it needs to be clarified how Flow 
-        Analysis as one of the Top Level Ontologies fits in the structure with 
-        the remaining parts, especially LETS, the TRIZ application areas and
-        the TRIZ Model. As it seems clear Eckardt already considered the 
-        connection to LETS and the TRIZ Model, for which these areas should be 
-        prioritized in the further development.
-        
-        Further, not only in terms of ontologization, it remains unclear where 
-        exactly the methodological framework of flow analysis is settled, how 
-        it can be derived or transformed from other system analysis methods, 
-        which methods from different approaches it includes or how other 
-        techniques may benefit from including flow analysis methods in terms of
-        multiperspective modelling. There are several concepts, which use 
-        similar semantics or patterns to describe a problem, only on different 
-        levels of abstraction, especially those, which work on graph like 
-        structures. First mentioned here should be the process analysis 
-        framework and additionally function analysis as they intersect on a 
-        general conceptual level.
-
-        Looking at processes, functions and flows in TRIZ terminology 
-        \cite{Souchkov2018} \cite{Eckardt2020} a flow model is a special 
-        process model, where the process is a function in time between each of
-        the components of the process. \cite{KoltzeSouchkov2017} In the flow 
-        analysis model a flow is also a function, though it derives not as a 
-        function between components, but as an emergent property of its 
-        components properties, which do not have functional properties only, 
-        but relational properties too, especially the control unit and the 
-        channel, which can not be grouped by source or receiver components 
-        bijectively in time. So it's neither a classical process model nor a 
-        function model in its strict sense, thus combines aspects of both as 
-        flow is a function in time between nodes, which combine multifold 
-        properties of different components, but with interdependet properties 
-        like ratio of flow rate and capacity. In the status quo these aspects 
-        are not covered explicitely by the flow analysis model.
-
-        Further, the concept of substance field models (SFM) is closely related
-        to the FAM. 'Analog to the function model the components are also 
-        connected via a function, but in the substance field model the energy 
-        or a specific form of energy is added.' \cite{KoltzeSouchkov2017} Thus,
-        the substance field model matches the systemic structure of flow 
-        composition, leading to its definition as a physical quantity as a 
-        product of a field and a (sur)face. \cite{Flussdefinition(Physik)}
-        Even more, SFM uses the terminology of useful and harmful effects, too.
-        \cite{KoltzeSouchkov2017} Therefore the linkage between those methods 
-        should be generalized in the future.
-
-        Next mentioned should be its connection to the root conflict analysis. 
-        As already scribed in the introduction, cause and effect analysis and 
-        the identification of cause-effect-chains is a well described and 
-        established concept in TRIZ. As many rules of flow analysis and its
-        techniques to change flows obviously imply a root conflict analysis, 
-        there is no ontological relation between these concepts and should be 
-        made explicit. 
-        
-        Yet, there are several other concepts in TRIZ that can be exploited 
-        using the flow analysis. Generally speaking, all models which describe 
-        progress in time and map the ability and change of motion of some 
-        potential can be analyzed using the FAM. So it maybe should considered 
-        to review the concept of evolution of technical systems in terms of 
-        flow analysis, at least ontologically.
-        
-        While having focused mainly on the MATRIZ school, there exists a flow 
-        model in OTSM-TRIZ as well. Khomenko proposed a 'Problem Flow Approach',
-        which uses a more abstract concept of flow and combines aspects of 
-        network modelling of problems and solutions and technology flow 
-        characteristics. \cite{Khomenko2007} \cite{KhomenkoProblemFlowNetworks}
-        \cite{KhomenkoTechnologyProblemFlow} \cite{KhomenkoProblemFlowModel}
-        This should be analyzed in detail to gain knowledge about how these 
-        concepts align with the approach of the MATRIZ school or can uncover 
-        additional perspectives of flow modelling.        
-
-        \subsection{Inside view - methodological critics}
-        Eckardt's ontology of flow analysis, as it is, matches the basic 
-        methodological approach of TRIZ on how to change a problematic 
-        system in terms of requirement engineering. It has a descriptive flow 
-        model and categorial connections to certain rules, that are needed to 
-        construct and evaluate a \emph{Flow Model As It Is} and how they are 
-        used to transform it into a \emph{Flow Model As Required}, while 
-        including some techniques how to change its static components to aim 
-        for the prefered requirements. Beside that basic descriptive 
-        perspective it does not meet the need on how to the demanded 
-        modifications of flow systems are being processed, as it has been 
-        already noticed by Eckardt (algorithms and a matrix of methods of 
-        transformation of the model as is to the model as it should be as a 
-        possible next step \cite{Eckardt2020}). The proposed 
-        \emph{Techniques of Modification} used by Eckardt for this 
-        transformation are based on the work of Lyubomirsky. While Eckardt 
-        implemented his categories of techniques how to increase useful flows 
-        and reduce of harmful flows by changing different static components, a 
-        more detailed analytic point of view needs to adress which problematic 
-        effects can be solved using certain techniques. Further more, we need a
-        map which decodes what properties of components can cause components to
-        occur harmful properties, like grey zones, stagnation zones and so on. 
-        But to establish these performative aspects the descriptive flow model 
-        needs to be improved as well. To allow the modelling of higher order 
-        flow systems, we've upgraded Eckardt's proposal to the concepts 
-        introduced by Lebedev \cite{Lebedyev2015} and added experimental design
-        guidelines to connect flows on different systemic levels in RDF. These 
-        needed to be reviewed and adjusted to a profound level of acceptance.
-
-        Beside having properties for static components, which has already been 
-        regarded by Lyubomirsky and improved by Lebedyev (like capacity or 
-        conductivity), \texttt{dynamic properties of flow}, for example 
-        resonance or flow rate, have to be defined to model how specific flow 
-        properties emerge out of the constellation of certain configurations of
-        its static components and how they can be affected changing them. 
-        Reflecting this, a concept of how the process of changing components 
-        change the properties of the emerging flow and how specific flow 
-        properties can be achieved by changing certain static components is needed.
-        
-        This concludes, that an additionally level of abstraction is needed to 
-        account for the interconnection of flow and its components. The 
-        question is, how it can be modelled that a stagnation zone is only bad 
-        for useful flows but can be used to reduce harmful flows? At this point,
-        only singular flows are issued by the FAM precisely, meaning that it is
-        not clear, if a global flow system is issued or a specific local flow.
-        But it has to be considered, that synergistic effects on the one hand 
-        can cause contrary reactions on the other hand. A flow analysis 
-        therefore must take the complexity of flow networks into account. 
-        Beside extending the descriptive flow model to spotlight on the 
-        systemic causation of these problems, this is also a methodological 
-        issue. At the moment FAM focuses on methods, that emerge out of 
-        experienced based best practices in an engineering context. While 
-        establishing methodological concepts, that aim for generalization of 
-        categorial problem classes, they are mainly build for qualitive 
-        substance and energy flows only. Not to forget, that there are some 
-        blue prints adressing information flows, too, like the problem of 
-        conversion of flows and the concept of carrier and media flows, but 
-        these remain cursory. This rises the question: Which domains can be 
-        adressed by the actual model and which not? And further more, are the 
-        foundations of the TRIZ model sufficient to address complex problems in
-        flow analysis, that cannot clearly distinct between useful and harmful 
-        flows. If we look at these techniques, they try to fulfill requirements
-        orienting on one parameter at the time. But in practice, especially in 
-        a network of flows, you need to take multiple parameters into account, 
-        respectively to distinguish between global and local parameterization. 
-        Therefore a quantization or numerical framework is needed, like it is 
-        applied by graph theoretical concepts and optimization theory. 
-        \cite{FN} Mentioning the discussion of the \emph{TRIZ Ontology Webinar}
-        \cite{TOW}, the inclusion of STEM or MINT concepts is a huge black spot. 
-        Neither general concepts like \emph{Material Flow Analysis} \cite{MFA} 
-        or \emph{Fluid Dynamics} \cite{FD} are considered, nor well established 
-        ones on information flow, like \emph{supply chain management} or 
-        \emph{Traffic Flow Control} \cite{TF}. It's clear that the integration 
-        of each of these concepts is a load of work but necessary to obtain a 
-        general model of flow analysis in the future.
-
+\maketitle
+\tableofcontents
+\newpage 
+\section{Abbreviations}
+
+\begin{center}
+  \begin{tabular}{l@{\hskip1em--\hskip1em}p{12cm}}
+FAM & Flow Analysis Model\\
+HTTP & Hypertext Transfer Protocol\\
+ICE & Internal combustion engine\\
+LETS & Laws of Evolution of Technical Systems\\
+MINT & German acronym for Mathematik, Informatik, Naturwissenschaft und
+Technik\\
+RDF & Resource Description Framework \\
+SFM & Substance field model\\
+STEM & acronym for science, technology, engineering and mathematics\\
+TOP & TRIZ Ontology Project\\
+TRIZ & Russian acronym for \ru{теория решения изобретательских задач}, see
+TIPS\\
+TIPS & Theory of Inventive Problem Solving \\
+WUMM & Widersprüche Und Management-Methoden\\
+ZRTS & Russian acronym for \ru{Комплекс законов и тенденций развития
+  технических систем}, see LETS
+  \end{tabular}
+\end{center}
+
+\section{Aim of the work}
+
+The aim of this paper is to elaborate a proposal for an ontological modelling
+of the areas of \emph{TRIZ Flows} and \emph{TRIZ Flow Analysis} based on the
+materials of the TRIZ Ontology Project (TOP) of the TRIZ Developer Summit
+\cite{TOP} and further own investigations. The work fits into the activities
+of the \emph{WUMM Project} \cite{WUMM} to accompany the TOP project and to
+transfer it into the language of modern semantic concepts \cite{WUMMTOP}.  The
+work therefore consists of two parts -- a \emph{turtle file}, in which the
+semantic modelling is performed based on the SKOS framework \cite{SKOS}, and
+\emph{this elaboration}, in which the backgrounds and motivations of the
+concrete modelling decisions are detailed.
+
+\section{Starting point} 
+
+Flows and flow analysis play a rather peripheral role in TRIZ.  In the
+standard reference \cite{Petrov2007} on a \emph{TRIZ Body of Knowledge} it is
+listed as item 2.5.8, but in the 7 references to the literature listed there
+are no systematic explanations about the role of flows in TRIZ theory, but
+only individual examples in which concrete flows (such as magnetic flow)
+played a role in concrete modelling.
+
+The most comprehensive source on issues of TRIZ modelling of flows and
+methodological issues of flow analysis is the thesis \cite{Lebedyev2015} by
+Yuri Lebedyev, which he submitted in 2015 under the supervision of S.A. 
+Logvinov for graduation as TRIZ Master.
+
+Such a limitation is justified, since the aim of this seminar paper is not to
+completely cover the TRIZ theory of flow analysis, but only to identify its
+essential concepts and describe their connection with modern semantic RDF
+means based on the SKOS ontology. The basis for this is above all the
+presentation of Olga Eckardt in the webinar of the TOP project in October 2020
+\cite{Eckardt2020}, in which basic approaches of Lebedyev's work have
+obviously been incorporated.
+
+We start from the definition of both concepts in the TOP Glossary
+\cite{TOP-Glossary}: 
+\begin{quote}
+\textbf{Flow} is the directional movement in space of particles of mass of
+matter, as well as the directional movement of energy or information. Flow
+has dual properties: the properties of a substance of which the flow
+consists, and the properties of a field, which is formed as a result of the
+directional movement of particles of matter. Flows can be useful, harmful
+and parasitic. The flow model contains static components: source, channel,
+receiver, control system. Flow is a special case of a process in which
+directional movement occurs in physical space.
+
+\textbf{Flow analysis} is a method of systems analysis to establish
+relationships in a system to flow, find resources, and determine compliance
+with existing system requirements. The result of a flow analysis is a model
+of the flow as is and a model of the flow to be. Flow modification
+techniques are used to develop systems with flows and to solve inventive
+problems in them.
+\end{quote}
+
+The use of these concepts is further included there in a single place in the
+context of cause-effect analysis (ibid.):
+\begin{quote}
+Cause-effect analysis is performed: 
+\begin{itemize}[noitemsep]
+\item When the causes of an undesirable effect are not clear (when we cannot
+  go from an administrative contradiction to a technical one $AC\to TC$.
+\item When it is necessary to clarify the causes of an undesirable effect (to
+  deepen the understanding of the causes of an undesirable effect, e.g.  after
+  a functional or a flow analysis).
+\end{itemize}
+\end{quote}
+Other sources are much more sparing in their statements on these two
+individual terms, but list other flow-related concepts, for example in
+\cite{Souchkov2018}:
+\begin{itemize}[noitemsep]
+\item Delay Zone -- A location in a flow in which the integral flow speed is
+  significantly lower than local flow speed. A Delay Zone is a typical
+  disadvantage identified by Flow Analysis.
+\item Flow -- A sequence of events that have the same common feature.
+\item Flow Analysis -- An analytical method and a tool which identifies
+  disadvantages in flows of energy, substances, and information in a technical
+  system.
+\item Flow Disadvantage -- A disadvantage of a technical system being analysed
+  identified during Flow Analysis. Examples: Bottlenecks, «Gray Zones»,
+  «Stagnation Zones», etc.
+\item Flow Distribution Analysis -- A part of Flow Analysis that identifies
+  distribution of flows and their disadvantages.
+\item Stagnation Zone -- A part of a flow in which the flow stops temporarily
+  or permanently. A Stagnation Zone is a typical disadvantage identified by
+  Flow Analysis.
+\item Transmission -- One of the key components (subsystems) of a Complete
+  Technical System which according to the Law of System Completeness of a
+  technical system transmits a flow of energy required to operate a working
+  unit from an engine to the working unit.
+\end{itemize}
+
+\section{The Conceptualisations}
+Being more than just a static methodology, there have been several approaches
+to standardise the syntaxes and semantics of the conceptual and methodological
+knowledge of TRIZ. Launching the TRIZ Ontology Project (TOP) several main
+contributors of the MATRIZ school are pushing forward this longterm goal from
+a very core institution of the TRIZ history.  In awareness of the importance
+to establish uniform language models within human-machine-interface
+environments the WUMM \cite{WUMM} TOP Companion Project \cite{WUMMTOP} is
+pushing even further "to transform that information [...]", which has been
+provided by the TOP, "[...] into RDF as the machine readable standard of the
+Web 3.0 (also called 'Semantic Web')." \cite{WUMMTOP}.
+
+"RDF is a standard model for data interchange on the Web. [...] [It] extends
+the linking structure of the Web to use URIs to name the relationship between
+things as well as the two ends of the link (this is usually referred to as a
+'triple'). Using this simple model, it allows structured and semi-structured
+data to be mixed, exposed, and shared across different applications."
+\cite{RDF}.
+
+Given that framework, we can map the concepts of TRIZ onto a structure which
+can be read and processed by computers using HTTP and link them to substantial
+resources creating an environment to collaborate in innovative projects across
+the world using semantic technologies.
+
+To collect and manage this development of the RDF source code, a git
+repository \cite{RDFData} is used and has been forked for developing the TRIZ
+Analysis Ontocard feature as the main goal of this work. The README manual of
+the repository provides necessary preliminaries for using and continue
+developing the project.
+
+The main part of the modelling workflow is the appropriate design how to
+translate the ontological structure of the given topic into the RDF scope of
+three-word-sentences.  Therefore the use of several namespaces to map each
+ontological aspect onto the architecture of subjects, predicates and objetcs
+is the key to deliver a well structured RDF Model.
+
+The conceptualisations to be developed follow the basic assumptions and
+settings, that are elaborated in more detail in \cite{Graebe2021}. In
+particular, the following namespace prefixes are used:
+\begin{itemize}[noitemsep]
+\item \texttt{ex:} -- the namespace of a special system to be modelled. 
+\item \texttt{tc:} -- the namespace of the TRIZ concepts (RDF subjects).
+\item \texttt{od:} -- the namespace of WUMM's own concepts (RDF predicates,
+  general concepts).
+\end{itemize}
+Furthermore several standard ontologies are used:
+\begin{itemize}[noitemsep]
+\item \texttt{skos:} -- the Simple Knowledge Organization System Namespace
+  (mainly for labelling).
+\item \texttt{foaf} -- the namespace of Friend of a Friend to describe real
+  world objects.
+\item \texttt{rdfs:} -- the namespace of RDF Schema (RDF properties and their
+  domains).
+\item \texttt{cc:} -- the namespace of the Creative Commons License (to
+  address copy left approach).
+\item \texttt{owl:} -- the namespace of the Web Ontology Language (to address
+  web ontology conventions).
+\end{itemize}
+
+As in Souchkov's Glossary we use URIs as 
+\begin{center}\tt
+  tc:HarmfulAction, tc:HarmfulFunction,\\ tc:HarmfulInteraction,
+  tc:HarmfulMachine
+\end{center}
+that combine the property and the subject of the property except for
+\texttt{tc:FlowSubstance}.
+
+As you can see, the WUMM project introduced the \texttt{od:} namespace to
+extend the given ontological base of the TOP by its own concepts and provide
+explicit definitions of certain abstract models, which are yet unclarified.
+
+To see which predicates are used in the \texttt{od:} namespace, you can
+query the WUMM SPARQL Endpoint \cite{SPARQL} 
+\begin{code}
+\> SELECT DISTINCT ?p WHERE {?s ?p ?o FILTER regex(?p, 'od')}.
+\end{code}
+
+\section{Modelling the Flow Analysis Ontocard}
+
+Flow Analysis, as a rather niche method in TRIZ is grounded by two major
+contributions: While Lyubomirsky \cite{Lyubomirsky2006} started with the
+introduction of a broad set of methods to fix certain problems assigned to
+flow as a functional magnitude, Lebedyev \cite{Lebedyev2011} \cite{Lebedyev2015}
+catched up on it and developed a systematic approach of analysis of flows
+based on the well known principles of TRIZ. Finally Eckardt \cite{Eckardt2020}
+started to adopt this work integrating it as a part in the TOP.
+
+As mentioned before and to rely on proper methods of the design of software
+components a few small changes to the taxonomy of Eckardt's ontology needed to
+be induced with several layers of abstraction (which are existing
+prototypically but are not described explicitely) and specification of the
+used predicates. The description of the modelling will mainly focus on these
+parts, while explaining the structure of the ontology itself remains
+exemplarily, as it has always been specified in the quoted material.
+
+"An ontology is about 'modelling of models', because the clarification of
+terms and concepts aimed at with an ontology is intended to be practically
+used in real-world modelling contexts. This 'modelling of models' references a
+typical engineering context, in which the \emph{modelling} of systems plays a
+central role and serves as basis of further planned action (including project
+planning, implementation, operation maintenance, further development of the
+system).  In this process, \emph{several levels of abstraction} are to be
+distinguished." \cite{Graebe2021}
+
+\begin{itemize}[noitemsep]
+\item[0.] The level of the \emph{real-world system}. 
+\item[1.] The level of \emph{modelling the real world system}. 
+\item[2.] The \emph{level of the meta-model} as the actual (TRIZ) ontology on
+  which the systemic concepts are \emph{defined}.
+\item[3.] The \emph{modelling meta-level 2} at which the methodological
+concepts are defined.\footnote{See \cite{Graebe2021} for more details.} 
+\end{itemize}
+
+The methodological practice described in this work is mainly based at level 2,
+meaning the modelled objects and subjects in terms of RDF refer to the concept
+of classes used in object-oriented programming.  Therefore all properties of
+RDF objects described here are generic class properties, which have to be
+instantiated separately as a RDF triples of \texttt{rdfs:type}s referring a
+certain object of class properties.
+
+The Flow Analysis Model can be separated in two parts. The \emph{Flow Model}
+refers to the descriptive and functional properties of a flow, its (static)
+components as abstract or concrete real world objects, that define its
+properties and description methods, like textual or graphical representations.
+The \emph{Flow Analysis (Model)} describes the given context of a flow
+analysis, e.g. its requirements, rules that derive from general TRIZ
+principles or the LETS, which form an overall solution process containing
+methods how to solve problems using specific flow innovation methods.
+
+\subsection{\texttt{tc:Flow}}
+
+A flow is, on the one hand, a component within a system but on the other hand
+can describe a system as a dynamic entity in the flow of time. The descriptive
+and functional properties are modeled along the rules for a morphological
+table, i.e. defining a PropertyDomain and a list of allowed values, modelled
+with \texttt{od:allowedValues}, respective \texttt{valueOf} as listed below.
+The model of Eckardt is slightly extended to cover the full model used by
+Lebedyev. That is \texttt{tc:FlowDelegation} and the \emph{Carrier Flow Model},
+which is basically obligatory to model the flow of flows and modeled here as a
+special type of \texttt{tc:FlowFunctionality}.
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Property & PropertyDomain \\\hline
+od:belongsTo & tc:StageValue \\
+od:hasFlowType & tc:FlowType  \\
+od:hasFlowSubstance & tc:FlowSubstance  \\
+od:hasFlowFunctionality & tc:FlowFunctionality  \\
+od:hasFlowDefect & tc:FlowDefect  \\
+od:hasFlowSource & tc:FlowSource  \\
+od:hasMethodOfDescription & tc:MethodOfDescription \\\hline 
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}\hline
+PropertyDomain & PropertyValues \\\hline
+tc:FlowType & tc:ComplexFlow, tc:DiscreteFlow, tc:ContinuousFlow \\
+tc:FlowDelegation & tc:OpenFlow, tc:ClosedFlow \\
+tc:FlowSubstance & tc:Information, tc:Energy, tc:Substance \\
+tc:FlowFunctionality & tc:UsefulFlow, tc:HarmfulFlow, tc:ParasiticFlow, \\
+& tc:CarrierFlow \\
+tc:FlowDefect & tc:InsufficientFlow, tc:ExcessiveFlow, \\
+& tc:BadControllableFlow, tc:AbsentFlow \\ 
+tc:FlowSource & tc:ExternalSource, tc:InternalSource  \\
+tc:MethodOfDescription & tc:TextDescription, tc:ParametricDescription, \\
+& tc:GraphicDescription \\\hline 
+\end{tabular}
+\end{center}
+
+Here you can see the triples associated with the flow subject:
+\begin{code}
+tc:Flow \\
+\> a skos:Concept, od:SouchkovGlossaryEntry ; \\
+\> od:WOPCategory od:Component; \\
+\> od:SouchkovCategory tc:FlowAnalysis ; \\
+\> od:SouchkovDefinition """A sequence of events that have the same common \\
+\>\> feature."""@en ; \\
+\> od:LebedyevDefinition """Motion of material, energetic or informational \\
+\>\> objects within a system"""@en ; \\
+\> skos:prefLabel "Flow"@en, "Fluss"@de, "\ru{Поток}"@ru ; \\
+\> skos:altLabel "Stream"@en, "Strom"@de . 
+\end{code}
+
+\texttt{tc:StageValue} refers to the general concept of \texttt{tc:ModeValue}s
+we'll see in action in the example, which is introduced later on. It defines
+different models of flows, which are used along the flow analysis
+transformation process. \texttt{od:Component} with its predicate
+\texttt{od:WOPCategory} defines whether a component of the analysed system is
+covered or with \texttt{od:PropertyDomain} properties of the flow as a
+systematic approach is described. Each subject, that refers to a TRIZ concept
+is a \texttt{skos:Concept}, as well as a \texttt{od:AdditionalConcept}. To
+indicate that a \texttt{skos:definition} is due to a certain author, we use
+subpredicates like \texttt{od:Lebedyev\-Defini\-tion} or
+\texttt{od:SouchkovDefinition}. The \texttt{od:SouchkovCategory} refers to a
+specific categorial object in Souchkov's glossary \cite{Souchkov2018}.
+
+\subsection{Subconcepts of \texttt{tc:Flow}}
+
+A flow consists of several physical parts (source, channel, receiver, control
+unit) that are components by their own and hence modeled with the predicate
+\texttt{od:subConceptOf}. For the moment they are attached to the flow with a
+single predicate \texttt{od:hasStaticFlowComponent}. Yet, they have several
+subcomponents, which are listed below.
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Property & PropertyDomain \\\hline
+od:hasStaticFlowComponent & tc:StaticFlowComponent \\\hline 
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{|l|p{10cm}|}\hline
+Components & SubComponents \\\hline
+tc:ControlUnit & tc:Pump, tc:Valve \\
+tc:Receiver & (has no subcomponents yet) \\
+tc:Source & tc:Current, tc:Potential \\
+tc:Channel & (has no subcomponents yet)\\\hline 
+\end{tabular}
+\end{center}
+
+\subsection{\texttt{tc:FlowAnalysis}}
+Eckardt's model of flow analysis is separated into two levels of abstraction.
+The \emph{Top Level View} contains a self descriptive methodological approach,
+which parts of the flow analysis are relevant to carry out a flow
+transformation process. The \emph{Technical View} describes how a
+transformation is prescribed by its compliance rules and its LETS and how
+requirements are met by solving the contradictions with several
+\texttt{tc:TechniqesOfModification}.
+
+The ontological representation of such a process is extremely difficult and is
+not considered here. The ontology of the flow analysis is restricted to the
+description of the \emph{formative elements of the analysis} and the creation
+of a manually generated \emph{FlowTransformation} document.
+
+\subsubsection{Top Level View}
+A Flow Analysis is an methodological process. Its \emph{Top Level View}
+conncects the given context and a set of rules, that define procedural
+policies to create a project plan, the \texttt{tc:FlowTransformation} (a
+\texttt{foaf:Document}, in a yet hypothetic \emph{Flow Transformation
+  Description Language}) with the defined \texttt{tc:Flow} model in several
+stages to define steps of evolution of the technical system and how to process
+them to accomplish the desired transformative action\footnote{Addendum graebe:
+  The abstraction levels (p. 6) are important here. The description of the
+  methodology takes place at level 3, the application of the methodology uses
+  language elements of level 2, the transformation of a concrete flow is
+  described at level 1. Only at level 1 different instances of the flow exist
+  next to each other as result of subsequent transformations.  And these
+  instances have much in common and do vary only a little. Our ontologisation
+  assumes that different instances in the namespace \texttt{ex:} are described
+  by different RDF graphs if necessary, the transformation itself is described
+  in an instance of \texttt{tc:FlowTransformation} as \texttt{foaf:Document}.
+  This is a version of the problem of whether one can step into the same river
+  twice. From an ontological point of view, the answer to this question is
+  clearly "yes".}.
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Property & PropertyRange \\\hline
+od:describesFlow & tc:Flow \\
+od:analysesFlow & tc:Flow \\
+od:inContext & tc:Context \\
+od:followsRules & tc:RulesOfFlowTransformation \\
+od:usesDescriptionMethods & tc:Flow, ex:FlowModelAsIs, \\
+& ex:FlowModelAsRequired, tc:FlowTransformation \\
+od:generatesFlowTransformation & tc:FlowTransformation \\
+od:applyChanges & tc:Flow \\\hline 
+\end{tabular}
+\end{center}
+
+While these properties usually operate from the Domain of
+\texttt{tc:FlowAnalysis}, \texttt{od:apply\-Changes} gathers all approaches of
+the Flow Analysis finally in the \texttt{tc:FlowTransformation} and thus can
+be applied to the real system (level 0).
+
+\texttt{tc:Context} encapsulates all information about the exact conditions
+of the analysis and thus are modelled as \texttt{od:subConceptOf}.
+
+\begin{center}
+\begin{tabular}{|c|c|}\hline
+Concept & hasSubConcept \\\hline
+tc:Context & tc:Goal, tc:Requirement \\
+tc:Requirement & tc:IncreaseUsefulFlow, tc:ReduceHarmfulFlow, \\
+& tc:ReduceParasiticFlow \\\hline 
+\end{tabular}
+\end{center}
+
+\subsubsection{Technical View}
+The Technical View combines two central concepts how and why methods are
+applied in TRIZ. It connects the \texttt{tc:RulesOfFlowTransformation} with
+the \emph{ModelAsIs} and the \emph{ModelAsRequired}. It contains their rules
+of construction, integration of evaluation, their requirements and rules when
+to use which \texttt{tc:TechniquesOfModification} to establish a target
+transformation.
+
+With \texttt{od:buildModelAsIs} and \texttt{od:buildModelAsRequired} we define
+the predicates to describe the process how specific instances of a \emph{Flow
+  Model} are built to define starting and desired target point of the flow
+transformation.  Here, the \texttt{tc:RulesOfFlowTransformation} are attached,
+that build a framework of design directives, not only how the models are
+developed but also how these models are connected to establish a valid
+solution out of the issued circumstances of flow analysis. While
+\texttt{tc:RulesOfConstruction} and \texttt{tc:RulesofEvalution} refer to a
+certain \texttt{ex:FlowModelAsIs}, the
+\texttt{tc:RulesOfConstructionOfInconformRequirements} and the
+\texttt{tc:RulesOfApplyingLawsOfDevelopmentOfTechnicalSystems} describe how
+the evaluated contradictions in the \texttt{ex:FlowModelAsIs} can be resolved
+via the knwon LETS to develop a \texttt{ex:FlowModelAsRequired}.
+
+The \texttt{tc:TechniquesOfModification} is the last core piece of this
+ontologisation of Flow Analysis. It is a set of methods that are derived from
+certain LETS or so called trends occuring in technical systems that prescribe
+certain processings \cite{KoltzeSouchkov2017}. \emph{They} are
+\texttt{od:issuedAt} the \texttt{tc:ModelAsIs} to solve a certain
+\texttt{tc:FlowDefect}.  Each of these methods are modeled as
+\texttt{od:subConceptOf tc:TechniquesOfModification} and are categorised by
+the static components they are intended to change. Additionally, they are
+categorised by the overall requirement set in context.
+
+For example:
+\begin{code}
+tc:TechniquesOfModification \\
+\> od:issuedAt tc:ModelAsIs ; \\
+\> od:forms tc:ModelAsRequired ; \\
+\> od:hasSubConcept tc:ModificationOfReceiver, tc:ModificationOfSource, \\
+\>\> tc:ModificationOfChannel, tc:ModificationOfControlUnit ; \\
+\> skos:prefLabel "techniques of modification"@en,\\
+\>\> "Techniken zur Modifikation"@de ; \\
+\> skos:altLabel "techniques of transformation"@en,\\
+\>\> "Techniken zur Transformation"@de ; \\
+\> a skos:Concept, od:AdditionalConcept . \\[6pt]
+
+tc:ModificationOfChannel \\
+\> od:subConceptOf tc:TechniquesOfModification ; \\
+\> od:hasSubConcept tc:removeBottleNeck, tc:removeDeadZone,  \+\\
+\> tc:removeGreyZone ,tc:changeFlowMedium, tc:outsourceFlow,  \\
+\> tc:reduceAmountOfTransformations, tc:improvePermeability,  \\
+\> tc:reduceLength, tc:ModificationOfControlUnit, tc:combineUsefulFlows,  \\
+\> tc:channelFlow, tc:implementBottleNeck, tc:implementDeadZone,  \\
+\> tc:reducePermeability, tc:extendLength ; \-\\
+\> skos:prefLabel "modification of the channel"@en,\\
+\>\> "Modifikation des Kanals"@de ; \\
+\> skos:altLabel "transformation of the channel"@en,\\
+\>\> "Transformation des Kanals"@de ; \\
+\> a skos:Concept, od:AdditionalConcept . \\[6pt]
+
+tc:removeBottleNeck \\
+\> od:subConceptOf tc:ModificationOfChannel, tc:IncreaseUsefulFlow ; \\
+\> skos:prefLabel "remove bottleneck"@en, "Flaschenhals entfernen"@de ; \\
+\> a skos:Concept, od:AdditionalConcept . \\
+\end{code}
+
+\section{Example for Flow Analysis}
+\subsection{Model of an Internal Combustion Engine}
+
+To illustrate how this machine readable ontology can be used to model real
+world problems, we introduce an example on how to improve the exhaust flow of
+an internal combustion engine (ICE), which have been proposed by Lebedyev
+\cite{Lebedyev2015}. We show how the flow model is implemented, address some
+weaknesses that occured using the given Ontocard and translating it into RDF
+and show how the Flow Analysis is applicated.
+
+We used
+\emph{Wikipedia}\footnote{\url{https://en.wikipedia.org/wiki/Internal_combustion_engine}}
+to adjust the given example and meet the typical terminology. The granularity
+stays on the level of the generality of the used terms.  This is an important
+property of ontological modelling. You can go up and down that ladder as the
+used analytical methods and vocabulary allow you to do. In the example this
+can be seen in the specific categorisations and assignments to each level of
+abstraction (see 6.), which change when you enter the terminology of an ICE or
+are abstracted, when only the general categories of the flow analysis concepts
+are met. This depends a lot on the given context, which is why there is yet no
+general solution when to use which level of abstraction is sufficient.
+Intuitively, the more the problem is located in specific components, that
+refer to a special context in that domain, the more concrete the terminology
+needs to be.
+
+First we present the basic model of an ICE:
+\begin{code}
+ex:BasicInternalCombustionEngine \\
+\> a tc:Flow ; \\
+\> od:hasFlowType tc:ComplexFlow ; \\
+\> od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work, \\
+\>\> ex:Cooling, ex:Exhaust ; \\
+\> od:hasFlowFunctionality tc:CarrierFlow ; \\
+\> od:hasFlowDelegation tc:OpenFlow ; \\
+\> od:hasFlowSource tc:InternalSource ; \\
+\> od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, \+\\
+\> ex:FuelSupplyPipe, ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe,\\
+\> ex:CoolingTank, ex:CoolingPump, ex:CoolingWaterJacket, \\
+\> ex:IntakeValve, ex:InletCamshaft, ex:CombustionChamber, \\
+\> ex:SparkPlug, ex:Cylinder, ex:Piston, ex:ConnectionRod, \\
+\> ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve, \\
+\> ex:ExhaustPipe ; \-\\
+\> od:hasMethodOfDescription tc:ParametricDescription, \\
+\>\> ex:ICE3DModel ; \\
+\> skos:prefLabel "Basic internal combustion engine"@en, \\
+\>\> "Grundlegendes Modell eines Verbrennungsmotors"@de  ; \\
+\> skos:note """Basic construction model from wikipedia \\
+\>\> <https://en.wikipedia.org/wiki/Internal\_combustion\_engine>""" . 
+\end{code}
+
+Here you can see some decisions on abstraction and findings. We focused on
+concrete descriptions of \texttt{tc:FlowSubstance} and
+\texttt{tc:StaticFlowComponent}s as they are sufficient to show the problems
+of an exhaust flow and how to model an easy improvement.
+
+Thus, the ICE is already a complex machine, where you have at least two
+interdependent system levels, i.e. a flow of flows. But the given Ontocard
+doesn't define rules how systems of systems, respectively flows of flows, are
+modelled, because the Flow Model lacks a model of self description. Thats why
+this modelling is still experimental. Therefore we made some assumptions: 
+\begin{itemize}[noitemsep]
+\item A \texttt{tc:FlowSubstance} on the second level is a \texttt{tc:Flow} on
+  the first level.
+\item The \texttt{tc:FlowFunctionality} of a second order flow is always a
+  \texttt{tc:CarrierFlow}\footnote{See chapter 7 in \cite{Lebedyev2015}. }.
+\end{itemize}
+
+So let us have a look at the \texttt{ex:Exhaust} flow:
+\begin{code}
+ex:Exhaust \\
+\> a tc:Flow ; \\
+\> od:hasFlowType tc:DiscreteFlow ; \\
+\> od:hasFlowSubstance tc:Substance ; \\
+\> od:hasFlowFunctionality tc:HarmfulFlow ; \\
+\> od:hasFlowDelegation tc:OpenFlow ; \\
+\> od:hasFlowSource tc:InternalSource ; \\
+\> od:hasStaticFlowComponent ex:CombustionChamber, ex:ExhaustPipe, \\
+\>\> ex:Atmosphere, ex:ExhaustValve, ex:ExhaustCamshaft ; \\
+\> skos:prefLabel "The exhaust flow"@en, "Abgasstrom"@de . \\
+\end{code}
+
+\texttt{ex:Exhaust} is a \texttt{tc:HarmfulFlow} with several static
+components. These components are not exclusive for the exhaust flow.  They are
+used in other flow systems as different flow components. For example the
+\texttt{ex:CombustionChamber}, here modelled as \texttt{a tc:Potential}, is
+\texttt{a tc:Channel} in the system of the \texttt{tc:Heat} flow. To inherit
+context sensitivity to these subjects, we use \texttt{od:specialCase}:
+\cite{RDFC}
+
+\begin{code}
+ex:CombustionChamber \\
+\> od:specialCase ex:Heat, ex:InternalCombustionEngine ; \\
+\> a tc:Channel ; \\
+\> skos:prefLabel "Combustion chamber"@en, "Verbrennungskammer"@de .
+\end{code}
+
+\subsection{Improvement of the \texttt{tc:Exhaust} Flow}
+
+We now have a model of a \emph{system as is}, which can be used for
+improvement.  As already mentioned, we want to describe the process of exhaust
+flow innovation. Given the context of \texttt{ex:PollutionRestrictions}, we
+define the goal \texttt{ex:SatisfactionOfPollutionRestric\-tions} with the
+requirements to reduce the exhaust flow while the work flow needs to be
+preserved as good as possible 
+\begin{code}
+\> \texttt{ex:InnovationOfExhaustFlow} \texttt{od:hasRequirement}
+  \texttt{ex:ReduceExhaustFlow},\\\>\> \texttt{ex:PreserveWorkFlow} .
+\end{code}
+We define a specific \texttt{foaf:Document} to hold all information about the
+innovation project, that describes which flows need to be described and
+analysed, following a \emph{ModelAsIs}, as well as a \emph{ModelAsRequired},
+(called \texttt{ex:ICEExhaustionModel} and
+\texttt{ex:buildICEExhaustionInnova\-tion\-Model}).
+
+\begin{code}
+ex:InnovationOfExhaustFlow \\
+\> a tc:FlowAnalysis ; \\
+\> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
+\> od:describesFlow ex:Exhaust, ex:ICEExhaustionModel,  \\
+\> ex:ICEExhaustionInnovationModel ; \\
+\> od:analysesFlow ex:Exhaust, ex:Fuel, ex:Air, ex:AirFuelMixture, ex:Heat, \\
+\>\> ex:Work ; \\
+\> od:inContext ex:PollutionRestrictions ; \\
+\> od:hasGoal ex:SatisfactionOfPollutionRestrictions ; \\
+\> od:hasRequirement ex:ReduceExhaustFlow, ex:PreserveWorkFlow ; \+\\
+\> ex:buildICEExhaustionModel ex:ICEExhaustionModel ; \\
+\> ex:buildICEExhaustionInnovationModel ex:ICEExhaustionInnovationModel ; \-\\
+\> tc:applyRulesofApplyingLawsOfDevelopmentOfTechnicalSystems  \\
+\>\> ex:ICEExhaustionInnovationModel ; \\
+\> skos:prefLabel "Innovation of the exhaust flow"@en,\\
+\>\> "Innovation des Abgassstroms"@de .
+\end{code}
+
+Using the \texttt{tc:RulesofEvalution} we can define an
+\texttt{ex:EvaluationOfExhaustFlow}, that detetcs a \texttt{tc:FlowDefect}
+which needs to be fixed, which can be found in the
+\texttt{ex:buildICE\-Exhaustion\-Model}:
+
+\begin{code}    
+ex:EvaluationOfExhaustFlow \\
+\> a tc:RulesOfEvaluation ; \\
+\> od:detects ex:HighDispersedExhaust ; \\
+\> skos:prefLabel "Evaluation of the exhaust flow"@en,\\
+\>\> "Evaluation des Abgassstroms"@de . \\[6pt]
+
+ex:HighDispersedExhaust \\
+\> a tc:ExcessiveFlow ; \\
+\> skos:prefLabel "high dispersed exhaust"@en,\\
+\>\> "Abgasstrom mit (zu) vielen Schwebstoffen"@de . \\[6pt]
+
+ex:ICEExhaustionModel \\
+\> a tc:Flow, tc:ModelAsIs ; \\
+\> od:hasFlowType tc:ComplexFlow ; \\
+\> od:hasFlowSubstance ex:Fuel, ex:Transmission, ex:Heat, ex:Work,  \\
+\>\> ex:Cooling, ex:Exhaust ; \\
+\> od:hasFlowFunctionality tc:CarrierFlow ; \\
+\> od:hasFlowDefect ex:HighDispersedExhaust ; \\
+\> od:hasFlowDelegation tc:OpenFlow ; \\
+\> od:hasFlowSource tc:InternalSource ; \\
+\> od:hasStaticFlowComponent ex:FuelTank, ex:FuelPump, ex:FuelSupplyPipe,\+\\
+\> ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, \\
+\> ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, \\
+\> ex:InletCamshaft, ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, \\
+\> ex:Piston, ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, \\
+\> ex:ExhaustValve, ex:ExhaustPipe ; \-\\
+\> od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ; \\
+\> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
+\> skos:prefLabel "ICE exhaustion model"@en, "Abgasmodell des
+Verbrennungsmotors"@de . \\ 
+\end{code}
+
+Using these informations, certain \texttt{tc:TechniquesOfModification} can be
+applied to fix the \texttt{tc:FlowDefect} and fullfill the set
+\texttt{tc:Requirements}.
+
+\begin{code}
+ex:installCatalyticConverter \\
+\> a tc:reducePermeability ; \\
+\> skos:prefLabel "Install catalytic converter"@en,\\
+\>\> "Katalysator einbauen"@de .  \\[6pt]
+
+ex:addGasolineAdditive \\
+\> a tc:compensateWithSecondFlow ; \\
+\> skos:prefLabel "Add gasoline additive flow"@en,\\
+\>\> "Fluss für Kraftstoffzusatz hinzufügen" . 
+\end{code}
+They lead to an additional flow \texttt{ex:FuelAdditive} and upgraded channel
+component of the \texttt{ex:Exhaust} flow.
+\begin{code}
+ex:FuelAdditive \\
+\> a tc:Flow ; \\
+\> od:hasFlowType tc:DiscreteFlow ; \\
+\> od:hasFlowSubstance tc:Substance ; \\
+\> od:hasFlowFunctionality tc:UsefulFlow ; \\
+\> od:hasFlowDelegation tc:ClosedFlow ; \\
+\> od:hasFlowSource tc:InternalSource ; \\
+\> od:hasStaticFlowComponent ex:IntakeValve, ex:InletCamshaft, \+\\
+\> ex:FuelAdditivePump, ex:FuelAdditiveTank, ex:FuelAdditiveSupplyPipe, \\
+\> ex:CombustionChamber ; \-\\
+\> ex:FuelSuppylPipe, ex:CombustionChamber ; \\
+\> skos:prefLabel "Flow of fuel additive"@en,\\
+\>\> "Fluss des Kraftstoffzusatzes"@de . \\[6pt]
+
+ex:ExhaustPipeWithCatalyticConverter \\
+\> a tc:Channel ; \\
+\> skos:prefLabel "Exhaust pipe with catalytic converter"@en,\\
+\>\> "Auspuff mit Katalysator"@de . 
+\end{code}
+This results in the final \emph{ModelAsRequired}
+\texttt{ex:buildICEExhaustionInnovationModel}:
+\begin{code}
+ex:ICEExhaustionInnovationModel \\
+\> a tc:Flow, tc:ModelAsRequired ; \\
+\> od:hasFlowType tc:ComplexFlow ; \\
+\> od:hasFlowSubstance ex:Fuel, ex:FuelAdditive, ex:Transmission, ex:Heat,  \\
+\>\> ex:Work, ex:Cooling, ex:Exhaust ; \\
+\> od:hasFlowFunctionality tc:CarrierFlow ; \\
+\> od:hasFlowDelegation tc:OpenFlow ; \\
+\> od:hasFlowSource tc:InternalSource ; \\
+\> od:hasStaticFlowComponent ex:FuelTank, ex:FuelAdditiveTank, ex:FuelPump,
+\+\\ 
+\> ex:FuelAdditivePump, ex:FuelSupplyPipe, ex:FuelAdditiveSupplyPipe, \\
+\> ex:Atmosphere, ex:Compressor, ex:AirSupplyPipe, ex:CoolingTank, \\
+\> ex:CoolingPump, ex:CoolingWaterJacket, ex:IntakeValve, ex:InletCamshaft,\\
+\> ex:CombustionChamber, ex:SparkPlug, ex:Cylinder, ex:Piston, \\
+\> ex:ConnectionRod, ex:Crankshaft, ex:ExhaustCamshaft, ex:ExhaustValve,\\
+\> ex:ExhaustPipeWithCatalyticConverter ; \-\\
+\> od:hasMethodOfDescription tc:ParametricDescription, ex:ICE3DModel ; \\
+\> od:generatesFlowTransformation ex:ExhaustionFlowTransformation ; \\
+\> skos:prefLabel "ICE exhaustion innovation model"@en,\\
+\>\> "Innovatives Abgasmodell des Verbrennungsmotors"@de . 
+\end{code}
+
+\section{Conclusion, critical review and further development}
+
+\subsection{Outside view -- embedding the Flow Analysis Ontocard}
+
+For now this TRIZ Ontocard remains mostly isolated from its embedded
+environment within the ontological hierarchy of the TOP and rules how and when
+to apply a flow analysis method within the main process of inventive problem
+solving as it is proposed by the TRIZ model. A long term goal may be, that
+from an autonomous engineers perspective it should be possible to gain a
+programmatic manual how to solve a specific inventive or systemic problem only
+with the given RDF of the TRIZ Ontology, for which it has to be serialisable.
+
+To embed the Flow Analysis Ontocard either a top down or a bottom up approach
+is applicable. For top down it needs to be clarified how Flow Analysis as one
+of the Top Level Ontologies fits in the structure with the remaining parts,
+especially LETS, the TRIZ application areas and the TRIZ Model. As it seems
+Eckardt already considered the connection to LETS and the TRIZ Model, for
+which these areas should be prioritised in the further development.
+
+Further, not only in terms of ontologisation, it remains unclear where 
+exactly the metho\-do\-logical framework of flow analysis is settled, how 
+it can be derived or transformed from other system analysis methods, 
+which methods from different approaches it includes or how other 
+techniques may benefit from including flow analysis methods in terms of
+multiperspective modelling. There are several concepts, which use 
+similar semantics or patterns to describe a problem, only on different 
+levels of abstraction, especially those, which work on graph like 
+structures. First mentioned here should be the process analysis 
+framework and additionally function analysis as they intersect on a 
+general conceptual level.
+
+Looking at processes, functions and flows in TRIZ terminology
+\cite{Souchkov2018} \cite{Eckardt2020} a flow model is a \emph{special process
+  model}, where the process is a function in time between each of the
+components of the process \cite{KoltzeSouchkov2017}. In the flow analysis
+model a flow is also a function, though it appears not as a function between
+components, but as an emergent property of its components properties, which do
+not have functional properties only, but relational properties too, especially
+the control unit and the channel, which can not be grouped by source or
+receiver components bijectively in time. So it is neither a classical process
+model nor a function model in its strict sense, and combines aspects of both
+as flow is a function in time between nodes, which combine multifold
+properties of different components, but with interdependent properties like
+ratio of flow rate and capacity. In the status quo these aspects are not
+covered explicitely by the flow analysis model.
+
+Further, the concept of \emph{substance field models} (SFM) is closely related
+to the FAM. "Analog to the function model the components are also connected
+via a function, but in the substance field model the energy or a specific form
+of energy is added." \cite{KoltzeSouchkov2017}. Thus, the substance field
+model matches the systemic structure of flow composition, leading to its
+definition as a physical quantity as a product of a field and a (sur)face
+\cite{Flussdefinition(Physik)}.  Even more, SFM uses the terminology of useful
+and harmful effects, too \cite{KoltzeSouchkov2017}. Therefore the linkage
+between those methods should be generalised in the future.
+
+Next mentioned should be its connection to the \emph{root conflict analysis}.
+As already mentioned in the introduction, cause and effect analysis and the
+identification of cause-effect-chains is a well established concept in TRIZ.
+As many rules of flow analysis and its techniques to change flows obviously
+imply a root conflict analysis, there is not yet an ontological relation
+between these concepts.  This should be made explicit.
+
+Yet, there are several other concepts in TRIZ that can be exploited using Flow
+Analysis. Generally speaking, all models which describe progress in time and
+map the ability and change of motion of some potential can be analysed using
+FAM. So it seems worth to review the concept of evolution of technical systems
+in terms of flow analysis, at least ontologically.
+
+While having focused mainly on the MATRIZ school, there exists a flow model in
+OTSM-TRIZ as well. Khomenko proposed a \emph{Problem Flow Approach}, which
+uses a more abstract concept of flow and combines aspects of network modelling
+of problems and solutions and technology flow characteristics
+\cite{Khomenko2007} \cite{KhomenkoFlow-1} \cite{KhomenkoFlow-2}.  This should
+be analysed in detail to gain knowledge about how these concepts align with
+the approach of the MATRIZ school or can uncover additional perspectives of
+flow modelling.
+
+\subsection{Inside view -- methodological critics}
+
+Eckardt's ontology of flow analysis, as it is, matches the basic
+methodological approach of TRIZ on how to change a problematic system in terms
+of requirement engineering. It has a descriptive flow model and categorial
+connections to certain rules, that are needed to construct and evaluate a
+\emph{Flow Model As It Is} and how they are used to transform it into a
+\emph{Flow Model As Required}, while including some techniques how to change
+its static components to aim for the preferred requirements. Beside that basic
+descriptive perspective it does not meet the need how the demanded
+modifications of flow systems are being processed, as it has been already
+noticed by Eckardt (algorithms and a matrix of methods of transformation of
+the model as is to the model as it should be as a possible next step
+\cite{Eckardt2020}). The proposed \emph{Techniques of Modification} used by
+Eckardt for this transformation are based on the work of Lyubomirsky. While
+Eckardt implemented his categories of techniques how to increase useful flows
+and reduce of harmful flows by changing different static components, a more
+detailed analytic point of view needs to address which problematic effects can
+be solved using certain techniques. Furthermore, we need a map which decodes
+what properties of components can cause components to occur harmful
+properties, like grey zones, stagnation zones and so on.  But to establish
+these performative aspects the descriptive flow model needs to be improved as
+well. To allow the modelling of higher order flow systems, we've upgraded
+Eckardt's proposal to the concepts introduced by Lebedyev \cite{Lebedyev2015}
+and added experimental design guidelines to connect flows on different
+systemic levels in RDF. These should be reviewed and adjusted to a profound
+level of acceptance.
+
+Beside having properties for static components, which has already been
+regarded by Lyubo\-mirsky and improved by Lebedyev (like capacity or
+conductivity), \emph{dynamic properties of flow}, for example resonance or
+flow rate, have to be defined to model how specific flow properties emerge out
+of the constellation of certain configurations of its static components and
+how they can be affected changing them.  Reflecting this, a concept of how the
+process of changing components change the properties of the emerging flow and
+how specific flow properties can be achieved by changing certain static
+components is needed.
+
+This concludes, that an additional level of abstraction is needed to account
+for the interconnection of flow and its components. The question is, how it
+can be modelled that a stagnation zone is only bad for useful flows but can be
+used to reduce harmful flows? At this point, only singular flows are issued by
+the FAM precisely, meaning that it is not clear, if a global flow system is
+issued or a specific local flow.  But it has to be considered, that synergetic
+effects on the one hand can cause contrary reactions on the other hand. A flow
+analysis therefore must take the complexity of flow networks into account.
+Beside extending the descriptive flow model to spotlight on the systemic
+causes of these problems, this is also a methodological issue. At the moment
+FAM focuses on methods, that emerge out of experienced based best practices in
+an engineering context. While establishing methodological concepts, that aim
+for generalisation of categorial problem classes, they are mainly built for
+qualitive substance and energy flows only. Not to forget, that there are some
+blueprints addressing information flows, too, like the problem of conversion
+of flows and the concept of carrier and mediating flows, but these remain
+cursory. This rises the question: Which domains can be addressed by the actual
+model and which not? And furthermore, are the foundations of the TRIZ model
+sufficient to address complex problems in flow analysis, that cannot clearly
+distinct between useful and harmful flows. If we look at these techniques,
+they try to fulfill requirements orienting on one parameter at the time. But
+in practice, especially in a network of flows, you need to take multiple
+parameters into account, respectively to distinguish between global and local
+parameterisation.  Therefore a quantisation or numerical framework is needed,
+like it is applied by graph theoretical concepts and optimisation theory
+\cite{FN}.  Mentioning the discussion of the \emph{TRIZ Ontology Webinar}
+\cite{TOW}, the inclusion of STEM or MINT concepts is a huge black spot.
+Neither general concepts like \emph{Material Flow Analysis} \cite{MFA} or
+\emph{Fluid Dynamics} \cite{FD} are considered, nor well established ones on
+information flow, like \emph{Supply Chain Management} or \emph{Traffic Flow
+  Control} \cite{TF}. It is clear that the integration of each of these
+concepts is a load of work but necessary to obtain a general model of flow
+analysis in the future.
+
+\newpage
 \begin{thebibliography}{...}
-    \raggedright
-    \bibitem{Eckardt2020} Eckardt, Olga. Ontologische Diagramme. Flussmodell und Flussanalyse. TRIZ Ontology Project - The Webinar 2020. 27.10.2020, 19 Uhr (UTC+3). Translated to German by Hans-Gert Gräbe, Leipzig. 
-    \bibitem{FD} Fluid Dynamics - Wikipedia entry.
-        \url{https://en.wikipedia.org/wiki/Fluid_dynamics}. Last visited 07 May 2021.
-    \bibitem{FN} Flow Network - Wikipedia entry.
-        \url{https://en.wikipedia.org/wiki/Flow_network}. Last visited 07 May 2021.
-    \bibitem{Flussdefinition(Physik)} Fluss (Physik).
-        \url{https://de.wikipedia.org/wiki/Fluss_(Physik)}. Last visited 03 May 2021.
-    \bibitem{Graebe2020} Hans-Gert Gr\"abe (2020).  Die Menschen und ihre Technischen Systeme. LIFIS Online.
-        \url{doi:10.14625/graebe_20200519}.
-    \bibitem{Graebe2021} Hans-Gert Gr\"abe (2021). About the WUMM modelling concepts of a TRIZ ontology.
-        \url{https:\\github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Anmerkungen.pdf}.
-    \bibitem{Khomenko2007} Khomenko N.N. . OTSM problem flow approach: An application for the competitive analysis of patents and other information resources.
-        \url{https://otsm-triz.org/content/patent_ru}. Last visited 07 May 2021.
-    \bibitem{KhomenkoProblemFlowNetworks} Khomenko N.N. . Problem Flow Networks.
-        \url{https://otsm-triz.org/taxonomy/term/47}. Last visited 07 May 2021.
-    \bibitem{KhomenkoTechnologyProblemFlow} Khomenko N.N. . Technology Problem Flow.
-        \url{https://otsm-triz.org/category/%D0%BE%D1%82%D1%81%D0%BC-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B/%D0%BE%D1%82%D1%81%D0%BC-%D0%BA%D0%B0%D0%BA-%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%BD%D0%B0%D1%8F-%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F/%D0%B8%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D0%BE%D1%82%D1%81%D0%BC-i/%D1%82%D0%B5%D1%85%D0%BD%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC}. Last visited 07 May 2021.
-    \bibitem{KhomenkoProblemFlowModel} Khomenko N.N. . Problem Flow Model.
-        \url{https://otsm-triz.org/category/%D0%BE%D1%82%D1%81%D0%BC-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B/%D0%BE%D1%82%D1%81%D0%BC-%D0%BA%D0%B0%D0%BA-%D0%BF%D1%80%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%BD%D0%B0%D1%8F-%D1%82%D0%B5%D0%BE%D1%80%D0%B8%D1%8F/%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%BE%D1%82%D1%81%D0%BC/%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C-%D0%BF%D0%BE%D1%82%D0%BE%D0%BA-%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC}. Last visited 07 May 2021.
-    \bibitem{KoltzeSouchkov2017} Koltze, Souchkov (2018). Systematische Innovation. TRIZ-Anwendungen in der Produkt- und Prozessentwicklung. Carl Hanser Verlag. München. 2017.
-    \bibitem{Kuryan et al. 2020} Kuryan, Andrey. Rubin, Mikhail. Shchedrin, Nikolai. Eckardt, Olga. Rubina, Natalia. TRIZ Ontology. Currect State and Perspectives. Translated to English by Hans-Gert Gräbe, Leipzig, who aknowledges the support by the free version of deepl.com. Minsk, Belarus. August 21, 2020.
-    \bibitem{Litvin et al. 2007} Litvin, Simon. Petrov, Vladimir. Rubin, Mikhail. International TRIZ Association(MA TRIZ). Frey, Victor. Altshuller Institute for TRIZ Studies. TRIZ Body of Knowledge. 2007.
-    \bibitem{Lebedev2011} Lebedev, Yuri. Classification of flows in technical systems. 2011.
-    \bibitem{Lebedyev2015} Yuri Lebedyev (2015). Tool improvement Flow Analysis. (Russian original translated with DeepL.com)
-      \url{https:\\github.com/wumm-project/Leipzig-Seminar/blob/master/Wintersemester-2020/Seminararbeiten/Thoke/Lebedev-2015-en.pdf}.
-    \bibitem{Lyubomirsky2006} Lyubomirsky, Alex. Law on efficiency improvement use of substance, energy and information flows. 2006.
-    \bibitem{MFA} Material Flow Analysis - Wikipedia entry.
-        \url{https://en.wikipedia.org/wiki/Material_flow_analysis}. Last visited 07 May 2021.
-    \bibitem{Petrov2007} Vladimir Petrov, Michail Rubin, Simon Litvin (2007). Fundamentals of TRIZ Theory of Inventive Problem Solving (in Russian). Reprinted in 2020. ISBN 978-5-4496-8183-6.
-    \bibitem{Petrov2019} Petrov, Vladimir. TRIZ. Theory of Inventive Problem Solving - Level 1. Springer International Publishing. Ra'anana, Israel. 2019.
-    \bibitem{Souchkov2018} Valeri Souchkov (2018).  Glossary of TRIZ and TRIZ-related terms. Version 1.2.
-        \url{https:\\matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}. 
-    \bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
-        \url{https:\\www.w3.org/TR/skos-reference/}.
-    \bibitem{SCM} Supply Chain Management - Wikipedia entry.
-        \url{Supply_chain_management}. Last visited 07 May 2021.
-    \bibitem{TOP} The TRIZ Ontology Project (TOP) \foreignlanguage{russian}{Онтология ТРИЗ} of the TRIZ Developer Summit.
-        \url{https:\\triz-summit.ru/Onto_TRIZ/}.
-    \bibitem{TOP-Glossary} TRIZ 100 Glossary. A short glossary of key TRIZ concepts and terms (in Russian).
-        \url{https:\\triz-summit.ru/onto_triz/100/}.
-    \bibitem{TF} Traffic Flow - Wikipedia entry.
-        \url{https://en.wikipedia.org/wiki/Traffic_flow_(computer_networking)}. Last visited 07 May 2021.
-    \bibitem{WUMM} The WUMM Project. https:\\wumm-project.github.io/About.html. Last visited 22 February 2021.
-    \bibitem{WUMMTOP} The WUMM TOP Companion Project. https:\\wumm-project.github.io/Ontology. Last visited 22 February 2021.
-    \bibitem{RDF} The W3C Resource Description Framework (RDF). https:\\www.w3.org/RDF/. Last visited 27 April 2021.
-    \bibitem{RDFC} RDFwithContext. A proposal . 
-        \url{https:\\www.w3.org/2011/rdf-wg/wiki/RDFwithContexts}. Last visited 02 May 2021.
-    \bibitem{RDFData} The RDFData git repository. https:\\github.com/wumm-project/RDFData.  Last visited 22 February 2021.
-    \bibitem{SPARQL} The Virtuoso SPARQL Query Editor hosted by the WUMM Project. http:\\wumm.uni-leipzig.de:8891/sparql. Last visited 22 February 2021. 
-    \bibitem{TOW} The TRIZ Ontology Webinar. On ontologies of 'Flow Model' and 'Flow Analysis'. 27 October 2020.
-        \url{https://wumm-project.github.io/2020-10-27}. Last visited 07 May 2021.
+\raggedright
+\bibitem{Eckardt2020} Olga Eckardt (2020).  \ru{Онтологические
+  диаграммы. Модель потока и потоковый анализ} (Ontology diagrams.  Flow model
+  and flow analysis) (in Russian). TRIZ Ontology Project -- Webinar, Oct. 27,
+  2020.  \url{https://wumm-project.github.io/2020-10-27}.
+\bibitem{FD} Fluid Dynamics -- English Wikipedia.
+  \url{https://en.wikipedia.org/wiki/Fluid_dynamics}. Last visited 07 May
+  2021.
+\bibitem{FN} Flow Network -- English Wikipedia.
+  \url{https://en.wikipedia.org/wiki/Flow_network}. Last visited 07 May 2021.
+\bibitem{Flussdefinition(Physik)} Fluss (Physik) -- German Wikipedia.
+  \url{https://de.wikipedia.org/wiki/Fluss_(Physik)}. Last visited 03 May
+  2021.
+\bibitem{Graebe2020} Hans-Gert Gr\"abe (2020).  Die Menschen und ihre
+  Technischen Systeme. LIFIS Online.  \url{doi:10.14625/graebe_20200519}.
+\bibitem{Graebe2021} Hans-Gert Gr\"abe (2021). About the WUMM modelling
+  concepts of a TRIZ ontology.  Manuscript, April 2021.
+  \url{https://wumm-project.github.io/Texts/WOP-Basics.pdf}.
+\bibitem{Khomenko2007} Nikolay N. Khomenko (2007). OTSM Problem Flow Networks
+  approach: application for competitive analysis of patents and other sources
+  of information. 2000-2007.  \url{https://otsm-triz.org}.  Last visited 07
+  May 2021.
+\bibitem{KhomenkoFlow-1} Nikolay N. Khomenko (2007).  OTSM Network of
+  Problems: Draft for Discussion and Improvements.
+  \url{https://otsm-triz.org}. Last visited 07 May 2021.
+\bibitem{KhomenkoFlow-2} Nikolay N. Khomenko. Problem Flow Technology.  List
+  of relevant publications.  \url{https://otsm-triz.org}. Last visited 07 May
+  2021.
+\bibitem{KoltzeSouchkov2017} Karl Koltze, Valeri Souchkov (2018).
+  Systematische Innovation. Hanser Verlag, München.
+\bibitem{Kuryan et al. 2020} Andrey Kuryan, Mikhail Rubin, Nikolay Shchedrin,
+  Olga Eckardt, Natalia Rubina (2020). TRIZ Ontology. Currect State and
+  Perspectives.  \url{https://wumm-project.github.io/Ontology.html} 
+\bibitem{Litvin et al. 2007} Simon Litvin, Vladimir Petrov, Mikhail Rubin,
+  Vikctor Fey (2007).  TRIZ Body of Knowledge.
+\bibitem{Lebedyev2011} Yuri Lebedyev (2011). Classification of flows in
+  technical systems. 
+\bibitem{Lebedyev2015} Yuri Lebedyev (2015).  \ru{Совершенствование
+  инструментов потокового анализа} (Improvement of flow analysis tools). Work
+  for certification as Master of TRIZ (in Russian).
+  \url{https://r1.nubex.ru/s828-c8b/f2134_d6/Yuri%20Lebedev_TRIZ%20Master%20dissertation_RUS.pdf}
+\bibitem{Lyubomirsky2006} Alex Lyubomirsky (2006). Law on efficiency
+  improvement use of substance, energy and information flows.
+\bibitem{MFA} Material Flow Analysis -- English Wikipedia.
+  \url{https://en.wikipedia.org/wiki/Material_flow_analysis}.  Last visited 07
+  May 2021.
+\bibitem{Petrov2007} Vladimir Petrov, Michail Rubin, Simon Litvin (2007).
+  Fundamentals of TRIZ Theory of Inventive Problem Solving (in Russian).
+  Reprinted in 2020. ISBN 978-5-4496-8183-6.
+\bibitem{Petrov2019} Vladimir Petrov (2019). TRIZ. Theory of Inventive Problem
+  Solving -- Level 1. Springer International Publishing. 
+\bibitem{Souchkov2018} Valeri Souchkov (2018).  Glossary of TRIZ and
+  TRIZ-related terms. Version 1.2.
+  \url{https://matriz.org/wp-content/uploads/2016/11/TRIZGlossaryVersion1_2.pdf}.
+\bibitem{SKOS} SKOS -- The Simple Knowledge Organization System.
+  \url{https://www.w3.org/TR/skos-reference/}.
+\bibitem{SCM} Supply Chain Management -- English Wikipedia.
+  \url{https://en.wikipedia.org/wiki/Supply_chain_management}.  Last visited
+  07 May 2021.
+\bibitem{TOP} \ru{Онтология ТРИЗ} (TRIZ Ontology Project -- TOP) of the TRIZ
+  Developer Summit.  \url{https:\\triz-summit.ru/Onto_TRIZ/}.
+\bibitem{TOP-Glossary} TRIZ 100 Glossary. A short glossary of key TRIZ
+  concepts and terms (in Russian).
+  \url{https:\\triz-summit.ru/onto_triz/100/}.
+\bibitem{TF} Traffic Flow -- English Wikipedia.
+  \url{https://en.wikipedia.org/wiki/Traffic_flow_(computer_networking)}. Last
+  visited 07 May 2021.
+\bibitem{WUMM} The WUMM Project.
+  \url{https://wumm-project.github.io/About.html}. Last visited 22 February
+  2021.
+\bibitem{WUMMTOP} The WUMM TOP Companion Project.
+  \url{https://wumm-project.github.io/Ontology}. Last visited 22 February
+  2021.
+\bibitem{RDF} The W3C Resource Description Framework (RDF).
+  \url{https://www.w3.org/RDF/}. Last visited 27 April 2021.
+\bibitem{RDFC} RDFC -- RDF with Contexts. A proposal.
+  \url{https://www.w3.org/2011/rdf-wg/wiki/RDFwithContexts}. Last visited 02
+  May 2021.
+\bibitem{RDFData} The RDFData git repository.
+  \url{https://github.com/wumm-project/RDFData}.  Last visited 22 February
+  2021.
+\bibitem{SPARQL} The WUMM SPARQL Endpoint.
+  \url{http:\\wumm.uni-leipzig.de:8891/sparql}. Last visited 22 February 2021.
+\bibitem{TOW} The TRIZ Ontology Webinar.
+  \url{https://wumm-project.github.io/2020-10-27}. Last visited 07 May 2021.
 \end{thebibliography}
 \end{document}
