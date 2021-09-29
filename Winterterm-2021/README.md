@@ -1,4 +1,4 @@
-# Summer Term 2021
+# Winter Term 2021
 
 * lecture: th/do 11:15-12:45 
 * Seminar: tu/di 9:15-10:45 
@@ -10,39 +10,41 @@ Both take place synchronously online in the BBB room BIS.SIM
 
 The seminar is part of the advanced master module "Modelling of Sustainable
 Systems and Semantic Web", which also includes a lecture and an online lab
-with the TRIZ trainer of Nikolay Shpakovsky.
+with the TRIZ trainer of Target Invention.
 
-In this semester's seminar, we want to deal with forms of cooperative action
-as well as the institutionalisation of conceptual, notational and experiential
-forms in such structures in particular. In the context of our understanding of
-technology, which includes the three components 
-* socially available processual knowledge,
-* institutionalised procedures
-* and private processual skills
+The conceptual basis of the lecture and seminar is a _systemic approach to
+descriptive structures_ that are significant in the real world. As an
+instrument of complexity reduction, the _system concept_ is based on a set of
+viable components whose interaction in the given systemic context produces the
+_specific emergent functionality_. An aeroplane consists of several components,
+none of them can fly, only the specific interaction of the parts produces the
+new function.
 
-It concentrates on a better understanding of the form-building processes of
-institutionalised procedures. The contradiction-oriented analytical methods of
-TRIZ can be applied to these questions, whereby the concepts that have been
-developed in the "world of technical systems" have already been extended to
-management processes and management structures within the field of "Business
-TRIZ". However, modern management approaches yet are insufficiently taken up
-here. In the seminar, such connections will be examined more closely, in
-particular
+This understanding of systems, which is also closely related to the topic of
+Component Software in computer science, has many facets. In such systems, not
+only the _structure_ but also their _processing_ plays an important role. Such
+aspects - a systemically based management concept - were in the focus of the
+seminar last semester. It turned out that most management theories assume an
+appropriately authorised individual leader as the decision-making authority
+and make his or her actions the object of investigation. This is
+unsatisfactory, as management processes in multi-stakeholder systems with
+distributed and rather consensus-oriented decision-making structures become
+increasingly important. Such structures can be observed above all in
+socio-ecological contexts and are thus central to the processing of
+sustainability issues. Often, parts of such structuring processes can also be
+described as phenomena of _systemic self-organisation_.
 
-* Approaches of the Methodological School of Management in the traditions of
-  the MMC around G.P. Shchedrovitsky
-* The Co-operative Action approach
-* Other management approaches that focus on social interactions. 
-
-__[More detailed information](2021-04-13/README.md) on the course concept.__
+A more detailed study of such management phenomena is in the focus of the
+seminar topics this semester.
 
 ## Potential 
 
-Thinking in terms of contradictions and modelling (initially) contradictory
-situations is a fundamental engineering competence, its teaching in the
-context of a "General Theory of Strong Thinking" (OTSM-TRIZ) and its further
-development as the "Innovative Design Method" (IDM) is at the centre of our
-teaching programme.
+Another important focus of the course is thinking, analysing and resolving
+contradictions. Thinking in terms of contradictions and modelling (initially)
+contradictory situations is a fundamental engineering competence, its teaching
+in the context of a "General Theory of Strong Thinking" (OTSM-TRIZ) and its
+further development as the "Innovative Design Method" (IDM) is at the centre
+of our teaching programme.
 
 > The course has forced the biggest change in years in my way of approaching
 > problems and analyzing them. The majority of the innovative solutions
@@ -54,8 +56,6 @@ teaching programme.
 > away.
 
 Source: <http://www.trizminsk.org/d/Khomenko_Heritage(EN).pdf> (Slide 21)
-
-## Challenges to such a theoretical approach
 
 Ibid, slide 36
 > In order to be universal, the rules of problem solving methods should be as
@@ -89,4 +89,5 @@ and make course materials publicly available.  This also applies to the course
 materials you have to produce (presentations, seminar papers) as well as to
 (annotated) chat sessions of the seminar discussions, in which your names are
 also mentioned.  We assume your consent to this procedure if you do not
-explicitly object.  The discussions themselves are __not__ recorded.
+explicitly object.  The discussions themselves are __not__ recorded, but the
+chat protocols are published in an edited form.
