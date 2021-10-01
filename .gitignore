@@ -8,5 +8,6 @@
 *.out
 *.bbl
 *.blg
+*.lof
 __pycache__
 env
