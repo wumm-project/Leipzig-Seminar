@@ -27,7 +27,7 @@
   9783000598463.
 * Nikolai Khomenko, John Cooke (2007).  Inventive problem solving using the
   OTSM-TRIZ “TONGS” model. 
-  * Im [Materialordner](Material/tongs_en.pdf).
+  * Im [Materialordner](http://www.informatik.uni-leipzig.de/~graebe/Material/tongs_en.pdf).
 * Vladimir Petrov (2020a). Gesetze und Gesetzmäßigkiten der Systemevolution.
   Monografie in 4 Bänden (in Russisch), ISBN 978-5-0051-5728-7.
   * Deutsche Übersetzung eines frei verfügbaren Auszugs aus dem ersten Band. 

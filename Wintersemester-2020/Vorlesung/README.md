@@ -16,10 +16,10 @@
 * Andrei Kuryan, Dmitri Kucharavy (2018). The OTSM-TRIZ Heritage of
   Nikolai N. Khomenko. A General Theory of Powerful Thinking. Folien eines
   Vortrags auf dem TDS 2018 in St. Petersburg.
-  * [OTSM-Folien.pdf](../Material/OTSM-Folien.pdf)
+  * [OTSM-Folien.pdf](http://www.informatik.uni-leipzig.de/~graebe/Material/OTSM-Folien.pdf)
 * Nikolai Khomenko, John Cooke (2007). Inventive problem solving using the
   OTSM-TRIZ “TONGS” model.
-  * [tongs-en.pdf](../Material/tongs-en.pdf)
+  * [tongs-en.pdf](http://www.informatik.uni-leipzig.de/~graebe/Material/tongs-en.pdf)
 * Alex Lyubomirskiy, Simon Litvin, Sergei Ikovenko et al. (2018). Trends
   of Engineering System Evolution (TESE).  TRIZ Consulting Group. ISBN
   9783000598463.
@@ -63,7 +63,7 @@ __Folien__:
 
 __Literaturliste__:
 * Hans-Gert Gräbe (2020). Zur Methodik des TRIZ-Trainers. 
-  * [TRIZ-Methodik.pdf](../Material/TRIZ-Methodik.pdf)
+  * [TRIZ-Methodik.pdf](http://www.informatik.uni-leipzig.de/~graebe/Material/TRIZ-Methodik.pdf)
 * (Kuryan, Kucharavy 2018), ab Folie 31.
 * (Cascini 2012)
 
@@ -218,7 +218,7 @@ __Folien__:
 __Literaturliste__:
 * Open Data Support (2013). Trainingsmodul 1.3 Einführung
   in RDF & SPARQL.
-  * [RDF-Einfuehrung.pdf](../Material/RDF-Einfuehrung.pdf)
+  * [RDF-Einfuehrung.pdf](http://www.informatik.uni-leipzig.de/~graebe/Material/RDF-Einfuehrung.pdf)
 
 __Lernziele__:
 * Modellierung von Begriffswelten als Teil der Modellierung Technischer

@@ -1,29 +1,49 @@
 # Leipzig-Seminar
 
-Materialien des Leipziger Forschungsseminar zu Innovationsmethodiken
+Materialien des Leipziger Forschungsseminars zu Innovationsmethodiken
 
 Die Materialien können unter den Konditionen der Apache 2.0 Lizenz
 weiterverwendet werden.
 
+## Wintersemester 2021/22
+
+Das grundsätzliche Konzept wird fortgeführt. 
+
+Die Materialien des Seminars sind in einem [separaten github
+Repo](https://github.com/wumm-project/Seminar-W21) zu finden.
+
 ## Sommersemester 2021
 
-Zu ergänzen.
+Das grundsätzliche Konzept wurde beibehalten, allerdings wurden die
+Materialien ins Englische übersetzt und auch die Seminararbeiten in Englisch
+verfasst, um die internationale Sichtbarkeit des Kurses zu verbessern.
+Verkehrssprache in Vorlesung und Seminar blieb Deutsch. Mit Prof. Laue (WH
+Zwickau) war erstmals ein externer Hochschullehrer mit an der Planung und
+Durchführung des Seminars beteiligt.
+
+Im Seminar wurden die Ansätze verschiedener Managementtheorien näher studiert.
+Der Kurs wurde mit einem
+[Blockseminar](http://mint-leipzig.de/2021-07-23/Ankuendigung.pdf) zum Thema
+"Systems, Processes, and their Management" abgeschlossen.
+
+Die Materialien des Seminars sind in einem [separaten github
+Repo](https://github.com/wumm-project/Seminar-S21) zu finden.
 
 ## Wintersemester 2020/21
 
-Das grundsätzliche Konzept wird in einer Reihe von Online-Veranstaltungen
-(Vorlesung, Seminar, TRIZ-Praktikum) fortgeführt, die als Vertiefungsmodul
-10-202-2309 "Modellierung nachhaltiger Systeme und Semantic Web" (V,S,P), als
-Seminarmodul 10-202-2312 "Angewandte Informatik" (V,S) oder als Modul
-10-202-2012 "Aktuelle Trends der Informatik" (P) belegt werden können.  
+Das grundsätzliche Konzept wird als Online-Kurs (Vorlesung, Seminar,
+TRIZ-Praktikum) fortgeführt, der als Vertiefungsmodul 10-202-2309
+"Modellierung nachhaltiger Systeme und Semantic Web" (V,S,P), als Seminarmodul
+10-202-2312 "Angewandte Informatik" (V,S) oder als Modul 10-202-2012 "Aktuelle
+Trends der Informatik" (P) belegt werden kann.
 
 Im Seminar wurden verschiedene Konzepte zum Thema "Evolution technischer und
-allgemeiner Systeme" näher beleuchtet und dazu verschiedene Quellen
-ausgewertet.  Die Ergebnisse des Seminars wurden als [Heft 22 der "Rohrbacher
+allgemeiner Systeme" näher studiert.  Die Ergebnisse des Seminars wurden als
+[Heft 22 der "Rohrbacher
 Manuskripte"](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/RohrbacherKreis/RohrbacherManuskripte)
 veröffentlicht, der Kurs mit einem
-[Blockseminar](http://www.dorfwiki.org/wiki.cgi?HansGertGraebe/LeipzigerGespraeche/2021-02-05)
-zum Thema "Evolution of Technical and General Systems" abgeschlossen.
+[Blockseminar](http://mint-leipzig.de/2021-02-05/Ankuendigung.pdf) zum Thema
+"Evolution of Technical and General Systems" abgeschlossen.
 
 ## Sommersemester 2020
 
