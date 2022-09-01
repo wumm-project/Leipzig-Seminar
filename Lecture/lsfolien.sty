@@ -1,0 +1,26 @@
+%Simple LaTeX-Beamer Template for slides based on the default theme.
+
+%Link this file to your local production directory.
+
+%All pictures are now in the Pictures directory of the OpenDiscovery WUMM
+%repo. The slides text assumes that you linked that directory as a directory
+%"images" to your local production directory.
+
+\usepackage[utf8]{inputenc}
+\usepackage{tikz,pgfplots,csquotes}
+\pgfplotsset{compat=newest}
+\usetikzlibrary{arrows.meta, positioning}
+
+\newcommand{\myfootline}[2]{
+\setbeamertemplate{footline}[text line]{%
+  \parbox{\linewidth}{\vspace*{-8pt}#1 \hfill #2 \hfill\insertpagenumber}}}
+
+\parskip1em
+
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamercolor{block body}{bg=blue!10}
+\setbeamercolor{block title}{bg=blue!20}
+\setbeamercolor{block body alert}{bg=red!10}
+\setbeamercolor{block title alert}{bg=red!90}
+\setbeamertemplate{blocks}[rounded][shadow]

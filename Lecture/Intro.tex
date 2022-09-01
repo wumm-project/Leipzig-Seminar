@@ -1,0 +1,298 @@
+\documentclass{beamer}
+\usepackage{lsfolien,enumitem}
+\usepackage[english]{babel}
+
+\myfootline{System Modelling and Semantic Web -- Summer Term 2022}{Hans-Gert
+  Gr\"abe}
+
+\newcommand{\ueberschrift}[1]{\begin{center}\bf #1\end{center}}
+
+\title{Modelling Sustainable Systems\\ and Semantic Web\\[6pt] Introduction
+  \vskip1em}
+
+\subtitle{Lecture in the Module 10-202-2312\\ for Master Computer Science}
+
+\author{Prof. Dr. Hans-Gert Gräbe\\
+\url{http://www.informatik.uni-leipzig.de/~graebe}}
+
+\date{April 2022}
+\begin{document}
+
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}}
+
+\section{Background}
+\begin{frame}{Background}
+
+\ueberschrift{Interdisciplinarity}
+
+Guiding motto of the University of Leipzig:
+\begin{center}
+  A Tradition of Crossing Boundaries\\ (Aus Tradition Grenzen überschreiten) 
+\end{center}
+
+\begin{itemize}
+\item[$\bullet$]  Boundaries: Humanities -- Science -- Technology
+\item[$\bullet$]  Tradition: The Faculty of Philosophy until 1951
+\end{itemize}
+
+But what about technology?
+
+Our mode of production today is closely linked to the use of science and
+technology. This brings advantages, but also problems.
+\end{frame}
+
+\begin{frame}{Background}
+This was not always so. This bourgeois (or capitalist) mode of production has
+developed over the last 500 years, first in Western Europe and has since
+spread around the globe.
+
+Technology and its use have undergone important metamorphoses during the last
+200 years, which had also a decisive influence on the organisational forms of
+that mode of production, for example with the establishment of the factory
+system and industrial production in the second half of the 19th century.
+\end{frame}
+
+\begin{frame}{Background}
+This is the beginning of what brought Marx to the vision of a society in which
+the "social metabolism" ("gesellschaftlicher Stoffwechsel", MEW 23) is
+organised in a way that
+\begin{quote}\small
+  no longer does the worker insert a modified natural thing as middle link
+  between the object and himself; rather, he inserts the process of nature,
+  transformed into an industrial process, as a means between himself and
+  inorganic nature, mastering it. He steps to the side of the production
+  process instead of being its chief actor.\vskip1em
+
+  Es ist nicht mehr der Arbeiter, der modifizierten Naturgegenstand als
+  Mittelglied zwischen das Objekt und sich einschiebt; sondern den
+  Naturprozess, den er in einen industriellen umwandelt, schiebt er als Mittel
+  zwischen sich und die unorganische Natur, deren er sich bemeistert. Er tritt
+  neben den Produktionsprozeß, statt sein Hauptagent zu sein.  (MEW 42,
+  ch. 14)
+\end{quote}
+\end{frame}
+
+\begin{frame}{Background}
+Marx goes on to state that the development of the productive forces is
+\emph{necessarily} heading in such a way towards the organisation of the
+"social metabolism".
+\begin{quote}
+  But, once adopted into the production process of capital, the means of
+  labour passes through different metamorphoses, whose culmination is the
+  \emph{machine}, or rather, an \emph{automatic system of machinery} (system
+  of machinery: the \emph{automatic} one is merely its most complete, most
+  adequate form, and alone transforms machinery into a system), set in motion
+  by an automaton, a moving power that moves itself; this automaton consists
+  of numerous mechanical and intellectual organs, so that the workers
+  themselves are cast merely as its conscious linkages.\vskip1em
+
+  German translation on the next slide.
+\end{quote}
+\end{frame}
+
+\begin{frame}{Background}
+\begin{quote}
+  In den Produktionsprozess des Kapitals aufgenommen, durchläuft das
+  Arbeitsmittel aber verschiedene Metamorphosen, deren letzte die Maschine ist
+  oder vielmehr ein automatisches System der Maschinerie (System der
+  Maschinerie; das automatische ist nur die vollendetste adäquateste Form
+  derselben und verwandelt die Maschinerie erst in ein System), in Bewegung
+  gesetzt durch einen Automaten, bewegende Kraft, die sich selbst bewegt;
+  dieser Automat besteht aus zahlreichen mechanischen und intellektuellen
+  Organen, sodass die Arbeiter selbst nur als bewusste Glieder desselben
+  bestimmt sind. (MEW 42, ch. 13)
+\end{quote}
+\end{frame}
+
+\begin{frame}{Background}
+The mastery of that "automaton", that apparently "natural" development of
+society, is on the agenda today, because its "naturalness" is increasingly
+undermining the very conditions of human existence on our planet.
+
+Marx's vision that in this process the worker "steps to the side of the
+production process instead of being its chief actor" is based on a very narrow
+understanding of "production process".
+\end{frame}
+
+\begin{frame}{Background}
+In the 150 years since then this narrow understanding has been replaced by a
+common modern understanding of "production process", in which
+\begin{quote}\small
+  it is neither the direct human labour the worker himself performs, nor the
+  time during which he works, but rather the appropriation of his own general
+  productive power, his understanding of nature and his mastery over it by
+  virtue of his presence as a social body – it is, in a word, the development of
+  the social individual which appears as the great foundation-stone of
+  production and of wealth.\vskip1em
+
+  ... es weder die unmittelbare Arbeit ist, die der Mensch selbst verrichtet,
+  noch die Zeit, die er arbeitet, sondern die Aneignung seiner eignen
+  allgemeinen Produktivkraft, sein Verständniss der Natur, und die
+  Beherrschung derselben durch sein Dasein als Gesellschaftskörper – in einem
+  Wort die Entwicklung des gesellschaftlichen Individuums, die als der große
+  Grundpfeiler der Produktion und des Reichtums erscheint. (MEW 42, ch. 14)
+\end{quote}
+
+\end{frame}
+
+\begin{frame}{Background}
+In short, it is a question to overcome the "naturalness" of the "automaton" --
+the socio-technical-cultural "apparatus" created by human as social being  --
+and put it under the control of the united humanity.
+
+This requires one thing above all -- educated and committed personnel who are
+capable of exercising also their civic responsibility (up to Art. 20 of our
+constitution).  Academic institutions are requested to deliver an important
+contribution to this.  This also requires to cross the old and new boundaries
+between Humanities -- Sciences -- Technology.
+\end{frame}
+
+\begin{frame}{Background}
+The academic education system has been on this path for more than 100 years,
+as the development of technological academic educational institutions in
+Leipzig shows.
+\begin{itemize}
+\item[$\bullet$] 1838 Foundation of the Royal Saxonian School of Building
+  Professions (K\"oniglich-sächsische Baugewerkeschule) in Leipzig by Albert
+  Geutebrück
+\item [$\bullet$] 1856 Foundation of the VDI, the \emph{German Association of
+  Engineers} 
+\item[$\bullet$] 1875 Foundation of the Municipal School of Trades
+  (st\"adtische Gewerbeschule) in Leipzig as the historical root for education
+  in mechanical and electrical engineering.\medskip
+
+  Realisation that tradesmen need a thorough technical education in addition
+  to a general higher education ("humanistische Bildung").
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Background}
+\begin{itemize}
+\item[$\bullet$] 1909 Royal Saxonian Building School
+\item[$\bullet$] 1914 Technical school for librarians
+\item[$\bullet$] 1920 Saxonian State Building School
+\item[$\bullet$] 1949 Technical School for Energy Markkleeberg
+\item[$\bullet$] 1954 Leipzig College of Civil Engineering
+\item[$\bullet$] 1956 Leipzig School of Engineering for Gas Technology
+\item[$\bullet$] 1965 School of Engineering for Automation Technology
+\item[$\bullet$] 1970 School of Engineering for Energy Management Leipzig
+\item[$\bullet$] 1969 Leipzig College of Engineering
+\item[$\bullet$] 1977 Unification into Leipzig Technical University
+\item[$\bullet$] since 1992 University of Applied Sciences for Technology,
+  Economics and Culture
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Background}
+In the 20th century, with \emph{engineers} a whole new professional group
+appeared.  Nowadays new professions such as computer scientists, are already
+crossing the border between science and technology and can graduate from our
+Faculty to obtain a doctorate in science (Dr. rer. nat.), but also a doctorate
+in engineering (Dr.-Ing.).  The situation with the Humanities has not yet been
+clarified, but at least you can qualify for a Master in Digital Humanities.
+\end{frame}
+
+\section{Course Programme}
+\begin{frame}{Course Programme}
+
+\ueberschrift{Background and Objectives}
+
+The course is an interdisciplinary offer in the Master in Computer Science and
+Master in DH, but can also be taken as a minor (Nebenfach). 
+
+The aim of the course is to illuminate important developments in the outlined
+field of development.  
+\end{frame}
+
+\begin{frame}{Course Programme}
+\ueberschrift{Four Theses}
+\begin{itemize}
+\item[1)] The short digital age is already over, the corona age started.
+\item[2)] Whereas the digital transformation was still characterised by a
+  rapidly growing "world of digital data", through the analysis and processing
+  of which influence on real-world processes was gained, we are now faced with
+  the challenge of using these tools to meet the challenges of the corona
+  crisis.
+\item[3)] These challenges are only a small foretaste of the challenges that
+  climate change will pose.
+\item[4)] These challenges are closely linked to fundamental questions not
+  only about our economy or mode or production, but also of our understanding
+  of technology and science.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Course Programme}
+It is therefore appropriate to address the three topics
+\begin{itemize}
+\item[$\bullet$] Social structures of digital change
+\item[$\bullet$] Modelling of sustainable systems
+\item[$\bullet$] Conceptualisation processes and the Semantic Web
+\end{itemize}
+and to develop a set of conceptual and terminological tools that are suitable
+for a viable analysis of these topics.
+
+The conceptual toolkit to be developed is oriented towards various aspects of
+the development of socio-technical systems that are addressed in the lecture
+and in the seminar.
+\end{frame}
+
+\section{Organisational Matters}
+\begin{frame}{Organisational Matters}
+The Seminar Module 10-202-2312 (5 CP) "Applied Computer Science" includes
+\begin{itemize}
+\item[$\bullet$] a lecture "Modelling of Sustainable Systems and Semantic Web"
+\item[$\bullet$] a seminar "Sustainability, Environment, Management"
+\end{itemize}
+Examination:
+\begin{itemize}
+\item[$\bullet$] \textbf{Prerequisite for examination:} successfully completed
+  seminar.
+\item[$\bullet$] \textbf{Examination:} Seminar paper.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Organisational Matters}
+More about this in OPAL \url{https://bildungsportal.sachsen.de/opal} in the
+course S22.BIS.SIM.  There, please enrol first in the course and then in the
+corresponding group.
+
+You can access OPAL with the data of your studserv account.
+
+You will find a more detailed lecture concept in the github repo
+\url{https://github.com/wumm-project/Seminar-S22}.
+\end{frame}
+
+\begin{frame}{Data protection}
+
+We follow an Open Culture approach not only theoretically but also practically
+and make course materials publicly available. This also applies to the course
+materials you have to produce (presentations, handouts) as well as to
+(annotated) chat sessions of the seminar discussions, in which your names are
+also mentioned. \textbf{We assume your consent to this procedure if you do not
+  explicitly object}. The discussions themselves are not recorded.
+
+\end{frame}
+
+\begin{frame}{Organisational Matters}
+
+\begin{itemize}
+\item[$\bullet$] Lecture: Thursdays 9:15-10:45, SG 3-15
+\item[$\bullet$] The Flipped Classroom Concept
+\item[$\bullet$] Continuously updated lecture plan and list of references in
+  the \texttt{Lecture/README.md} file in the github Repo.  
+\item[$\bullet$] Further (mainly organisational) information also in the forum
+  of the OPAL course.
+\item[$\bullet$] Seminar: Tuesdays 9:15-10:45, starts on April 19, synchronous
+  digital in the BBB room BIS.SIM,
+  \url{https://meet.uni-leipzig.de/b/gra-w2c-fhz-qnp}
+\end{itemize}
+\begin{center}\LARGE\bf
+  Questions ?
+\end{center}
+
+\end{frame}
+
+\end{document}

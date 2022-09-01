@@ -1,0 +1,305 @@
+\documentclass{beamer}
+\usepackage{lsfolien}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\myfootline{System Modelling and Semantic Web -- Winter term
+  2021/22}{Hans-Gert Gräbe}
+
+\newcommand{\ueberschrift}[1]{\begin{center}\bf #1\end{center}}
+
+\title{Modelling Sustainable Systems\\ and Semantic Web\\[6pt] Cooperative
+  Action in Digital Change \vskip1em}
+
+\subtitle{Lecture in the Module 10-202-2309\\ for Master Computer Science}
+
+\author{Prof. Dr. Hans-Gert Gräbe\\
+\url{http://www.informatik.uni-leipzig.de/~graebe}}
+
+\date{February 2022}
+\begin{document}
+
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}}
+
+\begin{frame}{Network Cooperation. The History of the .NET Project}
+
+  \ueberschrift{Microsoft on the Way to Modes\\ of Network Cooperation -- the
+    .NET Project}
+
+  \textbf{What is .NET}
+  
+"... completely redefining the way Microsoft will do business in the future
+  ... and how software should be developed." (Westphal, 2002)
+\begin{itemize}
+\item The platform should replace the previous art of Windows programming,
+  flexibly access operating system and basic functions and support exchanges
+  between programs.
+\item Designed for use on different hardware platforms down to cell phones and
+  PDAs. The Java idea without restriction to Java as programming language.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The History of the .NET Project}
+\textbf{Prehistory:}
+
+Legal dispute between Sun and Microsoft over Java
+\begin{itemize}
+\item Microsoft is expanding Java according to its own ideas and needs and
+  thus endangers Java compatibility
+\item Microsoft implementations J++ and J\#
+\end{itemize}
+
+Further problems:
+\begin{itemize}
+\item Also those languages as Visual Basic, C++, and J++ mostly used for
+  Windows programming languages were not binary compatible.
+\item Even string data types weren't binary compatible -- .NET is consistently
+  Unicode based.
+\item No uniform model of memory management.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The History of the .NET Project}
+\begin{itemize}
+\item 1996: first work on .NET
+\item 2000: .NET Framework 1.0 Beta
+\item October 2000 -- C\# and the CLI are submitted by MS, HP and Intel for
+  standardisation to the ECMA
+  \begin{itemize}
+  \item ECMA -- European Computer Manufacturers Association
+  \item December 2001 -- First standard passed to ISO
+  \item April 2003 -- Adoption of the ISO standards ISO/IEC 23270 (C\#) and
+    ISO/IEC 23271 (CLI).
+  \end{itemize}
+\item April 2003 -- Delivery of .NET Framework 1.1 together with Windows
+  Server 2003, which provides an integrated .NET runtime environment.
+  \begin{itemize}
+  \item Thus transition to the new platform at the conceptual level of
+    Corporate Servers. However, integration into the whole product family is
+    not advancing as quickly as expected.
+  \end{itemize}
+\item End of 2006: .NET 3.0, later an integral part of Windows Vista and
+  Windows Server 2008, with profound, also conceptual extensions of the
+  architecture.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The History of the .NET Project}
+\begin{itemize}
+\item End of 2007: Visual Studio 2008 and .NET Framework 3.5
+  \begin{itemize}
+  \item Framework Class Library (FCL) -- comparable to the Java Base Classes
+    that are shipped with any Java distribution -- includes almost 12\,000
+    classes in 300 namespaces.
+  \item Partial release of the source code of the Base Class Library under the
+    restrictive Microsoft Reference Source License.
+  \end{itemize}
+\item April 2014: Microsoft announces the creation of an independent .NET
+  Foundation at -- \url{http://www.dotnetfoundation.org}
+  \begin{itemize}
+  \item January 2015: Announcement of the .NET Open Source Initiative.
+  \item Stronger separation between .NET Framework and .NET Core. .NET Core
+    contains the base classes and the runtime environment. Their further
+    development will be transferred to the .NET Foundation.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{.NET Project and Open Source}
+ECMA standardization also allows implementation of the standard
+on other platforms.\vspace{-1em}
+
+Versions beyond Windows:\vspace{-1em}
+\begin{itemize}
+\item Microsoft itself with the Shared Source CLI released in 2002 versions
+  for Mac OS and FreeBSD. These activities were later abandoned.
+\item Various activities of the Linux community to implement the concepts and
+  create a free .NET version.
+  \begin{itemize}
+  \item In 2009 the dotGNU project starts to implement a runtime
+    environment for Portable.NET. Developed upto a release version 0.1 and
+    discontinued at the end of 2012: "As of December 2012, the DotGNU project
+    has been decommissioned, until and unless a substantial new volunteer
+    effort arises.“
+  \end{itemize}
+\item Much behind the capabilities of the Windows versions.
+\item The only powerful "free" project is the Mono Project
+  \url{http://www.mono-project.com/}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The History of the Mono Project}
+\begin{itemize}
+\item In 1999, Miguel de Icaza and Nat Friedman founded the company
+  \emph{Helix Code}.  The company was renamed to \emph{Ximian} in 2001.
+\item Business model: Solutions and services, based on a mix of free and
+  commercial software.
+\item Involved in the creation of the Linux Gnome project.
+\item 2002 start of the Mono project.
+\item Company was acquired by \emph{Novell} in 2003, which continues to
+  strenghten its Linux portfolio.
+\item In 2011, Novell was acquired by the \emph{Attachmate Group} who has no
+  interest in the continuation of the Mono project.
+  \begin{itemize}
+  \item After several months of discussions, the US Department of Justice
+    (DOJ) and the German Federal Competition Office (FCO) have allowed a
+    consortium of Microsoft, Oracle, Apple and EMC to acquire 882 patents from
+    Novell only subject to conditions clearly intended to prevent their use
+    against free software players.  (FSFE Newsletter, April 2011)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The History of the Mono Project}
+\begin{itemize}
+\item In 2011, Icaza and Friedman founded \emph{Xamarin}
+  \url{http://xamarin.com} and there bundle the further development on the
+  Mono Project.
+  \begin{itemize}
+  \item The company's focus is on mobile applications.
+  \end{itemize}
+\item The mono core, the runtime environment, is freely available under the
+  LGPL v.2, but Xamarin also offers commercial licenses for the Mono
+  platform. 
+  \begin{itemize}
+  \item If you are planning to use Mono as a bundled part of your commercial
+    product, on embedded hardware, or in any other situation where using the
+    LGPL-licensed Mono is impossible or problematic, Xamarin can sell you a
+    commercially-friendly license that will suit your needs.
+  \item Many commercial users of Mono acquire a commercial license when they
+    want the flexibility and peace of mind to use Mono without worrying about
+    the terms of the LGPL.
+  \end{itemize}
+\item New stage of cooperation: at the end of 2013, Microsoft, Xamarin and
+  others create the \emph{.NET Foundation}.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{.NET Open Sourcing}
+\begin{itemize}
+\item In 2008 Microsoft published the source code of the framework under the
+  restrictive Microsoft Reference License.
+\item At the end of 2013, Microsoft, Xamarin and others founded the \emph{.NET
+  Foundation} as the new rights holder and licensor of .NET Frameworks.
+  \url{http://www.dotnetfoundation.org/}
+  \begin{itemize}
+  \item In 2007 Microsoft still claimed that the Mono project violated
+    Microsoft's IP rights.
+  \end{itemize}
+\item At the end of 2014, a subset of the Reference Source source code is made
+  available on GitHub and published under the MIT license.
+  \begin{itemize}
+  \item \url{https://github.com/dotnet}
+  \item This was done to fill gaps between Mono and .NET using the same code.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{.NET Open Sourcing}
+\begin{itemize}
+\item At the same time, Microsoft has started also to publish the revised
+  components of the framework under the name \emph{.NET Core} on GitHub under
+  the MIT license.
+\item Basis for the upcoming, modular \emph{.NET Framework 5}.
+  \begin{itemize}
+  \item .NET Core has been transferred from Microsoft to the .NET Foundation
+    been.
+  \end{itemize}
+\item Using the MIT license, there are in fact no more restrictions how to use
+  the source code of .NET Core.
+  \begin{itemize}
+  \item With the establishment of the .NET Foundation and the transfer of
+    rights and source codes to the Foundation, Microsoft works actively with
+    Xamarin, to provide .NET on different platforms. By disclosing the source
+    code under the MIT license or Apache 2.0 license the source code of the
+    .NET Framework can be used almost arbitrarily -- even in closed source
+    projects. Licensing and patent law disputes are therefore hardly possible
+    any more and no longer to be feared. (Wikipedia)
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conditions of Cooperative Action}
+  
+Which \emph{legal requirements} for the civil society are constitutive for
+cooperative contexts?\vspace{-1em}
+\begin{itemize}
+\item \emph{Freedom of contract} as the right to establish contexts of
+  cooperative agreements.
+\item The \emph{right to free speech} (as an internal right) precedes the
+  freedom of contract.
+  \begin{itemize}
+  \item This right has nothing directly to do with the concept of democracy.
+  \end{itemize}
+\item Both presuppose the (mental and social) \emph{ability to close
+  contracts} and thus a society of owners. (Legal capacity --
+  Geschäftsfähigkeit) 
+\item \emph{Prohibited direct intervention from outside} on the inside of
+  cooperative contexts as \emph{social normative}.
+  \begin{itemize}
+  \item Such a right on the \emph{private level} is part of the personality
+    rights (Persönlichkeitsrecht -- right to privacy as a personality right in
+    the Constitution) and a cultural achievement of the civil society.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conditions of Cooperative Action}
+  
+Results of dynamics in the internal relationship are as topoi visible from the
+outside.
+\begin{itemize}
+\item Example of corporate identity.
+\item Consequence of the prohibition of intervention.
+\end{itemize}
+Inside is outside in relation to almost everyone else.
+\begin{itemize}
+\item Foreign topoi appear as conditions of action, whose \emph{dynamics} are
+  only accessible to the extent that this process can be internalized via a
+  translation (justified expectations).
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Cooperation and Competition}
+Cooperation and competition (Kooperation und Konkurrenz) are available as
+forms of structuring of society on the same logical level.
+\begin{itemize}
+\item Only \emph{parts} of bundle of interests are used in cooperative ties,
+  other interests remain \emph{competitive} (concurrent).
+\item \emph{Concurrent} means more concurrency than opposition, clash.
+\item System theory: positive and negative feedback.
+\item Debate about (German) Kooperenz,
+  \url{http://www.frei-gesellschaft.de/wiki/Kooperenz}
+\end{itemize}
+„The area of tension between cooperation and competition is the tension
+between the possibility of cooperation and the possibility of demarcation and
+thus the field of tension between two pillars of the civil legal system --
+Freedom and Property“. (E. Moglen)
+\end{frame}
+
+\begin{frame}{Cooperation and Competition}
+Cooperation and competition thus appear as two poles a continuum of possible
+forms.\vspace{-1em}
+\begin{itemize}
+\item \textbf{Cooperation:} narrow interests, high depth of justification,
+  coupling already in the \emph{planning phase} of the action.
+\item \textbf{Competition:} broad range of interests, low depth of
+  justification, coupling only occurs in the course of \emph{action
+    execution}.
+\end{itemize}\vspace{-1em}
+The balance of the weights between the two poles are constantly changing.
+Regional regulatory and legal areas (e.g. states) are competing social
+practices where these weights are differently balanced.\vspace{-1em}
+
+\begin{itemize}
+\item (inner) bourgeois "cultures".
+\end{itemize}\vspace{-1em}
+In this understanding, \textbf{Open Culture} is a \emph{specific bourgeois
+  cultural practice} in which cooperative moments are valued higher than in
+currently common (e.g. neoliberal) practices.
+\end{frame}
+
+\end{document}

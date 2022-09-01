@@ -1,0 +1,277 @@
+\documentclass{beamer}
+\usepackage{lsfolien}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+
+\myfootline{System Modelling and Semantic Web -- Winter Term 2021}{Hans-Gert
+  Gräbe}
+
+\def\lt{\texttt{<}}
+\def\gt{\texttt{>}}
+\def\deg{$^\circ$C}
+
+\newcommand{\ueberschrift}[1]{\begin{center}\bf #1\end{center}}
+
+\title{Modelling Sustainable Systems\\ and Semantic Web\\[6pt]
+  RDF Basics
+  \vskip1em}
+
+\subtitle{Lecture in the Module 10-202-2309\\ for Master Computer Science}
+
+\author{Prof. Dr. Hans-Gert Gräbe\\
+\url{http://www.informatik.uni-leipzig.de/~graebe}}
+
+\date{November 2021}
+\begin{document}
+
+{\setbeamertemplate{footline}{}
+\begin{frame}
+  \titlepage
+\end{frame}}
+
+\section{RDF Basics}
+\begin{frame}{RDF Basics. Descriptions and Interpretations}
+
+Information as interpreted data?\vspace{-1em}
+\begin{itemize}
+\item Measured values as data?
+\end{itemize}
+Language is full of implicit assumptions. An example:\vspace{-1em}
+\begin{itemize}
+\item On November 8th at the station Leipzig Airport at 5 p.m. was measured a
+  temperature of 16{\deg}.
+\item On {\lt}a type="Datum"{\gt}November 8th{\lt}/a{\gt} at the
+  station\\ {\lt}a type="LocationInformation"{\gt}Leipzig
+  Airport{\lt}/a{\gt}\\ at {\lt}a type="Time"{\gt}5 p.m.{\lt}/a{\gt} was
+  measured\\ a {\lt}a
+  type="PhysicalParameter"{\gt}temperature{\lt}/a{\gt}\\ of {\lt}a
+  type="Temperature"{\gt}16 {\deg}{\lt}/a{\gt}.
+\item Things and their names.
+\end{itemize}
+\end{frame}
+\begin{frame}{RDF Basics. Example}
+
+  {\small\tt \begin{tabbing}\hskip2em\=\kill
+    @prefix w21: {\lt}http://od.fmi.uni-leipzig.de/w21/{\gt} .\\
+    @prefix od: {\lt}http://od.fmi.uni-leipzig.de/model/{\gt}.\\
+    @prefix rdfs: {\lt}http://www.w3.org/2000/01/rdf-schema\#{\gt}.\\
+    @prefix odr: {\lt}http://od.fmi.uni-leipzig.de/rooms/{\gt}.\\
+    @prefix odp: {\lt}http://od.fmi.uni-leipzig.de/personal/{\gt}.\\[4pt]
+
+    w21:BIS.SemanticWeb.1\+\\
+    rdf:type	od:English , od:LV , od:Vorlesung ;\\
+    rdfs:label	"Modelling Substainable Systems ... " ;\\
+    od:beginsAt	"11:15" ;\\
+    od:dayOfWeek	"donnerstags" ;\\
+    od:endsAt	"12:45" ;\\
+    od:locatedAt	odr:online ;\\
+    od:servedBy	odp:Graebe\_HansGert ;\\
+    od:hasCType	"synchron" .
+  \end{tabbing}}
+  
+  \begin{itemize}
+  \item Identifiers and literals. Namespaces.
+  \end{itemize}
+\end{frame}
+\begin{frame}{RDF Basics. Sentences}
+
+Resolution in three-word sentences
+\begin{center}\tt
+  Subject Predicate Object .
+\end{center}
+
+  {\small\tt \begin{tabbing}
+    w21:BIS.SemanticWeb.1 rdf:type od:Vorlesung .\\
+    w21:BIS.SemanticWeb.1 rdfs:label	"Modelling ... " .\\
+    w21:BIS.SemanticWeb.1 od:beginsAt	"11:15" .\\
+    w21:BIS.SemanticWeb.1 od:dayOfWeek	"donnerstags" .\\
+    w21:BIS.SemanticWeb.1 od:endsAt	"12:45" .\\
+    w21:BIS.SemanticWeb.1 od:locatedAt	odr:online .\\
+    w21:BIS.SemanticWeb.1 od:servedBy	odp:Graebe\_HansGert .\\
+    w21:BIS.SemanticWeb.1 od:hasCType	"synchron" .
+  \end{tabbing}}
+
+  SPARQL-Schnittstelle für weitere Anfragen
+  \url{http://od.fmi.uni-leipzig.de:8892/sparql}
+\end{frame}
+\begin{frame}{RDF Basics and the Internet of Things}
+  \ueberschrift{Industry 4.0 and the Internet of Things}
+  \begin{itemize}
+  \item Shortcut speaking. There are no things on the Internet, only
+    \emph{representations} of things, just like representations of people
+    (digital identities).
+  \item Descriptions as relational complexes between representations of real
+    things or even just complexes of meaning.
+  \item These things and complexes of meaning must also be assigned “Digital
+    Identities” as textual representations to be able to formulate sentences
+    about them in the Digital Universe.
+  \end{itemize}
+\end{frame}
+\begin{frame}{RDF Basics. Conceptual Ingredients}
+  \begin{itemize}  
+  \item UTF-8 as a \textbf{uniform character base} for URIs and literals.
+    \begin{itemize}  
+    \item[] Best practice: URIs only made up of ASCII characters, no diacritics,
+      special characters or similar Unicode.
+    \end{itemize}
+  \item URI as "digital identities" of resources, \emph{point} to resources. 
+    \begin{itemize}  
+    \item[] Like people's digital identities, these are \textbf{textual
+      representations of "things"} in the text fragments circulating in the
+      internet.
+    \end{itemize}
+  \item For computers, URIs are just strings, for people it is helpful if the
+    URI already provides a suggestion about its semantics. 
+    \begin{itemize}  
+    \item[] Best practice: "Speaking names" as URIs
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+\begin{frame}{RDF Basics. Best Practices}
+  \begin{itemize}
+  \item RDF -- Resource Description Framework
+  \item Concept for writing down stories about "the world" as \textbf{sets} of
+    three-word sentences
+    \begin{center}
+      {\lt}subject{\gt} {\lt}predicate{\gt} {\lt}object{\gt}.
+    \end{center}
+  \item Subject and predicate must be URIs. The object can be a URI or a
+    literal (type \texttt{rdfs:Literal}). Literals can carry type and language
+    markings.
+  \item There are different notations for the same set of RDF sentences
+    (Turtle, rdf/xml, json, ntriples) and tools to convert these notations.
+    \begin{itemize}
+    \item[] Redland RDF libraries \url{http://librdf.org/}
+    \end{itemize}
+  \item Pattern search as a powerful concept for analyzing such sets of
+    sentences. SPARQL as query language.
+  \end{itemize}
+\end{frame}
+\begin{frame}{RDF Basics. Example of a SPARQL Query}
+Example of a request to the SPARQL endpoint
+\url{http://od.fmi.uni-leipzig.de:8892/sparql}
+
+Returns information about all teaching events (\texttt{od:LV}) with URI prefix
+BIS
+{\small\tt \begin{tabbing}\hskip1em\=\kill
+  PREFIX od: {\lt}http://od.fmi.uni-leipzig.de/model/{\gt}\\
+  SELECT distinct ?l ?name? ?d ?b\\ 
+  from {\lt}http://od.fmi.uni-leipzig.de/w21/{\gt}\\
+  WHERE \{\+\\
+    ?l a od:LV .\\
+    ?l rdfs:label ?name .\\
+    ?l od:beginsAt ?b .\\
+    ?l od:dayOfWeek ?d .\\
+    filter regex(?l, 'BIS') .\-\\
+  \}
+\end{tabbing}}
+\end{frame}
+\begin{frame}{RDF Basics. Different Notations}
+  \begin{itemize}
+  \item \textbf{Turtle notation} -- collects together all sentences about the
+    same subject. Such a set of predicate-object pairs can be interpreted as a
+    set of key-value pairs that describes this subject.
+    \begin{itemize}
+    \item But: Here a key can have \emph{several} values!
+    \item It is a particularly popular human readable notation.
+    \item It is a subject-centered point of view, which well serves the
+      specific point of view of "MY World" -- as discussed earlier.
+    \item Computers prefer to work with sets of triples.
+    \end{itemize}
+  \item If the subjects and objects are interpreted as nodes and predicates as
+    edges then a set of RDF sentences describes an \textbf{RDF graph} (and
+    vice versa).
+    \begin{itemize}
+    \item[] A picture is often a better explanation than thousand words.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+\begin{frame}{RDF -- Sentences and Pattern}
+  
+Sentences are arranged following patterns:
+\begin{itemize}
+\item[1)] \textbf{Turtle:} Collect all sentences with the same subject.
+  
+  Interpretation of properties of an individual subject as key-value pairs.
+  \begin{itemize}
+  \item Key and value = attribute and attribute value
+  \end{itemize}
+\item[2)] Collect \textbf{all sentences with the same predicate}
+  \begin{center}\tt    A od:beginsAt B  \end{center}
+  \begin{itemize}
+  \item \texttt{od:beginsAt} is not only a URI (\emph{syntax}), but also a
+    predicate with two parameters (A and B) and a certain \emph{semantics}
+    that is present in all sentences with this predicate as its
+    \emph{instantiations}.
+  \end{itemize}
+\item[3)] Other patterns are possible, SPARQL as the general standard
+  query language for pattern search in RDF sets of sentences.
+\end{itemize}
+See the file \textbf{Queries.txt} in the github Repo (with comments in
+German).
+\end{frame}
+\begin{frame}{RDF -- Descriptions of Descriptions}
+\begin{itemize}
+\item \textbf{Self-similarity of the concept:} Also descriptions of
+  descriptions can be formulated as RDF phrases. In particular, one can use
+  RDF to describe RDF.
+  \begin{itemize}
+  \item A URI that appears as a predicate in a sentence can appear as subject
+    or object in other sentences.
+  
+    Example:
+    \begin{quote}\tt      
+      od:beginsAt rdfs:domain od:LV .\\
+      od:beginsAt rdfs:range rdfs:Literal .
+    \end{quote}
+  \end{itemize}
+\item This means that also \emph{terms and concepts} can be described using
+  RDF. $\to$ \textbf{Universals}
+  \begin{itemize}
+  \item What are universals? Ideas from Plato's \emph{heaven of ideas} or
+    \emph{institutionalized conventions}, i.e. "shortcuts" of speaking? 
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{RDF -- Basic Limitations}
+\begin{itemize}
+\item Set semantics, the order of the sentences does not matter.
+  \begin{itemize}
+  \item This is different in other approaches, such as the XML-based TEI (Text
+    Encoding Initiative) which plays a central role in Digital Humanities.
+  \end{itemize}
+\item Problem of contextualization. In which spatio-temporal context the
+  sentence has to be interpreted? There are several approaches here:
+  \begin{itemize}
+  \item Extend triples to quadruples with a fourth component containing the
+    URI to the provenance (description).
+  \item If the sentence contains an instantiation of a predicate, the context
+    often can be inferred from the set of instantiations of that predicate.
+  \item Often the context results more generally from the \emph{namespace} of
+    the predicate and thus stands as an (explicit or implicit) \emph{model for
+      a whole class of terms}.  But this shifts the problem only to the
+    description of the model and thus an abstraction level upwards.
+  \end{itemize}
+\end{itemize}
+\end{frame}
+\begin{frame}{RDF -- Summary of the Central Concepts}
+\begin{itemize}
+\item \emph{Central idea:} Save textual descriptions in a uniform way as
+  triples and use standard concepts and tools for the management of this data.
+\item \emph{Resources:} URI, HTTP access
+  \begin{itemize}
+  \item URI = Unique Resource Identifier
+  \item This can be used to access a worldwide distributed database in a
+    uniform manner via a common protocol.
+  \end{itemize}
+\item \emph{Resource Descriptions:} Return on a HTTP request a useful piece of
+  information in RDF format that can be combined with others such information
+  units.
+\item Operate an \emph{RDF Triple Stores} and \emph{SPARQL endpoints} as part
+  of a worldwide distributed Data storage infrastructure,
+  e.g. \url{http://od.fmi.uni-leipzig.de/} (note that only the SPARQL endpoint
+  is publicly accessible).
+\item SPARQL as language for (distributed) queries.
+\end{itemize}
+\end{frame}
+\end{document}

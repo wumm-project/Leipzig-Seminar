@@ -5,6 +5,24 @@ Materialien des Leipziger Forschungsseminars zu Innovationsmethodiken
 Die Materialien können unter den Konditionen der Apache 2.0 Lizenz
 weiterverwendet werden.
 
+## Wintersemester 2022/23
+
+Das grundsätzliche Konzept des Seminars wird fortgeführt.
+
+Die Vorlesung wird nicht mehr angeboten, die Materialien (in Englisch) stehen
+allerdings hier im Verzeichnis _Lecture_ für das Selbststudium zur Verfügung.  
+
+Die Materialien des Seminars sind in einem [separaten github
+Repo](https://github.com/wumm-project/Seminar-W22) zu finden.
+
+## Sommersemester 2022
+
+Das grundsätzliche Konzept wird fortgeführt, die Vorlesung allerdings zur
+Hälfte der Zeit eingestellt, da sie nicht mehr besucht wurde.
+
+Die Materialien des Seminars sind in einem [separaten github
+Repo](https://github.com/wumm-project/Seminar-S22) zu finden.
+
 ## Wintersemester 2021/22
 
 Das grundsätzliche Konzept wird fortgeführt. 
