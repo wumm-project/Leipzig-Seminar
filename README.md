@@ -17,15 +17,24 @@ Repo](https://github.com/wumm-project/Seminar-W22) zu finden.
 
 ## Sommersemester 2022
 
-Das grundsätzliche Konzept wird fortgeführt, die Vorlesung allerdings zur
+Das grundsätzliche Konzept wurd fortgeführt, die Vorlesung allerdings zur
 Hälfte der Zeit eingestellt, da sie nicht mehr besucht wurde.
+
+Im Seminar wurden verschiedene Aspekte der Business TRIZ nach dem Lehrbuch von
+Darrell Mann näher studiert.  
 
 Die Materialien des Seminars sind in einem [separaten github
 Repo](https://github.com/wumm-project/Seminar-S22) zu finden.
 
 ## Wintersemester 2021/22
 
-Das grundsätzliche Konzept wird fortgeführt. 
+Das grundsätzliche Konzept wurde fortgeführt. 
+
+Im Seminar wurden verschiedene Aspekte des Business Process Modelling näher
+studiert.  Der Kurs wurde mit einem
+[Blockseminar](http://mint-leipzig.de/2022-02-04/Ankuendigung.pdf) zum Thema
+"Continuous Improvement, Engineering Systems and Systems Engineering"
+abgeschlossen.
 
 Die Materialien des Seminars sind in einem [separaten github
 Repo](https://github.com/wumm-project/Seminar-W21) zu finden.
